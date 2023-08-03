@@ -1,0 +1,31 @@
+---
+metadata:
+  title: 7e réunion de la CGPM
+  identifier: 7
+  date: '1927-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/7-1927
+pdf: https://www.bipm.org/documents/20126/38095599/CGPM7.pdf/e56bfc2c-2abd-22a1-603f-85f3e17c2f66
+resolutions:
+- dates:
+  - '1927-10-06'
+  subject: CGPM
+  type: resolution
+  title: Définition du mètre par le Prototype international
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/7-1927/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM7.pdf/761ccd6d-b5cd-e449-761d-1b78aa99d7f2
+  reference_name: Comptes rendus de la 7e CGPM (1927), 1928
+  reference_page: 49
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1927-10-06'
+    message: L'unité de longueur est le mètre, défini par la distance, à 0°, des axes
+      des deux traits médians tracés sur la barre de platine iridié déposée au Bureau
+      international des poids et mesures, et déclarée Prototype du mètre par la Première
+      Conférence générale des poids et mesures, cette règle étant soumise à la pression
+      atmosphérique normale et supportée par deux rouleaux d'au moins un centimètre
+      de diamètre, situés symétriquement dans un même plan horizontal et à la distance
+      de stem:[571 "mm"] l'un de l'autre.
+  notes: Définition abrogée en 1960 par la 11^e^ CGPM (Résolution 6).

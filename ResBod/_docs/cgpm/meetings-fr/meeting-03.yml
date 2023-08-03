@@ -1,0 +1,70 @@
+---
+metadata:
+  title: 3e réunion de la CGPM
+  identifier: 3
+  date: '1901-10-22'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/3-1901
+pdf: https://www.bipm.org/documents/20126/38096616/CGPM3.pdf/9993082b-5a57-0b7e-1dfd-ea3245536d94
+resolutions:
+- dates:
+  - '1901-10-22'
+  subject: CGPM
+  type: resolution
+  title: Déclaration concernant la définition du litre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/3-1901/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
+  reference_name: Comptes rendus de la 3e CGPM (1901), 1901
+  reference_page: 38
+  approvals:
+  - message: "*La Conférence*"
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1901-10-22'
+    message: |-
+      déclare :
+
+      . L'unité de volume, pour les déterminations de haute précision, est le volume occupé par la masse de 1 kilogramme d'eau pure, à son maximum de densité et sous la pression atmosphérique normale ; ce volume est dénommé « litre ».
+      . Dans les déterminations de volume qui ne comportent pas un haut degré de précision, le décimètre cube peut être envisagé comme équivalent au litre ; et, dans ces déterminations, les expressions des volumes basées sur le cube de l'unité linéaire peuvent être substituées à celles qui sont rapportées au litre tel qu'il vient d'être défini.
+
+      La Conférence charge le Comité international de faire poursuivre au Bureau les mesures destinées à faire encore mieux connaître le rapport de ces deux grandeurs, et de publier le plus tôt possible les résultats des recherches déjà effectuées au Bureau, afin de permettre d'utiliser à l'avenir, dans les travaux scientifiques ou techniques de haute précision, la valeur la plus probable de ce rapport.
+  notes: Définition abrogée en 1964 par la 12^e^ CGPM (Résolution 6).
+- dates:
+  - '1901-10-22'
+  subject: CGPM
+  type: resolution
+  title: Déclaration relative à l'unité de masse et à la définition du poids ; valeur
+    conventionnelle de <i>g</i><sub>n</sub>
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/3-1901/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
+  reference_name: Comptes rendus de la 3e CGPM (1901), 1901
+  reference_page: 70
+  considerations:
+  - type: having / having regard
+    date_effective: '1901-10-22'
+    message: "*Vu* la décision du Comité international des poids et mesures du 15
+      octobre 1887, par laquelle le kilogramme a été défini comme unité de masse ;"
+  - type: having / having regard
+    date_effective: '1901-10-22'
+    message: "*Vu* la décision contenue dans la formule de sanction des prototypes
+      du Système métrique, acceptée à l'unanimité par la Conférence générale des poids
+      et mesures dans sa réunion du 26 septembre 1889 ;"
+  - type: considering
+    date_effective: '1901-10-22'
+    message: "*Considérant* la nécessité de faire cesser l'ambiguïté qui existe encore
+      dans l'usage courant sur la signification du terme _poids_, employé tantôt dans
+      le sens du terme _masse_, tantôt dans le sens du terme _effort mécanique_ ;"
+  actions:
+  - type: declares
+    date_effective: '1901-10-22'
+    message: |-
+      *La Conférence déclare :*
+
+      . Le kilogramme est l'unité de masse ; il est égal à la masse du prototype international du kilogramme ;
+      . Le terme _poids_ désigne une grandeur de la même nature qu'une _force_ ; le poids d'un corps est le produit de la masse de ce corps par l'accélération de la pesanteur ; en particulier, le poids normal d'un corps est le produit de la masse de ce corps par l'accélération normale de la pesanteur ;
+      . Le nombre adopté dans le Service international des Poids et Mesures pour la valeur de l'accélération normale de la pesanteur est stem:[980","665 "cm"/"s"^(2)], nombre sanctionné déjà par quelques législations.
+  notes: Cette valeur de stem:[g_(n)] est la valeur conventionnelle de référence pour
+    le calcul de l'unité kilogramme-force maintenant abolie.

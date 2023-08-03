@@ -1,0 +1,309 @@
+---
+metadata:
+  title: 16th meeting of the CGPM
+  identifier: 16
+  date: '1979-10-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979
+pdf: https://www.bipm.org/documents/20126/38095501/CGPM16.pdf/23103eb5-a014-e41b-dbaa-3053065012cf
+resolutions:
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Kilogram standards
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 99
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that the accuracy of mass measurements rests upon the perfect
+      conservation of kilogram standards, in particular platinum iridium prototype
+      Kilograms,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that the transmission of this accuracy to kilogram standards
+      made of other materials such as stainless steels is limited by an insufficient
+      knowledge of the air buoyancy correction,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that this air buoyancy correction is usually calculated on
+      the basis of ambient conditions, but there exist significant differences between
+      the formulas used for this calculation among the different laboratories,
+  actions:
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: recommends that laboratories study the effects of ambient conditions
+      upon kilogram standards and the methods for improving their conservation,
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: recommends that laboratories intensify their work aimed at an improved
+      determination of the air buoyancy correction.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Realization of electrical units
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 99
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the importance for all applications of electrical measurements
+      of more accurate realizations of the SI units, in particular the volt and the
+      ampere,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the recent improvement in these realizations both by direct
+      methods and by indirect methods through the determination of physical constants,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the divergences which remain between the results given by
+      these different methods,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the need to be able to compare independent realizations among
+      themselves to elucidate the origin of these divergences,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the improvement in accuracy that will be obtained as soon
+      as a better coherence permits the establishment of more accurate values for
+      the different realizations of these units,
+  actions:
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: "*recommends* the continuation and intensifying of research on both the
+      direct realization of electrical units and there indirect realization through
+      the determination of physical constants."
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: SI unit of luminous intensity (candela)
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that despite the notable efforts of some laboratories there
+      remain excessive divergences between the results of realizations of the candela
+      based upon the present black body primary standard,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that radiometric techniques are developing rapidly, allowing
+      precisions that are already equivalent to those of photometry and that these
+      techniques are already in use in national laboratories to realize the candela
+      without having to construct a black body,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that the relation between luminous quantities of photometry
+      and radiometric quantities, namely the value of 683 lumens per watt for the
+      spectral luminous efficacy of monochromatic radiation of frequency stem:[540
+      * 10^(12)] hertz, has been adopted by the Comité International des Poids et
+      Mesures (CIPM) in 1977,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that this value has been accepted as being sufficiently accurate
+      for the system of luminous photopic quantities, that it implies a change of
+      only about 3 % for the system of luminous scotopic quantities, and that it therefore
+      ensures satisfactory continuity,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that the time has come to give the candela a definition that
+      will allow an improvement in both the ease of realization and the precision
+      of photometric standards, and that applies to both photopic and scotopic photometric
+      quantities and to quantities yet to be defined in the mesopic field,
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: decides The candela is the luminous intensity, in a given direction,
+      of a source that emits monochromatic radiation of frequency stem:[540 * 10^(12)]
+      hertz and that has a radiant intensity in that direction of 1/683 watt per steradian.
+  - type: decides
+    date_effective: '1979-10-12'
+    message: decides The definition of the candela (at the time called new candle)
+      adopted by the CIPM in 1946 by reason of the powers conferred by the 8th CGPM
+      in 1933, ratified by the 9th CGPM in 1948, then amended by the 13th CGPM in
+      1967, is abrogated.
+  notes: |-
+    Photopic vision is detected by the cones on the retina of the eye, which are sensitive to a high level of luminance (stem:[L] \> ca. stem:[10 "cd"/"m"^(2)]) and are used in daytime vision. Scotopic vision is detected by the rods of the retina, which are sensitive to low level luminance (stem:[L] \< ca. stem:[10^(-3) "cd"/"m"^(2)]), used in night vision. In the domain between these levels of luminance both cones and rods are used, and this is described as mesopic vision. +
+     +
+     This definition of the candela was abrogated in 2018 by the 26th CGPM (Resolution 1), which became effective in 2019.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Definition of the candela - Improvement of photometric accuracy
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures,
+  considerations: []
+  actions:
+  - type: instructs
+    date_effective: '1979-10-12'
+    message: "*instructs* the Comité International des Poids et Mesures to organise
+      international comparisons in order to check the uniformity of photometric measurements
+      obtained using the new definition of the candela."
+  - type: invites / further invites
+    date_effective: '1979-10-12'
+    message: "*invites* national laboratories to intensify their work aimed at the
+      realization of the candela following the new definition as well as at the improvement
+      in photometric calibration procedures and methods of international comparisons."
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Special name for the SI unit of dose equivalent (sievert)
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the effort made to introduce SI units into the field of ionizing
+      radiations,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the risk to human beings of an underestimated radiation dose,
+      a risk that could result from a confusion between absorbed dose and dose equivalent,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering that the proliferation of special names represents a danger
+      for the Système International d'Unités and must be avoided in every possible
+      way, but that this rule can be broken when it is a matter of safeguarding human
+      health,
+  actions:
+  - type: adopts
+    date_effective: '1979-10-12'
+    message: "*adopts* the special name *_sievert_*, symbol Sv, for the SI unit of
+      dose equivalent in the field of radioprotection. The sievert is equal to the
+      joule per kilogram."
+  notes: The CIPM, in 1984, decided to accompany this Resolution with an explanation
+    (Recommendation 1).
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Symbols for the litre
+  identifier: 6
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 101
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: recognizing
+    date_effective: '1979-10-12'
+    message: "*recognizing* the general principles adopted for writing the unit symbols
+      in Resolution 7 of the 9th CGPM (1948),"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considering* that the symbol l for the unit litre was adopted by the
+      Comité International des Poids et Mesures (CIPM) in 1879 and confirmed in the
+      same Resolution of 1948,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considering* also that, in order to avoid the risk of confusion between
+      the letter l and the number 1, several countries have adopted the symbol L instead
+      of l for the unit litre,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considering* that the name litre, although not included in the Système
+      International d'Unités, must be admitted for general use with the System,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considering* further that in the future only one of these two symbols
+      should be retained,"
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: "*decides*, as an exception, to adopt the two symbols l and L as symbols
+      to be used for the unit litre,"
+  - type: invites / further invites
+    date_effective: '1979-10-12'
+    message: "*invites* the CIPM to follow the development of the use of these two
+      symbols and to give the 18th CGPM its opinion as to the possibility of suppressing
+      one of them."
+  notes: The CIPM, in 1990, considered that it was still too early to choose a single
+    symbol for the litre.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: BIPM budget for the years 1981-1984
+  identifier: 7
+  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Proceedings of the 16th CGPM (1979), 1980
+  reference_page: 101
+  approvals:
+  - message: The 16th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the importance of the research carried out and of the services
+      rendered by the BIPM in recent years,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the necessity to widen its activities, to improve continually
+      its methods of work and its equipment as well as the qualifications and competence
+      of its staff, to enable it to maintain its role as the world centre for scientific
+      metrology,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considering the delays inevitably accumulated over a number of years
+      as a result of difficult economic conditions,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: |-
+      *considering*
+
+      where stem:[x] represents the repartition percentage calculated for the People's Republic of China from the United Nations coefficient in force on the 1st January 1980 on applying the procedure adopted by the 11th CGPM,
+
+      * that following the adherence of the People's Republic of China to the Convention du Metre, the annual budget which serves as the base for the calculation of the budget for the years 1981-1984 is obtained by multiplying the annual budget of the BIPM for the year 1980 voted by the 15th CGPM, by a factor stem:[(100 + x)/100],
+  - type: accepts
+    date_effective: '1979-10-12'
+    message: accepting without any opposing vote the principle of the proposal of
+      the CIPM duly notified in advance to Governments in conformity with Article
+      6 (1921), paragraph 5 of the Rules annexed to the Convention du Metre of 1875,
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: decides that the fixed part of the annual budget of the Bureau International
+      shall be increased in such a way that the sum of the fixed part and the complementary
+      part (defined in Article 6 (1921) of the Rules annexed to the Convention du
+      Metre) for the member States of the Convention du Metre at the time of the 16th
+      CGPM, be obtained for the years 1981, 1982, 1983 et 1984 by multiplying the
+      base budget by 1,12, (1,12)^2^, (1,12)^3^ and (1,12)^4^ respectively.
+  - type: decides
+    date_effective: '1979-10-12'
+    message: |-
+      *decides*
+
+      * that as from January 1st 1981 the maximum and minimum repartition percentages adopted by the 11th CGPM will be multiplied by a factor stem:[100/(100 + x)],
+
+      where stem:[x] represents the repartition percentage calculated for the People's Republic of China, from the United Nations coefficient in force on January 1st 1980, on applying the procedure adopted by the 11th CGPM.

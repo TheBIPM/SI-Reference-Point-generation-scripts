@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Constants</title>
+</head>
+<body>
+    {% extends 'ParentLayout.html' %}
+    {% block main %}
+    <h1>{{constant.Cst_Label}}</h1>
+    <table>
+        <tr>
+            <td>Value:</td>
+            <td>{{constant.Cst_Value}} {{constant.Cst_Unit_String}}</td>
+        </tr>
+        <tr>
+            <td>Symbol:</td>
+            <td>${{constant.Cst_Symbol}}$</td>
+        </tr>
+    </table>
+{% endblock %}
+</body>
+</html>

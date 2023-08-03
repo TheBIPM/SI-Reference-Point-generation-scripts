@@ -1,0 +1,847 @@
+---
+metadata:
+  title: 24e réunion de la CGPM
+  identifier: 24
+  date: '2011-10-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011
+pdf: https://www.bipm.org/documents/20126/35657008/CGPM24.pdf/5cc3fc20-f45c-42f2-ea67-9b7f1e92408f
+resolutions:
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur l'éventuelle révision à venir du Système international d'unités, le SI
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 212
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'il existe un consensus international sur l'importance,
+      la valeur et les bénéfices potentiels de la redéfinition d'un certain nombre
+      d'unités du Système international d'unités (SI),
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que les laboratoires nationaux de métrologie et le Bureau
+      international des poids et mesures (BIPM) ont, à juste titre, déployé des efforts
+      considérables au cours de ces dernières décennies afin de faire progresser le
+      Système international d'unités (SI), en repoussant les limites de la métrologie,
+      de façon à ce que les unités de base du SI puissent être définies en s'appuyant
+      sur les constantes de la nature - les constantes physiques fondamentales ou
+      les propriétés des atomes,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'un exemple marquant du succès de ces efforts est la définition
+      actuelle de l'unité de longueur du SI, le mètre (17^e^ réunion de la CGPM, 1983,
+      Résolution 1), qui relie l'unité à une valeur exacte de la vitesse de la lumière
+      dans le vide stem:[c], à savoir 299 792 458 mètres par seconde,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que parmi les sept unités de base du SI, seul le kilogramme
+      est encore défini à partir d'un objet matériel (artefact), à savoir le prototype
+      international du kilogramme (1^re^ réunion de la CGPM, 1889 ; 3^e^ réunion de
+      la CGPM, 1901), et que les définitions de l'ampère, de la mole et de la candela
+      dépendent du kilogramme,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que, bien que le prototype international ait rendu des services
+      à la science et la technologie depuis qu'il a été sanctionné par la CGPM lors
+      de sa 1^re^ réunion en 1889, son utilisation présente des limites importantes,
+      l'une des plus significatives étant que sa masse n'est pas explicitement reliée
+      à une constante de la nature et que, par conséquent, sa stabilité à long terme
+      ne peut être garantie,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la CGPM, lors de sa 21^e^ réunion en 1999, a adopté la
+      Résolution 7, laquelle recommande que « les laboratoires nationaux poursuivent
+      leurs efforts pour affiner les expériences qui relient l'unité de masse à des
+      constantes fondamentales ou atomiques et qui pourraient, dans l'avenir, servir
+      de base à une nouvelle définition du kilogramme »,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que de nombreux progrès ont été effectués ces dernières années
+      pour relier la masse du prototype international à la constante de Planck stem:[h],
+      par des méthodes telles que les expériences de la balance du watt ou les mesures
+      de la masse d'un atome de silicium,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que les incertitudes associées à l'ensemble des unités électriques
+      du SI réalisées, directement ou indirectement, au moyen de l'effet Josephson
+      et de l'effet Hall quantique et à partir des valeurs dans le SI des constantes
+      de Josephson et de von Klitzing, stem:[K_("J")] et stem:[R_("K")], pourraient
+      être réduites de manière significative si le kilogramme était redéfini de façon
+      à ce qu'il soit relié à une valeur numérique exacte de stem:[h], et si l'ampère
+      était redéfini de façon à ce qu'il soit relié à une valeur numérique exacte
+      de la charge élémentaire stem:[e],
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la définition actuelle du kelvin se fonde sur une propriété
+      intrinsèque de l'eau qui, bien qu'étant une constante de la nature, dépend dans
+      la pratique de la pureté et de la composition isotopique de l'eau utilisée,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'il est possible de redéfinir le kelvin de façon à le relier
+      à une valeur numérique exacte de la constante de Boltzmann stem:[k],
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'il est également possible de redéfinir la mole de façon
+      à la relier à une valeur numérique exacte de la constante d'Avogadro stem:[N_("A")],
+      de sorte qu'elle ne dépende plus de la définition du kilogramme, même lorsque
+      le kilogramme sera défini de façon à le relier à une valeur numérique exacte
+      de stem:[h], ce qui mettrait en évidence la distinction entre les grandeurs
+      quantité de matière et masse,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que les incertitudes liées aux valeurs d'autres constantes
+      fondamentales et facteurs de conversion d'énergie importants seraient éliminées
+      ou réduites de façon considérable si stem:[h], stem:[e], stem:[k] et stem:[N_("A")]
+      avaient des valeurs numériques exactes lorsqu'elles sont exprimées en unités
+      du SI,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la CGPM, lors de sa 23^e^ réunion en 2007, a adopté la
+      Résolution 12 qui expose le travail à accomplir par les laboratoires nationaux
+      de métrologie, le BIPM et le Comité international des poids et mesures (CIPM),
+      ainsi que ses Comités consultatifs, afin que les nouvelles définitions du kilogramme,
+      de l'ampère, du kelvin et de la mole fondées sur des constantes fondamentales
+      puissent être adoptées,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que, bien que des progrès notables aient été réalisés, tous
+      les objectifs fixés par la Résolution 12 adoptée par la CGPM à sa 23^e^ réunion
+      n'ont pas été atteints, ce qui ne permet pas au CIPM de soumettre une proposition
+      finalisée,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'il est néanmoins désormais possible de présenter une version
+      claire et détaillée de ce qui sera sans doute proposé,
+  - type: noting
+    date_effective: '2011-10-21'
+    message: |-
+      *prend acte* de l'intention du Comité international des poids et mesures de proposer une révision du SI qui se présenterait de la manière suivante :
+
+      * le Système international d'unités, le SI, sera le système d'unités selon lequel :
+      ** la fréquence de la transition hyperfine dans l'état fondamental de l'atome de césium stem:[133  sf Delta  nu (""_(133) "Cs")_("hfs")] est égale à exactement 9 192 631 770 hertz,
+      ** la vitesse de la lumière dans le vide stem:[c] est égale à exactement 299 792 458 mètres par seconde,
+      ** la constante de Planck stem:[h] est égale à exactement 6,626 06X × stem:[10^(-34)] joule seconde,
+      ** la charge élémentaire stem:[e] est égale à exactement 1,602 17X × stem:[10^(-19)] coulomb,
+      ** la constante de Boltzmann stem:[k] est égale à exactement 1,380 6X × stem:[10^(-23)] joule par kelvin,
+      ** la constante d'Avogadro stem:[N_("A")] est égale à exactement 6,022 14X × stem:[10^(23)] par mole,
+      ** l'efficacité lumineuse stem:[K_("cd")] d'un rayonnement monochromatique de fréquence stem:[540 * 10^(12) "Hz"] est égale à exactement 683 lumens par watt,
+
+      où
+
+      .. les unités hertz, joule, coulomb, lumen et watt, qui ont respectivement pour symbole stem:["Hz"], stem:["J"], stem:["C"], stem:["lm"], et stem:["W"], sont reliées aux unités seconde, mètre, kilogramme, ampère, kelvin, mole et candela, qui ont respectivement pour symbole stem:["s"], stem:["m"], stem:["kg"], stem:["A"], stem:["K"], stem:["mol"], et stem:["cd"], selon les relations stem:["Hz" = "s"^(-1)], stem:["J" = "m"^(2) * "kg" * "s"^(-2)], stem:["C" = "s" * "A"], stem:["lm" = "cd" * "m"^(2) * "m"^(-2) = "cd" * "sr"], et stem:["W" = "m"^(2) * "kg" * "s"^(-3)],
+      .. le symbole X dans le présent projet de résolution correspond à un ou plusieurs chiffres qui devront être ajoutés aux valeurs numériques de stem:[h], stem:[e], stem:[k], et stem:[N_("A")] selon les valeurs résultant de l'ajustement le plus récent fourni par la CODATA,
+
+      ce qui signifie que le SI continuera à être établi sur les sept unités de base actuelles et que notamment
+
+      * le kilogramme restera l'unité de masse mais son amplitude sera déterminée en fixant la valeur numérique de la constante de Planck à exactement 6,626 06X × stem:[10^(-34)] lorsqu'elle sera exprimée en stem:["m"^(2) * "kg" * "s"^(-1)], unité du SI égale au joule seconde, stem:["J" * "s"],
+      * l'ampère restera l'unité de courant électrique mais son amplitude sera déterminée en fixant la valeur numérique de la charge élémentaire à exactement 1,602 17X × stem:[10^(-19)] lorsqu'elle sera exprimée en stem:["s" * "A"], unité du SI égale au coulomb, stem:["C"],
+      * le kelvin restera l'unité de température thermodynamique mais son amplitude sera déterminée en fixant la valeur numérique de la constante de Boltzmann à exactement 1,380 6X × stem:[10^(-23)] lorsqu'elle sera exprimée en stem:["m"^(2) * "kg" * "s"^(-2) * "K"^(-1)], unité du SI égale au joule par kelvin, stem:["J" * "K"^(-1)],
+      * la mole restera l'unité de quantité de matière d'une entité élémentaire spécifique, c'est-à-dire un atome, une molécule, un ion, un électron, ou toute autre particule ou groupe particulier de telles particules, mais son amplitude sera déterminée en fixant la valeur numérique de la constante d'Avogadro à exactement 6,022 14X ×stem:[10^(23)] lorsqu'elle sera exprimée en unité du SI stem:["mol"^(-1)].
+
+      La Conférence générale des poids et mesures
+  - type: noting
+    date_effective: '2011-10-21'
+    message: |-
+      *note également*
+
+      * que les nouvelles définitions du kilogramme, de l'ampère, du kelvin et de la mole seront rédigées en utilisant une formulation dite « à constante explicite», c'est-à-dire une définition dans laquelle l'unité est définie indirectement en donnant explicitement une valeur exacte à une constante fondamentale reconnue,
+      * que la définition actuelle du mètre est reliée à une valeur exacte de la vitesse de la lumière dans le vide, qui est également une constante fondamentale reconnue,
+      * que la définition actuelle de la seconde est reliée à une valeur exacte caractérisant une propriété bien définie de l'atome de césium, qui constitue également une constante de la nature,
+      * que la définition existante de la candela n'est pas liée à une constante fondamentale mais qu'elle peut être considérée comme étant reliée à une valeur exacte d'une constante de la nature,
+      * que l'intelligibilité du Système international d'unités serait renforcée si toutes ses unités de base étaient définies en utilisant la même formulation,
+
+      c'est pourquoi le Comité international des poids et mesures proposera également
+
+      de reformuler les définitions actuelles de la seconde, du mètre et de la candela selon une forme complètement équivalente qui pourrait être la suivante :
+
+      * la seconde, symbole stem:["s"], est l'unité de temps ; son amplitude est déterminée en fixant la valeur numérique de la fréquence de la transition hyperfine de l'état fondamental de l'atome de césium 133 au repos, à une température de stem:[0 "K"], à exactement 9 192 631 770 lorsqu'elle est exprimée en stem:["s"^(-1)], unité du SI égale au hertz, stem:["Hz"],
+      * le mètre, symbole stem:["m"], est l'unité de longueur ; son amplitude est déterminée en fixant la valeur numérique de la vitesse de la lumière dans le vide à exactement 299 792 458 lorsqu'elle est exprimée en unité du SI stem:["m" * "s"^(-1)],
+      * la candela, symbole stem:["cd"], est l'unité d'intensité lumineuse dans une direction donnée ; son amplitude est déterminée en fixant la valeur numérique de l'efficacité lumineuse d'un rayonnement monochromatique d'une fréquence de stem:[540 * 10^(12) "Hz"] à exactement 683 lorsqu'elle est exprimée en stem:["m"^(-2) * "kg"^(1) * "s"^(3) * "cd" * "sr"] ou en stem:["cd" * "sr" * "W"^(-11)], unité du SI égale au lumen par watt, stem:["lm" * "W"^(-1)].
+
+      Il sera ainsi manifeste que les définitions des sept unités de base du SI découlent naturellement des sept constantes précédemment indiquées.
+
+      En conséquence, à la date choisie pour mettre en œuvre la révision du SI
+
+      * la définition du kilogramme en vigueur depuis 1889, établie à partir de la masse du prototype international du kilogramme (1^re^ réunion de la CGPM, 1889 ; 3^e^ réunion de la CGPM, 1901), sera abrogée,
+      * la définition de l'ampère en vigueur depuis 1948 (9^e^ réunion de la CGPM, 1948), établie à partir de la définition proposée par le Comité international des poids et mesures (CIPM, 1946, Résolution 2), sera abrogée,
+      * les valeurs conventionnelles de la constante de Josephson stem:[K_(J-90)] et de la constante de von Klitzing stem:[R_(K-90)] adoptées par le Comité international des poids et mesures (CIPM, 1988, Recommandations 1 et 2) à la demande de la CGPM (18^e^ réunion de la CGPM, 1987, Résolution 6) pour l'établissement des représentations du volt et de l'ohm à l'aide des effets Josephson et Hall quantique, respectivement, seront abrogées,
+      * la définition du kelvin en vigueur depuis 1967/68 (13^e^ réunion de la CGPM, 1967/68), établie à partir d'une définition antérieure moins explicite (10^e^ réunion de la CGPM, 1954, Résolution 3), sera abrogée,
+      * la définition de la mole en vigueur depuis 1971 (14^e^ réunion de la CGPM, 1971, Résolution 3), selon laquelle la masse molaire du carbone 12 a la valeur exacte de stem:[0","012 "kg" * "mol"^(-1)], sera abrogée,
+      * les définitions existantes du mètre, de la seconde et de la candela, en vigueur depuis leur adoption par la CGPM lors de ses stem:[17^(e)] (1983, Résolution 1), stem:[13^(e)] (1967/68, Résolution 1) et stem:[16^(e)] (1979, Résolution 3) réunions respectivement, seront abrogées.
+
+      La Conférence générale des poids et mesures,
+  - type: taking into account
+    date_effective: '2011-10-21'
+    message: |-
+      *prend en considération* qu'à la même date
+
+      * la masse du prototype international du kilogramme stem:[m(K)] sera égale à stem:[1 "kg"], avec cependant une incertitude relative égale à celle de la valeur recommandée de stem:[h] juste avant la redéfinition, puis sa valeur sera déterminée de façon expérimentale,
+      * la constante magnétique (la perméabilité du vide) µ0 sera égale à stem:[4 pi  * 10^(-7) "H" * "m"^(-1)], avec cependant une incertitude relative égale à celle de la valeur recommandée de la constante de structure fine stem:[ alpha ], puis sa valeur sera déterminée de façon expérimentale,
+      * la température thermodynamique du point triple de l'eau stem:[T_(TPW)] sera égale à stem:[273","16 "K"], avec cependant une incertitude relative égale à celle de la valeur recommandée de k juste avant la redéfinition, puis sa valeur sera déterminée de façon expérimentale,
+      * la masse molaire du carbone stem:[12 M(""_(12) "C")] sera égale à stem:[0","012 "kg" * "mol"^(-1)], avec cependant une incertitude relative égale à celle de la valeur recommandée de stem:[N_("A")h] juste avant la redéfinition, puis sa valeur sera déterminée de façon expérimentale.
+
+      La Conférence générale des poids et mesures,
+  actions:
+  - type: encourages
+    date_effective: '2011-10-21'
+    message: encourage les chercheurs des laboratoires nationaux de métrologie, le
+      BIPM et les institutions universitaires à poursuivre leurs efforts et à transmettre
+      à la communauté scientifique en général et à la CODATA en particulier les résultats
+      de leurs travaux sur la détermination des constantes de stem:[h], stem:[e],
+      stem:[k], et stem:[N_("A")], et
+  - type: encourages
+    date_effective: '2011-10-21'
+    message: encourage le BIPM à poursuivre son travail afin d'assurer la traçabilité
+      au prototype international du kilogramme des prototypes de masse qu'il maintient,
+      ainsi qu'à mettre au point un ensemble d'étalons de référence qui permettra
+      de faciliter la dissémination de l'unité de masse une fois le kilogramme redéfini,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: et invite la CODATA à continuer à fournir des valeurs pour les constantes
+      fondamentales de la physique ajustées à partir de toutes les données pertinentes
+      disponibles, ainsi qu'à transmettre les résultats au CIPM par l'intermédiaire
+      du Comité consultatif des unités, puisque ce sont les valeurs et incertitudes
+      de la CODATA qui seront utilisées pour la révision du SI,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: et invite le CIPM à lui proposer de réviser le SI dès que les recommandations
+      de la Résolution 12 adoptée par la CGPM à sa 23^e^ réunion seront satisfaites,
+      en particulier la préparation des mises en pratique des nouvelles définitions
+      du kilogramme, de l'ampère, du kelvin et de la mole,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: et invite le CIPM à poursuivre son travail afin d'obtenir une meilleure
+      formulation des définitions des unités de base du SI fondées sur des constantes
+      fondamentales, l'objectif étant de parvenir, autant que possible, à une description
+      plus facilement compréhensible pour l'ensemble des utilisateurs tout en gardant
+      rigueur et clarté scientifiques,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: et invite le CIPM, les Comités consultatifs, le BIPM, l'OIML et les laboratoires
+      nationaux de métrologie à intensifier leurs efforts afin de mettre en place
+      des campagnes de sensibilisation pour informer les communautés d’utilisateurs
+      et le grand public du projet de redéfinition de certaines unités du SI, et à
+      encourager l'examen des implications juridiques, techniques et pratiques de
+      ces redéfinitions, afin de solliciter les commentaires et les contributions
+      de la vaste communauté des scientifiques et des utilisateurs.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur l'importance d'une collaboration internationale afin de rendre les mesures
+    nécessaires à l'observation du changement climatique traçables au Système international
+    d'unités (SI)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 217
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: rappelant la Résolution 4 adoptée par la CGPM à sa 21^e^ réunion (1999)
+      sur la nécessité d'utiliser les unités du SI dans les recherches sur les ressources
+      terrestres, l'environnement, la sécurité humaine et les études connexes,
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: rappelant la Résolution 11 adoptée par la CGPM à sa 23^e^ réunion (2007)
+      sur l'importance des mesures traçables au SI pour l'observation du changement
+      climatique,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant l'augmentation du nombre d'initiatives nationales et internationales
+      pour faire face aux défis et aux implications du changement climatique dans
+      le monde,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant les délibérations du Groupe d'experts intergouvernemental
+      sur l'évolution du climat des Nations Unies, ainsi que les conclusions de la
+      conférence de Copenhague sur le changement climatique de 2009,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la collaboration entre le Bureau international des poids
+      et mesures (BIPM) et l'Organisation météorologique mondiale (OMM),
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la signature de l'Arrangement de reconnaissance mutuelle
+      des étalons nationaux de mesure et des certificats d'étalonnage et de mesurage
+      émis par les laboratoires nationaux de métrologie (CIPM MRA) par l'OMM,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: 'considérant les conclusions de l''atelier commun au BIPM et à l''OMM
+      intitulé « Measurement challenges for global observation systems for climate
+      change monitoring: Traceability, stability and reducing uncertainty » qui s''est
+      tenu du 30 mars au 1^er^ avril 2010,'
+  - type: considering
+    date_effective: '2011-10-21'
+    message: 'considérant les discussions menées au sein du Comité consultatif pour
+      la quantité de matière : métrologie en chimie (CCQM), du Comité consultatif
+      de thermométrie (CCT), du Comité consultatif de photométrie et radiométrie (CCPR),
+      et les recommandations que ces comités ont présentées au Comité international
+      des poids et mesures (CIPM), ainsi que les actions conjuguées des laboratoires
+      nationaux de métrologie membres de ces Comités et des structures concernées
+      de l''OMM, et'
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant l'intérêt accru de la part des gouvernements pour la mise
+      en place d'un système mondial de captage et de commerce du carbone, ainsi que
+      pour les initiatives de réduction des émissions de carbone,
+  actions:
+  - type: welcomes
+    date_effective: '2011-10-21'
+    message: accueille favorablement les initiatives de l'OMM visant à travailler
+      de façon plus étroite avec le BIPM et les laboratoires nationaux de métrologie,
+  - type: welcomes
+    date_effective: '2011-10-21'
+    message: accueille favorablement la volonté du BIPM, dans son projet de programme
+      de travail pour les années 2013 à 2016, de traiter des questions métrologiques
+      liées au changement climatique et au réchauffement de la planète, et
+  - type: welcomes
+    date_effective: '2011-10-21'
+    message: accueille favorablement les initiatives prises par un certain nombre
+      de laboratoires nationaux de métrologie afin de s'impliquer dans la recherche
+      ainsi que d’autres activités visant à soutenir les politiques sur l'économie
+      du carbone,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que les organismes concernés prennent les dispositions nécessaires
+      afin de s'assurer que toutes les mesures relatives aux observations susceptibles
+      d'être utilisées pour des études sur le climat soient entièrement traçables
+      aux unités du SI,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que tout système de commerce et de captage du carbone ayant
+      fait l'objet d'un accord entre gouvernements engage ces derniers à effectuer
+      des mesures traçables au SI,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que les organismes concernés soutiennent la mise en œuvre
+      de techniques permettant d'élaborer une série d'étalons radiométriques et d'instruments
+      traçables au SI afin que la traçabilité des mesures effectuées au sol ou dans
+      l'espace puisse être établie,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que les laboratoires nationaux de métrologie continuent à
+      mettre au point des techniques et des systèmes de mesure afin que la modélisation
+      et le contrôle des procédés de production de biocarburants et du piégeage du
+      carbone soient traçables au SI et réalisés de façon équivalente dans le monde
+      entier,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que les gouvernements, ainsi que les organisations intergouvernementales
+      et organismes internationaux concernés, s'engagent à adopter un système d'unités
+      et d'étalons de mesure qui soit reconnu et accepté au niveau international,
+      et
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: recommande que le BIPM prenne les mesures nécessaires afin de contribuer
+      à la coordination de cette activité, avec le soutien total des États Parties
+      à la Convention du Mètre.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Dotation du Bureau international des poids et mesures pour les années 2013
+    à 2015
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 219
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: "*rappelant* l'Article I de la Convention du Mètre selon lequel les États
+      Parties à la Convention du Mètre s'engagent à entretenir, à frais communs, un
+      _Bureau international des poids et mesures_, scientifique et permanent,"
+  - type: recognizing
+    date_effective: '2011-10-21'
+    message: "*reconnaissant* que cela implique un soutien financier durable et à
+      long terme afin de permettre au BIPM d'accomplir de façon continue sa mission,
+      d'effectuer ses activités fondamentales et d'assurer les responsabilités qui
+      lui sont confiées dans le programme de travail proposé pour les années 2013
+      à 2015,"
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant l'importance croissante du travail du Bureau international
+      des poids et mesures (BIPM), dans tous les États Parties à la Convention du
+      Mètre, pour le commerce international, l'innovation dans le secteur industriel,
+      le changement climatique, la santé humaine et la médecine, ainsi que pour l'alimentation
+      et la médecine légale,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant le fait que le BIPM est reconnu comme organisation intergouvernementale
+      experte sur le plan technique, qui répond aux besoins des États Parties à la
+      Convention du Mètre,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la façon dont le BIPM continue à adopter les meilleures pratiques
+      de gestion et à améliorer l'efficacité de son personnel,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la nécessité de reconstituer le fonds d'investissement du
+      BIPM,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant le fait qu'en partageant le coût des équipements proposés
+      et en finançant le BIPM, les États Parties à la Convention du Mètre réalisent
+      des économies substantielles et améliorent l'efficacité et l'efficience de leur
+      structure métrologique nationale et de leurs activités métrologiques internationales,
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2011-10-21'
+    message: "*remercie* les laboratoires nationaux de métrologie qui ont apporté
+      au BIPM des contributions volontaires de toutes sortes,"
+  - type: urges
+    date_effective: '2011-10-21'
+    message: prie instamment les laboratoires nationaux de métrologie d'augmenter
+      le nombre de personnes mises à la disposition du BIPM afin de travailler à des
+      projets du programme de travail du BIPM présentant un intérêt commun,
+  - type: urges
+    date_effective: '2011-10-21'
+    message: prie instamment les États Parties, ainsi que les organisations internationales,
+      les organismes privés et les fondations d'apporter également un soutien financier
+      volontaire supplémentaire de toutes sortes afin de soutenir des activités spécifiques
+      liées à la mission du BIPM,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: |-
+      *décide* que la dotation annuelle du BIPM, telle que définie à l'article 6, 1921, du Règlement annexé à la Convention du Mètre, sera augmentée de façon à ce qu'elle soit portée, pour les États Parties à la Convention du Mètre au moment de la 24^e^ réunion de la CGPM, à :
+
+      |===
+      | 11 577 000 euros en 2013
+
+      | 11 693 000 euros en 2014
+      | 11 810 000 euros en 2015
+
+      |===
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur le statut d'État Associé à la Conférence générale
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 221
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: rappelant la Résolution 3 adoptée par la CGPM à sa 21^e^ réunion en 1999,
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: rappelant la Resolution 5 adoptée par la CGPM à sa 23^e^ réunion en 2007,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la participation croissante des États Associés à la CGPM
+      aux activités menées sous les auspices de la Convention du Mètre,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant les avantages scientifiques et économiques dont bénéficient
+      les États Associés, notamment en participant à l'_Arrangement de reconnaissance
+      mutuelle des étalons nationaux de mesure et des certificats d'étalonnage et
+      de mesurage émis par les laboratoires nationaux de métrologie_ (CIPM MRA) et
+      grâce aux services du Bureau international des poids et mesures (BIPM) que le
+      Comité international des poids et mesures (CIPM) a mis à leur disposition,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant le coût réel croissant pour les États Parties à la Convention
+      du Mètre de ces avantages tirés par les États Associés,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant le fait que le statut d'État Associé peut constituer une
+      première étape avant d'adhérer à la Convention du Mètre,
+  - type: noting
+    date_effective: '2011-10-21'
+    message: |-
+      *notant*
+
+      * les décisions prises par le CIPM à ses stem:[98^(e)] et 99^e^ sessions d'adopter les critères suivants lui permettant d'examiner s'il est approprié qu'un État Associé accède à la Convention du Mètre :
+      ** signature de l'Arrangement du CIPM par le laboratoire national de métrologie de l'État Associé,
+      ** publication de résultats de comparaison dans la base de données du BIPM sur les comparaisons clés (KCDB),
+      ** enregistrement d'au moins une aptitude en matière de mesures et d'étalonnages (CMC) dans la KCDB,
+  actions:
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que pendant une période initiale de cinq ans suivant l'accession
+      au statut d'Associé à la CGPM, les États Associés acquitteront une souscription
+      annuelle déterminée à partir de leur contribution à l'Organisation des Nations
+      Unies, comme pour les États Parties à la Convention du Mètre, avec un minimum
+      égal à 0,1 % de la dotation annuelle du BIPM,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que cette décision sera applicable aux États actuellement associés
+      pour le calcul de leur souscription à compter de l'exercice 2013,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que après la période initiale de cinq ans susmentionnée, si le
+      CIPM considère, sur le fondement des critères qu'il a adoptés, qu'il est approprié
+      qu'un État Associé devienne État Partie à la Convention du Mètre, le montant
+      de la souscription dudit Associé sera augmenté tous les ans progressivement
+      et de manière irréversible afin d'atteindre, après cinq ans, un montant équivalent
+      à 90 % de la contribution annuelle dont cet État devrait s'acquitter s'il était
+      État Partie à la Convention du Mètre,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que cette augmentation progressive et irréversible sera applicable
+      au 1^er^ janvier de la deuxième année suivant la décision du CIPM d'encourager
+      l'Associé à adhérer à la Convention du Mètre,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que l'examen de la situation des États Associés par le CIPM en
+      2011 sera utilisé aux fins d'application de la présente Résolution, et la première
+      augmentation des souscriptions prendra effet en 2013,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que une telle augmentation ne sera pas appliquée aux États Associés
+      dont la souscription annuelle est déjà égale à la contribution dont ils devraient
+      s'acquitter s'ils étaient États Parties à la Convention du Mètre,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que tant qu'un État Associé ne remplit pas les critères susmentionnés
+      pour être encouragé à adhérer à la Convention du Mètre, il continuera à bénéficier
+      des avantages du statut d'Associé, tel que prévu par la Résolution 3 adoptée
+      par la CGPM à sa 21^e^ réunion (1999), et des services du BIPM que le CIPM a
+      mis à sa disposition, et sa souscription demeurera déterminée comme durant la
+      période initiale de cinq ans,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: |-
+      *invite*
+
+      tous les États Associés, qu'ils remplissent ou non les critères adoptés par le CIPM afin d'encourager les États Associés à devenir États Parties à la Convention du Mètre, à adhérer à la Convention du Mètre en ce qu'une telle adhésion ne peut qu'être bénéfique au renforcement du système de mesure mondial.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur l'acceptation d'entités économiques comme Associé à la Conférence générale
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 223
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la Résolution 3 adoptée par la CGPM à sa 21^e^ réunion (1999),
+      créant le statut d'Associé à la CGPM ouvert aux « États et entités économiques
+      » afin de promouvoir leur participation au système de mesure mondial,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la Résolution 6 adoptée par la CGPM à sa 23^e^ réunion (2007),
+      considérant le souhait que soient établis des critères permettant l'examen des
+      demandes d'entités économiques à devenir Associées,
+  actions:
+  - type: decides
+    date_effective: '2011-10-21'
+    message: |-
+      *décide* que
+
+      * le statut d'entité économique Associée n'est pas acquis automatiquement mais accordé par la CGPM, à l'unanimité, au cas par cas,
+      * la décision de la CGPM d'accorder le statut d'entité économique Associée sera fondée sur les critères suivants :
+      ** une entité économique Associée doit être une entité territoriale,
+      ** l'entité territoriale doit posséder son propre laboratoire de métrologie sur son territoire,
+      ** la participation de l'entité territoriale aux activités du Bureau international des poids et mesures (BIPM) doit être considérée comme bénéfique au renforcement du système de mesure mondial,
+      * la souscription annuelle de ces entités économiques Associées sera déterminée par la CGPM,
+      * les organisations intergouvernementales ne sont pas considérées comme « entités territoriales »,
+      * CARICOM, l'organisation intergouvernementale régionale actuellement Associée à la Conférence générale, a acquis le statut d'entité économique Associée à la CGPM préalablement à l'adoption des critères susmentionnés et peut continuer à bénéficier de ce statut bien que ne remplissant pas lesdits critères,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite les États membres de CARICOM à adhérer à la Convention du Mètre
+      ou à devenir États Associés à la CGPM,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite le Comité international des poids et mesures (CIPM) à réfléchir
+      à d'autres moyens appropriés d'impliquer des organisations intergouvernementales,
+      en particulier celles de régions ne disposant pas d'une infrastructure métrologique
+      bien développée, au travail du BIPM et à présenter lors de la prochaine réunion
+      de la CGPM des propositions sur la façon la plus adéquate d'y parvenir.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur les contributions arriérées des États Parties à la Convention du Mètre
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 224
+  approvals:
+  - message: "La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,\n\n "
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: 'considérant l''article 6, alinéas 6 à 8, du Règlement annexé à la Convention
+      du Mètre selon lequel :'
+  - type: considering
+    date_effective: '2011-10-21'
+    message: |-
+      considérant _« 6. Si un État est demeuré trois années sans effectuer le versement de sa contribution, celle-ci est répartie entre les autres États, au prorata de leurs propres contributions. Les sommes supplémentaires, versées ainsi par les États pour parfaire le montant de la dotation du Bureau, sont considérées comme une avance faite à l'État retardataire, et leur sont remboursées si celui-ci vient à acquitter ses contributions arriérées._ +
+      _7. Les avantages et prérogatives conférés par l'adhésion à la Convention du Mètre sont suspendus à l'égard des États déficitaires de trois années._ +
+      _8. Après trois nouvelles années, l'État déficitaire est exclu de la Convention, et le calcul des contributions est rétabli conformément aux dispositions de l'article 20 du présent Règlement. »_
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant la Résolution 8 adoptée par la CGPM à sa 23^e^ réunion (2007)
+      définissant le mécanisme d'adoption des décisions et une procédure régissant
+      le recouvrement des contributions arriérées ainsi que l'exclusion,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant les contributions arriérées depuis plus de 6 ans des États
+      Parties à la Convention du Mètre et les avances faites par les autres États
+      Parties en application de l'article 6 alinéa 6 du Règlement annexé à la Convention
+      du Mètre,
+  actions:
+  - type: affirms / reaffirming
+    date_effective: '2011-10-21'
+    message: réaffirmant l'absolue nécessité que les contributions des États Parties
+      à la Convention du Mètre soient acquittées en temps et en heure et régulièrement
+      pour permettre au BIPM de remplir sa mission et d'éviter des difficultés financières
+      pesant sur son fonctionnement quotidien,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide d'accorder aux États Parties ayant des contributions arriérées
+      depuis plus de 6 ans un délai de 12 mois à compter de la date d'adoption de
+      la présente Résolution pour conclure avec le Comité international des poids
+      et mesures (CIPM) un accord de rééchelonnement,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que si un accord de rééchelonnement n'était pas conclu dans ce
+      délai de 12 mois, ces États seront automatiquement exclus et le CIPM informera
+      par écrit le Ministère français des Affaires étrangères et européennes aux fins
+      de notification, à ces États et à l'ensemble des États Parties à la Convention
+      du Mètre, de l'exclusion au nom de la CGPM, et
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que le calcul des contributions est rétabli conformément aux dispositions
+      applicables dès l'année civile suivant l'exclusion.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur les accords de rééchelonnement conclus entre le Comité international
+    des poids et mesures et les États Parties à la Convention du Mètre débiteurs pour
+    le paiement de leurs contributions arriérées
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 225
+  approvals:
+  - message: "La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,\n\n "
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: 'rappelant l''article 6, alinéas 6 à 8, du Règlement annexé à la Convention
+      du Mètre, selon lequel :'
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: |-
+      rappelant _« 6. Si un État est demeuré trois années sans effectuer le versement de sa contribution, celle-ci est répartie entre les autres États, au prorata de leurs propres contributions. Les sommes supplémentaires, versées ainsi par les États pour parfaire le montant de la dotation du Bureau, sont considérées comme une avance faite à l'État retardataire, et leur sont remboursées si celui-ci vient à acquitter ses contributions arriérées._ +
+      _7. Les avantages et prérogatives conférés par l'adhésion à la Convention du Mètre sont suspendus à l'égard des États déficitaires de trois années._ +
+      _8. Après trois nouvelles années, l'État déficitaire est exclu de la Convention, et le calcul des contributions est rétabli conformément aux dispositions de l'article 20 du présent Règlement. »_
+  - type: recalling / further recalling
+    date_effective: '2011-10-21'
+    message: rappelant la Résolution 8 adoptée par la CGPM à sa 23^e^ réunion (2007)
+      qui prévoit que, lorsqu'un État Partie à la Convention du Mètre ne s'est pas
+      acquitté de six années de contributions, le Comité international des poids et
+      mesures (CIPM) peut conclure un accord de rééchelonnement avec l'État débiteur
+      pour le paiement de ses contributions arriérées,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la conclusion par le CIPM d'accords de rééchelonnement
+      avec les États débiteurs a des conséquences institutionnelles, financières et
+      budgétaires pour le BIPM et les autres États Parties à la Convention du Mètre,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant qu'il est nécessaire de définir les droits et obligations
+      des États Parties à la Convention du Mètre ne s'étant pas acquittés de six années
+      de contributions et ayant conclu un accord de rééchelonnement avec le CIPM,
+  actions:
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que lorsqu'un État Partie à la Convention du Mètre ne s'est pas
+      acquitté de six années de contributions mais que le CIPM a conclu un accord
+      de rééchelonnement avec cet État débiteur, les contributions arriérées seront
+      réglées conformément à l'accord de rééchelonnement en sus de sa contribution
+      annuelle,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que une fois l'accord de rééchelonnement conclu avec le CIPM et
+      la première échéance réglée conformément audit accord, l'État débiteur pourra
+      à nouveau bénéficier des avantages et prérogatives conférés par l'adhésion à
+      la Convention du Mètre,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que la contribution annuelle de l'État débiteur ne sera plus répartie
+      entre les autres États Parties à la Convention du Mètre à compter de l'année
+      suivant l'entrée en vigueur de l'accord de rééchelonnement,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que si un État débiteur ne respecte pas les termes de l'accord
+      de rééchelonnement, les avantages et prérogatives qui lui ont été conférés par
+      l'adhésion à la Convention du Mètre seront suspendus et sa contribution sera
+      répartie entre les autres États Parties à la Convention du Mètre conformément
+      aux dispositions de l'article 6 alinéa 6 du Règlement annexé à la Convention
+      du Mètre,
+  - type: decides
+    date_effective: '2011-10-21'
+    message: décide que si l'État ne respecte pas les termes de l'accord de rééchelonnement
+      pendant plus de 12 mois, il sera automatiquement exclu.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur la révision de la mise en pratique de la définition du mètre et sur la
+    mise au point de nouveaux étalons optiques de fréquence
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 227
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: "*considérant* que les performances des étalons optiques de fréquence
+      s'améliorent rapidement et de manière très significative,\n que les laboratoires
+      nationaux de métrologie mettent actuellement en \x9Cuvre des techniques de comparaison
+      à courte distance d'étalons optiques de fréquence,\n que des techniques de comparaison
+      à distance d'étalons optiques de fréquence doivent être mises au point au niveau
+      international,"
+  actions:
+  - type: welcomes
+    date_effective: '2011-10-21'
+    message: |-
+      *accueille favorablement* les activités du Groupe de travail commun au Comité consultatif des longueurs (CCL) et au Comité consultatif du temps et des fréquences (CCTF) visant à examiner les fréquences des représentations optiques de la seconde,
+       les éléments ajoutés par le CIPM en 2009 à la liste commune des « valeurs recommandées de fréquences étalons destinées à la mise en pratique de la définition du mètre et aux représentations secondaires de la seconde »,
+       l'établissement d'un groupe de travail du CCTF sur la coordination de la mise au point de techniques avancées de comparaison de temps et de fréquences,
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: |-
+      *recommande* que les laboratoires nationaux de métrologie engagent les ressources nécessaires à la mise au point d'étalons optiques de fréquence et à leur comparaison,
+       le BIPM aide à la coordination d'un projet international auquel participeraient les laboratoires nationaux de métrologie, portant sur l'étude des techniques qui pourraient être utilisées pour comparer les étalons optiques de fréquence.
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur l'adoption d'un système de référence terrestre commun
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 228
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: |-
+      *considérant* le nombre certain de systèmes globaux de navigation par satellite (GNSS) qui existent déjà et la probabilité que d'autres systèmes soient mis au point à l'avenir,
+       la prolifération de différents systèmes de référence temporels et géodésiques, utilisés par ces systèmes globaux de navigation, qui rend plus ambiguë l'interprétation des solutions de positionnement et de temps pour les utilisateurs, et plus compliquée l'interopérabilité des systèmes,
+       l'existence du Système international de référence terrestre (ITRS),
+       le fait que l'adoption d'un système de référence commun serait un avantage pour les utilisateurs en termes d'unification des solutions de positionnement et de temps, et d'interopérabilité des systèmes globaux,
+  actions:
+  - type: recommends
+    date_effective: '2011-10-21'
+    message: "*recommande* que l'ITRS, tel que défini par l'Union géodésique et géophysique
+      internationale (UGGI), et réalisé de manière pratique par le Service international
+      de la rotation terrestre et des systèmes de référence (IERS), soit adopté, pour
+      toutes les applications métrologiques, comme le système de référence international
+      unique pour les repères terrestres."
+- dates:
+  - '2011-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur le rôle, la mission, les objectifs, la stratégie à long terme et la gouvernance
+    du BIPM
+  identifier: 10
+  url: https://www.bipm.org/fr/committees/cg/cgpm/24-2011/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
+  reference_name: Comptes rendus de la 24e CGPM (2011), 2013
+  reference_page: 229
+  approvals:
+  - message: La Conférence générale des poids et mesures (CGPM), à sa 24^e^ réunion,
+  considerations:
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la Convention du Mètre, qui a établi le Bureau international
+      des poids et mesures (BIPM), a été signée en 1875 et modifiée pour la dernière
+      fois en 1921,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que le Règlement annexé à la Convention du Mètre a été amendé
+      depuis lors à différentes reprises,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que le rôle et la mission du BIPM ont été reconfirmés dans
+      la Résolution 2 adoptée par la CGPM à sa 23^e^ réunion,
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que la gouvernance du BIPM a été examinée pour la dernière
+      fois par un Groupe de travail _ad hoc_ mis en place lors de la 16^e^ réunion
+      de la CGPM, que les conclusions de ce Groupe de travail _ad hoc_ ont été à l'époque
+      qu'il n'était ni nécessaire ni souhaitable de modifier la Convention du Mètre,
+      et que ces conclusions ont été approuvées par la CGPM à sa 17^e^ réunion (1983),
+  - type: considering
+    date_effective: '2011-10-21'
+    message: considérant que les attentes en matière de gestion financière et de reddition
+      de comptes n'ont cessé de croître, tant au niveau des administrations nationales
+      que des organisations internationales,
+  - type: noting
+    date_effective: '2011-10-21'
+    message: |-
+      *notant*
+
+      * que les contacts entre le BIPM et les gouvernements des États Parties à la Convention du Mètre ont été renforcés depuis la 23^e^ réunion de la CGPM par le biais de rapports abrégés du directeur du BIPM et par l'organisation d'une réunion spéciale des représentants des États Parties à la Convention du Mètre préalablement à la 24^e^ réunion de la CGPM,
+      * que le BIPM a mis en place un système de comptabilité d'engagement afin d'accroître l'efficacité, la reddition de comptes et la transparence de la gestion financière du BIPM,
+      * que parmi les observations faites par les représentants des États Parties à la Convention du Mètre lors d'une réunion en mai 2011 figurent notamment les suivantes :
+      ** tous les États soutiennent et apprécient fortement la Convention du Mètre et le travail du BIPM, soulignant les avancées effectuées, notamment en ce qui concerne l'évolution du CIPM MRA,
+      ** les États soutiennent à l'unanimité une nouvelle direction stratégique plus forte du BIPM avec des priorités claires, développée conjointement par les États Parties à la Convention du Mètre, les laboratoires nationaux de métrologie et le Comité international des poids et mesures (CIPM),
+      ** il existe différents avis concernant les niveaux respectifs des activités de coordination/coopération et des activités de laboratoire,
+      ** un aspect clé de la nouvelle stratégie sera de considérer quels doivent être les rôles du BIPM, des organisations régionales de métrologie et des laboratoires nationaux de métrologie,
+  actions:
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite le CIPM à établir un Groupe de travail _ad hoc_ présidé par le
+      président du CIPM, incluant dans sa composition une représentation du CIPM,
+      des États Parties à la Convention du Mètre (à contributions maximales, intermédiaires
+      et minimales) et des laboratoires nationaux de métrologie, reflétant de manière
+      adéquate l'ensemble des régions, ainsi que le directeur du BIPM, chargé de conduire
+      un examen du rôle, de la mission, des objectifs, de la stabilité financière
+      à long terme, de la direction stratégique et de la gouvernance du BIPM,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite le Groupe de travail _ad hoc_ à présenter les conclusions qu'il
+      aura tirées de cet examen au CIPM, aux États Parties à la Convention du Mètre
+      et aux directeurs des laboratoires nationaux de métrologie en octobre 2012,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite le CIPM à proposer les mesures à prendre au vu des conclusions
+      du Groupe de travail _ad hoc_ et à mettre en œuvre celles qui relèvent de son
+      autorité, sous réserve du soutien des représentants des États Parties à la Convention
+      du Mètre et des directeurs des laboratoires nationaux de métrologie, au cours
+      de 2013-2014,
+  - type: invites / further invites
+    date_effective: '2011-10-21'
+    message: invite le CIPM à présenter à la CGPM, à sa 25^e^ réunion, les recommandations
+      qu'il aura formulées à la suite de l'examen par le Groupe de travail _ad hoc_,
+      les actions qu'il aura menées en conséquence, ainsi que des propositions d'actions
+      supplémentaires requérant l'approbation de la CGPM.

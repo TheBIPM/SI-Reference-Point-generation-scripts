@@ -1,0 +1,348 @@
+---
+metadata:
+  title: 18e réunion de la CGPM
+  identifier: 18
+  date: '1987-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987
+pdf: https://www.bipm.org/documents/20126/38091005/CGPM18.pdf/3dd75ee3-d581-34da-7c5b-a2a1ecbc4a6b
+resolutions:
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Troisième vérification des prototypes du kilogramme
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 97
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1987-10-16'
+    message: "*rappelant et confirmant* la Résolution 3 de la Quinzième Conférence
+      générale des poids et mesures,"
+  - type: having / having regard
+    date_effective: '1987-10-16'
+    message: "*ayant pris l'avis* du Comité international des poids et mesures et
+      ayant approuvé sa décision de procéder à une comparaison du Prototype international
+      du kilogramme, de ses témoins et des prototypes d'usage du Bureau international
+      des poids et mesures,"
+  - type: considering
+    date_effective: '1987-10-16'
+    message: "*considérant* que le Bureau international des poids et mesures sera
+      ensuite en mesure d'organiser une comparaison générale des prototypes nationaux,
+      comparaison qui devrait commencer vers 1989-1990,"
+  actions:
+  - type: recommends
+    date_effective: '1987-10-16'
+    message: "*recommande* que les laboratoires concernés se préparent à envoyer au
+      Bureau international des poids et mesures leurs prototypes nationaux du kilogramme
+      en platine iridié, en vue d'une comparaison générale de ces prototypes."
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Étude de l'état superficiel des étalons de masse
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 98
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que la stabilité à long terme est l'une des caractéristiques
+      essentielles des étalons de masse,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que les perfectionnements apportés aux balances permettent
+      aujourd'hui de mettre en évidence des variations de masse de quelques microgrammes
+      sur un kilogramme,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que des variations de cet ordre ont été observées et ont
+      pu être attribuées à des effets superficiels dus en particulier à la pollution
+      par les agents atmosphériques,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que les méthodes utilisées pour nettoyer la surface des étalons
+      de masse pourraient avoir des effets insoupçonnés,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que diverses méthodes modernes permettent d'étudier le comportement
+      superficiel des alliages dont sont constitués les étalons de masse,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que des résultats importants ont déjà été obtenus à l'aide
+      de ces méthodes concernant la contamination des surfaces,
+  actions:
+  - type: recommends
+    date_effective: '1987-10-16'
+    message: recommande que les laboratoires appliquent les diverses techniques maintenant
+      disponibles pour étudier la composition et le comportement superficiels du platine
+      allié à 10 % d'iridium et des autres alliages dont sont constitués les étalons
+      de masse.
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Prise en charge du Temps atomique international
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 98
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: "*considérant* l'importance des mesures de temps et en particulier de
+      l'échelle de Temps atomique international, laquelle a déjà fait l'objet de la
+      Résolution 2 de la Quatorzième Conférence générale des poids et mesures et des
+      Résolutions 4 et 5 de la Quinzième Conférence générale,"
+  - type: having / having regard
+    date_effective: '1987-10-16'
+    message: "*ayant pris connaissance* des résolutions adoptées par les Unions internationales
+      concernées, l'Union astronomique internationale, Union géodésique et géophysique
+      internationale et Union radio-scientifique internationale,"
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '1987-10-16'
+    message: "*rend hommage* au Bureau international de l'heure et à son organisme-hôte,
+      l'Observatoire de Paris, pour la création du Temps atomique international et
+      pour la qualité des travaux accomplis pour l'établir et le diffuser,"
+  - type: approves
+    date_effective: '1987-10-16'
+    message: |-
+      *approuve* les décisions du Comité international qui ont eu pour effet la prise en charge par le Bureau international des poids et mesures de l'établissement et de la diffusion du Temps atomique international,
+
+      et *recommande* aux institutions nationales concernées de poursuivre avec le Bureau international des poids et mesures leur collaboration pour l'établissement et l'amélioration du Temps atomique international.
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Comparaisons de temps utilisant les liaisons par satellites
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 99
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que la synchronisation de haute précision devient rapidement
+      une condition essentielle des télécommunications modernes,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que les liaisons aller et retour par satellite permettent
+      d'effectuer des comparaisons de temps à l'échelle internationale avec une très
+      grande précision,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant qu'il apparaît possible de transmettre des signaux horaires
+      pseudo-aléatoires superposés à une utilisation normale des voies de communication
+      sans qu'il y ait interférence,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que ces techniques de signaux pseudo-aléatoires permettent
+      aussi de mesurer la distance du satellite avec une grande précision,
+  actions:
+  - type: recommends
+    date_effective: '1987-10-16'
+    message: |-
+      *recommande*
+
+      que les organes nationaux et internationaux responsables apportent leur soutien aux expériences utilisant les liaisons de télécommunication par satellites, notamment à l'aide de signaux pseudo-aléatoires, dans le cadre des programmes internationaux de liaisons horaires faisant partie de l'établissement du Temps atomique international.
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Étude des effets perturbateurs dans la réalisation de la seconde
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 99
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1987-10-16'
+    message: |-
+      *rappelle* que
+
+      * la définition de la seconde telle qu'elle résulte des décisions de la Treizième Conférence générale des poids et mesures sous-entend que l'atome de césium utilisé comme référence est au repos et n'est soumis à aucune perturbation,
+      * ceci implique notamment que, dans la présente mise en pratique, les mesures doivent être corrigées en raison de la vitesse des atomes de césium par rapport au référentiel de l'horloge, en raison des interactions magnétique et électrique, de l'échange des spins et des autres perturbations éventuelles,
+
+      et *recommande*, afin de mettre en œuvre les corrections nécessaires,
+
+      * que les études théoriques de tous les effets perturbateurs soient développées,
+      * que les expériences permettant de mettre en évidence ces effets, d'en vérifier l'interprétation théorique et d'évaluer l'incertitude des corrections correspondantes soient poursuivies activement.
+  actions: []
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Ajustement prévu des représentations du volt et de l'ohm
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 100
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que l'uniformité mondiale et la constance à long terme des
+      représentations nationales des unités électriques sont d'une importance majeure
+      pour la science, le commerce et l'industrie du point de vue technique comme
+      du point de vue économique,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que de nombreux laboratoires nationaux utilisent l'effet
+      Josephson et commencent à utiliser l'effet Hall quantique pour conserver respectivement
+      des représentations du volt et de l'ohm qui donnent les meilleures garanties
+      de stabilité à long terme,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant qu'en raison de l'importance de la cohérence entre les unités
+      de mesure des diverses grandeurs physiques les valeurs attribuées à ces représentations
+      doivent être autant que possible en accord avec le SI,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que l'ensemble des résultats des expériences en cours ou
+      récemment achevées permettra d'établir une valeur acceptable, suffisamment compatible
+      avec le SI, pour le coefficient qui relie chacun de ces effets à l'unité électrique
+      correspondante,
+  actions:
+  - type: invites / further invites
+    date_effective: '1987-10-16'
+    message: "*invite* les laboratoires dont les travaux peuvent contribuer à établir
+      la valeur du quotient de la tension par la fréquence dans l'effet Josephson
+      et de la tension par le courant dans l'effet Hall quantique à poursuivre activement
+      ces travaux et à communiquer sans délai leurs résultats au Comité international
+      des poids et mesures et,"
+  - type: charges
+    date_effective: '1987-10-16'
+    message: "*charge* le Comité international des poids et mesures de recommander,
+      dès qu'il le jugera possible, une valeur de chacun de ces quotients et une date
+      à laquelle elle pourra être mise en pratique simultanément dans tous les pays
+      ; cette valeur devrait être annoncée au moins un an à l'avance et pourrait être
+      adoptée au 1^er^ janvier 1990."
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Mise au point d'une nouvelle échelle internationale de température
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 101
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que l'uniformité mondiale et la stabilité à long terme des
+      mesures de température sont d'une importance majeure pour la science, le commerce
+      et l'industrie, du point de vue technique comme du point de vue économique,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que la valeur de la température dans l'échelle pratique doit
+      correspondre étroitement à la valeur de la température thermodynamique dans
+      le SI,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant que la Quinzième Conférence générale des poids et mesures,
+      ayant pris connaissance des écarts qui ont été mis en évidence entre la valeur
+      de la température dans l'Échelle internationale pratique de température de 1968
+      (EIPT-68) et la valeur correspondante de la température thermodynamique, a chargé
+      le Comité international des poids et mesures d'établir une nouvelle échelle
+      qui devrait être sensiblement plus exacte,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant qu'une nouvelle échelle pourra être proposée en 1989, échelle
+      telle que les écarts résiduels avec la température thermodynamique seront négligeables
+      pendant de nombreuses années à venir,
+  actions:
+  - type: invites / further invites
+    date_effective: '1987-10-16'
+    message: "*invite* le Comité international des poids et mesures et les laboratoires
+      nationaux à achever la mise au point de cette nouvelle échelle de température
+      et à fixer une date pour sa mise en application simultanément dans tous les
+      pays ; la valeur des écarts entre cette nouvelle échelle et l'EIPT-68 devrait
+      être annoncée au moins un an avant l'adoption de la nouvelle échelle qui pourrait
+      intervenir au 1^er^ janvier 1990."
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Répartition des contributions
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 101
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant qu'après chaque Conférence générale des poids et mesures
+      la prise en compte des États qui ont adhéré à la Convention du Mètre après la
+      Conférence générale précédente devrait entraîner une réduction des pourcentages
+      de répartition pour tous les autres États,
+  actions:
+  - type: decides
+    date_effective: '1987-10-16'
+    message: décide qu'un même facteur de réduction sera appliqué uniformément à tous
+      les pourcentages de répartition, y compris le pourcentage maximal et le pourcentage
+      minimal définis dans l'article 20 du Règlement annexé à la Convention du Mètre
+      et modifiés par la Onzième et la Seizième Conférence générale des poids et mesures.
+- dates:
+  - '1987-10-16'
+  subject: CGPM
+  type: resolution
+  title: Dotation du BIPM
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
+  reference_name: Comptes rendus de la 18e CGPM (1987), 1988
+  reference_page: 102
+  approvals:
+  - message: La Dix-huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant l'importance des travaux effectués par le Bureau international
+      des poids et mesures et des services qu'il rend à tous les pays,
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant la nécessité d'assurer au Bureau international des ressources
+      minimales qui ne mettent pas en danger la poursuite de ces activités et
+  - type: considering
+    date_effective: '1987-10-16'
+    message: considérant la difficulté de prévoir, dans les circonstances économiques
+      actuelles, les moyens financiers minimaux nécessaires pour permettre au Bureau
+      international de remplir sa mission de centre mondial de la métrologie scientifique,
+  actions:
+  - type: decides
+    date_effective: '1987-10-16'
+    message: |-
+      *décide*
+
+      * que la partie fixe de la dotation annuelle du Bureau international des poids et mesures sera augmentée de telle façon que l'ensemble de la partie fixe et de la partie complémentaire (définie à l'Article 6 (1921) du Règlement annexé à la Convention du Mètre de 1875) soit, pour les États parties à la Convention à l'époque de la Dix-huitième Conférence générale des poids et mesures, porté à
+      17 960 000 francs-or en 1989 +
+       18 858 000 francs-or en 1990 +
+       19 801 000 francs-or en 1991 +
+       20 791 000 francs-or en 1992.

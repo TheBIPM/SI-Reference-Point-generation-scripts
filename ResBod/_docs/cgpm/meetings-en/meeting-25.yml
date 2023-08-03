@@ -1,0 +1,394 @@
+---
+metadata:
+  title: 25th meeting of the CGPM
+  identifier: 25
+  date: '2014-11-20'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014
+pdf: https://www.bipm.org/documents/20126/35655701/CGPM25.pdf/ab4ada95-a815-caf8-1108-81c9ad3dbc42
+resolutions:
+- dates:
+  - '2014-11-20'
+  subject: CGPM
+  type: resolution
+  title: On the future revision of the International System of Units, the SI
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
+  reference_name: Proceedings of the 25th CGPM (2014), 2015
+  reference_page: 416
+  approvals:
+  - message: "The General Conference on Weights and Measures (CGPM), at its 25th meeting,\n\n "
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling Resolution 1 adopted by the CGPM at its 24th meeting (2011),
+      which takes note of the intention of the International Committee for Weights
+      and Measures (CIPM) to propose a revision of the SI that links the definitions
+      of the kilogram, ampere, kelvin, and mole to exact numerical values of thePlanck
+      constant stem:[h], elementary charge stem:[e], Boltzmann constant stem:[k],
+      and Avogadroconstant stem:[N_("A")], respectively, and which revises the way
+      the SI is defined including the wording of the definitions of the SI units for
+      time, length, mass, electric current, thermodynamic temperature, amount of substance,
+      and luminous intensity so that the reference constants on which the SI is basedare
+      clearly apparent,
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling the many benefits summarized in Resolution 1 that will accrue
+      to science, technology, industry, and commerce from such a revision, especially
+      from linking the kilogram to an invariant of nature rather than to the mass
+      of a material artefact, thereby ensuring its long-term stability,
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling Resolution 7 adopted by the CGPM at its 21st meeting (1999),
+      which encourages work at the National Metrology Institutes (NMIs) that can lead
+      to such a redefinition of the kilogram,
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling Resolution 12 adopted by the CGPM at its 23rd meeting (2007),
+      which outlines the work that should be carried out by the NMIs, the International
+      Bureau of Weights and Measures (BIPM), and the CIPM together with its Consultative
+      Committees (CCs) that could enable the planned revision of the SI to be adopted
+      by the CGPM,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: |-
+      *considering that* there has been significant progress in completing the necessary work, including
+
+      * the acquisition of relevant data and their analysis by the Committee on Data for Science and Technology (CODATA) to obtain the required values of stem:[h], stem:[e], stem:[k], and stem:[N_("A")],
+      * establishment by the BIPM of an ensemble of reference standards of mass to facilitate the dissemination of the unit of mass in the revised SI,
+      * the preparation of _mises-en-pratique_ for the new definitions of the kilogram, ampere, kelvin, and mole,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: |-
+      *noting that* further work by the Consultative Committee for Units (CCU),the CIPM, the BIPM, the NMIs and the CCs should focus on
+
+      * awareness campaigns to alert user communities as well as the general public to the proposed revision of the SI,
+      * the preparation of the 9th edition of the SI Brochure that presents the revised SI in a way that can be understood by a diverse readership without compromising scientific rigour,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: "*that* despite this progress the data do not yet appear to be sufficiently
+      robust for the CGPM to adopt the revised SI at its 25th meeting,"
+  actions:
+  - type: encourages
+    date_effective: '2014-11-20'
+    message: encourages continued effort in the NMIs, the BIPM, and academic institutions
+      to obtain data relevant to the determination of stem:[h], stem:[e], stem:[k],
+      and stem:[N_("A")] with the requisite uncertainties,
+  - type: encourages
+    date_effective: '2014-11-20'
+    message: encourages the NMIs to continue acting through the CCs to discuss and
+      review this data,
+  - type: encourages
+    date_effective: '2014-11-20'
+    message: encourages the CIPM to continue developing a plan to provide the path
+      via the Consultative Committees and the CCU for implementing Resolution 1 adopted
+      by the CGPM at its 24th meeting (2011), and
+  - type: encourages
+    date_effective: '2014-11-20'
+    message: encourages continued effort by the CIPM, together with its Consultative
+      Committees, theNMIs, the BIPM, and other organizations such as the InternationalOrganization
+      of Legal Metrology (OIML), to complete all work necessary for the CGPM at its
+      26th meeting to adopt a resolution that would replace the current SI with the
+      revised SI, provided the amount of data, theiruncertainties, and level of consistency
+      are deemed satisfactory.
+- dates:
+  - '2014-11-20'
+  subject: CGPM
+  type: resolution
+  title: On the election of the International Committee for Weights and Measures
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
+  reference_name: Proceedings of the 25th CGPM (2014), 2015
+  reference_page: 418
+  approvals:
+  - message: The General Conference on Weights and Measures (CGPM), at its 25th meeting,
+  considerations:
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the provisions of Articles 7, 8 and 9 of the Regulations
+      Annexed to the Metre Convention on the election and composition of the International
+      Committee for Weights and Measures (CIPM),
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the decision made by the CGPM at its 17th meeting (1983),
+      upon recommendation of the _ad hoc_ Working Group it had created at its 16th
+      meeting (1979), that the CIPM should - in general - ensure that the candidate
+      is acceptable to his or her government at the time of provisional election,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering Resolution 10 adopted by the CGPM at its 24th meeting (2011)
+      on the role, mission, objectives, long-term strategy and governance of the International
+      Bureau of Weights and Measures (BIPM), in which the CGPM invited the CIPM to
+      establish an _ad hoc_ Working Group charged with conducting aReview of the role,
+      mission, objectives, long-term financial stability, strategic direction and
+      governance of the BIPM, and to report to the CGPM at its 25th meeting on recommendations
+      from the Review of the _ad hoc_ Working Group, actions consequently taken by
+      the CIPM and proposals for additional actions that require the approval of the
+      CGPM,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the findings and recommendations of the said _ad hoc_ Working
+      Group relating in particular to the election and composition of the CIPM,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting Decision 103-08 of the CIPM, adopted by unanimity at Session I
+      of its 103rd meeting (March 2014), on the resignation of all CIPM members to
+      become effective from the start of Session I of the 104th meeting of the CIPM,
+      scheduled for March 2015,
+  actions:
+  - type: welcomes
+    date_effective: '2014-11-20'
+    message: welcomes the revision by the CIPM, at Session II of its 102nd meeting
+      (October 2013), of the principles it follows in making elections, which had
+      been adopted by the CIPM at its 94th meeting (2005),
+  - type: decides
+    date_effective: '2014-11-20'
+    message: decides that beginning with the 25th meeting of the CGPM (2014), CIPM
+      members shall be elected to fixed renewable terms,
+  - type: decides
+    date_effective: '2014-11-20'
+    message: decides that terms will begin at the first CIPM meeting to take place
+      no later than six months after the CGPM meeting at which they are elected, and
+      will end at the beginning of the CIPM meeting that follows the next meeting
+      of the CGPM,
+  - type: decides
+    date_effective: '2014-11-20'
+    message: decides that a Committee for CIPM Election is set up in order to assist
+      the CIPM and the CGPM in the election of CIPM members, being elected and operating
+      in conformity with a procedure to be adopted by the Committee,
+  - type: decides
+    date_effective: '2014-11-20'
+    message: decides that the Committee for CIPM Election shall be composed of nine
+      representatives, each from a different Member State with maximum, intermediary
+      and minimum contributions, with appropriate geographic representation, elected
+      by the CGPM by majority vote, as well as the CIPM President andCIPM Secretary;
+      and that it shall be chaired by one of the Member States' representatives,
+  - type: decides
+    date_effective: '2014-11-20'
+    message: decides that the CGPM shall proceed at each of its meetings to the election
+      of the nine Member States' representatives of the Committee for CIPM Election,
+  - type: invites / further invites
+    date_effective: '2014-11-20'
+    message: invites Member States to participate actively in the CIPM election process.
+- dates:
+  - '2014-11-20'
+  subject: CGPM
+  type: resolution
+  title: On the Pension and Provident Fund of the BIPM
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
+  reference_name: Proceedings of the 25th CGPM (2014), 2015
+  reference_page: 420
+  approvals:
+  - message: "The General Conference on Weights and Measures (CGPM), at its 25th meeting,\n\n "
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling that the CGPM at its 3rd meeting (1901) established a fund
+      for pensions for the benefit of BIPM staff members,
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling article 15 paragraph 2 of the Regulations annexed to the Metre
+      Convention, which states, inter alia, that "[a]n annual levy in favour of the
+      Pension Fund may be made from the total fees received by the Bureau",
+  - type: recalling / further recalling
+    date_effective: '2014-11-20'
+    message: recalling that the CGPM at its 24th meeting (2011) has adopted Resolution
+      10 on the role, mission, objectives, long-term strategy and governance of the
+      BIPM which invited the CIPM to establish an _ad hoc_ Working Group to conduct
+      a Review of inter alia the long-term financial stability of the BIPM,
+  - type: recognizing
+    date_effective: '2014-11-20'
+    message: recognizing that the CIPM established a Standing Sub-Committee on the
+      BIPM Pension and Provident Fund and Health Insurance in 2012,
+  - type: recognizing
+    date_effective: '2014-11-20'
+    message: recognizing the importance of a sustainable pension fund as a mechanism
+      for the BIPM to attract, retain and motivate competent staff,
+  - type: recognizing
+    date_effective: '2014-11-20'
+    message: recognizing the need for the CIPM together with the BIPM to manage the
+      BIPM's budget and finances to meet its financial obligations towards the BIPM
+      Pension and Provident Fund within the dotation agreed by the Member States,
+  - type: recognizing
+    date_effective: '2014-11-20'
+    message: recognizing that the CIPM has brought increased transparency to the accounts
+      and financial statements of the BIPM Pension and Provident Fund through the
+      adoption of the International Public Sector Accounting Standards (IPSAS),
+  - type: reaffirming
+    date_effective: '2014-11-20'
+    message: re-affirms the decision made at its 10th meeting (1954) to charge the
+      CIPM with the administration of the BIPM Pension and Provident Fund,
+  actions:
+  - type: welcomes
+    date_effective: '2014-11-20'
+    message: welcomes the measures already taken by the CIPM towards ensuring the
+      long-term financial stability of the BIPM Pension and Provident Fund, especially
+      the amendments that were adopted by the CIPM in 2009 and that entered into force
+      from 1 January 2010, including raising the retirement age and increasing the
+      BIPM staff contribution,
+  - type: welcomes
+    date_effective: '2014-11-20'
+    message: welcomes the work carried out to review and analyse the current assets
+      and liabilities of the BIPM Pension and Provident Fund since the 24th meeting
+      of the CGPM (2011) by the CIPM Sub-Committee on the BIPM Pension and Provident
+      Fund and Health Insurance,
+  - type: invites / further invites
+    date_effective: '2014-11-20'
+    message: invites the CIPM to implement its plans to provide sustainability for
+      the BIPM Pension and Provident Fund whilst continuing to examine the longer
+      term liability issue,
+  - type: invites / further invites
+    date_effective: '2014-11-20'
+    message: invites the CIPM to inform Member States about the outcome of actuarial
+      studies on the assets and liabilities of the BIPM Pension and Provident Fund
+      in its regular financial publications and at the next meeting of the General
+      Conference.
+- dates:
+  - '2014-11-20'
+  subject: CGPM
+  type: resolution
+  title: Dotation of the BIPM for the years 2016 to 2019
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
+  reference_name: Proceedings of the 25th CGPM (2014), 2015
+  reference_page: 422
+  approvals:
+  - message: The General Conference on Weights and Measures (CGPM), at its 25th meeting,
+  considerations:
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the increased importance of the work of the International
+      Bureau of Weights and Measures (BIPM) to international trade, industrial innovation,
+      monitoring climate change, human health and medicine, food and forensic science
+      in all Member States,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the recognition of the BIPM as the scientifically expert
+      intergovernmental organization in metrology and the added value and cost efficiency
+      it provides to all Member States in technical and economic terms,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the manner in which the BIPM is adopting best management
+      practice and improving the efficiency of its operation,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting that Resolution 7 (1979) adopted by the CGPM at its 16th meeting
+      established a principle for the determination of the base dotation,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting Resolution 10 (2011) adopted by the CGPM at its 24th meeting on
+      the role, mission, objectives, long-term strategy and governance of the BIPM,
+      and the actions consequently taken and successfully implemented by the BIPM,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting the current world financial situation and the financial constraints
+      Member States are subject to,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting the successful implementation by the BIPM of the recommendation
+      made by the CGPM at its 24th meeting that additional voluntary support be sought
+      to enable additional activities at the BIPM related to its mission,
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2014-11-20'
+    message: "*thanks* those National Metrology Institutes that have provided voluntary
+      support of all kinds to the BIPM, in particular by way of secondment of staff
+      to the BIPM,"
+  - type: decides
+    date_effective: '2014-11-20'
+    message: |-
+      *decides that* the annual dotation of the BIPM, as defined in Article 6, 1921, of the Regulations annexed to the Metre Convention, will be set in such a way that, for those States that are Parties to the Metre Convention at the time of the 25th meeting of the CGPM, it shall be:
+
+      |===
+      | 11 980 000 euros in 2016
+
+      | 11 980 000 euros in 2017
+      | 11 980 000 euros in 2018
+      | 11 980 000 euros in 2019
+
+      |===
+  - type: urges
+    date_effective: '2014-11-20'
+    message: urges Member States, as well as international organizations, private
+      organizations and foundations to maintain the provision of additional voluntary
+      support of all kinds to support specific BIPM mission-related activities, particularly
+      those that facilitate participation in the activities of the BIPM by those countries
+      without well-developed metrology infrastructure.
+- dates:
+  - '2014-11-20'
+  subject: CGPM
+  type: resolution
+  title: On the importance of the CIPM Mutual Recognition Arrangement
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cg/cgpm/25-2014/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
+  reference_name: Proceedings of the 25th CGPM (2014), 2015
+  reference_page: 423
+  approvals:
+  - message: "The General Conference on Weights and Measures (CGPM), at its 25th meeting,\n\n "
+  considerations:
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the relevance and importance of the CIPM MRA as expressed
+      in particular by the CGPM in Resolution 6 (2003) adopted at its 22nd meeting
+      and in Resolution 4 (2007) adopted at its 23rd meeting,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the appreciation and support expressed by all interested
+      parties for the CIPM MRA since its entry into force more than fifteen years
+      ago,
+  - type: considering
+    date_effective: '2014-11-20'
+    message: considering the positive social and economic impact of the CIPM MRA in
+      providing for the mutual recognition of national measurement standards and of
+      calibration and measurement certificates,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting that after fifteen years of successful operation of the CIPM MRA,
+      there is a need to review its implementation and operation,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting that the activities carried out under the CIPM MRA are of direct
+      relevance to the role, mission and objectives of the International Bureau of
+      Weights and Measures (BIPM),
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting the unique and distinct role of the Regional Metrology Organizations
+      (RMOs) within the activities of the CIPM MRA, through the Joint Committee of
+      the Regional Metrology Organizations and the BIPM (JCRB) and for the Associates
+      of the CGPM,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: noting the improvements being made within the existing framework including
+      the strategic planning of comparisons and ongoing streamlining of processes,
+  - type: noting
+    date_effective: '2014-11-20'
+    message: 'noting a workshop planned for 2015 to engage in a broad discussion of
+      the CIPM MRA, involving: Directors of National Metrology Institutes, Member
+      States representatives, representatives of RMOs and other relevant stakeholders
+      concerning the benefits of the CIPM MRA, as well as establishing views on what
+      works well, and what needs to be improved regarding its implementation,'
+  - type: reaffirming
+    date_effective: '2014-11-20'
+    message: reaffirms its recommendation that the principles of the CIPM MRA be included
+      in intergovernmental agreements as appropriate,
+  actions:
+  - type: invites / further invites
+    date_effective: '2014-11-20'
+    message: invites the Consultative Committees and the JCRB to continue their ongoing
+      efforts to streamline operations within the existing framework, and to prepare
+      for and contribute to the wider review in 2015,
+  - type: invites / further invites
+    date_effective: '2014-11-20'
+    message: invites the CIPM to establish a working group under the chairmanship
+      of its President, with membership to be determined at the 2015 workshop, to
+      conduct a review of the implementation and operation of the CIPM MRA,
+  - type: encourages
+    date_effective: '2014-11-20'
+    message: encourages all signatories of the CIPM MRA to support the activities
+      and work of the working group on the CIPM MRA.

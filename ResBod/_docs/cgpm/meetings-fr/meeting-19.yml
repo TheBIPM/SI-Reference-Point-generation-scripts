@@ -1,0 +1,187 @@
+---
+metadata:
+  title: 19e réunion de la CGPM
+  identifier: 19
+  date: '1991-10-04'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/19-1991
+pdf: https://www.bipm.org/documents/20126/38090957/CGPM19.pdf/2f7ee319-dbb4-d798-bc09-27888616e857
+resolutions:
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: Étalons de temps et comparaisons de temps
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/19-1991/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Comptes rendus de la 19e CGPM (1991), 1992
+  reference_page: 95
+  approvals:
+  - message: La 19^e^ Conférence générale des poids et mesures (CGPM),
+  considerations:
+  - type: considering
+    date_effective: '1991-10-04'
+    message: "*considérant* que l'exactitude des comparaisons d'horloges distantes
+      a été grandement améliorée par l'utilisation des techniques spatiales,"
+  - type: noting
+    date_effective: '1991-10-04'
+    message: |-
+      *constate* que cette exactitude
+
+      * peut encore être améliorée grâce à une meilleure utilisation des techniques courantes faisant appel aux satellites,
+      * fait apparaître les différences entre étalons atomiques de fréquence et leurs variations systématiques,
+      * permet une meilleure synchronisation des échelles nationales de temps,
+  actions:
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommande que soient construits de nouveaux étalons primaires à césium,
+      que soit améliorée l'exactitude de la fréquence des étalons primaires existants
+      et que l'on étudie les différences systématiques de fréquence qui existent entre
+      eux,
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommande que les laboratoires qui participent à l'établissement du
+      Temps atomique international (TAI) assurent la constance des conditions d'installation
+      et de fonctionnement de chacune des horloges qui contribuent au TAI, conservent
+      soigneusement trace de ces conditions et les communiquent au Bureau international
+      des poids et mesures,
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommande que les coordonnées adoptées pour les antennes utilisées pour
+      les comparaisons d'horloges par satellite, à sens unique, correspondent à leur
+      position réelle dans le système de référence terrestre du Service international
+      de la rotation terrestre.
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: L'effet Josephson et l'effet Hall quantique
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/19-1991/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Comptes rendus de la 19e CGPM (1991), 1992
+  reference_page: 96
+  approvals:
+  - message: La 19^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considérant que l'uniformité mondiale et la stabilité à long terme des
+      représentations nationales des unités électriques sont particulièrement importantes
+      pour la science, l'industrie et le commerce tant pour des raisons techniques
+      que pour des raisons économiques,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considérant que de nombreux laboratoires nationaux utilisent maintenant
+      l'effet Josephson ou l'effet Hall quantique pour conserver leurs représentations
+      respectives du volt ou de l'ohm, ce qui leur donne une sécurité accrue en ce
+      qui concerne la stabilité à long terme,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considérant que les valeurs attribuées à leurs représentations doivent
+      être en accord aussi étroit que possible avec les unités du SI,
+  - type: recalling / further recalling
+    date_effective: '1991-10-04'
+    message: "*rappelant* la Résolution 6 de la 18^e^ Conférence générale concernant
+      les ajustements envisagés à l'époque pour les représentations du volt et de
+      l'ohm,"
+  - type: taking into account
+    date_effective: '1991-10-04'
+    message: '*tenant compte* des décisions prises par le Comité international des
+      poids et mesures en 1988, lors de sa 77^e^ session, au sujet de ces ajustements,
+      et en particulier des valeurs stem:[K_(J-90)] (égale à stem:[483 597","9 "GHz"/"V"])
+      et stem:[R_(K-90)] (égale à 25 812,807 Ω attribuées par convention, respectivement,
+      à la constante de Josephson stem:[K_("J")] lorsqu''elle est utilisée pour représenter
+      le volt et à la constante de von Klitzing stem:[R_("K")] lorsqu''elle est utilisée
+      pour représenter l''ohm,'
+  actions:
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommande que les laboratoires nationaux poursuivent leurs efforts pour
+      réduire l'incertitude sur la connaissance que l'on a des rapports stem:[K_(J-90)/K_("J")]
+      et stem:[R_(K-90)/R_("K")],
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommande que soient poursuivies les recherches concernant la théorie
+      fondamentale de l'effet Josephson et de l'effet Hall quantique.
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: L'Échelle internationale de température de 1990 et les travaux futurs en
+    thermométrie
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/19-1991/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Comptes rendus de la 19e CGPM (1991), 1992
+  reference_page: 97
+  approvals:
+  - message: La 19^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considérant que l'uniformité mondiale et la stabilité à long terme des
+      mesures de température sont particulièrement importantes pour la science, l'industrie
+      et le commerce, pour des raisons aussi bien techniques qu'économiques,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considérant que l'échelle internationale de température doit être aussi
+      proche que possible de la température thermodynamique,
+  - type: recalling / further recalling
+    date_effective: '1991-10-04'
+    message: rappelant que, dans sa Résolution 7, la 18^e^ Conférence générale avait
+      invité le Comité international des poids et mesures et les laboratoires nationaux
+      à préparer et adopter une nouvelle échelle internationale pour remplacer l'Échelle
+      internationale pratique de température de 1968, dont on savait alors qu'elle
+      s'écartait de façon significative de la température thermodynamique,
+  - type: recalling / further recalling
+    date_effective: '1991-10-04'
+    message: rappelant que l'Échelle internationale de température de 1990 (EIT-90)
+      adoptée par le Comité international en 1989, lors de sa 78^e^ session, est dans
+      son ensemble plus précise, plus facile à réaliser et plus étroitement en accord
+      avec la température thermodynamique et par conséquent satisfait aux exigences
+      mentionnées dans la Résolution 7 de la 18^e^ Conférence générale,
+  actions:
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: "*recommande* aux laboratoires nationaux de poursuivre leurs efforts
+      pour améliorer l'uniformité mondiale et la stabilité à long terme des mesures
+      de température en mettant rapidement en œuvre l'EIT-90 et de maintenir le niveau
+      de leurs programmes de recherche fondamentale en thermométrie."
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: Préfixes SI zetta, zepto, yotta et yocto
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/19-1991/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Comptes rendus de la 19e CGPM (1991), 1992
+  reference_page: 97
+  approvals:
+  - message: La 19^e^ Conférence générale des poids et mesures (CGPM),
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1991-10-04'
+    message: |-
+      *décide* d'ajouter à la liste des préfixes SI pour la formation des noms des multiples et sous-multiples des unités, adoptée par la 11^e^ CGPM, Résolution 12, paragraphe 3, la 12^e^ CGPM, Résolution 8 et la 15^e^ CGPM, Résolution 10, les préfixes suivants :
+
+      |===
+      a| Facteur par lequel +
+       l'unité est multipliée
+      | Préfixe | Symbole
+
+      .>| stem:[10^(21)] .>| zetta .>| Z
+      .>| stem:[10^(-21)] .>| zepto .>| z
+      .>| stem:[10^(24)] .>| yotta .>| Y
+      .>| stem:[10^(-24)] .>| yocto .>| y
+
+      |===
+  notes: Les noms zepto et zetta évoquent le chiffre sept (septième puissance de stem:[10^(3)])
+    et la lettre « z » remplace la lettre « stem:["s"] » pour éviter le double emploi
+    de la lettre « stem:["s"] » comme symbole. Les noms yocto et yotta sont dérivés
+    de octo, qui évoque le chiffre huit (huitième puissance de stem:[10^(3)]) ; la
+    lettre « y » est ajoutée pour éviter l'emploi de la lettre « o » comme symbole
+    à cause de la confusion possible avec le chiffre zéro.

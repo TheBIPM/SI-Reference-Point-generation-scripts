@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="language">
+<head>
+    <title>Units</title>
+</head>
+<body>
+    {% extends 'ParentLayout.html' %}
+    {% block main %}
+        {% if language == 'fr' %}
+            <h1>Grandeurs</h1>
+            {% for unit in units %}
+                <h2>{{unit.Q_Label}}</h2>
+                {% set url_address = unit.Link ~'?lang=' ~language %}   
+                <p>
+                    Le type de grandeur {{unit.Q_Label}} a l'unité <a href="{{url_address}}">{{unit.U_Label}}</a>
+                    (symbole {{unit.Symbol}}). (code: {{unit.Code}})
+                </p>
+            {% endfor %}
+        {% else %}
+            <h1>Quantities</h1>
+            {% for unit in units %}
+                <h2>{{unit.Q_Label}}</h2>
+                {% set url_address = unit.Link ~'?lang=' ~language %}   
+                <p>
+                    The kind of quantity {{unit.Q_Label}} has the unit <a href="{{url_address}}">{{unit.U_Label}}</a>
+                    (symbole {{unit.Symbol}}). (code: {{unit.Code}})
+                </p>
+            {% endfor %}
+        {% endif %}
+    {% endblock %}
+</body>
+</html>

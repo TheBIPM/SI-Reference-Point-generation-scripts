@@ -1,0 +1,75 @@
+---
+metadata:
+  title: 3rd meeting of the CGPM
+  identifier: 3
+  date: '1901-10-22'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901
+pdf: https://www.bipm.org/documents/20126/38096616/CGPM3.pdf/9993082b-5a57-0b7e-1dfd-ea3245536d94
+resolutions:
+- dates:
+  - '1901-10-22'
+  subject: CGPM
+  type: resolution
+  title: Declaration concerning the definition of the litre
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
+  reference_name: Proceedings of the 3rd CGPM (1901), 1901
+  reference_page: 38
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1901-10-22'
+    message: 'The Conference declares The unit of volume, for high accuracy determinations,
+      is the volume occupied by a mass of 1 kilogram of pure water, at its maximum
+      density and at standard atmospheric pressure: this volume is called "litre".'
+  - type: declares
+    date_effective: '1901-10-22'
+    message: The Conference declares . . .
+  notes: This definition was abrogated in 1964 by the 12th CGPM (Resolution 6).
+- dates:
+  - '1901-10-22'
+  subject: CGPM
+  type: resolution
+  title: Declaration on the unit of mass and on the definition of weight; conventional
+    value of <i>g</i><sub>n</sub>
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
+  reference_name: Proceedings of the 3rd CGPM (1901), 1901
+  reference_page: 70
+  considerations:
+  - type: taking into account
+    date_effective: '1901-10-22'
+    message: "*Taking into account* the decision of the Comité International des Poids
+      et Mesures of 15 October 1887, according to which the kilogram has been defined
+      as unit of mass;"
+  - type: taking into account
+    date_effective: '1901-10-22'
+    message: "*Taking into account* the decision contained in the sanction of the
+      prototypes of the Metric System, unanimously accepted by the Conférence Générale
+      des Poids et Mesures on 26 September 1889;"
+  - type: considering
+    date_effective: '1901-10-22'
+    message: "*Considering* the necessity to put an end to the ambiguity which in
+      current practice still exists on the meaning of the word _weight_, used sometimes
+      for _mass_, sometimes for _mechanical force_;"
+  actions:
+  - type: declares
+    date_effective: '1901-10-22'
+    message: The Conference declares The kilogram is the unit of mass; it is equal
+      to the mass of the international prototype of the kilogram;
+  - type: declares
+    date_effective: '1901-10-22'
+    message: 'The Conference declares The word "weight" denotes a quantity of the
+      same nature as a "force": the weight of a body is the product of its mass and
+      the acceleration due to gravity; in particular, the standard weight of a body
+      is the product of its mass and the standard acceleration due to gravity;'
+  - type: declares
+    date_effective: '1901-10-22'
+    message: The Conference declares The value adopted in the International Service
+      of Weights and Measures for the standard acceleration due to gravity is stem:[980.665
+      "cm"/"s"^(2)], value already stated in the laws of some countries.
+  notes: This value of stem:[g_(n)] was the conventional reference for calculating
+    the now obsolete unit kilogram force.

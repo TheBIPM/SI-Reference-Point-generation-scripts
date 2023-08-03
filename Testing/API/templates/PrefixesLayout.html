@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+     <title>Prefixes</title>
+</head>
+<body>    
+    {% extends 'ParentLayout.html' %}
+    {% block main %}    
+    <h1>Prefixes</h1>
+    <table style="width: 600px;">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Symbol</th>
+                <th style="width: 200px;">Factor</th>
+                <th style="width: 300px;">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prefix in prefixes %}
+            <tr>
+                <td><strong>{{ prefix.Symbol }}</strong></td>
+                <td>{{ prefix.ScalingFactor }}</td>
+                <td>{{ prefix.Label }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+</body>
+</html>

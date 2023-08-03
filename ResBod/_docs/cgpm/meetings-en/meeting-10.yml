@@ -1,0 +1,177 @@
+---
+metadata:
+  title: 10th meeting of the CGPM
+  identifier: 10
+  date: '1954-10-14'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954
+pdf: https://www.bipm.org/documents/20126/38095555/CGPM10.pdf/0679a7d9-28ac-9880-ff9d-eefc369b9be1
+resolutions:
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 78
+  approvals:
+  - message: La Dixième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1954-10-14'
+    message: "*ayant pris connaissance* de l'état d'avancement des travaux que la
+      Neuvième Conférence générale avait recommandés dans sa Résolution 1 dans le
+      but d'établir éventuellement une nouvelle définition du mètre fondée sur la
+      longueur d'onde d'une radiation lumineuse,"
+  - type: recognizing
+    date_effective: '1954-10-14'
+    message: "*reconnaissant* que, malgré les importants progrès réalisés, les recherches
+      sur les radiations monochromatiques doivent être complétées,"
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '1954-10-14'
+    message: "*appréciant* l'importance des résultats acquis grâce aux recherches
+      des grands Laboratoires, des savants spectroscopistes et du Bureau international,"
+  - type: invites / further invites
+    date_effective: '1954-10-14'
+    message: "*renouvelle* en conséquence aux grands Laboratoires et au Bureau international
+      son invitation à poursuivre aussi activement que possible leurs études sur les
+      radiations monochromatiques, en vue de permettre à la Onzième Conférence générale
+      de prendre une résolution définitive,"
+  - type: decides
+    date_effective: '1954-10-14'
+    message: "*et décide* de ne pas encore changer la définition du mètre."
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Retraçage des mètres
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 79
+  approvals:
+  - message: La Dixième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1954-10-14'
+    message: "*considérant* les récents progrès réalisés dans la connaissance de la
+      structure des traits gravés sur les Prototypes délivrés par la Première Conférence
+      générale des poids et mesures, et dans l'exécution de traits d'une haute qualité,"
+  actions:
+  - type: calls upon
+    date_effective: '1954-10-14'
+    message: "*attire l'attention* des Pays adhérents à la Convention du Mètre sur
+      la possibilité qu'ils ont actuellement d'améliorer leurs étalons nationaux en
+      les faisant munir d'un nouveau tracé."
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Definition of the thermodynamic temperature scale
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 79
+  approvals:
+  - message: The 10th Conférence Générale des Poids et Mesures
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1954-10-14'
+    message: decides to define the thermodynamic temperature scale by choosing the
+      triple point of water as the fundamental fixed point, and assigning to it the
+      temperature 273,16 degrees Kelvin, exactly.
+  notes: The 13th CGPM in 1967 explicitly defined the kelvin (Resolution 4).
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Definition of the standard atmosphere
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 79
+  approvals:
+  - message: The 10th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: having / having regard
+    date_effective: '1954-10-14'
+    message: having noted that the definition of the standard atmosphere given by
+      the 9th CGPM when defining the International Temperature Scale led some physicists
+      to believe that this definition of the standard atmosphere was valid only for
+      accurate work in thermometry,
+  actions:
+  - type: declares
+    date_effective: '1954-10-14'
+    message: |-
+      *declares* that it adopts, for general use, the definition:
+
+      1 standard atmosphere = 1 013 250 dynes per square centimetre, +
+       i.e., 101 325 newtons per square metre.
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Définition de l'unité de temps
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 80
+  approvals:
+  - message: La Dixième Conférence générale des poids et mesures,
+  considerations:
+  - type: recognizing
+    date_effective: '1954-10-14'
+    message: "*reconnaissant* la nécessité et l'urgence de donner plus de précision
+      à la définition de l'unité fondamentale de temps,"
+  - type: considering
+    date_effective: '1954-10-14'
+    message: "*considérant* que l'aboutissement de l'étude de cette question est imminent,"
+  actions:
+  - type: appoints
+    date_effective: '1954-10-14'
+    message: "*donne* au Comité international des poids et mesures le pouvoir de décider
+      sur ce point."
+- dates:
+  - '1954-10-14'
+  subject: CGPM
+  type: resolution
+  title: Practical system of units
+  identifier: 6
+  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
+  reference_name: Proceedings of the 10th CGPM (1954), 1956
+  reference_page: 80
+  approvals:
+  - message: In accordance with the wish expressed by the 9th Conférence Générale
+      des Poids et Mesures (CGPM) in its Resolution 6 concerning the establishment
+      of a practical system of units of measurement for international use, the 10th
+      CGPM
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1954-10-14'
+    message: |-
+      *decides* to adopt as base units of the system the following units:
+
+      [width=80%]
+      |===
+      | length .<| metre
+
+      | mass | kilogram
+      | time | second
+      | electric current | ampere
+      | thermodynamic temperature | degree Kelvin
+      | luminous intensity | candela
+
+      |===
+  notes: The unit name "degree Kelvin" was changed to "kelvin" in 1967 (13th CGPM,
+    Resolution 3).

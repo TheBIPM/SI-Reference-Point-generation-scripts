@@ -1,0 +1,536 @@
+---
+metadata:
+  title: 20e réunion de la CGPM
+  identifier: 20
+  date: '1995-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995
+resolutions:
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Nécessité d'utiliser les unités du SI dans les recherches sur les ressources
+    terrestres, l'environnement, la sécurité humaine et les études  connexes
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 117
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les effets des activités industrielles et commerciales
+      ainsi que ceux de nombreuses autres activités humaines sur la géosphère et la
+      biosphère et leurs conséquences sur la santé et le bien-être humains font l'objet
+      d'importantes études dans le monde entier,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les Gouvernements sont de plus en plus amenés à prendre
+      des décisions réglementant ces activités, avec des répercussions économiques
+      et politiques majeures,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les choix politiques des Gouvernements sont influencés
+      par les résultats d'études qui dépendent de manière critique de l'exactitude
+      et de la cohérence de mesures pouvant nécessiter d'importants investissements
+      économiques,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que de nombreuses preuves scientifiques importantes sur lesquelles
+      s'appuient ces décisions sont issues de mesures de petites variations à long
+      terme de certains paramètres clés, mesures qui s'étendent parfois sur plusieurs
+      décennies,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que certaines mesures critiques ont été traditionnellement
+      exprimées en utilisant des unités _ad hoc_, fondées sur des instruments et des
+      méthodes spécifiques, et non pas les unités du SI, lesquelles sont bien définies
+      et adoptées au niveau international,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que depuis de nombreuses années l'expérience montre que les
+      mesures qui ne sont pas reliées directement au SI ne sont ni fiables à long
+      terme, ni comparables aux mesures semblables faites ailleurs ni adaptées à la
+      mise en évidence de relations avec les mesures faites dans d'autres domaines
+      scientifiques,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommande* que les responsables des études sur les ressources terrestres,
+      l'environnement, le bien-être humain et les problèmes connexes fassent le nécessaire
+      pour que les mesures effectuées dans le cadre de leurs programmes soient exprimées
+      en unités bien définies du SI afin d'en assurer la fiabilité à long terme, la
+      cohérence mondiale et le rattachement aux autres domaines scientifiques et techniques
+      grâce au système de mesures mondial établi et conservé dans le cadre de la Convention
+      du Mètre."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Traçabilité des étalons au niveau mondial
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 118
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les exigences croissantes de traçabilité des mesures à différents
+      niveaux d'exactitude pour les sciences, les techniques et le commerce international,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant l'existence de groupes au sein desquels collaborent des laboratoires
+      nationaux de métrologie dans les différentes régions du monde,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant le besoin d'une reconnaissance à l'échelle mondiale de l'équivalence
+      ou de la traçabilité des étalons entre les laboratoires nationaux et les groupes
+      régionaux au sein desquels collaborent des laboratoires nationaux,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les possibilités d'étalonnage qu'assure le Bureau international
+      des poids et mesures (BIPM) au bénéfice des laboratoires nationaux,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant le rôle du BIPM dans la coordination et l'exécution, à l'échelle
+      mondiale, de comparaisons des étalons au plus haut niveau entre les laboratoires
+      nationaux,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la participation nécessaire des laboratoires nationaux aux
+      comparaisons internationales,
+  - type: recognizing
+    date_effective: '1995-10-13'
+    message: "*reconnaît* l'intérêt que présentent les liaisons entre les comparaisons
+      organisées sous l'égide du BIPM et celles qu'effectuent ces groupes régionaux,"
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: "*accueille favorablement* la tendance des laboratoires nationaux de
+      métrologie à former des groupes régionaux, en tant que méthode efficace pour
+      développer la coopération et l'exécution de comparaisons régulières des étalons
+      nationaux entre des laboratoires dont certains ne participent pas aux comparaisons
+      effectuées par le BIPM ou les Comités consultatifs,"
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommande que les laboratoires nationaux de métrologie, en collaboration
+      avec le BIPM, fassent en sorte que les comparaisons nécessaires d'étalons nationaux
+      soient effectuées en nombre suffisant pour assurer l'équivalence ou la traçabilité
+      des étalons au niveau mondial,
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommande que des liaisons convenables soient maintenues entre les comparaisons
+      exécutées sous l'égide du BIPM et celles qui sont effectuées par les groupes
+      régionaux,
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommande et que les résultats des comparaisons effectuées par les groupes
+      régionaux soient communiqués au BIPM sous une forme convenable pour publication
+      par le BIPM afin qu'ils puissent ainsi bénéficier d'une reconnaissance au niveau
+      international.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Besoin de recherches métrologiques à long terme
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 119
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les besoins des sciences, des techniques et du commerce
+      international en matière d'exactitude et d'efficacité des mesures croissent
+      de façon permanente,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que la mise au point de meilleurs étalons et techniques de
+      mesure doit être effectuée bien avant leur application dans les domaines scientifiques
+      et industriels,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que de tels progrès ne peuvent avoir lieu qu'à partir de
+      bases solidement établies sur des recherches métrologiques à long terme, elles-mêmes
+      étroitement liées aux progrès des sciences,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommande que les laboratoires nationaux continuent à entreprendre des
+      recherches métrologiques à long terme aussi bien qu'à répondre aux besoins plus
+      immédiats des services métrologiques et
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommande que les laboratoires nationaux informent régulièrement le
+      Bureau international des poids et mesures des résultats des travaux liés à la
+      métrologie fondamentale.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Révision de la mise en pratique de la définition du mètre
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 119
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant que la 17^e^ Conférence générale des poids et mesures, en 1983,
+      a adopté une nouvelle définition du mètre,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant que la même année, la Conférence générale a invité le Comité
+      international des poids et mesures,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant à établir des instructions pour la mise en pratique de cette
+      définition,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant à choisir des radiations qui puissent être recommandées comme
+      étalons de longueur d'onde pour les mesures de longueur par interférométrie
+      et à donner les instructions nécessaires pour leur utilisation,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant à poursuivre les études nécessaires pour améliorer ces étalons
+      et à étendre ou réviser ces instructions en temps utile,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: rappelant que, en conséquence, le Comité international a publié en 1983
+      une recommandation pour la mise en pratique de la définition du mètre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les sciences et les techniques continuent à exiger une
+      exactitude croissante des réalisations du mètre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que, depuis 1983, les travaux effectués dans les laboratoires
+      nationaux, au Bureau international des poids et mesures et ailleurs ont amélioré
+      de façon substantielle la reproductibilité des radiations qui peuvent être utilisées
+      pour la mise en pratique de la définition du mètre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que ces travaux ont aussi permis de réduire notablement l'incertitude
+      associée à la valeur de la fréquence et de la longueur d'onde de certaines de
+      ces radiations,
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: |-
+      *accueille* favorablement l'adoption par le Comité international d'une version révisée de la mise en pratique de la définition du mètre, qui tient compte des résultats de ces récents travaux,
+
+      et
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommande* aux laboratoires nationaux de poursuivre leurs recherches
+      sur les étalons de longueur d'onde et de fréquence optiques en vue d'améliorer
+      encore la base expérimentale du Système international d'unités."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Contrôle de la stabilité du prototype international du kilogramme
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 120
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les résultats de la troisième vérification périodique des
+      prototypes nationaux du kilogramme qui font apparaître des dérives de la masse
+      des prototypes nationaux, des étalons de travail du Bureau international des
+      poids et mesures et des témoins par rapport à celle du prototype international,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant l'impossibilité de tirer de ces résultats, de par leur nature,
+      des conclusions catégoriques quant à la stabilité à long terme du prototype
+      international et des autres prototypes,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les résultats des recherches effectuées dans de nombreux
+      laboratoires nationaux pour tenter de comprendre les phénomènes qui conduisent
+      à l'instabilité des étalons de masse,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les progrès actuels obtenus par divers laboratoires dans
+      l'étude de méthodes indépendantes pour contrôler la stabilité des étalons de
+      masse,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommande* que les laboratoires nationaux poursuivent les recherches
+      entreprises et en explorent de nouvelles afin de contrôler la stabilité du prototype
+      international du kilogramme et, le moment venu, d'ouvrir la voie à une nouvelle
+      définition de l'unité de masse fondée sur des constantes fondamentales ou atomiques."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Comparaison d'horloges à l'aide de techniques par laser visant des satellites
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 120
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que l'on a besoin de comparaisons d'horloges distantes avec
+      la meilleure exactitude possible,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que des comparaisons d'horloges entre l'Europe de l'Ouest
+      et l'Amérique du Nord ont été réalisées, avec succès, et avec une précision
+      de 100 ps, par l'expérience LASSO (Laser Synchronization from Satellite Orbit),
+      sur satellite géostationnaire,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que l'exactitude des techniques de comparaison d'horloges,
+      telles que celles qui utilisent les systèmes GPS (Global Positioning System),
+      GLONASS (Global Navigation Satellite System) ou des méthodes bidirectionnelles
+      par satellites, doit être confirmée par des méthodes indépendantes,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que des solutions ont été proposées qui peuvent conduire
+      à des comparaisons d'horloges à l'aide de techniques par laser visant des satellites
+      à défilement,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: "*rappelant* la Résolution 4 de la 18^e^ Conférence générale en 1987,
+      qui concerne aussi les comparaisons d'horloges au moyen de satellites,"
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommande* que les agences spatiales étudient l'installation sur leurs
+      satellites d'équipements permettant d'effectuer des comparaisons d'horloges
+      utilisant des techniques par laser visant des satellites."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Métrologie en chimie
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 121
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que la fiabilité des résultats d'analyses chimiques quantitatives
+      est importante pour le commerce international, pour la protection de l'environnement,
+      et pour la santé et la sécurité humaines,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que la fiabilité implique l'uniformité mondiale et la stabilité
+      à long terme et qu'elle ne peut être assurée qu'en reliant fermement les mesures
+      au Système international d'unités,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que d'énormes difficultés existent pour établir la traçabilité
+      au niveau international pour les mesures chimiques,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que les laboratoires nationaux de métrologie sont de plus
+      en plus engagés dans l'établissement de cette traçabilité,
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: |-
+      *accueille* favorablement la création par le Comité international d'un Comité consultatif pour la quantité de matière pour explorer ce domaine
+
+      et
+  - type: invites / further invites
+    date_effective: '1995-10-13'
+    message: "*invite* les laboratoires nationaux et les autres organismes nationaux,
+      régionaux ou internationaux compétents réunissant des spécialistes de la mesure
+      en chimie à collaborer avec le Comité international et le nouveau Comité consultatif
+      en vue d'établir mondialement la traçabilité au plus haut niveau pour les mesures
+      chimiques."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Suppression de la classe des unités supplémentaires dans le SI
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 121
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que la 11^e^ Conférence générale, en 1960, dans sa Résolution
+      12 établissant le Système international d'unités, SI, a distingué trois classes
+      d'unités, celle des unités de base, celle des unités dérivées et celle des unités
+      supplémentaires, cette dernière comprenant seulement le radian et le stéradian,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que le statut des unités supplémentaires par rapport aux
+      unités de base et aux unités dérivées, a donné lieu à des discussions,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant que le Comité international des poids et mesures (CIPM),
+      en 1980, constatant que le statut ambigu des unités supplémentaires compromet
+      la cohérence interne du SI, a interprété dans sa Recommandation 1 (CI-1980)
+      les unités supplémentaires, dans le SI, comme des unités dérivées sans dimension,
+  actions:
+  - type: approves
+    date_effective: '1995-10-13'
+    message: "*approuvant* l'interprétation donnée par le CIPM en 1980,"
+  - type: decides
+    date_effective: '1995-10-13'
+    message: décide d'interpréter les unités supplémentaires, dans le SI, c'est-à-dire
+      le radian et le stéradian, comme des unités dérivées sans dimension dont les
+      noms et les symboles peuvent être utilisés, mais pas nécessairement, dans les
+      expressions d'autres unités dérivées SI, suivant les besoins,
+  - type: decides
+    date_effective: '1995-10-13'
+    message: décide et, par conséquent, de supprimer la classe des unités supplémentaires
+      en tant que classe séparée dans le SI.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Dotation du BIPM
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 122
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant l'importance des travaux effectués par le Bureau international
+      des poids et mesures (BIPM) et les services que celui-ci rend aux États membres
+      de la Convention du Mètre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant les efforts considérables déployés par le BIPM pour améliorer
+      l'efficacité de son fonctionnement, et son engagement à continuer ces efforts,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la nécessité de lui assurer les ressources suffisantes pour
+      qu'il puisse accomplir de façon satisfaisante les tâches que lui prescrit la
+      Conférence générale,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la situation économique difficile existant actuellement dans
+      de nombreux États membres de la Convention du Mètre,
+  actions:
+  - type: decides
+    date_effective: '1995-10-13'
+    message: |-
+      *décide* que la partie fixe de la dotation annuelle du Bureau international des poids et mesures sera augmentée de telle façon que l'ensemble de la partie fixe et de la partie complémentaire (définie à l'Article 6 (1921) du Règlement annexé à la Convention du Mètre de 1875) soit, pour les États parties à la Convention à l'époque de la 20^e^ Conférence générale des poids et mesures, portée à
+
+      |===
+      | 27 144 000 francs-or en 1997
+
+      | 28 365 000 francs-or en 1998
+      | 29 642 000 francs-or en 1999
+      | 30 976 000 francs-or en 2000.
+
+      |===
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Futures relations avec l'Organisation internationale de métrologie légale
+  identifier: 10
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 122
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la proposition faite par le Gouvernement français d'un rapprochement
+      entre les organisations créées d'une part par la Convention du Mètre et d'autre
+      part par le Traité de l'Organisation internationale de métrologie légale (OIML),
+      en vue d'une fusion éventuelle des deux organisations,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant l'accord de nombreux États membres de la Convention du Mètre
+      reconnaissant que les discussions communes suggérées par la proposition française
+      sont souhaitables,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la nécessité de prendre spécialement en compte dans ces discussions
+      le besoin permanent d'optimiser l'efficacité des organisations intergouvernementales
+      dans l'exécution de leurs missions, actuellement aussi bien qu'à plus long terme,
+  actions:
+  - type: invites / further invites
+    date_effective: '1995-10-13'
+    message: |-
+      *invite* le président du Comité international des poids et mesures, conjointement avec le président du Comité international de métrologie légale, à désigner un groupe de travail commun pour étudier les moyens d'améliorer la coopération et l'efficacité des deux organisations dans la réalisation de leurs objectifs et l'utilisation de leurs ressources, y compris, mais non exclusivement, la possibilité de les fusionner,
+
+      et
+  - type: requests
+    date_effective: '1995-10-13'
+    message: "*demande* au Comité international des poids et mesures, après avoir
+      pris connaissance du rapport de son président, de faire connaître aux États
+      membres de la Convention du Mètre les résultats des discussions et son opinion
+      au sujet de l'opportunité de poursuivre des actions dans ce sens."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: 'Métrologie : besoins à long terme'
+  identifier: 11
+  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-11
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Comptes rendus de la 20e CGPM (1995), 1996
+  reference_page: 123
+  approvals:
+  - message: La 20^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: referring
+    date_effective: '1995-10-13'
+    message: "*se référant* à la Résolution 1 : Nécessité d'utiliser les unités du
+      SI dans les recherches sur les ressources terrestres, l'environnement, la sécurité
+      humaine et les études connexes, à la Résolution 2 : Traçabilité des étalons
+      au niveau mondial, et à la Résolution 3 : Besoin de recherches métrologiques
+      à long terme,"
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant l'impact tout particulier de la métrologie sur le développement
+      économique et le commerce international des États membres,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considérant la contribution du Bureau international des poids et mesures
+      (BIPM) et des laboratoires nationaux de métrologie à ces objectifs,
+  actions:
+  - type: requests
+    date_effective: '1995-10-13'
+    message: "*demande* au Comité international des poids et mesures d'étudier les
+      besoins nationaux et internationaux à long terme relatifs à la métrologie, les
+      nécessaires collaborations internationales et le rôle primordial du BIPM pour
+      faire face à ces besoins, les engagements financiers ou autres qui seront demandés
+      aux États membres au cours des décennies à venir, et d'en rendre compte."

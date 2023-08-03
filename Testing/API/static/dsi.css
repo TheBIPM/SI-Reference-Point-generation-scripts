@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5,li, p, td, th {
+    font-family :Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family :Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 500px;
+}
+
+button, img, table {
+    margin-left: 10px;
+}
+th {
+    width: 50%;
+    font-weight: bold;
+    text-align: left;
+    background-color:lightgray;
+}
+button{
+    width :200px ;
+    margin-left : 5px;
+    margin-top : 20px;
+    font-size: 14px;
+}
+.btn-group button {
+    background-color: #da7af2; /* Green background */
+    border: 1px solid rgb(211, 94, 224); /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #df00fd;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* .flex-child {
+    flex: 1;
+}   */
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.API_request_class{
+    color: rgb(4, 138, 138)
+}

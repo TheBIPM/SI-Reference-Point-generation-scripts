@@ -1,0 +1,186 @@
+---
+metadata:
+  title: 17th meeting of the CGPM
+  identifier: 17
+  date: '1983-10-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983
+pdf: https://www.bipm.org/documents/20126/38091040/CGPM17.pdf/9970b20b-8330-8cd0-4ac0-6c53cc647c2d
+resolutions:
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Definition of the metre
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Proceedings of the 17th CGPM (1983), 1984
+  reference_page: 97
+  approvals:
+  - message: The 17th Conférence Générale des Poids et Mesures (CGPM),
+  considerations:
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that the present definition does not allow a sufficiently
+      precise realization of the metre for all requirements,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that progress made in the stabilization of lasers allows
+      radiations to be obtained that are more reproducible and easier to use than
+      the standard radiation emitted by a krypton 86 lamp,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that progress made in the measurement of the frequency and
+      wavelength of these radiations has resulted in concordant determinations of
+      the speed of light whose accuracy is limited principally by the realization
+      of the present definition of the metre,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that wavelengths determined from frequency measurements and
+      a given value for the speed of light have a reproducibility superior to that
+      which can be obtained by comparison with the wavelength of the standard radiation
+      of krypton 86,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that there is an advantage, notably for astronomy and geodesy,
+      in maintaining unchanged the value of the speed of light recommended in 1975
+      by the 15th CGPM in its Resolution 2 (stem:[c = 299 792 458 "m"/"s"]),
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that a new definition of the metre has been envisaged in
+      various forms all of which have the effect of giving the speed of light an exact
+      value, equal to the recommended value, and that this introduces no appreciable
+      discontinuity into the unit of length, taking into account the relative uncertainty
+      of stem:[ +-  4 * 10^(-9)] of the best realizations of the present definition
+      of the metre,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that these various forms, making reference either to the
+      path travelled by light in a specified time interval or to the wavelength of
+      a radiation of measured or specified frequency, have been the object of consultations
+      and deep discussions, have been recognized as being equivalent and that a consensus
+      has emerged in favour of the first form,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering that the Comité Consultatif pour la Définition du Mètre (CCDM)
+      is now in a position to give instructions for the practical realization of such
+      a definition, instructions which could include the use of the orange radiation
+      of krypton 86 used as standard up to now, and which may in due course be extended
+      or revised,
+  actions:
+  - type: decides
+    date_effective: '1983-10-21'
+    message: decides The metre is the length of the path travelled by light in vacuum
+      during a time interval of 1/299 792 458 of a second.
+  - type: decides
+    date_effective: '1983-10-21'
+    message: decides The definition of the metre in force since 1960, based upon the
+      transition between the levels 2p~10~ and 5d~5~ of the atom of krypton 86, is
+      abrogated.
+  notes: |-
+    The relative uncertainty given here corresponds to three standard deviations in the data considered. +
+     +
+     This definition of the metre was abrogated in 2018 by the 26th CGPM (Resolution 1), which became effective in 2019.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: On the realization of the definition of the metre
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Proceedings of the 17th CGPM (1983), 1984
+  reference_page: 98
+  approvals:
+  - message: The 17th Conférence Générale des Poids et Mesures
+  considerations: []
+  actions:
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to draw up instructions
+      for the practical realization of the new definition of the metre,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to choose radiations
+      which can be recommended as standards of wavelength for the interferometric
+      measurement of length and to draw up instructions for their use,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to pursue studies
+      undertaken to improve these standards.
+  notes: See https://www.bipm.org/utils/en/pdf/CI-2002-1-EN.pdf[Recommendation 1 (CI-2002)]
+    of the CIPM on the revision of the practical realization of the definition of
+    the metre.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Density of air
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Proceedings of the 17th CGPM (1983), 1984
+  reference_page: 99
+  approvals:
+  - message: The 17th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1983-10-21'
+    message: |-
+      *recalling* Resolution 1 of the 16th General Conference on Weights and Measures (1979) dealing with the measurement of mass
+
+      and *considering*
+
+      * that the air-buoyancy correction is based upon the density of the ambient air,
+      * that one can improve the uniformity and the accuracy of mass measurements by encouraging laboratories, when they have to calculate the density of air starting from the ambient conditions, to use for this calculation a unique equation known to all and recognized as sufficiently accurate,
+  actions:
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to draw up and
+      recommend such an equation,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to pursue and coordinate
+      the studies undertaken or to undertake to improve the experimental determination
+      of the density of air and of the correction due to air-buoyancy,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invites the Comité International des Poids et Mesures to bring up to
+      date the recommended equation when better experimental determinations permit.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Appropriation for the BIPM
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Proceedings of the 17th CGPM (1983), 1984
+  reference_page: 99
+  approvals:
+  - message: The 17th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering the importance of the work carried out by the Bureau International
+      des Poids et Mesures (BIPM) and of the services that it renders to all countries,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering the necessity of providing the BIPM with a minimum of resources
+      which will not endanger the pursuit of these activities and
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considering the difficulty of foreseeing, in the present economic circumstances,
+      the minimum financial resources needed to permit the BIPM to fulfil its mission
+      as the world centre for scientific metrology,
+  actions:
+  - type: decides
+    date_effective: '1983-10-21'
+    message: "*decides*\n\n1985: 13 144 000 gold-francs +\n1986: 14 327 000 gold-francs
+      +\n1987: 15 616 000 gold-francs +\n1988: 17 022 000 gold-francs.\n\n\n\n* that
+      the fixed portion of the BIPM's annual appropriation shall be increased in such
+      a way that the sum of the fixed and complementary (defined by Article 6 (1921)
+      of the Rules Appended to the Convention du Mètre of 1875) portions shall be,
+      for the Member States of the Convention at the time of the 17th Conférence Générale
+      des Poids et Mesures, for\n\n "

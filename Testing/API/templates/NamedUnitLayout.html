@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <title>Units</title>
+</head>
+<body>
+{% extends 'ParentLayout.html' %}
+{% block main %}
+    {% if language == 'fr' %}
+        <h1>Unités SI</h1>
+        {% for unit in units %}
+            <h2>{{unit.Label}}</h2>
+            {% set Q_url_address = unit.Q_Link ~'?lang=' ~language %}   
+            <p>
+                <a href="{{ unit.C_Link }}">{{unit.Label}}</a> est l'unité de la grandeur <a href= {{Q_url_address}}>{{unit.Q_Label}}</a> et a le symbol {{unit.Symbol}}.
+            </p>
+            <p>
+                <a href="{{ unit.N_Link }}">Dbpedia page</a>
+            </p>
+        {% endfor %}
+
+    {% else %}
+    <h1>SI Units</h1>
+        {% for unit in units %}
+            <h2>{{unit.Label}}</h2>
+            {% set Q_url_address = unit.Q_Link ~'?lang=' ~language %}   
+            <p>
+                <a href="{{ unit.C_Link }}">{{unit.Label}}</a> is the unit of the quantity kind <a href={{Q_url_address}}>{{unit.Q_Label}}</a> and has the symbol {{unit.Symbol}}.
+            
+            </p>
+            <p>
+                <a href="{{ unit.N_Link }}">Dbpedia page</a>
+            </p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+</body>
+</html>

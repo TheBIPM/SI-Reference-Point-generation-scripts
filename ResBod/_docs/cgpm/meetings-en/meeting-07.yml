@@ -1,0 +1,31 @@
+---
+metadata:
+  title: 7th meeting of the CGPM
+  identifier: 7
+  date: '1927-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/7-1927
+pdf: https://www.bipm.org/documents/20126/38095599/CGPM7.pdf/e56bfc2c-2abd-22a1-603f-85f3e17c2f66
+resolutions:
+- dates:
+  - '1927-10-06'
+  subject: CGPM
+  type: resolution
+  title: Definition of the metre by the international Prototype
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/7-1927/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM7.pdf/761ccd6d-b5cd-e449-761d-1b78aa99d7f2
+  reference_name: Proceedings of the 7th CGPM (1927), 1928
+  reference_page: 49
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1927-10-06'
+    message: The unit of length is the metre, defined by the distance, at 0°, between
+      the axes of the two central lines marked on the bar of platinum-iridium kept
+      at the Bureau International des Poids et Mesures and declared Prototype of the
+      metre by the 1st Conférence Générale des Poids et Mesures, this bar being subject
+      to standard atmospheric pressure and supported on two cylinders of at least
+      one centimetre diameter, symmetrically placed in the same horizontal plane at
+      a distance of stem:[571 "mm"] from each other.
+  notes: This definition was abrogated in 1960 by the 11th CGPM (Resolution 6).

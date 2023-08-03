@@ -1,0 +1,72 @@
+---
+metadata:
+  title: 1st meeting of the CGPM
+  identifier: 1
+  date: '1889-09-28'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/1-1889
+pdf: https://www.bipm.org/documents/20126/38097196/CGPM1.pdf/0ff415d6-87a2-5e23-5a1c-cadf8b8047a6
+resolutions:
+- dates:
+  - '1889-09-28'
+  subject: CGPM
+  type: resolution
+  title: Sanction of the international prototypes of the metre and the kilogram
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/1-1889/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM1.pdf/ab69792a-2e5e-2040-14d0-11464bc9414c
+  reference_name: Proceedings of the 1st CGPM (1889), 1890
+  reference_page: 34
+  approvals:
+  - message: The Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering the "Compte rendu of the President of the Comité International
+      des Poids et Mesures (CIPM)" and the "Report of the CIPM", which show that,
+      by the collaboration of the French section of the International Metre Commission
+      and of the CIPM, the fundamental measurements of the international and national
+      prototypes of the metre and of the kilogram have been made with all the accuracy
+      and reliability which the present state of science permits;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering that the international and national prototypes of the metre
+      and the kilogram are made of an alloy of platinum with 10 per cent iridium,
+      to within 0.0001;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering the equality in length of the international Metre and the
+      equality in mass of the international Kilogram with the length of the Metre
+      and the mass of the Kilogram kept in the Archives of France;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering that the differences between the national Metres and the
+      international Metre lie within 0.01 millimetre and that these differences are
+      based on a hydrogen thermometer scale which can always be reproduced thanks
+      to the stability of hydrogen, provided identical conditions are secured;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering that the differences between the national Kilograms and the
+      international Kilogram lie within 1 milligram;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considering that the international Metre and Kilogram and the national
+      Metres and Kilograms fulfil the requirements of the Metre Convention,
+  actions:
+  - type: sanctions
+    date_effective: '1889-09-28'
+    message: |-
+      *sanctions*
+
+      [type=A]
+      . As regards international prototypes:
+      .. The Prototype of the metre chosen by the CIPM. This prototype, at the temperature of melting ice, shall henceforth represent the metric unit of length.
+      .. The Prototype of the kilogram adopted by the CIPM. This prototype shall henceforth be considered as the unit of mass.
+      .. The hydrogen thermometer centigrade scale in terms of which the equations of the prototype Metres have been established.
+      . As regards national prototypes:
+
+      ...
+  notes: |-
+    This definition of the metre was abrogated in 1960 by the 11th CGPM (Resolution 6). +
+     +
+    This definition of the kilogram was abrogated in 2018 by the 26th CGPM (Resolution 1), which became effective in 2019.

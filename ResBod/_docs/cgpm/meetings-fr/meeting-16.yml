@@ -1,0 +1,322 @@
+---
+metadata:
+  title: 16e réunion de la CGPM
+  identifier: 16
+  date: '1979-10-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979
+pdf: https://www.bipm.org/documents/20126/38095501/CGPM16.pdf/23103eb5-a014-e41b-dbaa-3053065012cf
+resolutions:
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Étalons du kilogramme (conservation ; correction de poussée de l'air)
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 99
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que l'exactitude des mesures de masse suppose une parfaire
+      conservation des étalons du kilogramme, en particulier des Kilogrammes prototypes
+      en platine iridié,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que la transmission de cette exactitude aux étalons du kilogramme
+      constitués d'autres matériaux comme les aciers inoxydables est limitée par une
+      connaissance insuffisante de la correction due à la poussée de l'air,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que cette poussée de l'air est le plus souvent calculée à
+      partir des conditions ambiantes, mais qu'il existe des divergences significatives
+      entre les formules utilisées pour ce calcul dans différents laboratoires,
+  actions:
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: recommande que les laboratoires étudient l'influence des conditions ambiantes
+      sur les étalons du kilogramme et les moyens d'améliorer leur conservation,
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: recommande que les laboratoires intensifient les travaux en vue d'une
+      meilleure détermination de la correction due à la poussée de l'air.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Étalons électriques (poursuite des recherches sur la réalisation des unités
+    électriques)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 99
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant l'importance pour toutes les applications des mesures électriques
+      d'une réalisation plus exacte des unités SI, en particulier du volt et de l'ampère,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant les progrès récents accomplis dans ces réalisations, soit
+      par des méthodes directes, soit indirectement par des déterminations de constantes
+      physiques,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant les divergences qui subsistent entre les résultats donnés
+      par ces différentes méthodes,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant la nécessité de pouvoir comparer des réalisations indépendantes
+      entre elles pour élucider l'origine de ces divergences,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant l'amélioration de l'exactitude que l'on obtiendra dès qu'une
+      meilleure cohérence permettra de fixer des valeurs plus exactes pour les différentes
+      réalisations de ces unités,
+  actions:
+  - type: recommends
+    date_effective: '1979-10-12'
+    message: "*recommande* de poursuivre et d'intensifier les recherches sur la réalisation
+      directe des unités électriques aussi bien que sur leur réalisation indirecte
+      par des déterminations de constantes physiques."
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Unité SI d'intensité lumineuse (candela)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que malgré les efforts méritoires de quelques laboratoires,
+      il subsiste des divergences excessives entre les résultats de la réalisation
+      de la candela à l'aide du corps noir étalon primaire actuel,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que les techniques radiométriques se développent rapidement,
+      autorisant des précisions qui sont déjà analogues à celles de la photométrie
+      et que ces techniques sont déjà en usage dans des laboratoires nationaux pour
+      réaliser la candela sans avoir à construire un corps noir,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que la relation entre les grandeurs lumineuses de la photométrie
+      et les grandeurs énergétiques, à savoir la valeur 683 lumens par watt pour l'efficacité
+      lumineuse spectrale de la radiation monochromatique de fréquence stem:[540 *
+      10^(12)] hertz, a été adoptée par le Comité international des poids et mesures
+      en 1977,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que cette valeur a été reconnue suffisamment exacte pour
+      le système des grandeurs lumineuses photopiques, qu'elle n'entraîne qu'un changement
+      d'environ 3 % pour le système des grandeurs lumineuses scotopiques et que par
+      conséquent elle assure une continuité satisfaisante,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que le moment est venu de donner à la candela une définition
+      susceptible d'améliorer la facilité d'établissement des étalons photométriques
+      et leur précision, et qui s'applique aux grandeurs photopiques et scotopiques
+      de la photométrie et aux grandeurs à définir dans le domaine mésopique,
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: décide La candela est l'intensité lumineuse, dans une direction donnée,
+      d'une source qui émet un rayonnement monochromatique de fréquence stem:[540
+      * 10^(12)] hertz et dont l'intensité énergétique dans cette direction est 1/683
+      watt par stéradian.
+  - type: decides
+    date_effective: '1979-10-12'
+    message: décide La définition de la candela (à l'époque appelée bougie nouvelle)
+      décidée par le Comité international des poids et mesures en 1946 en vertu des
+      pouvoirs conférés par la 8^e^ Conférence générale des poids et mesures (CGPM)
+      en 1933, ratifiée par la 9^e^ CGPM en 1948, puis amendée par la 13^e^ CGPM en
+      1967, est abrogée.
+  notes: "La vision photopique est détectée sur la rétine de l'\x9Cil par les cônes,
+    sensibles aux luminances élevées (stem:[L] \\> environ stem:[10 \"cd\" * \"m\"^(-2)]),
+    qui correspondent à la vision diurne. La vision scotopique est détectée sur la
+    rétine de l'\x9Cil par les bâtonnets, sensibles aux faibles luminances (stem:[L]
+    \\< environ stem:[10^(-3) \"cd\" * \"m\"^(-2)]), qui correspondent à la vision
+    nocturne. Dans le cas de luminances intermédiaires entre la vision photopique
+    et la vision scotopique, les cônes et les bâtonnets fonctionnent simultanément,
+    on est alors dans le domaine de la vision mésopique. +\n +\n Cette définition
+    de la candela a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle
+    définition entrant en vigueur en 2019."
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Définition de la candela - amélioration des procédés d'étalonnage photométrique
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations: []
+  actions:
+  - type: charges
+    date_effective: '1979-10-12'
+    message: charge le Comité international des poids et mesures d'organiser des comparaisons
+      internationales afin que soit contrôlée l'uniformité des résultats des mesures
+      photométriques obtenus avec la nouvelle définition de la candela.
+  - type: invites / further invites
+    date_effective: '1979-10-12'
+    message: invite les laboratoires nationaux à intensifier les travaux destinés
+      à la réalisation de la candela selon la nouvelle définition, ainsi qu'à l'amélioration
+      des procédés d'étalonnage photométrique et des méthodes de comparaison internationale.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Nom spécial pour l'unité SI d'équivalent de dose (sievert)
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 100
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant l'effort fait pour introduire les unités SI dans le domaine
+      des rayonnements ionisants,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant les risques que peuvent encourir des être humains soumis
+      à des irradiations sous-estimées, risques qui pourraient résulter de la confusion
+      entre dose absorbée et équivalent de dose,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant que la prolifération des noms spéciaux représente un danger
+      pour le Système international d'unités et doit être évitée dans toute la mesure
+      du possible, mais que cette règle peut être transgressée lorsqu'il s'agit de
+      sauvegarder la santé humaine,
+  actions:
+  - type: adopts
+    date_effective: '1979-10-12'
+    message: "*adopte* le nom spécial *_sievert_*, symbol Sv, pour l'unité SI d'équivalent
+      de dose dans le domaine de la radioprotection. Le sievert est égal au joule
+      par kilogramme."
+  notes: Le Comité international a décidé en 1984 d'accompagner cette Résolution d'une
+    explication (Recommandation 1).
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Symboles du litre
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 101
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: recognizing
+    date_effective: '1979-10-12'
+    message: "*reconnaissant* les principes généraux adoptés pour l'écriture des symboles
+      des unités dans la Résolution 7 de la 9^e^ Conférence générale des poids et
+      mesures (1948),"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considérant* que le symbole l pour l'unité litre a été adopté par le
+      Comité international des poids et mesures en 1879 et confirmé dans cette même
+      Résolution de 1948,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considérant* aussi que, afin d'éviter un risque de confusion entre
+      la lettre l et le chiffre 1, plusieurs pays ont adopté le symbole L au lieu
+      de l pour l'unité litre,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considérant* que le nom litre, bien qu'il ne soit pas inclus dans le
+      Système international d'unités, doit être admis pour l'usage général avec ce
+      Système,"
+  - type: considering
+    date_effective: '1979-10-12'
+    message: "*considérant* en outre que dans l'avenir un seul des deux symboles devrait
+      être retenu,"
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: "*décide*, à titre exceptionnel, d'adopter les deux symboles l et L comme
+      symboles utilisables pour l'unité litre,"
+  - type: invites / further invites
+    date_effective: '1979-10-12'
+    message: "*invite* le Comité international des poids et mesures à suivre le développement
+      de l'usage des deux symboles et à donner à la 18^e^ Conférence générale des
+      poids et mesures son avis sur la possibilité de supprimer l'un d'eux."
+  notes: Le Comité international a estimé encore prématuré, en 1990, de choisir un
+    symbole unique du litre.
+- dates:
+  - '1979-10-12'
+  subject: CGPM
+  type: resolution
+  title: Dotation du BIPM pour la période 1981-1984
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/16-1979/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
+  reference_name: Comptes rendus de la 16e CGPM (1979), 1980
+  reference_page: 101
+  approvals:
+  - message: La Seizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant l'importance des recherches effectuées et des services rendus
+      par le Bureau international des poids et mesures dans les dernières années,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant la nécessité d'étendre son activité, d'améliorer constamment
+      ses méthodes de travail et ses équipements ainsi que la qualification et la
+      compétence de son personnel, afin de lui permettre de remplir sa mission de
+      centre mondial de la métrologie scientifique,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: considérant les retards inévitables accumulés depuis plusieurs années
+      en raison d'une conjoncture économique difficile,
+  - type: considering
+    date_effective: '1979-10-12'
+    message: |-
+      *considérant*
+
+      * que par suite de l'adhésion de la République populaire de Chine à la Convention du Mètre, la dotation annuelle qui sert de base pour calculer la dotation pour les années 1981 - 1984 est obtenue en multipliant la dotation annuelle du Bureau international des poids et mesures pour l'année 1980, votée par la 15^e^ Conférence générale des poids et mesures, par un facteur (100 + x)/100,
+
+      où x représente le pourcentage de répartition calculé pour la République populaire de Chine, à partir du coefficient de l'ONU valable au 1^er^ janvier 1980, en appliquant la procédure adoptée par la 11^e^ Conférence générale des poids et mesures,
+  - type: accepts
+    date_effective: '1979-10-12'
+    message: "*acceptant* sans avis contraire le principe d'une proposition du CIPM,
+      dûment notifiée à l'avance aux Gouvernements conformément à l'Article 6 (1921),
+      paragraphe 5, du Règlement annexé à la Convention du Mètre de 1875,"
+  actions:
+  - type: decides
+    date_effective: '1979-10-12'
+    message: "*décide* que la partie fixe de la dotation annuelle du Bureau international
+      sera augmentée de telle façon que l'ensemble de la partie fixe et de la partie
+      complémentaire (définies à l'Article 6 (1921) du Règlement annexé à la Convention
+      du Mètre), pour les États membres de la Convention du Mètre à l'époque de la
+      16^e^ Conférence générale des poids et mesures, soit obtenu pour les années
+      1981, 1982, 1983 et 1984 en multipliant la dotation de base par 1,12, (1,12)^2^,
+      (1,12)^3^ et (1,12)^4^ respectivement."
+  - type: decides
+    date_effective: '1979-10-12'
+    message: |-
+      *décide*
+
+      * qu'à partir du 1^er^ janvier 1981 les pourcentages de répartition maximal et minimal adoptés par la 11^e^ CGPM seront multipliés par un facteur 100/(100 + x),
+
+      où x représente le pourcentage de répartition calculé pour la République populaire de Chine, à partir du coefficient de l'ONU valable au 1^er^ janvier 1980, en appliquant la procédure adoptée par la 11^e^ Conférence générale des poids et mesures.

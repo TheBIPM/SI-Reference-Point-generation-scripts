@@ -1,0 +1,78 @@
+---
+metadata:
+  title: 1e réunion de la CGPM
+  identifier: 1
+  date: '1889-09-28'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/1-1889
+pdf: https://www.bipm.org/documents/20126/38097196/CGPM1.pdf/0ff415d6-87a2-5e23-5a1c-cadf8b8047a6
+resolutions:
+- dates:
+  - '1889-09-28'
+  subject: CGPM
+  type: resolution
+  title: Sanction des prototypes internationaux du mètre et du kilogramme
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/1-1889/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM1.pdf/ab69792a-2e5e-2040-14d0-11464bc9414c
+  reference_name: Comptes rendus de la 1e CGPM (1889), 1890
+  reference_page: 34
+  approvals:
+  - message: La Conférence générale,
+  considerations:
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant le « Compte rendu du Président du Comité international »
+      et le « Rapport du Comité international des poids et mesures », d'où il résulte
+      que, par les soins communs de la Section française de la Commission internationale
+      du Mètre, et du Comité international des poids et mesures, les déterminations
+      métrologiques fondamentales des prototypes internationaux et nationaux du mètre
+      et du kilogramme ont été exécutées dans toutes les conditions de garantie et
+      de précision que comporte l'état actuel de la science ;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant que les prototypes internationaux et nationaux du mètre et
+      du kilogramme sont formés de platine allié à 10 pour 100 d'iridium, à 0,0001
+      près ;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant l'identité de longueur du Mètre et l'identité de la masse
+      du Kilogramme internationaux avec la longueur du Mètre et la masse du Kilogramme
+      déposés aux Archives de France ;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant que les équations des Mètres nationaux, par rapport au Mètre
+      international, sont renfermées dans la limite de 0,01 millimètre et que ces
+      équations reposent sur une échelle thermométrique à hydrogène qu'il est toujours
+      possible de reproduire, à cause de la permanence de l'état de ce corps, en se
+      plaçant dans des conditions identiques ;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant que les équations des Kilogrammes nationaux, par rapport
+      au Kilogramme international, sont renfermées dans la limite de 1 milligramme
+      ;
+  - type: considering
+    date_effective: '1889-09-28'
+    message: considérant que le Mètre et le Kilogramme internationaux et que les Mètres
+      et les Kilogrammes nationaux remplissent les conditions exigées par la Convention
+      du Mètre ;
+  actions:
+  - type: sanctions
+    date_effective: '1889-09-28'
+    message: |-
+      *sanctionne*
+
+      [type=A]
+      . En ce qui concerne les prototypes internationaux :
+      .. Le Prototype du mètre choisi par le Comité international. Ce prototype représentera désormais, à la température de la glace fondante, l'unité métrique de longueur.
+      .. Le Prototype du kilogramme adopté par le Comité international. Ce prototype sera considéré désormais comme unité de masse.
+      .. L'échelle thermométrique centigrade à hydrogène par rapport à laquelle les équations des Mètres prototypes ont été établies.
+      . En ce qui concerne les prototypes nationaux :
+      .. Les mètres en platine iridié, dont les équations, par rapport au prototype international, sont renfermées dans la limite de 0,01 millimètre, avec une erreur probable ne dépassant pas stem:[ +-  0","0002] millimètre.
+      .. Les kilogrammes en platine iridié, dont les équations sont renfermées dans la limite de 1 milligramme, avec une erreur probable ne dépassant pas stem:[ +-  0","005] milligramme.
+      . En ce qui concerne les équations des prototypes nationaux : +
+       Les équations des prototypes nationaux, telles qu'elles ont été déterminées au Bureau international, sous la direction du Comité international, et inscrites dans le Rapport de ce Comité et sur les certificats accompagnant ces prototypes.
+  notes: |-
+    Cette définition du mètre a été abrogée en 1960 par la 11^e^ CGPM (Résolution 6). +
+     +
+     Cette définition du kilogramme a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle définition entrant en vigueur en 2019.

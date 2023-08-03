@@ -1,0 +1,422 @@
+---
+metadata:
+  title: 13e réunion de la CGPM
+  identifier: 13
+  date: '1967-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967
+pdf: https://www.bipm.org/documents/20126/38095528/CGPM13.pdf/3955eace-d53e-911d-1e4a-9f57c353d9a2
+resolutions:
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Unité SI de temps (seconde)
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 103
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que la définition de la seconde décidée par le Comité international
+      des poids et mesures à sa session de 1956 (Résolution 1) et ratifiée par la
+      Résolution 9 de la Onzième Conférence générale (1960), puis maintenue par la
+      Résolution 5 de la Douzième Conférence générale (1964) ne suffit pas aux besoins
+      actuels de la métrologie,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant qu'à sa session de 1964 le Comité international des poids
+      et mesures, habilité par la Résolution 5 de la Douzième Conférence (1964), a
+      désigné pour répondre à ces besoins un étalon atomique de fréquence à césium
+      à employer temporairement,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que cet étalon de fréquence est maintenant suffisamment éprouvé
+      et suffisamment précis pour servir à une définition de la seconde répondant
+      aux besoins actuels,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que le moment est venu de remplacer la définition actuellement
+      en vigueur de l'unité de temps du Système international d'unités par une définition
+      atomique fondée sur cet étalon,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: |-
+      décide L'unité de temps du Système international d'unités est la seconde définie dans les termes suivants : +
+       « La seconde est la durée de 9 192 631 770 périodes de la radiation correspondant à la transition entre les deux niveaux hyperfins de l'état fondamental de l'atome de césium 133 ».
+  - type: decides
+    date_effective: '1967-10-16'
+    message: décide La Résolution 1 adoptée par le Comité international des poids
+      et mesures à sa session de 1956 et la Résolution 9 de la Onzième Conférence
+      générale des poids et mesures sont abrogées.
+  notes: |-
+    Lors de sa session de 1997, le Comité international a confirmé que cette définition se réfère à un atome de césium au repos, à une température de stem:[0 "K"]. +
+     +
+     Cette définition de la seconde a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle définition entrant en vigueur en 2019.
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Unité SI de temps (seconde)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 103
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considérant* que l'étalon de fréquence à césium est encore perfectible
+      et que des expériences en cours autorisent l'espoir de réaliser d'autres étalons
+      ayant des qualités encore meilleures pour servir à définir la seconde,"
+  actions:
+  - type: invites / further invites
+    date_effective: '1967-10-16'
+    message: "*invite* les organisations et laboratoires experts dans le domaine des
+      étalons atomiques de fréquence à poursuivre activement leurs études."
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Unité SI de température thermodynamique (kelvin)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 104
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant les noms « degré Kelvin » et « degré », les symboles « stem:["°K"]
+      » et « deg » et leurs règles d'emploi contenus dans la Résolution 7 de la Neuvième
+      Conférence générale (1948), dans la Résolution 12 de la Onzième Conférence générale
+      (1960) et la décision prise par le Comité international des poids et mesures
+      en 1962 (PV, 30, 27),
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que l'unité de température thermodynamique et l'unité d'intervalle
+      de température sont une même unité qui devrait être désignée par un nom unique
+      et par un symbole unique,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: décide L'unité de température thermodynamique est désignée sous le nom
+      « kelvin » et son symbole est « stem:["K"] » ;
+  - type: decides
+    date_effective: '1967-10-16'
+    message: décide ce même nom et ce même symbole sont utilisés pour exprimer un
+      intervalle de température ;
+  - type: decides
+    date_effective: '1967-10-16'
+    message: décide un intervalle de température peut aussi s'exprimer en degrés Celsius
+      ;
+  - type: decides
+    date_effective: '1967-10-16'
+    message: décide les décisions mentionnées au premier considérant concernant le
+      nom de l'unité de température thermodynamique, son symbole et la désignation
+      de l'unité pour exprimer un intervalle ou une différence de température sont
+      abrogées, mais les usages qui sont la conséquence de ces décisions restent admis
+      temporairement.
+  notes: "À sa session de 1980, le Comité international a approuvé le rapport de la
+    7^e^ session du CCU demandant que l'emploi des symboles « stem:[\"°K\"] » et «
+    deg » ne soit plus admis.\n Voir la <recommandation du cipm relative la composition
+    isotopique de l entrant dans d kelvin.>\n   \n\n</recommandation>"
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Définition de l'unité SI de température thermodynamique (kelvin)
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 104
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considérant* qu'il est utile de formuler dans une rédaction explicite
+      la définition de l'unité de température thermodynamique contenue dans la Résolution
+      3 de la Dixième Conférence générale (1954),"
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: |-
+      *décide* d'exprimer cette définition de la façon suivante : +
+      « Le kelvin, unité de température thermodynamique, est la fraction 1/273,16 de la température thermodynamique du point triple de l'eau. »
+  notes: |-
+    Voir la Recommandation 5 (CI-1989) du CIPM relative à l'Échelle internationale de température de 1990. +
+     +
+     Cette définition du kelvin a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle définition entrant en vigueur en 2019.
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Unité SI d'intensité lumineuse (candela)
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 104
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant la définition de l'unité d'intensité lumineuse ratifiée par
+      la Neuvième Conférence générale (1948) et contenue dans la « Résolution concernant
+      le changement des unités photométriques » adoptée par le Comité international
+      des poids et mesures en 1946 (PV, *20*, 119) en vertu des pouvoirs conférés
+      par la Huitième Conférence générale (1933),
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que cette définition fixe bien la grandeur de l'unité d'intensité
+      lumineuse mais prête à des critiques d'ordre rédactionnel,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: |-
+      *décide* d'exprimer la définition de la candela de la façon suivante : +
+      « La candela est l'intensité lumineuse, dans la direction perpendiculaire, d'une surface de 1/600 000 mètre carré d'un corps noir à la température de congélation du platine sous la pression de 101 325 newtons par mètre carré. »
+  notes: Définition abrogée en 1979 par la 16^e^ CGPM (Résolution 3).
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Unités SI dérivées
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 105
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considérant* qu'il est utile de citer d'autres unités dérivées dans
+      la liste du paragraphe 4 de la Résolution 12 de la Onzième Conférence générale
+      (1960),"
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: |-
+      *décide* d'y ajouter :
+
+      |===
+      .>| nombre d'ondes .>| 1 par mètre .>| stem:["m"^(-1)]
+
+      .<| entropie .<| joule par kelvin .<| stem:["J"/"K"]
+      .<| chaleur massique .<| joule par kilogramme kelvin .<| stem:["J"/("kg" * "K")]
+      .<| conductivité thermique .<| watt par mètre kelvin .<| stem:["W"/("m" * "K")]
+      .<| intensité énergétique .<| watt par stéradian .<| stem:["W"/"sr"]
+      .>| activité (d'une source radioactive) .>| 1 par seconde .>| stem:["s"^(-1)]
+
+      |===
+  notes: L'unité d'activité a reçu un nom spécial et un symbole particulier lors de
+    la 15^e^ CGPM en 1975 (Résolution 8).
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Abrogation de décisions antérieures (micron, bougie nouvelle)
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 105
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considérant* que les décisions prises ultérieurement par la Conférence
+      générale concernant le Système international d'unités contredisent quelques
+      parties de la Résolution 7 de la Neuvième Conférence générale (1948),"
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: |-
+      *décide* en conséquence de retirer de la Résolution 7 de la Neuvième Conférence :
+
+      . le nom d'unité « micron », et le symbole « stem:["µ"] » qui fut attribué à cette unité et qui est devenu un préfixe ;
+      . le nom d'unité « bougie nouvelle ».
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Échelle internationale pratique de température (révision prochaine)
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 105
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant qu'il est urgent de réviser l'Échelle internationale pratique
+      de température de 1948 comme l'a déjà constaté la Douzième Conférence générale
+      (1964) dans sa Résolution 10,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que les laboratoires compétents se sont maintenant mis d'accord
+      sur les grandes lignes de la révision de cette Échelle,
+  actions:
+  - type: appoints
+    date_effective: '1967-10-16'
+    message: "*donne pouvoir* au Comité international des poids et mesures de prendre
+      les décisions nécessaires pour que soit mise en vigueur dès que possible une
+      nouvelle Échelle internationale pratique de température (Voir p.A 1, le texte
+      de l' « Échelle internationale pratique de température de 1968 » adopté par
+      le Comité international à sa 57^e^ session (octobre 1968)."
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Colorimétrie et radiométrie
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 105
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que la photométrie doit tenir compte des principes et des
+      techniques de la colorimétrie et de la radiométrie,
+  actions:
+  - type: approves
+    date_effective: '1967-10-16'
+    message: approuve l'intention exprimée par le Comité international des poids et
+      mesures en 1965 (Procès-Verbaux, 33, p. 21) d'inclure dans ses activités et
+      dans celles du Bureau international des poids et mesures les aspects métrologiques
+      fondamentaux de la colorimétrie et de la radiométrie.
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Dotation du Bureau international pour la période 1969-1972
+  identifier: 10
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 106
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que pendant les séances tenues en octobre 1967 elle n'a pas
+      décidé le montant exact des dotations du Bureau international des poids et mesures
+      pour les quatre années 1969-1972,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant qu'elle a reconnu la nécessité d'une augmentation annuelle
+      d'environ 9 pour cent pendant ces quatre années pour que le Bureau international
+      se maintienne à son niveau actuel,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant mais qu'elle veut que le niveau du Bureau international s'élève
+      avec le progrès de la métrologie en utilisant des ressources supplémentaires
+      qui restent à définir,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: "*décide* que la partie fixe de la dotation annuelle à partir du 1^er^
+      janvier 1969 sera augmentée par rapport à ce qu'elle était au 1^er^ octobre
+      1967, de façon que l'ensemble de la partie fixe et de la partie complémentaire
+      calculée à cette dernière date ne soit pas inférieur à\n\n|===\n| 1 910 000
+      francs-or en 1969\n\n| 2 080 000 francs-or en 1970\n| 2 270 000 francs-or en
+      1971\n| 2 475 000 francs-or en 1972\n\n|===\n\n "
+  - type: requests
+    date_effective: '1967-10-16'
+    message: "*demande* au Comité international des poids et mesures de fournir aux
+      États de la Convention du Mètre, dans un délai inférieur à six mois, une étude
+      documentée qui permette aux États de décider la nature et le montant des ressources
+      supplémentaires à consacrer au Bureau international et d'apprécier les conséquences
+      de leur décision sur l'avenir du Bureau international.\n\n "
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Dates des séances
+  identifier: 11
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-11
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 106
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que les séances aux dates prévues n'ont pas suffi pour épuiser
+      l'ordre du jour,
+  - type: considering
+    date_effective: '1967-10-16'
+    message: considérant que les questions en suspens nécessitent un délai d'étude,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: "*décide* de reprendre sa session le mercredi 5 juin 1968."
+- dates:
+  - '1967-10-16'
+  subject: CGPM
+  type: resolution
+  title: Dotation du Bureau international pour la période 1969-1972
+  identifier: 12
+  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-12
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
+  reference_name: Comptes rendus de la 13e CGPM (1967), 1969
+  reference_page: 106
+  approvals:
+  - message: La Treizième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: |-
+      *considérant* que les dotations minimales décidées par sa Résolution 10, à savoir
+
+      |===
+      | 1 910 000 francs-or en 1969
+
+      | 2 080 000 francs-or en 1970
+      | 2 270 000 francs-or en 1971
+      | 2 475 000 francs-or en 1972
+
+      |===
+
+
+
+      doivent être complétées par des ressources supplémentaires destinées à assurer le développement du Bureau international des poids et mesures,
+  actions:
+  - type: decides
+    date_effective: '1967-10-16'
+    message: "*décide* d'allouer au Bureau international, dans les quatre années 1969-1972,
+      les sommes supplémentaires suivantes :\n\n|===\n| 90 000 francs-or en 1969\n\n|
+      210 000 francs-or en 1970\n| 350 000 francs-or en 1971\n| 515 000 francs-or
+      en 1972\n\n|===\n\n "
+  - type: authorizes
+    date_effective: '1967-10-16'
+    message: "*autorise* que ces sommes supplémentaires puissent être payées en monnaie
+      nationale ;"
+  - type: invites / further invites
+    date_effective: '1967-10-16'
+    message: "*invite* les États qui choisiraient d'effectuer ces paiements en monnaie
+      nationale à se mettre d'accord avec le Comité international des poids et mesures
+      pour qu'ils soient employés à la satisfaction des besoins du Bureau international
+      des poids et mesures en tenant compte des lois du pays."

@@ -1,0 +1,177 @@
+---
+metadata:
+  title: 19th meeting of the CGPM
+  identifier: 19
+  date: '1991-10-04'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991
+pdf: https://www.bipm.org/documents/20126/38090957/CGPM19.pdf/2f7ee319-dbb4-d798-bc09-27888616e857
+resolutions:
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: Time standards and time comparisons
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Proceedings of the 19th CGPM (1991), 1992
+  reference_page: 183
+  approvals:
+  - message: The 19th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: noting
+    date_effective: '1991-10-04'
+    message: "*noting* that the accuracy of clock comparisons has been greatly improved
+      by the use of satellite techniques,"
+  actions:
+  - type: remarks
+    date_effective: '1991-10-04'
+    message: |-
+      *remarks* that this accuracy
+
+      * can be further improved by the better use of the satellite techniques already developed,
+      * reveals the differences and systematic variations among atomic frequency standards,
+      * allows a better synchronization of national time scales,
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommends the construction of new primary caesium standards, the improvement
+      of the frequency accuracy of existing primary standards and the study of the
+      systematic differences in frequency which exist between them,
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommends that the laboratories participating in International Atomic
+      Time (TAI) stabilize the environmental conditions of each contributing clock,
+      keep careful records of these environmental conditions and report them to the
+      BIPM,
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommends that the coordinates adopted for antennas used in single-way
+      time comparison by satellite techniques correspond to their real position in
+      the terrestrial reference system of the International Earth Rotation Service.
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: The Josephson and quantum-Hall effects
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Proceedings of the 19th CGPM (1991), 1992
+  reference_page: 184
+  approvals:
+  - message: The 19th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considering that worldwide uniformity and long-term stability of the
+      national representations of electrical units are of great importance for science,
+      industry and commerce for both technical and economic reasons,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considering that many national laboratories now use the Josephson and
+      quantum-Hall effects for the conservation of their representations of the volt
+      and the ohm respectively, a practice giving complete security in terms of long-term
+      stability,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considering that the values attributed to their representations should
+      be in as close as possible agreement with the SI,
+  - type: recalling / further recalling
+    date_effective: '1991-10-04'
+    message: "*recalling* Resolution 6 of the 18th Conférence Générale concerning
+      adjustments then foreseen in representations of the volt and the ohm,"
+  - type: noting
+    date_effective: '1991-10-04'
+    message: '*noting* the decisions made by the Comité International des Poids et
+      Mesures in 1988, during its 77th Meeting concerning these adjustments, in particular
+      the conventional values stem:[K_(J-90)] (equal to stem:[483 597","9 "GHz"/"V"])
+      and stem:[R_(K-90)] (equal to 25 812,807 Ω) attributed to the Josephson constant
+      stem:[K_("J")] and the von Klitzing constant stem:[R_("K")] used in representations
+      of the volt and the ohm respectively,'
+  actions:
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommends that national laboratories continue their efforts to reduce
+      the uncertainty in the knowledge of the ratios stem:[K_(J-90)/K_("J")] and stem:[R_(K-90)/R_("K")],
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: recommends that research be continued into the basic theory of the Josephson
+      and quantum-Hall effects.
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: The International Temperature Scale of 1990 (ITS-90) and future work in thermometry
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Proceedings of the 19th CGPM (1991), 1992
+  reference_page: 185
+  approvals:
+  - message: The 19th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considering that worldwide uniformity and long-term stability in the
+      measurement of temperature are of great importance for science, industry and
+      commerce for both technical and economic reasons,
+  - type: considering
+    date_effective: '1991-10-04'
+    message: considering that the international temperature scale should be as close
+      as possible to thermodynamic temperature,
+  - type: noting
+    date_effective: '1991-10-04'
+    message: noting that the 18th Conférence Générale in its Resolution 7 had invited
+      the Comité International des Poids et Mesures and national laboratories to prepare
+      and adopt a new international scale to replace the International Practical Temperature
+      Scale of 1968, by then known to differ significantly from thermodynamic temperatures,
+  - type: noting
+    date_effective: '1991-10-04'
+    message: noting that the International Temperature Scale of 1990 (ITS-90) adopted
+      by the Comité International in 1989 at its 78th Meeting is generally more precise,
+      more readily realized and more nearly in accord with thermodynamic temperatures,
+      and that it fulfills the requirements demanded of it by Resolution 7 of the
+      18th Conférence Générale,
+  actions:
+  - type: recommends
+    date_effective: '1991-10-04'
+    message: "*recommends* that national laboratories continue their efforts to improve
+      the worldwide uniformity and long-term stability in the measurement of temperature
+      by the rapid implementation of the ITS-90 and the maintenance of research programmes
+      on fundamental thermometry."
+- dates:
+  - '1991-10-04'
+  subject: CGPM
+  type: resolution
+  title: SI prefixes zetta, zepto, yotta and yocto
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
+  reference_name: Proceedings of the 19th CGPM (1991), 1992
+  reference_page: 185
+  approvals:
+  - message: The 19th Conférence Générale des Poids et Mesures (CGPM),
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1991-10-04'
+    message: |-
+      *decides* to add to the list of SI prefixes to be used for multiples and submultiples of units, adopted by the 11th CGPM, Resolution 12, paragraph 3, the 12th CGPM, Resolution 8, and the 15th CGPM, Resolution 10, the following prefixes:
+
+      [width=100%]
+      |===
+      | Multiplying factor | Prefix | Symbol
+
+      .<| stem:[10^(21)] .<| zetta .<| Z
+      .<| stem:[10^(-21)] .<| zepto .<| z
+      .<| stem:[10^(24)] .<| yotta .<| Y
+      .<| stem:[10^(-24)] .<| yocto .<| y
+
+      |===
+  notes: The names zepto and zetta are derived from septo suggesting the number seven
+    (the seventh power of stem:[10^(3)]) and the letter "z" is substituted for the
+    letter "s" to avoid the duplicate use of the letter "s" as a symbol. The names
+    yocto and yotta are derived from octo, suggesting the number eight (the eight
+    power of stem:[10^(3)]); the letter "y" is added to avoid the use of the letter
+    "o" as a symbol because it may be confused with the number zero.

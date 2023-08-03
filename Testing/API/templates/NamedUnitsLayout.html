@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <title>Units</title>
+</head>
+<body>
+    {% extends 'ParentLayout.html' %}
+    {% block main %}
+    <h1>SI Units</h1>
+    {% for unit in units %}
+    <h2>{{unit.Label}}</h2>
+    <p>
+        {% if language == 'fr' %}
+            <a href="{{ unit.C_Link }}">{{unit.Label}}</a> est l'unité de la grandeur <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> et a le symbol {{unit.Symbol}}.
+        {% else %}
+            <a href="{{ unit.C_Link }}">{{unit.Label}}</a> is the unit of the quantity kind <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> and has the symbol {{unit.Symbol}}.
+        {% endif %}
+    </p>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

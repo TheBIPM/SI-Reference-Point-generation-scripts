@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+    <title>Conferences</title>
+</head>
+<body>
+    {% extends 'ParentLayout.html' %}
+    {% block main %}
+    {% if language == 'fr' %}
+    <h1>Conférences</h1>
+    {% for Conference in Conferences %}
+        <h2><a href="{{Conference.Link}}?lang={{language}}">{{Conference.Title}}</a> ({{Conference.Year}})</h2>
+    {% endfor %}
+
+    {% else %}
+        <h1>Conferences</h1>
+        {% for Conference in Conferences %}
+            <h2><a href="{{Conference.Link}}?lang={{language}}">{{Conference.Title}}</a> ({{Conference.Year}})</h2>
+        {% endfor %}
+    {% endif %}
+    {% endblock %}
+</body>
+</html>

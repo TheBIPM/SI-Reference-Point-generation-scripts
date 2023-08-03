@@ -1,0 +1,351 @@
+---
+metadata:
+  title: 15e réunion de la CGPM
+  identifier: 15
+  date: '1975-06-03'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975
+pdf: https://www.bipm.org/documents/20126/38095510/CGPM15.pdf/16dacb08-f90f-e7b5-de57-f79268731b0f
+resolutions:
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Définition du mètre (maintien de la définition actuelle ; poursuite des recherches)
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 103
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1975-06-03'
+    message: "*ayant pris connaissance* des qualités métrologiques des radiations
+      produites par des lasers à gaz asservis sur une raie d'absorption,"
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*considérant* que ces radiations constituent des étalons de longueur
+      d'onde dont la précision et la reproductibilité surpassent celles de la radiation
+      du krypton 86 de la définition du mètre,"
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*estime* cependant prématuré d'envisager un changement de la définition
+      du mètre,"
+  actions:
+  - type: requests
+    date_effective: '1975-06-03'
+    message: "*demande* au Bureau international des poids et mesures et aux laboratoires
+      nationaux de poursuivre leurs recherches sur ces radiations,"
+  - type: requests
+    date_effective: '1975-06-03'
+    message: "*et demande* au Comité international des poids et mesures de coordonner
+      ces recherches."
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Valeur recommandée pour la vitesse de la lumière
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 103
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*considérant* l'excellent accord entre les résultats des mesures de
+      longueur d'onde portant sur des radiations de lasers asservis sur une raie d'absorption
+      moléculaire dans la région visible ou infrarouge, avec une incertitude estimée
+      à stem:[ +-  4 * 10^(-9)] qui correspond à l'indétermination de la réalisation
+      du mètre,"
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*considérant* aussi les mesures concordantes de la fréquence de plusieurs
+      de ces radiations,"
+  actions:
+  - type: recommends
+    date_effective: '1975-06-03'
+    message: "*recommande* l'emploi de la valeur qui en résulte pour la vitesse de
+      propagation des ondes électromagnétiques dans le vide stem:[c = 299 792 458]
+      mètres par seconde."
+  notes: L'incertitude relative doit être comprise comme étant trois fois l'incertitude-type
+    estimée sur les résultats considérés.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Étalons du kilogramme (poursuite des études pour améliorer la précision des
+    comparaisons)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 103
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: considérant que l'unité de masse, et les unités de toutes les grandeurs
+      qui dépendent de la masse, pour être réalisées exactement, nécessitent l'emploi
+      du Prototype international du kilogramme en platine iridié conservé par le Bureau
+      international des poids et mesures depuis 1889,
+  - type: considering
+    date_effective: '1975-06-03'
+    message: considérant que pour le moment aucun moyen n'est en vue qui permettrait
+      de définir l'unité de masse en termes de constantes atomiques avec une précision
+      équivalente,
+  actions:
+  - type: requests
+    date_effective: '1975-06-03'
+    message: "*demande* au Bureau international des poids et mesures et aux laboratoires
+      nationaux de poursuivre des études visant à améliorer la précision des comparaisons
+      d'étalons de masse,"
+  - type: charges
+    date_effective: '1975-06-03'
+    message: et charge le Bureau international des poids et mesures d'organiser ensuite
+      une vérification des étalons nationaux de masse.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Temps atomique international (relations du BIH avec le CIPM et le BIPM)
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 104
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1975-06-03'
+    message: ayant pris connaissance des arrangements conclus entre le Bureau international
+      de l'heure et le Bureau international des poids et mesures afin de satisfaire
+      les besoins des utilisateurs du Temps atomique international (TAI),
+  - type: noting
+    date_effective: '1975-06-03'
+    message: constate avec satisfaction que le TAI est fourni aux utilisateurs dans
+      de bonnes conditions,
+  actions:
+  - type: requests
+    date_effective: '1975-06-03'
+    message: renouvelle sa demande aux institutions nationales et internationales
+      de bien vouloir continuer, et si possible augmenter, l'aide qu'elles donnent
+      au Bureau international de l'heure,
+  - type: requests
+    date_effective: '1975-06-03'
+    message: et demande au Comité international des poids et mesures de veiller à
+      maintenir ses relations avec le Bureau international de l'heure et son Comité
+      directeur en vue de l'amélioration de l'exactitude et de la continuité du TAI.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Temps universel coordonné (UTC)
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 104
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*considérant* que le système appelé « Temps universel coordonné » (UTC)
+      est employé très largement, qu'il est diffusé par la plupart des émetteurs hertziens
+      de signaux horaires, que sa diffusion fournit aux utilisateurs à la fois des
+      fréquences étalons, le Temps atomique international et une approximation du
+      Temps universel (ou si l'on préfère, du temps solaire moyen),"
+  - type: noting
+    date_effective: '1975-06-03'
+    message: "*constate* que ce Temps universel coordonné est à la base du temps civil
+      dont l'usage est légal dans la plupart des pays,"
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*estime* que cet emploi est parfaitement recommandable."
+  actions: []
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Étalons électriques (poursuite des recherches pour améliorer l'exactitude
+    de la réalisation des unités)
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 104
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1975-06-03'
+    message: ayant pris connaissance des travaux en cours en vue d'une réalisation
+      plus exacte de l'ampère, de l'ohm, du volt et du farad, ainsi que des travaux
+      connexes sur l'utilisation de l'effet Josephson et du coefficient gyromagnétique
+      du proton,
+  actions:
+  - type: recommends
+    date_effective: '1975-06-03'
+    message: recommande que ces travaux soient poursuivis activement,
+  - type: requests
+    date_effective: '1975-06-03'
+    message: demande au Comité international des poids et mesures de coordonner ces
+      travaux, et de poursuivre l'organisation de mesures comparatives, non seulement
+      des étalons des grandeurs correspondantes en courant continu, mais des grandeurs
+      électromagnétiques en haute fréquence.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Échelle internationale pratique de température de 1968 (Édition amendée de
+    1975)
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 105
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1975-06-03'
+    message: ayant pris connaissance des amendements apportés à l'Échelle internationale
+      pratique de température de 1968, qui ne changent pas les valeurs des températures
+      mesurées mais qui améliorent la commodité et la reproductibilité des mesures,
+  actions:
+  - type: approves
+    date_effective: '1975-06-03'
+    message: approuve l'édition de 1975 de l'Échelle internationale pratique de température
+      de 1968,
+  - type: requests
+    date_effective: '1975-06-03'
+    message: et demande au Comité international des poids et mesures de poursuivre
+      la préparation d'une Échelle révisée qui donnerait une exactitude meilleure,
+      c'est-à-dire des valeurs encore plus voisines des températures thermodynamiques.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: 'Unités SI pour les rayonnements ionisants : becquerel'
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 105
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: |-
+      La Quinzième Conférence générale des poids et mesures,
+
+      * en raison de l'urgence, exprimée par la Commission internationale des unités et mesures de rayonnements (ICRU), d'étendre l'usage du Système international d'unités aux recherches et aux applications de la radiologie,
+      * en raison de la nécessité de rendre aussi simple que possible l'usage des unités aux non-spécialistes,
+      * tenant compte aussi de la gravité des risques d'erreurs dans la thérapeutique,
+
+      adopte le nom spécial suivant d'unité SI pour l'activité :
+
+      le *_becquerel_*, symbole Bq, égal à la seconde à la puissance moins un.
+  actions: []
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: 'Unités SI pour les rayonnements ionisants : gray'
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 105
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: |-
+      La Quinzième Conférence générale des poids et mesures,
+
+      * en raison de l'urgence, exprimée par la Commission internationale des unités et mesures de rayonnements (ICRU), d'étendre l'usage du Système international d'unités aux recherches et aux applications de la radiologie,
+      * en raison de la nécessité de rendre aussi simple que possible l'usage des unités aux non-spécialistes,
+      * tenant compte aussi de la gravité des risques d'erreurs dans la thérapeutique,
+  actions:
+  - type: adopts
+    date_effective: '1975-06-03'
+    message: |-
+      *adopte* le nom spécial suivant d'unité SI pour les rayonnements ionisants :
+
+      le *_gray_*, symbole Gy, égal au joule par kilogramme.
+
+      Note : le gray est l'unité SI de dose absorbée. Dans le domaine des rayonnements ionisants, le gray peut encore être employé avec d'autres grandeurs physiques qui s'expriment aussi en joules par kilogramme ; le Comité consultatif des unités est chargé d'étudier cette question en collaboration avec les organisations internationales compétentes.
+  notes: À sa session de 1976, le Comité international a approuvé le rapport de la
+    5^e^ session du CCU (1976) précisant que, suivant l'avis de l'ICRU, le gray peut
+    être employé aussi pour exprimer l'énergie communiquée massique, le kerma et l'indice
+    de dose absorbée.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Préfixes SI peta et exa
+  identifier: 10
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 106
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1975-06-03'
+    message: |-
+      *décide* d'ajouter à la liste des préfixes SI pour la formation des noms des multiples des unités, adoptée par la Onzième Conférence générale, Résolution 12, paragraphe 3, les deux préfixes suivants :
+
+      [width=100%]
+      |===
+      a| Facteur par lequel +
+       l'unité est multipliée
+      | Préfixe | Symbole
+
+      | stem:[10^(15)] | peta | P
+      | stem:[10^(18)] | exa | E
+
+      |===
+  notes: |-
+    De nouveaux préfixes furent ajoutés en 1991 par la 19^e^ CGPM (Résolution 4).
+     En français, il est d'usage courant de mettre un accent à péta.
+- dates:
+  - '1975-06-03'
+  subject: CGPM
+  type: resolution
+  title: Dotations du BIPM pour la période 1977-1980
+  identifier: 11
+  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-11
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
+  reference_name: Comptes rendus de la 15e CGPM (1975), 1976
+  reference_page: 106
+  approvals:
+  - message: La Quinzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1975-06-03'
+    message: "*considérant* que dans le cas de difficultés financières imprévues une
+      séance supplémentaire de la Quinzième Conférence générale des poids et mesures
+      pourrait être convoquée,"
+  actions:
+  - type: decides
+    date_effective: '1975-06-03'
+    message: |-
+      *décide* que la partie fixe de la dotation annuelle du Bureau international des poids et mesures sera augmentée de façon que l'ensemble de la partie fixe et de la partie complémentaire (définies à l'Article 6 (1921) du Règlement annexé à la Convention du Mètre) soit, pour les États parties à la Convention à l'époque de la Quinzième Conférence générale :
+
+      |===
+      | 5 310 000 francs-or en 1977
+
+      | 5 950 000 francs-or en 1978
+      | 6 660 000 francs-or en 1979
+      | 7 460 000 francs-or en 1980
+
+      |===

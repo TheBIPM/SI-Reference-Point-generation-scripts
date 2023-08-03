@@ -1,0 +1,333 @@
+---
+metadata:
+  title: 9e réunion de la CGPM
+  identifier: 9
+  date: '1948-10-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948
+pdf: https://www.bipm.org/documents/20126/38095573/CGPM9.pdf/10f7e9dc-a8d7-1e4c-fdfb-5f139fefd018
+resolutions:
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Vers une nouvelle définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 44
+  approvals:
+  - message: La Neuvième Conférence générale des poids et mesures
+  considerations:
+  - type: having / having regard
+    date_effective: '1948-10-21'
+    message: "*ayant pris connaissance* des possibilités nouvelles offertes par les
+      raies spectrales des éléments à isotope unique, qui réunissent au plus haut
+      point les qualités requises pour constituer les longueurs d'onde étalons ;"
+  - type: recognizing
+    date_effective: '1948-10-21'
+    message: "*reconnaît* dans ces raies la possibilité de retrouver pour l'unité
+      de longueur une base naturelle qui aurait une très haute précision ;"
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '1948-10-21'
+    message: "*rend hommage* aux savants dont les travaux ont abouti à la réalisation
+      de quantités appréciables de ces éléments ;"
+  - type: invites / further invites
+    date_effective: '1948-10-21'
+    message: "*invite* les grands Laboratoires et le Bureau international à poursuivre
+      l'étude de ces raies, dans le but d'établir éventuellement une nouvelle définition
+      du Mètre fondée sur la longueur d'onde d'une raie choisie, émise dans des conditions
+      spécifiées."
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Concernant les mesures de gravité
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 52
+  approvals:
+  - message: La Neuvième Conférence générale des poids et mesures
+  considerations:
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant le développement remarquable des mesures de gravité relative
+      pour lesquelles la base actuellement admise date d'un demi-siècle et semble
+      erronée d'une quantité appréciable,
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant que les déterminations les plus récentes ne présentent pas
+      encore une concordance suffisante et qu'il serait, par suite, désirable d'en
+      contrôler les résultats par l'emploi de méthodes plus modernes,
+  - type: recognizing
+    date_effective: '1948-10-21'
+    message: "*reconnaît* l'intérêt des déterminations absolues de l'intensité de
+      la pesanteur en préparation au Bureau international des poids et mesures,"
+  actions:
+  - type: recommends
+    date_effective: '1948-10-21'
+    message: "*et recommande* aux laboratoires qui en ont la possibilité, d'effectuer
+      des mesures analogues afin que, par la coordination des résultats obtenus, une
+      base fondamentale plus précise puisse être proposée pour cette grandeur."
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Point triple de l'eau ; échelle thermodynamique à un seul point fixe ; unité
+    de quantité de chaleur (joule)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 55
+  approvals:
+  - message: |-
+      . En l'état actuel de la technique, le point triple de l'eau est susceptible de constituer un repère thermométrique avec une précision plus élevée que le point de fusion de la glace. +
+       En conséquence, le Comité consultatif [de thermométrie et calorimétrie]
+  considerations:
+  - type: considering
+    date_effective: '1948-10-21'
+    message: |-
+      estime que le zéro de l'échelle thermodynamique centésimale doit être défini comme étant la température inférieure de 0,0100 degré à celle du point triple de l'eau pure.
+
+       Le Comité consultatif [de thermométrie et calorimétrie] admet le principe d'une échelle thermodynamique absolue ne comportant qu'un seul point fixe fondamental, constitué actuellement par le point triple de l'eau pure, dont la température absolue sera fixée ultérieurement. +
+       L'introduction de cette nouvelle échelle n'affecte en rien l'usage de l'Échelle internationale, qui reste l'échelle pratique recommandée.
+       L'unité de quantité de chaleur est le joule.
+
+      Note : Il est demandé que les résultats d'expériences calorimétriques soient autant que possible exprimés en joules. Si les expériences ont été faites par comparaison avec un échauffement d'eau (et que, pour une raison quelconque, on ne puisse éviter l'usage de la calorie), tous les renseignements nécessaires pour la conversion en joules doivent être fournis. Il est laissé aux soins du Comité international, après avis du Comité consultatif de thermométrie et calorimétrie, d'établir une table qui présentera les valeurs les plus précises que l'on peut tirer des expériences faites sur la chaleur spécifique de l'eau, en joules par degré.
+
+      Une table, établie conformément à cette demande, a été approuvée et publiée par le Comité international en 1950 (PV, *22*, 92).
+  actions: []
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: "(Concernant un accord avec l'Unesco)"
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 57
+  approvals:
+  - message: La Neuvième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant la Convention du Mètre qui assigne au Bureau international
+      des poids et mesures le rôle de coordonner et d'unifier les mesures, ce qui
+      a pour conséquence de faciliter les relations entre les pays dans les domaines
+      de la Science, de l'Industrie et du Commerce,
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant que, aux termes du préambule de sa Convention, l'Unesco a
+      été créée pour constituer l'Institution spécialisée des Nations unies dans le
+      domaine de l'Éducation, de la Science et de la Culture afin d'atteindre graduellement,
+      au moyen de la coopération dans ces trois domaines, le but de paix internationale
+      et de prospérité commune de l'humanité proclamé dans la Charte des Nations unies.
+  - type: considering
+    date_effective: '1948-10-21'
+    message: "*considérant d'autre part,* les avantages qui peuvent résulter d'une
+      collaboration, entre le Comité international des poids et mesures et l'Unesco,
+      pour la solution des questions que pose l'existence des Organisations internationales,"
+  actions:
+  - type: decides
+    date_effective: '1948-10-21'
+    message: "*décide :* « le Comité international des poids et mesures est autorisé,
+      dans le cadre de son statut, à conclure un accord avec l'Unesco qui, tout en
+      garantissant l'indépendance des parties contractantes, leur permette de suivre
+      leurs travaux réciproques et de collaborer à l'étude de questions relevant de
+      leurs activités communes »."
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Dotation du BIPM
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 59
+  approvals:
+  - message: La Neuvième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1948-10-21'
+    message: après examen de la Résolution adoptée par le Comité international des
+      poids et mesures dans sa séance du 26 octobre 1946, et du Rapport sur la dotation
+      annuelle du Bureau international des poids et mesures présenté par ce Comité
+      au mois de juin 1948,
+  - type: noting
+    date_effective: '1948-10-21'
+    message: constate que le chiffre de la dotation n'a pas été modifié depuis 20
+      ans,
+  - type: noting
+    date_effective: '1948-10-21'
+    message: constate que, dans cette même période, les attributions du Bureau ont
+      reçu une extension importante entraînant une augmentation corrélative des dépenses
+      d'entretien,
+  - type: noting
+    date_effective: '1948-10-21'
+    message: constate que, dans ces conditions, il paraît nécessaire de relever le
+      montant de la dotation,
+  actions:
+  - type: decides
+    date_effective: '1948-10-21'
+    message: décide le chiffre de la dotation annuelle est porté en principal de 150
+      000 francs-or à 175 000 francs-or,
+  - type: decides
+    date_effective: '1948-10-21'
+    message: décide l'application de cette disposition sera différée jusqu'à la date
+      où le Japon et l'Allemagne auront repris leurs paiements statutaires.
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Proposition d'établissement d'un système pratique d'unités de mesure
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 64
+  approvals:
+  - message: La Conférence générale,
+  considerations:
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant que le Comité international des poids et mesures a été saisi
+      d'une demande de l'Union internationale de physique le sollicitant d'adopter
+      pour les relations internationales un système pratique international d'unités,
+      recommandant le système MKS et une unité électrique du système pratique absolu,
+      tout en ne recommandant pas que le système CGS soit abandonné par les physiciens
+      ;
+  - type: considering
+    date_effective: '1948-10-21'
+    message: considérant qu'elle-même a reçu du Gouvernement français une demande
+      analogue, accompagnée d'un projet destiné à servir de base de discussion pour
+      l'établissement d'une réglementation complète des unités de mesure ;
+  actions:
+  - type: charges
+    date_effective: '1948-10-21'
+    message: |-
+      *charge* le Comité international :
+
+      * d'ouvrir à cet effet une enquête officielle sur l'opinion des milieux scientifiques, techniques et pédagogiques de tous les pays (en offrant effectivement comme base le document français) et de la pousser activement ;
+      * de centraliser les réponses ;
+      * et d'émettre des recommandations concernant l'établissement d'un même système pratique d'unités de mesure, susceptible d'être adopté dans tous les pays signataires de la Convention du Mètre.
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Ecriture des symboles d'unités et des nombres
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 70
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1948-10-21'
+    message: "*Principes*\n\nLes symboles des unités sont exprimés en caractères romains,
+      en général minuscules ; toutefois, si les symboles sont dérivés de noms propres,
+      les caractères romains majuscules sont utilisés. Ces symboles ne sont pas suivis
+      d'un point.\n\nDans les nombres, la virgule (usage français) ou le point (usage
+      britannique) sont utilisés seulement pour séparer la partie entière des nombres
+      de leur partie décimale. Pour faciliter la lecture, les nombres peuvent être
+      partagés en tranches de trois chiffres : ces tranches ne sont jamais séparées
+      par des points, ni par des virgules.\n\n[width=80%]\n|===\n.<| Unités .<| Symboles
+      .17+|   .<| Unités .<| Symboles\n\n2+|   2+| \n.<| ·mètre .<| stem:[\"m\"] .<|
+      ampère .<| stem:[\"A\"]\n.<| ·mètre carré .<| stem:[\"m\"^(2)] .<| volt .<|
+      stem:[\"V\"]\n.<| ·mètre cube .<| stem:[\"m\"^(3)] .<| watt .<| stem:[\"W\"]\n.<|
+      ·micron .<| stem:[\"µ\"] .<| ohm .<| Ω\n.<| ·litre .<| l .<| coulomb .<| stem:[\"C\"]\n.<|
+      ·gramme .<| stem:[\"g\"] .<| farad .<| stem:[\"F\"]\n.<| ·tonne .<| stem:[\"t\"]
+      .<| henry .<| stem:[\"H\"]\n.<| seconde .<| stem:[\"s\"] .<| hertz .<| stem:[\"Hz\"]\n.<|
+      erg .<| erg .<| poise .<| P\n.<| dyne .<| dyn .<| newton .<| stem:[\"N\"]\n.<|
+      degré Celsius .<| stem:[\"°C\"] .<| ·candela .<| \n.<|   .<|   .<| (bougie nouvelle)
+      .<| stem:[\"cd\"]\n.<| ·degré absolu .<| stem:[\"°K\"] .<| lux .<| stem:[\"lx\"]\n.<|
+      calorie .<| stem:[\"cal\"] .<| lumen .<| stem:[\"lm\"]\n.<| stem:[\"bar\"] .<|
+      stem:[\"bar\"] .<| stilb .<| stem:[\"sb\"]\n.<| heure .<| stem:[\"h\"] .<|   .<|
+      \n\n|==="
+  - type: remarks
+    date_effective: '1948-10-21'
+    message: Remarques Les symboles dont les unités sont précédées d'un point sont
+      ceux qui avaient déjà été antérieurement adoptés par une décision du Comité
+      international.
+  - type: remarks
+    date_effective: '1948-10-21'
+    message: Remarques L'unité de volume stère, employée dans le mesurage des bois,
+      aura pour symbole « st » et non plus « stem:["s"] », qui lui avait été précédemment
+      affecté par le Comité international.
+  - type: remarks
+    date_effective: '1948-10-21'
+    message: Remarques S'il s'agit, non d'une température, mais d'un intervalle ou
+      d'une différence de température, le mot « degré » doit être écrit en toutes
+      lettres ou par l'abréviation « deg ».
+  notes: La Conférence générale a abrogé un certain nombre de décisions concernant
+    les unités et la terminologie, en particulier celles relatives au micron, au degré
+    absolu et aux noms « degré » et « deg », 13^e^ CGPM, 1967/68 (Résolutions 7 et
+    3, respectively), ainsi qu'au litre, 16^e^ CGPM, 1979 (Résolution 6).
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Concernant la dotation du BIPM
+  identifier: 8
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 72
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1948-10-21'
+    message: Les Délégués des États adhérents à la Convention du Mètre et représentés
+      à la Conférence, s'engagent à entreprendre les démarches nécessaires auprès
+      de leurs Gouvernements, ainsi que des milieux intéressés, pour prêter au Bureau
+      international un appui matériel accru non moins que moral sous la forme d'un
+      don unique au Bureau, qui servira à son Directeur, sous le contrôle du Comité
+      international, de réserve matérielle pour maintenir à l'avenir le Bureau international
+      à la hauteur de sa tâche et lui permettre de rendre à toutes les nations les
+      mêmes grands services que par le passé.
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Concernant la question des retouches à apporter à la Convention du Mètre
+  identifier: 9
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 72
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '1948-10-21'
+    message: |-
+      Pendant la période écoulée après 1921, le caractère et l'étendue des fonctions du Comité international des poids et mesures et du Bureau international des poids et mesures ont subi des changements considérables, provoqués par l'accroissement des exigences des sciences et de la technique.
+
+      En conséquence, la Convention du Mètre exige quelques retouches pour être mise en harmonie avec les conceptions modernes de la métrologie.
+
+      La Neuvième Conférence générale des poids et mesures confie au Comité international des poids et mesures le soin d'adresser au nom de la Conférence générale, à tous les pays signataires de la Convention du Mètre, la demande de faire part au Comité de toutes les recommandations concernant les retouches que l'on estimerait nécessaire de faire à la Convention et au Règlement annexé à cette Convention.
+
+      Dans la suite, sur la base de ces recommandations, le Comité international des poids et mesures devra établir un projet, qui, étudié par lui-même, sera soumis à l'approbation de la Dixième Conférence générale des poids et mesures.
+- dates:
+  - '1948-10-21'
+  subject: CGPM
+  type: resolution
+  title: Concernant la poursuite des résolutions
+  identifier: 10
+  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
+  reference_name: Comptes rendus de la 9e CGPM (1948), 1949
+  reference_page: 73
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1948-10-21'
+    message: |-
+      . Les vœux ou propositions ainsi déposés seront transmis par le bureau du Comité à tous les États adhérents à la Convention, au moins quatre mois avant l'ouverture de la Conférence, afin que MM. les Délégués puissent recevoir les instructions et pouvoirs nécessaires.
+      . Tout autre vœu ou proposition ne sera présenté à la Conférence qu'à condition que le Comité ait eu le temps nécessaire de l'étudier et l'aura approuvé.

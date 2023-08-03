@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Units</title>
+</head>
+<body>
+    {% extends 'ParentLayout.html' %}
+    {% block main %}
+    <h1>SI Unit</h1>
+    <h2>{{title}}</h2>
+    {% for element in units %}
+    <div style="border-width:3px; border-style:solid; border-color:#da7af2; padding: 5px;">
+        <h3>{{element.prefix_symbol}}{{element.unit_symbol}}: {{element.prefix_name}}{{element.unit_name}}</h3>
+        {% if element.prefix_symbol %}
+            <p>where</p> 
+            <p>{{element.prefix_symbol}} stands for <a href={{element.prefix_url}}>{{element.prefix_name}}</a></p>
+        {% endif%}
+        <p>{{element.unit_symbol}} for <a href={{element.unit_url}}>{{element.unit_name}}</a> </p>
+        <p>{{element.relation}}</p>
+    </div>
+    <p> </p>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

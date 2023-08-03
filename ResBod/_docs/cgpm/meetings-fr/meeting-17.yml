@@ -1,0 +1,186 @@
+---
+metadata:
+  title: 17e réunion de la CGPM
+  identifier: 17
+  date: '1983-10-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/17-1983
+pdf: https://www.bipm.org/documents/20126/38091040/CGPM17.pdf/9970b20b-8330-8cd0-4ac0-6c53cc647c2d
+resolutions:
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/17-1983/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Comptes rendus de la 17e CGPM (1983), 1984
+  reference_page: 97
+  approvals:
+  - message: La Dix-septième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que la définition actuelle ne permet pas une réalisation
+      du mètre suffisamment précise pour tous les besoins,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que les progrès réalisés dans l'asservissement des lasers
+      permettent d'obtenir des radiations plus reproductibles et plus faciles à utiliser
+      que la radiation étalon émise par une lampe à krypton 86,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que les progrès réalisés dans la mesure des fréquences et
+      des longueurs d'onde de ces radiations ont abouti à des déterminations concordantes
+      de la vitesse de la lumière dont l'exactitude est limitée principalement par
+      la réalisation du mètre dans sa définition actuelle,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que les valeurs des longueurs d'onde déterminées à partir
+      de mesures de fréquence et d'une valeur donnée de la vitesse de la lumière ont
+      une précision supérieure à celle qui peut être obtenue par comparaison avec
+      la longueur d'onde de la radiation étalon du krypton 86,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant qu'il y a avantage, notamment pour l'astronomie et la géodésie,
+      à maintenir inchangée la valeur de la vitesse de la lumière recommandée en 1975
+      par la 15^e^ Conférence générale des poids et mesures, dans sa Résolution 2
+      (stem:[c = 299 792 458 "m"/"s"]),
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant qu'une nouvelle définition du mètre a été envisagée sous
+      diverses formes qui ont toutes pour effet de donner à la vitesse de la lumière
+      une valeur exacte, égale à la valeur recommandée, et que cela n'introduit aucune
+      discontinuité appréciable de l'unité de longueur, compte tenu de l'incertitude
+      relative de stem:[ +-  4 * 10^(-9)] des meilleures réalisations du mètre dans
+      sa définition actuelle,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que ces diverses formes, faisant appel soit au trajet parcouru
+      par la lumière dans un intervalle de temps spécifié, soit à la longueur d'onde
+      d'une radiation de fréquence mesurée ou de fréquence spécifiée, ont fait l'objet
+      de consultations et de discussions approfondies, qu'elles ont été reconnues
+      équivalentes et qu'un consensus s'est dégagé en faveur de la première forme,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant que le Comité consultatif pour la définition du mètre est
+      dès maintenant en mesure de donner des instructions pour la mise en pratique
+      d'une telle définition, instructions qui pourront inclure l'emploi de la radiation
+      orangée du krypton 86 utilisée jusqu'ici comme étalon et qui pourront être complétées
+      ou révisées par la suite,
+  actions:
+  - type: decides
+    date_effective: '1983-10-21'
+    message: décide Le mètre est la longueur du trajet parcouru dans le vide par la
+      lumière pendant une durée de 1/299 792 458 de seconde.
+  - type: decides
+    date_effective: '1983-10-21'
+    message: décide La définition du mètre en vigueur depuis 1960, fondée sur la transition
+      entre les niveaux 2p~10~ et 5d~5~ de l'atome de krypton 86, est abrogée.
+  notes: |-
+    La valeur de l'incertitude donnée ici correspond à trois fois l'écart-type de la valeur en question. +
+     +
+    Cette définition du mètre a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle définition entrant en vigueur en 2019.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur la mise en pratique de la définition du mètre
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/17-1983/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Comptes rendus de la 17e CGPM (1983), 1984
+  reference_page: 98
+  approvals:
+  - message: La Dix-septième Conférence générale des poids et mesures,
+  considerations: []
+  actions:
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à établir des instructions
+      pour la mise en pratique de la nouvelle définition du mètre,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à choisir des radiations
+      qui puissent être recommandées comme étalons de longueur d'onde pour la mesure
+      interférentielle des longueurs et à établir des instructions pour leur emploi,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à poursuivre les
+      études entreprises pour améliorer ces étalons.
+  notes: _Voir_ https://www.bipm.org/utils/fr/pdf/CI-2002-1-FR.pdf[Recommandation
+    1 (CI-2002)] du CIPM relative à la révision de la mise en pratique de la définition
+    du mètre.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Sur la masse volumique de l'air
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/17-1983/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Comptes rendus de la 17e CGPM (1983), 1984
+  reference_page: 99
+  approvals:
+  - message: La Dix-septième Conférence générale des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1983-10-21'
+    message: |-
+      *rappelant* la Résolution 1 de la Seizième Conférence générale des poids et mesures (1979) relative aux mesures de masse
+
+      et *considérant*
+
+      * que la correction due à la poussée de l'air fait appel à la masse volumique de l'air ambiant,
+      * que l'on peut améliorer l'uniformité et l'exactitude des mesures de masse en incitant les laboratoires, lorsqu'ils ont à calculer la masse volumique de l'air à partir des conditions ambiantes, à utiliser pour ce calcul une formule unique, connue de tous et reconnue comme suffisamment exacte,
+  actions:
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à établir et à recommander
+      une telle formule,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à poursuivre et coordonner
+      les études entreprises ou à entreprendre pour améliorer la détermination expérimentale
+      de la masse volumique de l'air et de la correction due à la poussée de l'air,
+  - type: invites / further invites
+    date_effective: '1983-10-21'
+    message: invite le Comité international des poids et mesures à mettre à jour la
+      formule recommandée lorsque de meilleures déterminations expérimentales le permettront.
+- dates:
+  - '1983-10-21'
+  subject: CGPM
+  type: resolution
+  title: Dotation du BIPM
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/17-1983/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
+  reference_name: Comptes rendus de la 17e CGPM (1983), 1984
+  reference_page: 99
+  approvals:
+  - message: La Dix-septième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant l'importance des travaux effectués par le Bureau international
+      des poids et mesures (BIPM) et des services qu'il rend à tous les pays,
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant la nécessité d'assurer au BIPM des ressources minimales qui
+      ne mettent pas en danger la poursuite de ces activités et
+  - type: considering
+    date_effective: '1983-10-21'
+    message: considérant la difficulté de prévoir, dans les circonstances économiques
+      actuelles, les moyens financiers minimaux nécessaires pour permettre au BIPM
+      de remplir sa mission de centre mondial de la métrologie scientifique,
+  actions:
+  - type: decides
+    date_effective: '1983-10-21'
+    message: "*décide*\n\n|===\n| pour 1985 : 13 144 000 francs-or\n\n| pour 1986
+      : 14 327 000 francs-or\n| pour 1987 : 15 616 000 francs-or\n| pour 1988 : 17
+      022 000 francs-or.\n\n|===\n\n\n\n* que la partie fixe de la dotation annuelle
+      du BIPM sera augmentée de telle façon que l'ensemble de la partie fixe et de
+      la partie complémentaire (définie à l'Article 6 (1921) du Règlement annexé à
+      la Convention du Mètre de 1875) soit, pour les États parties à la Convention
+      à l'époque de la 17^e^ Conférence générale des poids et mesures,\n\n "

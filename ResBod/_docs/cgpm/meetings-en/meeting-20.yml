@@ -1,0 +1,522 @@
+---
+metadata:
+  title: 20th meeting of the CGPM
+  identifier: 20
+  date: '1995-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995
+resolutions:
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: The need to use SI units in studies of Earth resources, the environment,
+    human well-being and related issues
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 219
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that the effects on the geosphere and biosphere of industrial
+      and commercial activities and of many other human pursuits, and the consequences
+      for human health and well-being, are the subject of major studies world-wide,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that governments are increasingly faced with decisions of
+      great economic and political significance concerning the regulation of these
+      activities,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that the policies of governments are influenced by studies
+      depending critically on accurate and mutually compatible measurements often
+      requiring very large economic investments,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that much of the important scientific evidence required for
+      decisions by governments comes from measurements of small changes in certain
+      key parameters, measurements sometimes extending over several decades,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that certain critical measurements have traditionally been
+      made in _ad hoc_ units based upon special instrumentation or procedures, and
+      not in the well-characterized and internationally agreed SI units,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that experience over many years has shown that measurements
+      not directly linked to the SI cannot be relied upon in the long term, cannot
+      be compared with similar measurements made elsewhere and do not adequately bring
+      out possible relationships with measurements made in other scientific disciplines,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommends* that those responsible for studies of Earth resources,
+      the environment, human well-being and related issues ensure that measurements
+      made within their programmes are in terms of well-characterized SI units so
+      that they are reliable in the long term, are comparable world-wide and are linked
+      to other areas of science and technology through the world’s measurement system
+      established and maintained under the Convention du Mètre."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: World-wide traceability of measurement standards
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 220
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the increasingly stringent requirements of science, technology
+      and international trade for traceability in measurement at many levels of accuracy,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the existence of groups of cooperating national metrology
+      laboratories in different regions of the world,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the need to demonstrate world-wide equivalence or traceability
+      of measurement standards among national laboratories and regional groups of
+      cooperating national laboratories,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the calibration services of the Bureau International des
+      Poids et Mesures (BIPM) for the national laboratories,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the role of the BIPM in carrying out and coordinating world-wide
+      comparisons of standards at the highest level among the national laboratories,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the necessary participation of national laboratories in international
+      comparisons,
+  - type: recognizing
+    date_effective: '1995-10-13'
+    message: "*recognizes* the global advantages of interconnections between the comparisons
+      carried out under the auspices of the BIPM and those of the regional groups
+      of metrology laboratories,"
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: "*welcomes* the trend towards regional grouping of national metrology
+      laboratories as an efficient way of promoting cooperation and regular comparisons
+      of national standards among laboratories, some of which do not participate in
+      comparisons carried out by the BIPM or the Comités Consultatifs,"
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommends that national metrology laboratories, in collaboration with
+      the BIPM, ensure that the necessary comparisons between national standards are
+      carried out in sufficient number to demonstrate international traceability of
+      measurement standards,
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommends that adequate interconnections are maintained between the
+      comparisons carried out under the auspices of the BIPM and those carried out
+      by the regional groups,
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommends and that the results of comparisons carried out by the regional
+      groups be communicated to the BIPM in appropriate form for them to be published
+      by the BIPM and thereby given wide international recognition.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: The need for long-term metrological research
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 221
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the continual increase in demand for accurate and efficient
+      measurement in science, technology and international trade,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that the development of improved measurement standards and
+      techniques needs to be carried out well in advance of their application in science
+      and industry,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that these developments can only take place on the basis
+      of a solid foundation of long-term metrological research closely linked to advances
+      in science,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommends that national laboratories continue to undertake long-term
+      metrological research as well as meeting the more immediate requirements of
+      measurement services and
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: recommends that national laboratories keep the Bureau International des
+      Poids et Mesures informed as to the results of the work related to fundamental
+      metrology.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Revision of the mise en pratique of the definition of the metre
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 221
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling that in 1983 the 17th Conférence Générale des Poids et Mesures
+      adopted a new definition of the metre,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling that in the same year the Conférence Générale invited the Comité
+      International des Poids et Mesures
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling to draw up instructions for the practical realization of the
+      metre,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling to choose radiations which can be recommended as standards
+      of wavelength for the interferometric measurement of length and draw up instructions
+      for their use,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling to pursue studies to improve these standards and, in due course,
+      to extend or revise these instructions,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: recalling that in response to this invitation the Comité International
+      made recommendations in 1983 concerning the practical realization of the metre
+      (the _mise en pratique_),
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that science and technology continue to demand improved accuracy
+      in the realization of the metre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that since 1983 work in national laboratories, the Bureau
+      International des Poids et Mesures and elsewhere has substantially improved
+      the reproducibility of radiations which are suitable for the practical realization
+      of the metre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that such work has also substantially reduced the uncertainty
+      in the determined values of the frequencies and wavelengths of some of these
+      radiations,
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: |-
+      *welcomes* the adoption by the Comité International of a revised _mise en pratique_ of the definition of the metre, taking account of the results of this new work,
+
+      and
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommends* that national laboratories pursue their research on optical
+      wavelength and frequency standards to improve yet further the experimental basis
+      of the Système International d'Unités."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Monitoring the stability of the international prototype of the kilogram
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 222
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the results of the third periodic verification of national
+      prototypes of the kilogram, which showed drifts, with respect to the international
+      prototype, of the national prototypes and of the working copies and official
+      copies held by the Bureau International des Poids et Mesures,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the fundamental impossibility of drawing definite conclusions
+      from these results about the long-term stability of the international prototype
+      and its copies,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the results of work in many national laboratories aimed at
+      understanding the processes that lead to the instability of mass standards,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the progress now being made in various laboratories towards
+      independent methods of monitoring the stability of mass standards,
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommends* that national laboratories pursue their work on these experiments,
+      and develop new ones, with a view to monitoring the stability of the international
+      prototype of the kilogram and in due course opening the way to a new definition
+      of the unit of mass based upon fundamental or atomic constants."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Clock comparison by satellite laser techniques
+  identifier: 6
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 222
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the need for long distance time transfer at the highest possible
+      level of accuracy,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that successful time transfer with a precision of 100 ps
+      has been achieved between Western Europe and North America using the LASSO (Laser
+      Synchronization from Satellite Orbit) experiment on a geostationary satellite,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that time transfer techniques, such as GPS (Global Positioning
+      System), GLONASS (Global Navigation Satellite System) and two-way satellite
+      time transfer, need an independent means of assessment of their accuracy,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that solutions have been proposed that may lead to clock
+      synchronization by laser techniques using non-geostationary satellites,
+  - type: recalling / further recalling
+    date_effective: '1995-10-13'
+    message: "*recalling* Resolution 4 of the 18th Conférence Générale in 1987, which
+      also concerns clock comparison by satellite techniques,"
+  actions:
+  - type: recommends
+    date_effective: '1995-10-13'
+    message: "*recommends* that the space agencies consider the installation on their
+      satellites of appropriate equipment for clock comparison by satellite laser
+      techniques."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Metrology in chemistry
+  identifier: 7
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 223
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that reliability in the results of quantitative chemical
+      analyses is important for international trade, for the protection of the environment,
+      and for human health and safety,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that reliability implies world-wide uniformity and long-term
+      stability and can only be achieved by firmly linking measurements to the Système
+      International d'Unités,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that formidable difficulties exist in establishing international
+      traceability for measurements in chemistry,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that national metrology laboratories are increasingly involved
+      in establishing such a system,
+  actions:
+  - type: welcomes
+    date_effective: '1995-10-13'
+    message: |-
+      *welcomes* the action of the Comité International in creating for this field a Comité Consultatif pour la Quantité de Matière
+
+      and
+  - type: invites / further invites
+    date_effective: '1995-10-13'
+    message: "*invites* national metrology laboratories, other expert national, regional
+      and international organizations bringing together specialists in measurement
+      in chemistry to collaborate with the Comité International and the new Comité
+      Consultatif in establishing world-wide traceability at the highest level for
+      measurements in chemistry."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Elimination of the class of supplementary units in the SI
+  identifier: 8
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 223
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: 'considering that the 11th Conférence Générale in 1960 in its Resolution
+      12, establishing the Système International d''Unités, SI, distinguished between
+      three classes of SI units : the base units, the derived units, and the supplementary
+      units, the last of these comprising the radian and the steradian,'
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that the status of the supplementary units in relation to
+      the base units and the derived units gave rise to debate,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that the Comité International des Poids et Mesures, in 1980,
+      having observed that the ambiguous status of the supplementary units compromises
+      the internal coherence of the SI, has in its Recommendation 1 (CI-1980) interpreted
+      the supplementary units, in the SI, as dimensionless derived units,
+  actions:
+  - type: approves
+    date_effective: '1995-10-13'
+    message: "*approving* the interpretation given by the Comité International in
+      1980,"
+  - type: decides
+    date_effective: '1995-10-13'
+    message: decides to interpret the supplementary units in the SI, namely the radian
+      and the steradian, as dimensionless derived units, the names and symbols of
+      which may, but need not, be used in expressions for other SI derived units,
+      as is convenient,
+  - type: decides
+    date_effective: '1995-10-13'
+    message: decides and, consequently, to eliminate the class of supplementary units
+      as a separate class in the SI.
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Dotation of the BIPM
+  identifier: 9
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 224
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the importance of the work carried out by the Bureau International
+      des Poids et Mesures (BIPM) and the services it renders to Member States of
+      the Convention du Mètre,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the considerable efforts made by the BIPM to enhance the
+      efficiency of its operation, and its commitment to continue these efforts,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the need to provide the resources necessary for the efficient
+      carrying out of the tasks given to it by the Conférence Générale,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the difficult economic situation now existing in many Member
+      States of the Convention du Mètre,
+  actions:
+  - type: decides
+    date_effective: '1995-10-13'
+    message: |-
+      *decides* that the fixed part of the annual dotation of the Bureau International des Poids et Mesures will be increased in a way such that the sum of the fixed part and the complementary part (defined by Article 6; (1921) of the Rules annexed to the Convention du Mètre 1875) shall, for those States members of the Convention du Mètre at the time of the 20th Conférence Générale des Poids et Mesures, be
+
+      |===
+      | 27 144 000 gold francs in 1997
+
+      | 28 365 000 gold francs in 1998
+      | 29 642 000 gold francs in 1999
+      | 30 976 000 gold francs in 2000.
+
+      |===
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: Future relations with the Organisation Internationale de Métrologie Légale
+  identifier: 10
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 224
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the proposal made by the French government for a rapprochement
+      between the organizations created by the Convention du Mètre and the Treaty
+      of the Organisation Internationale de Métrologie Légale (OIML) with a view to
+      a possible fusion of the two organizations,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the agreement among many Member States of the Convention
+      du Mètre that the joint discussions envisaged in the French proposal would be
+      desirable,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering that these discussions should take into particular account
+      the continuing need to optimize the effectiveness of intergovernmental organizations
+      in carrying out their tasks, now as well as in the long term,
+  actions:
+  - type: invites / further invites
+    date_effective: '1995-10-13'
+    message: |-
+      *invites* the President of the Comité International des Poids et Mesures, together with the President of the Comité International de Métrologie Légale, to appoint a joint working party to identify ways of achieving increased cooperation and effectiveness in the achievement of their objectives and the use of their resources, including, but not limited to, the possibility of merging the two organizations,
+
+      and
+  - type: requests
+    date_effective: '1995-10-13'
+    message: "*requests* that the Comité International des Poids et Mesures having
+      received the Report of its President, advise Member States of the Convention
+      du Mètre of the outcome of the discussions and of its opinion as to whether
+      further action should be taken."
+- dates:
+  - '1995-10-13'
+  subject: CGPM
+  type: resolution
+  title: 'Metrology: long-term needs'
+  identifier: 11
+  url: https://www.bipm.org/en/committees/cg/cgpm/20-1995/resolution-11
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
+  reference_name: Proceedings of the 20th CGPM (1995), 1996
+  reference_page: 225
+  approvals:
+  - message: The 20th Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: referring
+    date_effective: '1995-10-13'
+    message: "*referring* to Resolution 1: The need to use SI units in studies of
+      Earth resources, the environment, human well-being and related issues, Resolution
+      2: World-wide traceability of measurement standards, and Resolution 3: The need
+      for long-term metrological research,"
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the particular impact of metrology on the economic growth
+      and international trade of Member States,
+  - type: considering
+    date_effective: '1995-10-13'
+    message: considering the contribution to these of the Bureau International des
+      Poids et Mesures (BIPM) and the national metrological laboratories,
+  actions:
+  - type: requests
+    date_effective: '1995-10-13'
+    message: "*requests* the Comité International des Poids et Mesures to study and
+      report on the long-term national and international needs relating to metrology,
+      the appropriate international collaborations and the unique role of the BIPM
+      to meet these needs, and the financial and other commitments that will be required
+      from the Member States in the coming decades."

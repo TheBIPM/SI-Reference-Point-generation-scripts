@@ -1,0 +1,52 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix si: <http://si-digital-framework.org/SI#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+si:DefShape:
+    a sh:NodeShape ;
+    sh:targetClass si:Definition ;
+    sh:property [
+                    sh:path si:hasStartValidity ;
+                    sh:datatype xsd:date ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    .
+
+si:ValidityShape:
+    a sh:NodeShape ;
+    sh:targetClass si:Definition ;
+    sh:or (
+            [   sh:and (
+                           [ sh:not si:hasEndValidity ; ]
+                           [ sh:not si:hasNextDefinition ; ]
+                       )
+            ]
+            [
+                sh:and (
+                           [
+                            sh:path si:hasStartValidity ;
+                            sh:lessThan si:hasEndValidity ;
+                            sh:maxCount 1 ;
+                           ]
+                           [ sh:path si:hasNextDefinition ; ]
+                       )
+            ]
+          ) ;
+    .
+
+si:NextDefShape:
+a sh:NodeShape ;
+    sh:targetClass si:Definition ;
+    sh:property
+               [
+                   sh:path (si:hasPreviousDefinition si:hasEndValidity) ;
+                   sh:lessThan si:hasStartValidity ;
+               ] ;
+    .

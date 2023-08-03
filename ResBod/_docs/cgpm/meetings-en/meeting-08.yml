@@ -1,0 +1,487 @@
+---
+metadata:
+  title: 8th meeting of the CGPM
+  identifier: 8
+  date: '1933-10-10'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933
+pdf: https://www.bipm.org/documents/20126/38095582/CGPM8.pdf/e16fd1ee-6df5-8b8d-bb57-4c263d28966f
+resolutions:
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Dilatabilité des mètres prototypes provenant des alliages Johnson-Matthey
+    et de 1874
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 36
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant le sanctionnement des nouveaux prototypes métriques par la
+      Première Conférence générale des poids et mesures,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la décision prise par la Quatrième Conférence générale des
+      poids et mesures de faire procéder à la vérification périodique des mètres prototypes
+      nationaux,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant les nouvelles déterminations de la dilatabilité exécutées
+      à l'occasion de cette première vérification périodique, qui ont conduit à adopter
+      un coefficient identique pour toutes les règles des alliages Johnson-Matthey
+      d'une part, et de 1874 d'autre part,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant le Rapport du Directeur du Bureau international des poids
+      et mesures relatif à ladite vérification,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la déclaration du Président du Comité international des poids
+      et mesures approuvant ce Rapport,
+  actions:
+  - type: authorizes
+    date_effective: '1933-10-10'
+    message: "*autorise* le Comité international à faire, à tous les certificats des
+      mètres prototypes des coulées Johnson-Matthey et de 1874, une addition donnant
+      les nouvelles formules trouvées pour la dilatation de ces alliages, telles qu'elles
+      résultent des déterminations faites au Bureau international, et les nouvelles
+      valeurs des règles à 0° qui en sont la conséquence."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Équations des mètres prototypes nos 1, 8, 14, 15, 17, 18, 21, 22, 23 et 26
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 37
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant le sanctionnement des nouveaux prototypes métriques par la
+      Première Conférence générale des poids et mesures,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la décision prise par la Quatrième Conférence générale des
+      poids et mesures de faire procéder à la vérification périodique des mètres prototypes
+      nationaux,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant le Rapport du Directeur du Bureau international des poids
+      et mesures relatif à ladite vérification,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la déclaration du Président du Comité international des poids
+      et mesures approuvant, au nom du Comité, les termes de ce Rapport,
+  actions:
+  - type: declares
+    date_effective: '1933-10-10'
+    message: "*déclare* n'être plus parfaitement conformes à la réalité les équations
+      sanctionnées par la Première Conférence générale ; elle annule en conséquence
+      les certificats y relatifs en ce qui concerne les équations et en prolonge la
+      validité pour le reste,"
+  - type: authorizes
+    date_effective: '1933-10-10'
+    message: "*autorise* le Comité international à faire auxdits certificats une addition
+      portant la valeur de la longueur à 0° des Mètres n^os^ 1, 8, 14, 15, 17, 18,
+      21, 22, 23 et 26, ainsi que la nouvelle formule de dilatation, telles que l'une
+      et l'autre résultent des nouvelles déterminations faites au Bureau international."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: L'équation du Mètre prototype n° 7, alliage de 1874
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 37
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant que le Mètre n° 7 n'avait pas participé aux premières comparaisons,
+      faites en 1889, sur certains des autres prototypes de l'alliage de 1874,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant que ce Mètre, devenu seulement en 1929 la propriété du Gouvernement
+      Tchécoslovaque, n'a été vérifié au Bureau international qu'en 1929,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu le Rapport du Directeur du Bureau international des poids et
+      mesures relatif à ladite vérification,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu la déclaration du Président du Comité international des poids
+      et mesures approuvant ce Rapport, au nom du Comité,
+  actions:
+  - type: declares
+    date_effective: '1933-10-10'
+    message: "*déclare* homologuer le certificat délivré à la date du 30 octobre 1929
+      relatif au Mètre n° 7, alliage de 1874."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Équations des kilogrammes prototypes n° 14 et 15
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 38
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la sanction donnée à l'équation des nouveaux prototypes métriques
+      par la Première Conférence générale des poids et mesures,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la décision prise par la Deuxième Conférence générale des
+      poids et mesures, de faire procéder à la vérification périodique des kilogrammes
+      prototypes nationaux,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu le Rapport du Directeur du Bureau international des poids et
+      mesures relatif à ladite vérification,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu la déclaration du Président du Comité international des poids
+      et mesures approuvant, au nom du Comité, les termes de ce Rapport,
+  actions:
+  - type: declares
+    date_effective: '1933-10-10'
+    message: "*déclare* n'être plus parfaitement conformes à la réalité les équations
+      sanctionnées par la Première Conférence générale ; elle annule en conséquence
+      les certificats en ce qui concerne les équations et en prolonge la validité
+      pour le reste,"
+  - type: authorizes
+    date_effective: '1933-10-10'
+    message: "*autorise* le Comité international à faire auxdits certificats une addition
+      portant la valeur de la masse des kilogrammes n° 14 et 15, telle qu'elle résulte
+      des nouvelles déterminations faites au Bureau international."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Équation du kilogramme prototype n° 41
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 39
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant la construction récente de quatre kilogrammes en platine
+      iridié destinés - les kilogrammes de la première coulée ayant tous été distribués
+      - à permettre de répondre aux demandes d'acquéreurs nouveaux,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: considérant l'achat d'un de ces kilogrammes par le Gouvernement Tchécoslovaque,
+      et les déterminations au Bureau de sa densité et de sa masse,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu le Rapport du Directeur du Bureau international des poids et
+      mesures relatif auxdites déterminations,
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: entendu la déclaration du Président du Comité international des poids
+      et mesures approuvant ce rapport, au nom du Comité,
+  actions:
+  - type: declares
+    date_effective: '1933-10-10'
+    message: "*déclare* homologuer le certificat délivré à la date du 20 octobre 1929,
+      relatif aux comparaisons effectuées sur le kilogramme n° 41 et donnant son équation,
+      en même temps que son volume à 0°."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Proposition relative à la définition ultérieure du Mètre au moyen d'une longueur
+    d'onde lumineuse
+  identifier: 6
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-6
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 45
+  considerations: []
+  actions:
+  - type: confirms
+    date_effective: '1933-10-10'
+    message: |-
+      M. Volterra confirme que le Comité international se déclare disposé à étudier le principe de la définition ultérieure du Mètre au moyen d'une longueur d'onde lumineuse.
+
+      M. le Président propose à la Conférence de sanctionner cette déclaration. *Cette proposition est adoptée à l'unanimité (Résolution 6).*
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Échelle internationale de température. Convocation d'une Conférence internationale
+    de Thermométrie
+  identifier: 7
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-7
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 45
+  considerations: []
+  actions:
+  - type: instructs
+    date_effective: '1933-10-10'
+    message: M. le Président informe MM. les Délégués que la première question à l'ordre
+      du jour de la séance est celle de l'échelle absolue de température. Mais le
+      Mémoire de MM. Keesom et Tuyn est arrivé seulement depuis quelques jours et
+      le Bureau n'a pas eu le temps de l'étudier. Ce rapport devrait d'ailleurs servir
+      de base à la discussion de la question dans une Conférence internationale de
+      Thermométrie, qui serait convoquée sous les auspices de la présence Conférence
+      et qui aurait pour but de rendre définitive l'échelle provisoire adoptée en
+      1927.
+  - type: sanctions
+    date_effective: '1933-10-10'
+    message: "*Sur la proposition de M. le Président, la convocation de cette Conférence
+      de Thermométrie est sanctionnée à l'unanimité (Résolution 7).*"
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Échelle internationale de température. Modifications au texte de 1927
+  identifier: 8
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-8
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 45
+  considerations: []
+  actions:
+  - type: instructs
+    date_effective: '1933-10-10'
+    message: |-
+      M. le Président informe MM. les Délégués que la première question à l'ordre du jour de la séance est celle de l'échelle absolue de température. Mais le Mémoire de MM. Keesom et Tuyn est arrivé seulement depuis quelques jours et le Bureau n'a pas eu le temps de l'étudier. Ce rapport devrait d'ailleurs servir de base à la discussion de la question dans une Conférence internationale de Thermométrie, qui serait convoquée sous les auspices de la présence Conférence et qui aurait pour but de rendre définitive l'échelle provisoire adoptée en 1927.
+
+      Sur la proposition de M. le Président, la convocation de cette Conférence de Thermométrie est sanctionnée à l'unanimité (Résolution 7).
+
+      Néanmoins, comme il a été retrouvé dans les spécifications de 1927 un certain nombre de petites erreurs ou obscurités de rédaction, quelques délégués proposent un texte corrigé.
+
+      M. Sears est d'accord sur le texte corrigé, sauf sur un point qui lui paraît ambigu.
+
+      M. Pérard lit une modification de ce texte qui donne satisfaction à M. Sears.
+  - type: adopts
+    date_effective: '1933-10-10'
+    message: "*Le texte corrigé, finalement adopté (Résolution 8), est donné en annexe
+      ( https://www.bipm.org/documents/20126/61476290/CGPM8-Annexe+1.pdf/e1ad45c4-729c-ada6-50f7-a14c20fb8cc0[Annexe
+      I, p. 73)].*"
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Institution d'un Comité consultatif de photométrie
+  identifier: 9
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-9
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 52
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: "*considérant* le vœu exprimé dans la première séance plénière du Comité
+      consultatif en 1933, transmis par le Comité international des poids et mesures,
+      tendant à la formation d'un Comité consultatif de photométrie distinct du Comité
+      consultatif d'électricité,"
+  actions:
+  - type: approves
+    date_effective: '1933-10-10'
+    message: |-
+      *approuve* l'organisation d'un Comité consultatif de photométrie, distinct du Comité consultatif d'électricité, et ayant pour objet de conseiller le Comité international des poids et mesures sur les questions relatives aux systèmes de mesure et aux étalons photométriques.
+
+      Ce Comité consultatif sera limité à dix membres et composé :
+
+      . d'un représentant de chacun des laboratoires nationaux désignés par le Comité international ;
+      . des spécialistes nominativement désignés par le Comité international.
+
+      Le Président du Comité consultatif de photométrie sera pris parmi les membres du Comité international et désigné par celui-ci.
+
+      Dans le but de s'assurer la collaboration des éminentes personnalités de la Commission internationale de l'éclairage, les spécialistes à désigner nominativement pour faire partie de ce nouveau Comité consultatif seront choisis en tenant compte de la composition du Comité spécial (Select Committee) de ladite Commission.
+
+      Les réunions de ce Comité auront lieu autant que possible à la même époque que celles du Comité consultatif d'électricité.
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Substitution des unités électriques absolues aux unités dites « internationales
+    »
+  identifier: 10
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-10
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 53
+  approvals:
+  - message: |-
+      La Huitième Conférence générale des poids et mesures,
+
+      conformément au premier vœu se rapportant aux unités électriques, émis par le Comité consultatif et approuvé par le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: "*considérant* d'autre part qu'un certain nombre de laboratoires nationaux
+      n'ont pas encore terminé les mesures nécessaires pour relier les unités internationales
+      aux unités absolues,"
+  actions:
+  - type: sanctions
+    date_effective: '1933-10-10'
+    message: "*sanctionne* le principe de la substitution du Système absolu des unités
+      électriques au Système international ;"
+  - type: decides
+    date_effective: '1933-10-10'
+    message: "*décide* de reculer jusqu'à l'année 1935 la fixation provisoire du rapport
+      entre chaque unité internationale et l'unité absolue correspondante,"
+  - type: appoints
+    date_effective: '1933-10-10'
+    message: "*donne*, dans ce but, au Comité international les pouvoirs nécessaires
+      pour fixer, alors et sans attendre une autre Conférence, ces rapports, ainsi
+      que la date d'adoption des nouvelles unités."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Pouvoirs au Comité en vue de l'établissement d'un étalon de lumière
+  identifier: 11
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-11
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 55
+  approvals:
+  - message: |-
+      La Huitième Conférence générale des poids et mesures,
+
+      conformément au premier vœu se rapportant à la photométrie, émis par le Comité consultatif et approuvé par le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1933-10-10'
+    message: "*estime*, tout en maintenant l'opinion émise en 1930 que l'unité primaire
+      d'intensité lumineuse doit être basée sur le rayonnement du corps noir, qu'il
+      serait prématuré de donner à l'heure actuelle des spécifications pour cet étalon,"
+  actions:
+  - type: appoints
+    date_effective: '1933-10-10'
+    message: "*donne* dans ce but au Comité international les pouvoirs pour, au moment
+      convenable et après avis du Comité consultatif, fixer les spécifications ayant
+      trait à l'étalon de lumière et prendre les mesures d'exécution nécessaires."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Confirmation des pouvoirs nécessaires pour modifier les instructions de la
+    Conférence de Londres
+  identifier: 12
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-12
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 56
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1933-10-10'
+    message: "*ayant entendu* l'avis de M. le Président du Comité international des
+      poids et mesures,"
+  actions:
+  - type: declares
+    date_effective: '1933-10-10'
+    message: "*déclare* qu'elle se considère comme faisant suite à la Conférence de
+      Londres de 1908, et qu'en conséquence, elle délègue au Comité international
+      tous pouvoirs pour modifier éventuellement les instructions de la susdite Conférence."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Mesures à prendre pour favoriser l'extension du Système métrique
+  identifier: 13
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-13
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 60
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: acknowledging
+    date_effective: '1933-10-10'
+    message: après avoir entendu l'exposé des progrès réalisés par le Système métrique,
+  - type: considering
+    date_effective: '1933-10-10'
+    message: "*estime* qu'il serait désirable que les questions concernant les modalités
+      d'introduction du Système métrique et les facteurs qui entravent son extension
+      soient soumises à une large discussion et à l'étude tant des métrologistes que
+      des économistes et des producteurs,"
+  actions:
+  - type: encourages
+    date_effective: '1933-10-10'
+    message: "*espère* que la Neuvième Conférence générale des poids et mesures, ou
+      la Première Conférence de métrologie appliquée si celle-ci a lieu auparavant,
+      indiquera les conditions nécessaires à la propagation ultérieure du Système
+      métrique."
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Réponse aux propositions présentées par la Délégation de l'U.R.S.S.
+  identifier: 14
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-14
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 64
+  considerations:
+  - type: having / having regard
+    date_effective: '1933-10-10'
+    message: |-
+      En ce qui concerne le paragraphe I_a_ demandant la comparaison d'étalons à bouts, le Comité constate qu'une proposition de MM. Kösters et Sears adoptée par le Comité international répond précisément à l'échange international qui est demandé.
+
+      Conformément à la demande I_b_, des thermomètres à résistance de platine sont déjà échangés entre les Instituts, et le Comité est en effet d'avis qu'il faut encourager et multiplier ces échanges.
+
+      L'échange des thermocouples platine-platine rhodié (I_c_) dépasse la compétence du Comité, et la proposition en question devrait être transmise aux spécialistes qui ont rédigé les spécifications de l'échelle internationale. L'échange de lampes électriques de température demandé en I_d_ a précisément été voté à la dernière session du Comité international.
+
+      Quant aux étalons de fréquence (I_e_), ils ne sont pas actuellement de la compétence du Comité.
+
+      L'adoption de la température normale de 20° au lieu de 15° pour la mesure des longueurs d'onde lumineuses, serait extrêmement intéressante, et l'on peut remarquer que déjà la Reichsanstalt l'a adoptée pour la pratique courante de ses vérifications ; mais, avant d'édicter une prescription tendant à la substitution officielle de la première à la deuxième, il convient d'en peser longuement la répercussion sur la multitude des valeurs de longueurs d'onde exprimées en ångströms, c'est-à-dire dans les anciennes conditions normales ; et le Comité ne disposait pas du temps nécessaire, avant la présente Conférence, pour la véritable enquête à laquelle il faudrait se livrer.
+
+      La même réponse s'adresserait également aux paragraphes III_a_ et III_b_ (densité exprimée en grammes par centimètre cube), et III_c_ (exclusion des échelles de densité arbitraires) auxquels le Comité serait en principe favorable.
+
+      Quant aux paragraphes III_d_, unification des mesures de l'alcool ; III_e_, tables de densité des solutions aqueuses ; III_f_, calorie rapportée à la température de 20°, ils dépassent la compétence de la Conférence et du Comité international, et seraient du ressort de la Conférence de métrologie pratique, dont l'organisation a été prévue lors de la dernière Conférence internationale.
+
+      Au sujet des diverses propositions présentées par la Délégation de l'U.R.S.S., le Comité international prend la liberté de rappeler que, conformément aux vues exprimées à la Septième Conférence générale (p.44), il serait désirable que le dépôt des propositions à discuter fût effectué au moins six mois à l'avance.
+  actions: []
+- dates:
+  - '1933-10-10'
+  subject: CGPM
+  type: resolution
+  title: Étude de la création d'un Comité consultatif de métrologie pratique
+  identifier: 15
+  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-15
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
+  reference_name: Proceedings of the 8th CGPM (1933), 1934
+  reference_page: 65
+  approvals:
+  - message: La Huitième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1933-10-10'
+    message: "*ayant été saisie* d'une proposition des Délégués de l'U.R.S.S., tendant
+      à constituer un Comité consultatif de métrologie appliquée auprès du Comité
+      international des poids et mesures,"
+  actions:
+  - type: charges
+    date_effective: '1933-10-10'
+    message: "*charge* le Comité international de l'étude de cette question."

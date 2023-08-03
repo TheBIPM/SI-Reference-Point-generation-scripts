@@ -1,0 +1,221 @@
+---
+metadata:
+  title: 14e réunion de la CGPM
+  identifier: 14
+  date: '1971-10-07'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971
+pdf: https://www.bipm.org/documents/20126/38095519/CGPM14.pdf/441ce302-2215-005e-73c4-d32e5dc85328
+resolutions:
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: resolution
+  title: Temps atomique international ; rôle du CIPM
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-1
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 77
+  approvals:
+  - message: La Quatorzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1971-10-07'
+    message: "*considérant*"
+  actions:
+  - type: requests
+    date_effective: '1971-10-07'
+    message: |-
+      *demande* au Comité international des poids et mesures
+
+      * que la seconde, unité de temps du Système international d'unités, est définie depuis 1967 d'après une fréquence atomique naturelle, et non plus d'après des échelles de temps fournies par des mouvements astronomiques,
+      * que le besoin d'une échelle de Temps atomique international (TAI) est une conséquence de la définition atomique de la seconde,
+      * que plusieurs organisations internationales ont assuré et assurent encore avec succès l'établissement des échelles de temps fondées sur des mouvements astronomiques, particulièrement grâce aux services permanents du Bureau international de l'heure (BIH),
+      * que le Bureau international de l'heure a commencé à établir une échelle de temps atomique dont les qualités sont reconnues et qui a prouvé son utilité,
+      * que les étalons atomiques de fréquence servant à la réalisation de la seconde ont été considérés et doivent continuer de l'être par le Comité international des poids et mesures assisté d'un comité consultatif, et que l'intervalle unitaire de l'échelle de Temps atomique international doit être la seconde réalisée conformément à sa définition atomique,
+      * que toutes les organisations scientifiques internationales compétentes et les laboratoires nationaux actifs dans ce domaine ont exprimé le désir que le Comité international et la Conférence générale des poids et mesures donnent une définition du Temps atomique international, et contribuent à l'établissement de l'échelle de Temps atomique international,
+      * que l'utilité du Temps atomique international nécessite une coordination étroite avec les échelles de temps fondées sur des mouvements astronomiques,
+      .. de donner une définition du Temps atomique international ;
+      .. de prendre les mesures nécessaires, en accord avec les organisations internationales intéressées, pour que les compétences scientifiques et les moyens d'action existants soient utilisés au mieux pour la réalisation de l'échelle de Temps atomique international, et pour que soient satisfaits les besoins des utilisateurs du Temps atomique international.
+  notes: La définition du TAI a été donnée par le CCDS en 1970 (maintenant renommé
+    CCTF).
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: resolution
+  title: Temps atomique international ; arrangements avec le Bureau international
+    de l'heure
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-2
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 78
+  approvals:
+  - message: La 14^e^ Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1971-10-07'
+    message: considérant qu'une échelle de Temps atomique international doit être
+      mise à la disposition des utilisateurs,
+  - type: considering
+    date_effective: '1971-10-07'
+    message: considérant que le Bureau international de l'heure a prouvé qu'il est
+      capable d'assurer ce service ;
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '1971-10-07'
+    message: "*rend hommage* au Bureau international de l'heure pour l'œuvre qu'il
+      a déjà accomplie ;"
+  - type: requests
+    date_effective: '1971-10-07'
+    message: "*demande* aux institutions nationales et internationales de bien vouloir
+      continuer, et si possible augmenter, l'aide qu'elles donnent au Bureau international
+      de l'heure, pour le bien de la communauté scientifique et technique internationale
+      ;"
+  - type: authorizes
+    date_effective: '1971-10-07'
+    message: "*autorise* le Comité international des poids et mesures à conclure avec
+      le Bureau international de l'heure les arrangements nécessaires pour la réalisation
+      de l'échelle de Temps atomique international à définir par le Comité international."
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: resolution
+  title: Unité SI de quantité de matière (mole)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-3
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 78
+  approvals:
+  - message: La Quatorzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1971-10-07'
+    message: "*considérant* les avis de l'Union internationale de physique pure et
+      appliquée, de l'Union internationale de chimie pure et appliquée et de l'Organisation
+      internationale de normalisation concernant le besoin de définir une unité de
+      quantité de matière,"
+  actions:
+  - type: decides
+    date_effective: '1971-10-07'
+    message: décide La mole est la quantité de matière d'un système contenant autant
+      d'entités élémentaires qu'il y a d'atomes dans 0,012 kilogramme de carbone 12
+      ; son symbole est « stem:["mol"] ».
+  - type: decides
+    date_effective: '1971-10-07'
+    message: décide Lorsqu'on emploie la mole, les entités élémentaires doivent être
+      spécifiées et peuvent être des atomes, des molécules, des ions, des électrons,
+      d'autres particules ou des groupements spécifiés de telles particules.
+  - type: decides
+    date_effective: '1971-10-07'
+    message: décide La mole est une unité de base du Système international d'unités.
+  notes: |-
+    À sa session de 1980, le CIPM a approuvé le rapport de la 7^e^ session du CCU (1980) précisant que, dans cette définition, il est entendu que l'on se réfère à des atomes de carbone 12 non liés, au repos et dans leur état fondamental. +
+     +
+     Cette définition de la mole a été abrogée en 2018 par la 26^e^ CGPM (Résolution 1), la nouvelle définition entrant en vigueur en 2019.
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: resolution
+  title: Approbation du programme de travail du Bureau international des poids et
+    mesures pour 1973-1976
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-4
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 79
+  approvals:
+  - message: La Quatorzième Conférence générale des poids et mesures,
+  considerations:
+  - type: having / having regard
+    date_effective: '1971-10-07'
+    message: "*ayant considéré* le programme d'activité du Bureau international des
+      poids et mesures étudié et proposé par le Comité international des poids et
+      mesures pour les quatre années 1973-1976,"
+  - type: having / having regard
+    date_effective: '1971-10-07'
+    message: |-
+      *ayant constaté* que ce programme est conçu de façon que le Bureau international des poids et mesures accomplisse ses missions en liaison avec les Comités consultatifs et sous l'autorité du Comité international des poids et mesures, missions dont les plus importantes sont :
+
+      * la coordination des programmes de recherche métrologique ayant un intérêt international ;
+      * la certification d'étalons servant de points de départ aux laboratoires qui le demandent ;
+      * l'organisation de mesures comparatives en vue de l'uniformité mondiale des résultats de mesure et en vue de la détection des erreurs ;
+      * l'élévation du niveau scientifique du personnel à un degré suffisant pour que le Bureau international des poids et mesures participe aux recherches métrologiques, assimile et mette en œuvre les nouvelles techniques, et fournisse une aide compétente aux pays de plus en plus nombreux qui s'efforcent de développer leur industrie et leur métrologie ;
+  actions:
+  - type: appoints
+    date_effective: '1971-10-07'
+    message: "*donne son approbation* au programme d'activité du Bureau international
+      des poids et mesures proposé par le Comité international des poids et mesures
+      pour les quatre années 1973-1976."
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: resolution
+  title: Dotation du Bureau international pour la période 1973-1976
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-5
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 79
+  approvals:
+  - message: La Quatorzième Conférence générale des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1971-10-07'
+    message: considérant que le programme d'activité du Bureau international des poids
+      et mesures proposé par le Comité international des poids et mesures a été approuvé,
+  - type: considering
+    date_effective: '1971-10-07'
+    message: considérant que ce programme comporte la mise au point et la mise en
+      œuvre permanente de techniques métrologiques nouvelles, particulièrement pour
+      les mesures de longueur et les mesures électriques, nécessitant des investissements
+      en matériel et en personnel compétent,
+  - type: considering
+    date_effective: '1971-10-07'
+    message: considérant qu'un accroissement annuel de 9 pour cent de la dotation
+      du Bureau international est déjà devenu insuffisant pour le maintien des activités
+      à leur niveau actuel, compte tenu de l'évolution des prix et des salaires et
+      du niveau scientifique croissant exigé du personnel,
+  actions:
+  - type: decides
+    date_effective: '1971-10-07'
+    message: "*décide* que la partie fixe de la dotation annuelle sera augmentée de
+      façon que l'ensemble de la partie fixe et de la partie complémentaire [définies
+      à l'Art. 6 (1921) du Règlement annexé à la Convention du Mètre] soit, pour les
+      États parties à la Convention à l'époque de la Treizième Conférence générale
+      :\n\n\n\n|===\n| 3 340 000 francs-or en 1973\n\n| 3 740 000 francs-or en 1974\n|
+      4 180 000 francs-or en 1975\n| 4 670 000 francs-or en 1976\n\n|===\n\n "
+  - type: authorizes
+    date_effective: '1971-10-07'
+    message: "*autorise* que, sous réserve de la condition ci-après, un pourcentage
+      de 22 pour cent des contributions annuelles puisse être payé en monnaie nationale,
+      la condition obligatoire étant que le Comité international soit averti au moins
+      un an avant le début de l'année en cause, afin que le budget annuel puisse être
+      préparé, puis décidé par le Comité international, en tenant compte de la nature
+      des devises qui seront disponibles ;"
+  - type: invites / further invites
+    date_effective: '1971-10-07'
+    message: "*invite* les États qui choisiraient d'effectuer ces paiements en monnaie
+      nationale à se mettre d'accord avec le Comité international des poids et mesures
+      pour qu'ils soient employés à la satisfaction des besoins du Bureau international
+      des poids et mesures en tenant compte des lois du pays."
+- dates:
+  - '1971-10-07'
+  subject: CGPM
+  type: declaration
+  title: Pascal ; siemens
+  identifier: 0
+  url: https://www.bipm.org/fr/committees/cg/cgpm/14-1971/resolution-
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
+  reference_name: Comptes rendus de la 14e CGPM (1971), 1972
+  reference_page: 78
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '1971-10-07'
+    message: La 14^e^ Conférence Générale des Poids et Mesures a adopté les noms spéciaux
+      « pascal » (symbole Pa) pour l'unité SI de pression (newton par mètre carré)
+      et « siemens » (symbole S) pour l'unité SI de conductance électrique (ohm à
+      la puissance moins un).
