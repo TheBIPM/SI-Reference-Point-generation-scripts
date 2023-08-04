@@ -1,12 +1,9 @@
-from rdflib import Graph,URIRef
-
-
+from rdflib import Graph
 from settings import *
 
 BASE_PATH = PROJECTBASE + "Testing/Vocabulary/"
 
 # ----------------------------------------------------------------------------------------
-#
 # load ttl files into knowledge graph
 g = Graph()
 g.parse(APIPATH + '/units.ttl')
@@ -16,18 +13,16 @@ g.parse(APIPATH + '/constants.ttl')
 g.parse(APIPATH + '/cgpm.ttl')
 
 
-
 # ----------------------------------------------------------------------------------------
-#
-# get classses
+# get classes
 
-class_query="""
+class_query = """
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
         SELECT DISTINCT ?Class ?Label
         WHERE
         {
-    		{?Class a skos:Concept }
+            {?Class a skos:Concept }
             UNION
             {?Class rdfs:subClassOf ?empty}
             ?Class rdfs:label ?Label
@@ -49,14 +44,10 @@ for element in c_res:
     
 
 with open(BASE_PATH + 'Vocabulary.txt', 'w') as output_file:
-    
-
     for subject in class_list:
         topic = subject['class'].n3(g.namespace_manager)
-
-        print(topic+": ",end="")
-
-        predicate_query="""
+        print(topic+": ", end="")
+        predicate_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX owl: <http://www.w3.org/2002/07/owl#>
             PREFIX rb: <http://si-digital-framework.org/ResBod#>
@@ -64,16 +55,14 @@ with open(BASE_PATH + 'Vocabulary.txt', 'w') as output_file:
             SELECT DISTINCT ?Predicate ?Domain ?Range ?Comment ?Comment_wo
             WHERE
             {
-            BIND ("""+ topic+ """ AS ?SearchClass)
+                BIND (""" + topic + """ AS ?SearchClass)
 
-            
-            ?class a ?SearchClass .
-            ?class ?Predicate ?o .
-            OPTIONAL {?Predicate rdfs:domain ?Domain}
-            OPTIONAL {?Predicate rdfs:range ?Range}
-            OPTIONAL {?Predicate rdfs:comment ?Comment
+                ?class a ?SearchClass .
+                ?class ?Predicate ?o .
+                OPTIONAL {?Predicate rdfs:domain ?Domain}
+                OPTIONAL {?Predicate rdfs:range ?Range}
+                OPTIONAL {?Predicate rdfs:comment ?Comment
                       FILTER (langmatches(lang(?Comment),'en')) } 
-
             }
             ORDER BY ?Predicate
             """
@@ -83,20 +72,15 @@ with open(BASE_PATH + 'Vocabulary.txt', 'w') as output_file:
         output_file.write(subject['class'].n3(g.namespace_manager)+"\n")
         for verb in p_res:
             output_file.write("\t"+verb['Predicate'].n3(g.namespace_manager)+"\t")
-            if verb['Domain'] != None:
+            if verb['Domain'] is not None:
                 output_file.write(verb['Domain'].n3(g.namespace_manager)+"\t")
             else:
                 output_file.write("\t")
-            if verb['Range'] != None:
+            if verb['Range'] is not None:
                 output_file.write(verb['Range'].n3(g.namespace_manager)+"\t")
-            if verb['Comment'] != None:
+            if verb['Comment'] is not None:
                 output_file.write(verb['Comment']+"\t")
-            if verb['Comment_wo'] != None:
+            if verb['Comment_wo'] is not None:
                 output_file.write(verb['Comment_wo']+"\t\n")
             else:
                 output_file.write("\n")
-
-    
-
-
-  
