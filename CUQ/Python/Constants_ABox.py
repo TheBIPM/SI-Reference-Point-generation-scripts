@@ -141,7 +141,7 @@ for row in range(2, sheet.max_row+1):
         symbol = formattxt(symbol, 'latex')
 
     PDF.g.add((element, RDF.type, PDF.Constant))
-    PDF.g.add((element, PDF.hasValue, Literal(value, datatype=XSD.double)))
+    PDF.g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
     PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
     PDF.g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
     PDF.g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
