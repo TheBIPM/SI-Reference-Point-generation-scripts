@@ -1,3 +1,4 @@
+
 #
 # Constants ABox
 #
@@ -16,8 +17,11 @@ from settings import *
 import owlrl
 import openpyxl
 import re
+from rdflib.container import Seq
 
+g = Graph()
 PDF = SiElements()
+g.bind("si",PDF.namespace)
 BASESTR = str(PDF.BASE_PATH)
 
 # Annotations to the ontology (name, creation date, comment)
@@ -27,7 +31,6 @@ PDF.g.add((URIRef(SIURL + "constants"), RDFS.comment,
            Literal("Ontology, part of the SI reference point, covering the seven underpinning constants of the SI",
                    datatype=XSD.string)))
 PDF.g.add((URIRef(SIURL + "constants"), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
-
 
 # worksheet containing the basic information
 cst_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'SI_constants.xlsx')
@@ -140,13 +143,14 @@ for row in range(2, sheet.max_row+1):
     if "@" in symbol:
         symbol = formattxt(symbol, 'latex')
 
-    PDF.g.add((element, RDF.type, PDF.Constant))
-    PDF.g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
-    PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-    PDF.g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
-    PDF.g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
-    PDF.g.add((element, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
+    g.add((element, RDF.type, PDF.Constant))
+    g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
+    g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+    g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
+    g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
+    g.add((element, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
     
+    piece_list = []
     pieces = unit.split(".")
     for piece in pieces:
         pwr = get_pwr(piece)
@@ -154,8 +158,11 @@ for row in range(2, sheet.max_row+1):
             piece = piece[:-2]
         blankNodeID = BNode()
         URI_unit = get_uri_for_symbol(piece)
-        PDF.g.add((element, PDF.hasUnitElement, blankNodeID))
-        PDF.g.add((blankNodeID, PDF.hasUnit, URI_unit))
-        PDF.g.add((blankNodeID, PDF.hasUnitPwr, Literal(pwr)))
-
-PDF.g.serialize(format='turtle', destination=APIPATH + 'constants.ttl')
+        g.add((blankNodeID, PDF.hasUnit, URI_unit))
+        g.add((blankNodeID, PDF.hasUnitPwr, Literal(pwr)))
+        piece_list.append(blankNodeID)
+    
+    seq_uri = Seq(g, BNode(), piece_list).uri    
+    g.add ((element, PDF.hasUnitElement, seq_uri) )
+    
+g.serialize(format='turtle', destination=APIPATH + 'constants.ttl')
