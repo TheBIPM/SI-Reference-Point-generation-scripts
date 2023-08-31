@@ -4,7 +4,7 @@ metadata:
   identifier: 26
   date: '2018-11-16'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018
+  url: https://doi.org/10.59161/cgpm2018
 pdf:
 - https://www.bipm.org/documents/20126/35655029/CGPM26.pdf/f1d8d7e6-2570-9479-9ee9-bb8d86138fe9
 - https://www.bipm.org/documents/20126/60327947/Convocation-2018.pdf/7ff2076c-1868-9764-1a62-ce22b2cad3c4
@@ -44,7 +44,7 @@ resolutions:
   type: resolution
   title: On the revision of the International System of Units (SI)
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1
+  url: https://doi.org/10.59161/cgpm2018res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Proceedings of the 26th CGPM (2018), 2019
   reference_page: 472
@@ -146,7 +146,7 @@ resolutions:
   type: resolution
   title: On the definition of time scales
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-2
+  url: https://doi.org/10.59161/cgpm2018res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Proceedings of the 26th CGPM (2018), 2019
   reference_page: 475
@@ -279,7 +279,7 @@ resolutions:
   type: resolution
   title: On the objectives of the BIPM
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-3
+  url: https://doi.org/10.59161/cgpm2018res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Proceedings of the 26th CGPM (2018), 2019
   reference_page: 477
@@ -366,7 +366,7 @@ resolutions:
   type: resolution
   title: On the dotation of the BIPM for the years 2020 to 2023
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-4
+  url: https://doi.org/10.59161/cgpm2018res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Proceedings of the 26th CGPM (2018), 2019
   reference_page: 479
@@ -432,7 +432,7 @@ resolutions:
   type: resolution
   title: On the financial arrears of Member States and the process of exclusion
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-5
+  url: https://doi.org/10.59161/cgpm2018res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Proceedings of the 26th CGPM (2018), 2019
   reference_page: 480

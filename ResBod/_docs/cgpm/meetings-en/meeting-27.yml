@@ -4,7 +4,7 @@ metadata:
   identifier: 27
   date: '2022-11-18'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/cgpm-2022
+  url: https://doi.org/10.59161/cgpm2022
 resolutions:
 - dates:
   - '2022-11-18'
@@ -13,7 +13,7 @@ resolutions:
   title: On the report prepared by the International Committee for Weights and Measures
     on the “Evolving Needs in Metrology”
   identifier: 1
-  url: https://www.bipm.org/en/cgpm-2022/resolution-1
+  url: https://doi.org/10.59161/cgpm2022res1e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -90,7 +90,7 @@ resolutions:
   type: resolution
   title: On the global digital transformation and the International System of Units
   identifier: 2
-  url: https://www.bipm.org/en/cgpm-2022/resolution-2
+  url: https://doi.org/10.59161/cgpm2022res2e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -153,7 +153,7 @@ resolutions:
   type: resolution
   title: On the extension of the range of SI prefixes
   identifier: 3
-  url: https://www.bipm.org/en/cgpm-2022/resolution-3
+  url: https://doi.org/10.59161/cgpm2022res3e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -211,7 +211,7 @@ resolutions:
   type: resolution
   title: On the use and future development of UTC
   identifier: 4
-  url: https://www.bipm.org/en/cgpm-2022/resolution-4
+  url: https://doi.org/10.59161/cgpm2022res4e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -311,7 +311,7 @@ resolutions:
   type: resolution
   title: On the future redefinition of the second
   identifier: 5
-  url: https://www.bipm.org/en/cgpm-2022/resolution-5
+  url: https://doi.org/10.59161/cgpm2022res5e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -374,7 +374,7 @@ resolutions:
   type: resolution
   title: On universal adherence to the Metre Convention
   identifier: 6
-  url: https://www.bipm.org/en/cgpm-2022/resolution-6
+  url: https://doi.org/10.59161/cgpm2022res6e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:
@@ -467,7 +467,7 @@ resolutions:
   title: On the dotation of the International Bureau of Weights and Measures for the
     years 2024 to 2027
   identifier: 7
-  url: https://www.bipm.org/en/cgpm-2022/resolution-7
+  url: https://doi.org/10.59161/cgpm2022res7e
   approvals:
   - message: The General Conference on Weights and Measures (CGPM), at its 27th meeting,
   considerations:

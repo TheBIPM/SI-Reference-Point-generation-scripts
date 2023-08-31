@@ -4,7 +4,7 @@ metadata:
   identifier: 9
   date: '1948-10-21'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948
+  url: https://doi.org/10.59161/cgpm1948
 pdf: https://www.bipm.org/documents/20126/38095573/CGPM9.pdf/10f7e9dc-a8d7-1e4c-fdfb-5f139fefd018
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Vers une nouvelle définition du mètre
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-1
+  url: https://doi.org/10.59161/cgpm1948res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 44
@@ -46,7 +46,7 @@ resolutions:
   type: resolution
   title: Concernant les mesures de gravité
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-2
+  url: https://doi.org/10.59161/cgpm1948res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 52
@@ -80,7 +80,7 @@ resolutions:
   title: Point triple de l'eau ; échelle thermodynamique à un seul point fixe ; unité
     de quantité de chaleur (joule)
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-3
+  url: https://doi.org/10.59161/cgpm1948res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 55
@@ -108,7 +108,7 @@ resolutions:
   type: resolution
   title: "(Concernant un accord avec l'Unesco)"
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-4
+  url: https://doi.org/10.59161/cgpm1948res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 57
@@ -147,7 +147,7 @@ resolutions:
   type: resolution
   title: Dotation du BIPM
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-5
+  url: https://doi.org/10.59161/cgpm1948res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 59
@@ -188,7 +188,7 @@ resolutions:
   type: resolution
   title: Proposition d'établissement d'un système pratique d'unités de mesure
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-6
+  url: https://doi.org/10.59161/cgpm1948res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 64
@@ -223,7 +223,7 @@ resolutions:
   type: resolution
   title: Ecriture des symboles d'unités et des nombres
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-7
+  url: https://doi.org/10.59161/cgpm1948res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 70
@@ -276,7 +276,7 @@ resolutions:
   type: resolution
   title: Concernant la dotation du BIPM
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-8
+  url: https://doi.org/10.59161/cgpm1948res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 72
@@ -298,7 +298,7 @@ resolutions:
   type: resolution
   title: Concernant la question des retouches à apporter à la Convention du Mètre
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-9
+  url: https://doi.org/10.59161/cgpm1948res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 72
@@ -320,7 +320,7 @@ resolutions:
   type: resolution
   title: Concernant la poursuite des résolutions
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/9-1948/resolution-10
+  url: https://doi.org/10.59161/cgpm1948res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM9.pdf/77fe0fa9-bda8-1620-831e-33646e446cd8
   reference_name: Comptes rendus de la 9e CGPM (1948), 1949
   reference_page: 73

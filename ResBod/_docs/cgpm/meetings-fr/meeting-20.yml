@@ -4,7 +4,7 @@ metadata:
   identifier: 20
   date: '1995-10-13'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995
+  url: https://doi.org/10.59161/cgpm1995
 resolutions:
 - dates:
   - '1995-10-13'
@@ -13,7 +13,7 @@ resolutions:
   title: Nécessité d'utiliser les unités du SI dans les recherches sur les ressources
     terrestres, l'environnement, la sécurité humaine et les études  connexes
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-1
+  url: https://doi.org/10.59161/cgpm1995res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 117
@@ -72,7 +72,7 @@ resolutions:
   type: resolution
   title: Traçabilité des étalons au niveau mondial
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-2
+  url: https://doi.org/10.59161/cgpm1995res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 118
@@ -140,7 +140,7 @@ resolutions:
   type: resolution
   title: Besoin de recherches métrologiques à long terme
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-3
+  url: https://doi.org/10.59161/cgpm1995res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 119
@@ -179,7 +179,7 @@ resolutions:
   type: resolution
   title: Révision de la mise en pratique de la définition du mètre
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-4
+  url: https://doi.org/10.59161/cgpm1995res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 119
@@ -244,7 +244,7 @@ resolutions:
   type: resolution
   title: Contrôle de la stabilité du prototype international du kilogramme
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-5
+  url: https://doi.org/10.59161/cgpm1995res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 120
@@ -285,7 +285,7 @@ resolutions:
   type: resolution
   title: Comparaison d'horloges à l'aide de techniques par laser visant des satellites
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-6
+  url: https://doi.org/10.59161/cgpm1995res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 120
@@ -329,7 +329,7 @@ resolutions:
   type: resolution
   title: Métrologie en chimie
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-7
+  url: https://doi.org/10.59161/cgpm1995res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 121
@@ -374,7 +374,7 @@ resolutions:
   type: resolution
   title: Suppression de la classe des unités supplémentaires dans le SI
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-8
+  url: https://doi.org/10.59161/cgpm1995res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 121
@@ -417,7 +417,7 @@ resolutions:
   type: resolution
   title: Dotation du BIPM
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-9
+  url: https://doi.org/10.59161/cgpm1995res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 122
@@ -462,7 +462,7 @@ resolutions:
   type: resolution
   title: Futures relations avec l'Organisation internationale de métrologie légale
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-10
+  url: https://doi.org/10.59161/cgpm1995res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 122
@@ -504,7 +504,7 @@ resolutions:
   type: resolution
   title: 'Métrologie : besoins à long terme'
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/20-1995/resolution-11
+  url: https://doi.org/10.59161/cgpm1995res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM20.pdf/7eefa960-1aaf-b151-7677-74e86a500432
   reference_name: Comptes rendus de la 20e CGPM (1995), 1996
   reference_page: 123

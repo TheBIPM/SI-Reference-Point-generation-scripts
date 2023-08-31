@@ -4,7 +4,7 @@ metadata:
   identifier: 21
   date: '1999-10-15'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999
+  url: https://doi.org/10.59161/cgpm1999
 pdf: https://www.bipm.org/documents/20126/35909362/CGPM21-FR.pdf/047c25ac-8dec-da83-3b8d-203b96cf7892
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: 'Métrologie : besoins à long terme'
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-1
+  url: https://doi.org/10.59161/cgpm1999res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 135
@@ -63,7 +63,7 @@ resolutions:
   title: Reconnaissance mutuelle des étalons nationaux de mesure et des certificats
     d'étalonnage et de mesurage émis par les laboratoires nationaux de métrologie
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-2
+  url: https://doi.org/10.59161/cgpm1999res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 136
@@ -127,7 +127,7 @@ resolutions:
   type: resolution
   title: Associés à la Conférence générale des poids et mesures
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-3
+  url: https://doi.org/10.59161/cgpm1999res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 137
@@ -183,7 +183,7 @@ resolutions:
   title: Nécessité d'utiliser les unités du SI dans les recherches sur les ressources
     terrestres, l'environnement, la sécurité humaine et les études connexes
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-4
+  url: https://doi.org/10.59161/cgpm1999res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 138
@@ -246,7 +246,7 @@ resolutions:
   type: resolution
   title: Révision de la mise en pratique de la définition du mètre
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-5
+  url: https://doi.org/10.59161/cgpm1999res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 139
@@ -320,7 +320,7 @@ resolutions:
   type: resolution
   title: Besoins en métrologie dimensionnelle
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-6
+  url: https://doi.org/10.59161/cgpm1999res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 141
@@ -368,7 +368,7 @@ resolutions:
   type: resolution
   title: La définition du kilogramme
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-7
+  url: https://doi.org/10.59161/cgpm1999res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 141
@@ -409,7 +409,7 @@ resolutions:
   type: resolution
   title: Étalons primaires de fréquence opérationnels
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-8
+  url: https://doi.org/10.59161/cgpm1999res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 142
@@ -452,7 +452,7 @@ resolutions:
   type: resolution
   title: Extension de l'Échelle internationale de température au-dessous de 0,65 K
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-9
+  url: https://doi.org/10.59161/cgpm1999res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 143
@@ -491,7 +491,7 @@ resolutions:
   type: resolution
   title: Métrologie en chimie
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-10
+  url: https://doi.org/10.59161/cgpm1999res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 143
@@ -538,7 +538,7 @@ resolutions:
   type: resolution
   title: Métrologie en biotechnologie
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-11
+  url: https://doi.org/10.59161/cgpm1999res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 144
@@ -576,7 +576,7 @@ resolutions:
   title: Nom spécial donné à l'unité SI mole par seconde, le katal, pour exprimer
     l'activité catalytique
   identifier: 12
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-12
+  url: https://doi.org/10.59161/cgpm1999res12f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 145
@@ -630,7 +630,7 @@ resolutions:
   type: resolution
   title: Dotation du BIPM
   identifier: 13
-  url: https://www.bipm.org/fr/committees/cg/cgpm/21-1999/resolution-13
+  url: https://doi.org/10.59161/cgpm1999res13f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
   reference_name: Comptes rendus de la 21e CGPM (1999), 2001
   reference_page: 146

@@ -4,7 +4,7 @@ metadata:
   identifier: 24
   date: '2011-10-21'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011
+  url: https://doi.org/10.59161/cgpm2011
 pdf: https://www.bipm.org/documents/20126/35657008/CGPM24.pdf/5cc3fc20-f45c-42f2-ea67-9b7f1e92408f
 resolutions:
 - dates:
@@ -14,7 +14,7 @@ resolutions:
   title: On the possible future revision of the International System of Units,the
     SI
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-1
+  url: https://doi.org/10.59161/cgpm2011res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 532
@@ -234,7 +234,7 @@ resolutions:
   title: On the importance of international collaboration so as to place measurements
     to monitor climate change on an SI traceable basis
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-2
+  url: https://doi.org/10.59161/cgpm2011res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 537
@@ -338,7 +338,7 @@ resolutions:
   type: resolution
   title: Dotation of the BIPM for the years 2013 to 2015
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-3
+  url: https://doi.org/10.59161/cgpm2011res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 539
@@ -409,7 +409,7 @@ resolutions:
   type: resolution
   title: On the status of Associate State of the General Conference
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-4
+  url: https://doi.org/10.59161/cgpm2011res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 540
@@ -507,7 +507,7 @@ resolutions:
   type: resolution
   title: On the acceptance of Economies as Associate of the General Conference
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-5
+  url: https://doi.org/10.59161/cgpm2011res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 542
@@ -555,7 +555,7 @@ resolutions:
   type: resolution
   title: On financial arrears of States Parties to the Metre Convention
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-6
+  url: https://doi.org/10.59161/cgpm2011res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 543
@@ -618,7 +618,7 @@ resolutions:
     and Measures and defaulting States Parties to the Metre Convention for the payment
     of their financial arrears
   identifier: 7
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-7
+  url: https://doi.org/10.59161/cgpm2011res7e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 544
@@ -691,7 +691,7 @@ resolutions:
   title: On the revision of the mise en pratique of the metre and the development
     of new optical frequency standards
   identifier: 8
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-8
+  url: https://doi.org/10.59161/cgpm2011res8e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 546
@@ -739,7 +739,7 @@ resolutions:
   type: resolution
   title: On the adoption of a common terrestrial reference system
   identifier: 9
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-9
+  url: https://doi.org/10.59161/cgpm2011res9e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 547
@@ -779,7 +779,7 @@ resolutions:
   title: On the role, mission, objectives, long-term strategy and governance of the
     BIPM
   identifier: 10
-  url: https://www.bipm.org/en/committees/cg/cgpm/24-2011/resolution-10
+  url: https://doi.org/10.59161/cgpm2011res10e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM24.pdf/7c41c2c1-71db-5ef9-4cdd-387279251bac
   reference_name: Proceedings of the 24th CGPM (2011), 2013
   reference_page: 548

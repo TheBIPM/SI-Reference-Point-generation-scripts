@@ -4,7 +4,7 @@ metadata:
   identifier: 22
   date: '2003-10-17'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003
+  url: https://doi.org/10.59161/cgpm2003
 pdf: https://www.bipm.org/documents/20126/35777985/CGPM22-EN.pdf/fd67556f-5824-9b38-b1e2-c273cd9d1843
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Links with other organizations
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-1
+  url: https://doi.org/10.59161/cgpm2003res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 374
@@ -62,7 +62,7 @@ resolutions:
   type: resolution
   title: Metrology and trade
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-2
+  url: https://doi.org/10.59161/cgpm2003res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 374
@@ -98,7 +98,7 @@ resolutions:
   title: On the coordination of the initiatives to support the implementation of metrology,
     accreditation, and standadization in developing countries and economies
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-3
+  url: https://doi.org/10.59161/cgpm2003res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 375
@@ -148,7 +148,7 @@ resolutions:
   title: Value and benefits of the Metre Convention for Member States and for Associates
     of the General Conference
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-4
+  url: https://doi.org/10.59161/cgpm2003res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 376
@@ -193,7 +193,7 @@ resolutions:
   title: Report on evolving needs for metrology in trade, industry and society, and
     the role of the International Bureau of Weights and Measures
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-5
+  url: https://doi.org/10.59161/cgpm2003res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 376
@@ -253,7 +253,7 @@ resolutions:
   type: resolution
   title: On the importance of the CIPM Mutual Recognition Arrangement
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-6
+  url: https://doi.org/10.59161/cgpm2003res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 377
@@ -319,7 +319,7 @@ resolutions:
   title: Involvement of national metrology institutes in the complete range of work
     of the Metre Convention
   identifier: 7
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-7
+  url: https://doi.org/10.59161/cgpm2003res7e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 378
@@ -365,7 +365,7 @@ resolutions:
   type: resolution
   title: Revision of the <i>mise en pratique</i> of the definition of the metre
   identifier: 8
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-8
+  url: https://doi.org/10.59161/cgpm2003res8e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 379
@@ -430,7 +430,7 @@ resolutions:
   title: Requirements for cross-border transport of measurement standards, metrological
     equipment and reference materials
   identifier: 9
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-9
+  url: https://doi.org/10.59161/cgpm2003res9e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 380
@@ -486,7 +486,7 @@ resolutions:
   type: resolution
   title: Symbol for the decimal marker
   identifier: 10
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-10
+  url: https://doi.org/10.59161/cgpm2003res10e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 381
@@ -558,7 +558,7 @@ resolutions:
   title: Relationship between National Metrology Institutes and nationally recognized
     accreditation bodies
   identifier: 11
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-11
+  url: https://doi.org/10.59161/cgpm2003res11e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 382
@@ -639,7 +639,7 @@ resolutions:
   type: resolution
   title: Dotation of the BIPM for the years 2005 to 2008
   identifier: 12
-  url: https://www.bipm.org/en/committees/cg/cgpm/22-2003/resolution-12
+  url: https://doi.org/10.59161/cgpm2003res12e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Proceedings of the 22nd CGPM (2003), 2005
   reference_page: 383

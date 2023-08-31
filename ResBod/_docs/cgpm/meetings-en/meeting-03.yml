@@ -4,16 +4,16 @@ metadata:
   identifier: 3
   date: '1901-10-22'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901
+  url: https://doi.org/10.59161/cgpm1901
 pdf: https://www.bipm.org/documents/20126/38096616/CGPM3.pdf/9993082b-5a57-0b7e-1dfd-ea3245536d94
 resolutions:
 - dates:
   - '1901-10-22'
   subject: CGPM
-  type: resolution
+  type: declaration
   title: Declaration concerning the definition of the litre
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901/resolution-1
+  url: https://doi.org/10.59161/cgpm1901decl1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
   reference_name: Proceedings of the 3rd CGPM (1901), 1901
   reference_page: 38
@@ -31,11 +31,11 @@ resolutions:
 - dates:
   - '1901-10-22'
   subject: CGPM
-  type: resolution
+  type: declaration
   title: Declaration on the unit of mass and on the definition of weight; conventional
     value of <i>g</i><sub>n</sub>
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/3-1901/resolution-2
+  url: https://doi.org/10.59161/cgpm1901decl2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM3.pdf/2459a1a9-f63a-c916-9783-4a390631e28b
   reference_name: Proceedings of the 3rd CGPM (1901), 1901
   reference_page: 70

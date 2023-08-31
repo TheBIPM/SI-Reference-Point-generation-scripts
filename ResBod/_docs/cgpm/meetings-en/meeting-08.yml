@@ -4,7 +4,7 @@ metadata:
   identifier: 8
   date: '1933-10-10'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933
+  url: https://doi.org/10.59161/cgpm1933
 pdf: https://www.bipm.org/documents/20126/38095582/CGPM8.pdf/e16fd1ee-6df5-8b8d-bb57-4c263d28966f
 resolutions:
 - dates:
@@ -14,7 +14,7 @@ resolutions:
   title: Dilatabilité des mètres prototypes provenant des alliages Johnson-Matthey
     et de 1874
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-1
+  url: https://doi.org/10.59161/cgpm1933res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 36
@@ -58,7 +58,7 @@ resolutions:
   type: resolution
   title: Équations des mètres prototypes nos 1, 8, 14, 15, 17, 18, 21, 22, 23 et 26
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-2
+  url: https://doi.org/10.59161/cgpm1933res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 37
@@ -101,7 +101,7 @@ resolutions:
   type: resolution
   title: L'équation du Mètre prototype n° 7, alliage de 1874
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-3
+  url: https://doi.org/10.59161/cgpm1933res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 37
@@ -135,7 +135,7 @@ resolutions:
   type: resolution
   title: Équations des kilogrammes prototypes n° 14 et 15
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-4
+  url: https://doi.org/10.59161/cgpm1933res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 38
@@ -177,7 +177,7 @@ resolutions:
   type: resolution
   title: Équation du kilogramme prototype n° 41
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-5
+  url: https://doi.org/10.59161/cgpm1933res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 39
@@ -214,7 +214,7 @@ resolutions:
   title: Proposition relative à la définition ultérieure du Mètre au moyen d'une longueur
     d'onde lumineuse
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-6
+  url: https://doi.org/10.59161/cgpm1933res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 45
@@ -233,7 +233,7 @@ resolutions:
   title: Échelle internationale de température. Convocation d'une Conférence internationale
     de Thermométrie
   identifier: 7
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-7
+  url: https://doi.org/10.59161/cgpm1933res7e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 45
@@ -259,7 +259,7 @@ resolutions:
   type: resolution
   title: Échelle internationale de température. Modifications au texte de 1927
   identifier: 8
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-8
+  url: https://doi.org/10.59161/cgpm1933res8e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 45
@@ -288,7 +288,7 @@ resolutions:
   type: resolution
   title: Institution d'un Comité consultatif de photométrie
   identifier: 9
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-9
+  url: https://doi.org/10.59161/cgpm1933res9e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 52
@@ -324,7 +324,7 @@ resolutions:
   title: Substitution des unités électriques absolues aux unités dites « internationales
     »
   identifier: 10
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-10
+  url: https://doi.org/10.59161/cgpm1933res10e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 53
@@ -359,7 +359,7 @@ resolutions:
   type: resolution
   title: Pouvoirs au Comité en vue de l'établissement d'un étalon de lumière
   identifier: 11
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-11
+  url: https://doi.org/10.59161/cgpm1933res11e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 55
@@ -387,7 +387,7 @@ resolutions:
   title: Confirmation des pouvoirs nécessaires pour modifier les instructions de la
     Conférence de Londres
   identifier: 12
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-12
+  url: https://doi.org/10.59161/cgpm1933res12e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 56
@@ -410,7 +410,7 @@ resolutions:
   type: resolution
   title: Mesures à prendre pour favoriser l'extension du Système métrique
   identifier: 13
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-13
+  url: https://doi.org/10.59161/cgpm1933res13e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 60
@@ -439,7 +439,7 @@ resolutions:
   type: resolution
   title: Réponse aux propositions présentées par la Délégation de l'U.R.S.S.
   identifier: 14
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-14
+  url: https://doi.org/10.59161/cgpm1933res14e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 64
@@ -469,7 +469,7 @@ resolutions:
   type: resolution
   title: Étude de la création d'un Comité consultatif de métrologie pratique
   identifier: 15
-  url: https://www.bipm.org/en/committees/cg/cgpm/8-1933/resolution-15
+  url: https://doi.org/10.59161/cgpm1933res15e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM8.pdf/1e14fc66-05e1-1dac-305e-c6447ba37234
   reference_name: Proceedings of the 8th CGPM (1933), 1934
   reference_page: 65

@@ -4,7 +4,7 @@ metadata:
   identifier: 13
   date: '1967-10-16'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967
+  url: https://doi.org/10.59161/cgpm1967
 pdf: https://www.bipm.org/documents/20126/38095528/CGPM13.pdf/3955eace-d53e-911d-1e4a-9f57c353d9a2
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Unité SI de temps (seconde)
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-1
+  url: https://doi.org/10.59161/cgpm1967res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 103
@@ -64,7 +64,7 @@ resolutions:
   type: resolution
   title: Unité SI de temps (seconde)
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-2
+  url: https://doi.org/10.59161/cgpm1967res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 103
@@ -87,7 +87,7 @@ resolutions:
   type: resolution
   title: Unité SI de température thermodynamique (kelvin)
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-3
+  url: https://doi.org/10.59161/cgpm1967res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 104
@@ -136,7 +136,7 @@ resolutions:
   type: resolution
   title: Définition de l'unité SI de température thermodynamique (kelvin)
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-4
+  url: https://doi.org/10.59161/cgpm1967res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 104
@@ -164,7 +164,7 @@ resolutions:
   type: resolution
   title: Unité SI d'intensité lumineuse (candela)
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-5
+  url: https://doi.org/10.59161/cgpm1967res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 104
@@ -195,7 +195,7 @@ resolutions:
   type: resolution
   title: Unités SI dérivées
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-6
+  url: https://doi.org/10.59161/cgpm1967res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 105
@@ -231,7 +231,7 @@ resolutions:
   type: resolution
   title: Abrogation de décisions antérieures (micron, bougie nouvelle)
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-7
+  url: https://doi.org/10.59161/cgpm1967res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 105
@@ -257,7 +257,7 @@ resolutions:
   type: resolution
   title: Échelle internationale pratique de température (révision prochaine)
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-8
+  url: https://doi.org/10.59161/cgpm1967res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 105
@@ -287,7 +287,7 @@ resolutions:
   type: resolution
   title: Colorimétrie et radiométrie
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-9
+  url: https://doi.org/10.59161/cgpm1967res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 105
@@ -311,7 +311,7 @@ resolutions:
   type: resolution
   title: Dotation du Bureau international pour la période 1969-1972
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-10
+  url: https://doi.org/10.59161/cgpm1967res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 106
@@ -355,7 +355,7 @@ resolutions:
   type: resolution
   title: Dates des séances
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-11
+  url: https://doi.org/10.59161/cgpm1967res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 106
@@ -379,7 +379,7 @@ resolutions:
   type: resolution
   title: Dotation du Bureau international pour la période 1969-1972
   identifier: 12
-  url: https://www.bipm.org/fr/committees/cg/cgpm/13-1967/resolution-12
+  url: https://doi.org/10.59161/cgpm1967res12f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM13.pdf/ff522dd4-7c97-9b8d-127b-4fe77f3fe2bc
   reference_name: Comptes rendus de la 13e CGPM (1967), 1969
   reference_page: 106

@@ -4,7 +4,7 @@ metadata:
   identifier: 26
   date: '2018-11-16'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018
+  url: https://doi.org/10.59161/cgpm2018
 pdf:
 - https://www.bipm.org/documents/20126/35655029/CGPM26.pdf/f1d8d7e6-2570-9479-9ee9-bb8d86138fe9
 - https://www.bipm.org/documents/20126/60327947/Convocation-2018.pdf/7ff2076c-1868-9764-1a62-ce22b2cad3c4
@@ -43,7 +43,7 @@ resolutions:
   type: resolution
   title: Sur la révision du Système international d'unités (SI)
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018/resolution-1
+  url: https://doi.org/10.59161/cgpm2018res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Comptes rendus de la 26e CGPM (2018), 2019
   reference_page: 210
@@ -146,7 +146,7 @@ resolutions:
   type: resolution
   title: Sur la définition des échelles de temps
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018/resolution-2
+  url: https://doi.org/10.59161/cgpm2018res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Comptes rendus de la 26e CGPM (2018), 2019
   reference_page: 213
@@ -302,7 +302,7 @@ resolutions:
   type: resolution
   title: Sur les objectifs du BIPM
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018/resolution-3
+  url: https://doi.org/10.59161/cgpm2018res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Comptes rendus de la 26e CGPM (2018), 2019
   reference_page: 215
@@ -377,7 +377,7 @@ resolutions:
   type: resolution
   title: Sur la dotation du BIPM pour les années 2020 à 2023
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018/resolution-4
+  url: https://doi.org/10.59161/cgpm2018res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Comptes rendus de la 26e CGPM (2018), 2019
   reference_page: 217
@@ -442,7 +442,7 @@ resolutions:
   type: resolution
   title: Sur les contributions arriérées des États Membres et la  procédure d'exclusion
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/26-2018/resolution-5
+  url: https://doi.org/10.59161/cgpm2018res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM26.pdf/9db96c32-a986-e32a-09f9-3ed7e6c77cf7
   reference_name: Comptes rendus de la 26e CGPM (2018), 2019
   reference_page: 218

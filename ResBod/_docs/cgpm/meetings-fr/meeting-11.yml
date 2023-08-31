@@ -4,7 +4,7 @@ metadata:
   identifier: 11
   date: '1960-10-20'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960
+  url: https://doi.org/10.59161/cgpm1960
 pdf: https://www.bipm.org/documents/20126/38095546/CGPM11.pdf/46b7a834-73ce-391a-45f1-2d0d05a03b81
 resolutions:
 - dates:
@@ -14,7 +14,7 @@ resolutions:
   title: Extension des activités du Bureau international au domaine des étalons de
     mesure des radiations ionisantes
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-1
+  url: https://doi.org/10.59161/cgpm1960res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 83
@@ -85,7 +85,7 @@ resolutions:
   title: Extension des activités du Bureau international au domaine des étalons de
     mesure des radiations ionisantes
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-2
+  url: https://doi.org/10.59161/cgpm1960res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 84
@@ -117,7 +117,7 @@ resolutions:
   title: Extension des activités du Bureau international au domaine des étalons de
     mesure des radiations ionisantes
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-3
+  url: https://doi.org/10.59161/cgpm1960res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 84
@@ -140,7 +140,7 @@ resolutions:
   title: Extension des activités du Bureau international au domaine des étalons de
     mesure des radiations ionisantes
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-4
+  url: https://doi.org/10.59161/cgpm1960res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 84
@@ -167,7 +167,7 @@ resolutions:
   type: resolution
   title: Dotation du Bureau international
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-5
+  url: https://doi.org/10.59161/cgpm1960res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 84
@@ -208,7 +208,7 @@ resolutions:
   type: resolution
   title: Définition du mètre
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-6
+  url: https://doi.org/10.59161/cgpm1960res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 85
@@ -246,7 +246,7 @@ resolutions:
   type: resolution
   title: Définition du mètre
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-7
+  url: https://doi.org/10.59161/cgpm1960res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 85
@@ -288,7 +288,7 @@ resolutions:
   type: resolution
   title: Définition du mètre
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-8
+  url: https://doi.org/10.59161/cgpm1960res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 85
@@ -310,7 +310,7 @@ resolutions:
   type: resolution
   title: Définition de l'unité de temps (seconde)
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-9
+  url: https://doi.org/10.59161/cgpm1960res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 86
@@ -340,7 +340,7 @@ resolutions:
   type: resolution
   title: Définition de l'unité de temps
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-10
+  url: https://doi.org/10.59161/cgpm1960res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 86
@@ -374,7 +374,7 @@ resolutions:
   type: resolution
   title: Système gravimétrique
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-11
+  url: https://doi.org/10.59161/cgpm1960res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 86
@@ -404,7 +404,7 @@ resolutions:
   type: resolution
   title: Système international d'unités
   identifier: 12
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-12
+  url: https://doi.org/10.59161/cgpm1960res12f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 87
@@ -516,7 +516,7 @@ resolutions:
   type: resolution
   title: Décimètre cube et litre
   identifier: 13
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-13
+  url: https://doi.org/10.59161/cgpm1960res13f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 88
@@ -543,7 +543,7 @@ resolutions:
   type: resolution
   title: Adhésion des Pays à la Convention du Mètre
   identifier: 14
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-14
+  url: https://doi.org/10.59161/cgpm1960res14f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 88
@@ -577,7 +577,7 @@ resolutions:
   type: resolution
   title: Négociation d'un accord de siège avec le Gouvernment français
   identifier: 15
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-15
+  url: https://doi.org/10.59161/cgpm1960res15f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 89
@@ -608,7 +608,7 @@ resolutions:
   type: resolution
   title: Révision de la Convention du Mètre
   identifier: 16
-  url: https://www.bipm.org/fr/committees/cg/cgpm/11-1960/resolution-16
+  url: https://doi.org/10.59161/cgpm1960res16f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM11.pdf/c626e1d6-4320-56d3-db37-c6f2a343483b
   reference_name: Comptes rendus de la 11e CGPM (1960), 1961
   reference_page: 89

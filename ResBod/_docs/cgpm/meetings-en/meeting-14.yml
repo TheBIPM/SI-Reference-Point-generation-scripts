@@ -4,7 +4,7 @@ metadata:
   identifier: 14
   date: '1971-10-07'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971
+  url: https://doi.org/10.59161/cgpm1971
 pdf: https://www.bipm.org/documents/20126/38095519/CGPM14.pdf/441ce302-2215-005e-73c4-d32e5dc85328
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: International Atomic Time, function of CIPM
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-1
+  url: https://doi.org/10.59161/cgpm1971res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 77
@@ -76,7 +76,7 @@ resolutions:
   title: Temps atomique international ; arrangements avec le Bureau international
     de l'heure
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-2
+  url: https://doi.org/10.59161/cgpm1971res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 78
@@ -113,7 +113,7 @@ resolutions:
   type: resolution
   title: SI unit of amount of substance (mole)
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-3
+  url: https://doi.org/10.59161/cgpm1971res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 78
@@ -151,7 +151,7 @@ resolutions:
   title: Approbation du programme de travail du Bureau international des poids et
     mesures pour 1973-1976
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-4
+  url: https://doi.org/10.59161/cgpm1971res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 79
@@ -184,7 +184,7 @@ resolutions:
   type: resolution
   title: Dotation du Bureau international pour la période 1973-1976
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-5
+  url: https://doi.org/10.59161/cgpm1971res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 79
@@ -236,7 +236,7 @@ resolutions:
   type: declaration
   title: Pascal and siemens
   identifier: 0
-  url: https://www.bipm.org/en/committees/cg/cgpm/14-1971/resolution-
+  url: https://doi.org/10.59161/cgpm1971decle
   reference: https://www.bipm.org/documents/20126/17314988/CGPM14.pdf/335f1f31-e905-f5c2-d979-7c023c545db1
   reference_name: Proceedings of the 14th CGPM (1971), 1972
   reference_page: 78

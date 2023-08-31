@@ -4,7 +4,7 @@ metadata:
   identifier: 1
   date: '1889-09-28'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/1-1889
+  url: https://doi.org/10.59161/cgpm1889
 pdf: https://www.bipm.org/documents/20126/38097196/CGPM1.pdf/0ff415d6-87a2-5e23-5a1c-cadf8b8047a6
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Sanction des prototypes internationaux du mètre et du kilogramme
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/1-1889/resolution-1
+  url: https://doi.org/10.59161/cgpm1889declf
   reference: https://www.bipm.org/documents/20126/17314988/CGPM1.pdf/ab69792a-2e5e-2040-14d0-11464bc9414c
   reference_name: Comptes rendus de la 1e CGPM (1889), 1890
   reference_page: 34

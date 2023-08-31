@@ -4,7 +4,7 @@ metadata:
   identifier: 18
   date: '1987-10-16'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987
+  url: https://doi.org/10.59161/cgpm1987
 pdf: https://www.bipm.org/documents/20126/38091005/CGPM18.pdf/3dd75ee3-d581-34da-7c5b-a2a1ecbc4a6b
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Troisième vérification des prototypes du kilogramme
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-1
+  url: https://doi.org/10.59161/cgpm1987res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 97
@@ -47,7 +47,7 @@ resolutions:
   type: resolution
   title: Étude de l'état superficiel des étalons de masse
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-2
+  url: https://doi.org/10.59161/cgpm1987res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 98
@@ -93,7 +93,7 @@ resolutions:
   type: resolution
   title: Prise en charge du Temps atomique international
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-3
+  url: https://doi.org/10.59161/cgpm1987res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 98
@@ -129,7 +129,7 @@ resolutions:
   type: resolution
   title: Comparaisons de temps utilisant les liaisons par satellites
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-4
+  url: https://doi.org/10.59161/cgpm1987res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 99
@@ -167,7 +167,7 @@ resolutions:
   type: resolution
   title: Étude des effets perturbateurs dans la réalisation de la seconde
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-5
+  url: https://doi.org/10.59161/cgpm1987res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 99
@@ -193,7 +193,7 @@ resolutions:
   type: resolution
   title: Ajustement prévu des représentations du volt et de l'ohm
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-6
+  url: https://doi.org/10.59161/cgpm1987res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 100
@@ -244,7 +244,7 @@ resolutions:
   type: resolution
   title: Mise au point d'une nouvelle échelle internationale de température
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-7
+  url: https://doi.org/10.59161/cgpm1987res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 101
@@ -289,7 +289,7 @@ resolutions:
   type: resolution
   title: Répartition des contributions
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-8
+  url: https://doi.org/10.59161/cgpm1987res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 101
@@ -315,7 +315,7 @@ resolutions:
   type: resolution
   title: Dotation du BIPM
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/18-1987/resolution-9
+  url: https://doi.org/10.59161/cgpm1987res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM18.pdf/f461df63-75c1-c14d-e6b7-69867b79382f
   reference_name: Comptes rendus de la 18e CGPM (1987), 1988
   reference_page: 102

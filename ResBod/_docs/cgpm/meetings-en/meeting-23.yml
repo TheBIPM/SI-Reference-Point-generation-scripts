@@ -4,7 +4,7 @@ metadata:
   identifier: 23
   date: '2007-11-16'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007
+  url: https://doi.org/10.59161/cgpm2007
 pdf: https://www.bipm.org/documents/20126/35656171/CGPM23.pdf/aed600fc-a50e-0583-524c-5244c29f471e
 resolutions:
 - dates:
@@ -14,7 +14,7 @@ resolutions:
   title: On the initiatives taken to strengthen the collaboration between National
     Metrology Institutes and recognized National Accreditation Bodies
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-1
+  url: https://doi.org/10.59161/cgpm2007res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 422
@@ -60,7 +60,7 @@ resolutions:
     Evolving Needs for Metrology in Trade, Industry and Society, and the Role of the
     International Bureau of Weights and Measures (BIPM)
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-2
+  url: https://doi.org/10.59161/cgpm2007res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 422
@@ -153,7 +153,7 @@ resolutions:
   title: Dotation of the International Bureau of Weights and Measures (BIPM) for the
     years 2009 to 2012
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-3
+  url: https://doi.org/10.59161/cgpm2007res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 424
@@ -250,7 +250,7 @@ resolutions:
   title: On the relevance to trade of the CIPM Mutual Recognition Arrangement, and
     other related Arrangements
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-4
+  url: https://doi.org/10.59161/cgpm2007res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 426
@@ -297,7 +297,7 @@ resolutions:
   type: resolution
   title: On Associate States of the General Conference
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-5
+  url: https://doi.org/10.59161/cgpm2007res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 427
@@ -351,7 +351,7 @@ resolutions:
   type: resolution
   title: On the acceptance of Economies as Associates of the General Conference
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-6
+  url: https://doi.org/10.59161/cgpm2007res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 427
@@ -391,7 +391,7 @@ resolutions:
     to encourage more States to accede to the Metre Convention or become Associates
     of the General Conference
   identifier: 7
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-7
+  url: https://doi.org/10.59161/cgpm2007res7e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 428
@@ -472,7 +472,7 @@ resolutions:
   type: resolution
   title: On financial arrears of Member States
   identifier: 8
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-8
+  url: https://doi.org/10.59161/cgpm2007res8e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 430
@@ -528,7 +528,7 @@ resolutions:
   title: On the revision of the mise en pratique of the definition of the metre and
     the development of new optical frequency standards
   identifier: 9
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-9
+  url: https://doi.org/10.59161/cgpm2007res9e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 431
@@ -572,7 +572,7 @@ resolutions:
   type: resolution
   title: Clarification of the definition of the kelvin, unit of thermodynamic temperature
   identifier: 10
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-10
+  url: https://doi.org/10.59161/cgpm2007res10e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 432
@@ -616,7 +616,7 @@ resolutions:
   type: resolution
   title: On the importance of SI traceable measurements to monitor climate change
   identifier: 11
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-11
+  url: https://doi.org/10.59161/cgpm2007res11e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 433
@@ -666,7 +666,7 @@ resolutions:
   title: On the possible redefinition of certain base units of the International System
     of Units (SI)
   identifier: 12
-  url: https://www.bipm.org/en/committees/cg/cgpm/23-2007/resolution-12
+  url: https://doi.org/10.59161/cgpm2007res12e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM23.pdf/d26fa125-1cfe-51d5-5492-1d6c5cfcbefc
   reference_name: Proceedings of the 23rd CGPM (2007), 2010
   reference_page: 434

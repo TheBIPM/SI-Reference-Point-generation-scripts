@@ -4,7 +4,7 @@ metadata:
   identifier: 16
   date: '1979-10-12'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979
+  url: https://doi.org/10.59161/cgpm1979
 pdf: https://www.bipm.org/documents/20126/38095501/CGPM16.pdf/23103eb5-a014-e41b-dbaa-3053065012cf
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Kilogram standards
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-1
+  url: https://doi.org/10.59161/cgpm1979res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 99
@@ -50,7 +50,7 @@ resolutions:
   type: resolution
   title: Realization of electrical units
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-2
+  url: https://doi.org/10.59161/cgpm1979res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 99
@@ -91,7 +91,7 @@ resolutions:
   type: resolution
   title: SI unit of luminous intensity (candela)
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-3
+  url: https://doi.org/10.59161/cgpm1979res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 100
@@ -150,7 +150,7 @@ resolutions:
   type: resolution
   title: Definition of the candela - Improvement of photometric accuracy
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-4
+  url: https://doi.org/10.59161/cgpm1979res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 100
@@ -174,7 +174,7 @@ resolutions:
   type: resolution
   title: Special name for the SI unit of dose equivalent (sievert)
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-5
+  url: https://doi.org/10.59161/cgpm1979res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 100
@@ -209,7 +209,7 @@ resolutions:
   type: resolution
   title: Symbols for the litre
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-6
+  url: https://doi.org/10.59161/cgpm1979res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 101
@@ -256,7 +256,7 @@ resolutions:
   type: resolution
   title: BIPM budget for the years 1981-1984
   identifier: 7
-  url: https://www.bipm.org/en/committees/cg/cgpm/16-1979/resolution-7
+  url: https://doi.org/10.59161/cgpm1979res7e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM16.pdf/a6a7dde0-b395-0552-e6b3-171fd25ff912
   reference_name: Proceedings of the 16th CGPM (1979), 1980
   reference_page: 101

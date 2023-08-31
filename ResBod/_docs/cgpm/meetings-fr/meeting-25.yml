@@ -4,7 +4,7 @@ metadata:
   identifier: 25
   date: '2014-11-20'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014
+  url: https://doi.org/10.59161/cgpm2014
 pdf: https://www.bipm.org/documents/20126/35655701/CGPM25.pdf/ab4ada95-a815-caf8-1108-81c9ad3dbc42
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Sur la révision à venir du Système international d'unités, le SI
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014/resolution-1
+  url: https://doi.org/10.59161/cgpm2014res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
   reference_name: Comptes rendus de la 25e CGPM (2014), 2015
   reference_page: 177
@@ -52,7 +52,7 @@ resolutions:
   type: resolution
   title: Sur l'élection du Comité international des poids et mesures
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014/resolution-2
+  url: https://doi.org/10.59161/cgpm2014res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
   reference_name: Comptes rendus de la 25e CGPM (2014), 2015
   reference_page: 179
@@ -140,7 +140,7 @@ resolutions:
   type: resolution
   title: Sur la Caisse de retraite et de prévoyance du BIPM
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014/resolution-3
+  url: https://doi.org/10.59161/cgpm2014res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
   reference_name: Comptes rendus de la 25e CGPM (2014), 2015
   reference_page: 181
@@ -222,7 +222,7 @@ resolutions:
   title: Dotation du Bureau international des poids et mesures pourles années 2016
     à 2019
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014/resolution-4
+  url: https://doi.org/10.59161/cgpm2014res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
   reference_name: Comptes rendus de la 25e CGPM (2014), 2015
   reference_page: 183
@@ -293,7 +293,7 @@ resolutions:
   type: resolution
   title: Sur l'importance de l'Arrangement de reconnaissance mutuelle du CIPM
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/25-2014/resolution-5
+  url: https://doi.org/10.59161/cgpm2014res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM25.pdf/64861bb0-b7ea-531d-3f24-b108002471c4
   reference_name: Comptes rendus de la 25e CGPM (2014), 2015
   reference_page: 184

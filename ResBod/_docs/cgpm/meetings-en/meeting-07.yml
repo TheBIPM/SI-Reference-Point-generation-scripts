@@ -4,7 +4,7 @@ metadata:
   identifier: 7
   date: '1927-10-06'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/7-1927
+  url: https://doi.org/10.59161/cgpm1927
 pdf: https://www.bipm.org/documents/20126/38095599/CGPM7.pdf/e56bfc2c-2abd-22a1-603f-85f3e17c2f66
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Definition of the metre by the international Prototype
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/7-1927/resolution-1
+  url: https://doi.org/10.59161/cgpm1927res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM7.pdf/761ccd6d-b5cd-e449-761d-1b78aa99d7f2
   reference_name: Proceedings of the 7th CGPM (1927), 1928
   reference_page: 49

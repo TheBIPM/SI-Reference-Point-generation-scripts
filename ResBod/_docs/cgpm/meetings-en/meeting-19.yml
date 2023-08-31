@@ -4,7 +4,7 @@ metadata:
   identifier: 19
   date: '1991-10-04'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991
+  url: https://doi.org/10.59161/cgpm1991
 pdf: https://www.bipm.org/documents/20126/38090957/CGPM19.pdf/2f7ee319-dbb4-d798-bc09-27888616e857
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Time standards and time comparisons
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-1
+  url: https://doi.org/10.59161/cgpm1991res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
   reference_name: Proceedings of the 19th CGPM (1991), 1992
   reference_page: 183
@@ -55,7 +55,7 @@ resolutions:
   type: resolution
   title: The Josephson and quantum-Hall effects
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-2
+  url: https://doi.org/10.59161/cgpm1991res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
   reference_name: Proceedings of the 19th CGPM (1991), 1992
   reference_page: 184
@@ -104,7 +104,7 @@ resolutions:
   type: resolution
   title: The International Temperature Scale of 1990 (ITS-90) and future work in thermometry
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-3
+  url: https://doi.org/10.59161/cgpm1991res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
   reference_name: Proceedings of the 19th CGPM (1991), 1992
   reference_page: 185
@@ -146,7 +146,7 @@ resolutions:
   type: resolution
   title: SI prefixes zetta, zepto, yotta and yocto
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/19-1991/resolution-4
+  url: https://doi.org/10.59161/cgpm1991res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM19.pdf/3f65ecf1-f86e-b86c-5c28-709d9f12eec4
   reference_name: Proceedings of the 19th CGPM (1991), 1992
   reference_page: 185

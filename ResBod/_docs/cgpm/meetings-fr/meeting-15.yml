@@ -4,7 +4,7 @@ metadata:
   identifier: 15
   date: '1975-06-03'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975
+  url: https://doi.org/10.59161/cgpm1975
 pdf: https://www.bipm.org/documents/20126/38095510/CGPM15.pdf/16dacb08-f90f-e7b5-de57-f79268731b0f
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Définition du mètre (maintien de la définition actuelle ; poursuite des recherches)
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-1
+  url: https://doi.org/10.59161/cgpm1975res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 103
@@ -48,7 +48,7 @@ resolutions:
   type: resolution
   title: Valeur recommandée pour la vitesse de la lumière
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-2
+  url: https://doi.org/10.59161/cgpm1975res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 103
@@ -81,7 +81,7 @@ resolutions:
   title: Étalons du kilogramme (poursuite des études pour améliorer la précision des
     comparaisons)
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-3
+  url: https://doi.org/10.59161/cgpm1975res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 103
@@ -115,7 +115,7 @@ resolutions:
   type: resolution
   title: Temps atomique international (relations du BIH avec le CIPM et le BIPM)
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-4
+  url: https://doi.org/10.59161/cgpm1975res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 104
@@ -148,7 +148,7 @@ resolutions:
   type: resolution
   title: Temps universel coordonné (UTC)
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-5
+  url: https://doi.org/10.59161/cgpm1975res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 104
@@ -177,7 +177,7 @@ resolutions:
   title: Étalons électriques (poursuite des recherches pour améliorer l'exactitude
     de la réalisation des unités)
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-6
+  url: https://doi.org/10.59161/cgpm1975res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 104
@@ -207,7 +207,7 @@ resolutions:
   title: Échelle internationale pratique de température de 1968 (Édition amendée de
     1975)
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-7
+  url: https://doi.org/10.59161/cgpm1975res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 105
@@ -235,7 +235,7 @@ resolutions:
   type: resolution
   title: 'Unités SI pour les rayonnements ionisants : becquerel'
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-8
+  url: https://doi.org/10.59161/cgpm1975res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 105
@@ -259,7 +259,7 @@ resolutions:
   type: resolution
   title: 'Unités SI pour les rayonnements ionisants : gray'
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-9
+  url: https://doi.org/10.59161/cgpm1975res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 105
@@ -291,7 +291,7 @@ resolutions:
   type: resolution
   title: Préfixes SI peta et exa
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-10
+  url: https://doi.org/10.59161/cgpm1975res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 106
@@ -323,7 +323,7 @@ resolutions:
   type: resolution
   title: Dotations du BIPM pour la période 1977-1980
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/15-1975/resolution-11
+  url: https://doi.org/10.59161/cgpm1975res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM15.pdf/6235b987-be6c-3f90-3fce-ba92ec805dc4
   reference_name: Comptes rendus de la 15e CGPM (1975), 1976
   reference_page: 106

@@ -4,7 +4,7 @@ metadata:
   identifier: 22
   date: '2003-10-17'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003
+  url: https://doi.org/10.59161/cgpm2003
 pdf: https://www.bipm.org/documents/20126/35777990/CGPM22-FR.pdf/f90c945c-1e50-dc84-41f3-f0b2c89e3586
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Liaisons avec d'autres organisations
   identifier: 1
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-1
+  url: https://doi.org/10.59161/cgpm2003res1f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 162
@@ -69,7 +69,7 @@ resolutions:
   type: resolution
   title: Métrologie et commerce
   identifier: 2
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-2
+  url: https://doi.org/10.59161/cgpm2003res2f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 162
@@ -97,7 +97,7 @@ resolutions:
     à l'accréditation et à la normalisation dans les pays et les entités économiques
     en voie de dévelopement
   identifier: 3
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-3
+  url: https://doi.org/10.59161/cgpm2003res3f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 163
@@ -150,7 +150,7 @@ resolutions:
   title: Valeur et avantages de la Convention du Mètre pour les États membres et les
     associés à la Conférence générale
   identifier: 4
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-4
+  url: https://doi.org/10.59161/cgpm2003res4f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 164
@@ -199,7 +199,7 @@ resolutions:
     commerciaux, de l'industrie et de la société, et le rôle du Bureau international
     des poids et mesures
   identifier: 5
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-5
+  url: https://doi.org/10.59161/cgpm2003res5f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 164
@@ -261,7 +261,7 @@ resolutions:
   title: Sur l'importance de l'Arrangement de reconnaissance mutuelle du Comité international
     des poids et mesures
   identifier: 6
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-6
+  url: https://doi.org/10.59161/cgpm2003res6f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 165
@@ -314,7 +314,7 @@ resolutions:
   title: Implication des laboratoires nationaux de métrologie dans les activités de
     la Convention du Mètre
   identifier: 7
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-7
+  url: https://doi.org/10.59161/cgpm2003res7f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 166
@@ -362,7 +362,7 @@ resolutions:
   type: resolution
   title: Révision de la mise en pratique de la définition du mètre
   identifier: 8
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-8
+  url: https://doi.org/10.59161/cgpm2003res8f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 167
@@ -430,7 +430,7 @@ resolutions:
   title: Exigences pour le transport transfrontalier d'étalons de mesure, d'équipements
     métrologiques et de matériaux de référence
   identifier: 9
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-9
+  url: https://doi.org/10.59161/cgpm2003res9f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 168
@@ -486,7 +486,7 @@ resolutions:
   type: resolution
   title: Symbole du séparateur décimal
   identifier: 10
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-10
+  url: https://doi.org/10.59161/cgpm2003res10f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 169
@@ -563,7 +563,7 @@ resolutions:
   title: Relations entre les laboratoires nationaux de métrologie et les organismes
     d'accréditation reconnus au niveau national
   identifier: 11
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-11
+  url: https://doi.org/10.59161/cgpm2003res11f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 170
@@ -647,7 +647,7 @@ resolutions:
   type: resolution
   title: Dotation du Bureau international pour les années 2005 à 2008
   identifier: 12
-  url: https://www.bipm.org/fr/committees/cg/cgpm/22-2003/resolution-12
+  url: https://doi.org/10.59161/cgpm2003res12f
   reference: https://www.bipm.org/documents/20126/17314988/CGPM22.pdf/36468a98-a1a8-7697-0470-5a3855653dc9
   reference_name: Comptes rendus de la 22e CGPM (2003), 2005
   reference_page: 171

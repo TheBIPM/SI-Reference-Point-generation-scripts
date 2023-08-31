@@ -4,7 +4,7 @@ metadata:
   identifier: 17
   date: '1983-10-21'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983
+  url: https://doi.org/10.59161/cgpm1983
 pdf: https://www.bipm.org/documents/20126/38091040/CGPM17.pdf/9970b20b-8330-8cd0-4ac0-6c53cc647c2d
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Definition of the metre
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-1
+  url: https://doi.org/10.59161/cgpm1983res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
   reference_name: Proceedings of the 17th CGPM (1983), 1984
   reference_page: 97
@@ -88,7 +88,7 @@ resolutions:
   type: resolution
   title: On the realization of the definition of the metre
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-2
+  url: https://doi.org/10.59161/cgpm1983res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
   reference_name: Proceedings of the 17th CGPM (1983), 1984
   reference_page: 98
@@ -118,7 +118,7 @@ resolutions:
   type: resolution
   title: Density of air
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-3
+  url: https://doi.org/10.59161/cgpm1983res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
   reference_name: Proceedings of the 17th CGPM (1983), 1984
   reference_page: 99
@@ -154,7 +154,7 @@ resolutions:
   type: resolution
   title: Appropriation for the BIPM
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/17-1983/resolution-4
+  url: https://doi.org/10.59161/cgpm1983res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM17.pdf/7a00a9b7-7106-65f2-4cf9-95a733ceb473
   reference_name: Proceedings of the 17th CGPM (1983), 1984
   reference_page: 99

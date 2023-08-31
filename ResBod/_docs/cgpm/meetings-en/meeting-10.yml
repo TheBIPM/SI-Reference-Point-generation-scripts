@@ -4,7 +4,7 @@ metadata:
   identifier: 10
   date: '1954-10-14'
   source: BIPM - Pavillon de Breteuil
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954
+  url: https://doi.org/10.59161/cgpm1954
 pdf: https://www.bipm.org/documents/20126/38095555/CGPM10.pdf/0679a7d9-28ac-9880-ff9d-eefc369b9be1
 resolutions:
 - dates:
@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Définition du mètre
   identifier: 1
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-1
+  url: https://doi.org/10.59161/cgpm1954res1e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 78
@@ -50,7 +50,7 @@ resolutions:
   type: resolution
   title: Retraçage des mètres
   identifier: 2
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-2
+  url: https://doi.org/10.59161/cgpm1954res2e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 79
@@ -74,7 +74,7 @@ resolutions:
   type: resolution
   title: Definition of the thermodynamic temperature scale
   identifier: 3
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-3
+  url: https://doi.org/10.59161/cgpm1954res3e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 79
@@ -94,7 +94,7 @@ resolutions:
   type: resolution
   title: Definition of the standard atmosphere
   identifier: 4
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-4
+  url: https://doi.org/10.59161/cgpm1954res4e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 79
@@ -121,7 +121,7 @@ resolutions:
   type: resolution
   title: Définition de l'unité de temps
   identifier: 5
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-5
+  url: https://doi.org/10.59161/cgpm1954res5e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 80
@@ -146,7 +146,7 @@ resolutions:
   type: resolution
   title: Practical system of units
   identifier: 6
-  url: https://www.bipm.org/en/committees/cg/cgpm/10-1954/resolution-6
+  url: https://doi.org/10.59161/cgpm1954res6e
   reference: https://www.bipm.org/documents/20126/17314988/CGPM10.pdf/cee1e26a-3a4c-221b-ce37-57428adf5ac7
   reference_name: Proceedings of the 10th CGPM (1954), 1956
   reference_page: 80
