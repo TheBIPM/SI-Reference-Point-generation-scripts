@@ -72,11 +72,22 @@ while i <= 26:
         # insert the assertion about the resolutions (attached to the responsible body)
         # in French
         for resolution in meeting_fr['resolutions']:
-            resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
+            resol_URI = None
+            resol_hidden_label = None
+            if resolution['type'] == 'resolution':
+                resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
+                resol_hidden_label = "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier'])
+            elif resolution['type'] == 'declaration':
+                if resolution['identifier'] == 0:
+                    resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Decl")
+                    resol_hidden_label = "CGPM" + str(conf_Nr) + "-Decl"
+                else:
+                    resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier']))
+                    resol_hidden_label = "CGPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier'])
             resol_fr_DOI = resolution['url']
             resol_title_fr = resolution['title']
             resol_nr = resolution['identifier']
-            resol_hidden_label = "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier'])
+
             PDF.g.add((cgpm_URI, PDF.hasAdopted, resol_URI))
             PDF.g.add((resol_URI, PDF.wasAdoptedBy, cgpm_URI))
             
@@ -88,30 +99,51 @@ while i <= 26:
             PDF.g.add((resol_URI, PDF.hasOutcomeNr, Literal(resol_nr)))
             PDF.g.add((resol_URI, SKOS.hiddenLabel, Literal(resol_hidden_label, datatype=XSD.string)))
             PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_fr_DOI, lang='fr')))
-            considering_blankNodeID = URIRef(resol_URI + "Considerings")  # Blank node holding the considerings
-            actions_blankNodeID = URIRef(resol_URI + "Actions")  # Blank node holding the actions
-            PDF.g.add((resol_URI, PDF.hasConsiderings, considering_blankNodeID))
-            for consideration in resolution['considerations']:
-                PDF.g.add(
-                    (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='fr')))
-            PDF.g.add((resol_URI, PDF.hasActions, actions_blankNodeID))
-            for action in resolution['actions']:
-                PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='fr')))
+            if resolution['considerations']:  # only incldue this is there are considerations
+                considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
+                PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
+                for consideration in resolution['considerations']:
+                    PDF.g.add(
+                        (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='fr')))
+
+            if resolution['actions']:  # only incldue this is there are actions
+                actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
+                PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
+                for action in resolution['actions']:
+                    PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='fr')))
 
         # in English
         for resolution in meeting_en['resolutions']:
-            resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
+            resol_URI = None
+            resol_hidden_label = None
+            if resolution['type'] == 'resolution':
+                resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
+                resol_hidden_label = "CGPM" + str(conf_Nr) + "-Res" + str(resolution['identifier'])
+            elif resolution['type'] == 'declaration':
+                if resolution['identifier'] == 0:
+                    resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Decl")
+                    resol_hidden_label = "CGPM" + str(conf_Nr) + "-Decl"
+                else:
+                    resol_URI = URIRef(ResBod_ns + "CGPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier']))
+                    resol_hidden_label = "CGPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier'])
             resol_en_DOI = resolution['url']
             resol_title_en = resolution['title']
-            considering_blankNodeID = URIRef(resol_URI + "Considerings")
-            actions_blankNodeID = URIRef(resol_URI + "Actions")
+            considering_blankNodeID = URIRef(resol_URI + "Considering")
+            actions_blankNodeID = URIRef(resol_URI + "Action")
             PDF.g.add((resol_URI, PDF.hasOutcomeTitle, Literal(resol_title_en, lang='en')))
             PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_en_DOI, lang='en')))
-            for consideration in resolution['considerations']:
-                PDF.g.add(
-                    (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='en')))
-            for action in resolution['actions']:
-                PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='en')))
+            if resolution['considerations']:  # only incldue this is there are considerations
+                considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
+                PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
+                for consideration in resolution['considerations']:
+                    PDF.g.add(
+                        (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='en')))
+
+            if resolution['actions']:  # only incldue this is there are actions
+                actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
+                PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
+                for action in resolution['actions']:
+                    PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='en')))
 
         # go to next CGPM
         i += 1
