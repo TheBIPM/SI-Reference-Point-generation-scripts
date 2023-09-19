@@ -1,4 +1,3 @@
-
 #
 # Constants ABox
 #
@@ -6,7 +5,7 @@
 # the module imports the Python script 'settings.py' located in a directory above this directory
 # Should this lead to an error when executing the present script (... not found ...) you might need
 # to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI"
+# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
 from rdflib import Graph, URIRef, Literal, BNode
@@ -21,7 +20,7 @@ from rdflib.container import Seq
 
 g = Graph()
 PDF = SiElements()
-g.bind("si",PDF.namespace)
+g.bind("si", PDF.namespace)
 BASESTR = str(PDF.BASE_PATH)
 
 # Annotations to the ontology (name, creation date, comment)
@@ -78,8 +77,8 @@ def get_uri_for_symbol(sym: str) -> URIRef:
         ausgabe = elment['Unit']
     return ausgabe  # error indicates wrong type...
 
-notes_wb_obj = openpyxl.load_workbook(BASESTR + '/_docs/notes.xlsx')
 
+notes_wb_obj = openpyxl.load_workbook(BASESTR + '/_docs/notes.xlsx')
 
 # A) create dictionary with the note symbol codes (@xxx@) in text
 notessym = notes_wb_obj["symbols"]
@@ -120,11 +119,11 @@ def formattxt(txt, fmt='html', lvl=0):
                 elif symtypes[grp] == 'equation':
                     txt = txt.replace('@' + grp + '@', "$$" + syms[fmt][grp] + "$$")
             else:
-                txt = txt.replace('@' + grp + '@',  syms[fmt][grp])
+                txt = txt.replace('@' + grp + '@', syms[fmt][grp])
         txt = txt.replace('\n', ' ')
         # check for text still containing symbols based on symbols being parts of other symbols
         if '@' in txt:
-            lvl = lvl+1
+            lvl = lvl + 1
             txt = formattxt(txt, fmt, lvl)
     return txt
 
@@ -135,9 +134,12 @@ for row in range(2, sheet.max_row+1):
     hidden_label = sheet.cell(row, column=2).value
     label_en = sheet.cell(row, column=3).value
     label_fr = sheet.cell(row, column=4).value
-    value = sheet.cell(row, column=5).value
-    unit = sheet.cell(row, column=6).value
-    symbol = sheet.cell(row, column=7).value
+    unit_type = sheet.cell(row, column=5).value
+    value_str = sheet.cell(row, column=6).value
+    value = sheet.cell(row, column=7).value
+    unit = sheet.cell(row, column=8).value
+    symbol = sheet.cell(row, column=9).value
+    updated = sheet.cell(row, column=10).value
     element = PDF.set_uri(identifier)
 
     if "@" in symbol:
@@ -145,11 +147,17 @@ for row in range(2, sheet.max_row+1):
 
     g.add((element, RDF.type, PDF.Constant))
     g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
+    g.add((element, PDF.hasValueAsString, Literal(value_str, datatype=XSD.string)))
+    if unit_type == "xsd:integer":
+        g.add((element, PDF.hasDatatype,  XSD.integer))
+    elif unit_type == "xsd:double":
+        g.add((element, PDF.hasDatatype, XSD.double))
     g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+    g.add((element, PDF.hasUpdatedDate, Literal(updated, datatype=XSD.date)))
     g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
     g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
     g.add((element, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
-    
+
     piece_list = []
     pieces = unit.split(".")
     for piece in pieces:
@@ -161,8 +169,8 @@ for row in range(2, sheet.max_row+1):
         g.add((blankNodeID, PDF.hasUnit, URI_unit))
         g.add((blankNodeID, PDF.hasUnitPwr, Literal(pwr)))
         piece_list.append(blankNodeID)
-    
-    seq_uri = Seq(g, BNode(), piece_list).uri    
-    g.add ((element, PDF.hasUnitElement, seq_uri) )
-    
+
+    seq_uri = Seq(g, BNode(), piece_list).uri
+    g.add((element, PDF.hasUnitElement, seq_uri))
+
 g.serialize(format='turtle', destination=APIPATH + 'constants.ttl')

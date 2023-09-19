@@ -166,6 +166,30 @@ class SiElements:
         self.g.add((self.hasValue, RDFS.domain, self.Constant))
         self.g.add((self.hasValue, RDFS.range, XSD.double))  # better than a literal, but good enough?
 
+        # hasDatatype
+        self.hasDatatype = self.set_uri("hasDatatype")
+        self.g.add((self.hasDatatype, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDatatype, RDFS.label, Literal("has datatype", lang="en")))
+        self.g.add((self.hasDatatype, RDFS.label, Literal("a un type de données", lang="fr")))
+        self.g.add((self.hasDatatype, RDFS.domain, self.Constant))
+        self.g.add((self.hasDatatype, RDFS.range, XSD.anyURI))
+
+        # hasValueAsString
+        self.hasValueAsString = self.set_uri("hasValueAsString")
+        self.g.add((self.hasValueAsString, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasValueAsString, RDFS.label, Literal("has value as a string", lang="en")))
+        self.g.add((self.hasValueAsString, RDFS.label, Literal("a une valeur sous forme de chaîne", lang="fr")))
+        self.g.add((self.hasValueAsString, RDFS.domain, self.Constant))
+        self.g.add((self.hasValueAsString, RDFS.range, XSD.string))
+
+        # hasUpdatedDate
+        self.hasUpdatedDate = self.set_uri("hasUpdatedDate")
+        self.g.add((self.hasUpdatedDate, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasUpdatedDate, RDFS.label, Literal("has updated date", lang="en")))
+        self.g.add((self.hasUpdatedDate, RDFS.label, Literal("a mis à jour la date", lang="fr")))
+        self.g.add((self.hasUpdatedDate, RDFS.domain, self.Constant))
+        self.g.add((self.hasUpdatedDate, RDFS.range, XSD.date))
+
         # hasUnitPwr
         self.hasUnitPwr = self.set_uri("hasUnitPwr")  # suggest changing to hasUnitPower
         self.g.add((self.hasUnitPwr, RDF.type, OWL.DatatypeProperty))
