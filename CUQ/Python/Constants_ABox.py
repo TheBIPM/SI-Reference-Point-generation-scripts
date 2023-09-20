@@ -138,8 +138,9 @@ for row in range(2, sheet.max_row+1):
     value_str = sheet.cell(row, column=6).value
     value = sheet.cell(row, column=7).value
     unit = sheet.cell(row, column=8).value
-    symbol = sheet.cell(row, column=9).value
-    updated = sheet.cell(row, column=10).value
+    unit_str = sheet.cell(row, column=9).value
+    symbol = sheet.cell(row, column=10).value
+    updated = sheet.cell(row, column=11).value
     element = PDF.set_uri(identifier)
 
     if "@" in symbol:
@@ -148,6 +149,7 @@ for row in range(2, sheet.max_row+1):
     g.add((element, RDF.type, PDF.Constant))
     g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
     g.add((element, PDF.hasValueAsString, Literal(value_str, datatype=XSD.string)))
+    g.add((element, PDF.hasUnitAsString, Literal(unit_str, datatype=XSD.string)))
     if unit_type == "xsd:integer":
         g.add((element, PDF.hasDatatype,  XSD.integer))
     elif unit_type == "xsd:double":

@@ -190,6 +190,14 @@ class SiElements:
         self.g.add((self.hasUpdatedDate, RDFS.domain, self.Constant))
         self.g.add((self.hasUpdatedDate, RDFS.range, XSD.date))
 
+        # hasValueAsString
+        self.hasUnitAsString = self.set_uri("hasUnitAsString")
+        self.g.add((self.hasUnitAsString, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasUnitAsString, RDFS.label, Literal("has unit as a string", lang="en")))
+        self.g.add((self.hasUnitAsString, RDFS.label, Literal("a l'unité comme chaîne", lang="fr")))
+        self.g.add((self.hasUnitAsString, RDFS.domain, self.Constant))
+        self.g.add((self.hasUnitAsString, RDFS.range, XSD.string))
+
         # hasUnitPwr
         self.hasUnitPwr = self.set_uri("hasUnitPwr")  # suggest changing to hasUnitPower
         self.g.add((self.hasUnitPwr, RDF.type, OWL.DatatypeProperty))
