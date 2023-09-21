@@ -147,13 +147,14 @@ for row in range(2, sheet.max_row+1):
         symbol = formattxt(symbol, 'latex')
 
     g.add((element, RDF.type, PDF.Constant))
-    g.add((element, PDF.hasValue, Literal(value, datatype=XSD.decimal, normalize=False)))
     g.add((element, PDF.hasValueAsString, Literal(value_str, datatype=XSD.string)))
     g.add((element, PDF.hasUnitAsString, Literal(unit_str, datatype=XSD.string)))
     if unit_type == "xsd:integer":
         g.add((element, PDF.hasDatatype,  XSD.integer))
+        g.add((element, PDF.hasValue, Literal(value, datatype=XSD.integer, normalize=False)))
     elif unit_type == "xsd:double":
         g.add((element, PDF.hasDatatype, XSD.double))
+        g.add((element, PDF.hasValue, Literal(value, datatype=XSD.double, normalize=False)))
     g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
     g.add((element, PDF.hasUpdatedDate, Literal(updated, datatype=XSD.date)))
     g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
