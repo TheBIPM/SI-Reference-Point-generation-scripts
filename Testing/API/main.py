@@ -438,7 +438,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
                         ?SIBaseUnit si:hasDefiningConstant ?Constant .
                             ?Constant skos:prefLabel ?Label ;
                                 skos:hiddenLabel ?hidden_Label ;
-                                si:hasUnitElement ?Element ;
+                                si:hasUnitElement ?unit ;
                                 si:hasValue ?Value ;
                                 si:hasSymbol ?Cst_Symbol .
                             ?Element si:hasUnit ?Unit ;
@@ -503,58 +503,73 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-            SELECT ?Kst_Label ?hidden_Name ?Kst_Symbol ?Wert ?Symbol_String {
-                {
-                SELECT (?Label as ?Kst_Label) (?Value as ?Wert)
-                       (?Cst_Symbol as ?Kst_Symbol) (?hidden_Label AS ?hidden_Name)
-                       (group_concat(?Einheit_String; separator=" ") AS ?Symbol_String)
-                WHERE { 
-                        {   ?SIBaseUnit si:hasDefiningConstant ?Constant .
-                            ?Constant skos:prefLabel ?Label ;
-                                skos:hiddenLabel ?hidden_Label ;
-                                si:hasUnitElement ?Element ;
-                                si:hasValue ?Value ;
-                                si:hasSymbol ?Cst_Symbol .
-                            ?Element si:hasUnit ?Unit ;
-                                si:hasUnitPwr ?Pwr.
-                            ?Unit si:hasSymbol ?Symbol.
-                            BIND(
-                                IF (?Pwr=1, STR( ?Symbol ),
-                                    CONCAT(STR( ?Symbol ), "^", STR(?Pwr) )) AS ?Einheit_String ) .
-                                FILTER (?hidden_Label = '""" + name + """')
-                        }            
-        
-                        FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                    }
-                GROUP BY ?Label ?Value ?Cst_Symbol ?hidden_Label
-                }
+            SELECT ?Label ?Value ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
+            WHERE { 
+                ?SIBaseUnit si:hasDefiningConstant ?Constant .
+                ?Constant skos:prefLabel ?Label ;
+                    skos:hiddenLabel ?Hidden ;
+                    si:hasValueAsString ?Valuestr ;
+                    si:hasUnitAsString ?Unitstr ;
+                    si:hasUpdatedDate ?Updated ;
+                    si:hasDatatype ?Type ;
+                    si:hasValue ?Value ;
+                    si:hasSymbol ?Symbol .
+                FILTER (langmatches(lang(?Label),'""" + lang + """')) .
+                FILTER (?Hidden='""" + name + """') .
             }
         """
-
     qres = g.query(knows_query)
-    responses: List[dict] = []
+    response: dict = {}
 
-    for element in qres:
-        responses.append(
+    for element in qres:  # using iteration as all constants returned...
+        response.update(
             {
-                'Cst_Label': element['Kst_Label'],
-                'Cst_Symbol': element['Kst_Symbol'],
-                'Cst_Value': element['Wert'],
-                'Cst_Unit_String': element['Symbol_String']
+                'Cst_Label': element['Label'],
+                'Cst_Symbol': element['Symbol'],
+                'Cst_Value': element['Value'],
+                'Cst_Valuestr': element['Valuestr'],
+                'Cst_Date': element['Updated'],
+                'Cst_Unit': element['Unitstr'],
+                'Cst_Hidden': element['Hidden'],
+                'Cst_Datatype': element['Type']
             }
         )
 
-    if not responses:
+    if not response:
         raise HTTPException(
             status_code=404, detail=f"No Constant found.")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
-        return {'constant': responses[0]}
+        return {'constant': response}
+    elif accept == 'application/ld+json':
+        resp = response
+        # create url
+        url = 'https://si-digital-framework.org/constant/' + resp['Cst_Hidden']
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/constants.jsonld",
+               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+               {"@base": url}]
+        # # populate graph
+        gph = {"@id": url, "@type": "si:Constant"}
+        gph.update({"name": resp['Cst_Label']})
+        gph.update({"symbol": resp['Cst_Symbol']})
+        gph.update({"value": resp['Cst_Value']})
+        gph.update({"valuestr": resp['Cst_Valuestr']})
+        gph.update({"datatype": resp['Cst_Datatype']})
+        gph.update({"unit": resp['Cst_Unit']})
+        gph.update({"url": url})
+        gph.update({"lastupdated": resp['Cst_Date']})
+
+        # build JSON-LD
+        jld = {
+            "@context": ctx, "@id": url,
+            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return jld
     else:
         return TEMPLATES.TemplateResponse(
             "ConstantLayout.html",
-            {"request": request, "constant": responses[0]}
+            {"request": request, "constant": response}
         )
 
 

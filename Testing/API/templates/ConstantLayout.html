@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <title>Constants</title>
+    <title>Constant</title>
 </head>
 <body>
     {% extends 'ParentLayout.html' %}
@@ -9,14 +9,34 @@
     <h1>{{constant.Cst_Label}}</h1>
     <table>
         <tr>
-            <td>Value:</td>
-            <td>{{constant.Cst_Value}} {{constant.Cst_Unit_String}}</td>
+            <td>Numeric Value:</td>
+            <td>{{constant.Cst_Value}}</td>
+        </tr>
+        <tr>
+            <td>Value Datatype:</td>
+            <td>{{constant.Cst_Datatype}}</td>
+        </tr>
+        <tr>
+            <td>Value as a String:</td>
+            <td>{{constant.Cst_Valuestr}}</td>
         </tr>
         <tr>
             <td>Symbol:</td>
-            <td>${{constant.Cst_Symbol}}$</td>
+            <td>{{constant.Cst_Symbol}}</td>
         </tr>
-    </table>
+        <tr>
+            <td>Unit:</td>
+            <td>{{constant.Cst_Unit}}</td>
+        </tr>
+        <tr>
+            <td>Hidden Label:</td>
+            <td>{{constant.Cst_Hidden}}</td>
+        </tr>
+        <tr>
+            <td>Last updated date:</td>
+            <td>{{constant.Cst_Date}}</td>
+        </tr>
+</table>
 {% endblock %}
 </body>
 </html>
