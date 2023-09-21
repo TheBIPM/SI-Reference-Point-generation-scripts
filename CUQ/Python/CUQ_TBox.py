@@ -14,6 +14,7 @@ class SiElements:
 
         self.g.bind("skos", SKOSURL)
         self.g.bind("dcterms", DCTURL)
+        self.g.bind('rb', ResBod_ns)
 
         self.BASE_PATH = Path(__file__).resolve().parent.parent
         self.ResBod_ns = ResBod_ns
@@ -39,7 +40,8 @@ class SiElements:
         self.g.add((self.MeasurementUnit, RDFS.label, Literal("unité de mesure", lang="fr")))
         self.g.add((self.MeasurementUnit, RDFS.isDefinedBy, Literal("VIM3 1.9")))
         self.g.add((self.MeasurementUnit, RDFS.comment, Literal("Class for all measurement units.", lang="en")))
-        self.g.add((self.MeasurementUnit, RDFS.comment, Literal("La classe pour toutes les unités de mesure.", lang="fr")))
+        self.g.add((self.MeasurementUnit, RDFS.comment, Literal("La classe pour toutes les unités de mesure.",
+                                                                lang="fr")))
 
         # SIBaseUnit
         self.SIBaseUnit = self.set_uri("SIBaseUnit")
@@ -60,13 +62,33 @@ class SiElements:
         self.g.add((self.SISpecialNamedUnit, RDFS.subClassOf, self.MeasurementUnit))
         self.g.add((self.SISpecialNamedUnit, RDFS.label, Literal("SI unit with special name", lang="en")))
         self.g.add((self.SISpecialNamedUnit, RDFS.label, Literal("unité SI avec nom spécial", lang="fr")))
+
         self.g.add((self.SISpecialNamedUnit, RDFS.comment,
                     Literal("Class for the units of the SI that are not base units but have a special name.",
                             lang="en")))
         self.g.add((self.SISpecialNamedUnit, RDFS.comment,
                     Literal("La classe des unités du SI qui ne sont pas des unités de base mais qui ont un nom "
                             "spécial.", lang="fr")))
-        
+
+        # inOtherSIUnits
+        self.inBaseSIUnits = self.set_uri("inBaseSIUnits")
+        self.g.add((self.inBaseSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inBaseSIUnits, RDFS.label, Literal("can be expressed in base SI units as",
+                                                            lang="en")))
+        self.g.add((self.inBaseSIUnits, RDFS.label, Literal("peut être exprimé en unités SI de base sous la forme",
+                                                            lang="fr")))
+        self.g.add((self.inBaseSIUnits, RDFS.domain, self.SISpecialNamedUnit))
+        self.g.add((self.inBaseSIUnits, RDFS.range, XSD.string))  # better than a literal, but good enough?
+
+        # inOtherSIUnits
+        self.inOtherSIUnits = self.set_uri("inOtherSIUnits")
+        self.g.add((self.inOtherSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inOtherSIUnits, RDFS.label, Literal("can be expressed in other SI units as",
+                                                             lang="en")))
+        self.g.add((self.inOtherSIUnits, RDFS.label, Literal("peut être exprimé dans d’autres unités SI sous la forme",
+                                                             lang="fr")))
+        self.g.add((self.inOtherSIUnits, RDFS.domain, self.SISpecialNamedUnit))
+        self.g.add((self.inOtherSIUnits, RDFS.range, XSD.string))  # better than a literal, but good enough?
 
         # NonSIUnit
         self.nonSIUnit = self.set_uri("nonSIUnit")
@@ -76,13 +98,12 @@ class SiElements:
         self.g.add((self.nonSIUnit, RDFS.comment, Literal("Non-SI units that are accepted for use with the SI",
                                                           lang="en")))
         self.g.add((self.nonSIUnit, RDFS.comment, Literal("Unités en dehors du SI dont l’usage est accepté avec le SI",
-                                                           lang="fr")))
+                                                          lang="fr")))
 
         # Definition
         self.Definition = self.set_uri("Definition")
         self.g.add((self.Definition, RDF.type, SKOS.Concept))
-        self.g.add((self.Definition, RDFS.label
-                    , Literal("definition of a base unit", lang="en")))
+        self.g.add((self.Definition, RDFS.label, Literal("definition of a base unit", lang="en")))
         self.g.add((self.Definition, RDFS.label, Literal("définition d'une unité de base", lang="fr")))
         self.g.add((self.Definition, RDFS.comment,
                     Literal("The class for definitions of an SI base unit.", lang="en")))
@@ -279,26 +300,33 @@ class SiElements:
         self.g.add((self.hasNoteText, RDFS.comment, Literal("The order index of a definition note.", lang="en")))
         self.g.add((self.hasNoteText, RDFS.comment,
                     Literal("Index d'ordre d'une note de définition.", lang="fr")))
-        
+
         # hasConversionFactor
         self.hasConversionFactor = self.set_uri("hasConversionFactor")
         self.g.add((self.hasConversionFactor, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasConversionFactor, RDFS.label, Literal("has a conversion factor",lang="en")))      
-        self.g.add((self.hasConversionFactor, RDFS.label, Literal("a un facteur de conversion",lang="fr")))
-        self.g.add((self.hasConversionFactor, RDFS.domain, self.nonSIUnit)) 
+        self.g.add((self.hasConversionFactor, RDFS.label, Literal("has a conversion factor", lang="en")))
+        self.g.add((self.hasConversionFactor, RDFS.label, Literal("a un facteur de conversion", lang="fr")))
+        self.g.add((self.hasConversionFactor, RDFS.domain, self.nonSIUnit))
         self.g.add((self.hasConversionFactor, RDFS.range, RDFS.Literal))
-        self.g.add((self.hasConversionFactor, RDFS.comment, Literal("The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)",lang='en')))
-        self.g.add((self.hasConversionFactor, RDFS.comment, Literal("Le facteur de conversion entre l'unité non SI et l'unité dans le SI (nombre d'unité de contenu dans l'unité non-SI)",lang='fr')))
+        self.g.add((self.hasConversionFactor, RDFS.comment, Literal(
+            "The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)",
+            lang='en')))
+        self.g.add((self.hasConversionFactor, RDFS.comment, Literal(
+            "Le facteur de conversion entre l'unité non SI et l'unité dans le SI (nombre d'unité de contenu dans "
+            "l'unité non-SI)",
+            lang='fr')))
 
-        #hasConversionUnit
+        # hasConversionUnit
         self.hasConversionUnit = self.set_uri("hasConversionUnit")
         self.g.add((self.hasConversionUnit, RDF.type, OWL.ObjectProperty))
-        self.g.add((self.hasConversionUnit, RDFS.label, Literal("has conversion unit",lang='en')))
-        self.g.add((self.hasConversionUnit, RDFS.label, Literal("a une unité de conversion",lang='fr')))
+        self.g.add((self.hasConversionUnit, RDFS.label, Literal("has conversion unit", lang='en')))
+        self.g.add((self.hasConversionUnit, RDFS.label, Literal("a une unité de conversion", lang='fr')))
         self.g.add((self.hasConversionUnit, RDFS.domain, self.nonSIUnit))
         self.g.add((self.hasConversionUnit, RDFS.range, self.MeasurementUnit))
-        self.g.add((self.hasConversionUnit, RDFS.comment, Literal("SI unit to which the non SI unit can be converted",lang='en')))
-        self.g.add((self.hasConversionUnit, RDFS.comment, Literal("Unité SI dans laquelle l'unité non SI peut être covertie",lang='')))                   
+        self.g.add((self.hasConversionUnit, RDFS.comment,
+                    Literal("SI unit to which the non SI unit can be converted", lang='en')))
+        self.g.add((self.hasConversionUnit, RDFS.comment,
+                    Literal("Unité SI dans laquelle l'unité non SI peut être covertie", lang='')))
 
         # hasDefiningConstant
         # need to add isDefiningConstantOf
@@ -392,12 +420,11 @@ class SiElements:
         # hasStatus
         self.hasStatus = self.set_uri("hasStatus")
         self.g.add((self.hasStatus, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasStatus,RDFS.label, Literal('has status', lang='en')))
-        self.g.add((self.hasStatus,RDFS.label, Literal("a l'état", lang='fr')))
-        self.g.add((self.hasStatus,RDFS.domain, self.Definition))
-        self.g.add((self.hasStatus,RDFS.range, RDFS.Literal))
-        self.g.add((self.hasStatus,RDFS.comment, Literal("Linking a SI definition to its status.", lang='en')))
-
+        self.g.add((self.hasStatus, RDFS.label, Literal('has status', lang='en')))
+        self.g.add((self.hasStatus, RDFS.label, Literal("a l'état", lang='fr')))
+        self.g.add((self.hasStatus, RDFS.domain, self.Definition))
+        self.g.add((self.hasStatus, RDFS.range, RDFS.Literal))
+        self.g.add((self.hasStatus, RDFS.comment, Literal("Linking a SI definition to its status.", lang='en')))
 
         # hasScalingFactor
         self.hasScalingFactor = self.set_uri("hasScalingFactor")

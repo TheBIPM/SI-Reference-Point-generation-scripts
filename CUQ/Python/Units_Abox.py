@@ -1,13 +1,10 @@
-#
-# Units ABox
-#
-#
-# the module imports the Python script 'settings.py' located in a directory above this directory
-# Should this lead to an error when executing the present script (... not found ...) you might need
-# to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI"
-#
-
+"""
+Units ABox
+The module imports the Python script 'settings.py' located in a directory above this directory
+should this lead to an error when executing the present script (... not found ...) you might need
+to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
+export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
+"""
 
 from rdflib import Literal, URIRef
 from rdflib.namespace import RDF, RDFS, XSD, SKOS, OWL, DCTERMS
@@ -123,11 +120,10 @@ for row in range(2, basedefs.max_row + 1):
     DefiningText_fr = basedefs.cell(row, column=6).value
     DefiningText_en = basedefs.cell(row, column=7).value
     DefiningResolution = basedefs.cell(row, column=8).value
-    Formula = basedefs.cell(row, column=9).value
+    DefiningEquation = basedefs.cell(row, column=9).value
     DefiningConstant = basedefs.cell(row, column=10).value
     UnitOfQtyKind = basedefs.cell(row, column=11).value
     Status = basedefs.cell(row, column=12).value
-
 
     # add data
     if uri_text is not None:
@@ -147,30 +143,28 @@ for row in range(2, basedefs.max_row + 1):
             DefiningText_en = formattxt(DefiningText_en, 'latex')
             PDF.g.add((element, PDF.hasDefiningText, Literal(DefiningText_en, lang='en')))
         PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + DefiningResolution)))
-        if Formula is not None:
-            if "@" in Formula:
-                Formula = formattxt(Formula, 'latex')
-            PDF.g.add((element, PDF.hasDefiningEquation, Literal(Formula, datatype=XSD.string)))
+        if DefiningEquation is not None:
+            if "@" in DefiningEquation:
+                DefiningEquation = formattxt(DefiningEquation, 'latex', 1)
+            PDF.g.add((element, PDF.hasDefiningEquation, Literal(DefiningEquation, datatype=XSD.string)))
         if DefiningConstant is not None:
             PDF.g.add((element, PDF.hasDefiningConstant, PDF.set_uri(DefiningConstant)))
         if Status is not None:
             PDF.g.add((element, PDF.hasStatus, Literal(Status, datatype=XSD.string)))
 
-
         # notes
         # get all the notes for a definition
         temp = {}
         for noterow in range(2, notesen.max_row + 1):
-            if notesen.cell(noterow, column=2).value == uri_text and notesen.cell(noterow,column=3).value is not None:
+            if notesen.cell(noterow, column=2).value == uri_text and notesen.cell(noterow, column=3).value is not None:
                 temp.update({notesen.cell(noterow, column=3).value: notesen.cell(noterow, column=4).value})
         notes = dict(sorted(temp.items()))
 
-        temp_fr ={}
+        temp_fr = {}
         for noterow in range(2, notesfr.max_row + 1):
-            if notesfr.cell(noterow, column=2).value == uri_text and notesfr.cell(noterow,column=3).value is not None:
+            if notesfr.cell(noterow, column=2).value == uri_text and notesfr.cell(noterow, column=3).value is not None:
                 temp_fr.update({notesfr.cell(noterow, column=3).value: notesfr.cell(noterow, column=4).value})
         notes_fr = dict(sorted(temp_fr.items()))
-    
 
         # add all the notes for a definition
         if notes:
@@ -183,16 +177,16 @@ for row in range(2, basedefs.max_row + 1):
                 PDF.g.add((element, PDF.hasDefinitionNote, notenode))
                 PDF.g.add((notenode, RDF.type, PDF.DefinitionNote))
                 PDF.g.add((notenode, PDF.hasNoteIndex, Literal(nidx)))
-                PDF.g.add((notenode, PDF.hasNoteText, Literal(note,lang='en')))
+                PDF.g.add((notenode, PDF.hasNoteText, Literal(note, lang='en')))
         
         if notes_fr:
             for nidx, note_fr in notes_fr.items():
                 if "@" in note_fr:
-                    note_fr = formattxt(note_fr,'latex')
+                    note_fr = formattxt(note_fr, 'latex')
                 
-                note_uri = uri_text +"note" + str(nidx)
-                notenode =PDF.set_uri(note_uri)
-                PDF.g.add((notenode,PDF.hasNoteText, Literal(note_fr,lang='fr')))
+                note_uri = uri_text + "note" + str(nidx)
+                notenode = PDF.set_uri(note_uri)
+                PDF.g.add((notenode, PDF.hasNoteText, Literal(note_fr, lang='fr')))
 
 
 # 5 SI Units Special Names
@@ -203,21 +197,37 @@ for row in range(2, sheet.max_row + 1):
     uri_text = sheet.cell(row, column=1).value
     prefLabel_fr = sheet.cell(row, column=2).value
     prefLabel_en = sheet.cell(row, column=3).value
-    Symbol = sheet.cell(row, column=4).value
-    UnitOfQtyKind = sheet.cell(row, column=5).value
-
+    symbol = sheet.cell(row, column=4).value
+    defres = sheet.cell(row, column=5).value
+    UnitOfQtyKind = sheet.cell(row, column=6).value
+    othersi = sheet.cell(row, column=7).value
+    inbasesi = sheet.cell(row, column=8).value
+    equation = sheet.cell(row, column=9).value
 
     # add data
     if uri_text is not None:
-        if "@" in Symbol:
-            Symbol = formattxt(Symbol, 'latex')
+        if "@" in symbol:
+            symbol = formattxt(symbol, 'latex')
             
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SISpecialNamedUnit))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasSymbol, Literal(Symbol, datatype=XSD.string)))
+        PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
         PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
+        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + defres)))
+        if othersi:
+            if "@" in othersi:
+                othersi = formattxt(othersi, 'latex', 1)
+            PDF.g.add((element, PDF.inOtherSIUnits, Literal(othersi, datatype=XSD.string)))
+        if inbasesi:
+            if "@" in inbasesi:
+                inbasesi = formattxt(inbasesi, 'latex', 1)
+            PDF.g.add((element, PDF.inBaseSIUnits, Literal(inbasesi, datatype=XSD.string)))
+        if equation:
+            if "@" in equation:
+                equation = formattxt(equation, 'latex', 1)
+            PDF.g.add((element, PDF.hasDefiningEquation, Literal(equation, datatype=XSD.string)))
 
 # 6) non SI units
 sheet = units_wb_obj["NonSIUnits"]
@@ -232,8 +242,6 @@ for row in range(7, sheet.max_row + 1):
     conversionFactor = sheet.cell(row, column=6).value
     conversionUnit = sheet.cell(row, column=7).value
 
-
-
     # add data
     if uri_text is not None:
         if "@" in symbol:
@@ -245,7 +253,7 @@ for row in range(7, sheet.max_row + 1):
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
         PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(unitOfQtyKind)))
-        PDF.g.add((element, PDF.hasConversionFactor, Literal(conversionFactor,datatype=XSD.double)))
+        PDF.g.add((element, PDF.hasConversionFactor, Literal(conversionFactor, datatype=XSD.double)))
         PDF.g.add((element, PDF.hasConversionUnit, PDF.set_uri(conversionUnit)))
 
 # 7) serialization

@@ -28,11 +28,11 @@ class ResBod:
         self._g.add((self.Outcome, RDF.type, SKOS.Concept))
         self._g.add((self.Outcome, RDFS.label, Literal('Outcome', lang='en')))
         self._g.add((self.Outcome, RDFS.label, Literal('Résultat', lang='fr')))
-        self._g.add((self.Outcome, RDFS.comment, Literal("Class for the Outcome of an Event", lang='en')))
+        self._g.add((self.Outcome, RDFS.comment, Literal("Class for the outcome of an Event", lang='en')))
 
         self.OutcomeType = self.set_uri('OutcomeType')
         self._g.add((self.OutcomeType, RDF.type, SKOS.Concept))
-        self._g.add((self.OutcomeType, RDFS.comment, Literal('Class for the Outcome Type. Depending '
+        self._g.add((self.OutcomeType, RDFS.comment, Literal('Class for the outcome Type. Depending '
                                                              'on the Responsible Body this can be a Resolution, a '
                                                              'Recommendation, a Decision', lang='en')))
 
@@ -47,6 +47,18 @@ class ResBod:
         self._g.add((self.Resolution, RDFS.label, Literal('Resolution', lang='en')))
         self._g.add((self.Resolution, RDFS.label, Literal('Résolution', lang='fr')))
         self._g.add((self.Resolution, RDFS.comment, Literal("Class for resolution outcomes", lang='en')))
+
+        self.Declaration = self.set_uri('Declaration')
+        self._g.add((self.Declaration, RDF.type, SKOS.Concept))
+        self._g.add((self.Declaration, RDFS.label, Literal('Declaration', lang='en')))
+        self._g.add((self.Declaration, RDFS.label, Literal('Déclaration', lang='fr')))
+        self._g.add((self.Declaration, RDFS.comment, Literal("Class for declaration outcomes", lang='en')))
+
+        self.Action = self.set_uri('Action')
+        self._g.add((self.Action, RDF.type, SKOS.Concept))
+        self._g.add((self.Action, RDFS.label, Literal('Action', lang='en')))
+        self._g.add((self.Action, RDFS.label, Literal('Action', lang='fr')))
+        self._g.add((self.Action, RDFS.comment, Literal("Class for action outcomes", lang='en')))
 
         # disjoint statements
         self._g.add((self.ResBod, OWL.disjointWith, self.Event))
@@ -70,14 +82,14 @@ class ResBod:
         self._g.add((self.wasAdoptedBy, RDFS.domain, self.Outcome))
         self._g.add((self.wasAdoptedBy, RDFS.range, self.ResBod))
         self._g.add((self.wasAdoptedBy, OWL.inverseOf, self.hasAdopted))
-        self._g.add((self.wasAdoptedBy, RDFS.comment, Literal('Linking an Outcome and a Responsible Body', lang='en')))
+        self._g.add((self.wasAdoptedBy, RDFS.comment, Literal('Linking an outcome and a Responsible Body', lang='en')))
 
         self.hasAction = self.set_uri("hasAction")
         self._g.add((self.hasAction, RDF.type, OWL.DatatypeProperty))
         self._g.add((self.hasAction, RDFS.label, Literal('has Actions', lang="en")))
         self._g.add((self.hasAction, RDFS.domain, self.Outcome))
         self._g.add((self.hasAction, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasAction, RDFS.comment, Literal('Linking an Outcome and Actions (BlankNode)', lang='en')))
+        self._g.add((self.hasAction, RDFS.comment, Literal('Linking an outcome and Actions (BlankNode)', lang='en')))
 
         self.hasActionText = self.set_uri("hasActionText")
         self._g.add((self.hasActionText, RDF.type,
@@ -93,52 +105,50 @@ class ResBod:
         self._g.add((self.hasEvent, RDFS.label, Literal('a événement', lang='en')))
         self._g.add((self.hasEvent, RDFS.domain, self.ResBod))
         self._g.add((self.hasEvent, RDFS.range, self.Event))
-        self._g.add((self.hasEvent, RDFS.comment, Literal('Linking a Responsible Body to an Event', lang='en')))
+        self._g.add((self.hasEvent, RDFS.comment, Literal('Linking a responsible body to an event', lang='en')))
 
         self.hasEventDate = self.set_uri("hasEventDate")
         self._g.add((self.hasEventDate, RDF.type, OWL.DatatypeProperty))
         self._g.add((self.hasEventDate, RDFS.label, Literal('has Date', lang="en")))
         self._g.add((self.hasEventDate, RDFS.domain, self.Event))
         self._g.add((self.hasEventDate, RDFS.range, XSD.date))
-        self._g.add((self.hasEventDate, RDFS.comment, Literal('Linking an Event and a Responsible Body', lang='en')))
+        self._g.add((self.hasEventDate, RDFS.comment, Literal('Linking an event and a responsible body', lang='en')))
 
         self.hasEventNr = self.set_uri("hasEventNr")
         self._g.add((self.hasEventNr, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasEventNr, RDFS.label, Literal('has Conference Number', lang='en')))
+        self._g.add((self.hasEventNr, RDFS.label, Literal('has conference number', lang='en')))
         self._g.add((self.hasEventNr, RDFS.domain, self.Event))
         self._g.add((self.hasEventNr, RDFS.range, XSD.int))
-        self._g.add((self.hasEventNr, RDFS.comment, Literal('Linking an Event and its Number', lang='en')))
+        self._g.add((self.hasEventNr, RDFS.comment, Literal('Linking an event and its number', lang='en')))
 
         self.hasConsidering = self.set_uri("hasConsidering")
         self._g.add((self.hasConsidering, RDF.type, OWL.DatatypeProperty))
         self._g.add((self.hasConsidering, RDFS.label, Literal('has considering', lang='en')))
         self._g.add((self.hasConsidering, RDFS.domain, self.Outcome))
         self._g.add((self.hasConsidering, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasConsidering, RDFS.comment, Literal('Linking an Outcome and the '
-                                                                'Considering (Blank Node)', lang='en')))
+        self._g.add((self.hasConsidering, RDFS.comment, Literal('Linking an outcome to a considering', lang='en')))
 
         self.hasResolution = self.set_uri("hasResolution")
         self._g.add((self.hasResolution, RDF.type, OWL.DatatypeProperty))
         self._g.add((self.hasResolution, RDFS.label, Literal('has resolution', lang='en')))
         self._g.add((self.hasResolution, RDFS.domain, self.Outcome))
         self._g.add((self.hasResolution, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasResolution, RDFS.comment, Literal('Linking an Outcome and the '
-                                                               'Resolution (Blank Node)', lang='en')))
+        self._g.add((self.hasResolution, RDFS.comment, Literal('Linking an outcome to a resolution', lang='en')))
 
         self.hasConsideringText = self.set_uri("hasConsideringText")
         self._g.add((self.hasConsideringText, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasConsideringText, RDFS.label, Literal('has Considering Text', lang='en')))
+        self._g.add((self.hasConsideringText, RDFS.label, Literal('has considering text', lang='en')))
         self._g.add((self.hasConsideringText, RDFS.domain, self.Outcome))
         self._g.add((self.hasConsideringText, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasConsideringText, RDFS.comment, Literal('Linking the Blank Node'
-                                                                    ' and the Considering Text', lang='en')))
+        self._g.add((self.hasConsideringText, RDFS.comment, Literal('Linking an outcome to '
+                                                                    'its considering text', lang='en')))
 
         self.hasDOI = self.set_uri("hasDOI")
         self._g.add((self.hasDOI, RDF.type, OWL.DatatypeProperty))
         self._g.add((self.hasDOI, RDFS.label, Literal('has DOI', lang='en')))
         self._g.add((self.hasDOI, RDFS.domain, self.Outcome))
         self._g.add((self.hasDOI, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasDOI, RDFS.comment, Literal('Linking an Outcome and a DOI', lang='en')))
+        self._g.add((self.hasDOI, RDFS.comment, Literal('Linking an outcome and its DOI', lang='en')))
 
         self.hasOutcome = self.set_uri("hasOutcome")
         self._g.add((self.hasOutcome, RDF.type, OWL.ObjectProperty))
@@ -146,7 +156,7 @@ class ResBod:
         self._g.add((self.hasOutcome, RDFS.label, Literal('a résultat', lang='fr')))
         self._g.add((self.hasOutcome, RDFS.domain, self.Event))
         self._g.add((self.hasOutcome, RDFS.range, self.Outcome))
-        self._g.add((self.hasOutcome, RDFS.comment, Literal('Linking an Event to an Outcome', lang='en')))
+        self._g.add((self.hasOutcome, RDFS.comment, Literal('Linking an event to an outcome', lang='en')))
 
         self.isOutcomeOf = self.set_uri("isOutcomeOf")
         self._g.add((self.isOutcomeOf, RDF.type, OWL.ObjectProperty))
@@ -154,32 +164,32 @@ class ResBod:
         self._g.add((self.isOutcomeOf, RDFS.label, Literal('est le résultat de', lang='fr')))
         self._g.add((self.isOutcomeOf, RDFS.domain, self.Outcome))
         self._g.add((self.isOutcomeOf, RDFS.range, self.Event))
-        self._g.add((self.isOutcomeOf, RDFS.comment, Literal('Linking an Outcome to an Event', lang='en')))
+        self._g.add((self.isOutcomeOf, RDFS.comment, Literal('Linking an outcome to an Event', lang='en')))
 
         self.hasOutcomeNr = self.set_uri("hasOutcomeNr")
         self._g.add((self.hasOutcomeNr, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasOutcomeNr, RDFS.label, Literal('has Outcome Number', lang='en')))
+        self._g.add((self.hasOutcomeNr, RDFS.label, Literal('has outcome Number', lang='en')))
         self._g.add((self.hasOutcomeNr, RDFS.domain, self.Outcome))
         self._g.add((self.hasOutcomeNr, RDFS.range, XSD.int))
-        self._g.add((self.hasOutcomeNr, RDFS.comment, Literal('Linking an Outcome and its Number', lang='en')))
+        self._g.add((self.hasOutcomeNr, RDFS.comment, Literal('Linking an outcome and its Number', lang='en')))
 
         self.hasOutcomeTitle = self.set_uri("hasOutcomeTitle")
         self._g.add((self.hasOutcomeTitle, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasOutcomeTitle, RDFS.label, Literal('has Outcome Title', lang='en')))
+        self._g.add((self.hasOutcomeTitle, RDFS.label, Literal('has outcome Title', lang='en')))
         self._g.add((self.hasOutcomeTitle, RDFS.domain, self.Outcome))
         self._g.add((self.hasOutcomeTitle, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasOutcomeTitle, RDFS.comment, Literal('Linking an Outcome and its Title', lang='en')))
+        self._g.add((self.hasOutcomeTitle, RDFS.comment, Literal('Linking an outcome and its Title', lang='en')))
 
         self.hasOutcomeType = self.set_uri("hasOutcomeType")
         self._g.add((self.hasOutcomeType, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasOutcomeType, RDFS.label, Literal('has Outcome Type', lang='en')))
+        self._g.add((self.hasOutcomeType, RDFS.label, Literal('has outcome Type', lang='en')))
         self._g.add((self.hasOutcomeType, RDFS.domain, self.Outcome))
         self._g.add((self.hasOutcomeType, RDFS.range, RDFS.Literal))
         self._g.add((self.hasOutcomeType, RDFS.comment, Literal(
-            'Linking an Outcome and its type (Resolution, Recommendation, Declaration, Considering...)', lang='en')))
+            'Linking an outcome and its type (resolution, recommendation, declaration, considering...)', lang='en')))
 
         destpath = APIPATH + 'rb.ttl'
-        self.g.serialize(format='ttl', destination= destpath)
+        self.g.serialize(format='ttl', destination=destpath)
 
     def set_uri(self, name: str) -> URIRef:
         # Utility method

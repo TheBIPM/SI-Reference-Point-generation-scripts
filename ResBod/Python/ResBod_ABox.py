@@ -5,7 +5,7 @@
 # the module imports the Python script 'settings.py' located in a directory above this directory
 # Should this lead to an error when executing the present script (... not found ...) you might need
 # to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI"
+# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
 from rdflib import URIRef, Literal
@@ -27,20 +27,19 @@ BASE_PATH_EN = CGPM_FILES_FOLDER + "meetings-en/"
 PDF.g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
 PDF.g.add((URIRef(ResBod_ns), SKOS.prefLabel, Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
 PDF.g.add((URIRef(ResBod_ns), RDFS.comment,
-           Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their resolutions, decisions, etc (for the moment CGPM only)",
-                   datatype=XSD.string)))
+           Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their resolutions, "
+                   "decisions, etc (for the moment CGPM only)", datatype=XSD.string)))
 PDF.g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
-### 1) CGPM
-##########################
+# 1) CGPM
 
-## create the responsible body "CGPM"
+# create the responsible body "CGPM"
 cgpm_URI = URIRef(ResBod_ns + "CGPM")
-PDF.g.add((URIRef(cgpm_URI),RDF.type, PDF.ResBod))
+PDF.g.add((URIRef(cgpm_URI), RDF.type, PDF.ResBod))
 
 # iterate over the resolutions files
 i = 1
-while i <= 26:
+while i <= 27:
     yaml_filename_fr = BASE_PATH_FR + "meeting-{:02d}.yml".format(i)
     yaml_filename_en = BASE_PATH_EN + "meeting-{:02d}.yml".format(i)
 
@@ -57,7 +56,7 @@ while i <= 26:
         conf_Nr = meeting_fr['metadata']['identifier']
         conf_title_fr = meeting_fr['metadata']['title']
         conf_title_en = meeting_en['metadata']['title']
-        
+
         # attach the Conference to the responsible body
         PDF.g.add((cgpm_URI, PDF.hasEvent, conf_URI))
 
@@ -90,8 +89,6 @@ while i <= 26:
 
             PDF.g.add((cgpm_URI, PDF.hasAdopted, resol_URI))
             PDF.g.add((resol_URI, PDF.wasAdoptedBy, cgpm_URI))
-            
-
             PDF.g.add((resol_URI, RDF.type, PDF.Outcome))
             PDF.g.add((conf_URI, PDF.hasOutcome, resol_URI))
             PDF.g.add((resol_URI, PDF.isOutcomeOf, conf_URI))
@@ -146,10 +143,9 @@ while i <= 26:
                     PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='en')))
 
         # go to next CGPM
-        i += 1
     except FileNotFoundError:
-        print("An error occured for CGPM {}".format(i))
-        i += 1
+        pass  # any files not present are not available
+    i += 1
 
 # serialize the knowledge graph when all CGPMs are covered,         
 PDF.g.serialize(format='turtle', destination=APIPATH + 'cgpm.ttl')
