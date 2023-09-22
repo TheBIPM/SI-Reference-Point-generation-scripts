@@ -44,9 +44,9 @@ while i <= 27:
     yaml_filename_en = BASE_PATH_EN + "meeting-{:02d}.yml".format(i)
 
     try:
-        with open(yaml_filename_fr, '+r') as fr_file:
+        with open(yaml_filename_fr, '+r', encoding="utf8") as fr_file:
             meeting_fr = yaml.safe_load(fr_file)
-        with open(yaml_filename_en, '+r') as en_file:
+        with open(yaml_filename_en, '+r', encoding="utf8") as en_file:
             meeting_en = yaml.safe_load(en_file)
 
         # if both (en and fr) readings were successful, proceed to extract the information on the conference
