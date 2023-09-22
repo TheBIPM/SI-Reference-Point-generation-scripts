@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <title>Constants</title>
+    <title>Defining Constants</title>
 </head>
 <body>
     {% extends 'ParentLayout.html' %}
     {% block main %}
-    <h1>Constants</h1>
+    <h1>Defining Constants</h1>
     {% for constant in constants %}
         <h2><a href="{{constant.Cst_Link}}?lang={{language}}">{{constant.Cst_Label}}</a></h2>
     {% endfor %}
