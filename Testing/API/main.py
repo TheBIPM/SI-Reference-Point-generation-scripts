@@ -1095,10 +1095,10 @@ def displ_prefix(request: Request, sym: str | None = None):
 
 # ----------------------------------------------------------------------------------------
 @app.get("/si-prefixes/")
-def displ_prefixes(request: Request, sym: str | None = None, factor: str | None = None):
+def displ_prefixes(request: Request):
     for param in request.query_params:
         if param not in param_list_prefixes:
-            error_msg = "Parameter " + param + " unkonwn. Allowed parameter: "
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
             for allowed_para in param_list_prefixes:
                 error_msg += allowed_para + ", "
             error_msg = error_msg[:-2]
@@ -1112,33 +1112,37 @@ def displ_prefixes(request: Request, sym: str | None = None, factor: str | None 
         WHERE
         {
             ?SIPrefix si:hasSymbol ?PrefixSymbol ;
-                      skos:prefLabel ?Label ;
-                      si:hasScalingFactor ?ScalingFactor .
-        }"""
-
-    if (sym is not None) and (factor is not None):
-        raise HTTPException(
-            status_code=404,
-            detail=f"Why are you asking me? Do not provide 'ScalingFactor' and 'Symbol' simultaneously.")
-    else:
-        if sym is not None:
-            knows_query = knows_query[:-1] + """FILTER (?PrefixSymbol='""" + sym + """')} """
-        if factor is not None:
-            knows_query = knows_query[:-1] + """FILTER (?ScalingFactor=""" + str(factor) + """ )} """
+                skos:prefLabel ?Label ;
+                si:hasScalingFactor ?ScalingFactor .
+        }
+        
+    """
 
     knows_query += "ORDER By DESC(?ScalingFactor)"
 
     qres = g.query(knows_query)
     responses: List[dict] = []
 
+    server = request.headers['host']
+
+    # remove duplicates and add French label
+    done = []
+    idx = 0
     for element in qres:
-        responses.append(
-            {
-                'Label': element['Label'],
-                'Symbol': element['PrefixSymbol'],
-                'ScalingFactor': element['ScalingFactor']
-            }
-        )
+        if element['PrefixSymbol'] in done:
+            responses[(idx - 1)].update({'Labelfr': element['Label']})
+            idx = 0
+        else:
+            done.append(element['PrefixSymbol'])
+            idx = len(done)
+            responses.append(
+                {
+                    'Label': element['Label'],
+                    'Symbol': element['PrefixSymbol'],
+                    'Factor': element['ScalingFactor'],
+                    'Link': server + '/prefix/' + element['PrefixSymbol']
+                }
+            )
 
     if not responses:
         raise HTTPException(
@@ -1147,7 +1151,34 @@ def displ_prefixes(request: Request, sym: str | None = None, factor: str | None 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'prefixes': responses}
+    elif accept == 'application/ld+json':
+        # create url
+        url = 'https://si-digital-framework.org/si-prefixes/'
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/prefixes.jsonld",
+               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+               {"@base": url}]
+        gph = {"@id": url, "@type": "si:SIPrefix"}
+        gph.update({"prefixes": []})
+        for resp in responses:
+            pfix = {}
+            pfix.update({"name": resp['Label']})
+            pfix.update({"nom": resp['Labelfr']})
+            pfix.update({'symbol': resp['Symbol']})
+            # needed to correctly display factor as numeric value in JSON
+            f = float(resp['Factor'])
+            if 1 < f < 1e+18:
+                pfix.update({'factor': int(f)})
+            else:
+                pfix.update({'factor': f})
+            pfix.update({'datatype': 'xsd:integer'})
+            pfix.update({'url': resp['Link']})
+            gph['prefixes'].append(pfix)
 
+        jld = {
+            "@context": ctx, "@id": url,
+            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return jld
     else:
         return TEMPLATES.TemplateResponse(
             "PrefixesLayout.html",

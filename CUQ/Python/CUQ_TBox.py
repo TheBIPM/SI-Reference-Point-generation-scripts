@@ -193,6 +193,7 @@ class SiElements:
         self.g.add((self.hasDatatype, RDFS.label, Literal("has datatype", lang="en")))
         self.g.add((self.hasDatatype, RDFS.label, Literal("a un type de données", lang="fr")))
         self.g.add((self.hasDatatype, RDFS.domain, self.Constant))
+        self.g.add((self.hasDatatype, RDFS.domain, self.SIPrefix))
         self.g.add((self.hasDatatype, RDFS.range, XSD.anyURI))
 
         # hasValueAsString

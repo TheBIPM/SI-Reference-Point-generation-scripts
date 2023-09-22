@@ -12,15 +12,17 @@
             <tr>
                 <th style="width: 100px;">Symbol</th>
                 <th style="width: 200px;">Factor</th>
-                <th style="width: 300px;">Name</th>
+                <th style="width: 300px;">English Name</th>
+                <th style="width: 300px;">Nom Français</th>
             </tr>
         </thead>
         <tbody>
         {% for prefix in prefixes %}
             <tr>
                 <td><strong>{{ prefix.Symbol }}</strong></td>
-                <td>{{ prefix.ScalingFactor }}</td>
+                <td>{{ prefix.Factor }}</td>
                 <td>{{ prefix.Label }}</td>
+                <td>{{ prefix.Labelfr }}</td>
             </tr>
         {% endfor %}
         </tbody>
