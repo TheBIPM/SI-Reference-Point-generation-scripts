@@ -127,9 +127,9 @@ def formattxt(txt, fmt='html', lvl=0):
             txt = formattxt(txt, fmt, lvl)
     return txt
 
-# crawl through the rows of the XLS file
 
-for row in range(2, sheet.max_row+1):
+# crawl through the rows of the XLS file
+for row in range(2, sheet.max_row + 1):
     identifier = sheet.cell(row, column=1).value
     hidden_label = sheet.cell(row, column=2).value
     label_en = sheet.cell(row, column=3).value
