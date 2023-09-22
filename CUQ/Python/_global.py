@@ -1,6 +1,6 @@
-from CUQ_TBox import SI_Elements
+from CUQ_TBox import SiElements
 
-PDF = SI_Elements()
+PDF = SiElements()
 
 print("Run all A boxes")
 print("===============")
