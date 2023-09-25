@@ -1,0 +1,245 @@
+---
+metadata:
+  title: 81st meeting of the CIPM
+  identifier: '81'
+  date: '1992-10-01'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/81-1992
+pdf: https://www.bipm.org/documents/20126/62491469/CIPM1992.pdf/a76b7bb7-20fb-78bf-68e2-a127eed68b5f
+resolutions:
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: Worldwide recognition of the results of comparisons of measurement standards
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/81-1992/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Proceedings of the 81st CIPM (1992), 1993
+  reference_page: 139
+  approvals:
+  - message: The Comité International des Poids et Mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the increasingly stringent requirements of science, technology
+      and international trade for traceability in measurement at many levels of accuracy;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the existence of regional groups of cooperating national
+      standards laboratories;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the need to have worldwide recognition of the results of
+      comparisons of measurement standards carried out among the laboratories of these
+      regional groups, sorne of which do not participate in comparisons carried out
+      under the auspices of the CIPM;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the role of the Bureau International des Poids et Mesures
+      (BIPM) in carrying out and coordinating worldwide comparisons of standards at
+      the highest level;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the impracticability of the BIPM's working in all fields
+      and at all levels;
+  actions:
+  - type: decides
+    date_effective: '1992-10-01'
+    message: |-
+      _decides_ that in appropriate cases the BIPM carry out, either directly or through members of the Comités Consultatifs, comparisons with one or more of the laboratories of the member nations of the Convention du Mètre participating in regional comparisons so that the results of these comparisons may be interrelated and thereby given wider international recognition;
+
+      and
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: _recommends_ that national laboratories ensure that the BIPM be kept
+      informed of the progress and results of comparisons, particularly those carried
+      out within the regional groups, so that it may publish them or otherwise make
+      reference to them.
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: The need for long-term metrological research
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/81-1992/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Proceedings of the 81st CIPM (1992), 1993
+  reference_page: 140
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering the continual increase in demand for accurate and efficient
+      measurement in science, technology and international trade;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering that the development of improved measurement standards and
+      techniques frequently needs to be carried out weIl in advance of their application
+      in science and industry;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering that these developments can only take place on the basis
+      of a solid foundation of long-term metrological research closely linked to advances
+      in science;
+  actions:
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: recommends that national laboratories continue to undertake long-term
+      metrological research as weIl as to meet the more immediate needs of measurement
+      services;
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: recommends that national laboratories keep the Bureau International des
+      Poids et Mesures infonned as to the results of the work related to fundamental
+      metrology.
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the mise en pratique of the definition of the metre
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/81-1992/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Proceedings of the 81st CIPM (1992), 1993
+  reference_page: 141
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1992-10-01'
+    message: |-
+      *recalling*
+
+      * that in 1983 the 17th Conférence Générale des Poids et Mesures (CGPM) adopted a new definition of the metre;
+      * that in the same year the CGPM invited the Comité International des Poids et Mesures (CIPM)
+      ** to draw up instructions for the practical realization of the metre;
+      ** to choose radiations which can be recommended as standards of wave1ength for the interferometric measurement of length and draw up instructions for their use;
+      ** to pursue studies undertaken to improve these standards and in due course to extend or revise these instructions;
+      * that in response to this invitation CIPM made a number of Recommendations in 1983 concerning the practical realization of the metre (the 'mise en pratique');
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering that science and technology continue to demand improved accuracy
+      in the realization of the metre;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering that since 1983 work in nationallaboratories, BIPM and elsewhere
+      has substantially improved the reproducibility of radiations which are suitable
+      for the practical realization of the metre;
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considering that such work has also substantially reduced the uncertainty
+      in the determined values of the frequencies and wavelengths of some of these
+      radiations;
+  actions:
+  - type: decides
+    date_effective: '1992-10-01'
+    message: "*decides* that the list of recommended radiations given by the CIPM
+      in 1983 (Recommendation 1 (CI-1983)) be replaced by the list of recommended
+      radiations given below.\n\n "
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: |-
+      *LIST OF RECOMMENDED RADIATIONS, 1992*
+
+
+
+      This list replaces the one published in _BIPM Proc.-Verb. Corn. Int. Poids et Mesures_, 1983,*51*, 25-28 and _Metrologia_, 1984, *19*, 165-166.
+
+      In this list, the values of the frequency stem:[f] and of the wavelength _λ_ should be related exactly by the relation _λ_ stem:[f = c], with stem:[c = 299 792 458 "m"/"s"] but the values of _λ_ are rounded.
+
+      The data and analysis used for the compilation of this list are set out in the associated Appendix: Source Data for the List of Recommended Radiations, 1992 and its Annotated Bibliography*.
+
+      It should be noted that for several of the listed radiations, few independent values are available, so that the estimated uncertainties may not, therefore, reflect all sources of variability.
+
+      Each of the listed radiations can be replaced, without degrading the accuracy, by a radiation corresponding to another component of the same transition or by another radiation, when the frequency difference is known with sufficient accuracy. It should be also noted that to achieve the uncertainties given here it is not sufficient just to meet the specifications for the listed parameters. In addition, it is necessary to follow the best good practice concerning methods of stabilization as described in numerous scientific and technical publications. References to appropriate articles, illustrating accepted good practice for a particular radiation, may be obtained by application to a member laboratory of the CCDM, or to the BIPM.
+      *_1. Radiations of Stabilized Lasers_*
+
+      1.1. Absorbing molecule CH~4~, transition stem:["V"_(3)], P (7), component stem:["F"_(2)]^(2)^.
+
+      1.1.1. The values +
+      stem:[f = 88 376 181 600","18 "kHz"] +
+      _λ_ = 3 392 231 397,327 fm +
+      with an estimated relative standard uncertainty of stem:[3 * 10^(-12)] apply to the radiation of a He-Ne laser stabilized to the central component [(7-6) transition] of the resolved hyperfine-structure triplet, the mean of recoil splitting, for effectively stationary molecules, i.e. the values are corrected for second order Doppler shift.
+
+      1.1.2. The values +
+      stem:[f = 88 376 181 600","5 "kHz"] +
+      _λ_ = stem:[3 392 231 397","31 "m"] +
+      with an estimated relative standard uncertainty of stem:[2","3 * 10^(-11)] apply to the radiation of a He-Ne laser stabilized to the centre of the unresolved hyperfine structure of a room temperature methane cell, within or external to the laser, subject to the following conditions:
+
+      * methane pressure ≤ 3 Pa
+      * mean one-way axial intracavity surface power density^+^ ≤ stem:[10^(4) "W" * "m"^(-2)]
+      * radius of wavefront curvature  ≥ stem:[1 "m"]
+      * inequality of power between counter-propagating waves ≤ 5 %
+      * detector placed at the output facing the laser tube.
+
+      \* The appendix referred to above is published in the Report of the 8th meeting of the CCDM (1992).
+
+      1.2. Absorbing atom ^40^Ca, transition ^3^P~1~ - ^1^S~0~; stem:[ sf Delta ]_m_~stem:["J"]~ = 0.
+
+      The values +
+      stem:[f = 455 986 240","5 "MHz"] +
+      _λ_ = 657 459 439,3 fm +
+      with an estimated relative standard uncertainty of stem:[4","5 * 10^(-10)] apply to the radiation of a laser stabilized with a thermal atomic beam.
+
+      1.3. Absorbing molecule ^127^I~2~, transition 8-5, P(10), component a~9~ (or stem:["g"]).
+
+      The values +
+      stem:[f = 468 218 332","4 "MHz"] +
+      _λ_ = 640 283 468,7 fm +
+      with an estimated relative standard uncertainty of stem:[4","5 * 10^(-10)] apply to the radiation of a He-Ne laser stabilized with an internal iodine cell having a cold finger temperature of stem:[(16  +-  1) "°C"] and a frequency modulation width, peak to peak, of stem:[(6  +-  1) "MHz"].
+
+      1.4. Absorbing molecule ^127^I~2~, transition 11-5, R(127), component a~l3~ (or i).
+
+      The values +
+      stem:[f= 473 612 214 705 "kHz"] +
+      _λ_ = 632 991 398,22 fm +
+      with an estimated relative standard uncertainty of stem:[2","5 * 10^(-11)] apply to the radiation of a He-Ne laser with an internal iodine ceIl, subject to the conditions:
+
+      * cell-wall temperature: stem:[(25  +-  5) "°C"]
+      * cold finger temperature: stem:[(15  +-  0","2) "°C"]
+      * frequency modulation width, peak to peak: stem:[(6  +-  0","3) "MHz"]
+      * one-way intracavity beam power+: stem:[(10  +-  5) "mW"], for an absolute value of the power shift coefficient ≤ 1,4 kHzlmW.
+
+      These conditions are by themselves insufficient to ensure that the stated standard uncertainty will be achieved. It is also necessary for the optical and electronic control systems to be operating with the appropriate technical performance. The iodine cell may also be operated under relaxed conditions, leading to the larger uncertainty specified in Appendix M2 of the CCDM Report (1992).
+
+      1.5. Absorbing molecule ^127^I~2~, transition 9-2, R(47), component a~7~ (or o).
+
+      The values +
+      stem:[f = 489 880 354","9 "MHz"] +
+      _λ_ = 611 970 770,0 fm +
+      with an estimated relative standard uncertainty of stem:[3 * 10^(-10)] apply to the radiation of a He-Ne laser stabilized with an iodine ceIl, within or external to the laser, having a cold finger temperature of (- stem:[5  +-  2]) °C.
+
+      1.6. Absorbing molecule ^127^I~2~, transition 17-1, P(62), component a~1~.
+
+      The values +
+      stem:[f = 520 206 808","4 "MHz"] +
+      _λ_ = 576 294 760,4 fm +
+      with an estimated relative standard uncertainty of stem:[4 * 10^(-10)] apply to the radiation of a dye laser (or frequency-doubled He-Ne laser) stabilized with an iodine ceIl, within or external to the laser, having a cold-finger temperature of stem:[(6  +-  2)] °C.
+
+      1.7. Absorbing molecule ^127^I~2~, transition 26-0, R(12), component a~9~
+
+      The values +
+      stem:[f = 551579482","96 "MHz"] +
+      _λ_ = 543516333,1 fm +
+      with an estimated relative standard uncertainty of stem:[2","5 * 10^(-10)] apply to the radiation of a frequency stabilized He-Ne laser with an external iodine cell having a cold-finger temperature of stem:[(0  +-  2)] °c.
+
+      1.8. Absorbing molecule ^127^I~2~, transition 43-0, P(13), component a~3~ (or stem:["s"]).
+
+      The values +
+      stem:[f = 582 490 603","37 "MHz"] +
+      _λ_ = 514 673 466,4 fm +
+      with an estimated relative standard uncertainty of stem:[2","5 * 10^(-10)] apply to the radiation of an Ar^+^ laser stabilized with an iodine cell external to the laser, having a cold-finger temperature of (- stem:[5  +-  2]) °C.
+
+      Note +
+      ^+^ The one-way intracavity beam power is obtained by dividing the output power by the transrnittance of the output mirror.
+      *_2. Radiations of Spectral Lamps_*
+
+      2.1. Radiation corresponding to the transition between the levels 2p~lO~ and 5d~5~ of the atom of ^86^Kr.
+
+      The value +
+      _λ_ = 605 780 210,3 fm +
+      with an estimated overall relative uncertainty of stem:[ +-  4 * 10^(-9)] [equivalent to three times the relative standard uncertainty of stem:[1","3 * 10^(-9)]] applies to the radiation emitted by a lamp operated under the conditions recommended by the CIPM (_BlPM Proc.-Verb. Corn. Int. Poids et Mesures_, 1960, *28*, 71-72 and _BlPM Comptes Rendus lle Conf. Gén. Poids et Mesures_, 1960, 85)].
+
+      2.2. Radiations of atoms ^86^Kr, ^198^Hg and ^114^Cd recommended by the CIPM in 1963 (_BIPM Corn. Cons. Déf. Mètre_, 1962, *3*, 18-19 and _BIPM Proc. Verb. Com. Int. Poids et Mesures_, 1963, *52*, 26-27), with the indicated values for the wavelengths and the corresponding uncertainties.

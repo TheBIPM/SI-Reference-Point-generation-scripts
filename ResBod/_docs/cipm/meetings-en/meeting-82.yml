@@ -1,0 +1,207 @@
+---
+metadata:
+  title: 82nd meeting of the CIPM
+  identifier: '82'
+  date: '1993-09-23'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993
+pdf: https://www.bipm.org/documents/20126/62491497/CIPM1993.pdf/ab51efad-44ad-0b07-76e2-84006721ec3c
+resolutions:
+- dates:
+  - '1993-09-23'
+  subject: CIPM
+  type: recommendation
+  title: Accuracy of primary frequency standards
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM82.pdf/74d3ed82-22b1-ae99-9d1d-05e0b6ae4e03
+  reference_name: Proceedings of the 82nd CIPM (1993), 1994
+  reference_page: 131
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that the accuracy of an increasing number of primary frequency
+      standards is now approaching the level of one part in stem:[10^(14)],
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that new configurations of primary frequency standards have
+      been proposed that appear to have a high potential for accuracy,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that at a level of accuracy of one part in stem:[10^(14)]
+      or higher certain corrections must be made that were previously considered insignificant
+      or not sufficiently weIl known,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that an essential step in establishing confidence in the
+      accuracy of primary standards is the international comparison of independent
+      standards of different designs,
+  actions:
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that different configurations of primary frequency standards
+      be made and studied in detail, along with the established ones, and compared
+      using the best means available,
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that aIl corrections, including those not previously considered
+      significant, be studied in detail and eventually applied,
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that the results of these comparisons, including full accounts
+      of uncertainties, be communicated to the Bureau International des Poids et Mesures.
+- dates:
+  - '1993-09-23'
+  subject: CIPM
+  type: recommendation
+  title: Timing of millisecond pulsars
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM82.pdf/74d3ed82-22b1-ae99-9d1d-05e0b6ae4e03
+  reference_name: Proceedings of the 82nd CIPM (1993), 1994
+  reference_page: 132
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that the stability of the drift -corrected frequency of sorne
+      millisecond pulsars is comparable to the stability of atomic frequency standards
+      for averaging times longer than one year,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that independent data from different pulsars may allow their
+      combination to be used to provide a highly stable scale,
+  actions:
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that radioastronomy observatories already timing millisecond
+      pulsars carry on regular observations and continue the search for new pulsars,
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that other observatories initiate programmes of observations
+      for the timing of millisecond pulsars, aiming at a sub-microsecond measurement
+      noise,
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: recommends that reports on the timing data and data reduction procedures
+      be communicated to the Bureau International des Poids et Mesures noting that
+      privacy of the data can be maintained if desired.
+- dates:
+  - '1993-09-23'
+  subject: CIPM
+  type: recommendation
+  title: Clock comparison by satellite laser techniques
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM82.pdf/74d3ed82-22b1-ae99-9d1d-05e0b6ae4e03
+  reference_name: Proceedings of the 82nd CIPM (1993), 1994
+  reference_page: 133
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the need for long distance time transfer at the highest possible
+      level of accuracy,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that successful time transfer with a precision of 100 ps
+      has been achieved between Western Europe and North America using LASSO (Laser
+      Synchronization from Satellite Orbit) experiment,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that time transfer techniques, such as GPS (Global Positioning
+      System), GLONASS (Global Navigation Satellite System) and two-way satellite
+      time transfer, need an independent means of assessment of their accuracy,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering that solutions have been proposed that may lead to dock synchronization
+      by laser techniques using non-geostationary satellites,
+  actions:
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: _recommends_ that the space agencies consider the installation on their
+      satellites of appropriate equipment for dock comparison by satellite laser techniques.
+- dates:
+  - '1993-09-23'
+  subject: CIPM
+  type: recommendation
+  title: Monitoring the stability of the international prototype of the kilogram
+  identifier: 4
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993/resolution-4
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM82.pdf/74d3ed82-22b1-ae99-9d1d-05e0b6ae4e03
+  reference_name: Proceedings of the 82nd CIPM (1993), 1994
+  reference_page: 134
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the results of the third periodic verification of national
+      prototypes of the kilogram, which showed significant drifts of the national
+      prototypes,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the BIPM (Bureau International des Poids et Mesures) working
+      copies and the official copies with respect to the international prototype,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the fundamental impossibility of drawing definite conclusions
+      from these results about the long-term stability of the international prototype
+      and its copies,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the results of work in many national laboratories aimed at
+      understanding the processes that lead to instability of mass standards,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the progress now being made in various laboratories towards
+      independent methods of monitoring the stability of mass standards,
+  actions:
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: _recommends_ that laboratories pursue their work on these experiments,
+      and develop new ones, with a view to monitoring the stability of the international
+      prototype of the kilogram and in due course opening the way to a new definition
+      of the unit of mass based upon fundamental or atomic constants.
+- dates:
+  - '1993-09-23'
+  subject: CIPM
+  type: recommendation
+  title: Thermodynamic temperature measurements
+  identifier: 5
+  url: https://www.bipm.org/en/committees/ci/cipm/82-1993/resolution-5
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM82.pdf/74d3ed82-22b1-ae99-9d1d-05e0b6ae4e03
+  reference_name: Proceedings of the 82nd CIPM (1993), 1994
+  reference_page: 135
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the importance of accurate measurements of thermodynamic
+      temperature, as emphasized in Recommendation stem:["T" 1] (1987),
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the inconsistencies which still exist in determinations of
+      thermodynamic temperature, especially in the regions near stem:[150 "K"], stem:[700
+      "K"] and at higher temperatures,
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the desirability of extending the range of the International
+      Temperature Scale of 1990 (ITS-90) below its present lower limit of stem:[0","65
+      "K"],
+  - type: considering
+    date_effective: '1993-09-23'
+    message: considering the importance of the national laboratories and the Bureau
+      International des Poids et Mesures having a capability for thermodynamic temperature
+      measurements using a variety of techniques,
+  actions:
+  - type: recommends
+    date_effective: '1993-09-23'
+    message: _recommends_ that national laboratories pursue fundamental research in
+      thermometry, and in particular the measurement of thermodynamic temperature
+      in the ranges referred to above.

@@ -1,0 +1,172 @@
+---
+metadata:
+  title: 78e réunion du CIPM
+  identifier: '78'
+  date: '1989-09-28'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989
+pdf: https://www.bipm.org/documents/20126/62491441/CIPM1989.pdf/da1f123e-c6f4-57af-3b35-113882c32d96
+resolutions:
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Synchronisation des UTC (k) avec UTC
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Comptes rendus du 78e CIPM (1989), 1990
+  reference_page: 23
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant que certains laboratoires fournissent au Bureau international
+      des poids et mesures (BIPM) des valeurs de UTC (k) qui présentent des différences
+      significatives avec UTC,
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant que le fait que les centres horaires soient en bon accord
+      avec UTC facilite les opérations dans de nombreux programmes en astronomie,
+      géodésie, navigation et télécommunications,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommande que les laboratoires, en consultation avec le BIPM, utilisent
+      des méthodes appropriées pour réduire à quelques microsecondes les écarts pouvant
+      exister entre UTC (k) et UTC sans toutefois effectuer d'ajustement en fréquence
+      sur les horloges contribuant au Temps atomique international (TAI).
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Amélioration de l'exactitude en fréquence des étalons primaires
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Comptes rendus du 78e CIPM (1989), 1990
+  reference_page: 23
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant la nécessité d'améliorer l'exactitude de l'intervalle unitaire
+      de l'échelle du Temps atomique international (TAI),
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant le petit nombre d'étalons primaires à césium qui contribuent
+      effectivement au TAI,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommande la construction de nouveaux étalons primaires à césium,
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommande l'amélioration de l'exactitude en fréquence des étalons primaires
+      existants,
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommande l'étude des différences systématiques de fréquence qui existent
+      entre eux.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Coordonnées de référence des antennes
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Comptes rendus du 78e CIPM (1989), 1990
+  reference_page: 24
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: _considérant_ que l'utilisation de coordonnées incohérentes pour les
+      antennes est une importante source d'erreurs dans les comparaisons de temps
+      par satellites utilisant les méthodes unidirectionnelles,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: |-
+      _recommande_ que, dans chaque site, pour de telles comparaisons employées pour le Temps atomique international (TAI) :
+
+      * les coordonnées de référence de l'antenne correspondent à sa position réelle dans le repère de référence terrestre du Service international de la rotation terrestre (IERS),
+      * les coordonnées de référence et les coordonnées opérationnelles utilisées dans le récepteur soient communiquées au Bureau international des poids et mesures (BIPM) et aux laboratoires coopérants,
+      * ni les coordonnées opérationnelles, ni l'emplacement de l'antenne ne soient modifiés sans raison impérative,
+      * si une telle modification apparaît cependant nécessaire, les données suffisantes pour maintenir l'exactitude des comparaisons horaires soient communiquées au BIPM et aux laboratoires coopérants.
+
+      Le CIPM _recommande également_ que des méthodes de positionnementrelatif soient employées pour relier les antennes aux stations de l'IERS,en consultation avec le BIPM.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Installation d'horloges au BIPM
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-4
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Comptes rendus du 78e CIPM (1989), 1990
+  reference_page: 25
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant qu'il est important de maintenir au Bureau international
+      des poids et mesures (BIPM) un haut niveau de compétence dans la coordination
+      des comparaisons de temps qui sont à la base du calcul du Temps atomique international
+      (TAI),
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant qu'une expertise de la pratique des comparaisons de temps
+      au BIPM est d'ores et déjà souhaitable et deviendra indispensable dans l'avenir,
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considérant que les compétences déjà acquises l'ont été grâce aux installations
+      généreusement mises à sa disposition par l'Observatoire de Paris,
+  actions:
+  - type: decides
+    date_effective: '1989-09-28'
+    message: _décide_ que le BIPM étudiera les mesures qu'il faudrait prendre pour
+      disposer sur place d'une ou plusieurs horloges ainsi que de l'équipement nécessaire
+      pour faire des comparaisons de temps, et
+  - type: invites / further invites
+    date_effective: '1989-09-28'
+    message: _invite_, par suite du coût élevé de ces équipements, les laboratoires
+      membres du Comité consultatif pour la définition de la seconde (CCDS) à examiner
+      la possibilité de prêter un tel matériel au BIPM.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: L’Échelle internationale de température de 1990
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-5
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Comptes rendus du 78e CIPM (1989), 1990
+  reference_page: 26
+  considerations:
+  - type: acting
+    date_effective: '1989-09-28'
+    message: |-
+      Le Comité international des poids et mesures (CIPM), conformément à l’invitation formulée par la 18^e^ Conférence générale des poids et mesures en 1987 (Résolution 7), a adopté l’Échelle internationale de température de 1990 (EIT-90) en remplacement de l’Échelle internationale pratique de température de 1968 (EIPT-68).
+
+      Le CIPM *souligne* que, par rapport à l’EIPT-68, l’EIT-90
+
+      * s’étend vers des températures plus basses, jusqu’à stem:[0","65 "K"], et remplace, de ce fait, aussi l’Échelle provisoire de température de 1976 (EPT-76),
+      * est en bien meilleur accord avec les températures thermodynamiques correspondantes,
+      * a une continuité, une précision et une reproductibilité nettement améliorées sur toute son étendue,
+      * comporte des sous-domaines et donne, dans certains domaines, des définitions équivalentes qui facilitent grandement son utilisation.
+
+      Le CIPM *note* de plus, que le texte de l’EIT-90 sera accompagné de deux documents, _Supplementary Information for the ITS-90_ et _Techniques for Approximating the ITS-90_, qui seront publiés par le Bureau international des poids et mesures et remis à jour périodiquement.
+
+      Le CIPM *recommande*
+
+      * que l’EIT-90 soit mise en application le 1^er^ janvier 1990,
+      * et que, à la même date, l’EIPT-68 et l’EPT-76 soient abrogées.
+  actions: []
+  notes: Le kelvin a été redéfini par la CGPM à sa 26^e^ réunion en 2018 (Résolution
+    1).

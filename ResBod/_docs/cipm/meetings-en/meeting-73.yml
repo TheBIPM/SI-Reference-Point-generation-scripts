@@ -1,0 +1,42 @@
+---
+metadata:
+  title: 73rd meeting of the CIPM
+  identifier: '73'
+  date: '1984-10-18'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/73-1984
+pdf: https://www.bipm.org/documents/20126/59880143/CIPM1984.pdf/cd166448-3d35-a0b4-b73a-01c39c3e3fe1
+resolutions:
+- dates:
+  - '1984-10-18'
+  subject: CIPM
+  type: recommendation
+  title: Concerning the sievert
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/73-1984/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM73.pdf/e451c172-0022-f324-b85e-436a7ae61384
+  reference_name: Proceedings of the 73rd CIPM (1984), 1985
+  reference_page: 31
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1984-10-18'
+    message: "*considering* the confusion which continues to exist on the subject
+      of Resolution 5, approved by the 16th Conférence Générale des Poids et Mesures
+      (1979),"
+  actions:
+  - type: decides
+    date_effective: '1984-10-18'
+    message: |-
+      *decides* to introduce the following explanation in the brochure “Le Système International d'Unités (SI)”:
+
+      The quantity dose equivalent stem:[H] is the product of the absorbed dose stem:[D] of ionizing radiation and the dimensionless factors stem:[Q] (quality factor) and stem:[N] (product of any other multiplying factors) stipulated by the International Commission on Radiological Protection:
+
+      stem:[H = Q * N] · stem:[D].
+
+
+
+      Thus, for a given radiation, the numerical value of stem:[H] in joules per kilogram may differ from that of stem:[D] in joules per kilogram depending upon the values of stem:[Q] and stem:[N]. In order to avoid any risk of confusion between the absorbed dose stem:[D] and the dose equivalent stem:[H], the special names for the respective units should be used, that is, the name gray should be used instead of joules per kilogram for the unit of absorbed dose stem:[D] and the name sievert instead of joules per kilogram for the unit of dose equivalent stem:[H].
+  notes: The CIPM, in 2002, decided to change the explanation of the quantity dose
+    equivalent in the SI Brochure (Recommendation 2).

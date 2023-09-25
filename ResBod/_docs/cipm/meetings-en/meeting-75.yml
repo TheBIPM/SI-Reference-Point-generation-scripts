@@ -1,0 +1,83 @@
+---
+metadata:
+  title: 75th meeting of the CIPM
+  identifier: '75'
+  date: '1986-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/75-1986
+pdf: https://www.bipm.org/documents/20126/62491413/CIPM1986.pdf/af99a0a7-f254-6c33-b969-0679b6602def
+resolutions:
+- dates:
+  - '1986-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Expression des incertitudes dans les travaux effectués sous les auspices
+    du CIPM
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/75-1986/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM75.pdf/cc2f0e27-c40c-814e-7662-03ac4fab9e91
+  reference_name: Proceedings of the 75th CIPM (1986), 1987
+  reference_page: 36
+  approvals:
+  - message: Le Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1986-10-16'
+    message: _considérant_ la Recommandation INC-l (1980) adoptée par le Groupe de
+      travail sur l'expression des incertitudes en 1980 et la Recommandation 1 (CI-1981)
+      adoptée par le CIPM en 1981 sur le même sujet,
+  - type: considering
+    date_effective: '1986-10-16'
+    message: _considérant_ que certains membres des comités consultatifs peuvent souhaiter
+      des éclaircissements sur ces Recommandations pour les besoins des travaux qui
+      leur incombent, en particulier pour les comparaisons internationales,
+  - type: noting
+    date_effective: '1986-10-16'
+    message: _prend acte_ de l'existence d'un groupe de travail de l'Organisation
+      Internationale de Normalisation (ISO), groupe commun à l'ISO, à l'Organisation
+      Internationale de Métrologie Légale et à la Commission Électrotechnique Internationale,
+      auquel collabore le CIPM et qui traite des applications particulières visées
+      par le paragraphe 5 de la Recommandation INC-l(1980), et entre autres des applications
+      qui ont une portée commerciale,
+  actions:
+  - type: requests
+    date_effective: '1986-10-16'
+    message: _demande_ à tous les partIcIpants aux comparaisons internationales et
+      aux autres travaux effectués sous les auspices du CIPM et de ses Comités Consultatifs
+      de suivre les directives données au paragraphe 4 de la Recommandation INC-l
+      (1980) et de donner avec leurs résultats l'incertitude composée résultant des
+      composantes de type stem:["A"] et de type B sous la forme d'un écart-type.
+- dates:
+  - '1986-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Analyse des résultats des comparaisons internationales
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/75-1986/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM75.pdf/cc2f0e27-c40c-814e-7662-03ac4fab9e91
+  reference_name: Proceedings of the 75th CIPM (1986), 1987
+  reference_page: 37
+  approvals:
+  - message: Le Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1986-10-16'
+    message: _considérant_ l'importance croissante de l'uniformité des étalons et
+      des mesures physiques pour le commerce international,
+  - type: considering
+    date_effective: '1986-10-16'
+    message: _considérant_ que les comparaisons internationales, en mettant en jeu
+      une grande variété de mesures effectuées à l'initiative de ses Comités Consultatifs
+      sous la responsabilité du CIPM, constituent le moyen le plus direct pour mettre
+      en évidence la concordance entre les étalons de mesure des différents laboratoires
+      dans le monde entier,
+  - type: considering
+    date_effective: '1986-10-16'
+    message: _considérant_ que les résultats des comparaisons internationales organisées
+      par les Comités Consultatifs sont souvent présentés sans commentaires,
+  actions:
+  - type: recommends
+    date_effective: '1986-10-16'
+    message: _recommande_ que les Comités Consultatifs et leurs Groupes de travail
+      attirent à l'avenir explicitement l'attention sur toute conclusion objective
+      que l'on peut tirer de ces comparaisons.

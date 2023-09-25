@@ -1,0 +1,343 @@
+---
+metadata:
+  title: 86th meeting of the CIPM
+  identifier: '86'
+  date: '1997-09-25'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/86-1997
+pdf: https://www.bipm.org/documents/20126/62491525/CIPM1997.pdf/f1d737c2-6db1-f40a-ba02-be6a44491166
+resolutions:
+- dates:
+  - '1997-09-25'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the practical realization of the definition of the metre
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/86-1997/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM86.pdf/d1ab0666-1f08-8419-98ce-530336ad5a52
+  reference_name: Proceedings of the 86th CIPM (1997), 1998
+  reference_page: 243
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: |-
+      *recalling*
+
+      * that in 1983 the 17th Conférence Générale des Poids et Mesures (CGPM) adopted a new definition of the metre;
+      * that in the same year the CGPM invited the Comité International des Poids et Mesures (CIPM)
+      ** to draw up instructions for the practical realization of the metre,
+      ** to choose radiations which can be recommended as standards of wavelength for the interferometric measurement of length and draw up instructions for their use,
+      ** to pursue studies undertaken to improve these standards and in due course to extend or revise these instructions;
+
+      * that in response to this invitation the CIPM adopted Recommendation 1 (CI-1983) (_mise en pratique_ of the definition of the metre) to the effect:
+      ** that the metre should be realized by one of the following methods:
+      [type=a]
+      *** by means of the length stem:[l] of the path travelled in vacuum by a plane electromagnetic wave in a time stem:[t]; this length is obtained from the measured time stem:["t"], using the relation stem:[l = c_(0)] • stem:[t] and the value of the speed of light in vacuum stem:[c_(0) = 299 792 458 "m"/"s"],
+      *** by means of the wavelength in vacuum _λ_ of a plane electromagnetic wave of frequency stem:[f]; this wavelength is obtained from the measured frequency f using the relation _λ_ = stem:[c_(0)/f] and the value of the speed of light in vacuum stem:[c_(0) = 299 792 458 "m"/"s"],
+      *** by means of one of the radiations from the list below, whose stated wavelength in vacuum or who se stated frequency can be used with the uncertainty shown, provided that the given specifications and accepted good practice are followed;
+
+      ** that in all cases any necessary corrections be applied to take account of actual conditions such as diffraction, gravitation or imperfection in the vacuum;
+
+      * that the CIPM had already recommended a li st of radiations for this purpose;
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: "*recalling* also that in 1992 the CIPM revised the practical realization
+      of the definition of the metre;"
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considering that science and technology continue to demand improved accuracy
+      in the realization of the metre;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considering that since 1992 work in nationallaboratories, in the BIPM
+      and elsewhere has identified new radiations and methods for their realization
+      which lead to lower uncertainties;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considering such work has also substantially reduced the uncertainty
+      in the determined value of the frequency and wavelength in vacuum of one of
+      the previously recommended radiations;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considering that a revision of the list of recommended radiations is
+      desirable for many applications, which incIude not only the direct realization
+      of the metre by means of optical interferometry for practicallength measurement,
+      but also spectroscopy, atomic and molecular physics and the determination of
+      fundamental physical constants;
+  actions:
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: |-
+      *recommends*
+
+      * that the li st of recommended radiations given by the CIPM in 1992 (Recommendation 3 (CI-1992) be replaced by the list of radiations given below;
+      * that to the rules for the realization of the metre the following note be added conceming general relativity: +
+       In the context of general relativity, the metre is considered a unit of proper length. Its definition, therefore, applies only within a spatial extent sufficiently small that the effects of the non-uniformity of the gravitational field can be ignored. In this case, the effects to be taken into account are those of special relativity only. The local methods for the realization of the metre recommended in b) and c) pro vide the proper metre but not necessarily that given in a). Method a) should, therefore, be restricted to lengths 1 which are sufficiently short for the effects predicted by general relativity to be negligible with respect to the uncertainties of realization. For advice on the interpretation of measurements in which this is not the case, see the report of the CCDS working group on the application of general relativity to metrology (Application of general relativity to metrology, _Metrologia_, 1997, *34*,261-290).
+
+      Note. Current practice is to use stem:[c_(0)] to denote the speed oflight in vacuum (ISO 31). In the original Recommendation of 1983, the symbol stem:[c] was used for this purpose.
+
+
+
+      *CIPM LIST OF APPROVED RADIATIONS +
+      FOR THE PRACTICAL REALIZATION OF THE METRE, 1997: +
+      FREQUENCIES AND VACUUM WAVELENGTHS*
+
+
+
+      This list replaces those published in _BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1983,*51*,25-28,1992,60,141-144 and _Metrologia_, 1984,*19*, 165-166, 1993/94,*30*,523-541.
+
+      In this list, the values of the frequency stem:[f] and of the vacuum wavelength _λ_ should be related exactly by the relation _λ__f_ = stem:[c_(0)], with stem:[c_(0) = 299 792 458 "m"/"s"], but the values of _λ_ are rounded.
+
+      The data and analysis used for the compilation of this list are set out in the associated Appendix: Source data for the list of recommended radiations, 1997 and its Annotated bibliography.
+
+      It should be noted that for several of the listed radiations, few independent values are available, so the estimated uncertainties may not reflect aU sources of variability.
+
+      Each of the listed radiations can be replaced, without degrading the accuracy, by a radiation corresponding to another component of the same transition or by another radiation, when the frequency difference is known with sufficient accuracy. It should be also noted that to achieve the uncertainties given here it is not sufficient just to meet the specifications for the listed parameters. In addition, it is necessary to foUow the best good practice conceming methods of stabilization as described in numerous scientific and technical publications. References to appropriate articles, illustrating accepted good practice for a particular radiation, may be obtained by application to a member laboratory of the CCDM^(1)^ or to the BIPM.
+
+      ^(1)^ At its 1997 meeting, the CIPM changed the name of the Consultative Committee for the Definition of the Metre (CCDM) to Consultative Committee for Length (CCL).
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: |-
+      *1 Recommended radiations of stabilized lasers*
+      *1.1* Absorbing atom stem:[""_(1) "H"], IS-2S, two-photon transition
+
+      The values +
+      stem:[f = 1 233 030 706 593.7 "kHz"] +
+      _λ_ = 243 134 624.6260 fm +
+      with a relative standard uncertainty of stem:[8.5 * 10^(-13)] apply to radiation stabilized to the two-photon transition in a cold hydrogen beam, corrected to zero laser power, and for atoms which are effectively stationary, i.e. the values are corrected for second-order Doppler shift.
+
+      Other hydrogen absorbing transitions may be similarly used, and are given in Appendix M 3 to the CCDM Report (1997).
+      *1.2* Absorbing molecule ^127^I~2~, transition 43-0, P(13), component a~3~ (or stem:["s"])
+
+      The values +
+      stem:[f = 582 490 603.37 "MHz"] +
+      _λ_ = 514 673 466.4 fm +
+      with a relative standard uncertainty of stem:[2.5 * 10^(-10)] apply to the radiation of an Ar^+^ laser stabilized with an iodine cell external to the laser, having a coldfinger temperature of stem:[(-5  +-  2) "°C"]^(2)^.
+
+      ^(2)^ For the specification of operating conditions, such as temperature, modulation width and laser power, the symbols stem:[ +- ] refer to a tolerance, not an uncertainty.
+      *1.3* Absorbing molecule ^127^I~2~, transition 32-0, R(56), component a~lO~
+
+      The values +
+      stem:[f = 563 260 223.48 "MHz"] +
+      _λ_ = 532 245 036.14 fm +
+      with a relative standard uncertainty of stem:[7 * 10^(-11)] apply to the radiation of a frequency-doubled Nd:YAG laser, stabilized with an iodine cell external to the laser, having a cold-finger temperature between stem:[-10 "°C"] and -20 °C.
+
+      Other ^127^I~2~ absorbing transitions close to this transition may also be used by making reference to the following frequency differences, for which the standard uncertainty is stem:[u_(c) = 2 "kHz"].
+
+      Wavelengths for ^127^I~2~ transitions
+
+      |===
+      | Transition | Frequency difference
+
+      | x | [stem:[f](x) - stem:[f](32-0, R(56), a~lO~)]/stem:["kHz"]
+      | 32-0, R(57), a~1~ | -50 946 880.4
+      | 32-0, P(54), a~1~ | -47 588 892.5
+      | 35-0, P(119), a~1~ | -36 840 161.5
+      | 33-0, R(86), a~1~ | -32 190 404.0
+      | 34-0, R(106), a~1~ | -30 434 761.5
+      | 36-0, R(134), a~1~ | -17 173 680.4
+      | 33-0, P(83), a~21~ | -15 682 074.1
+      | 32-0, P(56), a~10~ | 0
+      | 32-0, P(53), a~1~ | +2 599 708.0
+
+      |===
+
+      Here, stem:[f](x) represents the frequency of the transition denoted x and stem:[f](32-0, R(56), a~lO~) the frequency of the reference transition.
+      *1.4* Absorbing molecule ^127^I~2~, transition 26-0, R(12), component a~9~
+
+      The values +
+      stem:[f = 551 579 482.96 "MHz"] +
+      _λ_ = 543 516 333.1 fm +
+      with a relative standard uncertainty of stem:[2.5 * 10^(-10)] apply to the radiation of a frequency stabilized He-Ne laser with an external iodine cell having a coldfinger temperature of stem:[(0  +-  2)] °C.
+      *1.5* Absorbing molecule ^127^I~2~, transition 9-2, R(47), component a~7~ (or 0)
+
+      The values +
+      stem:[f = 489 880 354.9 "MHz"] +
+      _λ_ = 611 970770.0 fm +
+      with a relative standard uncertainty of stem:[3 * 10^(-10)] apply to the radiation of a HeNe laser stabilized with an iodine ceIl, within or external to the laser, having a cold-finger temperature of stem:[(-5  +-  2)] °C.
+      *1.6* Absorbing molecule ^127^I~2~, transition 11-5, R(127), component a~13~ (or i)
+
+      The values +
+      stem:[f = 473 612 214 705 "kHz"] +
+      _λ_ = 632 991 398.22 fm +
+      with a relative standard uncertainty of stem:[2.5 * 10^(-11)] apply to the radiation of a He-Ne laser with an internaI iodine cell, stabilized using the third harmonie detection technique, subject to the conditions :
+
+      * ceIl-waIl temperature stem:[(25  +-  5)] °C;
+      * cold-finger temperature stem:[(15  +-  0.2)] °C;
+      * frequency modulation width, peak to peak stem:[(6  +-  0.3)] MHz;
+      * one-way intracavity beam power (i.e., the output power divided by the transmittance of the output mirror) stem:[(10  +-  5) "mW"] for an absolute value of the power shift coefficient ≤ stem:[1.4 "kHz"/"m"] W.
+
+      These conditions are by themselves insufficient to ensure that the stated standard uncertainty will be achieved. It is also necessary for the optical and electronic control systems to be operating with the appropriate technical performance. The iodine cell may also be operated under relaxed conditions, leading to the larger uncertainty specified in Appendix M 2 of the CCDM Report (1997).
+      *1.7* Absorbing molecule ^127^I~2~, transition 8-5, P(10), component a~9~ (or stem:["g"])
+
+      The values +
+      stem:[f = 468 218 332.4 "MHz"] +
+      _λ_ = 640 283 468.7 fm +
+      with a relative standard uncertainty of stem:[4.5 * 10^(-10)] apply to the radiation of a He-Ne laser stabilized with an internaI iodine cell having a cold-finger temperature of stem:[(16  +-  1) "°C"] and a frequency modulation width, peak to peak, of stem:[(6  +-  1) "MHz"].
+      *1.8* Absorbing atom ^40^Ca, transition ^1^S~0~ - ^3^P~1~, stem:[ sf Delta ]_m_~stem:["J"]~ = O.
+
+      The values +
+      stem:[f = 455 986 240 494.15 "kHz"] +
+      _λ_ = 657 459 439.2917 fm +
+      with a relative standard uncertainty of stem:[6 * 10^(-13)] apply to the radiation of a laser stabilized to Ca atoms. The values correspond to the mean frequency of the two recoil-split components for atoms which are effectively stationary, i.e. the values are corrected for second-order Doppler shift.
+      *1.9* Absorbing ion ^stem:[88^(Sr)]+^, transition stem:[5^(2)]S~1/2~ - stem:[4^(2)]D~5/2~
+
+      The values +
+      stem:[f = 444 779 044.04 "MHz"] +
+      _λ_ = 674 025 590.95 fm +
+      with a relative standard uncertainty of stem:[1.3 * 10^(-10)] apply to the radiation of a laser stabilized to the transition observed with a trapped and cooled strontium ion. The values correspond to the centre of the Zeeman multiplet.
+      *1.10* Absorbing atom ^85^Rb, 5S~1/2~ stem:[(F= 3) - 5]D~5/2~ stem:[(F= 5)], two-photon transition
+
+      The values +
+      stem:[f = 385 285 142 378 "kHz"] +
+      _λ_ = 778 105 421.22 fm +
+      with a relative standard uncertainty of stem:[1.3 * 10^(-11)] apply to the radiation of a laser stabilized to the centre of the two-photon transition. The values apply to a rubidium cell at a temperature below stem:[100 "°C"], are corrected to zero laser power, and for second-order Doppler shift.
+
+      Other rubidium absorbing transitions may also be used, and are given in Appendix M 3 to the CCDM Report (1997).
+      *1.11* Absorbing molecule CH~4~, transition v~3~, P(7), component stem:["F"_(2)]^(2)^
+
+      1.11.1 The values +
+      stem:[f = 88 376 181 600.18 "kHz"] +
+      _λ_ = 3 392 231 397.327 fm +
+      with a relative standard uncertainty of stem:[3 * 10^(-12)] apply to the radiation of a He-Ne laser stabilized to the central component [(7-6) transition] of the resolved hyperfine-structure triplet. The values correspond to the mean frequency of the two recoil-split components for molecules which are effectively stationary, i.e. the values are corrected for second-order Doppler shift.
+
+      1.11.2 The values +
+      stem:[f = 88 376 181 600.5 "kHz"] +
+      _λ_ = 3 392 231 397.31 fm +
+      with a relative standard uncertainty of stem:[2.3 * 10^(-11)] apply to the radiation of a He-Ne laser stabilized to the centre of the unresolved hyperfine-structure of a methane ceIl, within or extemal to the laser, held at room temperature and subject to the following conditions:
+
+      * methane pressure ≤ 3 Pa;
+      * mean one-way intracavity surface power density (i.e., the output power density divided by the transmittance of the output mirror) ≤ stem:[10^(4)] Wm^-2^;
+      * radius of wavefront curvature ≥ 1 m;
+      * inequality of power between counter-propagating waves ≤ 5 %;
+      * servo referenced to a detector placed at the output facing the laser tube.
+      *1.12* Absorbing molecule OsO~4~, transition in coincidence with the stem:[""_(12) "C"^(16)]O~2~, R(12) laser line
+
+      The values +
+      stem:[f = 29 096 274 952.34 "kHz"] +
+      _λ_ = 10 303 465 254.27 fm +
+      with a relative standard uncertainty of stem:[6 * 10^(-12)] apply to the radiation of a CO~2~ laser stabilized with an extemal OsO~4~ cell at a pressure below 0.2 Pa.
+
+      Other transitions may also be used, and are given in Appendix M 3 of the CCDM Report (1997).
+      *2 Recommended values for radiations of spectral lamps and other sources*
+      *2.1* Radiation corresponding to the transition between the levels 2p~10~ and 5d~5~ of the atom of ^86^Kr
+
+      The value _λ_ = 605 780 210.3 fm +
+      with a relative expanded uncertainty^(3)^, stem:[U = ku_(c) (k = 3)], of stem:[4 * 10^(-9)] [equal to three times the relative standard uncertainty of stem:[1.3 * 10^(-9)]] , applies to the radiation emitted by a discharge lamp operated under the conditions recommended by the CIPM in 1960 (_BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1960,*28*, 71-72 and _Comptes Rendus stem:[11^(e)] Conf. Gén. Poids et Mesures_, 1960, *85*). These are as follows :
+
+      The radiation of ^86^Kr is obtained by means of a hot cathode discharge lamp containing ^86^Kr, of a purity not less than 99 %, in sufficient quantity to assure the presence of solid krypton at a temperature of stem:[64 "K"], this lamp having a capillary with the following characteristics: inner diameter from stem:[2 "mm"] to stem:[4 "mm"], wall thickness about stem:[1 "mm"].
+
+      It is estimated that the wavelength of the radiation emitted by the positive column is equal, to within 1 part in stem:[10^(8)], to the wavelength corresponding to the transition between the unperturbed levels, when the following conditions are satisfied:
+
+      . the capillary is observed end-on from the side closest to the anode;
+      . the lower part of the lamp, inc1uding the capillary, is immersed in a cold bath maintained at a temperature within one degree of the triple point of nitrogen;
+      . the current density in the capillary is stem:[(0.3  +-  0.1) "A"/"cm"^(2)].
+
+      ^(3)^ The uncertainty quoted in the 1960 document was stem:[1 * 10^(-8)] and was subsequently improved to stem:[4 * 10^(-9)] (_BIPM Com. Cons. Déf. Mètre_, 1973,*5*, M 12).
+      *2.2* Radiations for atoms of ^86^Kr, ^198^Hg and ^114^Cd
+
+      In 1963 the CIPM (_BIPM Com. Cons. Déf. Mètre_, 1962,*3*,18-19 and _BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1963,*52*,26-27) specified values for the vacuum wavelengths, _λ_, operating conditions, and the corresponding uncertainties, for certain transitions in ^86^Kr, ^198^Hg and ^114^Cd.
+
+      Vacuum wavelengths, _λ_, for ^86^Kr transitions
+
+      |===
+      | Transition | _λ_/pm
+
+      | 2P9 - 5d'~4~ | 645 807.20
+
+      | 2P8 - 5d~4~ | 642 280.06
+
+      | lS3 - 3P~10~ | 565 112.86
+
+      | 1s4 - 3P~8~ | 450 361.62
+
+      |===
+
+      For ^86^Kr, the above values apply, with a relative uncertainty of stem:[2 * 10^(-8)], to radiations emitted by a lamp operated under conditions similar to those specified in (2.1).
+
+      Vacuum wavelengths, _λ_, for ^198^Hg transitions
+
+      |===
+      | Transition | _λ_/pm
+
+      | stem:[6^(1)]P~1~ - stem:[6^(1)]D~2~ | 579 226.83
+      | stem:[6^(1)]P~1~ - stem:[6^(3)]D~2~ | 577 119.83
+      | stem:[6^(3)]P~2~ - stem:[7^(3)]S~1~ | 546 227.05
+      | stem:[6^(3)]P~1~ - stem:[7^(3)]S~1~ | 435 956.24
+
+      |===
+
+      For ^198^Hg, the above values apply, with a relative uncertainty of stem:[5 * 10^(-8)], to radiations emitted by a discharge lamp when the following conditions are met:
+
+      * the radiations are produced using a discharge lamp without electrodes containing ^198^Hg, of a purity not less than 98 %, and argon at a pressure from stem:[0.5 "mm"] Hg to stem:[1.0 "mm"] Hg (66 Pa to 133 Pa);
+      * the internaI diameter of the capillary of the lamp is about stem:[5 "mm"], and the radiation is observed transversely;
+      * the lamp is excited by a high-frequency field at a moderate power and is maintained at a temperature less than 10 °C;
+      * it is preferred that the volume of the lamp be greater than stem:[20 "cm"^(3)].
+
+      Vacuum wavelengths, _λ_, for ^114^Cd transitions
+
+      |===
+      | Transition | _λ_/pm
+
+      | stem:[5^(1)]p~1~ - stem:[5^(1)]D~2~ | 644 024.80
+      | stem:[5^(3)]P~2~ - stem:[6^(3)]S~1~ | 508 723.79
+      | stem:[5^(3)]P~1~ - stem:[6^(3)]S~1~ | 480 125.21
+      | stem:[5^(3)]P~0~ - stem:[6^(3)]S~1~ | 467 945.81
+
+      |===
+
+      For ^114^Cd, the above values apply, with a relative uncertainty of stem:[7 * 10^(-8)], to radiations emitted by a discharge lamp under the following conditions:
+
+      * the radiations are generated using a discharge lamp without electrodes, containing ^114^Cd of a purity not less than 95 %, and argon at a pressure of about stem:[1 "mm"] Hg (133 Pa) at ambient temperature;
+      * the internaI diameter of the capillary of the lamp is about stem:[5 "mm"], and the radiation is observed transversely;
+      * the lamp is excited by a high-frequency field at a moderate power and is maintained at a temperature such that the green line is not reversed.
+
+      Note. The uncertainties quoted throughout Section 2.2 are judged to correspond to relative expanded uncertainties stem:[U = ku_(c) (k = 3)], equal to three times the relative combined standard uncertainties.
+      *2.3* Absorbing molecule ^127^I~2~, transition 17-1, P(62) component a~l~, as recommended by the CIPM in 1992 (_BIPM Com. Cons. Déf. Mètre_, 1992,*8*, M18 and M137, and _Mise en Pratique_ of the Definition of the Metre (1992), _Metrologia_, 1993/94,*30*,523-541).
+
+      The values +
+      stem:[f= 520 206 808.4 "MHz"] +
+      _λ_ = 576 294 760.4 fm +
+      with a relative standard uncertainty of stem:[4 * 10^(-10)], apply to the radiation of a dye laser (or frequency-doubled He-Ne laser) stabilized with an iodine ceIl, within or external to the laser, having a cold-finger temperature of stem:[(6  +-  2)] °C.
+- dates:
+  - '1997-09-25'
+  subject: CIPM
+  type: recommendation
+  title: Metrology in chemistry
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/86-1997/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM86.pdf/d1ab0666-1f08-8419-98ce-530336ad5a52
+  reference_name: Proceedings of the 86th CIPM (1997), 1998
+  reference_page: 253
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: |-
+      *recalling* Resolution 7 of the 20th Conférence Générale des Poids et Mesures on metrology in chemistry,
+
+      considering
+
+      * the world-wide development of trade agreements under the World Trade Organization,
+      * the need to the eliminate metrology-related technical barriers to trade,
+      * the need for agreements on mutual recognition and other forms of recognition if measurements are to be traceable from one country to another,
+
+      considering also
+
+      * that many environmental and public health decisions are based on measurements in chemistry,
+      * that the development of worldcwide traceability is still far from complete for measurements in chemistry,
+  actions:
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: recommends that national metrology institutes continue to initiate and
+      coordinate national actIvltIes in the field of metrology in chemistry, in close
+      cooperation with other relevant bodies,
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: recommends that national metrology institutes work, in collaboration
+      with the Consultative Committee for Amount of Substance, to define the areas
+      of priority and essential international comparisons which are key to the traceability
+      of measurements in chemistry, both world-wide and within regions.

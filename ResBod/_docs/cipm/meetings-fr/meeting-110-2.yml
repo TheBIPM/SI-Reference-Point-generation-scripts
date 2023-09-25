@@ -1,0 +1,238 @@
+---
+metadata:
+  title: 110e réunion du CIPM (Partie II) (en-ligne)
+  identifier: 110-2
+  date: '2021-10-20'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+pdf: https://www.bipm.org/documents/20126/71151685/CIPM2021-Session-II-FR.pdf/763fe733-c99d-7c6f-b6d7-d42752dfab3b
+resolutions:
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-14 (2021)
+  identifier: 110-14
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Meetings
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: approuve les procès-verbaux de la première partie de la 110^e^ session
+      du CIPM.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-15 (2021)
+  identifier: 110-15
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Relations internationales
+  considerations:
+  - type: noting
+    date_effective: '2021-10-20'
+    message: note la décision prise par correspondance le 16 juillet 2021 de conclure
+      un protocole d’accord entre le BIPM et CODATA fondé sur le projet d’accord communiqué.
+  actions: []
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-16 (2021)
+  identifier: 110-16
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Membership
+  - Internal rules
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: révise le document « Critères et procédure pour l’élection du CIPM »
+      afin de faire concorder la Section stem:["C"] (page 5) avec la Résolution 2
+      adoptée par la CGPM à sa 25^e^ réunion (2014) en indiquant que la Commission
+      pour l’élection du CIPM est composée de neuf représentants d’États Membres (et
+      non sept).
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-17 (2021)
+  identifier: 110-17
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Etats Membres et Associés
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: décide, en se fondant sur les critères qu’il a précédemment adoptés,
+      qu’il serait approprié pour le Grand-Duché de Luxembourg d’accéder à la Convention
+      du Mètre. Le directeur du BIPM informera le Grand-Duché de Luxembourg de cette
+      décision, en lui rappelant la Résolution 4 « Sur le statut d’État Associé à
+      la Conférence générale » adoptée par la CGPM à sa 24^e^ réunion, ainsi que les
+      implications vis-à-vis de l’augmentation de sa souscription si le Grand-Duché
+      de Luxembourg choisissait de rester Associé à la CGPM.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-18 (2021)
+  identifier: 110-18
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: |-
+      À la suite des recommandations émises par la Commission consultative sur la Caisse de retraite (CCCR) le 7 septembre 2020 et par le Sous-comité du CIPM sur les finances lors de sa réunion du 6 octobre 2021, le CIPM décide d’autoriser en 2021 un transfert exceptionnel de 3 millions d’euros des fonds non réservés à la Caisse de retraite.
+
+      Le CIPM décide par ailleurs d’examiner la possibilité d’effectuer un autre transfert exceptionnel en 2022, après la publication du rapport sur les états financiers audités de 2021 et l’élaboration d’un plan financier à long terme pour le BIPM.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-19 (2021)
+  identifier: 110-19
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: À la suite de la recommandation du Sous-comité du CIPM sur les finances,
+      le CIPM approuve le budget proposé par le directeur du BIPM pour 2022.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-20 (2021)
+  identifier: 110-20
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - SI
+  - SCs and WGs
+  - Transformation numérique
+  - CCs et WGs
+  considerations:
+  - type: noting
+    date_effective: '2021-10-20'
+    message: prend note du rapport du CCU sur les termes métrologiques fondamentaux
+      et note qu’un consensus n’a pu être atteint au sujet de trois définitions (grandeur,
+      valeur d’une grandeur et unité). Le CIPM demande au Groupe spécifique du CIPM
+      sur le SI numérique d’étudier de quelle manière les trois définitions concernées
+      peuvent être exploitées par machine et de présenter ses conclusions au CIPM
+      lors de sa réunion de mars 2022.
+  actions: []
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-21 (2021)
+  identifier: 110-21
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Etats Membres et Associés
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: |-
+      approuve les changements suivants concernant la composition des Comités consultatifs :
+
+      * NSC‐IM (Ukraine) et CMS/ITRI (Taipei chinois) : observateurs au CCM
+      * NSC‐IM (Ukraine) : observateur au CCRI
+      * NSC‐IM (Ukraine) : membre du CCU
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-22 (2021)
+  identifier: 110-22
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Relations internationales
+  - Transformation numérique
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: approuve la déclaration commune d’intention sur la transformation numérique
+      dans l’infrastructure internationale scientifique et de la qualité et note que
+      l’OIML, CODATA et IMEKO souhaite signer la déclaration. D’autres parties prenantes
+      clés seront contactées à ce sujet avant la prochaine réunion quadripartite BIPM
+      - ILAC - ISO - OIML prévue en mars 2022.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-23 (2021)
+  identifier: 110-23
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - SI
+  - Transformation numérique
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: soutient le projet de réaliser une étude au sein des Comités consultatifs
+      sur ce que prévoit les laboratoires nationaux de métrologie et les laboratoires
+      désignés pour mettre en place les certificats d’étalonnage numériques et préparer
+      un cadre pour le SI numérique.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-24 (2021)
+  identifier: 110-24
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - CIPM / Réunions
+  - Transformation numérique
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2021-10-20'
+    message: nomme M. Steele pour représenter le CIPM lors de la Conférence internationale
+      IMEKO TC6 sur la métrologie et la transformation numérique (M4D).
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-25 (2021)
+  identifier: 110-25
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: approuve la version 1.1 des Règles de fonctionnement du CIPM (document
+      _CIPM Rules of procedure_). Le CIPM demande au directeur du BIPM de publier
+      cette version amendée des Règles de fonctionnement du CIPM et de mettre à jour
+      le Compendium en conséquence.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/110-26 (2021)
+  identifier: 110-26
+  url: https://www.bipm.org/fr/committees/ci/cipm/110-_2-2021
+  categories:
+  - CIPM / Réunions
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2021-10-20'
+    message: nomme M. Steele pour représenter le CIPM lors de l’Assemblée générale
+      de CODATA.

@@ -1,0 +1,47 @@
+---
+metadata:
+  title: 88e réunion du CIPM
+  identifier: '88'
+  date: '1999-10-15'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/88-1999
+pdf: https://www.bipm.org/documents/20126/35014581/CIPM1999-FR.pdf/90c77711-ad1d-3f5d-af90-ebd771e76d78
+resolutions:
+- dates:
+  - '1999-10-15'
+  subject: CIPM
+  type: recommendation
+  title: Futurs systèmes satellitaires de navigation à couverture globale
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/88-1999/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM88.pdf.zip/b3162bf6-a795-3dbb-f5ba-6dd295a19843
+  reference_name: Comptes rendus du 88e CIPM (1999), 2000
+  reference_page: 57
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considérant que le Comité international a déjà recommandé que « les temps
+      de référence (modulo 1 seconde) des systèmes satellitaires de navigation à couverture
+      globale soient synchronisés aussi étroitement que possible avec l'UTC » et que
+      le repère de référence de ces systèmes soit conforme à l’ITRF, Recommandation
+      1 (CI-1996),
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considérant que les systèmes GPS et GLONASS suivent déjà ces instructions,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considérant que ces systèmes sont maintenant largement utilisés pour
+      les comparaisons de temps et de fréquences,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: |-
+      *recommande*
+
+      * que tous les systèmes satellitaires de navigation à couverture globale soient conçus de telle façon qu'il soit possible d'utiliser leurs signaux pour les comparaisons de temps et de fréquences,
+      * que ces systèmes diffusent en plus de leur temps spécifique (ST) :
+      .. la différence entre ST et une réalisation en temps réel de l'UTC et du TAI,
+      .. une prévision des différences de temps entre ST, TAI et UTC,
+      * que les fabricants étudient des récepteurs et des systèmes de traitement spécifiquement conçus pour servir aux comparaisons de temps et de fréquences.

@@ -1,0 +1,75 @@
+---
+metadata:
+  title: 61st meeting of the CIPM
+  identifier: '61'
+  date: '1972-10-18'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/61-1972
+pdf: https://www.bipm.org/documents/20126/62491581/CIPM1972.pdf/264f06ff-9a03-0025-a90b-ef05fd75fcb5
+resolutions:
+- dates:
+  - '1972-10-18'
+  subject: CIPM
+  type: recommendation
+  title: Efficacités lumineuses relatives spectrales en vision photopique [V(&lambda;)]
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/61-1972/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM61.pdf/469bb392-7c09-e1a0-9739-1a64c0f7baf7
+  reference_name: Proceedings of the 61st CIPM (1972), 1973
+  reference_page: 29
+  approvals:
+  - message: Le Comité International des Poids et Mesures,
+  considerations:
+  - type: recognizing
+    date_effective: '1972-10-18'
+    message: "*RECONNAISSANT* l'autorité de la Commission Internationale de l'Éclairage
+      (C.I.E.) dans la définition des grandeurs photométriques,"
+  - type: having / having regard
+    date_effective: '1972-10-18'
+    message: '*AYANT PRIS CONNAISSANCE* de la table adoptée par la C.I.E. en 1971
+      donnant les valeurs des efficacités lumineuses relatives spectrales en vision
+      photopique stem:["V"](λ) à des longueurs d''onde échelonnées de 1 nm entre 360
+      et 830 nm avec leurs modalités d''emploi, et constaté que ces valeurs sont un
+      perfectionnement des valeurs de 10 en 10 nm adoptées en 1933 par le Comité International
+      des Poids et Mesures et antérieurement en 1924 par la C.I.E.,'
+  actions:
+  - type: recommends
+    date_effective: '1972-10-18'
+    message: '*RECOMMANDE* l''emploi de cette nouvelle table stem:["V"](λ) [voir Annexe
+      1 p. 145].'
+- dates:
+  - '1972-10-18'
+  subject: CIPM
+  type: recommendation
+  title: Réseau Gravimétrique International Unifié 1971 (IGSN-71)
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/61-1972/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM61.pdf/469bb392-7c09-e1a0-9739-1a64c0f7baf7
+  reference_name: Proceedings of the 61st CIPM (1972), 1973
+  reference_page: 29
+  approvals:
+  - message: Le Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1972-10-18'
+    message: "*CONSIDÉRANT* la Résolution 11 de la Onzième Conférence Générale des
+      Poids et Mesures (1960) et la Résolution 1 (1968) du Comité International des
+      Poids et Mesures relatives au Système gravimétrique de Potsdam,"
+  - type: having / having regard
+    date_effective: '1972-10-18'
+    message: "*AYANT PRIS CONNAISSANCE* de la Résolution N° 11 adoptée en 1971 par
+      l'Union Géodésique et Géophysique Internationale (U. G. G.I.) qui recommande
+      l'adoption d'un « Réseau Gravimétrique International Unifié 1971 » (International
+      Gravity Standardization Net 1971 [IGSN-71]), résultant d'une compensation d'un
+      grand nombre de mesures relatives et absolues de l'accélération due à la pesanteur
+      stem:[g] en divers lieux du globe terrestre,"
+  - type: having / having regard
+    date_effective: '1972-10-18'
+    message: "*AYANT CONSTATÉ* que les valeurs de stem:[g] de ce réseau sont un perfectionnement
+      des valeurs fondées sur l'ancien Système gravimétrique de Potsdam,"
+  actions:
+  - type: recommends
+    date_effective: '1972-10-18'
+    message: "*RECOMMANDE* que les valeurs de stem:[g] données dans le réseau l GSN-71
+      de l' U. G. G.I. et ses mises à jour ultérieures soient employées pour les besoins
+      métrologiques."

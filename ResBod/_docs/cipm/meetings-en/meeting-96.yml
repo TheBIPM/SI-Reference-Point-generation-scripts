@@ -1,0 +1,81 @@
+---
+metadata:
+  title: 96th meeting of the CIPM
+  identifier: '96'
+  date: '2007-11-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/96-2007
+pdf: https://www.bipm.org/documents/20126/35014348/CIPM2007-EN.pdf/3ff9a1a4-922d-aa27-e028-169a3d67ce46
+resolutions:
+- dates:
+  - '2007-11-09'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the Mise en pratique list of recommended radiations
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/96-2007/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM96.pdf.zip/acf320ea-c67f-8285-655d-05e21b750153
+  reference_name: Proceedings of the 96th CIPM (2007), 2008
+  reference_page: 185
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2007-11-09'
+    message: |-
+      *considering* that:
+
+      * improved frequency values of molecules in the optical telecommunications region, already documented in the list of standard frequencies, have been determined by femtosecond comb-based frequency measurements;
+      * frequencies of molecules in the optical telecommunications region have been determined by femtosecond comb-based frequency measurements for the first time;
+      * frequencies of certain iodine gas-cell absorptions close to the 532 nm optical frequency standard have been determined by femtosecond comb-based frequency measurements for the first time;
+  actions:
+  - type: encourages
+    date_effective: '2007-11-09'
+    message: |-
+      *proposes* that the list of standard frequencies be revised to include the following:
+
+      * an updated list of frequency values for the stem:[""_(12) "C"_(2)"H"_(2) ( nu 1 +  nu 3)] band at 1.54 µm;
+      * the addition of frequency values for the stem:[""_(12) "C"_(2)]HD (stem:[2 nu ]~1~) band at 1.54 µm;
+      * the addition of frequency values for the hyperfine components of the P(142) 37-0, R(121) 35-0 and R(85) 33-0 iodine transitions at 532 nm.
+- dates:
+  - '2007-11-09'
+  subject: CIPM
+  type: recommendation
+  title: On the value and uncertainty of unstabilised He-Ne lasers
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/96-2007/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM96.pdf.zip/acf320ea-c67f-8285-655d-05e21b750153
+  reference_name: Proceedings of the 96th CIPM (2007), 2008
+  reference_page: 186
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considering that most laser interferometers and many other measuring
+      instruments used for length measurement are based on 633 nm He-Ne lasers;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considering that these instruments are often used at uncertainty levels
+      that are large compared to the possible variation of the He-Ne laser vacuum
+      wavelength;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considering that the vacuum wavelength of the unstabilized 633 nm He-Ne
+      laser is restricted to within a narrow range by fundamental quantum phenomena;
+  - type: recognizing
+    date_effective: '2007-11-09'
+    message: |-
+      *recognizing*
+
+      * that it would be necessary to provide guidance and documentary evidence concerning the value of the vacuum wavelength and its uncertainty that can be expected in the absence of calibration;
+      * that such evidence could help to avoid unnecessary calibrations of these lasers in such applications;
+
+      recommends
+
+      * that the values +
+      stem:[f = 473.612 7 "THz"] +
+      _λ_ = 632.990 8 nm +
+       with a relative standard uncertainty of stem:[1.5 * 10^(-6)], apply to the radiation in vacuum of a unstabilised helium-neon laser operating solely on the 3s~2~→2p~4~ transition, independent of the isotopic mixture of the neon;
+      * that an entry for unstabilized helium-neon lasers, operating on the 633 nm (3s~2~→2p~4~) neon transition, be included in the second category of the list of standard frequencies, and that an accompanying paper with CCL authority be published in Metrologia.
+  actions: []

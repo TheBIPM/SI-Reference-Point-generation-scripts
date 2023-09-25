@@ -1,0 +1,78 @@
+---
+metadata:
+  title: 41st meeting of the CIPM
+  identifier: '41'
+  date: '1946-10-29'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/41-1946
+pdf: https://www.bipm.org/documents/20126/57335245/CIPM1945-1946.pdf/ebdf0f08-482a-19fc-9e6d-0aced9de2c36
+resolutions:
+- dates:
+  - '1946-10-29'
+  subject: CIPM
+  type: resolution
+  title: Definitions of photometric units
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/41-1946/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
+  reference_name: Proceedings of the 41st CIPM (1946), 1947
+  reference_page: 129
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1946-10-29'
+    message: |-
+      ...
+
+      [start=4]
+      . The photometric units may be defined as follows: +
+       +
+      *_New candle_* (unit of luminous intensity). — The value of the new candle is such that the brightness of the full radiator at the temperature of solidification of platinum is 60 new candles per square centimetre. +
+      *_New lumen_* (unit of luminous flux). — The new lumen is the luminous flux emitted in unit solid angle (steradian) by a uniform point source having a luminous intensity of 1 new candle.
+      . ...
+- dates:
+  - '1946-10-29'
+  subject: CIPM
+  type: resolution
+  title: Definitions of electric units
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/41-1946/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
+  reference_name: Proceedings of the 41st CIPM (1946), 1947
+  reference_page: 129
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1946-10-29'
+    message: "*A) Definitions of the mechanical units which enter the definitions
+      of electric units:* +\n  \n\n*Unit of force* - The unit of force [in the MKS
+      (metre, kilogram, second) system] is the force which gives to a mass of 1 kilogram
+      an acceleration of 1 metre per second, per second.\n\n*Joule* (unit of energy
+      or work) - The joule is the work done when the point of application of 1 MKS
+      unit of force [newton] moves a distance of 1 metre in the direction of the force.\n\n*Watt*
+      (unit of power) - The watt is the power which in one second gives rise to energy
+      of 1 joule.\n\n +\n*B) Definitions of electric units:* +\n  \n\nThe Comité International
+      des Poids et Mesures (CIPM) accepts the following propositions which define
+      the theoretical value of the electric units:\n\n*Ampere* (unit of electric current)
+      - The ampere is that constant current which, if maintained in two straight parallel
+      conductors of infinite length, of negligible circular cross-section, and placed
+      1 metre apart in vacuum, would produce between these conductors a force equal
+      to stem:[2 * 10^(-7)] MKS unit of force [newton] per metre of length.\n\n*Volt*
+      (unit of potential difference and of electromotive force) - The volt is the
+      potential difference between two points of a conducting wire carrying a constant
+      current of 1 ampere, when the power dissipated between these points is equal
+      to 1 watt.\n\n*Ohm* (unit of electric resistance) - The ohm is the electric
+      resistance between two points of a conductor when a constant potential difference
+      of 1 volt, applied to these points, produces in the conductor a current of 1
+      ampere, the conductor not being the seat of any electromotive force.\n\n*Coulomb*
+      (unit of quantity of electricity) - The coulomb is the quantity of electricity
+      carried in 1 second by a current of 1 ampere.\n\n*Farad* (unit of capacitance)
+      - The farad is the capacitance of a capacitor between the plates of which there
+      appears a potential difference of 1 volt when it is charged by a quantity of
+      electricity of 1 coulomb.\n\n*Henry* (unit of electric inductance) - The henry
+      is the inductance of a closed circuit in which an electromotive force of 1 volt
+      is produced when the electric current in the circuit varies uniformly at the
+      rate of 1 ampere per second.\n\n*Weber* (unit of magnetic flux) - The weber
+      is the magnetic flux which, linking a circuit of one turn, would produce in
+      it an electromotive force of 1 volt if it were reduced to zero at a uniform
+      rate in 1 second."

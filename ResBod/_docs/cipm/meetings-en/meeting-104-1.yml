@@ -1,0 +1,578 @@
+---
+metadata:
+  title: 104th meeting of the CIPM (Session I)
+  identifier: 104-1
+  date: '2015-03-10'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+pdf:
+- https://www.bipm.org/documents/20126/34439501/CIPM2015-I-EN.pdf/58ff6e3f-47f5-a230-4194-e2a23667e6da
+- https://www.bipm.org/documents/20126/34439492/CIPM2015-I-Decisions-EN.pdf/
+resolutions:
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: recommendation
+  title: CIPM Recommendation to NMIs on managing the consequences of the corrections
+    to the BIPM as-maintained mass unit
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM104.pdf/58613b2e-93d4-ae0d-dc1c-66852cbe5754
+  reference_name: Proceedings of the 104th CIPM (2015), 2016
+  reference_page: 108
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2015-03-10'
+    message: |-
+      *considering*
+
+      * the good uniformity of world-wide mass measurements of NMIs in CCM.M-K4 (key comparison of stem:[1 "kg"] stainless steel standards),
+      * that CMCs for mass calibrations at the level of stem:[1 "kg"] range from 28 µg to 1850 µg,
+      * that determinations of the Planck constant will provide the basis for the future definition of the kilogram after the introduction of the “new SI”,
+      * that an extraordinary calibration using the International Prototype of the Kilogram (IPK) took place at BIPM from January 2014 to January 2015,
+      * that the as-maintained BIPM mass unit (traceable to the IPK at the 3rd Periodic Verification (3rd PV) 1988-1992) had changed over 22 years by 35 µg,
+      * that a mathematical model established by BIPM was able to explain this change between the 3rd PV and 2014,
+      * that the BIPM will update calibration certificates issued between 1.1.2003 and 31.12.2013 for calibrations of stem:[1 "kg"] mass standards,
+
+      decides
+
+      * that the published results of key comparisons carried out by the CCM will not be corrected, and that the WGD-kg will advise the RMOs about how degrees of equivalence may be linked in a way that maintains consistency,
+  actions:
+  - type: recommends
+    date_effective: '2015-03-10'
+    message: recommends that determinations of the Planck constant shall be updated
+      based on the corrections provided by the BIPM to the NMIs concerned,
+  - type: recommends
+    date_effective: '2015-03-10'
+    message: recommends that NMIs receiving updated calibration certificates from
+      the BIPM should take appropriate action as regards the need to inform their
+      customers and the correction of calibration certificates affected, and should
+      take the updated mass values as the basis for their future calibrations.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: recommendation
+  title: Updates to the list of standard frequencies
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM104.pdf/58613b2e-93d4-ae0d-dc1c-66852cbe5754
+  reference_name: Proceedings of the 104th CIPM (2015), 2016
+  reference_page: 207
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2015-03-10'
+    message: considering a common list of “Recommended values of standard frequencies
+      for applications including the practical realization of the metre and secondary
+      representations of the second” has been established,
+  - type: considering
+    date_effective: '2015-03-10'
+    message: considering the CCL-CCTF Frequency Standards Working Group (WGFS) has
+      reviewed several candidates for updating the list,
+  actions:
+  - type: recommends
+    date_effective: '2015-03-10'
+    message: |-
+      *recommends*
+
+      that the following transition frequencies shall be updated in the list of recommended values of standard frequencies:
+
+      * the unperturbed optical transition 6s^2^ ^1^S~0~ - 6s6p ^3^P~0~ of the ^199^Hg neutral atom with a frequency of stem:[f]~199Hg~ = stem:[1 128 575 290 808 154.8 "Hz"] and an estimated relative standard uncertainty of stem:[6 * 10^(-16)];
+      * the unperturbed optical transition 6s ^2^S~½~ - 4f^13^ 6s^2 2^stem:["F"]~7/2~ of the ^stem:[171^(Yb)]+^ ion with a frequency of f171Yb+ (octupole) = stem:[642 121 496 772 645.0 "Hz"] and an estimated relative standard uncertainty of stem:[6 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 6s ^2^S~½~ (stem:[F = 0], stem:[m_("F") = 0]) - 5d 2D3/2 (stem:["F" = 2], stem:["mF" = 0]) of the 171Yb^+^ f171Yb+ (quadrupole) = stem:[688 358 979 309 308.3 "Hz"] and an estimated relative standard uncertainty of stem:[6 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 5s ^2^S~½~ - 4d ^2^D~5/2~ of the ^stem:[88^(Sr)]+^ ion with a frequency of stem:[f]~88Sr+~ = stem:[444 779 044 095 486.6 "Hz"] and an estimated relative standard uncertainty of stem:[1.6 * 10^(-15)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 4s ^2^S~½~ - 3d ^2^D~5/2~ of the ^stem:[40^(Ca)]+^ ion with a frequency of stem:[f]~40Ca+~ = stem:[411 042 129 776 398.4 "Hz"] and an estimated relative standard uncertainty of 1.2 × 10^-14;^
+      * the unperturbed optical transition 1S - 2S of the 1H neutral atom with a frequency of stem:[f_(1H)] = 1 stem:[233 030 706 593 514 "Hz"] and an estimated relative standard uncertainty of stem:[9 * 10^(-15)].
+
+      Note: This frequency corresponds to half of the energy difference between the 1S and 2S states;
+
+      * the unperturbed optical transition 5s^2 1^S ~0~ - 5s5p ^3^P ~0~ of the ^87^Sr neutral atom with a frequency of stem:[f_(87Sr) = 429 228 004 229 873.2 "Hz"] and an estimated relative standard uncertainty of stem:[5 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 6s^2 1^S~0~ - 6s6p ^3^P~0~ of the ^171^Yb neutral atom with a frequency of stem:[f]~171Yb~ = stem:[518 295 836 590 864.0 "Hz"] and an estimated relative standard uncertainty of stem:[2 * 10^(-15)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed ground-state hyperfine transition of ^87^Rb with a frequency of stem:[f_(87Rb)] = 6 834 682 stem:[610.904 310 "Hz"] and an estimated relative standard uncertainty of stem:[7 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second).
+
+      and also *recommends*
+
+      that the following transition frequencies shall be included in the list of recommended values of standard frequencies:
+
+      * Absorbing molecule ^127^I~2~, saturated absorption a~1~ component, R(36) 32-0 transition.
+
+      The values
+
+      |===
+      | stem:[f_(a1) = 564 074 632.42 "MHz"]
+
+      | _Î»_~a1~ = 531 476 582.65 fm
+
+      |===
+
+      +
+       with an estimated relative standard uncertainty of stem:[1 * 10^(-10)] apply to the radiation of a frequency-doubled diode DFB laser, stabilized with an iodine cell external to the laser.
+
+       +
+      * Absorbing atom ^87^Rb 5S~1/2~ - 5P~3/2~ crossover between the d and f hyperfine components of the saturated absorption at 780 nm (D2 transition)
+
+      The values
+
+      |===
+      | stem:[f]~d/f crossover~ = stem:[384 227 981.9 "MHz"]
+
+      | Î»~d/f crossover~ = 780 246 291.6 fm
+
+      |===
+
+      +
+       with an estimated relative standard uncertainty of stem:[5 * 10^(-10)] apply to the radiation of a tunable External Cavity Diode Laser, stabilized to the d/f crossover in a rubidium cell external to the laser.
+
+      Note: The value of the standard uncertainty is assumed to correspond to a confidence level of 68 %. However, given the limited availability of data there is a possibility that in hindsight this might not prove to be exact.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-1 (2015)
+  identifier: 104-1
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Meetings
+  considerations:
+  - type: accepts
+    date_effective: '2015-03-10'
+    message: accepted the minutes of Session II of the 103rd meeting of the CIPM as
+      a true record.
+  actions: []
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-2 (2015)
+  identifier: 104-2
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2015-03-10'
+    message: elected Dr Inglis as President of the CIPM by acclamation.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-3 (2015)
+  identifier: 104-3
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2015-03-10'
+    message: |-
+      elected the following by secret ballot:
+
+      * Dr McLaren as Secretary of the CIPM;
+      * Dr May and Prof. Ullrich as Vice-Presidents of the CIPM.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-4 (2015)
+  identifier: 104-4
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2015-03-10'
+    message: adopted the documents 'Guidelines for Selection of CIPM Consultative
+      Committee Presidents' and 'Good Practices for Selection of Consultative Committee
+      Working Group Chairpersons and Working Group Deputy Chairpersons' dated 9 March
+      2015.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-5 (2015)
+  identifier: 104-5
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2015-03-10'
+    message: adopted the recommendation as presented to the CIPM by the CCM, CIPM
+      Working Document CIPM/15-12, as "CIPM Recommendation to NMIs on managing the
+      consequences of the corrections to the BIPM 'as maintained' mass-unit".
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-6 (2015)
+  identifier: 104-6
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Work Programme
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2015-03-10'
+    message: approved the BIPM Work Programme for 2016-2019.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-7 (2015)
+  identifier: 104-7
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Work Programme
+  considerations: []
+  actions:
+  - type: welcomes
+    date_effective: '2015-03-10'
+    message: welcomed the proposal from the BIPM for a Capacity Building and Knowledge
+      Transfer Programme and unanimously supports it.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-8 (2015)
+  identifier: 104-8
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Member States and Associates
+  considerations: []
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2015-03-10'
+    message: supported the proposal from the BIPM regarding the situation of the Islamic
+      Republic of Iran that the BIPM should develop a detailed case one year before
+      the publication of the Convocation for the 26th CGPM (i.e. early in 2017) in
+      order to submit the case to Member States well in advance.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-9 (2015)
+  identifier: 104-9
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - SI
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2015-03-10'
+    message: revised its Decision CIPM/103-30 and decided that experimental results
+      to be used by the CODATA Task Group on Fundamental Constants in the evaluation
+      of the fundamental constants leading to the fixed values for the defining constants
+      of the new SI should be accepted for publication by 1 July 2017.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-10 (2015)
+  identifier: 104-10
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  - SI
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2015-03-10'
+    message: approved the proposal made by the CCU President to start an awareness
+      campaign relating to the new SI and requested him to contact KRISS, LNE, NIST,
+      NMIJ, NPL and PTB to ask them to nominate experts in public relations to take
+      part in a working group.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-11 (2015)
+  identifier: 104-11
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '2015-03-10'
+    message: will contact the chair of the CGPM Commission for CIPM Election, Dr Weritz,
+      to inform her about the results of the election of the CIPM bureau.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-12 (2015)
+  identifier: 104-12
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2015-03-10'
+    message: appointed Dr Kaarls as an honorary member of the CIPM for his outstanding
+      contribution to the CIPM. The President of the CIPM will inform Dr Kaarls of
+      this appointment.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-13 (2015)
+  identifier: 104-13
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - International Liaison
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2015-03-10'
+    message: adopted the position proposed in Document CIPM/15-04 on the revision
+      of ISO/IEC 17025 as the CIPM position.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-14 (2015)
+  identifier: 104-14
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - International Liaison
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2015-03-10'
+    message: adopted the position proposed in Document CIPM/15-11 on the drafting
+      of ISO 17034 as the CIPM position.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-15 (2015)
+  identifier: 104-15
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - Meetings
+  considerations: []
+  actions:
+  - type: requests
+    date_effective: '2015-03-10'
+    message: requested the CIPM bureau to convene a meeting with the Regional Metrology
+      Organization Chairs and to report back.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-16 (2015)
+  identifier: 104-16
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CIPM MRA
+  considerations: []
+  actions:
+  - type: encourages
+    date_effective: '2015-03-10'
+    message: encouraged the JCRB to explore mechanisms by which GULFMET could attend
+      future JCRB meetings.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-17 (2015)
+  identifier: 104-17
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  - Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2015-03-10'
+    message: appointed Prof. Inguscio as the new President of the Consultative Committee
+      for Length (CCL) for a 4-year term and encouraged Prof. Inguscio to make contact
+      with key participants in the CCL for preliminary discussions.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-18 (2015)
+  identifier: 104-18
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  - Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2015-03-10'
+    message: appointed Dr Rietveld as the new President of the Consultative Committee
+      for Electricity and Magnetism (CCEM) for a 4-year term.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-19 (2015)
+  identifier: 104-19
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  - Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2015-03-10'
+    message: |-
+      reappointed the Presidents of the following Consultative Committees for 4-year terms:
+
+      * Consultative Committee for Acoustics, Ultrasound and Vibration (CCAUV): T. Usuda
+      * Consultative Committee for Mass and Related Quantities (CCM): P. Richard
+      * Consultative Committee for Photometry and Radiometry (CCPR): T. Usuda (on the condition of receiving approval from the NMIJ)
+      * Consultative Committee for Amount of Substance: Metrology in Chemistry and Biology (CCQM): W.E. May
+      * Consultative Committee for Ionizing Radiation (CCRI): W. Louw
+      * Consultative Committee for Thermometry (CCT): Y. Duan
+      * Consultative Committee for Time and Frequency (CCTF): L. Érard
+      * Consultative Committee for Units (CCU): J. Ullrich
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-20 (2015)
+  identifier: 104-20
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2015-03-10'
+    message: decided to close the CIPM _ad hoc_ Working Group on CIPM Membership and
+      thanked Dr May and his Group for their work.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-21 (2015)
+  identifier: 104-21
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - SCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2015-03-10'
+    message: |-
+      appointed the following CIPM members to serve on the CIPM Sub Committees and _ad hoc_ Working Groups:
+
+      * CIPM Sub-Committee on Strategy: M. Milton (Chair), CIPM bureau, H. Brandi, G. Rietveld, T. Liew.
+      * CIPM Sub-Committee on the BIPM Pension and Provident Fund and Health Insurance: L. Érard (Chair), T. Usuda, B. Bowsher, C. Bock (external member).
+      * CIPM Sub-Committee on Finance: B. Bowsher (Chair), Y. Duan, J. McLaren, P. Richard, W. Louw.
+      * CIPM ad hoc Working Group on Conditions of Employment: J. McLaren (Chair), L. Érard, I.Castelazo, M. Buzoianu.
+      * CIPM Sub-Committee on Awards: M. Inguscio (Chair), D. I. Kang, H. Brandi, F. Bulygin.
+      * CIPM ad hoc Working Group on the CIPM MRA: B. Inglis (Chair), W.E. May, J. Ullrich, F. Bulygin, T. Usuda, W. Louw, M. Milton, L. Érard.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-22 (2015)
+  identifier: 104-22
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - JCGM
+  considerations: []
+  actions:
+  - type: encourages
+    date_effective: '2015-03-10'
+    message: proposed Dr Buzoianu to represent the BIPM at the JCGM WG2 (VIM).
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-23 (2015)
+  identifier: 104-23
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CIPM MRA
+  considerations: []
+  actions:
+  - type: requests
+    date_effective: '2015-03-10'
+    message: requested the BIPM to contact all the NMI Directors to invite contributions
+      and their participation in the workshop on the CIPM MRA review planned for October
+      2015.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-24 (2015)
+  identifier: 104-24
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  - CIPM MRA
+  considerations: []
+  actions:
+  - type: requests
+    date_effective: '2015-03-10'
+    message: requested the Consultative Committee Presidents to provide suggestions
+      for participants in the users/stakeholders panel at the workshop on the CIPM
+      MRA review, by 30 April 2015.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-25 (2015)
+  identifier: 104-25
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - General
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2015-03-10'
+    message: decided to defer the discussion on the BIPM terminology agenda item until
+      its next meeting. It established a small working group composed of J. McLaren
+      (Chair), J. Ullrich, W. Louw and M. Milton to review the issue and to report
+      back to at its next meeting.
+- dates:
+  - '2015-03-10'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/104-26 (2015)
+  identifier: 104-26
+  url: https://www.bipm.org/en/committees/ci/cipm/104-_1-2015
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2015-03-10'
+    message: |-
+      adopted the traceability exception related to delta value isotope ratio measurements proposed by the CCQM as follows:
+
+      "Delta value isotope ratio measurements that cannot presently be made traceable to the SI should be made traceable to materials\* recognised as International Standards. Since at present, values assigned to these materials are based on consensus values, these materials are not listed in the Appendix stem:["C"] of the BIPM Database.
+
+      \* stem:["A"] list of certified reference materials that should be used to identify accepted references for delta value isotope ratio traceability statements is published and maintained by IUPAC:
+
+      Willi A. Brand, Tyler B. Coplen, Jochen Vogl, Martin Rosner and Thomas Prohaska
+
+      Assessment of international reference materials for isotope-ratio analysis (IUPAC Technical Report). Pure Appl. Chem. 2014; 86(3): 425-467
+
+      The report is available for free download: http://www.degruyter.com/doi/10.1515/pac-2013-1023[http://www.degruyter.com/doi/10.1515/pac-2013-1023]
+
+      The CIPM notes that assigned values for replacement materials should be done through a formal internationally vetted procedure that assures the continued comparability of delta value measurements.
+
+      The CIPM encourages the continuation of programmes within the NMIs to develop absolute isotope ratio measurement values for such Reference Materials and active engagement with the IUPAC community."
+working_documents:
+- title: CIPM2015-I-Decisions-EN.pdf
+  pdf: https://www.bipm.org/documents/20126/34439492/CIPM2015-I-Decisions-EN.pdf/
+  description: ''
+  author: ''
+- title: CIPM2015-I-Decisions-FR.pdf
+  pdf: https://www.bipm.org/documents/20126/34439474/CIPM2015-I-Decisions-FR.pdf/
+  description: ''
+  author: ''

@@ -1,0 +1,81 @@
+---
+metadata:
+  title: 41e réunion du CIPM
+  identifier: '41'
+  date: '1946-10-29'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/41-1946
+pdf: https://www.bipm.org/documents/20126/57335245/CIPM1945-1946.pdf/ebdf0f08-482a-19fc-9e6d-0aced9de2c36
+resolutions:
+- dates:
+  - '1946-10-29'
+  subject: CIPM
+  type: resolution
+  title: Définition des unités photométriques
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/41-1946/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
+  reference_name: Comptes rendus du 41e CIPM (1946), 1947
+  reference_page: 129
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1946-10-29'
+    message: |-
+      ...
+
+      [start=4]
+      . Les unités photométriques peuvent être définies comme suit : +
+       +
+      *_Bougie nouvelle_* (unité d’intensité lumineuse). — La grandeur de la bougie nouvelle est telle que la brillance du radiateur intégral à la température de solidification du platine soit de 60 bougies nouvelles par centimètre carré. +
+      *_Lumen nouveau_* (unité de flux lumineux). — Le lumen nouveau est le flux lumineux émis dans l’angle solide unité (stéradian) par une source ponctuelle uniforme ayant une intensité lumineuse de 1 bougie nouvelle.
+      . ...
+- dates:
+  - '1946-10-29'
+  subject: CIPM
+  type: resolution
+  title: Définitions des unités électriques
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/41-1946/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
+  reference_name: Comptes rendus du 41e CIPM (1946), 1947
+  reference_page: 129
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '1946-10-29'
+    message: "*A) Définitions des unités mécaniques utilisées dans les définitions
+      des unités électriques :* +\n  \n\n*Unité de force* - L’unité de force [dans
+      le système MKS (mètre, kilogramme, seconde)] est la force qui communique à une
+      masse de 1 kilogramme l’accélération de 1 mètre par seconde, par seconde.\n\n*Joule*
+      (unité d’énergie ou de travail) - Le joule est le travail effectué lorsque le
+      point d’application de 1 unité MKS de force [newton] se déplace d’une distance
+      égale à 1 mètre dans la direction de la force.\n\n*Watt* (unité de puissance)
+      - Le watt est la puissance qui donne lieu à une production d’énergie égale à
+      1 joule par seconde.\n\n +\n*B)Définitions des unités électriques.* +\n  \n\nLe
+      Comité [international] admet les propositions suivantes définissant la grandeur
+      théorique des unités électriques :\n\n*Ampère* (unité d’intensité de courant
+      électrique) - L’ampère est l’intensité d’un courant constant qui, maintenu dans
+      deux conducteurs parallèles, rectilignes, de longueur infinie, de section circulaire
+      négligeable et placés à une distance de 1 mètre l’un de l’autre dans le vide,
+      produirait entre ces conducteurs une force égale à stem:[2 * 10^(-7)] MKS de
+      force [newton] par mètre de longueur.*\n\n*Volt* (unité de différence de potentiel
+      et de force électromotrice) - Le volt est la différence de potentiel électrique
+      qui existe entre deux points d’un fil conducteur transportant un courant constant
+      de 1 ampère, lorsque la puissance dissipée entre ces points est égale à 1 watt.\n\n*Ohm*
+      (unité de résistance électrique) - L’ohm est la résistance électrique qui existe
+      entre deux points d’un conducteur lorsqu’une différence de potentiel constante
+      de 1 volt, appliquée entre ces deux points, produit, dans ce conducteur, un
+      courant de 1 ampère, e conducteur n’étant le siège d’aucune force électromotrice.\n\n*Coulomb*
+      (unité de quantité d’électricité) - Le coulomb est la quantité d’électricité
+      transportée en 1 seconde par un courant de 1 ampère.\n\n*Farad* (unité de capacité
+      électrique) - Le farad est la capacité d’un condensateur électrique entre les
+      armatures duquel apparaît une différence de potentiel électrique de 1 volt lorsqu’il
+      est chargé d’une quantité d’électricité égale à 1 coulomb.\n\n*Henry* (unité
+      d’inductance électrique) - Le henry est l’inductance électrique d’un circuit
+      fermé dans lequel une force électromotrice de 1 volt est produite lorsque le
+      courant électrique qui parcourt le circuit varie uniformément à raison de 1
+      ampère par seconde.\n\n*Weber* (unité de flux magnétique) - Le weber est le
+      flux magnétique qui, traversant un circuit d’une seule spire, y produirait une
+      force électromotrice de 1 volt si on l’amenait à zéro en 1 seconde par décroissance
+      uniforme."

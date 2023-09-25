@@ -1,0 +1,238 @@
+---
+metadata:
+  title: 98e réunion du CIPM
+  identifier: '98'
+  date: '2009-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/98-2009
+pdf: https://www.bipm.org/documents/20126/35014291/CIPM2009-FR.pdf/d31757ab-3e57-11f3-21f4-20cb8f2b0dd5
+resolutions:
+- dates:
+  - '2009-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Concernant l’adoption d’un système de référence terrestre commun par la Conférence
+    générale des poids et mesures
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/98-2009/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM98.pdf.zip/fed2fd2f-adb9-d8f2-5da6-f58036445d4f
+  reference_name: Comptes rendus du 98e CIPM (2009), 2010
+  reference_page: 103
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant qu’un certain nombre de systèmes globaux de navigation par
+      satellite (GNSS) existent déjà, que de nouveaux systèmes sont actuellement mis
+      au point et que beaucoup d’autres le seront probablement à l’avenir ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que la prolifération de différents systèmes de référence
+      temporels et géodésiques, utilisés par ces systèmes globaux de navigation, rend
+      l’interprétation des solutions de positionnement et de temps plus ambiguë pour
+      les utilisateurs, et l’interopérabilité des systèmes plus compliquée ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que, même si les unions scientifiques concernées recommandent
+      l’utilisation du système international de référence terrestre (ITRS), ce système
+      n’est à l’heure actuelle adopté par aucune organisation intergouvernementale
+      ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que l’adoption d’un système commun par l’organisation intergouvernementale
+      appropriée serait un avantage pour les utilisateurs en termes d’unification
+      des solutions globales de positionnement et de temps, et de l’interopérabilité
+      des systèmes globaux;
+  - type: noting
+    date_effective: '2009-10-16'
+    message: |-
+      *notant*
+
+      que l’un des facteurs clés ayant conduit à la création de la Convention du Mètre et du BIPM fut la recommandation adoptée lors de la deuxième Conférence géodésique internationale pour la mesure des degrés en Europe, réunie à Berlin en 1867, pour qu’un Bureau international des poids et mesures, situé en Europe, soit fondé afin d’unifier les étalons géodésiques européens ;
+  actions:
+  - type: recommends
+    date_effective: '2009-10-16'
+    message: |-
+      *recommande*
+
+      de prendre les mesures nécessaires afin que l’ITRS, tel que défini par l’Union géodésique et géophysique internationale (UGGI), et réalisé de manière pratique par le Service international de la rotation terrestre et des systèmes de référence (IERS) et le Service international GNSS (IGS), soit adopté par la Conférence générale des poids et mesures comme système de référence international terrestre unique pour toutes les applications métrologiques.
+- dates:
+  - '2009-10-16'
+  subject: CIPM
+  type: recommendation
+  title: " Mises à jour de la liste des fréquences étalons"
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/98-2009/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM98.pdf.zip/fed2fd2f-adb9-d8f2-5da6-f58036445d4f
+  reference_name: Comptes rendus du 98e CIPM (2009), 2010
+  reference_page: 105
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant qu’une liste commune des « valeurs recommandées de fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » a été établie ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le Groupe de travail commun au CCL et au CCTF sur les
+      étalons de fréquence a examiné plusieurs fréquences candidates en vue de leur
+      inclusion dans cette liste ;
+  actions:
+  - type: recommends
+    date_effective: '2009-10-16'
+    message: |-
+      *recommande*
+
+      que les fréquences de transition suivantes soient incluses ou mises à jour dans la liste des fréquences étalons recommandées :
+
+      * la transition optique non perturbée 5s^2^ ^1^S~0~ - 5s 5p ^3^P~0~ de l'atome neutre de ^87^Sr, à la fréquence de stem:[f = 429 228 004 229 873","7 "Hz"], avec une incertitude-type relative de stem:[1 * 10^(-15)] (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 5s^2^ 1S~0~ - 5s 5p 3P~0~ de l'atome neutre de ^88^Sr, à la fréquence de stem:[f = 429 228 066 418 012 "Hz"], avec une incertitude-type relative de 1 × 10^-14 ^;
+      * la transition optique non perturbée 4s ^2^S~1/2~ - 3d ^2^D~5/2~ de l'ion de ^stem:[40^(Ca)]+^, à la fréquence de stem:[f = 411 042 129 776 393 "Hz"], avec une incertitude-type relative de 4 × 10^-14 ^;
+      * la transition optique non perturbée ^2^S~1/2~ stem:[(F = 0)] - ^2^stem:["F"]~7/2~ (stem:[F = 3], stem:[m_("F") = 0]) de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f = 642 121 496 772 657 "Hz"], avec une incertitude-type relative de 6 × 10^-14 ^;
+      * la transition optique non perturbée 6s^2^ ^1^S~0~ (stem:[F = 1/2]) - 6s 6p ^3^P~0~ (stem:[F = 1/2]) de l'atome neutre de ^171^Yb, à la fréquence de stem:[f = 518 295 836 590 864 "Hz"], avec une incertitude-type relative de stem:[1","6 * 10^(-13)].
+- dates:
+  - '2009-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Alignement des références géodésiques et synchronisation des références de
+    temps par rapport aux références internationales
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/98-2009/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM98.pdf.zip/fed2fd2f-adb9-d8f2-5da6-f58036445d4f
+  reference_name: Comptes rendus du 98e CIPM (2009), 2010
+  reference_page: 106
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le Système international de référence terrestre (ITRS)
+      a été recommandé par l’Union astronomique internationale (UAI) et l’Union géodésique
+      et géophysique internationale (UGGI) pour les applications dans le domaine des
+      sciences de la terre et de l’espace ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le Repère international de référence terrestre (ITRF)
+      fournit l’accès primaire à l’ITRS, et que les systèmes géodésiques globaux WGS84,
+      PZ-90, GTRF (Galileo Terrestrial Reference Frame), CGS’2000 (China Geodetic
+      System 2000), assortis de densifications régionales, y donnent également accès
+      avec une incertitude estimée de stem:[3 "cm"] à stem:[40 "cm"] ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que l’échelle de temps approuvée par la Conférence générale
+      des poids et mesures, lors de sa 15^e^ réunion en 1975, afin d’assurer la coordination
+      et la dissémination du temps dans le monde est le Temps universel coordonnée
+      (UTC) ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le BIPM assure la collaboration nécessaire afin de maintenir
+      et de disséminer l’UTC ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le temps du GPS est asservi à la réalisation en temps
+      réel de l’UTC maintenue par l’Observatoire naval des États-Unis d’Amérique,
+      UTC(USNO) (modulo stem:[1 "s"]), et le temps du GLONASS asservi à la réalisation
+      en temps réel de l’UTC maintenue par le VNIIFTRI, UTC(SU) ; et que le temps
+      de Galileo sera asservi à un ensemble de réalisations européennes de l’UTC,
+      en conservant le même décalage en nombre de secondes que le temps du GPS ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que le BIPM participe au Comité international sur le GNSS
+      (ICG) ;
+  - type: having / having regard
+    date_effective: '2009-10-16'
+    message: sachant que de nouveaux systèmes globaux de navigation par satellite
+      (GNSS) sont actuellement conçus et mis au point ;
+  - type: having / having regard
+    date_effective: '2009-10-16'
+    message: sachant que l’interopérabilité des différents systèmes globaux de navigation
+      par satellite serait facilitée par l’adoption de références internationales
+      temporelles et géodésiques ;
+  - type: having / having regard
+    date_effective: '2009-10-16'
+    message: sachant que des références temporelles et géodésiques, communes et reconnues
+      au niveau international, sont nécessaires aux activités scientifiques et civiles
+      partout dans le monde ;
+  - type: recognizing
+    date_effective: '2009-10-16'
+    message: reconnaît que le Comité international sur le GNSS (ICG) procure une structure
+      unique qui permet aux fournisseurs de services globaux de navigation par satellite
+      d’aligner leurs références temporelles et géodésiques sur l’UTC et l’ITRS de
+      manière opérationnelle ;
+  actions:
+  - type: recommends
+    date_effective: '2009-10-16'
+    message: |-
+      *recommande*
+
+      * que les références géodésiques utilisées pour les systèmes globaux de navigation par satellite soient alignées le plus exactement possible sur l’ITRS ;
+      * que les échelles de temps internes des systèmes globaux de navigation par satellite soient synchronisées le plus exactement possible sur l’UTC (modulo stem:[1 "s"]) ;
+      * que les systèmes globaux de navigation par satellite diffusent, outre leurs propres échelles de temps :
+      ** l’écart entre leur échelle de temps et une réalisation en temps réel de l’UTC,
+      ** les écarts entre les échelles de temps des divers systèmes globaux ;
+  - type: requests
+    date_effective: '2009-10-16'
+    message: et demande que le BIPM coordonne les actions nécessaires pour ce faire
+      au sein du Comité international sur le GNSS (ICG).
+- dates:
+  - '2009-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Au sujet de la faiblesse de la définition actuelle de l’UTC
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/ci/cipm/98-2009/resolution-4
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM98.pdf.zip/fed2fd2f-adb9-d8f2-5da6-f58036445d4f
+  reference_name: Comptes rendus du 98e CIPM (2009), 2010
+  reference_page: 108
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que l’insertion non prévisible de secondes intercalaires,
+      dont on ne connaît pas à l’avance le nombre, génère des sauts du Temps universel
+      coordonné (UTC), tel qu’il a été défini en 1972, qui affectent de manière défavorable
+      son utilisation ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que cette définition de l’UTC ne peut répondre aux exigences
+      des nombreux systèmes de navigation, actuels et à venir, qui nécessitent une
+      échelle de temps uniforme ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que d’autres échelles de temps, non affectées par l’insertion
+      de secondes intercalaires, sont élaborées et prolifèrent ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que la nécessité de connaître l’angle de rotation de la Terre
+      dans des systèmes de référence célestes, destinés à être utilisés dans le domaine
+      de la navigation maritime céleste, n’est plus d’actualité ou peut facilement
+      être satisfaite par les valeurs de [_UT1 - UTC_] telles qu’évaluées et publiées
+      par le Service international de la rotation terrestre et des systèmes de référence
+      (IERS) ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant que l’UT1 peut entièrement satisfaire aux besoins liés à
+      la détermination de l’angle de rotation terrestre ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant qu’il est nécessaire de disposer d’un délai suffisant pour
+      permettre la mise en place de programmes informatisés pour les systèmes de navigation
+      terrestre ou par satellite, adaptés à tout changement de la définition de l’UTC
+      ;
+  - type: considering
+    date_effective: '2009-10-16'
+    message: considérant qu’au cours des dix dernières années, un certain nombre d’organisations
+      techniques nationales et internationales ont exprimé leur inquiétude croissante
+      concernant la définition actuelle de l’UTC et la prolifération simultanée d’autres
+      échelles de temps ;
+  actions:
+  - type: recommends
+    date_effective: '2009-10-16'
+    message: |-
+      *recommande*
+
+      que les agences nationales et internationales, ainsi que les unions scientifiques concernées par la définition des échelles de temps internationales, réfléchissent de toute urgence aux décisions à prendre concernant la définition à venir de l’UTC, afin de parvenir dès que possible à un accord international à ce sujet.

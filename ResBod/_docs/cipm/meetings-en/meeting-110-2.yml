@@ -1,0 +1,232 @@
+---
+metadata:
+  title: 110th meeting of the CIPM (Session II) (online)
+  identifier: 110-2
+  date: '2021-10-20'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+pdf: https://www.bipm.org/documents/20126/64258128/CIPM2021-Session-II-EN.pdf/155c4abe-0e6a-0062-b361-cccc022a4638
+resolutions:
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-14 (2021)
+  identifier: 110-14
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Meetings
+  considerations:
+  - type: accepts
+    date_effective: '2021-10-20'
+    message: accepted the minutes of the first session of the 110th meeting of the
+      CIPM as a true record.
+  actions: []
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-15 (2021)
+  identifier: 110-15
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - International Liaison
+  considerations:
+  - type: noting
+    date_effective: '2021-10-20'
+    message: noted the decision taken by correspondence on 16 July 2021 to sign an
+      MoU between the BIPM and CODATA based on the draft circulated.
+  actions: []
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-16 (2021)
+  identifier: 110-16
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Membership
+  - Internal rules
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: revised the document “Criteria and process for election of CIPM Members”
+      to align Section stem:["C"] (page 5) with Resolution 2 adopted by the CGPM at
+      its 25th meeting (2014) by stating that there are nine (and not seven) seats
+      on the Committee for Election of the CIPM (CEC).
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-17 (2021)
+  identifier: 110-17
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Member States and Associates
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: decided, based on the criteria it has previously adopted, that it would
+      be appropriate for the Grand Duchy of Luxembourg to accede to the Metre Convention.
+      The BIPM Director will convey the Decision, recalling Resolution 4 ‘On the status
+      of Associate State of the General Conference’ adopted by the CGPM at its 24th
+      meeting, and the implications regarding the increase in subscription should
+      the Grand Duchy of Luxembourg choose to remain as an Associate of the CGPM.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-18 (2021)
+  identifier: 110-18
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2021-10-20'
+    message: |-
+      Following the recommendations dated 7 September 2020 from the Pension Fund Advisory Board (PFAB) and the recommendations from the CIPM Sub-Committee on Finance meeting held on 6 October 2021, the CIPM decided to authorize the exceptional transfer of 3 million € of unreserved cash to the Pension Fund in 2021.
+
+      The CIPM also decided to consider a further exceptional transfer in 2022 following the publication of the audited financial report for 2021 and the development of a long-term financial plan for the BIPM.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-19 (2021)
+  identifier: 110-19
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: Following the recommendation of the CIPM Sub-Committee on Finance, the
+      CIPM approved the budget proposed by the Director for 2022.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-20 (2021)
+  identifier: 110-20
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - SI
+  - SCs and WGs
+  - Digital transformation
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: requests
+    date_effective: '2021-10-20'
+    message: received the report from the CCU on the Core Metrological Terms and noted
+      that consensus could not be reached on the matter of three definitions (quantity,
+      quantity of value and unit). The CIPM requests the CIPM Task Group on the Digital
+      SI (CIPM TG DSI) to review the “machine actionability” of the three definitions
+      under discussion and to report to the meeting of the CIPM in March 2022.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-21 (2021)
+  identifier: 110-21
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Member States and Associates
+  - CCs and WGs
+  considerations:
+  - type: accepts
+    date_effective: '2021-10-20'
+    message: |-
+      accepted the following changes to the members and observers to the Consultative Committees:
+
+      * observership to CCM for NSC‐IM (Ukraine) and CMS/ITRI (Chinese Taipei)
+      * observership of CCRI for NSC‐IM (Ukraine)
+      * membership of CCU for NSC‐IM (Ukraine)
+  actions: []
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-22 (2021)
+  identifier: 110-22
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - International Liaison
+  - Digital transformation
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: approved the Joint Statement of Intent on the digital transformation
+      in the international scientific and quality infrastructure and noted the intent
+      for the Joint Statement to be signed by the OIML, CODATA and IMEKO. Other major
+      stakeholders will be approached before the next quadripartite meeting of the
+      BIPM, ILAC, ISO and OIML scheduled for March 2022.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-23 (2021)
+  identifier: 110-23
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - SI
+  - Digital transformation
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2021-10-20'
+    message: supported the plan for a Consultative Committee survey on NMI/DI plans
+      for digital calibration certificates and engagement with the Digital SI Framework.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-24 (2021)
+  identifier: 110-24
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - CIPM / Meetings
+  - Digital transformation
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2021-10-20'
+    message: nominated Dr Steele as its representative for the IMEKO TC6 International
+      Conference on Metrology and Digital Transformation (M4D).
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-25 (2021)
+  identifier: 110-25
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2021-10-20'
+    message: approved edition 1.1 of the CIPM Rules of Procedure. The CIPM requested
+      the BIPM Director to publish the amended CIPM Rules of Procedure and to update
+      the Compendium accordingly.
+- dates:
+  - '2021-10-20'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/110-26 (2021)
+  identifier: 110-26
+  url: https://www.bipm.org/en/committees/ci/cipm/110-_2-2021
+  categories:
+  - CIPM / Meetings
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2021-10-20'
+    message: nominated Dr Steele as its representative to the General Assembly of
+      CODATA.

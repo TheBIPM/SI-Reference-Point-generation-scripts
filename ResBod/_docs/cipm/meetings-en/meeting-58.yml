@@ -1,0 +1,48 @@
+---
+metadata:
+  title: 58th meeting of the CIPM
+  identifier: '58'
+  date: '1969-10-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/58-1969
+pdf: https://www.bipm.org/documents/20126/59880087/CIPM1969.pdf/3c358bfb-8ef1-7fec-23c5-16e2f067c1b8
+resolutions:
+- dates:
+  - '1969-10-09'
+  subject: CIPM
+  type: recommendation
+  title: Système International d'Unités, Rules for application of Resolution 12 of
+    the 11th CGPM (1960)*
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/58-1969/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM58.pdf/2c50ad26-1766-6bcc-5b70-fc9dc6333a9a
+  reference_name: Proceedings of the 58th CIPM (1969), 1970
+  reference_page: 30
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1969-10-09'
+    message: "*considering* that Resolution 12 of the 11th Conférence Générale des
+      Poids et Mesures (CGPM) (1960), concerning the Système International d’Unités,
+      has provoked discussions on certain of its aspects,"
+  actions:
+  - type: declares
+    date_effective: '1969-10-09'
+    message: |-
+      *declares*
+
+      . the base units, the supplementary units and the derived units of the Système International d’Unités, which form a coherent set, are denoted by the name “SI units”;**. the prefixes adopted by the CGPM for the formation of decimal multiples and submultiples of SI units are called “SI prefixes”;
+
+      and *recommends*
+
+      [start=3]
+      . the use of SI units and of their decimal multiples and submultiples whose names are formed by means of SI prefixes.
+
+      Note: The name “supplementary units”, appearing in Resolution 12 of the 11th CGPM (and in the present Recommendation) is given to SI units for which the General Conference declines to state whether they are base units or derived units.
+  notes: |-
+    \* The 20th CGPM in 1995 decided to abrogate the class of supplementary units in the SI (Resolution 8).
+
+
+
+    \*\* The CIPM approved in 2001 a proposal of the CCU to clarify the definition of "SI units" and "units of the SI".

@@ -1,0 +1,37 @@
+---
+metadata:
+  title: 89th meeting of the CIPM
+  identifier: '89'
+  date: '2000-10-20'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/89-2000
+pdf: https://www.bipm.org/documents/20126/35014566/CIPM2000-EN.pdf/7d04de2a-5f67-3023-04cc-c6b3e61a53c7
+resolutions:
+- dates:
+  - '2000-10-20'
+  subject: CIPM
+  type: recommendation
+  title: Extension of the International Temperature Scale below 0.65 K
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/89-2000/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM89.pdf.zip/22dd9ea6-3e49-e0c7-03d5-b40bd1366204
+  reference_name: Proceedings of the 89th CIPM (2000), 2001
+  reference_page: 128
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '2000-10-20'
+    message: considering Resolution 9 of the 21st Conférence Générale des Poids et
+      Mesures inviting the Comité International des Poids et Mesures to prepare a
+      stem:[""_(3) "He"] melting pressure equation as a function of thermodynamic
+      temperature to serve as the basis for an extension of the International Temperature
+      Scale of 1990 (ITS-90) below its present lower limit of stem:[0.65 "K"],
+  - type: considering
+    date_effective: '2000-10-20'
+    message: considering that agreement has now been reached on a Provisional Low
+      Temperature Scale, stem:[0.9 "mK"] to stem:[1 "K"], PLTS-2000,
+  actions:
+  - type: recommends
+    date_effective: '2000-10-20'
+    message: "*recommends* that the PLTS-2000 be adopted on a provisional basis."

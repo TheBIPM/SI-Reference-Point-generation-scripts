@@ -1,0 +1,110 @@
+---
+metadata:
+  title: 52nd meeting of the CIPM
+  identifier: '52'
+  date: '1963-10-04'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/52-1963
+pdf: https://www.bipm.org/documents/20126/62491644/CIPM1963.pdf/c888b727-3bbc-fb19-7106-cac9f3c9f2bc
+resolutions:
+- dates:
+  - '1963-10-04'
+  subject: CIPM
+  type: recommendation
+  title: Étalons secondaires de longueur d'onde
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/52-1963/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM52.pdf/a2ce3938-3f4e-f599-77ae-67ed90cd08e1
+  reference_name: Proceedings of the 52nd CIPM (1963), 1964
+  reference_page: 26
+  considerations:
+  - type: acting
+    date_effective: '1963-10-04'
+    message: |-
+      Conformément aux instructions données par la Onzième Conférence Générale des Poids et Mesures par la Résolution 7, paragraphe 2, le Comité International des Poids et Mesures recommande l'emploi des radiations secondaires suivantes pour la mesure interférentielle des longueurs.
+
+      1° Radiations du krypton 86
+
+      |===
+      | Termes spectraux | Longueurs d'onde dans le vide
+
+      | 2_p_~9~-5_d'_~4~ | stem:[6 458","072 0 * 10^(-10) "m"]
+      | 2_p_~8~-5_d_~4~ | 6 422,800 6
+      | 1_s_~3~-3_p_~10~ | 5 651,128 6
+      | 1_s_~4~-3_p_~8~ | 4 503,616 2
+
+      |===
+
+      On
+  - type: considering
+    date_effective: '1963-10-04'
+    message: |-
+      estime que la longueur d'onde de ces radiations a la valeur indiquée à stem:[2 * 10^(-8)] près en valeur relative lorsqu'elles sont produites en conformité avec la recommandation adoptée par le Comité International des Poids et Mesures à sa 49^e^ session (octobre 1960) concernant la production de la radiation étalon primaire.
+
+      2° Radiations du mercure 198
+
+      |===
+      | Termes spectraux | Longueurs d'onde dans le vide
+
+      | stem:[6^(1)]P~1~stem:[-6^(1)]D~2~ | stem:[5 792","268 3 * 10^(-10) "m"]
+      | stem:[6^(1)]P~1~stem:[-6^(3)]D~2~ | 5 771,198 3
+      | stem:[6^(3)]P~2~stem:[-7^(3)]S~1~ | 5 462,270 5
+      | stem:[6^(3)]P~1~stem:[-7^(3)]S~1~ | 4 359,562 4
+
+      |===
+
+      On
+  - type: considering
+    date_effective: '1963-10-04'
+    message: |-
+      estime que la longueur d'onde de ces radiations à la valeur indiquée à stem:[5 * 10^(-8)] près en valeur relative lorsque les conditions suivantes sont observées :
+
+      [type=a]
+      * les radiations sont produites au moyen d'une lampe à décharge sans électrodes contenant du mercure 198 d'une pureté non inférieure à 98 pour cent et de l'argon à une pression de 0,5 à stem:[1","0 "mm"] Hg ;
+      * le diamètre intérieur du capillaire de la lampe est environ stem:[5 "mm"], et les radiations sont observées en travers ;
+      * la lampe est excitée par un champ à haute fréquence de puissance modérée;
+      * elle est maintenue à une température inférieure à stem:[10 "°C"] ;
+      * le volume de la lampe est de préférence supérieur à stem:[20 "cm"^(3)].
+
+      3° Radiations du cadmium 114
+
+      |===
+      | Termes spectraux | Longueurs d'onde dans le vide
+
+      | stem:[5^(1)]P~1~stem:[-6^(1)]D~2~ | stem:[6 440","248 0 * 10^(-10) "m"]
+      | stem:[5^(3)]P~2~stem:[-6^(3)]S~1~ | 5 087,237 9
+      | stem:[5^(3)]P~1~stem:[-6^(3)]S~1~ | 4 801,252 1
+      | stem:[5^(3)]P~0~stem:[-6^(3)]S~1~ | 4 679,458 1
+
+      |===
+
+      On
+  - type: considering
+    date_effective: '1963-10-04'
+    message: |-
+      estime que la longueur d'onde de ces radiations à la valeur indiquée à stem:[7 * 10^(-8)] près en valeur relative lorsque les conditions suivantes sont observées :
+
+      [type=a]
+      * les radiations sont produites au moyen d'une lampe à décharge sans électrodes contenant du cadmium 114 d'une pureté non inférieure à 95 pour cent et de l'argon à une pression de stem:[1 "mm"] Hg environ à la température ambiante ;
+      * le diamètre intérieur du capillaire de la lampe est environ stem:[5 "mm"], et les radiations sont observées en travers ;
+      * la lampe est excitée par un champ à haute fréquence de puissance modérée; elle est maintenue à une température telle que la raie verte ne soit pas renversée.
+  actions: []
+- dates:
+  - '1963-10-04'
+  subject: CIPM
+  type: recommendation
+  title: Unité spéciale pour l'activité (curie)
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/52-1963/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM52.pdf/a2ce3938-3f4e-f599-77ae-67ed90cd08e1
+  reference_name: Proceedings of the 52nd CIPM (1963), 1964
+  reference_page: 27
+  approvals:
+  - message: Le Comité International des Poids et Mesures
+  considerations: []
+  actions:
+  - type: recommends
+    date_effective: '1963-10-04'
+    message: recommande que le curie soit retenu comme unité spéciale pour l'activité
+      avec le symbole Ci et la valeur stem:[3","7 * 10^(10) "s"^(-1)], la seconde
+      à la puissance moins un (S^-1^) étant l'unité SI d'activité.

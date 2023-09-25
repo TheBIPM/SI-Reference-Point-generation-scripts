@@ -1,0 +1,80 @@
+---
+metadata:
+  title: 4th meeting of the CIPM
+  identifier: '4'
+  date: '1879-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/4-1879
+pdf: https://www.bipm.org/documents/20126/71754952/CIPM1879.pdf/9b023d86-4055-1405-c05f-90ad4b254cbb
+resolutions:
+- dates:
+  - '1879-10-13'
+  subject: CIPM
+  type: resolution
+  title: Signes abréviatifs pour les poids et mesures métriques
+  identifier: 1879
+  url: https://www.bipm.org/en/committees/ci/cipm/4-1879/resolution-
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM4.pdf/47e647d4-26c2-d3d6-b367-e749fb22b261
+  reference_name: Proceedings of the 4th CIPM (1879), 1880
+  reference_page: 40
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '1879-10-13'
+    message: |-
+      Le Comité international des Poids et Mesures adopte, pour ses publications et son usage officiel, le système suivant des signes abréviatifs pour les poids et mesures métriques.
+
+      |===
+      2+| Mesures de longueur
+
+      | kilomètre | stem:["km"]
+
+      | mètre | stem:["m"]
+      | décimètre | stem:["dm"]
+      | centimètre | stem:["cm"]
+      | millimètre | stem:["mm"]
+      | micron | stem:["µ"]
+
+      |===
+
+      |===
+      2+| Mesures de surface
+
+      | kilomètre carré | stem:["km"^(2)]
+
+      | hectare | ha
+      | are | a
+      | mètre carré | stem:["m"^(2)]
+      | décimètre carré | stem:["dm"^(2)]
+      | cécimètre carré | stem:["cm"^(2)]
+      | millimètre carré | stem:["mm"^(2)]
+
+      |===
+
+      |===
+      2+| Mesures de capacité
+
+      | hectolitre | hl
+
+      | décalitre | dal
+      | litre | l
+      | décilitre | dl
+      | centilitre | cl
+
+      |===
+
+      |===
+      2+| Poids
+
+      | tonne | stem:["t"]
+
+      | quintal métrique | q
+      | kilogramme | stem:["kg"]
+      | gramme | stem:["g"]
+      | décigramme | stem:["dg"]
+      | centigramme | stem:["cg"]
+      | milligramme | stem:["mg"]
+
+      |===
+
+      Le Comité international charge son Bureau de porter par circulaire ce système de signes abréviatifs des poids et mesures métriques à la connaissance des Gouvernments des Hautes Parties contractantes et de leur recommander de favoriser, par les mesures appropriées, son introduction générale dans les différents pays.

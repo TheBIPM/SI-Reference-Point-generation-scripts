@@ -1,0 +1,35 @@
+---
+metadata:
+  title: 56e réunion du CIPM
+  identifier: '56'
+  date: '1967-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/56-1967
+pdf: https://www.bipm.org/documents/20126/59880059/CIPM1967.pdf/84290d28-2dac-7c7f-a030-e0cb1a90482d
+resolutions:
+- dates:
+  - '1967-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Multiples et sous-multiples décimaux de l’unité de masse
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/56-1967/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM56.pdf/f5e3209d-ab0e-e768-fa49-df3b137721de
+  reference_name: Comptes rendus du 56e CIPM (1967), 1968
+  reference_page: 29
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considérant* que la règle de formation des noms des multiples et sous-multiples
+      décimaux des unités du paragraphe 3 de la Résolution 12 de la Onzième Conférence
+      générale des poids et mesures (1960) peut prêter à des interprétations divergentes
+      dans son application à l’unité de masse,"
+  actions:
+  - type: declares
+    date_effective: '1967-10-16'
+    message: "*déclare* que les dispositions de la Résolution 12 de la Onzième Conférence
+      générale s’appliquent dans le cas du kilogramme de la façon suivante : les noms
+      des multiples et sous-multiples décimaux de l’unité de masse sont formés par
+      l’adjonction des préfixes au mot « gramme »."

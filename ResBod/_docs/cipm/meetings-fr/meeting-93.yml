@@ -1,0 +1,71 @@
+---
+metadata:
+  title: 93e réunion du CIPM
+  identifier: '93'
+  date: '2004-10-07'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/93-2004
+pdf: https://www.bipm.org/documents/20126/35014461/CIPM2004-FR.pdf/2d9fa9f9-ce97-495c-3b41-2c60b770f739
+resolutions:
+- dates:
+  - '2004-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Relations entre les laboratoires nationaux de métrologie et les organismes
+    d’accréditation reconnus au niveau national
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/93-2004/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM93.pdf.zip/d226fc98-756c-6e28-1a54-a48e7b434ccb
+  reference_name: Comptes rendus du 93e CIPM (2004), 2005
+  reference_page: 115
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2004-10-07'
+    message: "*considérant* que la 22^e^ Conférence générale des poids et mesures,
+      dans sa Résolution 11, a accueilli favorablement le protocole d’accord conclu
+      récemment entre le Comité international des poids et mesures (CIPM) et l’International
+      Laboratory Accreditation Cooperation (ILAC),"
+  - type: noting
+    date_effective: '2004-10-07'
+    message: et note que les laboratoires nationaux de métrologie fournissent les
+      informations techniques essentielles pour assurer l’existence de systèmes nationaux
+      de mesure efficaces afin de fournir l’accès à la traçabilité au SI,
+  - type: noting
+    date_effective: '2004-10-07'
+    message: et note que les évolutions récentes, y compris de la documentation technique,
+      conduisent à une séparation injustifiée entre certains laboratoires nationaux
+      de métrologie et certains organismes d’accréditation reconnus au niveau national,
+  actions:
+  - type: requests
+    date_effective: '2004-10-07'
+    message: "*demande* à tous les organismes d’accréditation de reconnaître que les
+      laboratoires nationaux de métrologie ainsi que les laboratoires d’étalonnage
+      accrédités fournissent ensemble l’accès indispensable à la traçabilité au SI
+      et donc la fiabilité des mesures et de l’équivalence internationale des résultats
+      de mesure pour l’économie et la société tout entières et travaillent ensemble
+      étroitement, et"
+  - type: recommends
+    date_effective: '2004-10-07'
+    message: recommande que les Gouvernements des États membres de la Convention du
+      Mètre s’assurent qu’une relation appropriée existe entre les laboratoires nationaux
+      de métrologie et les organismes d’accréditation reconnus au niveau national,
+  - type: recommends
+    date_effective: '2004-10-07'
+    message: recommande que cette relation stimule la collaboration en matière de
+      traçabilité des résultats de mesures et assure que des actions efficaces et
+      complémentaires soient entreprises dans le cadre de l’Arrangement de reconnaissance
+      mutuelle du CIPM et de l’Arrangement de l’ILAC,
+  - type: recommends
+    date_effective: '2004-10-07'
+    message: recommande que les laboratoires nationaux de métrologie et les organismes
+      d’accréditation reconnus au niveau national collaborent étroitement afin de
+      s’assurer que les échanges techniques fondamentaux soient établis et
+  - type: recommends
+    date_effective: '2004-10-07'
+    message: recommande que les mesures nécessaires soient prises pour assurer l’impartialité,
+      et note aussi que rien dans cette recommandation ni dans la Résolution 11 de
+      la 22^e^ Conférence générale des poids et mesures n’implique de suivre un type
+      particulier de relation entre un laboratoire national de métrologie et un organisme
+      d’accréditation reconnu au niveau national.

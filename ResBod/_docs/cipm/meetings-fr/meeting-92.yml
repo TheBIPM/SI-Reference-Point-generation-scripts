@@ -1,0 +1,128 @@
+---
+metadata:
+  title: 92e réunion du CIPM
+  identifier: '92'
+  date: '2003-10-10'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/92-2003
+pdf: https://www.bipm.org/documents/20126/35014485/CIPM2003-FR.pdf/5218915b-29ac-b9ac-9cb8-bd010902f871
+resolutions:
+- dates:
+  - '2003-10-10'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la liste des radiations recommandées pour la mise en pratique
+    de la définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/92-2003/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM92.pdf.zip/4b7f2dee-8f88-73e3-897e-a85eed917e37
+  reference_name: Comptes rendus du 92e CIPM (2003), 2003
+  reference_page: 70
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que l’on dispose depuis peu de meilleures valeurs des fréquences
+      des radiations de certains étalons à ions refroidis très stables, déjà publiées
+      dans la liste des radiations recommandées ;
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que l’on a déterminé de meilleures valeurs des fréquences
+      des étalons de fréquence optique dans l’infrarouge, fondés sur des cuves à gaz,
+      dans le domaine des télécommunications optiques, valeurs déjà publiées dans
+      la liste des radiations recommandées ;
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que l’on a effectué récemment et pour la première fois des
+      mesures de fréquence à l’aide de peignes à impulsions femtosecondes de certains
+      étalons fondés sur des cuves à iode, qui figurent sur la liste complémentaire
+      de radiations recommandées, mesures qui conduisent à une réduction considérable
+      de l’incertitude ;
+  actions:
+  - type: encourages
+    date_effective: '2003-10-10'
+    message: |-
+      *propose* que la liste des radiations recommandées soit révisée pour inclure :
+
+      * les valeurs mises à jour des fréquences de la transition quadripolaire de l’ion piégé de ^stem:[88^(Sr)]+^ et de la transition octupolaire de l’ion piégé de ^stem:[171^(Yb)]+^ ;
+      * la valeur mise à jour de la fréquence de l’étalon asservi sur l’acétylène à 1,54 µm ;
+      * des valeurs mises à jour de la fréquence d’étalons asservis sur l’iode à 543 nm et 515 nm.
+- dates:
+  - '2003-10-10'
+  subject: CIPM
+  type: recommendation
+  title: Symbole du séparateur décimal dans le Système international d’unités (SI)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/92-2003/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM92.pdf.zip/4b7f2dee-8f88-73e3-897e-a85eed917e37
+  reference_name: Comptes rendus du 92e CIPM (2003), 2004
+  reference_page: 71
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que l’un des principaux objectifs du Système international
+      d’unités (SI) est de permettre d’exprimer la valeur des grandeurs d’une manière
+      aisément compréhensible dans le monde entier,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que la valeur d’une grandeur est normalement exprimée par
+      un nombre et une unité,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que souvent le nombre utilisé pour exprimer la valeur d’une
+      grandeur contient plusieurs chiffres, avec une partie entière et une partie
+      décimale,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que la 9^e^ Conférence générale dans sa Résolution 7 (1948)
+      avait décidé que « Dans les nombres, la virgule (usage français) ou le point
+      (usage britannique) sont utilisés seulement pour séparer la partie entière des
+      nombres de leur partie décimale »,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que conformément à la décision du Comité international des
+      poids et mesures lors de sa 86^e^ session (1997), le Bureau international des
+      poids et mesures utilise maintenant le point (sur la ligne) comme séparateur
+      décimal dans toutes ses traductions en anglais, y compris dans le texte anglais
+      de la brochure sur le SI (la référence internationale sur le SI), tout en continuant
+      à utiliser la virgule (sur la ligne) comme séparateur décimal dans toutes ses
+      publications en français,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que néanmoins certaines organisations internationales utilisent
+      la virgule sur la ligne comme séparateur décimal dans leurs documents en anglais,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que de plus, certaines organisations internationales, y compris
+      certaines organisations internationales de normalisation, spécifient que le
+      séparateur décimal doit être la virgule sur la ligne, dans toutes les langues,
+      y compris l’anglais,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que la recommandation d’utiliser la virgule sur la ligne
+      comme séparateur décimal est, dans de nombreuses langues, en conflit avec l’usage
+      courant, qui consiste à utiliser le point sur la ligne,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considérant que le fait d’utiliser le point sur la ligne ou la virgule
+      sur la ligne comme séparateur décimal n’est pas toujours lié à la langue, car
+      certains pays de même langue maternelle ont des usages différents, alors que
+      d’autres pays pratiquant le plurilinguisme utilisent le point sur la ligne ou
+      la virgule sur la ligne suivant la langue,
+  actions:
+  - type: declares
+    date_effective: '2003-10-10'
+    message: |-
+      *déclare* que
+
+      * le symbole SI du séparateur décimal pourra être le point sur la ligne ou la virgule sur la ligne,
+
+      *réaffirme* que
+
+      * « Pour faciliter la lecture, les nombres peuvent être partagés en tranches de trois chiffres ; ces tranches ne sont jamais séparées par des points, ni par des virgules », comme le
+  - type: recommends
+    date_effective: '2003-10-10'
+    message: recommande la Résolution 7 de la 9^e^ Conférence générale de 1948.

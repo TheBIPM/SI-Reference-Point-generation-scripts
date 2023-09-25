@@ -1,0 +1,39 @@
+---
+metadata:
+  title: 89e réunion du CIPM
+  identifier: '89'
+  date: '2000-10-20'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/89-2000
+pdf: https://www.bipm.org/documents/20126/35014557/CIPM2000-FR.pdf/12e8b3f7-dd4d-869b-4608-97a775d84ad0
+resolutions:
+- dates:
+  - '2000-10-20'
+  subject: CIPM
+  type: recommendation
+  title: Extension de l'Échelle internationale de température au-dessous de 0,65 K
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/89-2000/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM89.pdf.zip/22dd9ea6-3e49-e0c7-03d5-b40bd1366204
+  reference_name: Comptes rendus du 89e CIPM (2000), 2001
+  reference_page: 62
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2000-10-20'
+    message: considérant la Résolution 9 de la 21^e^ Conférence générale des poids
+      et mesures laquelle invite le Comité international des poids et mesures à étudier
+      une équation exprimant la variation de pression de fusion de stem:[""_(3) "He"]
+      en fonction de la température thermodynamique qui puisse servir de base à une
+      extension de l'Échelle internationale de température de 1990 (EIT-90) au-dessous
+      de sa limite inférieure actuelle de stem:[0","65 "K"],
+  - type: considering
+    date_effective: '2000-10-20'
+    message: considérant que l’on est maintenant parvenu à un accord sur une échelle
+      provisoire pour les basses températures (EPBT) situées entre stem:[0","9 "mK"]
+      et stem:[1 "K"], l’EPBT-2000,
+  actions:
+  - type: recommends
+    date_effective: '2000-10-20'
+    message: "*recommande* d’adopter cette échelle à titre provisoire."

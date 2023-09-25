@@ -1,0 +1,206 @@
+---
+metadata:
+  title: 91e réunion du CIPM
+  identifier: '91'
+  date: '2002-10-11'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/91-2002
+pdf: https://www.bipm.org/documents/20126/35014509/CIPM2002-FR.pdf/31ee35aa-699b-eed1-2647-1544b24dc1e5
+resolutions:
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la mise en pratique de la définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/91-2002/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Comptes rendus du 91e CIPM (2002), 2003
+  reference_page: 90
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2002-10-11'
+    message: |-
+      *rappelant*
+
+      *
+
+      qu’en 1983 la 17^e^ Conférence générale des poids et mesures (CGPM) a adopté une nouvelle définition du mètre,
+
+      * qu’à la même date la Conférence générale a invité le Comité international des poids et mesures (CIPM)
+      ** à établir des instructions pour la réalisation pratique de la nouvelle définition du mètre (la mise en pratique),
+      ** à choisir des radiations qui puissent être recommandées comme étalons de longueur d'onde pour la mesure interférentielle des longueurs et à établir des instructions pour leur emploi,
+      ** à poursuivre les études entreprises pour améliorer ces étalons et à compléter ou réviser par la suite ces instruction,
+      * qu’en réponse à cette invitation le CIPM a adopté la Recommandation 1 (CI-1983) (mise en pratique de la définition du mètre) avec pour effet
+      ** que le mètre soit réalisé par l’une des méthodes suivantes :
+      [type=a]
+      ... au moyen de la longueur l du trajet parcouru dans le vide par une onde électromagnétique plane pendant la durée stem:[t] ; cette longueur est obtenue à partir de la mesure de la durée stem:[t], en utilisant la relation stem:[l = c_(0) * t] et la valeur de la vitesse de la lumière dans le vide stem:[c_(0) = 299 792 458 "m"/"s"],
+      ... au moyen de la longueur d’onde dans le vide l d’une onde électromagnétique plane de fréquence stem:[f] ; cette longueur d’onde est obtenue à partir de la mesure de la fréquence stem:[f], en utilisant la relation _λ_ = stem:[c_(0) / f] et la valeur de la vitesse de la lumière dans le vide stem:[c_(0) = 299 792 458 "m"/"s"],
+      ... au moyen de l’une des radiations de la liste ci-dessous, radiations pour lesquelles on peut utiliser la valeur donnée de la longueur d’onde dans le vide ou de la fréquence, avec l’incertitude indiquée, pourvu que l’on observe les conditions spécifiées et le mode opératoire reconnu comme approprié ;
+      ** que dans tous les cas les corrections nécessaires soient appliquées pour tenir compte des conditions réelles telles que diffraction, gravitation ou imperfection du vide ;
+      ** que dans le contexte de la relativité générale, le mètre est considéré comme une unité de longueur propre. Sa définition s’applique donc seulement dans un domaine spatial suffisamment petit, pour lequel les effets de la non-uniformité du champ gravitationnel peuvent être ignorés (notons, qu’à la surface de la Terre, cet effet est d’environ stem:[1 * 10^(-16)] par mètre d’altitude en valeur relative). Dans ce cas, les seuls effets à prendre en compte sont ceux de la relativité restreinte. Les méthodes locales, préconisées en b) et c) pour réaliser le mètre, fournissent le mètre propre, mais la méthode préconisée en a) ne le permet pas nécessairement. La méthode préconisée en a) devrait donc être restreinte aux longueurs l suffisamment courtes pour que les effets prévus par la relativité générale soient négligeables par rapport aux incertitudes de mesure. Si ce n’est pas le cas, il convient de se référer au rapport du Groupe de travail du Comité consultatif du temps et des fréquences (CCTF) sur l’application de la relativité générale à la métrologie pour l’interprétation des mesures (Application of general relativity to metrology, Metrologia, 1997, *34*, 261-290),
+      * que le CIPM avait recommandé une liste de radiations à cet effet ;
+  - type: recalling / further recalling
+    date_effective: '2002-10-11'
+    message: "*rappelant* aussi qu’en 1992 et en 1997 le CIPM a révisé la mise en
+      pratique de la définition du mètre ;"
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que la science et les techniques continuent à exiger une
+      meilleure exactitude dans la réalisation du mètre ;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que, depuis 1997, les travaux effectués dans les laboratoires
+      nationaux, au BIPM et dans d’autres laboratoires ont permis d’identifier de
+      nouvelles radiations et des méthodes pour leur mise en œuvre qui conduisent
+      à de plus faibles incertitudes
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que l’on s’oriente de plus en plus vers des fréquences optiques
+      pour les activités liées au temps, et que l’on continue à élargir le domaine
+      d’application des radiations recommandées dans la mise en pratique, non seulement
+      à la métrologie dimensionnelle et à la réalisation du mètre, mais aussi à la
+      spectroscopie de haute résolution, à la physique atomique et moléculaire, aux
+      constantes fondamentales et aux télécommunications ;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que l’on dispose maintenant d’un certain nombre de nouvelles
+      valeurs plus exactes de l’incertitude des fréquences de radiations d’atomes
+      et d’ions refroidis très stables déjà mentionnées dans la liste de radiations
+      recommandées, que la valeur de la fréquence de la radiation de plusieurs espèces
+      d’atomes et d’ions refroidis a aussi été mesurée récemment, et que de nouvelles
+      valeurs améliorées, et présentant des incertitudes réduites de manière significative,
+      d’un certain nombre d’étalons de fréquence optique fondés sur des cuves à gaz
+      ont été déterminées, y compris dans le domaine des longueurs d’ondes pour les
+      télécommunications optiques ;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que les nouvelles techniques de peigne à impulsions femtosecondes
+      ont un intérêt manifeste pour relier la fréquence des étalons de fréquence optique
+      très stables à celle des étalons de fréquence utilisés pour la réalisation de
+      la seconde du Système international d’unités (SI), que ces techniques de mesure
+      sont un moyen commode pour assurer la traçabilité au SI et peuvent fournir aussi
+      bien des sources de fréquence que des techniques de mesure ;
+  - type: recognizing
+    date_effective: '2002-10-11'
+    message: "*reconnaît* que les techniques de peigne arrivent au moment opportun
+      et sont appropriées, et recommande de poursuivre les recherches pour étudier
+      leurs possibilités ;"
+  actions:
+  - type: welcomes
+    date_effective: '2002-10-11'
+    message: "*accueille favorablement* les essais de validation en cours des techniques
+      de peigne effectués par comparaison avec les autres techniques de chaînes de
+      fréquence"
+  - type: encourages
+    date_effective: '2002-10-11'
+    message: "*encourage* es laboratoires nationaux de métrologie et les autres laboratoires
+      à poursuivre les études sur les techniques de peigne au plus haut niveau d’exactitude
+      possible et à rechercher la simplicité pour encourager leur mise en pratique
+      la plus étendue ;"
+  - type: recommends
+    date_effective: '2002-10-11'
+    message: |-
+      *recommande*
+
+      * que la liste des radiations recommandées donnée par le CIPM en 1997 (Recommandation 1 (CI-1997)) soit remplacée par la liste de radiations ci-dessous*, qui inclut ;
+      ** des valeurs mises à jour de la fréquence des atomes de calcium et d’hydrogène refroidis et de l’ion piégé de strontium,
+      ** la valeur de la fréquence de nouvelles espèces d’ions refroidis, y compris de l’ion piégé de Hg^+^, de l'ion piégé d'In^+^, et de l'ion piégé d'Yb^+^,
+      ** des valeurs mises à jour de la fréquence de lasers asservis sur le rubidium, de lasers à grenat d’yttrium-aluminium dopé au néodyme (Nd:YAG) et de lasers à hélium-néon (He-Ne) asservis sur l’iode, de lasers à hélium-néon asservis sur le méthane, et de lasers à dioxyde de carbone asservis sur le tétroxyde d’osmium à 10 μm,
+      ** des valeurs de la fréquence d’étalons pour les télécommunications optiques, y compris les lasers asservis sur le rubidium et l’acétylène.
+  notes: "\\*\\* La liste des radiations recommandées, Recommandation 1 (CI-2002),
+    figure dans les https://www.bipm.org/documents/20126/17315032/CIPM2002.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b[PV,
+    *70*, 197-204] et dans_Metrologia_, 2003, *40*, 104-115."
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: Équivalent de dose
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/91-2002/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Comptes rendus du 91e CIPM (2002), 2003
+  reference_page: 102
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que la définition actuelle de l’unité SI d’équivalent de
+      dose (sievert) comprend un facteur « stem:[N] » (produit de tous les autres
+      facteurs de multiplication) prescrit par l’International Commission on Radiological
+      Protection (ICRP),
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que l’ICRP et l’International Commission on Radiation Units
+      and Measurements (ICRU) ont décidé de supprimer ce facteur stem:["N"] qui n’est
+      plus considéré comme nécessaire,
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considérant que la définition actuelle de l’équivalent de dose stem:[H]
+      dans le Système international d’unités, qui comprend le facteur stem:[N], porte
+      à confusion,
+  actions:
+  - type: decides
+    date_effective: '2002-10-11'
+    message: |-
+      *décide* de modifier l’explication donnée dans la Brochure sur « Le Système International d'Unités (SI) » de la manière suivante :
+
+      * * *
+
+      La grandeur équivalent de dose stem:[H] est le produit de la dose absorbée stem:[D] de rayonnements ionisants et du facteur sans dimension stem:[Q] (facteur de qualité) prescrit par l’ICRU, facteur défini en fonction du transfert d’énergie linéaire :
+
+      stem:[H = Q * D]
+
+
+
+      Ainsi, pour une radiation donnée, la valeur numérique de stem:[H] en joules par kilogramme peut être différente de la valeur de stem:[D] en joules par kilogramme, puisqu’elle est fonction de la valeur de stem:[Q].
+
+      * * *
+
+      Le Comité décide donc de maintenir la dernière phrase de l’explication sous la forme suivante :
+
+      Afin d’éviter tout risque de confusion entre la dose absorbée stem:[D] et l’équivalent de dose stem:[H], il faut employer les noms spéciaux pour les unités correspondantes, c’est-à-dire qu’il faut utiliser le nom gray au lieu de joule par kilogramme pour l’unité de dose absorbée stem:[D] et le nom sievert au lieu de joule par kilogramme pour l’unité d’équivalent de dose stem:[H].
+  notes: Voir aussi https://doi.org/10.1088/0952-4746/25/1/008[_J. Radiol. Prot._,
+    2005, *25*, 97-100]
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: Constante d'Avogadro
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/91-2002/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Comptes rendus du 91e CIPM (2002), 2003
+  reference_page: 104
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: recognizing
+    date_effective: '2002-10-11'
+    message: "*reconnaît* que le projet relatif à la constante d'Avogadro constitue
+      une initiative importante dans le domaine de la métrologie fondamentale et un
+      exemple important d'une approche nouvelle de collaboration internationale dans
+      le domaine de la métrologie entre les laboratoires nationaux de métrologie et
+      d'autres organismes scientifiques, qui dépasse les capacités des laboratoires
+      nationaux de métrologie pris individuellement ou celles des organisations régionales
+      de métrologie,"
+  actions:
+  - type: encourages
+    date_effective: '2002-10-11'
+    message: "*encourage* les laboratoires nationaux de métrologie à participer et
+      à contribuer à ce projet dans toute la mesure de leurs moyens,"
+  - type: encourages
+    date_effective: '2002-10-11'
+    message: "*encourage* aussi les laboratoires nationaux de métrologie participant
+      au projet à élaborer un mécanisme efficace pour en formaliser les contributions,
+      les engagements et l'évaluation,"
+  - type: requests
+    date_effective: '2002-10-11'
+    message: "*demande* au Comité consultatif pour la masse et les grandeurs apparentées
+      (CCM) d'établir un groupe de travail spécialisé pour superviser la mise en œuvre
+      de mécanismes efficaces afin de coordonner la collaboration au sujet de la constante
+      d'Avogadro et d'informer le Comité international des poids et mesures de l'état
+      d'avancement du projet dans un rapport annuel et un document d'évaluation."

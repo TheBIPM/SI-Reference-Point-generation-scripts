@@ -1,0 +1,56 @@
+---
+metadata:
+  title: 70e réunion du CIPM
+  identifier: '70'
+  date: '1981-10-08'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/70-1981
+pdf: https://www.bipm.org/documents/20126/62491356/CIPM1981.pdf/ba7f05f7-2194-603c-d7d9-8f6091747c8a
+resolutions:
+- dates:
+  - '1981-10-08'
+  subject: CIPM
+  type: recommendation
+  title: Expression des incertitudes expérimentales
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/70-1981/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM70.pdf/626c371c-49da-53fa-57ba-a40163146127
+  reference_name: Comptes rendus du 70e CIPM (1981), 1982
+  reference_page: 26
+  approvals:
+  - message: Le Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1981-10-08'
+    message: considérant la nécessité de convenir de modalités uniformes pour exprimer
+      l'incertitude en métrologie,
+  - type: considering
+    date_effective: '1981-10-08'
+    message: considérant les efforts déployés dans ce but par divers organismes depuis
+      de nombreuses années,
+  - type: considering
+    date_effective: '1981-10-08'
+    message: considérant les progrès encourageants vers une solution acceptable qui
+      ont résulté des discussions du Groupe de travail sur l'expression des incertitudes
+      réuni au BIPM en 1980,
+  - type: recognizing
+    date_effective: '1981-10-08'
+    message: reconnaît que les propositions du Groupe de travail pourraient constituer
+      la base d'un accord éventuel pour l'expression des incertitudes,
+  actions:
+  - type: recommends
+    date_effective: '1981-10-08'
+    message: recommande que les propositions de ce Groupe de travail soient largement
+      portées à la connaissance des intéressés,
+  - type: recommends
+    date_effective: '1981-10-08'
+    message: recommande que le BIPM s'efforce d'appliquer les principes contenus dans
+      ces propositions aux comparaisons qu'il organisera dans les années à venir,
+  - type: recommends
+    date_effective: '1981-10-08'
+    message: recommande que les autres organismes intéressés étudient et mettent à
+      l'essai ces propositions et fassent connaître au BIPM leurs observations,
+  - type: recommends
+    date_effective: '1981-10-08'
+    message: recommande que dans un délai de deux ou trois ans le BIPM fasse le point
+      sur la mise en œuvre de ces propositions.

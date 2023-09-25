@@ -1,0 +1,570 @@
+---
+metadata:
+  title: 102e réunion du CIPM (Partie I)
+  identifier: 102-1
+  date: '2013-06-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+pdf:
+- https://www.bipm.org/documents/20126/34443473/CIPM2013-FR.pdf/16d08c18-0f5a-6a57-a313-99b2aada586c
+- https://www.bipm.org/documents/20126/34443144/CIPM2013-I-Decisions-FR.pdf/
+resolutions:
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: recommendation
+  title: Mises à jour de la liste des fréquences étalons
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM102.pdf.zip/8d064d5c-26db-4d5c-42a3-115a7b002f8e
+  reference_name: Comptes rendus du 102e CIPM (2013), 2014
+  reference_page: 53
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2013-06-21'
+    message: considérant qu’une liste commune des « valeurs recommandées des fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » a été établie,
+  - type: considering
+    date_effective: '2013-06-21'
+    message: considérant que le Groupe de travail commun au CCL et au CCTF sur les
+      étalons de fréquence a examiné plusieurs fréquences candidates en vue de leur
+      inclusion dans cette liste,
+  actions:
+  - type: recommends
+    date_effective: '2013-06-21'
+    message: "*recommande* d’apporter les changements suivant à la liste commune des
+      « valeurs recommandées des fréquences étalons destinées à la mise en pratique
+      de la définition du mètre et aux représentations secondaires de la seconde »
+      :\n\n* inclure la fréquence de la transition suivante dans la liste des fréquences
+      étalons recommandées :\n** la transition optique non perturbée 6s^2^ ^1^S~0~
+      - 6s 6p ^3^P~0~ de l'atome neutre de ^199^ Hg, à la fréquence de stem:[1 128
+      575 290 808 162 \"Hz\"] avec une incertitude-type relative estimée de 1,7  ×
+      10^-14 ^;\n\n* mettre à jour les fréquences des transitions suivantes dans la
+      liste des fréquences étalons recommandées :\n** la transition optique non perturbée
+      4s ^2^S~1/2~ - 3d ^2^D~5/2~ of the ^stem:[40^(Ca)]+^ ion , à la fréquence de
+      411 stem:[042 129 776 395 \"Hz\"] avec une incertitude-type relative estimée
+      de 1,5  × 10^-14 ^;\n** la transition optique non perturbée 1S - 2S de l'atome
+      neutre de stem:[\"\"_(1) \"H\"] , à la fréquence de stem:[1 233 030 706 593
+      518 \"Hz\"] avec une incertitude-type relative estimée de stem:[1\",\"2 * 10^(-14)]
+      ;\n\nNote : Remarque : cette fréquence correspond à la moitié de l’écart en
+      énergie entre les états 1S et 2S ;\n\n* mettre à jour les fréquences des transitions
+      suivantes dans la liste des fréquences étalons recommandées et les approuver
+      comme représentations secondaires de la seconde  : \n** la transition optique
+      non perturbée 6s ^2^S~1/2~ - 4f ^stem:[13^(6s)2]^ ^2^stem:[\"F\"]~7/2~ de l'ion
+      de ^stem:[171^(Yb)]+^ (octupôle), à la fréquence de stem:[642 121 496 772 645\",\"6
+      \"Hz\"] avec une incertitude-type relative estimée de 1,3 × 10^-15 ^;\n** la
+      transition optique non perturbée 6s^2^ ^1^S~0~ - 6s 6p ^3^P~0~ de l'atome neutre
+      de ^171^Yb, à la fréquence de stem:[518 295 836 590 865\",\"0 \"Hz\"] avec une
+      incertitude-type relative estimée de 2,7 × 10^-15 ^;\n* inclure la fréquence
+      de la transition suivante dans la liste des fréquences étalons recommandées
+      et l’approuver comme représentation secondaire de la seconde  :\n** la transition
+      optique non perturbée 3s^2^ ^1^S~0~ - 3s 3p ^3^P~0~ of the ^stem:[27^(Al)]+^
+      ion, à la fréquence de 1 stem:[121 015 393 207 857\",\"3 \"Hz\"] avec une incertitude-type
+      relative estimée de 1,9 × 10^-15 ^;\n* mettre à jour les fréquences des transitions
+      suivantes dans la liste des fréquences étalons recommandées et les approuver
+      comme représentations secondaires de la seconde  :\n** la transition optique
+      non perturbée 5d ^10^6s ^2^S~1/2~ - 5d ^stem:[9^(6s)2]^ ^2^D~5/2~ de l'ion de
+      ^stem:[199^(Hg)]+^, à la fréquence de stem:[1 064 721 609 899 145\",\"3 \"Hz\"]
+      avec une incertitude-type relative estimée de 1,9 × 10^-15 ^;\n** la transition
+      optique non perturbée 6s ^2^S~1/2~ (stem:[F = 0], stem:[m_(\"F\") = 0]) - 5d
+      ^2^D~3/2~ (stem:[F = 2], stem:[m_(\"F\") = 0]) de l'ion de ^stem:[171^(Yb)]+^
+      ion (quadrupôle), à la fréquence de stem:[688 358 979 309 307\",\"1 \"Hz\"]
+      avec une incertitude-type relative estimée de 3 × 10^-15 ^;\n** la transition
+      optique non perturbée 5s ^2^S~1/2~ - 4d ^2^D~5/2~ de l'ion de ^stem:[88^(Sr)]+^,
+      à la fréquence de 444 stem:[779 044 095 485\",\"3 \"Hz\"] avec une incertitude-type
+      relative estimée de 4,0 × 10^-15 ^;\n** la transition optique non perturbée
+      5s^2^ ^1^S~0~ - 5s5p ^3^P~0~ de l'atome neutre de ^87^Sr, à la fréquence de
+      stem:[429 228 004 229 873\",\"4 \"Hz\"] avec une incertitude-type relative estimée
+      de 1 × 10^-15 ^;\n* mettre à jour la fréquence de la transition suivante dans
+      la liste des fréquences étalons recommandées et l’approuver comme représentation
+      secondaire de la seconde :\n** la transition quantique hyperfine non perturbée
+      de l’état fondamental de l’atome de ^87^Rb, à la fréquence de 6 834 682 stem:[610\",\"904
+      312 \"Hz\"] avec une incertitude-type relative estimée de stem:[1\",\"3 * 10^(-15)].\n\nRemarque
+      : La valeur de l’incertitude-type est supposée correspondre à un niveau de confiance
+      de 68 %. Toutefois, étant donné le nombre très limité de résultats disponibles,
+      il se peut que, rétrospectivement, cela ne s’avère pas exact."
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-1 (2013)
+  identifier: 102-1
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Meetings
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: convient que les procès-verbaux de la 101^e^ session du CIPM (2012) ont
+      été confirmés par correspondance.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-2 (2013)
+  identifier: 102-2
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Finance
+  - SCs and WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: 'approuve la révision des termes de référence du Sous-comité permanent
+      du CIPM sur les finances : le Sous-comité assumera la responsabilité principale
+      concernant les contrôles financiers préalables ainsi que la préparation effective,
+      et dans les délais requis, des états financiers du BIPM.'
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-3 (2013)
+  identifier: 102-3
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: |-
+      Après lecture des états financiers audités de 2012 du BIPM, le CIPM approuve, sans objection, les états financiers du BIPM de 2012 et décide d'affecter le résultat net de l'exercice 2012 qui s'élève à -3,654 millions d'euros en « Autres réserves ».
+
+      Le CIPM donne quitus de sa gestion au directeur, au titre de l'exercice financier 2012.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-4 (2013)
+  identifier: 102-4
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: |-
+      Après lecture des états financiers audités de 2012 de la Caisse de retraite et de prévoyance du BIPM, le CIPM approuve, sans objection, les états financiers de la Caisse de retraite et de prévoyance du BIPM de 2012 et décide d'affecter le résultat net de l'exercice 2012 qui s'élève à -10,105 millions d'euros en « Autres réserves ».
+
+      Le CIPM donne quitus de sa gestion de la Caisse de retraite et de prévoyance du BIPM au directeur, au titre de l'exercice financier 2012.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-5 (2013)
+  identifier: 102-5
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: |-
+      approuve, sans objection, les amendements proposés concernant l'article 16.3 « Préavis de démission » des Statut, Règlement et Instructions applicables aux membres du personnel du BIPM (SRI), c'est-à-dire l'insertion des deux articles 16.3.1 « Dispense d'exercice des fonctions durant le préavis » et 16.3.2 « Paiement du traitement et dispense de préavis ».
+
+      16.3 Préavis de démission
+
+      Les préavis de démission visés aux articles 16.1 et 16.2 du Statut sont donnés par écrit contre reçu daté et signé par le Directeur ou son représentant.
+
+      16.3.1 Dispense d'exercice des fonctions durant le préavis
+
+      Le Directeur peut discrétionnairement dispenser le membre du personnel de l'accomplissement effectif de ses fonctions durant le préavis dû en cas de démission.
+
+      16.3.2 Paiement du traitement et dispense de préavis
+
+      Lorsque le membre du personnel demande à cesser ses fonctions avant l'expiration de la période de préavis et que, avant la fin de la période de préavis, le membre du personnel quitte le BIPM pour un autre emploi, les émoluments correspondants à la durée du préavis restant à accomplir ne peuvent lui être payés.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-6 (2013)
+  identifier: 102-6
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve le principe des changements proposés concernant l'article 11.10.10
+      « Santé et sécurité au travail » des Statut, Règlement et Instructions applicables
+      aux membres du personnel du BIPM (SRI) et adoptera la version finale du texte
+      par correspondance.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-7 (2013)
+  identifier: 102-7
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve le principe des changements proposés concernant l'article 14.5.17
+      « Temps partiel thérapeutique » des Statut, Règlement et Instructions applicables
+      aux membres du personnel du BIPM (SRI) et adoptera la version finale du texte
+      par correspondance.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-8 (2013)
+  identifier: 102-8
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  - Membership
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve le document « Draft Criteria and Process for Election of CIPM
+      Members » préparé par le Groupe de travail _ad hoc_ du CIPM sur les règles et
+      les principes relatifs à la composition du CIPM, tel qu'amendé après discussion.
+      Le CIPM convient de présenter ce document aux représentants des États Parties
+      à la Convention du Mètre et aux directeurs des laboratoires nationaux de métrologie
+      lors de leur réunion en octobre 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-9 (2013)
+  identifier: 102-9
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2013-06-21'
+    message: décide de confier au Groupe de travail _ad hoc_ du CIPM sur les règles
+      et les principes relatifs à la composition du CIPM l'élaboration de procédures
+      pour l'élection des présidents des Comités consultatifs, ainsi que des présidents
+      et vice-présidents de leurs Groupes de travail. Le Groupe de travail rédigera
+      également des règles et principes pour l'élection des vice-présidents du CIPM,
+      des membres honoraires du CIPM, ainsi que des directeurs honoraires du BIPM.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-10 (2013)
+  identifier: 102-10
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve à l'unanimité l'élection d'E.O. Göbel comme membre honoraire
+      du CIPM en reconnaissance de sa contribution au travail du CIPM, en tant que
+      membre du CIPM de 1997 à 2012 et en tant que président de 2004 à 2010. Le président
+      du CIPM informera E.O. Göbel de cette décision.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-11 (2013)
+  identifier: 102-11
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Membership
+  considerations: []
+  actions:
+  - type: invites / further invites
+    date_effective: '2013-06-21'
+    message: sont invités à réfléchir à des candidats potentiels à un siège du CIPM
+      et à soumettre les noms et curriculum vitae de ces candidats au secrétaire du
+      CIPM avant la fin de septembre 2013 afin que le CIPM puisse examiner les candidatures
+      lors de la deuxième partie de la 102^e^ session du CIPM en octobre 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-12 (2013)
+  identifier: 102-12
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - General
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '2013-06-21'
+    message: fournira une copie électronique du document « Compendium of main rules
+      and practices applicable to the BIPM » aux membres du CIPM avant fin juillet
+      2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-13 (2013)
+  identifier: 102-13
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - SI
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve l'initiative du Président du Comité consultatif pour la masse
+      et les grandeurs apparentées (CCM) et du CCM visant à élaborer une feuille de
+      route qui indique les étapes requises en métrologie des masses pour parvenir
+      à une redéfinition du Système international d?unités (SI) d'ici à l'année 2018.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-14 (2013)
+  identifier: 102-14
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Work Programme
+  - SI
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve les plans présentés par le directeur par intérim du Département
+      des masses du BIPM concernant une campagne extraordinaire de mesures effectuées
+      à l'aide du prototype international du kilogramme et réitère son accord afin
+      que le directeur du BIPM accède au caveau et utilise le prototype international
+      du kilogramme pour cette campagne.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-15 (2013)
+  identifier: 102-15
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve le travail effectué par les Comités consultatifs afin de préparer
+      des documents de stratégie et prend note des retours utiles et positifs transmis
+      par les directeurs des laboratoires nationaux de métrologie. Le CIPM soutient
+      le directeur du BIPM concernant l'orientation donnée à l'initiative stratégique
+      et lui demande de continuer à développer une perspective globale.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-16 (2013)
+  identifier: 102-16
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: encourages
+    date_effective: '2013-06-21'
+    message: encourage les présidents et secrétaires exécutifs des Comités consultatifs
+      à réfléchir aux commentaires soumis par les laboratoires nationaux de métrologie
+      concernant la stratégie de leur Comité consultatif et à décider, en coopération
+      avec leur Comité consultatif (et/ou leurs Groupes de travail concernés), s'il
+      est nécessaire de réviser la stratégie.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-17 (2013)
+  identifier: 102-17
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Meetings
+  considerations: []
+  actions:
+  - type: invites / further invites
+    date_effective: '2013-06-21'
+    message: invitera les membres de la direction du Versailles Project on Advanced
+      Materials and Standards (VAMAS) à une réunion du bureau du CIPM en 2014 afin
+      d'étudier s'il serait utile de renforcer la collaboration entre le VAMAS et
+      le CIPM.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-18 (2013)
+  identifier: 102-18
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Work Programme
+  considerations: []
+  actions:
+  - type: welcomes
+    date_effective: '2013-06-21'
+    message: accueille favorablement l'analyse présentant le fondement des activités
+      de laboratoire du BIPM qui lui est présentée. Le CIPM demande au BIPM de lui
+      transmettre cette analyse et propose de soumettre des commentaires pour fin
+      juillet 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-19 (2013)
+  identifier: 102-19
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Relations internationales
+  - CCs et WGs
+  considerations:
+  - type: having / having regard
+    date_effective: '2013-06-21'
+    message: ayant l'intention d'encourager une perspective stratégique plus forte,
+      il identifiera un ou deux « grands défis métrologiques » transversaux en considérant
+      les possibilités de coopération avec l'ILAC, l'ISO et l'OIML, ainsi qu'avec
+      d'autres organisations internationales ayant des missions complémentaires de
+      celles du BIPM, et demandera aux présidents des Comités consultatifs d'évaluer
+      les implications de ces grands défis sur leur stratégie et leurs programmes
+      à venir. anis
+  actions: []
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-20 (2013)
+  identifier: 102-20
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CGPM
+  considerations: []
+  actions:
+  - type: requests
+    date_effective: '2013-06-21'
+    message: demande au directeur du BIPM et au bureau du CIPM d'élaborer l'ordre
+      du jour de la prochaine réunion de la CGPM de novembre 2014, en partant du principe
+      que la réunion durera trois jours et qu'elle sera précédée d'une journée consacrée
+      à une réunion préparatoire sur la dotation du BIPM ainsi qu'aux visites des
+      laboratoires du BIPM. Un projet d'ordre du jour sera présenté lors de la prochaine
+      réunion du CIPM et sera finalisé afin de pouvoir être soumis pour examen aux
+      représentants des États Parties à la Convention du Mètre et aux directeurs des
+      laboratoires nationaux de métrologie lors de leur réunion en octobre 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-21 (2013)
+  identifier: 102-21
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - SCs and WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve les activités du Sous-comité permanent du CIPM sur les pensions
+      et l'assurance-maladie et demande au Sous-comité de présenter les conclusions
+      de ses travaux au CIPM lors de sa prochaine réunion, ainsi qu'aux représentants
+      des États Parties à la Convention du Mètre et aux directeurs des laboratoires
+      nationaux de métrologie lors de leur réunion en octobre 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-22 (2013)
+  identifier: 102-22
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve les activités du Groupe de travail _ad hoc_ du CIPM sur les
+      conditions d'emploi et demande au Groupe de travail de présenter les conclusions
+      de ses travaux au CIPM lors de sa prochaine réunion, ainsi qu'aux représentants
+      des États Parties à la Convention du Mètre et aux directeurs des laboratoires
+      nationaux de métrologie lors de leur réunion en octobre 2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-23 (2013)
+  identifier: 102-23
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - Etats Membres et Associés
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2013-06-21'
+    message: décide, en se fondant sur les critères qu'il a précédemment adoptés,
+      qu'il serait approprié que l'Albanie devienne État Partie à la Convention du
+      Mètre. Le BIPM informera l'Albanie de cette décision, en rappelant la Résolution
+      4 (2011) « Sur le statut d'État Associé à la Conférence générale », ainsi que
+      les implications vis à vis de l'augmentation de la souscription si l'Albanie
+      choisissait de rester Associée à la CGPM.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-24 (2013)
+  identifier: 102-24
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CCs et WGs
+  considerations: []
+  actions:
+  - type: adopts
+    date_effective: '2013-06-21'
+    message: adopte la Recommandation « Mises à jour de la liste des fréquences étalons
+      » présentée par le Comité consultatif du temps et des fréquences (CCTF) comme
+      Recommandation CIPM CI-2013.
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-25 (2013)
+  identifier: 102-25
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - CIPM MRA
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: |-
+      approuve les changements proposés concernant les documents CIPM suivants :
+
+      * CIPM/2005-06REV « The CIPM MRA: 2005 Interpretation Document »;
+      * CIPM MRA-D-02 « Use of the CIPM MRA logo and certificates statement » ;
+      * CIPM MRA-G-01 « Guide to the implementation of the CIPM MRA » ;
+      * CIPM MRA-D-04 « Calibration and Measurement Capabilities in the context of the CIPM MRA » ;
+      * CIPM MRA-D-05 « Measurement comparisons in the CIPM MRA ».
+- dates:
+  - '2013-06-21'
+  subject: CIPM
+  type: decision
+  title: Décision CIPM/102-26 (2013)
+  identifier: 102-26
+  url: https://www.bipm.org/fr/committees/ci/cipm/102-_1-2013
+  categories:
+  - General
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2013-06-21'
+    message: approuve le texte du document « Mission, Rôle et Objectifs du BIPM »
+      présenté par le directeur du BIPM.
+working_documents:
+- title: CIPM2013-I-Decisions-EN.pdf
+  pdf: https://www.bipm.org/documents/20126/34443664/CIPM2013-I-Decisions-EN.pdf/
+  description: ''
+  author: ''
+- title: CIPM2013-I-Decisions-FR.pdf
+  pdf: https://www.bipm.org/documents/20126/34443144/CIPM2013-I-Decisions-FR.pdf/
+  description: ''
+  author: ''

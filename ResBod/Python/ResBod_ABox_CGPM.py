@@ -96,14 +96,14 @@ while i <= 27:
             PDF.g.add((resol_URI, PDF.hasOutcomeNr, Literal(resol_nr)))
             PDF.g.add((resol_URI, SKOS.hiddenLabel, Literal(resol_hidden_label, datatype=XSD.string)))
             PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_fr_DOI, lang='fr')))
-            if resolution['considerations']:  # only incldue this is there are considerations
+            if resolution['considerations']:  # only include this if there are considerations
                 considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
                 PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
                 for consideration in resolution['considerations']:
                     PDF.g.add(
                         (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='fr')))
 
-            if resolution['actions']:  # only incldue this is there are actions
+            if resolution['actions']:  # only include this if there are actions
                 actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
                 PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
                 for action in resolution['actions']:
@@ -129,14 +129,14 @@ while i <= 27:
             actions_blankNodeID = URIRef(resol_URI + "Action")
             PDF.g.add((resol_URI, PDF.hasOutcomeTitle, Literal(resol_title_en, lang='en')))
             PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_en_DOI, lang='en')))
-            if resolution['considerations']:  # only incldue this is there are considerations
+            if resolution['considerations']:  # only include this if there are considerations
                 considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
                 PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
                 for consideration in resolution['considerations']:
                     PDF.g.add(
                         (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='en')))
 
-            if resolution['actions']:  # only incldue this is there are actions
+            if resolution['actions']:  # only include this if there are actions
                 actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
                 PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
                 for action in resolution['actions']:

@@ -1,0 +1,135 @@
+---
+metadata:
+  title: 85e réunion du CIPM
+  identifier: '85'
+  date: '1996-09-26'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/85-1996
+pdf: https://www.bipm.org/documents/20126/62491553/CIPM1996.pdf/62473df1-4ad0-34b8-768f-74f271f8d8e4
+resolutions:
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Coordination des systèmes satellitaires qui diffusent le temps
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/85-1996/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Comptes rendus du 85e CIPM (1996), 1997
+  reference_page: 29
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant l'intérêt sur le plan international du fonctionnement simultané
+      du Global Positioning System (GPS) et du Global Navigation Satellite System
+      (GLONASS) avec une configuration complexe de 48 satellites,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant la possibilité d'utiliser l'un ou l'autre ou les deux systèmes
+      à discrétion,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant les différences actuellement significatives qui existent
+      entre les deux systèmes,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant les différences significatives dans les systèmes de coordonnées
+      de référence utilisés pour l'un et l'autre,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant les autres systèmes satellitaires destinés à diffuser le
+      temps actuellement en cours de mise au point,
+  actions:
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: |-
+      *recommande*
+
+      * que les temps de référence (modulo 1 seconde) des systèmes satellitaires de navigation à couverture globale\* soient synchronisés aussi étroitement que possible avec l'UTC,
+      * que leur système de référence soit conforme au système de référence terrestre (ITRF) déterminé par le Service international de la rotation terrestre,
+      * que l'on utilise indifféremment les récepteurs du GPS et du GLONASS dans les laboratoires du temps.
+
+      \* Tels que Global Positioning System (GPS), Global Navigation Satellite System (GLONASS), International Maritime Satellite Organization (INMARSAT), Global Navigation Satellite System 1 (GNSSI), Global Navigation Satellite System 2 (GNSS2).
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Multiples de deux pour les unités utilisées dans les techniques informatiques
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/85-1996/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Comptes rendus du 85e CIPM (1996), 1997
+  reference_page: 30
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: |-
+      _considérant_
+
+      * que la Conférence générale des poids et mesures a adopté un ensemble de préfixes à utiliser pour former les multiples et les sous-multiples décimaux des unités du SI,
+      * que les techniques informatiques ont un besoin grandissant d'exprimer les multiples de deux pour les unités telles que le bit et l'octet,
+      * que l'utilisation des préfixes du SI dans les techniques informatiques pour exprimer les multiples de deux pour de telles unités entraîne des risques de confusion,
+
+      rappelant que les préfixes du SI représentent strictement des puissances de dix,
+  - type: noting
+    date_effective: '1996-09-26'
+    message: _prenant acte_ du travail en cours, en particulier au sein de la Commission
+      électrotechnique internationale (CEl) mais aussi dans d'autres organisations,
+      pour trouver d'autres moyens d'exprimer les puissances de deux,
+  actions:
+  - type: approves
+    date_effective: '1996-09-26'
+    message: _soutient_ les efforts de la CEl pour parvenir à un accord international
+      sur les noms et les symboles des préfixes destinés à former les puissances de
+      deux pour les techniques informatiques.
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Échelle de température au-dessous de 1 K
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/85-1996/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Comptes rendus du 85e CIPM (1996), 1997
+  reference_page: 31
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant que de multiples activités de recherche sont en cours à des
+      températures thermodynamiques inférieures à stem:[1 "K"],
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant que ces recherches ont besoin d'une échelle de température
+      admise par convention qui représenterait avec une bonne approximation les températures
+      thermodynamiques,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considérant que l'EIT-90, avec la pression de vapeur de stem:[""_(3)
+      "He"], semble s'écarter de la température thermodynamique entre stem:[1 "K"]
+      et sa limite inférieure de stem:[0","65 "K"], notant que plusieurs échelles
+      de température propres à divers laboratoires ont été étudiées au-dessous de
+      stem:[0","65 "K"] et que ces échelles ne concordent pas,
+  actions:
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommande que les écarts entre les valeurs de la température données
+      dans l'EIT-90 par la pression de vapeur de stem:[""_(3) "He"] et la valeur correspondante
+      de la température thermodynamique, au-dessous de stem:[1 "K"], soient étudiées
+      plus avant,
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommande que des recherches soient entreprises pour expliquer les discordances
+      entre les échelles existantes utilisant la pression de fusion de stem:[""_(3)
+      "He"],
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommande que les laboratoires nationaux se concertent pour mettre au
+      point une relation entre la pression de fusion de stem:[""_(3) "He"] et la température
+      qui puisse servir de base à une extension de l'EIT-90 vers les basses températures
+      jusque vers stem:[1 "mK"].

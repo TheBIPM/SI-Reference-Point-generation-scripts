@@ -1,0 +1,135 @@
+---
+metadata:
+  title: 85th meeting of the CIPM
+  identifier: '85'
+  date: '1996-09-26'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/85-1996
+pdf: https://www.bipm.org/documents/20126/62491553/CIPM1996.pdf/62473df1-4ad0-34b8-768f-74f271f8d8e4
+resolutions:
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Coordination of satellite systems providing timing
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/85-1996/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Proceedings of the 85th CIPM (1996), 1997
+  reference_page: 145
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering the international value of having both Global Positioning
+      System (GPS) and Global Navigation Satellite System (GLONASS) operational with
+      a composite contribution of 48 satellites,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering the desirability of using either or both systems interchangeably,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that currently significant time differences exist between
+      the two systems,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that significant differences exist in the coordinate reference
+      frames used for each,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that other important satellite timing systems are now being
+      designed and developed,
+  actions:
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: |-
+      *recommends*
+
+      * that the reference times (modulo 1 second) of satellite navigation systems with global coverage\* be synchronized as closely as possible to UTC,
+      * that the reference frames for these systems be transformed to be in conformity with the terrestrial reference frame maintained by the International Earth Rotation Service (ITRF),
+      * that both GPS and GLONASS receivers be used at timing centres.
+
+      \* Such as Global Positioning System (GPS). Global Navigation Satellite System (GLONASS), International Maritime Satellite Organization (INMARSAT), Global Navigation Satellite System 1 (GNSSI), Global Navigation Satellite System 2 (GNSS2).
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Binary multiples of units used in information technology
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/85-1996/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Proceedings of the 85th CIPM (1996), 1997
+  reference_page: 146
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that the Conférence Générale des Poids et Mesures has adopted
+      a series of prefixes to be used in forming the decimal multiples and sub-multiples
+      of SI units,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that there is an increasing need in information technology
+      to express multiples of units such as the bit and byte,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that the use of the SI prefixes in information technology
+      to express binary multiples of such units leads to confusion,
+  - type: recalling / further recalling
+    date_effective: '1996-09-26'
+    message: _recalling_ that the SI prefixes represent strictly powers of ten,
+  - type: noting
+    date_effective: '1996-09-26'
+    message: _noting_ that work is under way, notably within the International Electrotechnical
+      Commission (IEC) but also in other organizations, aimed at finding alternative
+      ways of expressing binary multiples,
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '1996-09-26'
+    message: _strongly supports_ the IEC in its efforts to reach agreement on names
+      and symbols for prefixes denoting powers of two for use in information technology
+      world-wide.
+- dates:
+  - '1996-09-26'
+  subject: CIPM
+  type: recommendation
+  title: Temperature scale below 1 K
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/85-1996/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM85.pdf/2e34459e-97a1-3911-fb51-04c6b87cdbea
+  reference_name: Proceedings of the 85th CIPM (1996), 1997
+  reference_page: 147
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that many important research activities are in progress at
+      temperatures below stem:[1 "K"],
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that these researches require an accepted temperature scale
+      which c1osely represents thermodynamic temperatures,
+  - type: considering
+    date_effective: '1996-09-26'
+    message: considering that the ITSstem:[-90 ""_(3) "He"] vapour pressure equation
+      is believed to deviate from thermodynamic temperatures between stem:[1 "K"]
+      and its lower limit of stem:[0","65 "K"], noting that several discrepant laboratory
+      scales below stem:[0","65 "K"] have been developed,
+  actions:
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommends that the deviation of the ITSstem:[-90 ""_(3) "He"] vapour
+      pressure equation from thermodynamic temperature below stem:[1 "K"] be further
+      investigated,
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommends that research be undertaken to resolve discrepancies between
+      existing stem:[""_(3) "He"] melting pressure scales,
+  - type: recommends
+    date_effective: '1996-09-26'
+    message: recommends that national laboratories collaborate to develop a stem:[""_(3)
+      "He"] melting pressure equation to serve as the basis for an extension of the
+      ITS-90 down to a temperature of about stem:[1 "mK"].
