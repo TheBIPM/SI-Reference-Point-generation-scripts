@@ -48,7 +48,8 @@ Once this is fixed, you can run the *_ABox.py files,
 ~/CUQ/Python/Prefixes_ABox.py
 ~/CUQ/Python/Quantities_ABox.py
 ~/CUQ/Python/Units_ABox.py
-~/ResBod/Python/ResBod_ABox.py
+~/ResBod/Python/ResBod_ABox_CGPM.py
+~/ResBod/Python/ResBod_ABox_CIPM.py
 
 
 
