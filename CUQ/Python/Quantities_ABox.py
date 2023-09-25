@@ -5,7 +5,7 @@
 # the module imports the Python script 'settings.py' located in a directory above this directory
 # Should this lead to an error when executing the present script (... not found ...) you might need
 # to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI"
+# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
 from rdflib import URIRef, Literal

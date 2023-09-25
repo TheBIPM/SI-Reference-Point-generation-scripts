@@ -425,47 +425,58 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX si: <http://si-digital-framework.org/SI#>
-        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        SELECT ?Kst_Label ?hidden_Name ?Kst_Symbol ?Wert ?Symbol_String{
-            {
-            SELECT (?Label as ?Kst_Label) (?Value as ?Wert)
-                (?Cst_Symbol as ?Kst_Symbol) (?hidden_Label AS ?hidden_Name)
-                (group_concat(?Einheit_String; separator=" ") AS ?Symbol_String)
-                WHERE { 
-                    {   
-                        ?SIBaseUnit si:hasDefiningConstant ?Constant .
-                            ?Constant skos:prefLabel ?Label ;
-                                skos:hiddenLabel ?hidden_Label ;
-                                si:hasUnitElement ?unit ;
-                                si:hasValue ?Value ;
-                                si:hasSymbol ?Cst_Symbol .
-                            ?Element si:hasUnit ?Unit ;
-                                si:hasUnitPwr ?Pwr.
-                            ?Unit si:hasSymbol ?Symbol.
-                            BIND(
-                                IF (?Pwr=1, STR( ?Symbol ),
-                                    CONCAT(STR( ?Symbol ), "^", STR(?Pwr) )) AS ?Einheit_String ) .
-                        }            
-                        FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                    }
-                GROUP BY ?Label ?Value ?Cst_Symbol ?hidden_Label
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+            PREFIX si: <http://si-digital-framework.org/SI#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+            SELECT ?Label ?Value ?Unit ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
+            WHERE { 
+                ?SIBaseUnit si:hasDefiningConstant ?Constant .
+                ?Constant skos:prefLabel ?Label ;
+                    skos:hiddenLabel ?Hidden ;
+                    si:hasValueAsString ?Valuestr ;
+                    si:hasUnitAsString ?Unitstr ;
+                    si:hasUpdatedDate ?Updated ;
+                    si:hasDatatype ?Type ;
+                    si:hasValue ?Value ;
+                    si:hasUnitElement ?list ;
+                    si:hasSymbol ?Symbol .
+                ?list rdf:_1 ?el1 .
+                ?el1 si:hasUnit ?u1 ;
+                     si:hasUnitPwr ?p1.
+                     ?u1 si:hasSymbol ?sym1 .
+                     BIND(IF(?p1=1, str(?sym1), CONCAT(str(?sym1),"<sup>",str(?p1),'</sup>')) AS ?u1Str)
+
+                OPTIONAl {
+                    ?list rdf:_2 ?el2 .
+                    ?el2 si:hasUnit ?u2 ;
+                        si:hasUnitPwr ?p2.
+                        ?u2 si:hasSymbol ?sym2 .
+                        BIND(IF(?p2=1, str(?sym2), CONCAT(str(?sym2),"<sup>",str(?p2),'</sup>')) AS ?u2Str)
                 }
+                
+                FILTER (langmatches(lang(?Label),'""" + lang + """')) .
+                BIND(IF(EXISTS {?list rdf:_2 ?el }, CONCAT(?u1Str, " ", ?u2Str ), ?u1Str) AS ?Unit)
             }
         """
 
     qres = g.query(knows_query)
     responses: List[dict] = []
 
+    server = request.headers['host']
+
     for element in qres:
         responses.append(
             {
-                'Cst_Label': element['Kst_Label'],
-                'Cst_Symbol': element['Kst_Symbol'],
-                'Cst_Value': element['Wert'],
-                'Cst_Unit_String': element['Symbol_String'],
-                'Cst_Link': BASE_URL + "constant/" + element['hidden_Name']
+                'Cst_Label': element['Label'],
+                'Cst_Symbol': element['Symbol'],
+                'Cst_Value': element['Value'],
+                'Cst_Valuestr': element['Valuestr'],
+                'Cst_Date': element['Updated'],
+                'Cst_Unit': element['Unit'],
+                'Cst_Unitstr': element['Unitstr'],
+                'Cst_Link': server + '/constant/' + element['Hidden'] + '/',
+                'Cst_Datatype': element['Type']
             }
         )
 
@@ -476,6 +487,25 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'constants': responses}
+    elif accept == 'application/ld+json':
+        # create url
+        url = 'https://si-digital-framework.org/constants/'
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/constants.jsonld",
+               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+               {"@base": url}]
+        gph = {"@id": url, "@type": "si:Constant"}
+        gph.update({"constants": []})
+        for resp in responses:
+            con = {}
+            con.update({"name": resp['Cst_Label']})
+            con.update({'url': resp['Cst_Link']})
+            gph['constants'].append(con)
+
+        jld = {
+            "@context": ctx, "@id": url,
+            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return jld
     else:
         return TEMPLATES.TemplateResponse(
             "ConstantsLayout.html",
@@ -503,7 +533,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-            SELECT ?Label ?Value ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
+            SELECT ?Label ?Value ?Unit ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
             WHERE { 
                 ?SIBaseUnit si:hasDefiningConstant ?Constant .
                 ?Constant skos:prefLabel ?Label ;
@@ -513,15 +543,30 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
                     si:hasUpdatedDate ?Updated ;
                     si:hasDatatype ?Type ;
                     si:hasValue ?Value ;
+                    si:hasUnitElement ?list ;
                     si:hasSymbol ?Symbol .
+                ?list rdf:_1 ?el1 .
+                ?el1 si:hasUnit ?u1 ;
+                     si:hasUnitPwr ?p1.
+                     ?u1 si:hasSymbol ?sym1 .
+                     BIND(IF(?p1=1, str(?sym1), CONCAT(str(?sym1),"<sup>",str(?p1),'</sup>')) AS ?u1Str)
+
+                OPTIONAl {
+                    ?list rdf:_2 ?el2 .
+                    ?el2 si:hasUnit ?u2 ;
+                        si:hasUnitPwr ?p2.
+                        ?u2 si:hasSymbol ?sym2 .
+                        BIND(IF(?p2=1, str(?sym2), CONCAT(str(?sym2),"<sup>",str(?p2),'</sup>')) AS ?u2Str)
+                }
+                
                 FILTER (langmatches(lang(?Label),'""" + lang + """')) .
                 FILTER (?Hidden='""" + name + """') .
+                BIND(IF(EXISTS {?list rdf:_2 ?el }, CONCAT(?u1Str, " ", ?u2Str ), ?u1Str) AS ?Unit)
             }
         """
     qres = g.query(knows_query)
     response: dict = {}
-
-    for element in qres:  # using iteration as all constants returned...
+    for element in qres:  # using iteration even though only unit returned...
         response.update(
             {
                 'Cst_Label': element['Label'],
@@ -529,7 +574,8 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
                 'Cst_Value': element['Value'],
                 'Cst_Valuestr': element['Valuestr'],
                 'Cst_Date': element['Updated'],
-                'Cst_Unit': element['Unitstr'],
+                'Cst_Unit': element['Unit'],
+                'Cst_Unitstr': element['Unitstr'],
                 'Cst_Hidden': element['Hidden'],
                 'Cst_Datatype': element['Type']
             }
@@ -558,6 +604,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
         gph.update({"valuestr": resp['Cst_Valuestr']})
         gph.update({"datatype": resp['Cst_Datatype']})
         gph.update({"unit": resp['Cst_Unit']})
+        gph.update({"unitstr": resp['Cst_Unitstr']})
         gph.update({"url": url})
         gph.update({"lastupdated": resp['Cst_Date']})
 
@@ -1048,10 +1095,10 @@ def displ_prefix(request: Request, sym: str | None = None):
 
 # ----------------------------------------------------------------------------------------
 @app.get("/si-prefixes/")
-def displ_prefixes(request: Request, sym: str | None = None, factor: str | None = None):
+def displ_prefixes(request: Request):
     for param in request.query_params:
         if param not in param_list_prefixes:
-            error_msg = "Parameter " + param + " unkonwn. Allowed parameter: "
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
             for allowed_para in param_list_prefixes:
                 error_msg += allowed_para + ", "
             error_msg = error_msg[:-2]
@@ -1065,33 +1112,37 @@ def displ_prefixes(request: Request, sym: str | None = None, factor: str | None 
         WHERE
         {
             ?SIPrefix si:hasSymbol ?PrefixSymbol ;
-                      skos:prefLabel ?Label ;
-                      si:hasScalingFactor ?ScalingFactor .
-        }"""
-
-    if (sym is not None) and (factor is not None):
-        raise HTTPException(
-            status_code=404,
-            detail=f"Why are you asking me? Do not provide 'ScalingFactor' and 'Symbol' simultaneously.")
-    else:
-        if sym is not None:
-            knows_query = knows_query[:-1] + """FILTER (?PrefixSymbol='""" + sym + """')} """
-        if factor is not None:
-            knows_query = knows_query[:-1] + """FILTER (?ScalingFactor=""" + str(factor) + """ )} """
+                skos:prefLabel ?Label ;
+                si:hasScalingFactor ?ScalingFactor .
+        }
+        
+    """
 
     knows_query += "ORDER By DESC(?ScalingFactor)"
 
     qres = g.query(knows_query)
     responses: List[dict] = []
 
+    server = request.headers['host']
+
+    # remove duplicates and add French label
+    done = []
+    idx = 0
     for element in qres:
-        responses.append(
-            {
-                'Label': element['Label'],
-                'Symbol': element['PrefixSymbol'],
-                'ScalingFactor': element['ScalingFactor']
-            }
-        )
+        if element['PrefixSymbol'] in done:
+            responses[(idx - 1)].update({'Labelfr': element['Label']})
+            idx = 0
+        else:
+            done.append(element['PrefixSymbol'])
+            idx = len(done)
+            responses.append(
+                {
+                    'Label': element['Label'],
+                    'Symbol': element['PrefixSymbol'],
+                    'Factor': element['ScalingFactor'],
+                    'Link': server + '/prefix/' + element['PrefixSymbol']
+                }
+            )
 
     if not responses:
         raise HTTPException(
@@ -1100,7 +1151,34 @@ def displ_prefixes(request: Request, sym: str | None = None, factor: str | None 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'prefixes': responses}
+    elif accept == 'application/ld+json':
+        # create url
+        url = 'https://si-digital-framework.org/si-prefixes/'
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/prefixes.jsonld",
+               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+               {"@base": url}]
+        gph = {"@id": url, "@type": "si:SIPrefix"}
+        gph.update({"prefixes": []})
+        for resp in responses:
+            pfix = {}
+            pfix.update({"name": resp['Label']})
+            pfix.update({"nom": resp['Labelfr']})
+            pfix.update({'symbol': resp['Symbol']})
+            # needed to correctly display factor as numeric value in JSON
+            f = float(resp['Factor'])
+            if 1 < f < 1e+18:
+                pfix.update({'factor': int(f)})
+            else:
+                pfix.update({'factor': f})
+            pfix.update({'datatype': 'xsd:integer'})
+            pfix.update({'url': resp['Link']})
+            gph['prefixes'].append(pfix)
 
+        jld = {
+            "@context": ctx, "@id": url,
+            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return jld
     else:
         return TEMPLATES.TemplateResponse(
             "PrefixesLayout.html",

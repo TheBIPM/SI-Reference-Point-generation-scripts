@@ -20,6 +20,13 @@ si:hasConversionUnit a owl:ObjectProperty ;
     rdfs:domain si:nonSIUnit ;
     rdfs:range si:MeasurementUnit .
 
+si:hasDatatype a owl:DatatypeProperty ;
+    rdfs:label "has datatype"@en,
+        "a un type de données"@fr ;
+    rdfs:domain si:Constant,
+        si:SIPrefix ;
+    rdfs:range xsd:anyURI .
+
 si:hasDefiningConstant a owl:ObjectProperty ;
     rdfs:label "has defining constant"@en,
         "a une constante de définition"@fr ;
@@ -129,11 +136,11 @@ si:SIBaseUnit rdfs:label "base unit"@en,
                                à travers les temps."""@fr ;
     rdfs:isDefinedBy "VIM3 1.10" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty si:hasStartValidity ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty si:hasEndValidity ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty si:hasStartValidity ],
         si:MeasurementUnit ;
     owl:disjointWith si:SISpecialNamedUnit,
         si:nonSIUnit .
@@ -205,22 +212,6 @@ si:isDefiningResolutionOf a owl:ObjectProperty ;
     rdfs:range si:Definition ;
     owl:inverseOf si:hasDefiningResolution .
 
-si:SIPrefix a skos:Concept ;
-    rdfs:label "SI prefix"@en,
-        "préfixe SI"@fr ;
-    rdfs:comment "The class for SI Prefixes."@en,
-        "La classe pour les préfixes SI."@fr ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty si:hasScalingFactor ] .
-
-si:Constant a skos:Concept ;
-    rdfs:label "defining constant"@en,
-        "définir la constante"@fr ;
-    rdfs:comment "Class for the seven defining constants of the SI."@en,
-        "La classe pour les sept constantes définissant le SI."@fr ;
-    owl:disjointWith si:QuantityKind .
-
 si:DefinitionNote a skos:Concept ;
     rdfs:label "unit definition note"@en,
         "note de définition d'unité"@fr ;
@@ -233,6 +224,15 @@ si:QuantityKind a skos:Concept ;
     rdfs:comment "Class for the quantity kinds."@en,
         "La classe pour les types de quantité."@fr ;
     rdfs:isDefinedBy "VIM3 1.2"^^xsd:string .
+
+si:SIPrefix a skos:Concept ;
+    rdfs:label "SI prefix"@en,
+        "préfixe SI"@fr ;
+    rdfs:comment "The class for SI Prefixes."@en,
+        "La classe pour les préfixes SI."@fr ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty si:hasScalingFactor ] .
 
 si:nonSIUnit rdfs:label "non SI unit"@en,
         "unité en dehors du SI"@fr ;

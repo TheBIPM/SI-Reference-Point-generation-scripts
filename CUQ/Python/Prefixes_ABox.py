@@ -90,8 +90,10 @@ for row in range(2, sheet.max_row + 1):
     if uri_text is not None:
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SIPrefix))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel, datatype=XSD.string)))
-        PDF.g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.double)))
+        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        PDF.g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
+        PDF.g.add((element, PDF.hasDatatype, XSD.integer))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
 
 
