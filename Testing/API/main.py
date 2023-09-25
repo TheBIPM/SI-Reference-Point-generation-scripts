@@ -138,7 +138,7 @@ def get_unit_name(sym: str, lang: str | None = 'en'):
 
 
 # get the name of a prefix base on a symbol
-def get_prefix_name(sym: str, lang: str | None = 'en'):
+def get_prefix_name(sym: str):
     prefix_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
@@ -146,7 +146,6 @@ def get_prefix_name(sym: str, lang: str | None = 'en'):
             WHERE
             {
                 ?Prefix a si:SIPrefix .
-
                 ?Prefix skos:prefLabel ?Label .
                 ?Prefix si:hasSymbol ?Symbol . 
                 FILTER (?Symbol='""" + sym + """')}"""
@@ -1115,10 +1114,8 @@ def displ_prefixes(request: Request):
                 skos:prefLabel ?Label ;
                 si:hasScalingFactor ?ScalingFactor .
         }
-        
+        ORDER By DESC(?ScalingFactor)
     """
-
-    knows_query += "ORDER By DESC(?ScalingFactor)"
 
     qres = g.query(knows_query)
     responses: List[dict] = []
@@ -1146,7 +1143,7 @@ def displ_prefixes(request: Request):
 
     if not responses:
         raise HTTPException(
-            status_code=404, detail=f"No prefix for Symbol {sym}.")
+            status_code=404, detail=f"SPARQL query not working?.")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -1344,20 +1341,21 @@ def displ_quants(request: Request, lang: str | None = 'en'):
     knows_query = """
                 PREFIX si: <http://si-digital-framework.org/SI#>
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                SELECT DISTINCT ?Q_Label ?U_Label ?Symbol ?Code
+                SELECT DISTINCT ?Q_Label ?U_Label ?U_Symbol ?Q_Code
                 WHERE {
                         {?Unit a si:SIBaseUnit}   
                         UNION
                         {?Unit a si:SISpecialNamedUnit}
                         ?Quantity a si:QuantityKind ;
-                                    skos:altLabel ?Code ;
+                                    skos:altLabel ?Q_Code ;
                                     skos:prefLabel ?Q_Label ;
                                     si:hasUnit ?Unit.	
-                        ?Unit si:hasSymbol ?Symbol ;
+                        ?Unit si:hasSymbol ?U_Symbol ;
                                 skos:prefLabel ?U_Label.
                         FILTER (langmatches(lang(?Q_Label),'""" + lang + """')) .
                         FILTER (langmatches(lang(?U_Label),'""" + lang + """')) . 
-                    }"""
+                    }
+                """
 
     qres = g.query(knows_query)
     responses: List[dict] = []
@@ -1366,10 +1364,10 @@ def displ_quants(request: Request, lang: str | None = 'en'):
         responses.append(
             {
                 'Q_Label': element['Q_Label'],
-                'Code': element['Code'],
+                'Q_Code': element['Q_Code'],
                 'U_Label': element['U_Label'],
-                'Symbol': element['Symbol'],
-                'Link': BASE_URL + "si-unit/" + element['Symbol']
+                'U_Symbol': element['U_Symbol'],
+                'Link': BASE_URL + "si-unit/" + element['U_Symbol']
             }
         )
     if not responses:
@@ -1380,6 +1378,25 @@ def displ_quants(request: Request, lang: str | None = 'en'):
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'units': responses}
+    elif accept == 'application/ld+json':
+        # create url
+        url = 'https://si-digital-framework.org/quantities/'
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/quantities.jsonld",
+               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+               {"@base": url}]
+        gph = {"@id": url, "@type": "si:Quantity"}
+        gph.update({"quantities": []})
+        for resp in responses:
+            qty = {}
+            qty.update({"name": resp['Q_Label']})
+            qty.update({'code': resp['Q_Code']})
+            qty.update({'siunit': {'name': resp['U_Label'], 'symbol': resp['U_Symbol']}})
+            gph['quantities'].append(qty)
+        jld = {
+            "@context": ctx, "@id": url,
+            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return jld
 
     else:
         return TEMPLATES.TemplateResponse(

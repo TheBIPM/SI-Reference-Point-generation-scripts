@@ -12,8 +12,8 @@
                 <h2>{{unit.Q_Label}}</h2>
                 {% set url_address = unit.Link ~'?lang=' ~language %}   
                 <p>
-                    Le type de grandeur {{unit.Q_Label}} a l'unité <a href="{{url_address}}">{{unit.U_Label}}</a>
-                    (symbole {{unit.Symbol}}). (code: {{unit.Code}})
+                    Le type de grandeur {{unit.Q_Label}} (code: {{unit.Q_Code}}) a l'unité
+                    <a href="{{url_address}}">{{unit.U_Label}}</a> (symbole {{unit.U_Symbol}}).
                 </p>
             {% endfor %}
         {% else %}
@@ -22,8 +22,8 @@
                 <h2>{{unit.Q_Label}}</h2>
                 {% set url_address = unit.Link ~'?lang=' ~language %}   
                 <p>
-                    The kind of quantity {{unit.Q_Label}} has the unit <a href="{{url_address}}">{{unit.U_Label}}</a>
-                    (symbole {{unit.Symbol}}). (code: {{unit.Code}})
+                    The kind of quantity {{unit.Q_Label}} (code: {{unit.Q_Code}}) has the
+                    unit <a href="{{url_address}}">{{unit.U_Label}}</a> (symbol {{unit.U_Symbol}}).
                 </p>
             {% endfor %}
         {% endif %}
