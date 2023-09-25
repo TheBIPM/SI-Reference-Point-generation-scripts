@@ -1,0 +1,335 @@
+---
+metadata:
+  title: 112th meeting of the CIPM (Session I)
+  identifier: 112-1
+  date: '2023-03-23'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+pdf:
+- https://www.bipm.org/documents/20126/83231519/CIPM2023-+I-Decisions-EN.pdf/e8bf4367-ba36-0a6c-19a5-6761467dba49
+- https://www.bipm.org/documents/20126/86569823/CIPM2023-I-Report-EN.pdf/ca70901f-097a-e096-ce64-778c94b28e72
+resolutions:
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-1 (2023)
+  identifier: 112-1
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - Meetings
+  considerations:
+  - type: accepts
+    date_effective: '2023-03-23'
+    message: accepted the minutes of the 111th meeting of the CIPM as a true record.
+  actions: []
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-2 (2023)
+  identifier: 112-2
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CIPM / Membership
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2023-03-23'
+    message: elected Dr W. Louw as President of the CIPM by secret ballot.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-3 (2023)
+  identifier: 112-3
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - Meetings
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2023-03-23'
+    message: |-
+      elected the following by secret ballot:
+
+      * Dr T. Usuda as Secretary of the CIPM;
+      * Dr P. Richard and Dr J. Olthoff as Vice-Presidents of the CIPM.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-4 (2023)
+  identifier: 112-4
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2023-03-23'
+    message: |-
+      decided to reappoint the Presidents of the following Consultative Committees for four-year terms:
+
+      * Consultative Committee for Acoustics, Ultrasound and Vibration (CCAUV): Dr H. Laiz.
+      * Consultative Committee for Electricity and Magnetism (CCEM): Prof. G. Rietveld.
+      * Consultative Committee for Mass and Related Quantities (CCM): Dr P. Richard.
+      * Consultative Committee for Photometry and Radiometry (CCPR): Dr M.L. Rastello.
+      * Consultative Committee for Amount of Substance: Metrology in Chemistry and Biology (CCQM): Dr S.-R. Park.
+      * Consultative Committee for Thermometry (CCT): Dr Y. Duan.
+      * Consultative Committee for Time and Frequency (CCTF): Dr stem:["N"]. Dimarcq.
+      * Consultative Committee for Units (CCU): Prof. J. Ullrich.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-5 (2023)
+  identifier: 112-5
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: appointed Dr J.-T. Janssen as the President of the Consultative Committee
+      for Ionizing Radiation (CCRI) for a four-year term.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-6 (2023)
+  identifier: 112-6
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: appointed Dr stem:["V"]. Coleman as the President of the Consultative
+      Committee for Length (CCL) for a four-year term.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-7 (2023)
+  identifier: 112-7
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CIPM / SCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: appointed stem:["Ms"] G. Macdonald as the Chair of the Pension Fund Advisory
+      Board (PFAB).
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-8 (2023)
+  identifier: 112-8
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CIPM / SCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: |-
+      appointed the following CIPM members to serve on the CIPM Sub-Committees and _ad hoc_ Working Groups:
+
+      * CIPM Sub-Committee on Finance (FSC): Dr P. Richard (Chair), stem:["Ms"] G. Macdonald (Chair of the Pension Fund Advisory Board), Dr stem:["V"].G. Achanta, Dr Y. Duan, Dr W. Louw, Dr T. Usuda,
+      * Pension Fund Advisory Board (PFAB): stem:["Ms"] G. Macdonald (Chair), Dr P. Richard (Chair of the CIPM Sub-Committee on Finance), Dr T. Usuda.
+      * CIPM Sub-Committee on Strategy: Dr W. Louw (Chair), Dr stem:["V"].G. Achanta, Dr stem:["V"]. Coleman, Dr J.-T. Janssen, stem:["Ms"] G. Macdonald, Dr D. del Campo Maldonado, Dr H. Laiz, Prof. P. Neyezhmakov, Dr J. Olthoff, Dr M.L. Rastello, Prof. G. Rietveld, Dr G. Ripper, Prof. J. Ullrich. +
+       (Universal adherence to the Metre Convention: Dr stem:["V"]. Coleman, Dr A. Cypionka (BIPM), Dr W. Louw)
+      * CIPM _ad hoc_ Working Group on Conditions of Employment: Dr T. Usuda (Chair), Dr M.L. Rastello, Dr P. Richard, Dr G. Ripper.
+      * CIPM Task Group on the SI Digital Framework (formerly Digital SI): Prof. J. Ullrich (Chair), Dr stem:["V"].G. Achanta, Dr stem:["V"]. Coleman, Dr stem:["N"]. Dimarcq, Dr Y. Duan, Dr J.-T. Janssen, Dr H. Laiz, stem:["Ms"] G. Macdonald, Prof. P. Neyezhmakov, Dr J. Olthoff, Dr M.L. Rastello.
+      * CIPM Sectorial Task Group on Climate Change and Environment (STG-CENV): Dr D. del Campo Maldonado (Chair), Dr Y. Duan, Dr J.-T. Janssen.
+      * OIML-BIPM Joint Task Group: Dr W. Louw, Dr P. Richard, Prof. J. Ullrich, Dr T. Usuda.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-9 (2023)
+  identifier: 112-9
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - SCs and WGs
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2023-03-23'
+    message: decided to establish a CIPM Sub-Committee on Governance to execute the
+      mandate given by the CGPM at its 27th meeting (2022) to modernize the organization,
+      and appointed Dr P. Richard as the Chair. Dr stem:["V"].G. Achanta, Dr D. del
+      Campo Maldonado, Dr W. Louw, stem:["Ms"] G. Macdonald and Dr T. Usuda agreed
+      to be members. The terms of reference of the CIPM Sub-Committee on Governance
+      were approved.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-10 (2023)
+  identifier: 112-10
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CCs and WGs
+  considerations:
+  - type: accepts
+    date_effective: '2023-03-23'
+    message: |-
+      accepted the following changes to the membership and observership of the Consultative Committees:
+
+      CCEM
+
+      * NIS (Egypt) as a member
+      * NSE “Ukrmetrteststandard” (Ukraine) as an observer
+  actions: []
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-11 (2023)
+  identifier: 112-11
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CIPM / SCs and WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2023-03-23'
+    message: Following Decision CIPM/110-10 (2021) to start the Sectorial Task Group
+      on Climate Change and Environment (STG-CENV), the CIPM approved the structure,
+      terms of reference, membership and work plan.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-12 (2023)
+  identifier: 112-12
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - Digital transformation
+  - CIPM / SCs and WGs
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2023-03-23'
+    message: |-
+      approved the establishment of a forum on metrology in the digital world and noted the draft mission and structure proposed by the CIPM Task Group on the SI Digital Framework. It requested the Task Group to propose a name for the forum.
+
+      The CIPM adopted the updated Grand Vision for the SI Digital Framework.
+
+      The CIPM endorsed the swift further development and implementation of the SI Reference Point (SIRP, working title) by the BIPM Headquarters in close coordination with the Task Group on the SI Digital Framework and its Expert Group.
+
+      The CIPM endorsed the SIRP to become the unit representation system for the digital products of the BIPM, including the SI Brochure, the _mises en pratique_, the KCDB and the JCTLM database.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-13 (2023)
+  identifier: 112-13
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - Digital transformation
+  - CIPM / SCs and WGs
+  considerations:
+  - type: considering
+    date_effective: '2023-03-23'
+    message: Considering the synergies between the CIPM Working Group on Data and
+      the CIPM Task Group on the SI Digital Framework, the CIPM decided to close the
+      CIPM Working Group on Data and to merge its members into the CIPM Task Group.
+  actions: []
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-14 (2023)
+  identifier: 112-14
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CCs and WGs
+  considerations:
+  - type: noting
+    date_effective: '2023-03-23'
+    message: noted that the trend projected by the International Earth Rotation and
+      Reference Systems Service (IERS) would lead to a negative leap second for the
+      first time before 2035 and asked the CCTF to identify the best way forward and
+      the necessary steps to allow a timely application of Resolution 4 adopted by
+      the CGPM at its 27th meeting (2022) working together with the International
+      Telecommunication Union (ITU).
+  actions: []
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-15 (2023)
+  identifier: 112-15
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - CIPM / Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: reappointed Dr J. Olthoff to represent the CIPM at the Joint Committee
+      of the Regional Metrology Organizations and the BIPM (JCRB).
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-16 (2023)
+  identifier: 112-16
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - JCTLM
+  - CIPM / Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: reappointed Dr S.-R. Park and appointed Dr W. Louw to represent the CIPM
+      at the Joint Committee for Traceability in Laboratory Medicine (JCTLM). The
+      CIPM agreed for a letter to be sent to the NMIs and DIs participating in the
+      JCTLM requesting voluntary contributions to complete development of the JCTLM
+      database. The CIPM accepted to implement a registration fee for the JCTLM Stakeholders’
+      meetings and workshops.
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-17 (2023)
+  identifier: 112-17
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - JCGM
+  - CIPM / Membership
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2023-03-23'
+    message: reappointed Prof. P. Neyezhmakov to represent the CIPM at the Joint Committee
+      for Guides in Metrology (JCGM).
+- dates:
+  - '2023-03-23'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/112-18 (2023)
+  identifier: 112-18
+  url: https://www.bipm.org/en/committees/ci/cipm/112-_1-2023
+  categories:
+  - International Liaison
+  - Member States and Associates
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2023-03-23'
+    message: decided, based on the criteria it has previously adopted, that it would
+      be appropriate for the Democratic Socialist Republic of Sri Lanka to accede
+      to the Metre Convention. The BIPM Director will convey the Decision, recalling
+      Resolution 4 ‘On the status of Associate State of the General Conference’ adopted
+      by the CGPM at its 24th meeting (2011), and the implications regarding the increase
+      in subscription should the Democratic Socialist Republic of Sri Lanka choose
+      to remain as an Associate of the CGPM.

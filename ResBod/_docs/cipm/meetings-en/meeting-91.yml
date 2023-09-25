@@ -1,0 +1,190 @@
+---
+metadata:
+  title: 91st meeting of the CIPM
+  identifier: '91'
+  date: '2002-10-11'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/91-2002
+pdf: https://www.bipm.org/documents/20126/35014518/CIPM2002-EN.pdf/5a5b9d67-77fa-3892-cfd0-d49eb21eeb2f
+resolutions:
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the practical realization of the definition of the metre
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/91-2002/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Proceedings of the 91st CIPM (2002), 2003
+  reference_page: 194
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '2002-10-11'
+    message: |-
+      *recalling*
+
+      * that in 1983 the 17th General Conference (CGPM) adopted a new definition of the metre;
+      * that in the same year the CGPM invited the International Committee (CIPM)
+      ** to draw up instructions for the practical realization of the metre,
+      ** to choose radiations which can be recommended as standards of wavelength for the interferometric measurement of length and draw up instructions for their use,
+      ** to pursue studies undertaken to improve these standards and in due course to extend or revise these instructions;
+      * that in response to this invitation the CIPM adopted Recommendation 1 (CI-1983) (_mise en pratique_ of the definition of the metre) to the effect
+      ** that the metre should be realized by one of the following methods:
+      [type=a]
+      ... by means of the length stem:[l] of the path travelled in vacuum by a plane electromagnetic wave in a time stem:[t]; this length is obtained from the measured time stem:[t], using the relation stem:[l = c_(0) * t] and the value of the speed of light in vacuum stem:[c_(0) = 299 792 458 "m"/"s"],
+      ... by means of the wavelength in vacuum _λ_ of a plane electromagnetic wave of frequency stem:[f]; this wavelength is obtained from the measured frequency stem:[f] using the relation _λ_ = stem:[c_(0) / f] and the value of the speed of light in vacuum stem:[c_(0) = 299 792 458 "m"/"s"],
+      ... by means of one of the radiations from the list below, whose stated wavelength in vacuum or whose stated frequency can be used with the uncertainty shown, provided that the given specifications and accepted good practice are followed;
+      ** that in all cases any necessary corrections be applied to take account of actual conditions such as diffraction, gravitation or imperfection in the vacuum;
+      ** that in the context of general relativity, the metre is considered a unit of proper length. Its definition, therefore, applies only within a spatial extent sufficiently small that the effects of the non-uniformity of the gravitational field can be ignored (note that, at the surface of the Earth, this effect in the vertical direction is about 1 part in stem:[10^(16)] per metre). In this case, the effects to be taken into account are those of special relativity only. The local methods for the realization of the metre recommended in (b) and (c) provide the proper metre but not necessarily that given in (a). Method (a) should therefore be restricted to lengths stem:[l] which are sufficiently short for the effects predicted by general relativity to be negligible with respect to the uncertainties of realization. For advice on the interpretation of measurements in which this is not the case, see the report of the Consultative Committee for Time and Frequency (CCTF) Working Group on the Application of General Relativity to Metrology (Application of general relativity to metrology, Metrologia, 1997, 34, 261-290);
+      * that the CIPM had already recommended a list of radiations for this purpose;
+  - type: recalling / further recalling
+    date_effective: '2002-10-11'
+    message: "*recalling* also that in 1992 and in 1997 the CIPM revised the practical
+      realization of the definition of the metre;"
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that science and technology continue to demand improved accuracy
+      in the realization of the metre;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that since 1997 work in national laboratories, in the BIPM
+      and elsewhere has identified new radiations and methods for their realization
+      which lead to lower uncertainties;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that there is an increasing move towards optical frequencies
+      for time-related activities, and that there continues to be a general widening
+      of the scope of application of the recommended radiations of the _mise en pratique_
+      to cover not only dimensional metrology and the realization of the metre, but
+      also high-resolution spectroscopy, atomic and molecular physics, fundamental
+      constants and telecommunication;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that a number of new frequency values with reduced uncertainties
+      for radiations of high-stability cold atom and ion standards already listed
+      in the recommended radiations list are now available, that the frequencies of
+      radiations of several new cold atom and ion species have also recently been
+      measured, and that new improved values with substantially reduced uncertainties
+      for a number of optical frequency standards based on gas cells have been determined,
+      including the wavelength region of interest to optical telecommunications;
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that new femtosecond comb techniques have clear significance
+      for relating the frequency of high-stability optical frequency standards to
+      that of the frequency standard realizing the SI second, that these techniques
+      represent a convenient measurement technique for providing traceability to the
+      International System of Units (SI) and that comb technology also can provide
+      frequency sources as well as a measurement technique;
+  - type: recognizing
+    date_effective: '2002-10-11'
+    message: "*recognizes* comb techniques as timely and appropriate, and recommends
+      further research to fully investigate the capability of the techniques;"
+  actions:
+  - type: welcomes
+    date_effective: '2002-10-11'
+    message: "*welcomes* validations now being made of comb techniques by comparison
+      with other frequency chain techniques;"
+  - type: urges
+    date_effective: '2002-10-11'
+    message: "*urges* national metrology institutes and other laboratories to pursue
+      the comb technique to the highest level of accuracy achievable and also to seek
+      simplicity so as to encourage widespread application;"
+  - type: recommends
+    date_effective: '2002-10-11'
+    message: |-
+      *recommends*
+
+      * that the list of recommended radiations given by the CIPM in 1997 (Recommendation 1 (CI-1997)) be replaced by the list of radiations given below*, including
+      ** updated frequency values for cold Ca atom, stem:["H"] atom and the trapped Sr^+^ ion,
+      ** frequency values for new cold ion species including trapped Hg^+^ ion, trapped In^+^ ion and trapped Yb^+^ ion,
+      ** updated frequency values for Rb-stabilized lasers, I~2~-stabilized Nd:YAG and He-Ne lasers, CH~4~-stabilized He-Ne lasers and OsO~4~-stabilized CO~2~ lasers at 10 μm,
+      ** frequency values for standards relevant to the optical communications bands, including Rb- and stem:["C"_(2)"H"_(2)]-stabilized lasers.
+  notes: "\\*The list of recommended radiations is given in: https://www.bipm.org/documents/20126/17315032/CIPM2002.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b[PV,
+    *70*, 197-204] and _Metrologia_, 2003, *40*, 104-115."
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: Dose equivalent
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/91-2002/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Proceedings of the 91st CIPM (2002), 2003
+  reference_page: 205
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that the current definition of the SI unit of dose equivalent
+      (sievert) includes a factor "stem:[N]" (product of any other multiplying factors)
+      stipulated by the International Commission on Radiological Protection (ICRP),
+      and
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that both the ICRP and the International Commission on Radiation
+      Units and Measurements (ICRU) have decided to delete this factor stem:[N] as
+      it is no longer deemed to be necessary, and
+  - type: considering
+    date_effective: '2002-10-11'
+    message: considering that the current SI definition of stem:[H] including the
+      factor stem:[N] is causing some confusion,
+  actions:
+  - type: decides
+    date_effective: '2002-10-11'
+    message: |-
+      *decides* to change the explanation in the brochure "Le Système International d’Unités (SI)" to the following:
+
+      * * *
+
+      The quantity dose equivalent stem:[H] is the product of the absorbed dose stem:[D] of ionizing radiation and the dimensionless factor stem:[Q] (quality factor) defined as a function of linear energy transfer by the ICRU:
+
+      stem:[H = Q * D]
+
+
+
+      Thus, for a given radiation, the numerical value of stem:[H] in joules per kilogram may differ from that of stem:[D] in joules per kilogram depending on the value of stem:[Q].
+
+      * * *
+
+      The Committee further decides to maintain the final sentence in the explanation as follows:
+
+      In order to avoid any risk of confusion between the absorbed dose stem:[D] and the dose equivalent stem:[H], the special names for the respective units should be used, that is, the name gray should be used instead of joules per kilogram for the unit of absorbed dose stem:[D] and the name sievert instead of joules per kilogram for the unit of dose equivalent stem:[H].
+  notes: See also https://doi.org/10.1088/0952-4746/25/1/008[_J. Radiol. Prot._, 2005,
+    *25*, 97-100]
+- dates:
+  - '2002-10-11'
+  subject: CIPM
+  type: recommendation
+  title: On the Avogadro constant
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/91-2002/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM91.pdf.zip/cdeb2445-9362-2823-5aba-28a2c394b29b
+  reference_name: Proceedings of the 91st CIPM (2002), 2003
+  reference_page: 207
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: recognizing
+    date_effective: '2002-10-11'
+    message: "*recognizes* that the Avogadro project is an important initiative in
+      fundamental metrology and an important example of a new approach to international
+      collaboration in metrology between national metrology institutes (NMIs) and
+      other scientific institutes, which goes beyond the capacity of individual NMIs
+      or regional metrology organizations,"
+  actions:
+  - type: encourages
+    date_effective: '2002-10-11'
+    message: |-
+      *encourages* all NMIs to participate and contribute to the project to the maximum extent possible,
+
+      also *encourages* the NMIs participating in the project to develop an effective mechanism for formalizing contributions, commitment and evaluation,
+  - type: instructs
+    date_effective: '2002-10-11'
+    message: "*instructs* the Consultative Committee for Mass and Related Quantities
+      (CCM) to establish a special committee to oversee the implementation of effective
+      mechanisms to coordinate the Avogadro collaboration and to keep the International
+      Committee informed of progress through the provision of an annual report and
+      evaluation assessment."

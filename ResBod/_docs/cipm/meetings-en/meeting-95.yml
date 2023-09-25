@@ -1,0 +1,123 @@
+---
+metadata:
+  title: 95th meeting of the CIPM
+  identifier: '95'
+  date: '2006-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/95-2006
+pdf: https://www.bipm.org/documents/20126/35014368/CIPM2006-EN.pdf/4b502e70-e79f-1df3-5613-b310da09bea2
+resolutions:
+- dates:
+  - '2006-10-13'
+  subject: CIPM
+  type: recommendation
+  title: Concerning secondary representations of the second
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/95-2006/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM95.pdf.zip/e58fcb97-69f8-008b-050b-378d5f0d8a77
+  reference_name: Proceedings of the 95th CIPM (2006), 2007
+  reference_page: 249
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that a common list of “Recommended values of standard frequencies
+      for applications including the practical realization of the metre and secondary
+      representations of the second” shall be established,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that the CCL/CCTF Joint Working Group (JWG) on the _Mise
+      en Pratique_ of the Definition of the Metre and the Secondary Representations
+      of the Second in its meeting at the International Bureau of Weights and Measures
+      (BIPM) in September 2005 discussed possible candidates to be included in this
+      list for secondary representations of the second,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that the CCL/CCTF JWG reviewed and updated the values for
+      the Hg ion, Sr ion, Yb ion, and the Sr neutral atom transition frequencies in
+      its session in September 2006,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that the CCTF in its Recommendation CCTF 1 (2004) already
+      recommended the unperturbed ground-state hyperfine quantum transition frequency
+      of 87Rb as a secondary representation of the second;
+  actions:
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: |-
+      *recommends* that the following transition frequencies shall be used as secondary representations of the second and be included into the new list of “Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second”
+
+      * the unperturbed ground-state hyperfine quantum transition of ^87^Rb with a frequency of stem:[f^(87)]~Rb~ = stem:[6 834 682 610 904 324 "Hz"] and an estimated relative standard uncertainty of stem:[3 * 10^(-15)],
+      * the unperturbed optical 5s ^2^S~1/2~ - 4d ^2^D~5/2~ transition of the ^stem:[88^(Sr)]+^ ion with a frequency of stem:[f^(88)]Sr^+^ = stem:[444 779 044 095 484 "Hz"] and a relative uncertainty of stem:[7 * 10^(-15)],
+      * the unperturbed optical 5d^10^ 6s ^2^S~1/2~ stem:[(F = 0) - 5]d^9^ 6s^2^ ^2^D~5/2~ stem:[(F= 2)] transition of the ^stem:[199^(Hg)]+^ ion with a frequency of stem:[f^(199)]Hg^+^ = stem:[1 064 721 609 899 145 "Hz"] and a relative standard uncertainty of stem:[3 * 10^(-15)],
+      * the unperturbed optical 6s ^2^S~1/2~ stem:[(F = 0) - 5]d ^2^D~3/2~ stem:[(F = 2)] transition of the ^stem:[171^(Yb)]+^ ion with a frequency of stem:[f^(171)]Yb^+^ = stem:[688 358 979 309 308 "Hz"] and a relative standard uncertainty of stem:[9 * 10^(-15)],
+      * the unperturbed optical transition 5s^2^ ^1^S~0~ - 5s 5p ^3^P~0~ of the ^87^Sr neutral atom with a frequency of stem:[f^(87)]Sr = stem:[429 228 004 229 877 "Hz"] and a relative standard uncertainty of stem:[1.5 * 10^(-14)].
+- dates:
+  - '2006-10-13'
+  subject: CIPM
+  type: recommendation
+  title: Coordination of the development of advanced time and frequency transfer techniques
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/95-2006/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM95.pdf.zip/e58fcb97-69f8-008b-050b-378d5f0d8a77
+  reference_name: Proceedings of the 95th CIPM (2006), 2007
+  reference_page: 251
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: recognizing the availability of high performance cold atom microwave
+      clocks,
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: recognizing the rapid improvement of optical frequency standards in different
+      institutes,
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: recognizing the upcoming need to compare these remote standards at a
+      level of estimated accuracy and stability which is not currently possible; and
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that different technical possibilities for comparison that
+      include optical fibre links, transportable optical frequency standards, optical
+      satellite links and improved microwave links have been identified as possibly
+      useful for the purpose,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that improvements in time and frequency transfer would have
+      major applications to the performance assessment of current frequency standards
+      and would support the progress of future primary frequency standards and clocks,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that the associated improvement of the realization of Coordinated
+      Universal Time (UTC) would be beneficial for foreseeable applications in many
+      fields of science and technology,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considering that a new Working Group on Coordination of the Development
+      of Advanced Time and Frequency Transfer Techniques composed of experts from
+      various fields, such as optical frequency metrology, time scale generation,
+      and time and frequency transfer, to address and coordinate these issues is established;
+  actions:
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommends that the time and frequency community actively pursue this
+      research in a coordinated manner,
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommends that the International Bureau of Weights and Measures (BIPM)
+      continue to facilitate the activities of the different working groups of the
+      CCTF and establish the necessary interactions with other relevant bodies such
+      as the International GNSS Service (IGS), International Union of Geodesy and
+      Geophysics (IUGG), International Telecommunication Union (ITU), International
+      Union of Radio Science (URSI) and other competent organizations,
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommends that national and international science organizations and
+      space agencies give this development due consideration and weight, and
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommends that national governments and international bodies provide
+      funding to support the development of these activities.

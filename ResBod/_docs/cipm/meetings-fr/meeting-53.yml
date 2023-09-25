@@ -1,0 +1,35 @@
+---
+metadata:
+  title: 53e réunion du CIPM
+  identifier: '53'
+  date: '1964-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/53-1964
+pdf: https://www.bipm.org/documents/20126/59728154/CIPM1964.pdf/2c2b41da-8a2d-5aaa-a2a8-3214c5c9efba
+resolutions:
+- dates:
+  - '1964-10-13'
+  subject: CIPM
+  type: declaration
+  title: Étalons atomiques ou moléculaires de fréquence
+  identifier: 1964
+  url: https://www.bipm.org/fr/committees/ci/cipm/53-1964/resolution-
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM53.pdf/50eccee9-b9bd-da4f-a931-aa2f5c476fbe
+  reference_name: Comptes rendus du 53e CIPM (1964), 1965
+  reference_page: 26
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: empowers
+    date_effective: '1964-10-13'
+    message: "*habilité* par la Résolution 5 de la Douzième Conférence générale des
+      poids et mesures à désigner les étalons atomiques ou moléculaires de fréquence
+      à employer temporairement pour les mesures physiques de temps,"
+  actions:
+  - type: declares
+    date_effective: '1964-10-13'
+    message: "*déclare* déclare que l’étalon à employer est la transition entre les
+      niveaux hyperfins stem:[F = 4], stem:[M = 0] et stem:[F = 3], stem:[M = 0] de
+      l’état fondamental ^2^S~1/2~ de l’atome de césium 133 non perturbé par des champs
+      extérieurs, et que la valeur 9 182 631 770 hertz est assignée à la fréquence
+      de cette transition."

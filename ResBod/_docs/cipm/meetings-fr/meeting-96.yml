@@ -1,0 +1,100 @@
+---
+metadata:
+  title: 96e réunion du CIPM
+  identifier: '96'
+  date: '2007-11-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/96-2007
+pdf: https://www.bipm.org/documents/20126/35014339/CIPM2007-FR.pdf/8bc5c6fd-f667-d18c-820d-4cde57439a4c
+resolutions:
+- dates:
+  - '2007-11-09'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la liste des radiations recommandées pour la mise en pratique
+    de la définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/96-2007/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM96.pdf.zip/acf320ea-c67f-8285-655d-05e21b750153
+  reference_name: Comptes rendus du 96e CIPM (2007), 2008
+  reference_page: 85
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que l’on a déterminé des valeurs plus précises des fréquences
+      de molécules dans le domaine des télécommunications optiques, valeurs déjà publiées
+      dans la liste des fréquences étalons, à l’aide de peignes à impulsions femtosecondes
+      ;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que l’on a déterminé, pour la première fois, les fréquences
+      de molécules dans le domaine des télécommunications optiques, à l’aide de peignes
+      à impulsions femtosecondes ;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que l’on a déterminé, pour la première fois, les fréquences
+      de certaines transitions dans l’iode, en cellule, transitions proches de la
+      radiation émise par l’étalon de fréquence optique à 532 nm, à l’aide de peignes
+      à impulsions femtosecondes ;
+  actions:
+  - type: encourages
+    date_effective: '2007-11-09'
+    message: |-
+      *propose* que la liste des fréquences étalons soit révisée pour y inclure :
+
+      * les valeurs mises à jour des fréquences de la bande stem:[( nu 1 +  nu 3)] de stem:[""_(12) "C"_(2)"H"_(2)], autour de 1,54 µm ;
+      * les valeurs des fréquences de la bande stem:[(2 nu 1)] de stem:[""_(12) "C"_(2)]HD, autour de 1,54 µm ;
+      * les valeurs des fréquences des composantes hyperfines des transitions P(142) 37-0, R(121) 35-0 et R(85) 33-0 dans l’iode à 532 nm.
+- dates:
+  - '2007-11-09'
+  subject: CIPM
+  type: recommendation
+  title: Sur la valeur et l’incertitude des lasers à <nobr>He-Ne</nobr> non asservis
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/96-2007/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM96.pdf.zip/acf320ea-c67f-8285-655d-05e21b750153
+  reference_name: Comptes rendus du 96e CIPM (2007), 2008
+  reference_page: 86
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que la plupart des interféromètres lasers et beaucoup d’autres
+      instruments de mesure de longueur utilisent des lasers à He-Ne à 633 nm, non
+      asservis ;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que ces appareils sont souvent utilisés à des niveaux d’incertitude
+      bien plus grands que celui engendré par les variations possibles de longueur
+      d’onde dans le vide du laser à He-Ne à 633 nm, non asservi ;
+  - type: considering
+    date_effective: '2007-11-09'
+    message: considérant que la variation de la longueur d’onde dans le vide du laser
+      à He-Ne à 633 nm, non asservi, est strictement limitée par les phénomènes fondamentaux
+      quantiques ;
+  - type: recognizing
+    date_effective: '2007-11-09'
+    message: reconnaissant qu’il serait nécessaire de fournir un guide d’application
+      documenté concernant la valeur de la longueur d’onde dans le vide et son incertitude
+      que l’on est supposé obtenir en l’absence d’étalonnage ;
+  - type: recognizing
+    date_effective: '2007-11-09'
+    message: reconnaissant qu’un tel guide pourrait aider à éviter des étalonnages
+      inutiles de ces lasers dans ce type d’applications ;
+  actions:
+  - type: recommends
+    date_effective: '2007-11-09'
+    message: |-
+      recommande que les valeurs +
+      stem:[f = 473","612 7 "THz"] +
+      _λ_ = 632,990 8 nm +
+       avec une incertitude-type relative de stem:[1","5 * 10^(-6)], s’appliquent à la radiation dans le vide d’un laser à hélium-néon non asservi, opérant exclusivement sur la transition 3s~2~→2p~4~, indépendamment du mélange isotopique du néon ;
+  - type: recommends
+    date_effective: '2007-11-09'
+    message: recommande que le laser à He-Ne à 633 nm, non asservi, opérant sur la
+      transition 3s~2~→2p~4~, soit inclus dans la seconde catégorie de la liste des
+      _fréquences étalons_ et, qu’un article soit publié dans _Metrologia_, sous l’autorité
+      du CCL.

@@ -1,0 +1,100 @@
+---
+metadata:
+  title: 90e réunion du CIPM
+  identifier: '90'
+  date: '2001-10-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/90-2001
+pdf: https://www.bipm.org/documents/20126/35014533/CIPM2001-FR.pdf/3b54ccfe-806a-0990-907a-34c47c5a4101
+resolutions:
+- dates:
+  - '2001-10-12'
+  subject: CIPM
+  type: recommendation
+  title: Le neper et le bel
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/90-2001/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
+  reference_name: Comptes rendus du 90e CIPM (2001), 2002
+  reference_page: 75
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que le logarithme naturel est utilisé pour exprimer la valeur
+      du décrément logarithmique, du niveau de champ et du niveau de puissance dans
+      le système de grandeurs sur lequel est fondé le Système international d'unités
+      (SI),
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que les grandeurs et les équations entre grandeurs sont simplifiées
+      lorsqu'on utilise le logarithme naturel (logarithme de base e) plutôt que d'autres
+      logarithmes, de base différente,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que en particulier pour les grandeurs complexes, le seul
+      logarithme utile est le logarithme naturel,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que en utilisant le logarithme naturel pour les grandeurs
+      complexes, le radian et le neper deviennent des unités analogues et devraient
+      donc avoir le même statut dans le SI,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que la 20^e^ Conférence générale (1995, Résolution 8), a
+      décidé d’interpréter les unités supplémentaires du SI, c’est-à-dire le radian
+      et le stéradian, comme des unités dérivées sans dimension et, en conséquence,
+      de supprimer la classe des unités supplémentaires comme classe séparée dans
+      le SI,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que le Comité international, dans la brochure sur le SI,
+      7^e^ édition (1998), a accepté, pour l'usage avec le SI, le neper, symbole Np,
+      comme un nom spécial de l’unité SI cohérente, le nombre un, pour exprimer la
+      valeur des grandeurs logarithmiques définies en utilisant les logarithmes naturels
+      et aussi l'unité non cohérente, le bel, symbole B, comme unité pour exprimer
+      la valeur des grandeurs logarithmiques définies en utilisant les logarithmes
+      de base dix, en insistant sur la nécessité de mentionner le niveau de référence,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considérant que il est nécessaire, pour compléter la cohérence interne
+      du SI, d'adopter formellement le nom spécial neper, avec son symbole Np, pour
+      l’unité cohérente du SI, le nombre un, pour exprimer la valeur des grandeurs
+      logarithmiques dans les domaines tels que la décroissance des signaux, l’électrotechnique
+      et l'acoustique,
+  actions:
+  - type: confirms
+    date_effective: '2001-10-12'
+    message: "*confirme* la décision du Comité international d'accepter pour l'usage
+      avec le SI l'unité bel, symbole B, et son sous-multiple usuel, le décibel, symbole
+      dB, lorsqu'on utilise les logarithmes de base dix, et"
+  - type: recommends
+    date_effective: '2001-10-12'
+    message: "*recommande* d'adopter le nom spécial neper, avec le symbole Np, pour
+      le nombre un, unité dérivée cohérente sans dimension du SI, pour exprimer les
+      valeurs des grandeurs logarithmiques telles que le décrément logarithmique,
+      le niveau de champ et le niveau de puissance, définies en utilisant les logarithmes
+      naturels."
+- dates:
+  - '2001-10-12'
+  subject: CIPM
+  type: declaration
+  title: "« unités SI » et « unités du SI »"
+  identifier: 2001
+  url: https://www.bipm.org/fr/committees/ci/cipm/90-2001/resolution-
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
+  reference_name: Comptes rendus du 90e CIPM (2001), 2002
+  reference_page: 38
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2001-10-12'
+    message: |-
+      Le Comité international a approuvé en 2001 la proposition suivante du CCU concernant les « unités SI » et les « unités du SI » :
+
+      * * *
+
+      « Nous suggérons que les termes « unité SI » et « unité du SI » fassent tous deux référence aux unités de base et aux unités cohérentes dérivées, ainsi qu’à toutes les unités obtenues en les combinant aux préfixes recommandés des multiples et sous multiples.
+
+      Nous suggérons que le terme « unité cohérente du SI » soit utilisé quand nous désirons restreindre son sens aux seules unités de base et aux unités cohérentes dérivées du SI. »

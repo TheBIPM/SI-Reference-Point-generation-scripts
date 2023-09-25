@@ -1,0 +1,34 @@
+---
+metadata:
+  title: 56th meeting of the CIPM
+  identifier: '56'
+  date: '1967-10-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/56-1967
+pdf: https://www.bipm.org/documents/20126/59880059/CIPM1967.pdf/84290d28-2dac-7c7f-a030-e0cb1a90482d
+resolutions:
+- dates:
+  - '1967-10-16'
+  subject: CIPM
+  type: recommendation
+  title: Decimal multiples and submultiples of the unit of mass
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/56-1967/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM56.pdf/f5e3209d-ab0e-e768-fa49-df3b137721de
+  reference_name: Proceedings of the 56th CIPM (1967), 1968
+  reference_page: 29
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1967-10-16'
+    message: "*considering* that the rule for forming names of decimal multiples and
+      submultiples of the units of paragraph 3 of Resolution 12 of the 11th Conférence
+      Générale des Poids et Mesures (CGPM) (1960) might be interpreted in different
+      ways when applied to the unit of mass,"
+  actions:
+  - type: declares
+    date_effective: '1967-10-16'
+    message: "*declares* that the rules of Resolution 12 of the 11th CGPM apply to
+      the kilogram in the following manner: the names of decimal multiples and submultiples
+      of the unit of mass are formed by attaching prefixes to the word “gram”."

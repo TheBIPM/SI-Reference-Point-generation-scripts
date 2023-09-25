@@ -1,0 +1,117 @@
+---
+metadata:
+  title: 92nd meeting of the CIPM
+  identifier: '92'
+  date: '2003-10-10'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/92-2003
+pdf: https://www.bipm.org/documents/20126/35014494/CIPM2003-EN.pdf/21ee6fca-e648-3017-a92a-955bc8af8498
+resolutions:
+- dates:
+  - '2003-10-10'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the <i>Mise en Pratique</i> list of recommended radiations
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/92-2003/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM92.pdf.zip/4b7f2dee-8f88-73e3-897e-a85eed917e37
+  reference_name: Proceedings of the 92nd CIPM (2003), 2004
+  reference_page: 146
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that improved frequency values for radiations of some high-stability
+      cold ion standards already documented in the recommended radiations list have
+      recently become available;
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that improved frequency values for the infra-red gas-cell-based
+      optical frequency standard in the optical telecommunications region, already
+      documented in the recommended radiations list, have been determined;
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that femtosecond comb-based frequency measurements for certain
+      iodine gas-cell standards on the subsidiary recommended source list have recently
+      been made for the first time, leading to significantly reduced uncertainty;
+  actions:
+  - type: encourages
+    date_effective: '2003-10-10'
+    message: |-
+      *proposes* that the _recommended radiation_ list be revised to include the following:
+
+      * updated frequency values for the single trapped ^stem:[88^(Sr)]+^ ion quadrupole transition and the single trapped ^stem:[171^(Yb)]+^ octupole transition;
+      * an updated frequency value for the stem:["C"_(2)"H"_(2)]-stabilized standard at 1.54 µm;
+      * updated frequency values for the I~2~-stabilized standards at 543 nm and 515 nm.
+- dates:
+  - '2003-10-10'
+  subject: CIPM
+  type: recommendation
+  title: Symbol for the decimal marker in the International System of Units (SI)
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/92-2003/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM92.pdf.zip/4b7f2dee-8f88-73e3-897e-a85eed917e37
+  reference_name: Proceedings of the 92nd CIPM (2003), 2004
+  reference_page: 147
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that a principal purpose of the International System of Units
+      (SI) is to enable values of quantities to be expressed in a manner that can
+      be readily understood throughout the world,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that values of quantities are normally expressed as a number
+      times a unit,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that often the number in the expression of the value of a
+      quantity contains multiple digits with an integral part and a decimal part,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that in Resolution 7 of the 9th General Conference, 1948,
+      it is stated that “In numbers, the comma (French practice) or the dot (British
+      practice) is used only to separate the integral part of numbers from the decimal
+      part”,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that following a decision of the International Committee
+      made at its 86th meeting (1997), the International Bureau of Weights and Measures
+      now uses the dot (point on the line) as the decimal marker in all English language
+      versions, including the English text of the SI Brochure (the definitive international
+      reference on the SI), with the comma (on the line) remaining the decimal marker
+      in all of its French language publications,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that nevertheless, some international bodies use the comma
+      on the line as the decimal marker in their English language documents,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that furthermore, some international bodies, including some
+      international standards organizations, specify the decimal marker to be the
+      comma on the line in all languages,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that the prescription of the comma on the line as the decimal
+      marker in many languages is in conflict with the customary usage of the point
+      on the line as the decimal marker in those languages,
+  - type: considering
+    date_effective: '2003-10-10'
+    message: considering that in some languages that are native to more than one country,
+      either the point on the line or the comma on the line is used as the decimal
+      marker depending on the country, while in some countries with more than one
+      native language, either the point on the line or comma on the line is used depending
+      on the language,
+  - type: reaffirming
+    date_effective: '2003-10-10'
+    message: reaffirms that “Numbers may be divided in groups of three in order to
+      facilitate reading; neither dots nor commas are ever inserted in the spaces
+      between groups”, as stated in Resolution 7 of the 9th CGPM, 1948.
+  actions:
+  - type: declares
+    date_effective: '2003-10-10'
+    message: declares that the SI symbol for the decimal marker shall be either the
+      point on the line or the comma on the line,

@@ -1,0 +1,173 @@
+---
+metadata:
+  title: 78th meeting of the CIPM
+  identifier: '78'
+  date: '1989-09-28'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989
+pdf: https://www.bipm.org/documents/20126/62491441/CIPM1989.pdf/da1f123e-c6f4-57af-3b35-113882c32d96
+resolutions:
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Synchronization of UTC(k) and UTC
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Proceedings of the 78th CIPM (1989), 1990
+  reference_page: 112
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering that sorne laboratories report values of UTC(k) to the Bureau
+      International des Poids et Mesures (BIPM) that show significant departures from
+      UTC,
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering that the close agreement of timing centres with UTC facilitates
+      the operation of a number of systems in astronomy, geodesy, navigation and telecommunications,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommends that laboratories, in consultation with the BIPM, use appropriate
+      means to reduce existing offsets between UTC(k) and UTC to a few microseconds
+      without making any adjustment in frequency to clocks contributing to TAI.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Improvement of the frequency accuracy of primary standards
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Proceedings of the 78th CIPM (1989), 1990
+  reference_page: 112
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering the need to improve accuracy III the scale unitary interval
+      of International Atomic Time (TAI),
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering the small number of primary caesium standards contributing
+      effectively to TAI,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommends the construction of new primary caesium standards,
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommends the improvement of the frequency accuracy of existing primary
+      standards,
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommends the study of the systematic differences in frequency between
+      them.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Reference coordinates of antennas
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Proceedings of the 78th CIPM (1989), 1990
+  reference_page: 113
+  approvals:
+  - message: The Comité International des Poids et Mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: _considering_ that the use of inconsistent coordinates of the antennas
+      is an important source of error in time transfer by one-way satellite techniques,
+  actions:
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: |-
+      _recommends_ that, in any site, for such operations in support of International Atomic Time (TAI) :
+
+      * the reference coordinates of the antenna should correspond to its real position in the terrestrial reference frame of the International Earth Rotation Service (IERS),
+      * the reference coordinates and the operational coordinates used within the receiver should be reported to the Bureau International des Poids et Mesures (BIPM) and collaborating laboratories,
+      * neither the operational coordinates nor the location of the antenna should be subject to change without pressing cause,
+      * if such a change is, however, found to be necessary, data sufficient to main tain the accuracy of the time comparisons should be passed without delay to the BIPM and the collaborating laboratories.
+
+      The CIPM also
+  - type: recommends
+    date_effective: '1989-09-28'
+    message: recommends that methods of relative positioning be employed to link the
+      antenna to the IERS stations, in consultation with the BIPM.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: Installation of docks at the BIPM
+  identifier: 4
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-4
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Proceedings of the 78th CIPM (1989), 1990
+  reference_page: 114
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering that it is important to main tain at the Bureau International
+      des Poids et Mesures (BIPM) a high level of competence in the coordination of
+      the time comparisons which provide the basis of TAI,
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering that practical experience at the BIPM in such time comparisons
+      is already desirable and in the future will become essential,
+  - type: considering
+    date_effective: '1989-09-28'
+    message: considering that the present experience has been gained thanks to the
+      facilities generously provided by the Paris Observatory,
+  actions:
+  - type: decides
+    date_effective: '1989-09-28'
+    message: _decides_ that the BIPM should study the steps which would have to be
+      taken for one or more docks together with the necessary timecomparison equiment
+      to be av ail able on site, and
+  - type: invites / further invites
+    date_effective: '1989-09-28'
+    message: _invites_ member laboratories of Comité Consultatif pour la Définition
+      de la Seconde (CCDS), in view of the high cost of such installations, to examine
+      the possibility of providing equipment on loan to the BIPM.
+- dates:
+  - '1989-09-28'
+  subject: CIPM
+  type: recommendation
+  title: The International Temperature Scale of 1990
+  identifier: 5
+  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-5
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
+  reference_name: Proceedings of the 78th CIPM (1989), 1990
+  reference_page: 115
+  approvals:
+  - message: The Comité International des Poids et Mesures (CIPM)
+  considerations:
+  - type: acting
+    date_effective: '1989-09-28'
+    message: |-
+      acting in accordance with Resolution 7 of the 18th Conférence Générale des Poids et Mesures (1987) has adopted the International Temperature Scale of 1990 (ITS-90) to supersede the International Practical Temperature Scale of 1968 (IPTS-68).
+
+      The CIPM *notes* that, by comparison with the IPTS-68, the ITS-90
+
+      * extends to lower temperatures, down to stem:[0.65 "K"], and hence also supersedes the EPT 76,
+      * is in substantially better agreement with corresponding thermodynamic temperatures,
+      * has much improved continuity, precision and reproducibility throughout its range and
+      * has subranges and alternative definitions in certain ranges which greatly facilitate its use.
+
+      The CIPM also *notes* that, to accompany the text of the ITS-90 there will be two further documents, the _Supplementary Information for the ITS-90_ and _Techniques for Approximating the ITS-90_. These documents will be published by the BIPM and periodically updated.
+
+      The CIPM *recommends*
+
+      * that on 1 January 1990 the ITS-90 come into force and
+      * that from this same date the IPTS-68 and the EPT-76 be abrogated.
+  actions: []
+  notes: The kelvin was redefined by the 26th CGPM in 2018 (Resolution 1).

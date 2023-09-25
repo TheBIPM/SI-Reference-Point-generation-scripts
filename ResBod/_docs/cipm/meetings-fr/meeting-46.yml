@@ -1,0 +1,107 @@
+---
+metadata:
+  title: 46e réunion du CIPM
+  identifier: '46'
+  date: '1956-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956
+pdf: https://www.bipm.org/documents/20126/59548197/CIPM1956.pdf/ec94ac40-85f1-334e-7682-cf877b1bc290
+resolutions:
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Définition de l’unité de temps (seconde)
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Comptes rendus du 46e CIPM (1956), 1957
+  reference_page: 77
+  approvals:
+  - message: En vertu des pouvoirs que lui a conférés la Dixième Conférence générale
+      des poids et mesures par sa Résolution 5, le Comité international des poids
+      et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considérant que la Neuvième Assemblée générale de l’Union astronomique
+      internationale (Dublin, 1955) a émis un avis favorable au rattachement de la
+      seconde à l’année tropique,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: |-
+      considérant que, selon les décisions de la Huitième Assemblée générale de l’Union astronomique internationale (Rome, 1952), la seconde de temps des éphémérides (T.E.) est la fraction +
+         (12 960 276 813 / 408 986 496) 408 986 496) × 10^−9^ de l’année tropique pour 1900 janvier 0 à stem:[12 "h"] T.E.,
+  actions:
+  - type: decides
+    date_effective: '1956-10-06'
+    message: décide « La seconde est la fraction 1/31 556 925,9747 de l’année tropique
+      pour 1900 janvier 0 à 12 heures de temps des éphémérides. »
+  notes: This definition was abrogated in 1967 by the 13th CGPM (Resolution 1).
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Création du Comité Consultatif pour la Définition de la Seconde
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Comptes rendus du 46e CIPM (1956), 1957
+  reference_page: 78
+  approvals:
+  - message: |-
+      Le Comité International des Poids et Mesures,
+
+      considérant la Résolution 5 de la Dixième Conférence Générale des Poids et Mesures le chargeant de donner plus de précision à la définition de l'unité fondamentale de temps,
+
+      considérant le grand intérêt des recherches actuellement en cours en vue de fonder l'unité de temps sur l'observation de phénomènes physiques,
+
+      considérant la nécessité d'encourager et de coordonner sur le plan internàtional les études ci-dessus mentionnées,
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1956-10-06'
+    message: "*décide* de créer un Comité Consultatif pour la Définition de la Seconde,
+      dont le rôle sera de le conseiller en vue des décisions qu'il aura à prendre
+      pour le perfectionnement de l'étalon de temps."
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Système International d'Unités
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Comptes rendus du 46e CIPM (1956), 1957
+  reference_page: 83
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considérant la mission dont l’a chargé la Neuvième Conférence générale
+      des poids et mesures par sa Résolution 6 concernant l’établissement d’un système
+      pratique d’unités de mesure susceptible d’être adopté par tous les pays signataires
+      de la Convention du Mètre,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considérant l’ensemble des documents envoyés par les vingt et un pays
+      qui ont répondu à l’enquête prescrite par la Neuvième Conférence générale des
+      poids et mesures,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considérant la Résolution 6 de la Dixième Conférence générale des poids
+      et mesures fixant le choix des unités de base du système à établir,
+  actions:
+  - type: recommends
+    date_effective: '1956-10-06'
+    message: "recommande que soit désigné comme « Système international d’unités »
+      le système fondé sur les unités de base adoptées par la Dixième Conférence générale,
+      qui sont : +\n +\n [Suit la liste des six unités de base avec leur symbole,
+      reproduite dans la Résolution 12 de la 11^e^ CGPM (1960)]. +\n "
+  - type: recommends
+    date_effective: '1956-10-06'
+    message: |-
+      recommande que soient employées les unités de ce système énumérées au tableau suivant, sans préjudice d’autres unités qu’on pourrait ajouter à l’avenir : +
+       +
+       [Suit le tableau des unités reproduit dans le paragraphe 4 de la Résolution 12 de la 11^e^ CGPM (1960)].

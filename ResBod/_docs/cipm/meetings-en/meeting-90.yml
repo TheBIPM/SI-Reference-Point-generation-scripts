@@ -1,0 +1,98 @@
+---
+metadata:
+  title: 90th meeting of the CIPM
+  identifier: '90'
+  date: '2001-10-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/90-2001
+pdf: https://www.bipm.org/documents/20126/35014542/CIPM2001-EN.pdf/8f575399-3158-8446-ebe7-8d2b95ab5dd9
+resolutions:
+- dates:
+  - '2001-10-12'
+  subject: CIPM
+  type: recommendation
+  title: The neper and the bel
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/90-2001/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
+  reference_name: Proceedings of the 90th CIPM (2001), 2002
+  reference_page: 153
+  approvals:
+  - message: The International Committee for Weights and Measures,
+  considerations:
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that the natural logarithm is used for expressing the values
+      of logarithmic decrement, field level and power level in the system of quantities
+      on which the International System (SI) is based,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that quantities and quantity equations become simplified
+      when the natural logarithm (logarithm to the base e) is used, rather than logarithms
+      to other bases,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that in particular, for complex quantities the only useful
+      logarithm is the natural logarithm,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that with the use of the natural logarithm for complex quantities,
+      the radian and neper become analogous units and should thus be given the same
+      status in the SI,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that the 20th General Conference (1995, Resolution 8), decided
+      to interpret the then supplementary units in the SI, namely the radian and steradian,
+      as dimensionless derived units and consequently to eliminate the class of supplementary
+      units as a separate class in the SI,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: considering that the International Committee, through the SI brochure,
+      7th edition (1998), has accepted for use with the SI the neper, symbol Np, as
+      a special name for the coherent SI unit number one, for expressing the values
+      of logarithmic quantities defined using natural logarithms, and also the noncoherent
+      unit, the bel, symbol B, as a unit for expressing the values of logarithmic
+      quantities defined using logarithms to the base ten, and has emphasized the
+      importance of stating the reference level,
+  - type: considering
+    date_effective: '2001-10-12'
+    message: "considering that there is a need to complete the internal consistency
+      of the SI by formally adopting the special name neper with symbol Np for the
+      coherent SI unit \x93one\x94, for expressing the values of logarithmic quantities
+      in areas such as signal decay, electrotechnology, and acoustics,"
+  actions:
+  - type: confirms
+    date_effective: '2001-10-12'
+    message: "*confirms* the decision of the International Committee to accept for
+      use with the SI the unit bel, symbol B, and its commonly used submultiple the
+      decibel, symbol dB, when using logarithms to the base ten, and"
+  - type: recommends
+    date_effective: '2001-10-12'
+    message: "*recommends* that the special name neper with symbol Np be adopted for
+      the number one as the SI dimensionless derived unit for expressing the values
+      of logarithmic quantities such as logarithmic decrement, field level, or power
+      level defined using natural logarithms."
+- dates:
+  - '2001-10-12'
+  subject: CIPM
+  type: declaration
+  title: '"SI units" and "units of the SI"'
+  identifier: 2001
+  url: https://www.bipm.org/en/committees/ci/cipm/90-2001/resolution-
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
+  reference_name: Proceedings of the 90th CIPM (2001), 2002
+  reference_page: 120
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2001-10-12'
+    message: |-
+      The CIPM approved in 2001 the following proposal of the CCU regarding "SI units" and "units of the SI":
+
+      * * *
+
+      We suggest that "SI units" and "units of the SI" should be regarded as names that include both the base units and the coherent derived units, and also all units obtained by combining these with the recommended multiple and sub-multiple prefixes.
+
+      We suggest that the name "coherent SI units" should be used when it is desired to restrict the meaning to only the base units and the coherent derived units.
+
+      * * *

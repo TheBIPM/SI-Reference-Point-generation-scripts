@@ -1,0 +1,61 @@
+---
+metadata:
+  title: 69e réunion du CIPM
+  identifier: '69'
+  date: '1980-10-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/69-1980
+pdf: https://www.bipm.org/documents/20126/59880115/CIPM1980.pdf/76ac94fb-d66e-1c82-1f5e-9b6c7c22a9c8
+resolutions:
+- dates:
+  - '1980-10-09'
+  subject: CIPM
+  type: recommendation
+  title: Unités SI supplémentaires (radian et stéradian)
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/69-1980/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM69.pdf/4a58f533-51a4-5469-fe39-30575a42b735
+  reference_name: Comptes rendus du 69e CIPM (1980), 1981
+  reference_page: 24
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: taking into account
+    date_effective: '1980-10-09'
+    message: '*prenant en considération* la Résolution 3 adoptée par l’ISO/stem:["TC"
+      12] en 1978 et la Recommandation U 1 (1980) adoptée par le Comité consultatif
+      des unités (CCU) à sa 7^e^ session,'
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considérant que les unités radian et stéradian sont introduites usuellement
+      dans des expressions des unités pour des besoins de clarification, notamment
+      en photométrie où le stéradian joue un rôle important pour distinguer les unités
+      correspondant aux diverses grandeurs,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considérant que dans les équations utilisées on exprime généralement
+      l’angle plan comme le rapport entre deux longueurs et l’angle solide comme le
+      rapport entre une aire et le carré d’une longueur, et que par conséquent ces
+      grandeurs sont traitées comme des grandeurs sans dimension,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considérant que l’étude des formalismes en usage dans le domaine scientifique
+      montre qu’il n’en existe aucun qui soit à la fois cohérent et convenable, et
+      dans lequel les grandeurs angle plan et angle solide soient considérées comme
+      des grandeurs de base,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: |-
+      *considérant aussi*
+
+      * que l’interprétation donnée par le CIPM en 1969 pour la classe des unités supplémentaires introduite dans la Résolution 12 de la 11^e^ Conférence générale des poids et mesures en 1960 laisse la liberté de traiter le radian et le stéradian comme unités de base dans le Système international,
+      * qu’une telle possibilité compromet la cohérence interne du Système international fondé sur sept unités de base seulement,
+  actions:
+  - type: decides
+    date_effective: '1980-10-09'
+    message: "*décide* d’interpréter la classe des unités supplémentaires dans le
+      Système international comme une classe d’unités dérivées sans dimension pour
+      lesquelles la Conférence générale des poids et mesures laisse la liberté de
+      les utiliser ou non dans les expressions des unités dérivées du Système international."
+  notes: "\\* La classe des unités supplémentaires dans le SI a été abrogée en 1995
+    par décision de la 20^e^ CGPM (Résolution 8)."

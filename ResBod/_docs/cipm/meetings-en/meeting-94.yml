@@ -1,0 +1,134 @@
+---
+metadata:
+  title: 94th meeting of the CIPM
+  identifier: '94'
+  date: '2005-10-07'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/94-2005
+pdf: https://www.bipm.org/documents/20126/35014448/CIPM2005-EN.pdf/69b1b9f2-9ae1-e102-008b-f0e804c657d5
+resolutions:
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Preparative steps towards new definitions of the kilogram, the ampere, the
+    kelvin and the mole in terms of fundamental constants
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/94-2005/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Proceedings of the 94th CIPM (2005), 2006
+  reference_page: 233
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: |-
+      *considering*
+
+      * Resolution 7 of the 21st General Conference on Weights and Measures (CGPM), 1999, concerning a future definition of the kilogram;
+      * the recent, 2005, Recommendations of the Consultative Committee for Mass and Related Quantities (CCM), the Consultative Committee for Electricity and Magnetism (CCEM), the Consultative Committee for Amount of Substance: Metrology in Chemistry (CCQM) and the Consultative Committee for Thermometry (CCT) concerning proposals for and matters related to changes in the definitions of the kilogram, the ampere and the kelvin;
+      * the Recommendation of the CCU [Recommendation U 1 (2005)] which brings together all of the major points of these other recommendations and which requests that the CIPM:
+      ** approve in principle the preparation of new definitions and _mises en pratique_ of the kilogram, the ampere and the kelvin so that if the results of experimental measurements over the next few years are indeed acceptable, all having been agreed with the various Consultative Committees and other relevant bodies, the CIPM can prepare proposals to be put to Member States of the Metre Convention in time for possible adoption by the 24th CGPM in 2011;
+      ** give consideration to the possibility of redefining, at the same time, the mole in terms of a fixed value of the Avogadro constant;
+      ** prepare a Draft Resolution that may be put to the 23rd CGPM in 2007 to alert Member States to these activities;
+      ** further encourage National Metrology Institutes to pursue national funding to support continued relevant research in order to facilitate the changes suggested here and improve our knowledge of the relevant fundamental constants, with a view to further improvement in the International System of Units;
+      * the need for careful consideration to be given to both the form and content of possible new definitions of these units, not only individually but also taken as an ensemble;
+  actions:
+  - type: approves
+    date_effective: '2005-10-07'
+    message: "*approves*, in principle, the preparation of the new definitions, as
+      requested by the CCU in its Recommendation cited above;"
+  - type: invites / further invites
+    date_effective: '2005-10-07'
+    message: |-
+      *invites* all Consultative Committees
+
+      * particularly the CCM, CCEM, CCQM and CCT, to consider the implications of changing the definitions of the above-mentioned base units of the SI, and to submit a report to the CIPM not later than June 2007;
+      * to monitor closely the results of new experiments relevant to the possible new definitions, to identify necessary conditions to be met before proceeding with changing the definitions, and to consider, in particular, the alternative ways of redefining the above mentioned units;
+      * to solicit input from the wider scientific and technical community on this important matter;
+
+      *recommends* that National Metrology Institutes
+
+      * should pursue vigorously their work presently underway aimed at providing the best possible values of the fundamental constants needed for the redefinitions now being considered;
+      * should prepare for the long term maintenance of those experiments that will, in due course, be necessary for the practical realization of the new definitions.
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Clarification of the definition of the kelvin, unit of thermodynamic temperature
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/94-2005/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Proceedings of the 94th CIPM (2005), 2006
+  reference_page: 235
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considering that the kelvin, unit of thermodynamic temperature, is defined
+      as the fraction 1/273.16 of the thermodynamic temperature of the triple point
+      of water,
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considering that the temperature of the triple point depends on the relative
+      amount of isotopes of hydrogen and oxygen present in the sample of water used,
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considering that this effect is now one of the major sources of the observed
+      variability between different realizations of the water triple point,
+  actions:
+  - type: decides
+    date_effective: '2005-10-07'
+    message: decides that the definition of the kelvin refer to water of a specified
+      isotopic composition,
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      decides that this composition be: +
+       0.000 155 76 mole of stem:[""_(2) "H"] per mole of stem:[""_(1) "H"], +
+       0.000 379 9 mole of stem:[""_(17) "O"] per mole of stem:[""_(16) "O"], and +
+       0.002 005 2 mole of stem:[""_(18) "O"] per mole of stem:[""_(16) "O"], +
+       which is the composition of the International Atomic Energy Agency reference material Vienna Standard Mean Ocean Water (VSMOW), as recommended by IUPAC in “Atomic Weights of the Elements: Review 2000”.
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      decides that this composition be stated in a note attached to the definition of the kelvin in the SI brochure as follows: +
+       “This definition refers to water having the isotopic composition defined exactly by the following amount of substance ratios: 0.000 155 76 mole of stem:[""_(2) "H"] per mole of stem:[""_(1) "H"], 0.000 379 9 mole of stem:[""_(17) "O"] per mole of stem:[""_(16) "O"] and 0.002 005 2 mole of stem:[""_(18) "O"] per mole of ^16^O”.
+  notes: The kelvin was redefined by the 26th CGPM in 2018 (Resolution 1).
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Revision of the <i>Mise en pratique</i> list of recommended radiations
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/94-2005/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Proceedings of the 94th CIPM (2005), 2006
+  reference_page: 236
+  approvals:
+  - message: The International Committee for Weights and Measures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: |-
+      *considering* that:
+
+      * improved frequency values for radiations of some high-stability cold ion and cold atom standards already documented in the recommended radiations list have recently become available;
+      * improved frequency values for the infra-red gas-cell-based optical frequency standard in the optical telecommunications region, already documented in the recommended radiations list, have been determined;
+      * improved frequency values for certain iodine gas-cell standard, already documented in the subsidiary recommended source list, have been determined;
+      * frequencies of new cold atoms, of atoms in the near-infrared region and of molecules in the optical telecommunications region have been determined by femtosecond comb-based frequency measurements for the first time;
+  actions:
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      *decides* that the list of _recommended radiations_ be revised to include the following:
+
+      * updated frequency values for the single trapped ^stem:[88^(Sr)]+^ ion quadrupole transition, the single trapped ^stem:[199^(Hg)]+^ quadrupole transition and the single trapped ^stem:[171^(Yb)]+^ quadrupole transition;
+      * an updated frequency value for the Ca atom transition;
+      * an updated frequency value for the stem:["C"_(2)"H"_(2)]-stabilized standard at stem:[1.54 "µ"]
+      * an updated frequency value for the I~2~-stabilized standard at 515 nm;
+      * the addition of the ^87^<up><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span>Sr atom transition at 698 nm; </up>
+      * the addition of the ^87^<up><span style="display: none;"> </span><span style="display: none;"> </span>Rb atom two-photon transitions at 760 nm; </up>
+      * the addition of the stem:[""_(12) "C"_(2)"H"_(2)] (stem:[ nu 1] + stem:[ nu 3]) band and the stem:[""_(13) "C"_(2)"H"_(2)] (stem:[ nu 1] + stem:[ nu 3]) and (stem:[ nu 1] + stem:[ nu 3] + stem:[ nu 4] + stem:[ nu 5]) bands at 1.54 µm.

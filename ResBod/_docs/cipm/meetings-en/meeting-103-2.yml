@@ -1,0 +1,366 @@
+---
+metadata:
+  title: 103rd meeting of the CIPM (Session II)
+  identifier: 103-2
+  date: '2014-11-14'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+pdf: https://www.bipm.org/documents/20126/34434414/CIPM2014-II-EN.pdf/2b73ddaf-90d3-0ba7-c8aa-7eca402cec39
+resolutions:
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-24 (2014)
+  identifier: 103-24
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Meetings
+  considerations:
+  - type: accepts
+    date_effective: '2014-11-14'
+    message: accepted the minutes of Session I of the 103rd meeting of the CIPM as
+      a true record.
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-25 (2014)
+  identifier: 103-25
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Meetings
+  - General
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2014-11-14'
+    message: decided to defer action on Decision CIPM/103-22 until the meeting of
+      the CIPM in March 2015. The BIPM will circulate notes on terminology, prepared
+      by stem:["Ms"] Arlen and Dr Quinn, to the CIPM members.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-26 (2014)
+  identifier: 103-26
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Member States and Associates
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '2014-11-14'
+    message: decided, on the basis of the criteria it has previously adopted, that
+      it would be appropriate for the Republic of Estonia, Georgia, the Republic of
+      Paraguay and the Republic of Peru to become States Parties to the Metre Convention.
+      The BIPM will convey the Decision, recalling Resolution 4 'On the status of
+      Associate State of the General Conference' adopted by the CGPM at its 24th meeting,
+      and the implications regarding the increase in subscriptions should any of the
+      States choose to remain as an Associate of the CGPM.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-27 (2014)
+  identifier: 103-27
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: confirms
+    date_effective: '2014-11-14'
+    message: confirmed its approval of the audited financial statements of the BIPM
+      and of the BIPM Pension and Provident Fund which it has approved by correspondence
+      in June 2014. The CIPM gave the BIPM Director quietus for the 2013 exercise.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-28 (2014)
+  identifier: 103-28
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Finance
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2014-11-14'
+    message: approved the budget proposed for 2015.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-29 (2014)
+  identifier: 103-29
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations:
+  - type: noting
+    date_effective: '2014-11-14'
+    message: noted the decision of the Consultative Committee for Mass and Related
+      Quantities (CCM) to merge its Working Groups for Pressure and Vacuum and its
+      Working Groups for Density and Viscosity.
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-30 (2014)
+  identifier: 103-30
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - SI
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2014-11-14'
+    message: |-
+      supported the proposal of CODATA to set a deadline of 1 July 2017 for submission of experimental data to be used by the CODATA Task Group on Fundamental Constants in the evaluation of the fundamental constants which will lead to the fixed values for the defining constants of the new SI.
+
+      The CIPM approved the ongoing work on the SI logo by the Consultative Committee for Units (CCU).
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-31 (2014)
+  identifier: 103-31
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2014-11-14'
+    message: supported the BIPM in progressing to Phase II of the extraordinary calibration
+      campaign using the international prototype of the kilogram and in disseminating
+      corrected values for calibrations performed with respect to the BIPM mass unit.
+      The BIPM will determine the associated uncertainties in collaboration with the
+      CCM support group.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-32 (2014)
+  identifier: 103-32
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CGPM
+  considerations: []
+  actions:
+  - type: recommends
+    date_effective: '2014-11-14'
+    message: endorsed the proposed CGPM attendance policy, document CIPM/14-11.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-33 (2014)
+  identifier: 103-33
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2014-11-14'
+    message: appointed Dr Louw as next President of the Consultative Committee for
+      Ionizing Radiation (CCRI).
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-34 (2014)
+  identifier: 103-34
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: appoints
+    date_effective: '2014-11-14'
+    message: appointed Dr Usuda as next President of the Consultative Committee for
+      Acoustics, Ultrasound and Vibration (CCAUV).
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-35 (2014)
+  identifier: 103-35
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations:
+  - type: accepts
+    date_effective: '2014-11-14'
+    message: |-
+      accepted the following changes to the Consultative Committees:
+
+      * CCPR
+      ** CMI (Czech Republic): Member
+      ** CMS/ITRI (Chinese Taipei): Observer
+      ** MKEH (Hungary): withdrawal as Member
+      * CCRI
+      ** SMU (Slovakia): Observer at CCRI(II)
+      ** NRC (Canada): Observer at CCRI(III)
+      * CCAUV
+      ** KEBS (Kenya): Observer
+      * CCT
+      ** CMI (Czech Republic): Observer
+      * CCQM
+      ** HSA (Singapore): Member
+      ** NIMT (Thailand): Member
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-36 (2014)
+  identifier: 103-36
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations:
+  - type: noting
+    date_effective: '2014-11-14'
+    message: noted the decision of the Consultative Committee for Thermometry (CCT)
+      to restructure its Working Groups and took note of Recommendation T1 (2014)
+      of the CCT.
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-37 (2014)
+  identifier: 103-37
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: asks
+    date_effective: '2014-11-14'
+    message: 'asked Dr May to circulate the request of the Consultative Committee
+      for Amount of Substance: Metrology in Chemistry and Biology (CCQM) for traceability
+      exception related to isotope ratio delta values to the CIPM members so that
+      a decision can be made.'
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-38 (2014)
+  identifier: 103-38
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - JCTLM
+  considerations:
+  - type: considering
+    date_effective: '2014-11-14'
+    message: is of the opinion that the Joint Committee for Traceability in Laboratory
+      Medicine (JCTLM) should continue to distinguish between JCTLM members and stakeholders
+      to avoid conflicts of interest and to ensure a transparent system.
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-39 (2014)
+  identifier: 103-39
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Finance
+  considerations:
+  - type: noting
+    date_effective: '2014-11-14'
+    message: |-
+      noted that the BIPM was informed of two bank transfers being processed from the National Standards Organization of Iran for the settlement of the total sums due for 2013 and 2014 and that in view of the dates of these transfers, the position of the Islamic Republic of Iran with regard to its membership status since 1979 could not be included in the convocation to the 25th CGPM meeting.
+
+      In order to allow the CGPM to duly address this position at its 26th meeting, the CIPM decided to provisionally freeze the effects of the Rescheduling Agreement made in 2012 through a new agreement that _inter alia_ requires continuity in payment of the Member State contribution by the Islamic Republic of Iran in the year it is due.
+  actions: []
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-40 (2014)
+  identifier: 103-40
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - International Liaison
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: elects
+    date_effective: '2014-11-14'
+    message: |-
+      nominated:
+
+      * Dr Kaarls as CIPM representative to participate with Mr Henson, BIPM, in the ISO Working Group to revise ISO 17025,
+      * Dr McLaren as CIPM representative to participate with Dr Westwood, BIPM, in the ISO Working Group to revise ISO Guide 34.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-41 (2014)
+  identifier: 103-41
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Work Programme
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2014-11-14'
+    message: agreed to reflect on themes to be addressed by the BIPM/VAMAS Workshop
+      "Challenges in materials metrology" planned in 2016; and make suggestions to
+      give guidance to the workshop steering group by the end of January 2015.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-42 (2014)
+  identifier: 103-42
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - Internal rules
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2014-11-14'
+    message: approved the proposed changes to the BIPM Rules and Regulations (RRI),
+      document CIPM/14-10.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-43 (2014)
+  identifier: 103-43
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - International Liaison
+  considerations: []
+  actions:
+  - type: approves
+    date_effective: '2014-11-14'
+    message: agreed to establish a consortium of national metrology institutes and
+      other institutes, coordinated by the NIST, to facilitate new work aimed at resolving
+      the present disagreement amongst measurements of the Newtonian constant of gravitation,
+      stem:[G]. The BIPM will provide facilities for meetings of those taking part
+      in this work.
+- dates:
+  - '2014-11-14'
+  subject: CIPM
+  type: decision
+  title: Decision CIPM/103-44 (2014)
+  identifier: 103-44
+  url: https://www.bipm.org/en/committees/ci/cipm/103-_2-2014
+  categories:
+  - CCs and WGs
+  considerations: []
+  actions:
+  - type: declares
+    date_effective: '2014-11-14'
+    message: will circulate the document Guidelines for the selection of Consultative
+      Committee Presidents to the CIPM members.

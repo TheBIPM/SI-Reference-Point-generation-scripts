@@ -1,0 +1,142 @@
+---
+metadata:
+  title: 77e réunion du CIPM
+  identifier: '77'
+  date: '1988-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/77-1988
+pdf: https://www.bipm.org/documents/20126/59880001/CIPM1988.pdf/cb861b55-f513-d3c3-cf1f-43ac10595dac
+resolutions:
+- dates:
+  - '1988-10-06'
+  subject: CIPM
+  type: recommendation
+  title: Représentation du volt au moyen de l’effet Josephson
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/77-1988/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM77.pdf/34e84af6-3490-c42f-7215-84e771f25f00
+  reference_name: Comptes rendus du 77e CIPM (1988), 1989
+  reference_page: 19
+  considerations:
+  - type: having / having regard
+    date_effective: '1988-10-06'
+    message: |-
+      Le Comité international des poids et mesures
+
+      *agissant* conformément aux instructions données dans la Résolution 6 de la 18^e^ Conférence générale des poids et mesures concernant l’ajustement prévu des représentations du volt et de l’ohm,
+
+      considérant
+
+      * qu’une étude approfondie des résultats des déterminations les plus récentes conduit à une valeur de stem:[483 597","9 "GHz"/"V"] pour la constante de Josephson, stem:[K_("J")], c’est-à-dire pour le quotient de la fréquence par la tension correspondant au palier de rang _n =_ 1 dans l’effet Josephson,
+      * que l’effet Josephson, avec cette valeur de stem:[K_("J")], peut être utilisé pour établir un étalon de référence de force électromotrice dont l’incertitude (écart-type), par rapport au volt, est estimée à stem:[4 * 10^(-7)] en valeur relative et dont la reproductibilité est nettement meilleure,
+
+      recommande
+
+      * que l’on adopte, par convention, pour la constante de Josephson, stem:[K_("J")], la valeur stem:[K]~J_‑_90~ = stem:[483 597","9 "GHz"/"V"] exactement,
+      * que cette nouvelle valeur soit utilisée à partir du 1^er^ janvier 1990, et non auparavant, +
+       pour remplacer les valeurs actuellement en usage,
+      * que cette nouvelle valeur soit utilisée à partir de cette même date par tous les laboratoires qui fondent sur l’effet Josephson leurs mesures de force électromotrice,
+      * qu’à partir de cette même date tous les autres laboratoires ajustent la valeur de leurs étalons de référence pour la mettre en accord avec cette nouvelle valeur,
+
+      *estime* qu’aucun changement de cette valeur recommandée de la constante de Josephson ne sera nécessaire dans un avenir prévisible,
+
+      *attire* l’attention des laboratoires sur le fait que la nouvelle valeur est supérieure de stem:[3","9 "GHz"/"V"], soit approximativement stem:[8 * 10^(-6)] en valeur relative, à la valeur donnée en 1972 par le Comité consultatif d’électricité dans sa Déclaration E‑72.
+  actions: []
+  notes: La CGPM à sa 26^e^ réunion en 2018 (Résolution 1) a abrogé l’adoption d’une
+    valeur conventionnelle de stem:[K_("J")].
+- dates:
+  - '1988-10-06'
+  subject: CIPM
+  type: recommendation
+  title: Représentation de l’ohm au moyen de l’effet Hall quantique
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/77-1988/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM77.pdf/34e84af6-3490-c42f-7215-84e771f25f00
+  reference_name: Comptes rendus du 77e CIPM (1988), 1989
+  reference_page: 20
+  approvals:
+  - message: |-
+      Le Comité international des poids et mesures,
+
+      agissant conformément aux instructions données dans la Résolution 6 de la 18^e^ Conférence générale des poids et mesures concernant l’ajustement prévu des représentations du volt et de l’ohm,
+  considerations:
+  - type: considering
+    date_effective: '1988-10-06'
+    message: considérant que la plupart des étalons actuels de référence de résistance
+      électrique présentent au cours du temps des variations significatives,
+  - type: considering
+    date_effective: '1988-10-06'
+    message: considérant qu’un étalon de référence de résistance électrique fondé
+      sur l’effet Hall quantique serait stable et reproductible,
+  - type: considering
+    date_effective: '1988-10-06'
+    message: considérant qu’une étude approfondie des résultats des déterminations
+      les plus récentes conduit à une valeur de 25 812,807 Ω pour la constante de
+      von Klitzing, stem:[R_("K")], c’est-à-dire pour le quotient de la tension de
+      Hall par le courant correspondant au plateau de rang stem:[i = 1] dans l’effet
+      Hall quantique,
+  - type: considering
+    date_effective: '1988-10-06'
+    message: considérant que l’effet Hall quantique, avec cette valeur de stem:[R_("K")],
+      peut être utilisé pour établir un étalon de référence de résistance dont l’incertitude
+      (écart-type), par rapport à l’ohm, est estimée stem:[2 * 10^(-7)] en valeur
+      relative et dont la reproductibilité est nettement meilleure,
+  - type: considering
+    date_effective: '1988-10-06'
+    message: "*et estime* qu’aucun changement de cette valeur recommandée de la constante
+      de von Klitzing ne sera nécessaire dans un avenir prévisible."
+  actions:
+  - type: recommends
+    date_effective: '1988-10-06'
+    message: recommande que l’on adopte par convention, pour la constante de von Klitzing,
+      stem:[R_("K")], la valeur stem:[R_(K-90) = 25 812","807] Ω exactement,
+  - type: recommends
+    date_effective: '1988-10-06'
+    message: recommande que cette valeur soit utilisée à partir du 1er janvier 1990,
+      et non auparavant, par tous les laboratoires qui fondent sur l’effet Hall quantique
+      leurs mesures de résistance électrique,
+  - type: recommends
+    date_effective: '1988-10-06'
+    message: recommande qu’à partir de cette même date tous les autres laboratoires
+      ajustent la valeur de leurs étalons de référence pour la mettre en accord avec
+      stem:[R_(K-90)],
+  - type: recommends
+    date_effective: '1988-10-06'
+    message: recommande que, pour établir un étalon de référence de résistance électrique
+      fondé sur l’effet Hall quantique, les laboratoires suivent les conseils pour
+      la mise en œuvre de la résistance de Hall quantifiée élaborés par le Comité
+      consultatif d’électricité et publiés par les soins du Bureau international des
+      poids et mesures, dans leur édition la plus récente,
+  notes: |-
+    Lors de sa 89^e^ session en 2000, le CIPM a approuvé la déclaration de la 22^e^ session du CCEM concernant la valeur de la constante de von Klitzing.
+
+    La CGPM à sa 26^e^ réunion en 2018 (Résolution 1) a abrogé l’adoption d’une valeur conventionnelle de stem:[K_("J")].
+- dates:
+  - '1988-10-06'
+  subject: CIPM
+  type: recommendation
+  title: Mise au point de l'Échelle internationale de température de 1990 (EIT-90)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/77-1988/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM77.pdf/34e84af6-3490-c42f-7215-84e771f25f00
+  reference_name: Comptes rendus du 77e CIPM (1988), 1989
+  reference_page: 21
+  approvals:
+  - message: Le Comité international des poids et mesures
+  considerations:
+  - type: having / having regard
+    date_effective: '1988-10-06'
+    message: _agissant_ conformément aux instructions données dans la Résolution 7
+      de la 18^e^ Conférence générale des poids et mesures concernant la mise au point
+      d'une nouvelle échelle internationale de température,
+  actions:
+  - type: declares
+    date_effective: '1988-10-06'
+    message: _annonce_ que les écarts entre l'EIT-90 et l'EIPT-68 seront approximativement
+      ceux qui sont indiqués dans le graphique joint à la présente recommandation,
+  - type: recommends
+    date_effective: '1988-10-06'
+    message: |-
+      _recommande_ que les laboratoires nationaux prennent connaissance de ces écarts approximatifs en vue de la mise en vigueur au 1^er^ janvier 1990 de l'EIT-90.
+
+      image::https://www.bipm.org/documents/20126/60632397/Graph-CI-1988-Recommendation-3-FR.jpg/5765ea5f-bf1c-087d-ea6a-3042879f9442?t=1631025512923[]

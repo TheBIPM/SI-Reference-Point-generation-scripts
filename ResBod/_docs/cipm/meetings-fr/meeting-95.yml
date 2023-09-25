@@ -1,0 +1,130 @@
+---
+metadata:
+  title: 95e réunion du CIPM
+  identifier: '95'
+  date: '2006-10-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/95-2006
+pdf: https://www.bipm.org/documents/20126/35014363/CIPM2006-FR.pdf/fdcfb868-cb6c-9c45-3095-96d43318ebeb
+resolutions:
+- dates:
+  - '2006-10-13'
+  subject: CIPM
+  type: recommendation
+  title: Au sujet des représentations secondaires de la seconde
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/95-2006/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM95.pdf.zip/e58fcb97-69f8-008b-050b-378d5f0d8a77
+  reference_name: Comptes rendus du 95e CIPM (2006), 2007
+  reference_page: 120
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant qu’une liste commune de « valeurs recommandées des fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » est à établir,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que le Groupe de travail commun au Comité consultatif des
+      longueurs (CCL) et au CCTF sur la mise en pratique de la définition du mètre
+      et sur les représentations secondaires de la seconde, lors de sa réunion au
+      Bureau international des poids et mesures (BIPM) en septembre 2005, a discuté
+      des fréquences des radiations candidates potentielles en vue de leur inclusion
+      dans la liste des représentations secondaires de la seconde,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que le Groupe de travail commun au CCL et au CCTF a examiné
+      et mis à jour les valeurs des fréquences des transitions de l’ion de mercure
+      (Hg), de l’ion de strontium (Sr), de l’ion d’ytterbium (Yb) et de l’atome neutre
+      de strontium lors de sa session de septembre 2006,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que le CCTF avait déjà recommandé dans sa Recommandation
+      CCTF 1 (2004) la fréquence de la transition quantique hyperfine non perturbée
+      de l’état fondamental de l’atome de ^87^Rb comme représentation secondaire de
+      la seconde,
+  actions:
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: |-
+      *recommande* que les fréquences des transitions suivantes soient utilisées comme représentations secondaires de la seconde et soient intégrées à la nouvelle liste des « valeurs recommandées des fréquences étalons destinées à la mise en pratique de la définition du mètre et aux représentations secondaires de la seconde »
+
+      * la transition quantique hyperfine non perturbée de l'état fondamental de l’atome de ^87^Rb, à la fréquence de stem:[f^(87)]~Rb~ = stem:[6 834 682 610 904 324 "Hz"], avec une incertitude-type relative estimée de stem:[3 * 10^(-15)],
+      * la transition optique non perturbée 5s ^2^S~1/2~ - 4d ^2^D~5/2~ de l'ion de ^stem:[88^(Sr)]+^, à la fréquence de stem:[f^(88)]Sr^+^ = stem:[444 779 044 095 484 "Hz"], avec une incertitude-type relative estimée de stem:[7 * 10^(-15)],
+      * la transition optique non perturbée 5d^10^ 6s ^2^S~1/2~ stem:[(F = 0) - 5]d^9^ 6s^2^ ^2^D~5/2~ stem:[(F= 2)] de l'ion de ^stem:[199^(Hg)]+^, à la fréquence de stem:[f^(199)]Hg^+^ = stem:[1 064 721 609 899 145 "Hz"], avec une incertitude-type relative estimée de stem:[3 * 10^(-15)],
+      * la transition optique non perturbée 6s ^2^S~1/2~ stem:[(F = 0) - 5]d ^2^D~3/2~ stem:[(F = 2)] de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f^(171)]Yb^+^ = stem:[688 358 979 309 308 "Hz"], avec une incertitude-type relative estimée de stem:[9 * 10^(-15)],
+      * la transition optique non perturbée 5s^2^ ^1^S~0~ - 5s 5p ^3^P~0~ de l'atome neutre de ^87^Sr, à la fréquence de stem:[f^(87)]Sr = stem:[429 228 004 229 877 "Hz"], avec une incertitude-type relative estimée de stem:[1","5 * 10^(-14)].
+- dates:
+  - '2006-10-13'
+  subject: CIPM
+  type: recommendation
+  title: Coordination de la mise au point de techniques avancées de comparaison de
+    temps et de fréquences
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/95-2006/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM95.pdf.zip/e58fcb97-69f8-008b-050b-378d5f0d8a77
+  reference_name: Comptes rendus du 95e CIPM (2006), 2007
+  reference_page: 125
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: reconnaissant la disponibilité d’horloges, en hyperfréquence, à atomes
+      refroidis, de haute qualité,
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: reconnaissant l’amélioration rapide des étalons de fréquence optique
+      dans les différents laboratoires,
+  - type: recognizing
+    date_effective: '2006-10-13'
+    message: reconnaissant le besoin imminent de comparer, à distance, ces horloges
+      et ces étalons de fréquence optique à des niveaux d’exactitude et de stabilité
+      impossibles à réaliser pour le moment, et
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que parmi les différents moyens techniques de comparaison,
+      les liaisons par fibre optique, les étalons de fréquence optiques transportables,
+      les liaisons optiques par satellite et les liaisons hyperfréquence ont été identifiés
+      comme pouvant être utiles à cet effet,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que les améliorations des comparaisons de temps et de fréquence
+      auraient des applications majeures pour l’évaluation des performances des étalons
+      de fréquence actuels et contribueraient aux progrès des futurs étalons de fréquence
+      primaires et des horloges,
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que l’amélioration de la réalisation du Temps universel coordonné
+      (UTC), qui en découle, serait bénéfique pour les applications à venir dans de
+      nombreux domaines des sciences et des techniques ;
+  - type: considering
+    date_effective: '2006-10-13'
+    message: considérant que un nouveau groupe de travail pour coordonner la mise
+      au point de techniques avancées de comparaison de temps et de fréquences, composé
+      d’experts de différents domaines, comme la métrologie des fréquences optiques,
+      la génération des échelles de temps, et les comparaisons de temps et de fréquence,
+      a été établi, afin de traiter et de coordonner ces questions ;
+  actions:
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommande que la communauté du temps et des fréquences poursuive activement
+      ces études de manière coordonnée,
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommande que le Bureau international des poids et mesures (BIPM) continue
+      à aider les différents groupes de travail du CCTF et établisse les interactions
+      nécessaires avec les autres organisations concernées, parmi lesquelles l’International
+      GNSS Service (IGS), l’Union géodésique et géophysique internationale (UGGI),
+      l’Union internationale des télécommunications (UIT), l’Union radioscientifique
+      internationale (URSI) et les autres organisations compétentes,
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommande que les organisations scientifiques nationales et internationales
+      et les agences spatiales prennent en compte ces travaux comme il convient,
+  - type: recommends
+    date_effective: '2006-10-13'
+    message: recommande que les gouvernements nationaux et les organisations internationales
+      assurent le financement nécessaire au développement de ces activités.

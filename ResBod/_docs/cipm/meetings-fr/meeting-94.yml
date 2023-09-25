@@ -1,0 +1,152 @@
+---
+metadata:
+  title: 94e réunion du CIPM
+  identifier: '94'
+  date: '2005-10-07'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/94-2005
+pdf: https://www.bipm.org/documents/20126/35014443/CIPM2005-FR.pdf/3cf66c4c-93a9-cffb-9780-9d9143df1ed9
+resolutions:
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Étapes préalables à de nouvelles définitions du kilogramme, de l’ampère,
+    du kelvin et de la mole en fonction de constantes fondamentales
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/94-2005/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Comptes rendus du 94e CIPM (2005), 2006
+  reference_page: 117
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: |-
+      *considérant*
+
+      * la Résolution 7 de la 21^e^ Conférence générale des poids et mesures en 1999 concernant une future nouvelle définition du kilogramme ;
+      * les recommandations récentes (2005) des Comités consultatifs pour la masse et les grandeurs apparentées (CCM), pour l’électricité et le magnétisme (CCEM), pour la quantité de matière : métrologie en chimie (CCQM) et pour la thermométrie (CCT), concernant des propositions et questions relatives à d’éventuels changements des définitions du kilogramme, de l’ampère et du kelvin ;
+      * la Recommandation U 1 (2005) du Comité consultatif des unités (CCU) qui rassemble les points les plus importants de ces recommandations et qui demande au CIPM :
+      ** d’approuver, en principe, la préparation de nouvelles définitions et mises en pratique pour le kilogramme, l’ampère et le kelvin de telle manière que, si les résultats expérimentaux obtenus au cours des prochaines années sont acceptables, en accord avec les Comités consultatifs et les autres instances appropriées, le CIPM puisse préparer des propositions qui seront présentées aux États membres de la Convention du Mètre à temps pour être soumises, en vue de leur adoption, à la 24^e^ Conférence générale en 2011 ;
+      ** d’étudier la possibilité de donner simultanément une nouvelle définition de la mole, fondée sur une valeur fixée de la constante d’Avogadro ;
+      ** de préparer un projet de Résolution à soumettre à la 23^e^ Conférence générale en 2007, afin d’attirer l’attention des États membres sur ces activités ;
+      ** d’encourager de plus les laboratoires nationaux de métrologie à continuer à financer au niveau national les recherches appropriées, afin de faciliter les changements suggérés précédemment et d’affiner notre connaissance des constantes fondamentales concernées, en vue de l’amélioration du Système international d’unités ;
+      * le besoin d’étudier soigneusement la forme et le contenu d’éventuelles nouvelles définitions de ces unités, non seulement individuellement mais dans leur ensemble ;
+  actions:
+  - type: approves
+    date_effective: '2005-10-07'
+    message: "*approuve*, en principe, la préparation de nouvelles définitions comme
+      le CCU l’a requis dans la recommandation mentionnée ci-dessus ;"
+  - type: invites / further invites
+    date_effective: '2005-10-07'
+    message: |-
+      *invite* tous les Comités consultatifs
+
+      * et en particulier le CCM, le CCEM, le CCQM et le CCT, à examiner les implications des changements des définitions des unités de base du SI mentionnées précédemment et à soumettre un rapport au CIPM au plus tard en juin 2007 ;
+      * à suivre de près les résultats des nouvelles expériences concernant ces éventuelles nouvelles définitions, à identifier les conditions nécessaires pour procéder au changement de ces définitions et à examiner, en particulier, d’autres moyens pour redéfinir les unités mentionnées précédemment;
+      * à prendre conseil auprès de la communauté scientifique et technique la plus large possible au sujet de cette importante question ;
+  - type: recommends
+    date_effective: '2005-10-07'
+    message: |-
+      *recommande* aux laboratoires nationaux de métrologie
+
+      * de poursuivre avec énergie le travail en cours, afin de fournir les meilleures valeurs possibles des constantes fondamentales impliquées dans les nouvelles définitions qui sont en cours d’examen ;
+      * de se préparer à assurer la maintenance au long terme des expériences qui, le moment venu, seront nécessaires à la mise en pratique des nouvelles définitions.
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Clarification de la définition du kelvin, unité de température thermo-dynamique
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/94-2005/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Comptes rendus du 94e CIPM (2005), 2006
+  reference_page: 119
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que le kelvin, l’unité de température thermodynamique, est
+      défini par la fraction 1/273,16 de la température thermodynamique du point triple
+      de l’eau,
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que la température du point triple de l’eau dépend des abondances
+      relatives des isotopes de l’hydrogène et de l’oxygène présents dans l’échantillon
+      d’eau utilisé,
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que cet effet est maintenant l’une des sources majeures d’écarts
+      observés entre les différentes réalisations du point triple de l’eau,
+  actions:
+  - type: decides
+    date_effective: '2005-10-07'
+    message: décide que la définition du kelvin se réfère à une eau de composition
+      isotopique spécifiée,
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      décide que cette composition isotopique de l’eau soit la suivante : +
+       0,000 155 76 mole de stem:[""_(2) "H"] par mole de stem:[""_(1) "H"], +
+       0,000 379 9 mole de stem:[""_(17) "O"] par mole de stem:[""_(16) "O"], et +
+       0,002 005 2 mole de stem:[""_(18) "O"] par mole de stem:[""_(16) "O"], +
+       cette composition étant celle du matériau de référence de l’Agence internationale de l’énergie atomique « Vienna Standard Mean Ocean Water (VSMOW) », recommandée par l’Union internationale de chimie pure et appliquée dans « Atomic Weights of the Elements: Review 2000 » ,
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      décide que cette composition soit définie dans une note attachée à la définition du kelvin dans la Brochure sur le SI de la manière suivante : +
+       « Cette définition se réfère à l’eau de composition isotopique définie par les rapports de quantité de matière suivants : 0,000 155 76 mole de stem:[""_(2) "H"] par mole de stem:[""_(1) "H"], 0,000 379 9 mole de stem:[""_(17) "O"] par mole de stem:[""_(16) "O"] et 0,002 005 2 mole de stem:[""_(18) "O"] par mole de stem:[""_(16) "O"] ».
+  notes: Le kelvin a été redéfini par la CGPM à sa 26^e^ réunion en 2018 (Résolution
+    1).
+- dates:
+  - '2005-10-07'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la liste des radiations recommandées pour la mise en pratique
+    de la définition du mètre
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/94-2005/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
+  reference_name: Comptes rendus du 94e CIPM (2005), 2006
+  reference_page: 120
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que l’on dispose de meilleures valeurs des fréquences des
+      radiations de certains étalons à ion ou à atomes refroidis très stables, déjà
+      publiées dans la liste des radiations recommandées ;
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que l’on a déterminé de meilleures valeurs des fréquences
+      des étalons de fréquence optique, fondés sur des cuves à gaz, dans le domaine
+      des télécommunications optiques, dans l’infrarouge, valeurs déjà publiées dans
+      la liste des radiations recommandées ;
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que l’on a déterminé de meilleures valeurs des fréquences
+      de certains étalons fondés sur des cuves à iode, valeurs déjà publiées dans
+      la liste complémentaire des sources recommandées ;
+  - type: considering
+    date_effective: '2005-10-07'
+    message: considérant que l’on a effectué pour la première fois des mesures de
+      la fréquence de nouveaux atomes refroidis, d’atomes dans la région de l’infrarouge
+      proche et de molécules dans le domaine des télécommunications optiques, à l’aide
+      de peignes à impulsions femtosecondes ;
+  actions:
+  - type: decides
+    date_effective: '2005-10-07'
+    message: |-
+      *décide* que la liste des radiations recommandées soit révisée pour y inclure :
+
+      * les valeurs mises à jour des fréquences des transitions quadripolaires de l’ion piégé de ^stem:[88^(Sr)]+^, de l’ion piégé de ^stem:[199^(Hg)]+^ et de l’ion piégé de ^stem:[171^(Yb)]+^ ;
+      * la valeur mise à jour de la fréquence de la transition de l’atome de calcium ;
+      * la valeur mise à jour de la fréquence de l’étalon asservi sur l’acétylène à stem:[1","54 "mm"] ;
+      * la valeur mise à jour de la fréquence de l’étalon asservi sur l’iode à 515 nm ;
+      * la fréquence de la transition de l’atome de ^87^Sr à 698 nm ;
+      * les fréquences des transitions de l’atome de ^87^Rb autour de 760 nm ;
+      * les fréquences des transitions de la bande stem:[( nu 1 +  nu 3)] de stem:[""_(12) "C"_(2)"H"_(2)], et des bandes stem:[( nu 1 +  nu 3)] et (stem:[ nu 1 +  nu 3 +  nu 4 +  nu 5]) de stem:[""_(13) "C"_(2)"H"_(2)], autour de stem:[1","54 "mm"].

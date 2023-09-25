@@ -1,0 +1,105 @@
+---
+metadata:
+  title: 46th meeting of the CIPM
+  identifier: '46'
+  date: '1956-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/46-1956
+pdf: https://www.bipm.org/documents/20126/59548197/CIPM1956.pdf/ec94ac40-85f1-334e-7682-cf877b1bc290
+resolutions:
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Definition of the unit of time (second)
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/46-1956/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Proceedings of the 46th CIPM (1956), 1957
+  reference_page: 77
+  approvals:
+  - message: In virtue of the powers invested in it by Resolution 5 of the 10th Conférence
+      Générale des Poids et Mesures, the Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considering that the 9th General Assembly of the International Astronomical
+      Union (Dublin, 1955) declared itself in favour of linking the second to the
+      tropical year,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: |-
+      considering that, according to the decisions of the 8th General Assembly of the International Astronomical Union (Rome, 1952), the second of ephemeris time (ET) is the fraction +
+         (12 960 276 813 / 408 986 496) × 10^−9^ of the tropical year for 1900 January 0 at stem:[12 "h"] ET,
+  actions:
+  - type: decides
+    date_effective: '1956-10-06'
+    message: decides “The second is the fraction 1/31 556 925.9747 of the tropical
+      year for 1900 January 0 at 12 hours ephemeris time.”
+  notes: This definition was abrogated in 1967 by the 13th CGPM (Resolution 1).
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Création du Comité Consultatif pour la Définition de la Seconde
+  identifier: 2
+  url: https://www.bipm.org/en/committees/ci/cipm/46-1956/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Proceedings of the 46th CIPM (1956), 1957
+  reference_page: 78
+  approvals:
+  - message: |-
+      Le Comité International des Poids et Mesures,
+
+      considérant la Résolution 5 de la Dixième Conférence Générale des Poids et Mesures le chargeant de donner plus de précision à la définition de l'unité fondamentale de temps,
+
+      considérant le grand intérêt des recherches actuellement en cours en vue de fonder l'unité de temps sur l'observation de phénomènes physiques,
+
+      considérant la nécessité d'encourager et de coordonner sur le plan internàtional les études ci-dessus mentionnées,
+  considerations: []
+  actions:
+  - type: decides
+    date_effective: '1956-10-06'
+    message: "*décide* de créer un Comité Consultatif pour la Définition de la Seconde,
+      dont le rôle sera de le conseiller en vue des décisions qu'il aura à prendre
+      pour le perfectionnement de l'étalon de temps."
+- dates:
+  - '1956-10-06'
+  subject: CIPM
+  type: resolution
+  title: Système International d'Unités
+  identifier: 3
+  url: https://www.bipm.org/en/committees/ci/cipm/46-1956/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
+  reference_name: Proceedings of the 46th CIPM (1956), 1957
+  reference_page: 83
+  approvals:
+  - message: The Comité International des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considering the task entrusted to it by Resolution 6 of the 9th Conférence
+      Générale des Poids et Mesures (CGPM) concerning the establishment of a practical
+      system of units of measurement suitable for adoption by all countries adhering
+      to the Metre Convention,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considering the documents received from twenty-one countries in reply
+      to the enquiry requested by the 9th CGPM,
+  - type: considering
+    date_effective: '1956-10-06'
+    message: considering Resolution 6 of the 10th CGPM, fixing the base units of the
+      system to be established,
+  actions:
+  - type: recommends
+    date_effective: '1956-10-06'
+    message: "recommends that the name “Système International d’Unités” be given to
+      the system founded on the base units adopted by the 10th CGPM, viz.: +\n +\n
+      [This is followed by the list of the six base units with their symbols, reproduced
+      in Resolution 12 of the 11th CGPM (1960)]. +\n "
+  - type: recommends
+    date_effective: '1956-10-06'
+    message: |-
+      recommends that the units listed in the table below be used, without excluding others which might be added later: +
+       +
+       [This is followed by the table of units reproduced in paragraph 4 of Resolution 12 of the 11th CGPM (1960)].

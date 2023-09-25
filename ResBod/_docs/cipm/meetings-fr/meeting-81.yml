@@ -1,0 +1,248 @@
+---
+metadata:
+  title: 81e réunion du CIPM
+  identifier: '81'
+  date: '1992-10-01'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/81-1992
+pdf: https://www.bipm.org/documents/20126/62491469/CIPM1992.pdf/a76b7bb7-20fb-78bf-68e2-a127eed68b5f
+resolutions:
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: Reconnaissance mondiale des résultats de comparaisons d'étalons de mesure
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/81-1992/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Comptes rendus du 81e CIPM (1992), 1993
+  reference_page: 21
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant les exigences croissantes de traçabilité des mesures à différents
+      niveaux d'exactitude pour les sciences, les techniques et le commerce international,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant l'existence de groupes régionaux au sein desquels collaborent
+      des laboratoires nationaux,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant le besoin d'une reconnaissance à l'échelle mondiale des résultats
+      de comparaisons d'étalons effectuées, au sein de ces groupes régionaux, par
+      ces laboratoires dont certains ne participent pas aux comparaisons effectuées
+      sous les auspices du CIPM,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant le rôle du Bureau international des poids et mesures (BIPM)
+      dans la coordination et l'exécution, à l'échelle mondiale, de comparaisons d'étalons
+      au plus haut niveau,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant l'impossibilité pratique pour le BIPM de conduire des travaux
+      dans tous les domaines et à tous les niveaux,
+  actions:
+  - type: decides
+    date_effective: '1992-10-01'
+    message: _décide_ que, le cas échéant, le BIPM devra effectuer des comparaisons,
+      directement ou par l'intermédiaire des membres des Comités consultatifs, avec
+      un ou plusieurs laboratoires des États membres de la Convention du Mètre qui
+      participent aux comparaisons régionales, afin que les résultats de ces comparaisons
+      puissent être reliés entre eux et bénéficier ainsi d'une reconnaissance internationale
+      plus large, et
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: _recommande_ aux laboratoires nationaux de faire le nécessaire pour que
+      le BIPM soit informé de l'état d'avancement et des résultats de ces comparaisons,
+      en particulier lorsqu'elles sont organisées par des groupes régionaux, afin
+      qu'il puisse les publier ou y faire référence.
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: Besoins de recherches métrologiques à long terme
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/81-1992/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Comptes rendus du 81e CIPM (1992), 1993
+  reference_page: 22
+  approvals:
+  - message: Le Comité international des poids et mesures (CIPM),
+  considerations:
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que les besoins des sciences, des techniques et du commerce
+      international en matière d'exactitude et d'efficacité des mesures croissent
+      de façon permanente,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que la mise au point de meilleurs étalons et techniques de
+      mesure doit être souvent effectuée bien avant leur application dans les domaines
+      scientifiques et industriels,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que de tels progrès ne peuvent avoir lieu qu'à partir de
+      bases solidement établies sur des recherches métrologiques à long terme, elles-mêmes
+      étroitement liées aux progrès des sciences,
+  actions:
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: recommande que les laboratoires nationaux continuent à entreprendre des
+      recherches métrologiques à long terme aussi bien qu'à répondre aux besoins plus
+      immédiats des services métrologiques,
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: recommande que les laboratoires nationaux informent régulièrement le
+      Bureau international des poids et mesures des résultats des travaux liés à la
+      métrologie fondamentale.
+- dates:
+  - '1992-10-01'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la mise en pratique de la définition du mètre
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/ci/cipm/81-1992/resolution-3
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM81.pdf/db7956db-43c2-4976-aa3d-c900fe276f16
+  reference_name: Comptes rendus du 81e CIPM (1992), 1993
+  reference_page: 23
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1992-10-01'
+    message: |-
+      *rappelant*
+
+      * que la 17^e^ Conférence générale des poids et mesures (CGPM), en 1983, a adopté une nouvelle définition du mètre,
+      * que la même CGPM a invité le Comité international des poids et mesures (CIPM)
+      ** à établir des instructions pour la mise en pratique de cette définition,
+      ** à choisir des radiations qui puissent être recommandées comme étalons de longueur d'onde pour les mesures de longueur par interférométrie et à donner les instructions nécessaires pour leur utilisation,
+      ** à poursuivre les études nécessaires pour améliorer ces étalons et à étendre ou réviser ces instructions en temps utile, si besoin est,
+      * que le CIPM, en conséquence, a publié en 1983 une liste des radiations recommandées pour la mise en pratique de la définition du mètre,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que les sciences et les techniques continuent à exiger une
+      exactitude croissante des réalisations du mètre,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que, depuis 1983, les travaux effectués dans les laboratoires
+      nationaux, au BIPM et ailleurs, ont amélioré de façon substantielle la reproductibilité
+      des radiations qui peuvent être utilisées pour la mise en pratique de la définition
+      du mètre,
+  - type: considering
+    date_effective: '1992-10-01'
+    message: considérant que ces travaux ont aussi permis de réduire notablement l'incertitude
+      associée à la valeur de la fréquence et de la longueur d'onde de certaines de
+      ces radiations,
+  actions:
+  - type: decides
+    date_effective: '1992-10-01'
+    message: "*décide* que la liste des radiations recommandées par le CIPM en 1983
+      (Recommandation 1 (CI-1983) soit remplacée par la liste des radiations recommandées
+      donnée ci-après.\n\n "
+  - type: recommends
+    date_effective: '1992-10-01'
+    message: |-
+      *LISTE DES RADIATIONS RECOMMANDÉES, 1992*
+
+
+
+      Cette liste remplace celle qui avait été publiée dans _BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1983,*51*, 25-28 et dans _Metrologia_, 1984, *19*, 165-166.
+
+      Dans cette liste, les valeurs de la fréquence stem:[f] et de la longueur d'onde _λ_ (d'une même radiation) devraient être liées exactement par la relation _λ_ stem:[f = c], avec stem:[c = 299 792 458 "m"/"s"], mais les valeurs de _λ_ sont arrondies rounded.
+
+      Les résultats de mesures qui ont été utilisés pour la compilation de cette liste, et leur analyse, sont donnés dans l'annexe : Données utilisées pour établir la liste des radiations recommandées, 1992, et Bibliographie commentée*.
+
+      Il faut noter que, pour plusieurs de ces radiations recommandées, nous ne disposons que de peu de valeurs indépendantes ; il en résulte que les incertitudes estimées peuvent ne pas refléter toutes les sources de variations possibles.
+
+      Chacune de ces radiations peut être remplacée, sans perte d'exactitude, par une radiation correspondant à une autre composante de la même transition, ou par une autre radiation, lorsque la différence de fréquence correspondante est connue avec une exactitude suffisante. Pour obtenir les incertitudes données dans cette liste, il n'est pas suffisant de remplir les conditions requises pour les paramètres mentionnés; il faut en outre respecter les conditions expérimentales considérées comme les plus appropriées, suivant la méthode d'asservissement, qui sont décrites dans de nombreuses publications scientifiques ou techniques. Des exemples de conditions expérimentales considérées comme convenables sont décrits, pour telle ou telle radiation, dans des publications dont les références peuvent être obtenues auprès des laboratoires membres du CCDM ou auprès du BIPM.
+      *_1. Radiations de lasers asservis_*
+
+      1.1. Molécule absorbante CH~4~, transition V3, P (7), composante stem:["F"_(2)]^(2)^.
+
+      1.1.1. Les valeurs +
+      stem:[f = 88 376 181 600","18 "kHz"] +
+      _λ_ = 3 392 231 397,327 fm +
+      avec une incertitude-type relative estimée de stem:[3 * 10^(-12)], s'appliquent à la radiation émise par un laser à He-Ne asservi à l'aide de la composante centrale du triplet de structure hyperfine résolu [transition (7-6)], en utilisant la moyenne de la structure due à l'effet de recul, pour des molécules réellement stationnaires, dont les valeurs sont corrigées pour tenir compte du déplacement Doppler du second ordre.
+
+      1.1.2. Les valeurs +
+      stem:[f = 88 376 181 600","5 "kHz"] +
+      _λ_ = stem:[3 392 231 397","31 "m"] +
+      avec une incertitude-type relative estimée de stem:[2","3 * 10^(-11)], s'appliquent à la radiation émise par un laser à He-Ne asservi sur le centre de la structure hyperfine non résolue d'une cuve à méthane à la température ambiante, située à l'intérieur ou à l'extérieur du laser, lorsque les conditions suivantes sont respectées :
+
+      * pression du méthane ≤ 3 Pa,
+      * puissance surfacique moyenne sur l'axe transportée par le faisceau dans un seul sens, à l'intérieur de la cavité^+^ ≤ stem:[10^(4) "W" * "m"^(-2)],
+      * rayon de courbure des surfaces d'onde ≥ stem:[1 "m"],
+      * différence (relative) de puissance entre les deux ondes qui se propagent en sens inverse l'une de l'autre ≤ 5 %,
+      * récepteur placé à la sortie du côté du tube laser.
+
+      \* L'annexe citée ci-dessus est publiée dans le rapport de la 8sup\>e session du CCDM (1992).
+
+      1.2. Atome absorbant ^40^Ca, transition ^3^P~1~ - ^1^S~0~; stem:[ sf Delta ]_m_~stem:["J"]~ = O.
+
+      Les valeurs +
+      stem:[f = 455 986 240","5 "MHz"] +
+      _λ_ = 657 459 439,3 fm +
+      avec une incertitude-type relative estimée de stem:[4","5 * 10^(-10)], s'appliquent à la radiation émise par un laser asservi à l'aide d'un jet atomique thermique.
+
+      1.3. Molécule absorbante ^127^I~2~, transition 8-5, P(10), composante a~9~ (or stem:["g"]).
+
+      Les valeurs +
+      stem:[f = 468 218 332","4 "MHz"] +
+      _λ_ = 640 283 468,7 fm +
+      avec une incertitude-type relative estimée de stem:[4","5 * 10^(-10)], s'appliquent à la radiation émise par un laser asservi à l'aide d'une cuve à iode, située à l'intérieur du laser, ayant un point froid à la température de stem:[(16  +-  1) "°C"], avec une amplitude de modulation de fréquence, de crête à creux, de stem:[(6  +-  1) "MHz"].
+
+      1.4. Molécule absorbante ^127^I~2~, transition 11-5, R(127), composante a~l3~ (or i).
+
+      Les valeurs +
+      stem:[f= 473 612 214 705 "kHz"] +
+      _λ_ = 632 991 398,22 fm +
+      avec une incertitude-type relative estimée de stem:[2","5 * 10^(-11)], s'appliquent à la radiation émise par un laser à He-Ne asservi à l'aide d'une cuve à iode, située à l'intérieur du laser, lorsque les conditions suivantes sont respectées :
+
+      * température des parois de la cuve : stem:[(25  +-  5) "°C"]
+      * point froid à la température de : stem:[(15  +-  0","2) "°C"]
+      * modulation de fréquence, de crête à creux : stem:[(6  +-  0","3) "MHz"]
+      * puissance transportée par le faisceau dans un seul sens, à l'intérieur de la cavité ^+^: stem:[(10  +-  5)] mWpour une valeur absolue du coefficient de décalage en fonction de la puissance ≤ 1,4 kHzlmW.
+
+      Ces conditions ne suffisent pas par elles-mêmes à garantir l'obtention de l'incertitude-type indiquée. Il faut en outre que les parties optique et électronique du système d'asservissement fonctionnent avec les performances appropriées. La cuve à iode peut aussi être utilisée dans des conditions moins rigoureuses, ce qui conduit à l'incertitude plus grande donnée dans l'annexe M2 du rapport du CCDM (1992).
+
+      1.5. Molécule absorbante ^127^I~2~, transition 9-2, R(47), composante a~7~ (or o).
+
+      Les valeurs +
+      stem:[f = 489 880 354","9 "MHz"] +
+      _λ_ = 611 970 770,0 fm +
+      avec une incertitude-type relative estimée de stem:[3 * 10^(-10)], s'appliquent à la radiation émise par un laser à He-Ne asservi à l'aide d'une cuve à iode, située à l'intérieur ou à l'extérieur du laser, ayant un point froid à la température de (- stem:[5  +-  2]) °C.
+
+      1.6. Molécule absorbante ^127^I~2~, transition 17-1, P(62), composante a~l~.
+
+      Les valeurs +
+      stem:[f = 520 206 808","4 "MHz"] +
+      _λ_ = 576 294 760,4 fm +
+      avec une incertitude-type relative estimée de stem:[4 * 10^(-10)], s'appliquent à la radiation émise par un laser à colorant (ou par un laser à He-Ne associé à un doubleur de fréquence) asservi à l'aide d'une cuve à iode, située à l'intérieur ou à l'extérieur du laser, ayant un point froid à la température de stem:[(6  +-  2)] °C.
+
+      1.7. Molécule absorbante ^127^I~2~, transition 26-0, R(12), composante a~9~
+
+      Les valeurs +
+      stem:[f = 551579482","96 "MHz"] +
+      _λ_ = 543516333,1 fm +
+      avec une incertitude-type relative estimée de stem:[2","5 * 10^(-10)], s'appliquent à la radiation émise par un laser à He-Ne asservi à l'aide d'une cuve à iode, située à l'extérieur du laser, ayant un point froid à la température de stem:[(0  +-  2)] °c.
+
+      1.8. Molécule absorbante ^127^I~2~, transition 43-0, P(13), composante a~3~ (or stem:["s"]).
+
+      Les valeurs +
+      stem:[f = 582 490 603","37 "MHz"] +
+      _λ_ = 514 673 466,4 fm +
+      avec une incertitude-type relative estimée de stem:[2","5 * 10^(-10)], s'appliquent à la radiation émise par un laser à Ar^+^ asservi à l'aide d'une cuve à iode, située à l'extérieur du laser, ayant un point froid à la température de (- stem:[5  +-  2]) °C.
+
+      Note^+^ La puissance transportée par le faisceau, dans un seul sens, à l'intérieur de la cavité, est obtenue en divisant la puissance de sortie par le facteur de transmission du miroir de sortie.
+      *_2. Radiations de lampes spectrales_*
+
+      2.1. Radiation correspondant à la transition entre les niveaux 2p~lO~ et 5d~5~ de l'atome de ^86^Kr.
+
+      Les valeurs +
+      _λ_ = 605 780 210,3 fm +
+      avec une incertitude globale relative estimée de stem:[ +-  4 * 10^(-9)] [égale à trois fois l'écart-type estimé à stem:[1","3 * 10^(-9)]en valeur relative], s'applique à la radiation émise par une lampe utilisée dans les conditions recommandées par le CIPM (_BlPM Proc.-Verb. Corn. Int. Poids et Mesures_, 1960, *28*, 71-72 et _BlPM Comptes Rendus lle Conf. Gén. Poids et Mesures_, 1960, 85)].
+
+      2.2. Les radiations des atomes de ^86^Kr, ^198^Hg et ^114^Cd recommendées par le CIPM en 1963 (_BIPM Corn. Cons. Déf. Mètre_, 1962, *3*, 18-19 et _BIPM Proc. Verb. Com. Int. Poids et Mesures_, 1963, *52*, 26-27), avec les valeurs indiquées pour leur longueur d'onde et pour l'incertitude correspondante.

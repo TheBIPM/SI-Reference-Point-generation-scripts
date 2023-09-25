@@ -1,0 +1,358 @@
+---
+metadata:
+  title: 86e réunion du CIPM
+  identifier: '86'
+  date: '1997-09-25'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/86-1997
+pdf: https://www.bipm.org/documents/20126/62491525/CIPM1997.pdf/f1d737c2-6db1-f40a-ba02-be6a44491166
+resolutions:
+- dates:
+  - '1997-09-25'
+  subject: CIPM
+  type: recommendation
+  title: Révision de la mise en pratique de la définition du mètre
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/86-1997/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM86.pdf/d1ab0666-1f08-8419-98ce-530336ad5a52
+  reference_name: Comptes rendus du 86e CIPM (1997), 1998
+  reference_page: 61
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: |-
+      *rappelant*
+
+      * qu'en 1983 la 17^e^ Conférence générale des poids et mesures (CGPM) a adopté une nouvelle définition du mètre ;
+      * qu'à la même date la CGPM a invité le Comité international des poids et mesures (CIPM)
+      ** à établir des instructions pour la mise en pratique de la nouvelle définition du mètre,
+      ** à choisir des radiations qui puissent être recommandées comme étalons de longueur d'onde pour la mesure interférentielle des longueurs et à établir des instructions pour leur emploi,
+      ** à poursuivre les études entreprises pour améliorer ces étalons et à compléter ou réviser par la suite ces instructions ;
+
+      * qu'en réponse à cette invitation le CIPM a adopté la Recommandation 1 (CI-1983) (mise en pratique de la définition du mètre) avec pour effet
+      ** que le mètre soit réalisé par l'une des méthodes suivantes:
+      [type=a]
+      *** au moyen de la longueur stem:[l] du trajet parcouru dans le vide par une onde électromagnétique plane pendant la durée stem:[t] ; cette longueur est obtenue à partir de la mesure de la durée stem:[t], en utilisant la relation stem:[l = c_(0)] • stem:[t] et la valeur de la vitesse de la lumière dans le vide stem:[c_(0) = 299 792 458 "m"/"s"],
+      *** au moyen de la longueur d'onde dans le vide _λ_ d'une onde électromagnétique plane de fréquence stem:[f] ; cette longueur d'onde est obtenue à partir de la mesure de la fréquence stem:[f], en utilisant la relation _λ_ = stem:[c_(0)/f] et la valeur de la vitesse de la lumière dans le vide stem:[c_(0) = 299 792 458 "m"/"s"],
+      *** au moyen de l'une des radiations de la liste ci-dessous, radiations pour lesquelles on peut utiliser la valeur donnée de la longueur d'onde dans le vide ou de la fréquence, avec l'incertitude indiquée, pourvu que l'on observe les conditions spécifiées et le mode opératoire reconnu comme approprié ;
+
+      ** que dans tous les cas les corrections nécessaires soient appliquées pour tenir compte des conditions réelles telles que diffraction, gravitation ou imperfection du vide ;
+
+      * que le CIPM avait recommandé une liste de radiations à cet effet ;
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: "*rappelant* aussi qu'en 1992 le CIPM a révisé la mise en pratique de
+      la définition du mètre ;"
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant que la science et les techniques continuent à exiger une
+      meilleure exactitude dans la réalisation du mètre ;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant que, depuis 1992, les travaux effectués dans les laboratoires
+      nationaux, au BIPM et dans d'autres laboratoires ont permis d'identifier de
+      nouvelles radiations et des méthodes pour leur mise en oeuvre qui conduisent
+      à de faibles incertitudes ;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant que ces travaux ont aussi permis de réduire sensiblement
+      l'incertitude sur la valeur de la fréquence et de la longueur d'onde dans le
+      vide de l'une des radiations recommandées antérieurement;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant qu'une mise à jour de la liste des radiations recommandées
+      est souhaitable en vue de diverses applications qui comprennent non seulement
+      la réalisation directe du mètre, impliquant l'interférométrie optique pour la
+      mesure pratique des longueurs, mais aussi la spectroscopie, la physique atomique
+      et moléculaire et la détermination de constantes physiques fondamentales ;
+  - type: considering
+    date_effective: '1997-09-25'
+    message: |-
+      estime que la longueur d'onde de la radiation émise par la colonne positive est égale, à stem:[1 * 10^(-8)] près en valeur relative, à la longueur d'onde correspondant à la transition entre les niveaux non perturbés, lorsque les conditions suivantes sont satisfaites :
+
+      . le capillaire est observé en bout de façon que les rayons lumineux utilisés cheminent du côté cathodique vers le côté anodique ;
+      . la partie inférieure de la lampe, y compris le capillaire, est immergée dans un bain réfrigérant maintenu à la température du point triple de l'azote, à 1 degré près ;
+      . la densité du courant dans le capillaire est stem:[(0","3  +-  0.1) "A"/"cm"^(2)].
+
+      ^(3)^ L'incertitude figurant dans le document de 1960 était de stem:[1 * 10^(-8)], elle a ensuite été modifiée et portée à stem:[4 * 10^(-9)] (_BIPM Com. Cons. Déf. Mètre_, 1973,*5*, M 12).
+      *2.2* Radiations des atomes de ^86^Kr, ^198^Hg and ^114^Cd
+
+      En 1963 le CIPM (_BIPM Com. Cons. Déf. Mètre_, 1962,*3*,18-19 et _BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1963,*52*,26-27) sa recommandé des valeurs de longueurs d'onde dans le vide, _λ_, et d'incertitudes, pour certaines transitions des atomes de ^86^Kr, ^198^Hg et ^114^Cd, ainsi que les conditions d'utilisation suivantes :
+
+      Longueurs d'onde dans le vide, _λ_, de transitions du ^86^Kr
+
+      |===
+      | Transition | _λ_/pm
+
+      | 2P9 - 5d'~4~ | 645 807,20
+
+      | 2P8 - 5d~4~ | 642 280,06
+
+      | lS3 - 3P~10~ | 565 112,86
+
+      | 1s4 - 3P~8~ | 450 361,62
+
+      |===
+
+      Pour le 86Kr, les valeurs ci-dessus s'appliquent, avec une incertitude de stem:[2 * 10^(-8)], en valeur relative, aux radiations émises par une lampe opérant dans des conditions similaires à celles mentionnées précédemment (2.1).
+
+      Longueurs d'onde dans le vide, _λ_, de transitions du ^198^Hg
+
+      |===
+      | Transition | _λ_/pm
+
+      | stem:[6^(1)]P~1~ - stem:[6^(1)]D~2~ | 579 226,83
+      | stem:[6^(1)]P~1~ - stem:[6^(3)]D~2~ | 577 119,83
+      | stem:[6^(3)]P~2~ - stem:[7^(3)]S~1~ | 546 227,05
+      | stem:[6^(3)]P~1~ - stem:[7^(3)]S~1~ | 435 956,24
+
+      |===
+
+      Pour le 198Hg, les valeurs ci-dessus s'appliquent, avec une incertitude de stem:[5 * 10^(-8)], en valeur relative, aux radiations émises par une lampe à décharge, lorsque les conditions suivantes sont observées :
+
+      * les radiations sont produites au moyen d'une lampe à décharge sans électrodes contenant du mercure 198 d'une pureté non inférieure à 98 % et de l'argon à une pression comprise entre stem:[0","5 "mm"] Hg et stem:[1","0 "mm"] Hg (66 Pa à 133 Pa) ;
+      * le diamètre intérieur du capillaire de la lampe est d'environ stem:[5 "mm"], et les radiations sont observées en travers ;
+      * la lampe est excitée par un champ à haute fréquence de puissance modérée; elle est maintenue à une température inférieure à stem:[10 "°C"] ;
+      * le volume de la lampe est de préférence supérieur à stem:[20 "cm"^(3)].
+
+      Longueurs d'onde dans le vide, _λ_, de transitions du ^114^Cd
+
+      |===
+      | Transition | _λ_/pm
+
+      | stem:[5^(1)]p~1~ - stem:[5^(1)]D~2~ | 644 024,80
+      | stem:[5^(3)]P~2~ - stem:[6^(3)]S~1~ | 508 723,79
+      | stem:[5^(3)]P~1~ - stem:[6^(3)]S~1~ | 480 125,21
+      | stem:[5^(3)]P~0~ - stem:[6^(3)]S~1~ | 467 945,81
+
+      |===
+
+      Pour le ^114^Cd, les valeurs ci-dessus s'appliquent, avec une incertitude de stem:[7 * 10^(-8)], en valeur relative, aux radiations émises par une lampe à décharge, lorsque les conditions suivantes sont observées :
+
+      * les radiations sont produites au moyen d'une lampe à décharge sans électrodes, contenant du cadmium 114 d'une pureté non inférieure à 95 % et de l'argon à une pression stem:[1 "mm"] Hg (133 Pa) environ à la température ambiante ;
+      * le diamètre intérieur du capillaire de la lampe est environ stem:[5 "mm"], et les radiations sont observées en travers ;
+      * la lampe est excitée par un champ à haute fréquence de puissance modérée; elle est maintenue à une température telle que la raie verte ne soit pas renversée.
+
+      Note. Les incertitudes citées dans la Section 2.2 correspondent aux incertitudes élargies relatives stem:[U = ku_(c) (k = 3)], égales à trois fois l'incertitude-type relative composée.
+      *2.3* Molécule absorbante ^127^I~2~, transition 17-1, P(62) composante a~l~ recommandée par le C1PM en 1992 (_BIPM Com. Cons. Déf. Mètre_, 1992,*8*, M18 et M137, and Mise en Pratique of the Definition of the Metre (1992), _Metrologia_, 1993/94,*30*,523-541).
+
+      Les valeurs +
+      stem:[f= 520 206 808.4 "MHz"] +
+      _λ_ = 576 294 760,4 fm +
+      avec une incertitude-type relative stem:[4 * 10^(-10)], s'appliquent à la radiation émise par un laser à colorant (ou par un laser à He-Ne associé à un doubleur de fréquence) asservi à l'aide d'une cuve à iode, située à l'intérieur ou à l'extérieur du laser, ayant un point froid à la température de stem:[(6  +-  2)] °C.
+  actions:
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: |-
+      *recommande*
+
+      * que la liste des radiations recommandées donnée par le CIPM en 1992 (Recommandation 3 (CI-1992) soit remplacée par la liste de radiations donnée ci-dessous ;
+      * que la note suivante au sujet de la relativité générale soit ajoutée aux règles pour la réalisation du mètre : +
+       Dans le contexte de la relativité générale, le mètre est considéré comme une unité de longueur propre. Sa définition s'applique donc seulement dans un domaine spatial suffisamment petit, pour lequel les effets de la non-uniformité du champ gravitationnel peuvent être ignorés. Dans ce cas, les seuls effets à prendre en compte sont ceux de la relativité restreinte. Les méthodes locales, préconisées en b) et c) pour réaliser le mètre, fournissent le mètre propre, mais la méthode préconisée en a) ne le permet pas nécessairement. La méthode préconisée en a) devrait donc être restreinte aux longueurs 1 suffisamment courtes pour que les effets prévus par la relativité générale soient négligeables par rapport aux incertitudes de mesure. Si ce n'est pas le cas, il convient de se référer au rapport du Groupe de travail du CCDS sur l'application de la relativité générale à la métrologie pour l'interprétation des mesures (Application of general relativity to metrology, _Metrologia_, 1997, *34*,261-290).
+
+      Note. Il est habituel d'utiliser la notation stem:[c_(0)] pour la vitesse de la lumière dans le vide (ISO 31). La notation stem:[c] avait été utilisée dans le texte d'origine de la Recommandation de 1983.
+
+
+
+      *LISTE DES RADIATIONS RECOMMANDÉES POUR LA RÉALISATION +
+      DU MÈTRE APPROUVÉES PAR LE CIPM EN 1997 : +
+      FRÉQUENCES ET LONGUEURS D'ONDE DANS LE VIDE*
+
+
+
+      Cette liste remplace celles qui avaient été publiées dans _BIPM Proc.-Verb. Com. Int. Poids et Mesures_, 1983,*51*,25-28,1992,60,141-144 et dans _Metrologia_, 1984,*19*, 165-166, 1993/94,*30*,523-541.
+
+      Dans cette liste, les valeurs de la fréquence stem:[f] et de la longueur d'onde _λ_ devraient être rigoureusement liées par la relation _λ__f_ = stem:[c_(0)], avec stem:[c_(0) = 299 792 458 "m"/"s"], mais les valeurs de _λ_ sont arrondies.
+
+      Les résultats de mesures qui ont été utilisés pour la compilation de cette liste, et leur analyse, sont donnés dans l'annexe : Données utilisées pour établir la liste des radiations recommandées, 1997, et Bibliographie commentée.
+
+      Il faut noter que, pour plusieurs de ces radiations recommandées, nous ne disposons que de peu de valeurs indépendantes ; il en résulte que les incertitudes estimées peuvent ne pas refléter toutes les sources de variations possibles.
+
+      Chacune de ces radiations peut être remplacée, sans perte d'exactitude, par une radiation correspondant à une autre composante de la même transition, ou par une autre radiation, lorsque la différence de fréquence correspondante est connue avec une exactitude suffisante. Il faut aussi noter que, pour obtenir les incertitudes données dans cette liste, il n'est pas suffisant de remplir les conditions requises pour les paramètres mentionnés ; il faut en outre respecter les conditions expérimentales considérées comme les plus appropriées selon la méthode d'asservissement utilisée. Celles-ci sont décrites dans de nombreuses publications scientifiques ou techniques. Des exemples de conditions expérimentales considérées comme convenables pour telle ou telle radiation sont décrits dans des publications dont les références peuvent être obtenues auprès des laboratoires membres du CCDM^(1)^ ou auprès du BIPM.
+
+      ^(1)^ Lors de sa session de 1997, le CIPM a changé le nom du Comité consultatif pour la définition du mètre (CCDM) en Comité consultatif des longueurs (CCL).
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: "*1 Radiations recommandées de lasers asservis*\n*1.1* Atome absorbant
+      stem:[\"\"_(1) \"H\"], transition IS-2S à deux photons\n\nLes valeurs +\nstem:[f
+      = 1 233 030 706 593\",\"7 \"kHz\"] +\n_λ_ = 243 134 624,6260 fm +\nwavec une
+      incertitude-type relative de stem:[8\",\"5 * 10^(-13)], s'appliquent à une radiation
+      asservie sur une transition à deux photons dans un faisceau d'hydrogène refroidi.
+      Les valeurs sont corrigées pour les ramener à une puissance laser nulle et pour
+      tenir compte du déplacement Doppler du second ordre, ce qui ramène à des atomes
+      réellement stationnaires.\n\nOn peut aussi utiliser d'autres transitions absorbantes
+      dans l'hydrogène, ces transitions sont données dans l'annexe M 3 du rapport
+      du CCDM (1997).\n*1.2* Molécule absorbante ^127^I~2~, transition 43-0, P(13),
+      composante a~3~ (ou stem:[\"s\"])\n\nLes valeurs +\nstem:[f = 582 490 603\",\"37
+      \"MHz\"] +\n_λ_ = 514 673 466,4 fm +\navec une incertitude-type relative de
+      stem:[2\",\"5 * 10^(-10)], s'appliquent à la radiation émise par un laser à
+      Ar^+^ asservi à l'aide d'une cuve à iode, située à l'extérieur du laser, ayant
+      un point froid à la température de stem:[(-5  +-  2) \"°C\"]^(2)^.\n\n^(2)^
+      Pour ce qui concerne la spécification des conditions de mise en oeuvre, telles
+      que la température, la largeur de modulation et la puissance du laser, le symbole
+      stem:[ +- ] fait référence à une tolérance et non pas à une incertitude.\n*1.3*
+      Molécule absorbante ^127^I~2~, transition 32-0, R(56), composante a~lO~\n\nLes
+      valeurs +\nstem:[f = 563 260 223\",\"48 \"MHz\"] +\n_λ_ = 532 245 036,14 fm
+      +\navec une incertitude-type relative de stem:[7 * 10^(-11)], s'appliquent à
+      la radiation émise par un laser Nd:YAG à fréquence doublée asservi à l'aide
+      d'une cuve à iode, située à l'extérieur du laser, ayant un point froid à une
+      température située entre stem:[-10 \"°C\"] and -20 °C.\n\nOn peut aussi utiliser
+      d'autres transitions absorbantes de ^127^I~2~ aproches de cette transition,
+      en faisant référence aux différences de fréquence ci-dessous, dont l'incertitude-type
+      est stem:[u_(c) = 2 \"kHz\"].\n\nLongueurs d'onde de transitions de ^127^I~2~\n\n|===\n|
+      Transition | Différence de fréquence\n\n| x | [stem:[f](x) - stem:[f](32-0,
+      R(56), a~lO~)]/stem:[\"kHz\"]\n| 32-0, R(57), a~1~ | -50 946 880,4\n| 32-0,
+      P(54), a~1~ | -47 588 892,5\n| 35-0, P(119), a~1~ | -36 840 161,5\n| 33-0, R(86),
+      a~1~ | -32 190 404,0\n| 34-0, R(106), a~1~ | -30 434 761,5\n| 36-0, R(134),
+      a~1~ | -17 173 680,4\n| 33-0, P(83), a~21~ | -15 682 074,1\n| 32-0, P(56), a~10~
+      | 0\n| 32-0, P(53), a~1~ | +2 599 708,0\n\n|===\n\nIci, stem:[f](x) représente
+      la fréquence de la transition dénommée stem:[x] et stem:[f](32-0, R(56), a~lO~)
+      la fréquence de la transition de référence.\n*1.4* Molécule absorbante ^127^I~2~,
+      transition 26-0, R(12), composante a~9~\n\nLes valeurs +\nstem:[f = 551 579
+      482\",\"96 \"MHz\"] +\n_λ_ = 543 516 333,1 fm +\navec une incertitude-type relative
+      de stem:[2\",\"5 * 10^(-10)], s'appliquent à la radiation émise par un laser
+      à He-Ne asservi à l'aide d'une cuve à iode, située à l'extérieur du laser, ayant
+      un point froid à la température de stem:[(0  +-  2)] °C.\n*1.5* Molécule absorbante
+      ^127^I~2~, transition 9-2, R(47), composante a~7~ (ou 0)\n\nLes valeurs +\nstem:[f
+      = 489 880 354\",\"9 \"MHz\"] +\n_λ_ = 611 970770,0 fm +\navec une incertitude-type
+      relative de stem:[3 * 10^(-10)], s'appliquent à la radiation émise par un laser
+      à He-Ne asservi à l'aide d'une cuve à iode, située à l'intérieur ou à l'extérieur
+      du laser, ayant un point froid à la température de stem:[(-5  +-  2)] °C.\n*1.6*
+      Molécule absorbante ^127^I~2~, transition 11-5, R(127), composante a~13~ (ou
+      i)\n\nLes valeurs +\nstem:[f = 473 612 214 705 \"kHz\"] +\n_λ_ = 632 991 398,22
+      fm +\navec une incertitude-type relative de stem:[2\",\"5 * 10^(-11)], s'appliquent
+      à la radiation émise par un laser à He-Ne asservi par la technique du troisième
+      harmonique, à l'aide d'une cuve à iode, située à l'intérieur du laser, lorsque
+      les conditions suivantes sont respectées :\n\n* température des parois de la
+      cuve : stem:[(25  +-  5) \"°C\"] ;\n* point froid à la température de : stem:[(15
+      \ +-  0.2) \"°C\"] ;\n* fmodulation de fréquence, crête à creux: stem:[(6  +-
+      \ 0.3) \"MHz\"] ;\n* puissance transportée par le faisceau dans un seul sens
+      à l'intérieur de la cavité (c'est-à-dire puissance de sortie divisée par le
+      facteur de transmission du miroir de sortie) : stem:[(10  +-  5) \"mW\"] fpour
+      une valeur absolue du coefficient de décalage en fonction de la puissance ≤
+      stem:[1.4 \"kHz\"/\"m\"] W.\n\n\n\nCes conditions ne suffisent pas par elles-mêmes
+      à garantir l'obtention de l'incertitude-type indiquée. Il faut en outre que
+      les parties optique et électronique du système d'asservissement fonctionnent
+      avec les performances appropriées. La cuve à iode peut aussi être utilisée dans
+      des conditions moins rigoureuses, ce qui conduit à l'incertitude plus grande
+      donnée dans l'annexe M 2 du rapport du CCDM (1997).\n*1.7* Molécule absorbante
+      ^127^I~2~, transition 8-5, P(10), composante a~9~ (ou stem:[\"g\"])\n\nLes valeurs
+      +\nstem:[f = 468 218 332\",\"4 \"MHz\"] +\n_λ_ = 640 283 468,7 fm +\navec une
+      incertitude-type relative de stem:[4\",\"5 * 10^(-10)], s'appliquent à la radiation
+      émise par un laser à He-Ne asservi à l'aide d'une cuve à iode, située à l'intérieur
+      du laser, ayant un point froid à la température de stem:[(16  +-  1) \"°C\"],
+      avec une amplitude de modulation de fréquence, crête à creux, de stem:[(6  +-
+      \ 1) \"MHz\"].\n*1.8* Atome absorbant ^40^Ca, transition ^1^S~0~ - ^3^P~1~,
+      stem:[ sf Delta ]_m_~stem:[\"J\"]~ = O.\n\nLes valeurs +\nstem:[f = 455 986
+      240 494\",\"15 \"kHz\"] +\n_λ_ = 657 459 439,2917 fm +\navec une incertitude-type
+      relative de stem:[6 * 10^(-13)], s'appliquent à la radiation émise par un laser
+      asservi à l'aide d'atomes de Ca. Ces valeurs correspondent à la fréquence moyenne
+      des deux composantes de recul d'atomes réellement stationnaires, c'est-à-dire
+      qu'elles sont corrigées pour tenir compte du déplacement Doppler du second ordre.\n*1.9*
+      Ion absorbant ^stem:[88^(Sr)]+^, transition stem:[5^(2)]S~1/2~ - stem:[4^(2)]D~5/2~\n\nLes
+      valeurs +\nstem:[f = 444 779 044\",\"04 \"MHz\"] +\n_λ_ = 674 025 590,95 fm
+      +\navec une incertitude-type relative de stem:[1\",\"3 * 10^(-10)], s'appliquent
+      à la radiation émise par un laser asservi sur la transition que l'on observe
+      à l'aide d'un ion de strontium piégé et refroidi. Les valeurs correspondent
+      au centre du multiplet Zeeman.\n*1.10* Atome absorbant ^85^Rb, transition 5S~1/2~
+      stem:[(F= 3) - 5]D~5/2~ stem:[(F= 5)] à deux photons\n\nLes valeurs +\nstem:[f
+      = 385 285 142 378 \"kHz\"] +\n_λ_ = 778 105 421,22 fm +\navec une incertitude-type
+      relative de stem:[1\",\"3 * 10^(-11)], s'appliquent à la radiation émise par
+      un laser asservi sur le centre de la transition à deux photons. Les valeurs
+      s'appliquent à une cuve à rubidium à une température inférieure à stem:[100
+      \"°C\"], elles sont corrigées pour une puissance laser nulle et pour tenir compte
+      du déplacement Doppler du second ordre.\n\nD'autres transitions absorbantes
+      du rubidium peuvent aussi être utilisées, elles sont données à l'annexe M 3
+      du rapport du CCDM (1997).\n*1.11* Molécule absorbante CH~4~, transition v~3~,
+      P(7), composante stem:[\"F\"_(2)]^(2)^\n\n1.11.1 The values +\nstem:[f = 88
+      376 181 600\",\"18 \"kHz\"] +\n_λ_ = 3 392 231 397,327 fm +\navec une incertitude-type
+      relative de stem:[3 * 10^(-12)], s'appliquent à la radiation émise par un laser
+      à He-Ne asservi à l'aide de la composante centrale [transition (7-6)] du triplet
+      de structure hyperfine résolu. Ces valeurs correspondent à la fréquence moyenne
+      des deux composantes de recul de molécules réellement stationnaires, c'est-à-dire
+      qu'elles sont corrigées pour tenir compte du déplacement Doppler du second ordre.\n\n1.11.2
+      Les valeurs +\nstem:[f = 88 376 181 600\",\"5 \"kHz\"] +\n_λ_ = 3 392 231 397,31
+      fm +\navec une incertitude-type relative de stem:[2.3 * 10^(-11)], s'appliquent
+      à la radiation émise par un laser à He-Ne asservi sur le centre de la structure
+      hyperfine non résolue à l'aide d'une cuve à méthane, située à l'intérieur ou
+      à l'extérieur du laser, à la température ambiante, lorsque les conditions suivantes
+      sont respectées :\n\n* pression du méthane ≤ 3 Pa;\n* puissance surfacique moyenne
+      transportée par le faisceau dans un seul sens (c'est-à-dire puissance surfacique
+      de sortie divisée par le facteur de transmission du miroir de sortie), à l'intérieur
+      de la cavité ≤ stem:[10^(4)] Wm^-2^;\n* rayon de courbure des surfaces d'onde
+      ≥ 1 m;\n* différence relative de puissance entre les deux ondes qui se propagent
+      en sens inverse l'une de l'autre ≤ 5 %;\n* récepteur d'asservissement placé
+      à la sortie du dispositif du côté du tube à He-Ne.\n\n \n*1.12* Molécule absorbante
+      OsO~4~, transition en coïncidence avec la raie laser stem:[\"\"_(12) \"C\"^(16)]O~2~,
+      R(12)\n\nLes valeurs +\nstem:[f = 29 096 274 952\",\"34 \"kHz\"] +\n_λ_ = 10
+      303 465 254,27 fm +\navec une incertitude-type relative de stem:[6 * 10^(-12)],
+      s'appliquent à la radiation émise par un laser à CO~2~ asservi sur une cuve
+      à OsO~4~, remplie à une pression inférieure à 0,2 Pa, située à l'extérieur du
+      laser.\n\nOn peut utiliser d'autres transitions; elles sont données à l'annexe
+      M 3 du rapport du CCDM (1997).\n*2 Valeurs recommandées de radiations de lampes
+      spectrales et autres sources*\n*2.1* Radiation correspondant à la transition
+      entre les niveaux 2p~10~ et 5d~5~ de l'atome de ^86^Kr\n\nLa valeur _λ_ = 605
+      780 210,3 fm +\navec une incertitude relative élargie^(3)^, stem:[U = ku_(c)
+      (k = 3)], de stem:[4 * 10^(-9)] [égale à trois fois l'incertitude-type relative
+      de stem:[1\",\"3 * 10^(-9)]], s'applique à la radiation émise par une lampe
+      à décharge utilisée dans les conditions recommandées par le CIPM en 1960 (_BIPM
+      Proc.-Verb. Com. Int. Poids et Mesures_, 1960,*28*, 71-72 et _Comptes Rendus
+      stem:[11^(e)] Conf. Gén. Poids et Mesures_, 1960, *85*). Ces conditions sont
+      les suivantes :\n\nLa radiation du krypton 86 est réalisée au moyen d'une lampe
+      à décharge à cathode chaude contenant du krypton 86 d'une pureté non inférieure
+      à 99 %, en quantité suffisante pour assurer la présence de krypton solide à
+      la température de stem:[64 \"K\"], cette lampe étant munie d'un capillaire ayant
+      les caractéristiques suivantes: diamètre intérieur stem:[2 \"mm\"] à stem:[4
+      \"mm\"], épaisseur de la paroi stem:[1 \"mm\"] environ.\n\nOn"
+- dates:
+  - '1997-09-25'
+  subject: CIPM
+  type: recommendation
+  title: Métrologie en chimie
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/ci/cipm/86-1997/resolution-2
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM86.pdf/d1ab0666-1f08-8419-98ce-530336ad5a52
+  reference_name: Comptes rendus du 86e CIPM (1997), 1998
+  reference_page: 72
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1997-09-25'
+    message: "*rappelant* la Résolution 7 de la 20^e^ Conférence générale des poids
+      et mesures sur la métrologie en chimie,"
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant le développement mondial des accords commerciaux dans le
+      cadre de l'Organisation mondiale du commerce,
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant le besoin d'éliminer les obstacles techniques au commerce
+      liés à la métrologie,
+  - type: considering
+    date_effective: '1997-09-25'
+    message: considérant la nécessité d'accords de reconnaissance mutuelle, ou autres,
+      pour établir la traçabilité des mesures d'un pays à un autre,
+  - type: considering
+    date_effective: '1997-09-25'
+    message: |-
+      *considérant* aussi
+
+      * que de nombreuses décisions relatives à l'environnement et à la santé publique sont fondées sur des mesures en chimie,
+      * que les progrès de la traçabilité internationale ne sont pas encore suffisants dans le domaine des mesures en chimie,
+  actions:
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: recommande que les laboratoires nationaux de métrologie poursuivent leurs
+      efforts en vue d'établir et de coordonner, dans leur pays, les activités dans
+      le domaine de la métrologie en chimie, en collaboration étroite avec les groupes
+      concernés,
+  - type: recommends
+    date_effective: '1997-09-25'
+    message: recommande que les laboratoires nationaux de métrologie définissent,
+      en collaboration avec le Comité consultatif pour la quantité de matière, les
+      domaines prioritaires et les comparaisons clés internationales essentielles
+      à la traçabilité des mesures en chimie, aussi bien au niveau mondial qu'au niveau
+      régional.

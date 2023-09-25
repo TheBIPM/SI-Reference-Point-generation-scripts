@@ -1,0 +1,46 @@
+---
+metadata:
+  title: 58e réunion du CIPM
+  identifier: '58'
+  date: '1969-10-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/ci/cipm/58-1969
+pdf: https://www.bipm.org/documents/20126/59880087/CIPM1969.pdf/3c358bfb-8ef1-7fec-23c5-16e2f067c1b8
+resolutions:
+- dates:
+  - '1969-10-09'
+  subject: CIPM
+  type: recommendation
+  title: Système international d’unités, modalités d’application de la Résolution
+    12 de la 11<sup>e</sup> CGPM (1960)*
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/ci/cipm/58-1969/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM58.pdf/2c50ad26-1766-6bcc-5b70-fc9dc6333a9a
+  reference_name: Comptes rendus du 58e CIPM (1969), 1970
+  reference_page: 30
+  approvals:
+  - message: Le Comité international des poids et mesures,
+  considerations:
+  - type: considering
+    date_effective: '1969-10-09'
+    message: "*considérant* que la Résolution 12 de la Onzième Conférence générale
+      des poids et mesures (1960), concernant le Système international d’unités, a
+      suscité des discussions sur certaines dénominations,"
+  actions:
+  - type: declares
+    date_effective: '1969-10-09'
+    message: |-
+      *déclare*
+
+      . les unités de base, les unités supplémentaires et les unités dérivées du Système international d’unités, qui forment un ensemble cohérent, sont désignées sous le nom d’« unités SI » ;**. les préfixes adoptés par la Conférence générale pour la formation des multiples et sous-multiples décimaux des unités SI sont appelés « préfixes SI » ;
+
+      et *recommande*
+
+      [start=3]
+      . d’employer les unités SI et leurs multiples et sous-multiples décimaux dont les noms sont formés au moyen des préfixes SI
+
+      Note : L’appellation « unités supplémentaires », figurant dans la Résolution 12 de la Onzième Conférence générale des poids et mesures (et dans la présente Recommandation), est donnée aux unités SI pour lesquelles la Conférence générale ne décide pas s’il s’agit d’unités de base ou bien d’unités dérivées.
+  notes: |-
+    \* La 20^e^ CGPM a décidé d’abroger en 1995 (Résolution 8) la classe des unités supplémentaires dans le SI.
+
+    \*\* Le CIPM a approuvé en 2001 une proposition du CCU visant à clarifier la définition des « unités SI » et « unités du SI ».

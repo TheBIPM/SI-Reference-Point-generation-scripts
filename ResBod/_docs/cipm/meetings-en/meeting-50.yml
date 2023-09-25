@@ -1,0 +1,27 @@
+---
+metadata:
+  title: 50th meeting of the CIPM
+  identifier: '50'
+  date: '1961-10-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/50-1961
+pdf: https://www.bipm.org/documents/20126/59548212/CIPM1961.pdf/6414c9ed-e4ca-bcb6-095c-841e30626a01
+resolutions:
+- dates:
+  - '1961-10-12'
+  subject: CIPM
+  type: recommendation
+  title: Cubic decimetre and litre
+  identifier: 1961
+  url: https://www.bipm.org/en/committees/ci/cipm/50-1961/resolution-
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM50.pdf/09793bad-536a-a62f-67d6-501c7e58ba99
+  reference_name: Proceedings of the 50th CIPM (1961), 1962
+  reference_page: 34
+  approvals:
+  - message: The Comité International des Poids et Mesures
+  considerations: []
+  actions:
+  - type: recommends
+    date_effective: '1961-10-12'
+    message: recommends that the results of accurate measurements of volume be expressed
+      in units of the International System and not in litres.

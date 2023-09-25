@@ -1,0 +1,60 @@
+---
+metadata:
+  title: 69th meeting of the CIPM
+  identifier: '69'
+  date: '1980-10-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/ci/cipm/69-1980
+pdf: https://www.bipm.org/documents/20126/59880115/CIPM1980.pdf/76ac94fb-d66e-1c82-1f5e-9b6c7c22a9c8
+resolutions:
+- dates:
+  - '1980-10-09'
+  subject: CIPM
+  type: recommendation
+  title: SI supplementary units (radian and steradian)
+  identifier: 1
+  url: https://www.bipm.org/en/committees/ci/cipm/69-1980/resolution-1
+  reference: https://www.bipm.org/documents/20126/17315032/CIPM69.pdf/4a58f533-51a4-5469-fe39-30575a42b735
+  reference_name: Proceedings of the 69th CIPM (1980), 1981
+  reference_page: 24
+  approvals:
+  - message: The Comité International des Poids et Mesures (CIPM),
+  considerations:
+  - type: taking into account
+    date_effective: '1980-10-09'
+    message: '*taking into consideration* Resolution 3 adopted by ISO/stem:["TC" 12]
+      in 1978 and Recommen-dation U 1 (1980) adopted by the Comité Consultatif des
+      Unités at its 7th meeting,'
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considering that the units radian and steradian are usually introduced
+      into expressions for units when there is need for clarification, especially
+      in photometry where the steradian plays an important role in distinguishing
+      between units corresponding to different quantities,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considering that in the equations used one generally expresses plane
+      angle as the ratio of two lengths and solid angle as the ratio between an area
+      and the square of a length, and consequently that these quantities are treated
+      as dimensionless quantities,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: considering that the study of the formalisms in use in the scientific
+      field shows that none exists which is at the same time coherent and convenient
+      and in which the quantities plane angle and solid angle might be considered
+      as base quantities,
+  - type: considering
+    date_effective: '1980-10-09'
+    message: |-
+      *considering also*
+
+      * that the interpretation given by the CIPM in 1969 for the class of supplementary units introduced in Resolution 12 of the 11th Conférence Générale des Poids et Mesures (CGPM) in 1960 allows the freedom of treating the radian and the steradian as SI base units,
+      * that such a possibility compromises the internal coherence of the SI based on only seven base units,
+  actions:
+  - type: decides
+    date_effective: '1980-10-09'
+    message: "*decides* to interpret the class of supplementary units in the International
+      System as a class of dimensionless derived units for which the CGPM allows the
+      freedom of using or not using them in expressions for SI derived units."
+  notes: The class of SI supplementary units was abrogated by decision of the 20th
+    CGPM in 1995 (Resolution 8).
