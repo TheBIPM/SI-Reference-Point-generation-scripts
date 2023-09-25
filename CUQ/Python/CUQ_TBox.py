@@ -177,6 +177,16 @@ class SiElements:
                     Literal("Associer une unité de mesure à une base SI ou à une unité spécialement nommée.",
                             lang="fr")))
 
+        # hasUnitTypeAsString
+        self.hasUnitTypeAsString = self.set_uri("hasUnitTypeAsString")
+        self.g.add((self.hasUnitTypeAsString, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasUnitTypeAsString, RDFS.label, Literal("unit type as a string", lang="en")))
+        self.g.add((self.hasUnitTypeAsString, RDFS.label, Literal("type d'unité sous forme de chaîne", lang="fr")))
+        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.SIBaseUnit))
+        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.SISpecialNamedUnit))
+        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.nonSIUnit))
+        self.g.add((self.hasUnitTypeAsString, RDFS.range, XSD.string))
+
         # for Constants
 
         # hasValue

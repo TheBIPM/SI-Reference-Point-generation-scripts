@@ -6,8 +6,7 @@ to add the location to the PYTHONPATH by typing (in the TERMINAL where you execu
 export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 """
 
-from rdflib import Literal, URIRef
-from rdflib.namespace import RDF, RDFS, XSD, SKOS, OWL, DCTERMS
+from rdflib import *
 from CUQ_TBox import SiElements
 from datetime import date
 from settings import *
@@ -28,6 +27,7 @@ PDF.g.add((URIRef(SIURL), DCTERMS.created, Literal(str(date.today()), datatype=X
 # 1) open XLS files with information
 units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'units_prefixes.xlsx')
 notes_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'notes.xlsx')
+
 
 # 2) create dictionary with the note symbol codes (@xxx@) in text
 notessym = notes_wb_obj["symbols"]
@@ -129,6 +129,7 @@ for row in range(2, basedefs.max_row + 1):
     if uri_text is not None:
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.Definition))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI Base Unit')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasStartValidity, Literal(StartValidity, datatype=XSD.date)))
@@ -211,6 +212,7 @@ for row in range(2, sheet.max_row + 1):
             
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SISpecialNamedUnit))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI Special Named Unit')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
@@ -249,6 +251,7 @@ for row in range(7, sheet.max_row + 1):
 
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.nonSIUnit))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Accepted Non-SI Unit')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
