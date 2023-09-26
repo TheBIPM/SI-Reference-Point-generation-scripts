@@ -2,7 +2,7 @@ from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD
 from settings import *
 
-ResBod_ns = SIURL + "ResBod#"
+ResBod_ns = SIURL + "bodies#"
 
 
 class ResBod:
