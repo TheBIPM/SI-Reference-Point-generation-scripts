@@ -21,7 +21,10 @@ ServiceCategories
 localsettings.py
 
 # output files that are produced (TTL and vocabulary)
+Testing/API/bodies.ttl
 Testing/API/cgpm.ttl
+Testing/API/cipm.ttl
+Testing/API/si.ttl
 Testing/API/constants.ttl
 Testing/API/quantities.ttl
 Testing/API/prefixes.ttl
