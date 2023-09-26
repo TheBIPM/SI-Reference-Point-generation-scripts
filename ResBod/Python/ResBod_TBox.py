@@ -221,3 +221,8 @@ class ResBod:
     @property
     def g(self):
         return self._g
+
+
+if __name__ == "__main__":
+    resbod_TBox = ResBod()
+    resbod_TBox.g.serialize(format='turtle', destination=APIPATH + 'bodies.ttl')
