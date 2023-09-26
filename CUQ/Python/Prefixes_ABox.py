@@ -5,11 +5,10 @@
 # the module imports the Python script 'settings.py' located in a directory above this directory
 # Should this lead to an error when executing the present script (... not found ...) you might need
 # to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI"
+# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
-from rdflib import Literal, URIRef
-from rdflib.namespace import RDF, RDFS, XSD, SKOS, OWL, DCTERMS
+from rdflib import *
 from CUQ_TBox import SiElements
 from datetime import date
 from settings import *
@@ -83,9 +82,11 @@ sheet = units_wb_obj["Prefixes"]
 
 for row in range(2, sheet.max_row + 1):
     uri_text = sheet.cell(row, column=1).value
-    prefLabel = sheet.cell(row, column=2).value
-    scalingFactor = sheet.cell(row, column=3).value
-    symbol = sheet.cell(row, column=4).value
+    prefLabel_en = sheet.cell(row, column=2).value
+    prefLabel_fr = sheet.cell(row, column=3).value
+    scalingFactor = sheet.cell(row, column=4).value
+    symbol = sheet.cell(row, column=5).value
+    defres = sheet.cell(row, column=6).value
 
     if uri_text is not None:
         element = PDF.set_uri(uri_text)
@@ -95,7 +96,7 @@ for row in range(2, sheet.max_row + 1):
         PDF.g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
         PDF.g.add((element, PDF.hasDatatype, XSD.integer))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-
+        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + defres)))
 
 # 5) Serialization prefixes
 PDF.g.serialize(format='turtle', destination=APIPATH + 'prefixes.ttl')
