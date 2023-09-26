@@ -221,9 +221,6 @@ class ResBod:
         self._g.add((self.hasOutcomeType, RDFS.comment, Literal(
             'Linking an outcome and its type (resolution, recommendation, declaration, considering...)', lang='en')))
 
-        destpath = APIPATH + 'rb.ttl'
-        self.g.serialize(format='ttl', destination=destpath)
-
     def set_uri(self, name: str) -> URIRef:
         # Utility method
         return URIRef(self.namespace + name)
