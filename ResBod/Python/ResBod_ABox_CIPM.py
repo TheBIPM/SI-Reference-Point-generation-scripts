@@ -9,38 +9,68 @@
 #
 
 import glob
-from datetime import date
 import os
 import re
+from datetime import date
 
-import ResBod_TBox
 import yaml
-from rdflib import Literal, URIRef
+from rdflib import Graph, Literal, URIRef, Namespace
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
+from ResBod_TBox import ResBod_ns
 
 from settings import *
 
-PDF = ResBod_TBox.ResBod()
+# useful function
+def get_outcome_values(outcome):
+    out_id = outcome['identifier']
+    outcome_type = RB.Outcome
+    type_abbreviation = ""
+    if outcome['type'] == 'resolution':
+        type_abbreviation = f"-Res{out_id}"
+        outcome_type = RB.Resolution
+    elif outcome['type'] == 'declaration':
+        type_abbreviation = f"-Decl{'' if out_id == 0 else out_id}"
+        outcome_type = RB.Declaration
+    elif outcome['type'] == 'recommendation':
+        type_abbreviation = "-Rec" + str(out_id)
+        outcome_type = RB.Recommendation
+    elif outcome['type'] == 'decision':
+        type_abbreviation = "-Dec" + str(out_id)
+        outcome_type = RB.Decision
+    elif outcome['type'] == 'publication':
+        type_abbreviation = "-Pub" + str(out_id)
+        outcome_type = RB.Publication
+    
+    local_id = str(conf_Nr) + type_abbreviation
+    outcome_URI = CIPM.term(local_id)
+    hidden_label = "CIPM" + local_id
 
-ResBod_ns = SIURL + "ResBod#"
+    return outcome_URI, out_id, hidden_label, outcome_type
+
+
+# further needed 
+RB = Namespace(ResBod_ns)
+CIPM = Namespace(SIURL + "bodies/CIPM#")
+
+# init graph
+g = Graph()
+g.bind("rb", RB)
+g.bind("cipm", CIPM)
 
 # relative paths from this file
 BASE_PATH_FR = CIPM_FILES_FOLDER + "meetings-fr/"
 BASE_PATH_EN = CIPM_FILES_FOLDER + "meetings-en/"
 
 # Annotations to the ontology (name, Version number)
-PDF.g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
-PDF.g.add((URIRef(ResBod_ns), SKOS.prefLabel, Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
-PDF.g.add((URIRef(ResBod_ns), RDFS.comment,
-           Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their resolutions, "
-                   "decisions, etc (for the moment CGPM and CIPM)", datatype=XSD.string)))
-PDF.g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
-
-# 2) CIPM
+g.add((URIRef(CIPM), RDF.type, OWL.Ontology))
+g.add((URIRef(CIPM), SKOS.prefLabel, Literal("SI Reference Point - CIPM meetings and outcomes", datatype=XSD.string)))
+g.add((URIRef(CIPM), RDFS.comment,
+           Literal("Ontology, part of the SI Reference Point, covering the resolutions, "
+                   "decisions, etc of the CIPM", datatype=XSD.string)))
+g.add((URIRef(CIPM), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # create the responsible body "CIPM"
-cipm_URI = URIRef(ResBod_ns + "CIPM")
-PDF.g.add((URIRef(cipm_URI), RDF.type, PDF.ResBod))
+g.add((URIRef(CIPM.CIPM), RDF.type, RB.ResBod))
 
 # iterate over the resolutions files (in 'natural' sorted order)
 sort_key = lambda item : float(re.findall("[0-9]+[\-0-9]*", os.path.basename(item))[0].replace("-", "."))
@@ -56,112 +86,78 @@ for yaml_filename_en, yaml_filename_fr in zip(yaml_filenames_en, yaml_filenames_
 
     # if both (en and fr) readings were successful, proceed to extract the information on the conference
     # and create the assertions
-    conf_URI = URIRef(ResBod_ns + "CIPM" + str(meeting_fr['metadata']['identifier']))
+    conf_URI = CIPM.term(f"CIPM{meeting_fr['metadata']['identifier']}")
     conf_date = meeting_fr['metadata']['date']
     conf_Nr = meeting_fr['metadata']['identifier']
     conf_title_fr = meeting_fr['metadata']['title']
     conf_title_en = meeting_en['metadata']['title']
 
     # attach the Conference to the responsible body
-    PDF.g.add((cipm_URI, PDF.hasEvent, conf_URI))
+    g.add((URIRef(CIPM.CIPM), RB.hasEvent, conf_URI))
 
     # add the information about the event
-    PDF.g.add((conf_URI, RDF.type, PDF.Event))
-    PDF.g.add((conf_URI, PDF.hasEventDate, Literal(conf_date, datatype=XSD.date)))
-    PDF.g.add((conf_URI, PDF.hasEventNr, Literal(conf_Nr))) #, datatype=XSD.int)))
-    PDF.g.add((conf_URI, SKOS.prefLabel, Literal(conf_title_fr, lang="fr")))
-    PDF.g.add((conf_URI, SKOS.prefLabel, Literal(conf_title_en, lang="en")))
-    PDF.g.add((conf_URI, SKOS.hiddenLabel, Literal("CIPM" + str(conf_Nr), datatype=XSD.string)))
+    g.add((conf_URI, RDF.type, RB.Event))
+    g.add((conf_URI, RB.hasEventDate, Literal(conf_date, datatype=XSD.date)))
+    g.add((conf_URI, RB.hasEventNr, Literal(conf_Nr))) #, datatype=XSD.int)))
+    g.add((conf_URI, SKOS.prefLabel, Literal(conf_title_fr, lang="fr")))
+    g.add((conf_URI, SKOS.prefLabel, Literal(conf_title_en, lang="en")))
+    g.add((conf_URI, SKOS.hiddenLabel, Literal("CIPM" + str(conf_Nr), datatype=XSD.string)))
 
     # insert the assertion about the resolutions (attached to the responsible body)
     # in French
-    for resolution in meeting_fr['resolutions']:
-        resol_URI = None
-        resol_hidden_label = None
-        if resolution['type'] == 'resolution':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Res" + str(resolution['identifier'])
-        elif resolution['type'] == 'declaration':
-            if resolution['identifier'] == 0:
-                resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Decl")
-                resol_hidden_label = "CIPM" + str(conf_Nr) + "-Decl"
-            else:
-                resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier']))
-                resol_hidden_label = "CIPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier'])
-        elif resolution['type'] == 'recommendation':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Rec" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Recom" + str(resolution['identifier'])
-        elif resolution['type'] == 'decision':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Dec" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Dec" + str(resolution['identifier'])
-        
-        resol_fr_DOI = resolution['url']
-        resol_title_fr = resolution['title']
-        resol_nr = resolution['identifier']
+    for outcome in meeting_fr['resolutions']:
 
-        PDF.g.add((cipm_URI, PDF.hasAdopted, resol_URI))
-        PDF.g.add((resol_URI, PDF.wasAdoptedBy, cipm_URI))
-        PDF.g.add((resol_URI, RDF.type, PDF.Outcome))
-        PDF.g.add((conf_URI, PDF.hasOutcome, resol_URI))
-        PDF.g.add((resol_URI, PDF.isOutcomeOf, conf_URI))
-        PDF.g.add((resol_URI, PDF.hasOutcomeTitle, Literal(resol_title_fr, lang='fr')))
-        PDF.g.add((resol_URI, PDF.hasOutcomeNr, Literal(resol_nr)))
-        PDF.g.add((resol_URI, SKOS.hiddenLabel, Literal(resol_hidden_label, datatype=XSD.string)))
-        PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_fr_DOI, lang='fr')))
-        if resolution['considerations']:  # only include this if there are considerations
-            considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
-            PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
-            for consideration in resolution['considerations']:
-                PDF.g.add(
-                    (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='fr')))
+        outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome)
 
-        if resolution['actions']:  # only include this if there are actions
-            actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
-            PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
-            for action in resolution['actions']:
-                PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='fr')))
+        outcome_fr_DOI = outcome['url']
+        outcome_title_fr = outcome['title']
+
+        g.add((URIRef(CIPM.CIPM), RB.hasAdopted, outcome_URI))
+        g.add((outcome_URI, RB.wasAdoptedBy, URIRef(CIPM.CIPM)))
+        g.add((outcome_URI, RDF.type, outcome_type))
+        g.add((conf_URI, RB.hasOutcome, outcome_URI))
+        g.add((outcome_URI, RB.isOutcomeOf, conf_URI))
+        g.add((outcome_URI, RB.hasOutcomeTitle, Literal(outcome_title_fr, lang='fr')))
+        g.add((outcome_URI, RB.hasOutcomeNr, Literal(out_id)))
+        g.add((outcome_URI, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
+        g.add((outcome_URI, RB.hasDOI, Literal(outcome_fr_DOI, lang='fr')))
+        if outcome['considerations']:  # only include this if there are considerations
+            considering_blankNodeID = URIRef(outcome_URI + "Considering")  # Blank node holding the considerings
+            g.add((outcome_URI, RB.hasConsidering, considering_blankNodeID))
+            for consideration in outcome['considerations']:
+                g.add(
+                    (considering_blankNodeID, RB.hasConsideringText, Literal(consideration['message'], lang='fr')))
+
+        if outcome['actions']:  # only include this if there are actions
+            actions_blankNodeID = URIRef(outcome_URI + "Action")  # Blank node holding the actions
+            g.add((outcome_URI, RB.hasAction, actions_blankNodeID))
+            for action in outcome['actions']:
+                g.add((actions_blankNodeID, RB.hasActionText, Literal(action['message'], lang='fr')))
 
     # in English
-    for resolution in meeting_en['resolutions']:
-        resol_URI = None
-        resol_hidden_label = None
-        if resolution['type'] == 'resolution':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Res" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Res" + str(resolution['identifier'])
-        elif resolution['type'] == 'declaration':
-            if resolution['identifier'] == 0:
-                resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Decl")
-                resol_hidden_label = "CIPM" + str(conf_Nr) + "-Decl"
-            else:
-                resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier']))
-                resol_hidden_label = "CIPM" + str(conf_Nr) + "-Decl" + str(resolution['identifier'])
-        elif resolution['type'] == 'recommendation':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Rec" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Recom" + str(resolution['identifier'])
-        elif resolution['type'] == 'decision':
-            resol_URI = URIRef(ResBod_ns + "CIPM" + str(conf_Nr) + "-Dec" + str(resolution['identifier']))
-            resol_hidden_label = "CIPM" + str(conf_Nr) + "-Dec" + str(resolution['identifier'])
+    for outcome in meeting_en['resolutions']:
+        
+        outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome)
 
-        resol_en_DOI = resolution['url']
-        resol_title_en = resolution['title']
-        considering_blankNodeID = URIRef(resol_URI + "Considering")
-        actions_blankNodeID = URIRef(resol_URI + "Action")
-        PDF.g.add((resol_URI, PDF.hasOutcomeTitle, Literal(resol_title_en, lang='en')))
-        PDF.g.add((resol_URI, PDF.hasDOI, Literal(resol_en_DOI, lang='en')))
-        if resolution['considerations']:  # only include this if there are considerations
-            considering_blankNodeID = URIRef(resol_URI + "Considering")  # Blank node holding the considerings
-            PDF.g.add((resol_URI, PDF.hasConsidering, considering_blankNodeID))
-            for consideration in resolution['considerations']:
-                PDF.g.add(
-                    (considering_blankNodeID, PDF.hasConsideringText, Literal(consideration['message'], lang='en')))
+        resol_en_DOI = outcome['url']
+        resol_title_en = outcome['title']
+        considering_blankNodeID = URIRef(outcome_URI + "Considering")
+        actions_blankNodeID = URIRef(outcome_URI + "Action")
+        g.add((outcome_URI, RB.hasOutcomeTitle, Literal(resol_title_en, lang='en')))
+        g.add((outcome_URI, RB.hasDOI, Literal(resol_en_DOI, lang='en')))
+        if outcome['considerations']:  # only include this if there are considerations
+            considering_blankNodeID = URIRef(outcome_URI + "Considering")  # Blank node holding the considerings
+            g.add((outcome_URI, RB.hasConsidering, considering_blankNodeID))
+            for consideration in outcome['considerations']:
+                g.add(
+                    (considering_blankNodeID, RB.hasConsideringText, Literal(consideration['message'], lang='en')))
 
-        if resolution['actions']:  # only include this if there are actions
-            actions_blankNodeID = URIRef(resol_URI + "Action")  # Blank node holding the actions
-            PDF.g.add((resol_URI, PDF.hasAction, actions_blankNodeID))
-            for action in resolution['actions']:
-                PDF.g.add((actions_blankNodeID, PDF.hasActionText, Literal(action['message'], lang='en')))
-
+        if outcome['actions']:  # only include this if there are actions
+            actions_blankNodeID = URIRef(outcome_URI + "Action")  # Blank node holding the actions
+            g.add((outcome_URI, RB.hasAction, actions_blankNodeID))
+            for action in outcome['actions']:
+                g.add((actions_blankNodeID, RB.hasActionText, Literal(action['message'], lang='en')))
 
 
 # serialize the knowledge graph when all CIPMs are covered,         
-PDF.g.serialize(format='turtle', destination=APIPATH + 'cipm.ttl')
+g.serialize(format='turtle', destination=APIPATH + 'cipm.ttl')
