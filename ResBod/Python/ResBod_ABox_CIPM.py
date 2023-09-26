@@ -31,9 +31,9 @@ def get_outcome_values(outcome, conf_Nr, ResBod, ResBod_label="CIPM"):
         type_abbreviation = "-Pub" + str(out_id)
         outcome_type = RB.Publication
     
-    local_id = str(conf_Nr) + type_abbreviation
+    local_id = ResBod_label + str(conf_Nr) + type_abbreviation
     outcome_URI = ResBod.term(local_id)
-    hidden_label = ResBod_label + local_id
+    hidden_label = local_id
 
     return outcome_URI, out_id, hidden_label, outcome_type
 
