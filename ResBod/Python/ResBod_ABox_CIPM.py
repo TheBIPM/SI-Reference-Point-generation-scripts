@@ -37,8 +37,9 @@ def get_outcome_values(outcome):
 
     return outcome_URI, out_id, hidden_label, outcome_type
 
+sort_key = lambda item : float(re.findall("[0-9]+[\-0-9]*", os.path.basename(item))[0].replace("-", "."))
 
-# further needed 
+# further needed namespaces
 RB = Namespace(ResBod_ns)
 CIPM = Namespace(SIURL + "bodies/CIPM#")
 
