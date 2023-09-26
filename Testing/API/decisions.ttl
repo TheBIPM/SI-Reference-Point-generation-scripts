@@ -1,5 +1,6 @@
 # baseURI: http://si-digital-framework.org/Decisions
-@prefix rb:    <http://si-digital-framework.org/ResBod#> .
+@prefix rb:    <http://si-digital-framework.org/bodies#> .
+@prefix cgpm:  <http://si-digital-framework.org/bodies/CGPM#> .
 @prefix dec:   <http://si-digital-framework.org/Decisions#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -17,22 +18,22 @@ dec:SI-A-2.7  a          skos:Concept , dec:Target ;
 
 dec:SI-A-2.4.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption de l’ampère comme unité de base"@fr , "Adoption of the ampere as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:SI-A-4.1.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’ajouter femto et atto à la liste des préfixes"@fr , "Decision to add femto and atto to the list of prefixes"@en ;
-        dec:correspondingResolution  rb:CGPM12-Res8 ;
+        dec:correspondingResolution  cgpm:CGPM12-Res8 ;
         dec:isDecisionOf             dec:SI-A-4.1 .
 
 dec:SI-A-1.0.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-1.0 .
 
 dec:SI-A-2.3.11  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"@fr , "On the revision of the mise en pratique of the definition of the metre and the development of new optical frequency standards"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res9 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res9 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-2  a          dec:Scope , skos:Concept ;
@@ -41,7 +42,7 @@ dec:SI-A-2  a          dec:Scope , skos:Concept ;
 
 dec:SI-A-2.2.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision à venir du SI"@fr , "On the future revision of the S"@en ;
-        dec:correspondingResolution  rb:CGPM25-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM25-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-3.1  a          skos:Concept , dec:Target ;
@@ -55,7 +56,7 @@ dec:SI-A-2.3.2  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-4.5.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition du litre comme le volume d’1 kg d’eau"@fr , "Definition of the litre as the volume of 1 kg of water"@en ;
-        dec:correspondingResolution  rb:CGPM3-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM3-Res1 ;
         dec:isDecisionOf             dec:SI-A-4.5 .
 
 dec:SI-A-3.1.7  a         skos:Concept , dec:Decision ;
@@ -77,13 +78,13 @@ dec:SI-A-2.1  a          dec:Target , skos:Concept ;
 
 dec:SI-A-1.0.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’adopter les six premières unités de base"@fr , "Decision on the first six base units"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-1.0 ;
         skos:related                 dec:SI-A-2.4.2 , dec:SI-A-2.3.1 , dec:SI-A-2.5.3 , dec:SI-A-2.7.2 , dec:SI-A-2.1.3 , dec:SI-A-2.2.3 .
 
 dec:SI-A-3.2.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du terme « unité supplémentaire » pour désigner le radian et le stéradian"@fr , "Adoption of the term supplementary unit to describe the radian and steradian"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res12 ;
         dec:isDecisionOf             dec:SI-A-3.2 .
 
 dec:SI-A-2.7.1  a         skos:Concept , dec:Decision ;
@@ -92,12 +93,12 @@ dec:SI-A-2.7.1  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.2.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Déclaration au sujet de la différence entre masse et poids, et valeur conventionnelle de <i>g</i><sub>n</sub>"@fr , "Declaration on distinguishing mass and weight, and on the conventional value of <i>g</i><sub>n</sub>"@en ;
-        dec:correspondingResolution  rb:CGPM3-Res2 ;
+        dec:correspondingResolution  cgpm:CGPM3-Res2 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-2.4.10  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en oeuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:hasTarget  a            owl:ObjectProperty ;
@@ -109,7 +110,7 @@ dec:hasTarget  a            owl:ObjectProperty ;
 
 dec:SI-A-4.4.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’autoriser l’usage du point ou de la virgule sur la ligne comme séparateur décimal"@fr , "Decision to allow the use of the point or the comma as the decimal marker"@en ;
-        dec:correspondingResolution  rb:CGPM22-Res10 ;
+        dec:correspondingResolution  cgpm:CGPM22-Res10 ;
         dec:isDecisionOf             dec:SI-A-4.4 .
 
 dec:SI-A-2.5.7  a         skos:Concept , dec:Decision ;
@@ -118,27 +119,27 @@ dec:SI-A-2.5.7  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-3.1.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’accepter de continuer à utiliser le curie comme unité en dehors du SI"@fr , "Acceptance of the continued use of the curie as a non-SI unit"@en ;
-        dec:correspondingResolution  rb:CGPM12-Res7 ;
+        dec:correspondingResolution  cgpm:CGPM12-Res7 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition de la mole, symbole mol, comme 7e unité de base, et règles d’utilisation"@fr , "Definition of the mole, symbol mol, as a seventh base unit, and rules for its use"@en ;
-        dec:correspondingResolution  rb:CGPM14-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM14-Res3 ;
         dec:isDecisionOf             dec:SI-A-2.6 .
 
 dec:SI-A-2.1.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition du mètre par le Prototype international "@fr , "Definition and use of the prototype metre"@en ;
-        dec:correspondingResolution  rb:CGPM7-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM7-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-4.3.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Abrogation de l’utilisation du micron et de la bougie nouvelle comme unités en usage avec le SI"@fr , "Abrogation of the use of the micron and new candle as units accepted for use with the SI"@en ;
-        dec:correspondingResolution  rb:CGPM13-Res7 ;
+        dec:correspondingResolution  cgpm:CGPM13-Res7 ;
         dec:isDecisionOf             dec:SI-A-4.3 .
 
 dec:SI-A-2.4.7  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle redéfinition de certaines unités de base du SI"@fr , "Possible redefinition of certain base units of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res12 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:SI-A-2.3.16  a        skos:Concept , dec:Decision ;
@@ -147,17 +148,17 @@ dec:SI-A-2.3.16  a        skos:Concept , dec:Decision ;
 
 dec:SI-A-1.0.11  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en œuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-1.0 .
 
 dec:SI-A-2.5.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du point triple de l’eau comme point de référence pour la température thermodynamique, adoption du degré Celsius, et définition du zéro comme étant la température de référence inférieure de 0,01 degré à celle du point triple de l’eau"@fr , "Adoption of the triple point of water as the thermodynamic reference point; adoption of the zero of Celsius temperature to be 0.01 degrees below the triple point"@en ;
-        dec:correspondingResolution  rb:CGPM9-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM9-Res3 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-4.2.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision sur les règles d’écriture des symboles d’unités et des nombres"@fr , "Adoption of rules for printing unit symbols and numbers"@en ;
-        dec:correspondingResolution  rb:CGPM9-Res7 ;
+        dec:correspondingResolution  cgpm:CGPM9-Res7 ;
         dec:isDecisionOf             dec:SI-A-4.2 .
 
 dec:SI-A-2.3.7  a         skos:Concept , dec:Decision ;
@@ -166,12 +167,12 @@ dec:SI-A-2.3.7  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-4.1.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption des préfixes SI de tera à pico"@fr , "Adoption of the SI prefixes from tera to pico"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res12 ;
         dec:isDecisionOf             dec:SI-A-4.1 .
 
 dec:SI-A-2.7.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en oeuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.7 .
 
 dec:SI-A-2.6  a          dec:Target , skos:Concept ;
@@ -196,7 +197,7 @@ dec:Target  a             skos:Concept , owl:Class ;
 
 dec:SI-A-1.0.7  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle redéfinition de certaines unités de base du SI"@fr , "Possible redefinition of certain base unifs of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res12 ;
         dec:isDecisionOf             dec:SI-A-1.0 .
 
 dec:hasDecision  a          owl:ObjectProperty ;
@@ -212,22 +213,22 @@ dec:SI-A-1  a          skos:Concept , dec:Scope ;
 
 dec:SI-A-2.2.7  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "On the possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-2.3.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption de la seconde comme unité de base"@fr , "Adoption of the second as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-3.1.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du nom spécial sievert (Sv)"@fr , "Adoption of the special name sievert (Sv)"@en ;
-        dec:correspondingResolution  rb:CGPM16-Res5 ;
+        dec:correspondingResolution  cgpm:CGPM16-Res5 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en oeuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.6 .
 
 dec:SI-A-2.1.7  a         skos:Concept , dec:Decision ;
@@ -236,18 +237,18 @@ dec:SI-A-2.1.7  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.1.11  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"@fr , "Revision of the mise en pratique of the definition of the metre and development of new optical frequency standards"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res9 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res9 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-1.0.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’établir le SI "@fr , "Decision to establish the SI"@en ;
-        dec:correspondingResolution  rb:CGPM9-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM9-Res6 ;
         dec:isDecisionOf             dec:SI-A-1.0 ;
         skos:related                 dec:SI-A-4.2.1 .
 
 dec:SI-A-2.2.1  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Sanction du Prototype du kilogramme"@fr , "Sanction of the prototype kilogram"@en ;
-        dec:correspondingResolution  rb:CGPM1-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM1-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-2.5.6  a         skos:Concept , dec:Decision ;
@@ -282,12 +283,12 @@ dec:SI-A-1.0.10  a        skos:Concept , dec:Decision ;
 
 dec:SI-A-2.3.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition de la seconde au moyen de la transition du césium"@fr , "Definition of the second in terms of the caesium transition "@en ;
-        dec:correspondingResolution  rb:CGPM13-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM13-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.5.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision, à titre exceptionnel, d’autoriser les deux symboles L et l pour le litre"@fr , "Decision, as an exception, to allow both l and L as symbols for the litre "@en ;
-        dec:correspondingResolution  rb:CGPM16-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM16-Res6 ;
         dec:isDecisionOf             dec:SI-A-4.5 .
 
 dec:SI-A-2.5  a          dec:Target , skos:Concept ;
@@ -297,7 +298,7 @@ dec:SI-A-2.5  a          dec:Target , skos:Concept ;
 
 dec:SI-A-2.1.16  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en œuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:isTargetOf  a      owl:ObjectProperty ;
@@ -310,27 +311,27 @@ dec:SI-A-1.0.6  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.7.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.7 .
 
 dec:SI-A-2.2.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle redéfinition de certaines unités de base du SI"@fr , "Possible redefinition of certain base units of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res12 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-3.1.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du nom spécial gray (Gy)"@fr , "Adoption of the special name gray (Gy)"@en ;
-        dec:correspondingResolution  rb:CGPM15-Res9 ;
+        dec:correspondingResolution  cgpm:CGPM15-Res9 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision à venir du SI"@fr , "Future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM25-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM25-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.6 .
 
 dec:SI-A-2.1.6  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Redéfinition du mètre en fonction de la vitesse de la lumière, mise en pratique de la définition du mètre"@fr , "Redefinition of the metre using the speed of light, realization of the definition of the metre"@en ;
-        dec:correspondingResolution  rb:CGPM17-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM17-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-2.1.10  a        skos:Concept , dec:Decision ;
@@ -339,7 +340,7 @@ dec:SI-A-2.1.10  a        skos:Concept , dec:Decision ;
 
 dec:SI-A-2.5.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition officielle du kelvin, symbole K"@fr , "Formal definition of the kelvin, symbol K"@en ;
-        dec:correspondingResolution  rb:CGPM13-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM13-Res3 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-4.4  a          skos:Concept , dec:Target ;
@@ -353,22 +354,22 @@ dec:SI-A-2.4.5  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.3.14  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"@fr , "Revision of the mise en pratique of the definition of the metre and development of new optical frequency standards"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.1.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’ajouter ronna, ronto, quetta et quecto à la liste des préfixes"@fr , "Decision to add ronna, ronto, quetta and quecto to the list of prefixes"@en ;
-        dec:correspondingResolution  rb:CGPM27-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM27-Res3 ;
         dec:isDecisionOf             dec:SI-A-4.1 .
 
 dec:SI-A-2.3.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Pouvoir au CIPM de désigner les étalons de fréquence atomique et moléculaire à employer"@fr , "Request to the CIPM to investigate atomic and molecular frequency standards"@en ;
-        dec:correspondingResolution  rb:CGPM12-Res5 ;
+        dec:correspondingResolution  cgpm:CGPM12-Res5 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.5.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Abrogation de la précédente définition du litre et recommandation d’utiliser le litre comme nom spécial donné au décimètre cube"@fr , "Abrogation of the former definition of the litre; recommendation that litre mahy be used as a special name for the cubic decimetre"@en ;
-        dec:correspondingResolution  rb:CGPM12-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM12-Res6 ;
         dec:isDecisionOf             dec:SI-A-4.5 .
 
 dec:SI-A-2.4  a          skos:Concept , dec:Target ;
@@ -390,37 +391,37 @@ dec:SI-A-1.0.5  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.7.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Redéfinition de la candela à partir d’un rayonnement monochromatique"@fr , "Redefinition of the candela in terms of monochromatic radiation"@en ;
-        dec:correspondingResolution  rb:CGPM16-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM16-Res3 ;
         dec:isDecisionOf             dec:SI-A-2.7 .
 
 dec:SI-A-2.2.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Redéfinition éventuelle du kilogramme"@fr , "On the future redefinition of the kilogram"@en ;
-        dec:correspondingResolution  rb:CGPM21-Res7 ;
+        dec:correspondingResolution  cgpm:CGPM21-Res7 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-3.1.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du nom spécial becquerel (Bq)"@fr , "Adoption of the special name becquerel (Bq)"@en ;
-        dec:correspondingResolution  rb:CGPM15-Res8 ;
+        dec:correspondingResolution  cgpm:CGPM15-Res8 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.6 .
 
 dec:SI-A-2.1.5  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Recommandation de la valeur de la vitesse de la lumière"@fr , "Recommendation of the value for the speed of light"@en ;
-        dec:correspondingResolution  rb:CGPM15-Res2 ;
+        dec:correspondingResolution  cgpm:CGPM15-Res2 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-2.5.12  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en oeuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-2.5.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du degré Kelvin comme unité de base"@fr , "Adoption of degree Kelvin as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-4.3  a          skos:Concept , dec:Target ;
@@ -432,22 +433,22 @@ dec:correspondingResolution
         a                   owl:ObjectProperty ;
         rdfs:domain         dec:Decision ;
         rdfs:label          "résolution correspondante"@fr ;
-        rdfs:range          rb:Resolution ;
+        rdfs:range          rb:Outcome ;
         rdfs:subPropertyOf  skos:related .
 
 dec:SI-A-2.4.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Sur l'ajustement prévu des représentations du volt et de l’ohm"@fr , "On the forthcoming adjustment to the representations of the volt and of the ohm"@en ;
-        dec:correspondingResolution  rb:CGPM18-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM18-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:SI-A-4.1.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’ajouter zetta, zepto, yotta et yocto à la liste des préfixes"@fr , "Decision to add zetta, zepto, yotta and yocto to the list of prefixes"@en ;
-        dec:correspondingResolution  rb:CGPM19-Res4 ;
+        dec:correspondingResolution  cgpm:CGPM19-Res4 ;
         dec:isDecisionOf             dec:SI-A-4.1 .
 
 dec:SI-A-2.3.13  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res12 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4  a          skos:Concept , dec:Scope ;
@@ -479,22 +480,22 @@ dec:Scope  a               skos:Concept , owl:Class ;
 
 dec:SI-A-2.1.14  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"@fr , "Revision of the mise en pratique of the definition of the metre and development of new optical frequency standards"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res8 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res8 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-1.0.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Confirmation du nom et de l’abréviation SI ; noms des préfixes téra à pico ; établissement des unités supplémentaires rad et sr : établissement de la liste de certaines unités dérivées"@fr , "Confirms the name and the abbreviation \"SI\"; names prefixes from tera to pico; establishes the supplementary units rad and sr lists some derived units"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res12 ;
         dec:isDecisionOf             dec:SI-A-1.0 .
 
 dec:SI-A-3.2.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision de supprimer la classe des unités supplémentaires, et confirmation de l’interprétation du CIPM selon laquelle ce sont des unités dérivées sans dimension"@fr , "Decision to abrogate the class of supplementary units; confirmation of the CIPM interpretation that they are dimensionless derived units"@en ;
-        dec:correspondingResolution  rb:CGPM20-Res8 ;
+        dec:correspondingResolution  cgpm:CGPM20-Res8 ;
         dec:isDecisionOf             dec:SI-A-3.2 .
 
 dec:SI-A-2.7.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition de la candela, symbole cd, en fonction du corps noir"@fr , "Definition of the candela, symbol cd, in terms of a black body radiator"@en ;
-        dec:correspondingResolution  rb:CGPM13-Res5 ;
+        dec:correspondingResolution  cgpm:CGPM13-Res5 ;
         dec:isDecisionOf             dec:SI-A-2.7 .
 
 dec:SI-A-2.2.4  a         skos:Concept , dec:Decision ;
@@ -503,12 +504,12 @@ dec:SI-A-2.2.4  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.5.9  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle redéfinition de certaines unités de base du SI"@fr , "Possible redefinition of certain base units of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res12 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-3.1.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Exemples d’unités dérivées"@fr , "Lists some examples of derived units"@en ;
-        dec:correspondingResolution  rb:CGPM13-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM13-Res6 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.3  a         skos:Concept , dec:Decision ;
@@ -517,22 +518,22 @@ dec:SI-A-2.6.3  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.1.4  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Redéfinition du mètre au moyen de la radiation du krypton-86"@fr , "Redefinition of the metre in terms of krypton-86 radiation"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-2.4.9  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision à venir du SI"@fr , "Future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM25-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM25-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:SI-A-2.5.11  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision à venir du SI"@fr , "Future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM25-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM25-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-2.5.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Définition de la température thermodynamique du point triple de l’eau à 273,16 degrés Kelvin exactement, définition de l’atmosphère normale"@fr , "Definition of thermodynamic temperature such that the triple point of water is 273.16 degrees Kelvin exactly; definition of standard atmosphere"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res3 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res3 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 <http://si-digital-framework.org/Decisions>
@@ -543,7 +544,7 @@ dec:SI-A-2.5.3  a                    skos:Concept , dec:Decision ;
 
 dec:SI-A-2.3.9  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Sanction du Temps universel coordonné (UTC)"@fr , "Endorsement of the use of Coordinated Universal Time (UTC)"@en ;
-        dec:correspondingResolution  rb:CGPM15-Res5 ;
+        dec:correspondingResolution  cgpm:CGPM15-Res5 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.2  a          skos:Concept , dec:Target ;
@@ -563,12 +564,12 @@ dec:SI-A-2.4.3  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-4.1.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Décision d’ajouter péta et exa à la liste des préfixes"@fr , "Decision to add peta and exa to the list of prefixes"@en ;
-        dec:correspondingResolution  rb:CGPM15-Res10 ;
+        dec:correspondingResolution  cgpm:CGPM15-Res10 ;
         dec:isDecisionOf             dec:SI-A-4.1 .
 
 dec:SI-A-1.0.9  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision à venir du SI "@fr , "Future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM25-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM25-Res1 ;
         dec:isDecisionOf             dec:SI-A-1.0 .
 
 dec:SI-A-2.3.12  a        skos:Concept , dec:Decision ;
@@ -581,7 +582,7 @@ dec:SI-A-3  a          skos:Concept , dec:Scope ;
 
 dec:SI-A-2.2.9  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en œuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-3.2  a          skos:Concept , dec:Target ;
@@ -591,17 +592,17 @@ dec:SI-A-3.2  a          skos:Concept , dec:Target ;
 
 dec:SI-A-2.3.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Ratification de la définition de la seconde donnée par le CIPM en 1956"@fr , "Ratification of the CIPM 1956 definition of the second"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res9 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res9 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.5.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Demande au CIPM d’étudier la différence entre le décimètre cube et le litre"@fr , "Request to the CIPM to report on the difference between the litre and the cubic decimetre"@en ;
-        dec:correspondingResolution  rb:CGPM11-Res13 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res13 ;
         dec:isDecisionOf             dec:SI-A-4.5 .
 
 dec:SI-A-3.1.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du nom spécial katal, kat"@fr , "Adoption of the special name katal, kat"@en ;
-        dec:correspondingResolution  rb:CGPM21-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM21-Res12 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.2  a          skos:Concept , dec:Target ;
@@ -615,7 +616,7 @@ dec:SI-A-2.1.9  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.1.13  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "On the possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-1.0.3  a         skos:Concept , dec:Decision ;
@@ -628,47 +629,47 @@ dec:SI-A-3.2.2  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.7.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption de la candela comme unité de base"@fr , "Adoption of the candela as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.7 .
 
 dec:SI-A-2.2.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du kilogramme comme unité de base"@fr , "Adoption of the kilogram as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.2 .
 
 dec:SI-A-2.5.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Clarification de la définition du kelvin, unité de température thermodynamique"@fr , "Clarification of the definition of the kelvin"@en ;
-        dec:correspondingResolution  rb:CGPM23-Res10 ;
+        dec:correspondingResolution  cgpm:CGPM23-Res10 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-3.1.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Présentation d’une liste d’exemples d’unités SI dérivées et adoption d’un nom spécial pour 14 d’entre elles"@fr , "Presentation of a list of examples of SI derived units and adoption of special names for 14 of them "@en ;
-        dec:correspondingResolution  rb:CGPM11-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM11-Res12 ;
         dec:isDecisionOf             dec:SI-A-3.1 .
 
 dec:SI-A-2.6.2  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du nom spécial katal, kat"@fr , "Adoption of the special name katal, kat"@en ;
-        dec:correspondingResolution  rb:CGPM21-Res12 ;
+        dec:correspondingResolution  cgpm:CGPM21-Res12 ;
         dec:isDecisionOf             dec:SI-A-2.6 .
 
 dec:SI-A-2.1.3  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Adoption du mètre comme unité de base"@fr , "Adoption of the metre as a base unit"@en ;
-        dec:correspondingResolution  rb:CGPM10-Res6 ;
+        dec:correspondingResolution  cgpm:CGPM10-Res6 ;
         dec:isDecisionOf             dec:SI-A-2.1 .
 
 dec:SI-A-2.4.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.4 .
 
 dec:SI-A-2.3.17  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Révision du SI (mise en œuvre le 20 mai 2019)"@fr , "Revision of the SI (to enter into force on 20 May 2019)"@en ;
-        dec:correspondingResolution  rb:CGPM26-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM26-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-2.5.10  a                   skos:Concept , dec:Decision ;
         rdfs:label                   "Éventuelle révision à venir du SI"@fr , "Possible future revision of the SI"@en ;
-        dec:correspondingResolution  rb:CGPM24-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM24-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.5 .
 
 dec:SI-A-2.5.2  a         skos:Concept , dec:Decision ;
@@ -677,7 +678,7 @@ dec:SI-A-2.5.2  a         skos:Concept , dec:Decision ;
 
 dec:SI-A-2.3.8  a                    skos:Concept , dec:Decision ;
         rdfs:label                   "Demande au CIPM de définir et d’établir le Temps atomique international (TAI)"@fr , "Request to the CIPM to define and establish International Atomic Time (TAI)"@en ;
-        dec:correspondingResolution  rb:CGPM14-Res1 ;
+        dec:correspondingResolution  cgpm:CGPM14-Res1 ;
         dec:isDecisionOf             dec:SI-A-2.3 .
 
 dec:SI-A-4.1  a          dec:Target , skos:Concept ;
