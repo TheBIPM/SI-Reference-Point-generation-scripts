@@ -8,16 +8,17 @@
 # export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
-from rdflib import URIRef, Literal
-from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
+import glob
 from datetime import date
-from settings import *
+
 import yaml
-import ResBod_TBox
+from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
+from ResBod_ABox_CIPM import RB, get_outcome_values, sort_key
+from ResBod_TBox import ResBod_ns
 
-PDF = ResBod_TBox.ResBod()
+from settings import *
 
-ResBod_ns = SIURL + "ResBod#"
 
 # relative paths from this file
 BASE_PATH_FR = CGPM_FILES_FOLDER + "meetings-fr/"

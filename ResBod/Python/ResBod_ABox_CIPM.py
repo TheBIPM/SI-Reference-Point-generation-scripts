@@ -11,7 +11,7 @@ from ResBod_TBox import ResBod_ns
 from settings import *
 
 # useful function
-def get_outcome_values(outcome):
+def get_outcome_values(outcome, conf_Nr, ResBod, ResBod_label="CIPM"):
     out_id = outcome['identifier']
     outcome_type = RB.Outcome
     type_abbreviation = ""
@@ -32,8 +32,8 @@ def get_outcome_values(outcome):
         outcome_type = RB.Publication
     
     local_id = str(conf_Nr) + type_abbreviation
-    outcome_URI = CIPM.term(local_id)
-    hidden_label = "CIPM" + local_id
+    outcome_URI = ResBod.term(local_id)
+    hidden_label = ResBod_label + local_id
 
     return outcome_URI, out_id, hidden_label, outcome_type
 
@@ -98,7 +98,7 @@ def main():
         # in French
         for outcome in meeting_fr['resolutions']:
 
-            outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome)
+            outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome, conf_Nr, CIPM, "CIPM")
 
             outcome_fr_DOI = outcome['url']
             outcome_title_fr = outcome['title']
@@ -128,7 +128,7 @@ def main():
         # in English
         for outcome in meeting_en['resolutions']:
             
-            outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome)
+            outcome_URI, out_id, hidden_label, outcome_type = get_outcome_values(outcome, conf_Nr, CIPM, "CIPM")
 
             resol_en_DOI = outcome['url']
             resol_title_en = outcome['title']
