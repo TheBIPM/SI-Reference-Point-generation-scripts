@@ -93,6 +93,8 @@ for row in range(2, sheet.max_row + 1):
         PDF.g.add((element, RDF.type, PDF.SIBaseUnit))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
         PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
 
@@ -129,7 +131,8 @@ for row in range(2, basedefs.max_row + 1):
     if uri_text is not None:
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.Definition))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI Base Unit')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasStartValidity, Literal(StartValidity, datatype=XSD.date)))
@@ -179,12 +182,12 @@ for row in range(2, basedefs.max_row + 1):
                 PDF.g.add((notenode, RDF.type, PDF.DefinitionNote))
                 PDF.g.add((notenode, PDF.hasNoteIndex, Literal(nidx)))
                 PDF.g.add((notenode, PDF.hasNoteText, Literal(note, lang='en')))
-        
+
         if notes_fr:
             for nidx, note_fr in notes_fr.items():
                 if "@" in note_fr:
                     note_fr = formattxt(note_fr, 'latex')
-                
+
                 note_uri = uri_text + "note" + str(nidx)
                 notenode = PDF.set_uri(note_uri)
                 PDF.g.add((notenode, PDF.hasNoteText, Literal(note_fr, lang='fr')))
@@ -212,7 +215,8 @@ for row in range(2, sheet.max_row + 1):
             
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SISpecialNamedUnit))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI Special Named Unit')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Named SI derived unit', lang='en')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI dérivée ayant un nom spécial', lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
@@ -251,7 +255,9 @@ for row in range(7, sheet.max_row + 1):
 
         element = PDF.set_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.nonSIUnit))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Accepted Non-SI Unit')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Non-SI unit accepted for use with the SI', lang='en')))
+        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité en dehors du SI '
+                                                             'dont l\'usage est accepté avec le SI', lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
