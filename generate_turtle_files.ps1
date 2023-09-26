@@ -17,8 +17,8 @@ python ./CUQ/Python/Constants_ABox.py
 echo "Done.`n"
 
 #echo "generating bodies.ttl"
-# TODO: python ./ResBod/Python/ResBod_TBox.py
-#echo "Done.`n"
+python ./ResBod/Python/ResBod_TBox.py
+echo "Done.`n"
 
 echo "generating cgpm.ttl"
 python ./ResBod/Python/ResBod_ABox_CGPM.py
