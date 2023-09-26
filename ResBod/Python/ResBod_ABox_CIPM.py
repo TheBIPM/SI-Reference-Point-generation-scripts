@@ -1,20 +1,10 @@
-#
-# ResBod ABox
-#
-#
-# the module imports the Python script 'settings.py' located in a directory above this directory
-# Should this lead to an error when executing the present script (... not found ...) you might need
-# to add the location to the PYTHONPATH by typing (in the TERMINAL where you execute the Python script)
-# export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
-#
-
 import glob
 import os
 import re
 from datetime import date
 
 import yaml
-from rdflib import Graph, Literal, URIRef, Namespace
+from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
 from ResBod_TBox import ResBod_ns
 
