@@ -16,6 +16,10 @@ echo "generating constants.ttl"
 python ./CUQ/Python/Constants_ABox.py
 echo "Done.`n"
 
+echo "generating prefixes.ttl"
+python ./CUQ/Python/Prefixes_ABox.py
+echo "Done.`n"
+
 echo "generating bodies.ttl"
 python ./ResBod/Python/ResBod_TBox.py
 echo "Done.`n"
