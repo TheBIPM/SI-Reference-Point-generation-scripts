@@ -1,5 +1,8 @@
-from rdflib import Graph, URIRef, Literal
-from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD
+from datetime import date
+
+from rdflib import Graph, Literal, URIRef
+from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
+
 from settings import *
 
 ResBod_ns = SIURL + "bodies#"
