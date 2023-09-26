@@ -15,6 +15,13 @@ class ResBod:
         self._g.bind(prefix, namespace)
         self._g.bind("skos", SKOSURL)
 
+        self._g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
+        self._g.add((URIRef(ResBod_ns), SKOS.prefLabel, Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
+        self._g.add((URIRef(ResBod_ns), RDFS.comment,
+                Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their resolutions, "
+                        "decisions, etc", datatype=XSD.string)))
+        self._g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+
         self.ResBod = self.set_uri('ResBod')
         self._g.add((self.ResBod, RDF.type, SKOS.Concept))
         self._g.add((self.ResBod, RDFS.label, Literal('Responsible Body', lang='en')))
