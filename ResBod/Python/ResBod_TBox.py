@@ -46,12 +46,14 @@ class ResBod:
         self._g.add((self.Resolution, RDF.type, SKOS.Concept))
         self._g.add((self.Resolution, RDFS.label, Literal('Resolution', lang='en')))
         self._g.add((self.Resolution, RDFS.label, Literal('Résolution', lang='fr')))
+        self._g.add((self.Resolution, RDFS.subClassOf, self.OutcomeType))
         self._g.add((self.Resolution, RDFS.comment, Literal("Class for resolution outcomes", lang='en')))
 
         self.Declaration = self.set_uri('Declaration')
         self._g.add((self.Declaration, RDF.type, SKOS.Concept))
         self._g.add((self.Declaration, RDFS.label, Literal('Declaration', lang='en')))
         self._g.add((self.Declaration, RDFS.label, Literal('Déclaration', lang='fr')))
+        self._g.add((self.Declaration, RDFS.subClassOf, self.OutcomeType))
         self._g.add((self.Declaration, RDFS.comment, Literal("Class for declaration outcomes", lang='en')))
 
         self.Action = self.set_uri('Action')
