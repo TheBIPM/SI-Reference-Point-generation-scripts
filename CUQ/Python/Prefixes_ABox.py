@@ -16,6 +16,7 @@ import openpyxl
 import re
 
 PDF = SiElements()
+CGPM_ns = SIURL + "bodies/CGPM#"
 SIURL = SIURL + "SI"
 
 # Annotations to the ontology (name, Version number)
@@ -96,7 +97,7 @@ for row in range(2, sheet.max_row + 1):
         PDF.g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
         PDF.g.add((element, PDF.hasDatatype, XSD.integer))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + defres)))
+        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + defres)))
 
 # 5) Serialization prefixes
 PDF.g.serialize(format='turtle', destination=APIPATH + 'prefixes.ttl')
