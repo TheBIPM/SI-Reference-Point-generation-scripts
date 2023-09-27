@@ -18,6 +18,8 @@ CGPM_ns = SIURL + "bodies/CGPM#"
 SIURL = SIURL + "SI"
 BASESTR = str(PDF.BASE_PATH)
 
+PDF.g.bind("cgpm", CGPM_ns)
+
 # Annotations to the ontology (name, Version number)
 PDF.g.add((URIRef(SIURL), RDF.type, OWL.Ontology))
 PDF.g.add((URIRef(SIURL), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
