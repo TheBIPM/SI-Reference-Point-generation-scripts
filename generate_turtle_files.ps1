@@ -20,6 +20,10 @@ echo "generating prefixes.ttl"
 python ./CUQ/Python/Prefixes_ABox.py
 echo "Done.`n"
 
+echo "generating decisions.ttl"
+python ./CUQ/Python/generate_decisions_turtle.py
+echo "Done.`n"
+
 echo "generating bodies.ttl"
 python ./ResBod/Python/ResBod_TBox.py
 echo "Done.`n"

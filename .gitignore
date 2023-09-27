@@ -30,6 +30,7 @@ Testing/API/constants.ttl
 Testing/API/quantities.ttl
 Testing/API/prefixes.ttl
 Testing/API/units.ttl
+Testing/API/decisions.ttl
 Testing/Vocabulary/Vocabulary.txt
 
 #XLS file (copy from Pascal's github)
