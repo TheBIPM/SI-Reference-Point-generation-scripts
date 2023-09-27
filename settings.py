@@ -20,6 +20,7 @@ PROJECTBASE = LOCALBASE + "Semantic-SI/"
 # Folder for files of cgpm + cipm resolutions
 CGPM_FILES_FOLDER = PROJECTBASE + "ResBod/_docs/cgpm/"
 CIPM_FILES_FOLDER = PROJECTBASE + "ResBod/_docs/cipm/"
+CCTF_FILES_FOLDER = PROJECTBASE + "ResBod/_docs/cctf/"
 
 # Folder for XLS-files for constants, units, quantities 
 XLS_FILES_FOLDER = PROJECTBASE + "CUQ/_docs/"

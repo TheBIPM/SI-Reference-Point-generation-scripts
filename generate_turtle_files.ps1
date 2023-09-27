@@ -31,3 +31,7 @@ echo "Done.`n"
 echo "generating cipm.ttl"
 python ./ResBod/Python/ResBod_ABox_CIPM.py
 echo "Done.`n"
+
+echo "generating cctf.ttl"
+python ./ResBod/Python/ResBod_ABox_CCTF.py
+echo "Done.`n"

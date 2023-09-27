@@ -24,6 +24,7 @@ localsettings.py
 Testing/API/bodies.ttl
 Testing/API/cgpm.ttl
 Testing/API/cipm.ttl
+Testing/API/cctf.ttl
 Testing/API/si.ttl
 Testing/API/constants.ttl
 Testing/API/quantities.ttl
