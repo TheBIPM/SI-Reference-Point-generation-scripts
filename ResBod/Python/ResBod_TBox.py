@@ -40,12 +40,6 @@ class ResBod:
         self._g.add((self.Outcome, RDFS.label, Literal('Résultat', lang='fr')))
         self._g.add((self.Outcome, RDFS.comment, Literal("Class for the outcome of an Event", lang='en')))
 
-        self.OutcomeType = self.set_uri('OutcomeType')
-        self._g.add((self.OutcomeType, RDF.type, SKOS.Concept))
-        self._g.add((self.OutcomeType, RDFS.comment, Literal('Class for the outcome Type. Depending '
-                                                             'on the Responsible Body this can be a Resolution, a '
-                                                             'Recommendation, a Decision', lang='en')))
-
         self.Considering = self.set_uri('Considering')
         self._g.add((self.Considering, RDF.type, SKOS.Concept))
         self._g.add((self.Considering, RDFS.label, Literal('Considering', lang='en')))
@@ -56,35 +50,35 @@ class ResBod:
         self._g.add((self.Resolution, RDF.type, SKOS.Concept))
         self._g.add((self.Resolution, RDFS.label, Literal('Resolution', lang='en')))
         self._g.add((self.Resolution, RDFS.label, Literal('Résolution', lang='fr')))
-        self._g.add((self.Resolution, RDFS.subClassOf, self.OutcomeType))
+        self._g.add((self.Resolution, RDFS.subClassOf, self.Outcome))
         self._g.add((self.Resolution, RDFS.comment, Literal("Class for resolution outcomes", lang='en')))
 
         self.Declaration = self.set_uri('Declaration')
         self._g.add((self.Declaration, RDF.type, SKOS.Concept))
         self._g.add((self.Declaration, RDFS.label, Literal('Declaration', lang='en')))
         self._g.add((self.Declaration, RDFS.label, Literal('Déclaration', lang='fr')))
-        self._g.add((self.Declaration, RDFS.subClassOf, self.OutcomeType))
+        self._g.add((self.Declaration, RDFS.subClassOf, self.Outcome))
         self._g.add((self.Declaration, RDFS.comment, Literal("Class for declaration outcomes", lang='en')))
 
         self.Decision = self.set_uri('Decision')
         self._g.add((self.Decision, RDF.type, SKOS.Concept))
         self._g.add((self.Decision, RDFS.label, Literal('Decision', lang='en')))
         self._g.add((self.Decision, RDFS.label, Literal('Décision', lang='fr')))
-        self._g.add((self.Decision, RDFS.subClassOf, self.OutcomeType))
+        self._g.add((self.Decision, RDFS.subClassOf, self.Outcome))
         self._g.add((self.Decision, RDFS.comment, Literal("Class for decision outcomes", lang='en')))
 
         self.Recommendation = self.set_uri('Recommendation')
         self._g.add((self.Recommendation, RDF.type, SKOS.Concept))
         self._g.add((self.Recommendation, RDFS.label, Literal('Recommendation', lang='en')))
         self._g.add((self.Recommendation, RDFS.label, Literal('Recommandation', lang='fr')))
-        self._g.add((self.Recommendation, RDFS.subClassOf, self.OutcomeType))
+        self._g.add((self.Recommendation, RDFS.subClassOf, self.Outcome))
         self._g.add((self.Recommendation, RDFS.comment, Literal("Class for recommendation outcomes", lang='en')))
 
         self.Publication = self.set_uri('Publication')
         self._g.add((self.Publication, RDF.type, SKOS.Concept))
         self._g.add((self.Publication, RDFS.label, Literal('Publication', lang='en')))
         self._g.add((self.Publication, RDFS.label, Literal('Publication', lang='fr')))
-        self._g.add((self.Publication, RDFS.subClassOf, self.OutcomeType))
+        self._g.add((self.Publication, RDFS.subClassOf, self.Outcome))
         self._g.add((self.Publication, RDFS.comment, Literal("Class for publication outcomes", lang='en')))
 
         self.Action = self.set_uri('Action')
@@ -212,14 +206,6 @@ class ResBod:
         self._g.add((self.hasOutcomeTitle, RDFS.domain, self.Outcome))
         self._g.add((self.hasOutcomeTitle, RDFS.range, RDFS.Literal))
         self._g.add((self.hasOutcomeTitle, RDFS.comment, Literal('Linking an outcome and its Title', lang='en')))
-
-        self.hasOutcomeType = self.set_uri("hasOutcomeType")
-        self._g.add((self.hasOutcomeType, RDF.type, OWL.DatatypeProperty))
-        self._g.add((self.hasOutcomeType, RDFS.label, Literal('has outcome Type', lang='en')))
-        self._g.add((self.hasOutcomeType, RDFS.domain, self.Outcome))
-        self._g.add((self.hasOutcomeType, RDFS.range, RDFS.Literal))
-        self._g.add((self.hasOutcomeType, RDFS.comment, Literal(
-            'Linking an outcome and its type (resolution, recommendation, declaration, considering...)', lang='en')))
 
     def set_uri(self, name: str) -> URIRef:
         # Utility method
