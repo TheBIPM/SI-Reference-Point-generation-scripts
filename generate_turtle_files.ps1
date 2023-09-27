@@ -9,7 +9,7 @@ python ./CUQ/Python/Quantities_ABox.py
 echo "Done.`n"
 
 echo "generating units.ttl"
-python ./CUQ/Python/Units_ABox.py
+python ./CUQ/Python/Units_Abox.py
 echo "Done.`n"
 
 echo "generating constants.ttl"

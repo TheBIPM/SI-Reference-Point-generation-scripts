@@ -28,8 +28,8 @@ PDF.g.add((URIRef(SIURL), RDFS.comment, Literal("Ontology, part of the SI Refere
 PDF.g.add((URIRef(SIURL), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # 1) open XLS files with information
-units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'units_prefixes.xlsx')
-notes_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'notes.xlsx')
+units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Units_Prefixes.xlsx')
+notes_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Notes.xlsx')
 
 
 # 2) create dictionary with the note symbol codes (@xxx@) in text

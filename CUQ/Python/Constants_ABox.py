@@ -32,7 +32,7 @@ PDF.g.add((URIRef(SIURL + "constants"), RDFS.comment,
 PDF.g.add((URIRef(SIURL + "constants"), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # worksheet containing the basic information
-cst_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'SI_constants.xlsx')
+cst_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'SI_Constants.xlsx')
 sheet = cst_wb_obj.active
 
 # load Units graph (to allow identification of URI for a given unit symbol)
@@ -78,7 +78,7 @@ def get_uri_for_symbol(sym: str) -> URIRef:
     return ausgabe  # error indicates wrong type...
 
 
-notes_wb_obj = openpyxl.load_workbook(BASESTR + '/_docs/notes.xlsx')
+notes_wb_obj = openpyxl.load_workbook(BASESTR + '/_docs/Notes.xlsx')
 
 # A) create dictionary with the note symbol codes (@xxx@) in text
 notessym = notes_wb_obj["symbols"]
