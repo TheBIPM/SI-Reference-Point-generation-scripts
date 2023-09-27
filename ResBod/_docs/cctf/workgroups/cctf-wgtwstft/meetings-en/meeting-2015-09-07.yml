@@ -1,0 +1,35 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2015-09-07'
+  date: '2015-09-08'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wgtwstft/2015-09-07
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: WGTWSTFT/2015-01
+  pdf: https://www.bipm.org/documents/20126/31902913/working-document-wg-public-ID-11473/4abf093c-dd68-7efe-a5e1-b8bb430f426c
+  description: Announcement
+  author: Dirk Piester and Zhiheng Jiang
+  date: 22/09/2015
+- title: WGTWSTFT/2015-02
+  pdf: https://www.bipm.org/documents/20126/31902900/working-document-wg-public-ID-11474/71b11ab1-5e00-37d3-e026-d81d3119bf6b
+  description: Agenda
+  author: Dirk Piester and Zhiheng Jiang
+  date: 22/09/2015
+- title: WGTWSTFT/2015-03
+  pdf: https://www.bipm.org/documents/20126/31902887/working-document-wg-public-ID-11475/7a3c6986-c0ca-23fd-45f6-8dfd8535c809
+  description: Attendee List
+  author: Z Jiang
+  date: 22/09/2015
+- title: WGTWSTFT/2015-04
+  pdf: https://www.bipm.org/documents/20126/31902939/working-document-wg-public-ID-11476/d342eda2-19df-1b90-8260-2ee104b919dc
+  description: Report of the 23rd CCTF WG on TWSTFT
+  author: E Dierikx and Z Jiang
+  date: 22/09/2015
+- title: WGTWSTFT/2015-05
+  pdf: https://www.bipm.org/documents/20126/31902952/working-document-wg-public-ID-11477/afea74a7-c488-c28c-692f-9fe406f32631
+  description: TWSTFT calibration guidelines for UTC time links
+  author: Taskgroup
+  date: 22/09/2015

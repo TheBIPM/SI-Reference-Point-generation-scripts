@@ -1,0 +1,180 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2005-11-15'
+  date: '2005-11-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2005-11-15
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2005-00
+  pdf: https://www.bipm.org/documents/20126/48874046/working-document-ID-2746/1e27682a-dff8-ab05-fdb2-62a831292e83
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 31/01/2006
+- title: CCTF-WGTWSTFT/2005-01
+  pdf: https://www.bipm.org/documents/20126/48874440/working-document-ID-1994/1cbfb354-dcbd-0eba-aa58-d04ee74113ba
+  description: Local Contacts
+  author: VSL
+  date: 04/10/2005
+- title: CCTF-WGTWSTFT/2005-02
+  pdf: https://www.bipm.org/documents/20126/48874453/working-document-ID-1995/7f4b4d2b-4711-d9e3-2ba5-77b78972254b
+  description: Transport Hotel
+  author: VSL
+  date: 04/10/2005
+- title: CCTF-WGTWSTFT/2005-03
+  pdf: https://www.bipm.org/documents/20126/48874479/working-document-ID-1998/ece3bb19-2360-bcd3-25f7-b031fff46401
+  description: Local Map
+  author: VSL
+  date: 04/10/2005
+- title: CCTF-WGTWSTFT/2005-04
+  pdf: https://www.bipm.org/documents/20126/48874059/working-document-ID-2184/d3d7fc5a-c232-1f7c-bc65-5de17def5cab
+  description: Agenda
+  author: B. Klepczynski
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-06
+  pdf: https://www.bipm.org/documents/20126/48874204/working-document-ID-2134/55634264-cf03-b757-c1c5-5ac2ee4fd609
+  description: Report from BIPM
+  author: W. Lewandowski
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-07
+  pdf: https://www.bipm.org/documents/20126/48874124/working-document-ID-2135/9becb314-09d2-a10b-ddab-984baac1421e
+  description: BIPM Comparison of Time Transfer Techniques
+  author: BIPM Time Section
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-09
+  pdf: https://www.bipm.org/documents/20126/48874137/working-document-ID-2136/51e340b0-03f8-0a63-2fe0-6a086e0f2b5d
+  description: Smoothing and interpolation ï¿½
+  author: Z. Jiang
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-10
+  pdf: https://www.bipm.org/documents/20126/48874150/working-document-ID-2137/edf74520-bd68-2ac9-eb43-9b33a58148db
+  description: Redundancy in TW network ...
+  author: Z. Jiang, G. Petit
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-11
+  pdf: https://www.bipm.org/documents/20126/48874163/working-document-ID-2138/3af018e1-80e7-8d5e-6cff-54f140ecf82e
+  description: Earth Station Delay ...
+  author: C. Lin
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-12
+  pdf: https://www.bipm.org/documents/20126/48874217/working-document-ID-2139/da2c80cf-68ed-5256-a459-bcea7ae72f8c
+  description: TWSTFT Activity in Asia-Pacific ...
+  author: Y. Takahashi
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-13
+  pdf: https://www.bipm.org/documents/20126/48874230/working-document-ID-2140/5263adfc-4fb2-e50c-566d-4b833af30999
+  description: NICT/PTB TWSTFT Link ...
+  author: D. Piester
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-14
+  pdf: https://www.bipm.org/documents/20126/48874243/working-document-ID-2141/b5fc06d9-24dd-8f2e-dca3-f63a664adabd
+  description: GPS Carrier Phase Solution
+  author: R. Dach
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-15
+  pdf: https://www.bipm.org/documents/20126/48874271/working-document-ID-2142/b459d686-1059-9f3b-331a-07242f0475f7
+  description: Standardization ...
+  author: W. Schaefer
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-16
+  pdf: https://www.bipm.org/documents/20126/48874284/working-document-ID-2143/5110ad3d-d459-a69c-998e-f85f6154bbc8
+  description: A TW Experiment with Telstar 5 ...
+  author: J. Bardin
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-17
+  pdf: https://www.bipm.org/documents/20126/48874297/working-document-ID-2144/64d6c392-6239-2a32-c7eb-6c6bdb94dc1a
+  description: Redundant Observations ...
+  author: D. Matsakis
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-18
+  pdf: https://www.bipm.org/documents/20126/48874176/working-document-ID-2145/dd3f7ff1-4cbb-b775-9fef-fda570cd576f
+  description: Sources of Instabilities ...
+  author: T. Parker, V. Zhang
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-19
+  pdf: https://www.bipm.org/documents/20126/48874072/working-document-ID-2146/dd328511-e236-c00b-3b45-8eb8f2493495
+  description: Other instability effects ï¿½
+  author: J. Palacio
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-20
+  pdf: https://www.bipm.org/documents/20126/48874310/working-document-ID-2147/860fe480-4d2b-f067-d779-17179ed627e5
+  description: TWSTFT for Galileo ...
+  author: J. Hahn
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-21
+  pdf: https://www.bipm.org/documents/20126/48874085/working-document-ID-2148/2a49e329-0dbd-0854-447c-a7c649a6a7e1
+  description: CH Report
+  author: METAS
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-22
+  pdf: https://www.bipm.org/documents/20126/48874323/working-document-ID-2149/80be8359-b140-28ba-75b8-cc4d20fdd9bc
+  description: IEN Report
+  author: L. Lorini
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-23
+  pdf: https://www.bipm.org/documents/20126/48874336/working-document-ID-2150/6bfaa666-54b0-9b5e-f17d-b5631131ca7a
+  description: NICT Report
+  author: NICT
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-24
+  pdf: https://www.bipm.org/documents/20126/48874492/working-document-ID-2151/e593c406-78bc-e476-98c3-0632031c0b2a
+  description: NIST Report
+  author: NIST
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-25
+  pdf: https://www.bipm.org/documents/20126/48874349/working-document-ID-2152/f42118a3-1837-49bf-b8aa-27899e568dc4
+  description: NMIJ Report
+  author: NMIJ
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-26
+  pdf: https://www.bipm.org/documents/20126/48874505/working-document-ID-2153/26f9c277-eaa2-4471-32de-dc03e0374aca
+  description: NPL Report
+  author: P. Whibberley
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-27
+  pdf: https://www.bipm.org/documents/20126/48874362/working-document-ID-2154/5906819f-a327-8fca-0e8c-2172190eca4c
+  description: NTSC Report
+  author: Li Huanxin
+  date: 29/11/2005
+- title: CCTF-WGTWSTFT/2005-28
+  pdf: https://www.bipm.org/documents/20126/48874375/working-document-ID-2155/ceb9cc26-963c-6d64-2424-0198b99b0023
+  description: OCA Report
+  author: F. Baumont et al.
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-29
+  pdf: https://www.bipm.org/documents/20126/48874098/working-document-ID-2156/88491e46-402c-86a4-884a-170318769970
+  description: OP Report
+  author: LNE-SYRTE
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-30
+  pdf: https://www.bipm.org/documents/20126/48874388/working-document-ID-2157/922fe353-a193-d80e-20ff-7aef5400de28
+  description: PTB Report
+  author: D. Piester et al.
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-31
+  pdf: https://www.bipm.org/documents/20126/48874401/working-document-ID-2158/50a2ee88-528a-a791-fe36-836bf2a5c6fe
+  description: ROA Report
+  author: ROA
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-32
+  pdf: https://www.bipm.org/documents/20126/48874111/working-document-ID-2159/423c1b4b-b358-5706-3ff6-b160d6919e2a
+  description: SP Report
+  author: K. Jaldehag, C. Rieck
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-33
+  pdf: https://www.bipm.org/documents/20126/48874518/working-document-ID-2160/cabce69a-315d-a847-4f09-699a6a72e2c1
+  description: TL Report
+  author: Calvin Lin, Wen-Hung Tseng
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-34
+  pdf: https://www.bipm.org/documents/20126/48874414/working-document-ID-2161/75fa80d3-5888-5b35-9d07-c0cc63353030
+  description: USNO Report
+  author: D. Matsakis
+  date: 15/11/2005
+- title: CCTF-WGTWSTFT/2005-35
+  pdf: https://www.bipm.org/documents/20126/48874427/working-document-ID-2162/0beb8fd0-5282-7ea7-4ef2-c277e5a63288
+  description: VSL Report
+  author: VSL
+  date: 15/11/2005

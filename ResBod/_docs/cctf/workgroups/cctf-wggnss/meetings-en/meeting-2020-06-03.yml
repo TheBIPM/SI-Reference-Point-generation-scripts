@@ -1,0 +1,18 @@
+---
+metadata:
+  title: CCTF-WGGNSS
+  identifier: '2020-06-03'
+  date: '2020-06-03'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wggnss/2020-06-03
+  workgroup: cctf-wggnss
+resolutions: []
+working_documents:
+- title: WGGNSS/EF-2020-01
+  pdf: https://www.bipm.org/documents/20126/43489213/WGGNSS-June2020-Agenda.pdf/76b8abcb-e9ce-b56f-c3f5-633efbad30dd
+  description: Agenda
+  author: P. Defraigne
+- title: WGGNSS/EF-2020-02
+  pdf: https://www.bipm.org/documents/20126/43489202/WGGNSS_June2020_CR.pdf/e2dee77a-d1f1-66d1-c836-f4ae5c839477
+  description: Report of the meeting
+  author: P. Defraigne, G. Petit

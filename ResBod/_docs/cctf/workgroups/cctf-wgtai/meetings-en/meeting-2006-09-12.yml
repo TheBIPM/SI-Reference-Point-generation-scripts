@@ -1,0 +1,156 @@
+---
+metadata:
+  title: CCTF-WGTAI
+  identifier: '2006-09-12'
+  date: '2006-09-13'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wgtai/2006-09-12
+  workgroup: cctf-wgtai
+resolutions: []
+working_documents:
+- title: CCTF-WGTAI/2006-00
+  pdf: https://www.bipm.org/documents/20126/48884719/working-document-ID-9407/6f143de6-64e4-4193-ebb9-50bdf52395a1
+  description: List of participants
+  author: BIPM
+  date: '08/09/2006'
+- title: CCTF-WGTAI/2006-01
+  pdf: https://www.bipm.org/documents/20126/48884680/working-document-ID-9404/d34bfaa7-d6a0-1382-b68d-db05ab567cb0
+  description: Final agenda
+  author: P. Tavella, F. Arias
+  date: 10/07/2006
+- title: CCTF-WGTAI/2006-02
+  pdf: https://www.bipm.org/documents/20126/48884693/working-document-ID-9405/9c9c59f6-a98d-fa6e-b212-1bd1021c29ed
+  description: Proposal for re-organising the CCTF WG on TAI (draft)
+  author: P. Tavella, F. Arias
+  date: 10/07/2006
+- title: CCTF-WGTAI/2006-03
+  pdf: https://www.bipm.org/documents/20126/48884706/working-document-ID-9406/1fd83b36-5673-1fed-4bbe-d65074c5bedb
+  description: Optimizing the configuration of time transfer links for TAI
+  author: D. Matsakis et al.
+  date: 15/08/2006
+- title: CCTF-WGTAI/2006-04
+  pdf: https://www.bipm.org/documents/20126/48884732/working-document-ID-9408/26715f49-7b5f-b7fd-c0a8-f866212f886f
+  description: Recommendation proposed to the CCTF - Concerning the use of measurements
+    of the TAI scale unit
+  author: T. Parker, BIPM
+  date: '08/09/2006'
+- title: CCTF-WGTAI/2006-05
+  pdf: https://www.bipm.org/documents/20126/48884745/working-document-ID-9409/b47ddcb3-2d5c-a932-0b85-0f3ef3b29170
+  description: Recommendation proposed to the CCTF - Concerning unification of the
+    reference frames for global navigation systems
+  author: VNIIFTRI
+  date: '08/09/2006'
+- title: CCTF-WGTAI/2006-06
+  pdf: https://www.bipm.org/documents/20126/48884758/working-document-ID-9410/539346a1-84a2-19f3-80cf-7c06eeba3cb1
+  description: Recommendation proposed to the CCTF - Concerning the use of GNSS carrier
+    phase techniques for time and frequency transfer in TAI
+  author: D. Matsakis, F. Arias
+  date: '08/09/2006'
+- title: CCTF-WGTAI/2006-07
+  pdf: https://www.bipm.org/documents/20126/48884771/working-document-ID-9411/3fe6b5ac-ba9f-96d3-e28b-989f26843482
+  description: Proposed recommendation 1 from CCL-CCTF JWG on secondary representations
+    of the second
+  author: CCL-CCTF JWG
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-08
+  pdf: https://www.bipm.org/documents/20126/48884784/working-document-ID-9412/2e10ec7c-8939-0698-a8c7-5849b5e4b547
+  description: Proposed recommendation 2 from CCL-CCTF JWG on secondary representations
+    of the second
+  author: CCL-CCTF JWG
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-09
+  pdf: https://www.bipm.org/documents/20126/48884797/working-document-ID-9413/61a3e6fc-411b-9182-3dc9-dfaf906eeac4
+  description: ATOMIUM - Presentation
+  author: P. Defraigne, N. Guyennon
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-10
+  pdf: https://www.bipm.org/documents/20126/48884810/working-document-ID-9414/78c908a4-d088-30f6-a560-6697ae22e722
+  description: GPS All-in-View time transfer for TAI - Presentation
+  author: G. Petit, Z. Jiang
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-11
+  pdf: https://www.bipm.org/documents/20126/48884823/working-document-ID-9415/8341ea62-1664-4021-d9cb-b5c1c51cfb51
+  description: Use of Precise Point Positioning for TAI - Presentation
+  author: G. Petit, Z. Jiang
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-12
+  pdf: https://www.bipm.org/documents/20126/48884836/working-document-ID-9416/f3539e74-942c-8c13-e159-f0e7e772758d
+  description: Report of the CCFT WG on TWSTFT - Presentation
+  author: B. Klepczynski
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-13
+  pdf: https://www.bipm.org/documents/20126/48884849/working-document-ID-9417/9a65895f-30f7-97a8-ccd6-86433fb2dccb
+  description: Status report on TAI - Presentation
+  author: E.F. Arias
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-14
+  pdf: https://www.bipm.org/documents/20126/48884862/working-document-ID-9418/fdf412ed-ff76-08ea-db79-0b1bc2d87b03
+  description: Calibration of dual frequency (geodetic type) GPS receivers for TAI
+    - Presentation
+  author: G. Petit, L. Tisserand
+  date: 13/09/2006
+- title: CCTF-WGTAI/2006-15
+  pdf: https://www.bipm.org/documents/20126/48884875/working-document-ID-9419/e6b9117b-f7e6-811b-0899-948367761bd4
+  description: BIPM calibrations of GPS/GLONASS equipment - Presentation
+  author: W. Lewandowski
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-16
+  pdf: https://www.bipm.org/documents/20126/48884888/working-document-ID-9420/c42a3953-ea70-2ebc-cf32-56204c2d3770
+  description: Report of the Study Group II of the CCTF - Presentation
+  author: SG II
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-17
+  pdf: https://www.bipm.org/documents/20126/48884901/working-document-ID-9421/c8457330-cdd2-7677-eacb-c0432da5bdea
+  description: Towards a good pivot and crossover site - Presentation
+  author: A. Bauch
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-18
+  pdf: https://www.bipm.org/documents/20126/48884914/working-document-ID-9422/149cd6b4-3527-5903-a201-f535f5463607
+  description: Report of the CGGTTS - Presentation
+  author: J. Levine
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-19
+  pdf: https://www.bipm.org/documents/20126/48884927/working-document-ID-9423/1fecd400-bb08-5f82-298b-da486624a82a
+  description: Working Group on Primary Frequency Standards - Presentation
+  author: T. Parker
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-20
+  pdf: https://www.bipm.org/documents/20126/48884940/working-document-ID-9424/79c8d959-7008-7385-433d-884cab070de1
+  description: High accuracy frequency standards in TAI - Presentation
+  author: P. Wolf, G. Petit
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-21
+  pdf: https://www.bipm.org/documents/20126/48884953/working-document-ID-9425/f0dfa859-2e25-2071-df14-a71e7074b87f
+  description: IGS Clock Products Working Group - Presentation
+  author: K. Senior
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-22
+  pdf: https://www.bipm.org/documents/20126/48884966/working-document-ID-9426/3910c7cc-2d8d-9152-a5d0-d388830d32be
+  description: The future of UTC - Presentation
+  author: R. L. Beard
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-23
+  pdf: https://www.bipm.org/documents/20126/48884979/working-document-ID-9427/224eda24-e96a-c908-8fc4-f1f1531980c2
+  description: Pitfall of clock's intercomparisons systems - Presentation
+  author: N. Koshelyaevsky
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-24
+  pdf: https://www.bipm.org/documents/20126/48884998/working-document-ID-9428/6dbf4904-0e50-fa08-b548-f5a8b724a183
+  description: Pulsar time and pulsar timing at Kalyazin, Russia - Presentation
+  author: Yu. P.  Ilyasov
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-25
+  pdf: https://www.bipm.org/documents/20126/48885020/working-document-ID-9429/ec1908fd-48d3-1414-0eb3-753a639c11bf
+  description: Introduction of new generation system of Japan Standard Time - Presentation
+  author: Y. Hanado et al.
+  date: 14/09/2006
+- title: CCTF-WGTAI/2006-26
+  pdf: https://www.bipm.org/documents/20126/48885033/working-document-ID-9430/771a2dd9-8b7d-1d1f-b46f-c488098af666
+  description: Report of the CCTF WG on the International Atomic Time - Presentation
+  author: P. Tavella
+  date: 18/09/2006
+- title: CCTF-WGTAI/2006-27
+  pdf: https://www.bipm.org/documents/20126/48884667/working-document-ID-9431/999125a1-5348-1bc7-3fac-a988e7cfb0bb
+  description: The evaluation of uncertainties in [UTC-UTC(k)]
+  author: W.Lewandowski, D. Matsakis, G. Panfilo, P. Tavella
+  date: 10/10/2006

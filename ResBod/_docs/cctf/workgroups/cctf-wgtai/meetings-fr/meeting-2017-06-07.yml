@@ -1,0 +1,37 @@
+---
+metadata:
+  title: CCTF-WGTAI
+  identifier: '2017-06-07'
+  date: '2017-06-07'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtai/2017-06-07
+  workgroup: cctf-wgtai
+resolutions: []
+working_documents:
+- title: WGTAI/2017-01
+  pdf: https://www.bipm.org/documents/20126/31902629/working-document-wg-public-ID-13314/db82699d-27c3-2968-dac1-1c6bfe8a2490
+  description: Agenda (draft 31/05/2017)
+  author: F. Arias, L. Erard
+  date: 04/04/2017
+- title: WGTAI/2017-02
+  pdf: https://www.bipm.org/documents/20126/31902642/working-document-wg-public-ID-13315/ab2a699e-9fa5-ba1c-d040-0f3912a4de9a
+  description: Proposed recommendation on the defnition of time-scales
+  author: Task Group on Time Scales Definition
+  date: 04/04/2017
+- title: WGTAI/2017-03
+  pdf: https://www.bipm.org/documents/20126/31902668/working-document-wg-public-ID-14689/6b15fa2e-4582-49c5-5bd6-8d4a9a6810fe
+  description: Recommendation (proposed) "On the utilization and monitoring of redundant
+    time transfer equipment in the timing laboratories contributing to UTC"
+  author: CCFT WG GNSS
+  date: 26/05/2017
+- title: WGTAI/2017-04
+  pdf: https://www.bipm.org/documents/20126/31902694/working-document-wg-public-ID-14691/c32bffaf-27d8-7422-ffca-1a527d554456
+  description: Recommendation (proposed) "On improving Two-Way Satellite Time and
+    Frequency Transfer (TWSTFT) for UTC Generation"
+  author: CCTF WG TWSTFT
+  date: 26/05/2017
+- title: WGTAI/2017-05
+  pdf: https://www.bipm.org/documents/20126/31902707/working-document-wg-public-ID-14692/5cedb350-a286-6507-128e-016662297f80
+  description: Recommendation (proposed) "On the list of recommened frequencies"
+  author: CCL-CCTF WGFS
+  date: 26/05/2017

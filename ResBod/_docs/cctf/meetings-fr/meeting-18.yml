@@ -1,0 +1,639 @@
+---
+metadata:
+  title: 18e réunion du CCTF
+  identifier: '18'
+  date: '2009-06-05'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009
+resolutions:
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Mises à jour de la liste des fréquences étalons
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 51
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que qu’une liste commune des « valeurs recommandées de fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » a été établie ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que que le Groupe de travail commun au CCL et au CCTF sur
+      les étalons de fréquence a examiné plusieurs fréquences candidates en vue de
+      leur inclusion dans cette liste ;
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: |-
+      *recommande*
+
+      que les fréquences de transition suivantes soient incluses ou mises à jour dans la liste des fréquences étalons recommandées
+
+      * la transition optique non perturbée 5s^2^ ^1^S~0~ - 5s 5p ^3^P~0~ de l’atome neutre de ^87^, à la fréquence de stem:[429 228 004 229 873","7 "Hz"], avec une incertitude-type relative de stem:[1 * 10^(-15)] (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 5s^2^ ^1^S~0~ - 5s 5p ^3^P~0~ de l’atome neutre de ^88^Sr, à la fréquence de stem:[429 228 066 418 012 "Hz"], avec une incertitude-type relative de stem:[1 * 10^(-14)] ;
+      * la transition optique non perturbée 4s ^2^S~1/2~ - 3d ^2^D~5/2~ de l'ion de ^stem:[40^(Ca)]+^, à la fréquence de stem:[411 042 129 776 393 "Hz"], avec une incertitude-type relative de stem:[4 * 10^(-14)] ;
+      * la transition optique non perturbée ^2^S~1/2~ stem:[(F = 0)] - ^2^stem:["F"]~7/2~ (stem:[F = 3], _m~stem:["F"]~_ = 0) de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[642 121 496 772 657 "Hz"], avec une incertitude-type relative de stem:[6 * 10^(-14)] ;
+      * la transition optique non perturbée 6s^2^ ^1^S~0~ (stem:[F = 1/2]) - 6s 6p ^3^P~0~ (stem:[F = 1/2]) de l’atome neutre de ^171^Yb, à la fréquence de stem:[518 295 836 590 864 "Hz"], avec une incertitude-type relative de stem:[1","6 * 10^(-13)].
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Caractérisation des retards des équipements de comparaison de temps par systèmes
+    globaux de navigation par satellite (GNSS) des laboratoires contribuant au Temps
+    atomique international (TAI)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 52
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que la détermination des caractéristiques des retards des
+      équipements de comparaison de temps est essentielle pour garantir l’exactitude
+      des liens horaires du TAI ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que les changements non corrigés des retards des équipements
+      impliqués dans un lien horaire donné peuvent générer une instabilité significative
+      du TAI ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le Comité consultatif pour la définition de la seconde
+      (CCDS), puis le Comité consultatif du temps et des fréquences (CCTF) ont souligné
+      l’importance d’étalonner les équipements de comparaison de temps des laboratoires
+      participant au calcul du TAI effectué au BIPM ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: sachant que la section du temps, des fréquences et de la gravimétrie
+      du BIPM s’applique à mesurer les retards relatifs des équipements des systèmes
+      globaux de navigation par satellite des laboratoires fournissant des données
+      pour le calcul du TAI ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: sachant que des ressources considérables, tant en personnel qu’en matériel,
+      sont nécessaires pour étalonner l’ensemble des équipements des systèmes globaux
+      de navigation par satellite utilisés pour le calcul du TAI, ainsi que pour maintenir
+      à jour ces étalonnages ;
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que le BIPM continue d’organiser et de conduire des campagnes
+      de mesure des retards des équipements des systèmes globaux de navigation par
+      satellite en fonctionnement dans les laboratoires ;
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que l’objectif principal de ces campagnes soit d’étalonner
+      les équipements d’un sous-ensemble de laboratoires sélectionnés ;
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que les organisations régionales de métrologie apportent leur
+      soutien au BIPM en organisant des campagnes de mesure des retards au niveau
+      régional, qui seront liées à celles menées par le BIPM ;
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que le BIPM élabore des directives à ce sujet, en concertation
+      avec les organisations régionales de métrologie.
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Au sujet de la faiblesse de la définition actuelle de l’UTC
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 53
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que l’insertion non prévisible de secondes intercalaires,
+      dont on ne connaît pas à l’avance le nombre, génère des sauts du Temps universel
+      coordonné (UTC), tel qu’il a été défini en 1972, qui affectent de manière défavorable
+      son utilisation ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que cette définition de l’UTC ne peut répondre aux exigences
+      des nombreux systèmes de navigation, actuels et à venir, qui nécessitent une
+      échelle de temps uniforme ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que d’autres échelles de temps, non affectées par l’insertion
+      de secondes intercalaires, sont élaborées et prolifèrent
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que la nécessité de connaître l’angle de rotation de la Terre
+      dans des systèmes de référence célestes, destinés à être utilisés dans le domaine
+      de la navigation maritime céleste, n’est plus d’actualité ou peut facilement
+      être satisfaite par les valeurs de [stem:[UT1 - UTC]] telles que évaluées et
+      publiées par le Service international de la rotation terrestre et des systèmes
+      de référence (IERS) ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que l’UT1 peut entièrement satisfaire aux besoins liés à
+      la détermination de l’angle de rotation terrestre ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant qu’il est nécessaire de disposer d’un délai suffisant pour
+      permettre la mise en place de programmes informatisés pour les systèmes de navigation
+      terrestre ou par satellite, adaptés à tout changement de la définition de l’UTC
+      ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant qu’au cours des dix dernières années, un certain nombre d’organisations
+      techniques nationales et internationales ont exprimé leur inquiétude croissante
+      concernant la définition actuelle de l’UTC et la prolifération simultanée d’autres
+      échelles de temps
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: |-
+      *recommande*
+
+      que les agences nationales et internationales, ainsi que les unions scientifiques concernées par la définition des échelles de temps internationales, réfléchissent de toute urgence aux décisions à prendre concernant la définition à venir de l’UTC, afin de parvenir dès que possible à un accord international à ce sujet.
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Concernant l’adoption d’un système de référence terrestre commun par la Conférence
+    générale des poids et mesures
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 54
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant qu’il n’existe à l’heure actuelle que quelques systèmes globaux
+      de navigation par satellite (GNSS), mais que de nouveaux systèmes sont mis au
+      point et que beaucoup d’autres le seront probablement à l’avenir ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que les différents systèmes de référence temporels et géodésiques,
+      utilisés par ces systèmes globaux de navigation, rendent l’interprétation des
+      solutions de positionnement et de temps plus ambiguë pour les utilisateurs,
+      et l’interopérabilité des systèmes plus compliquée ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que, même si les unions scientifiques concernées recommandent
+      l’utilisation du système international de référence terrestre (ITRS), ce système
+      n’est à l’heure actuelle adopté par aucune organisation intergouvernementale
+      ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que l’adoption d’un système commun par l’organisation intergouvernementale
+      appropriée serait un avantage pour les utilisateurs en termes d’unification
+      des solutions globales de positionnement et de temps, et de l’interopérabilité
+      des systèmes globaux ;
+  - type: noting
+    date_effective: '2009-06-05'
+    message: |-
+      *notant*
+
+      que l’un des facteurs clés ayant conduit à la création de la Convention du Mètre et du BIPM fut la recommandation adoptée lors de la deuxième Conférence géodésique internationale pour la mesure des degrés en Europe, réunie à Berlin en 1867, pour qu’un Bureau international des poids et mesures, situé en Europe, soit fondé afin d’unifier les étalons géodésiques européens ;
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: |-
+      *recommande*
+
+      que le directeur du BIPM, après concertation avec les unions scientifiques concernées, discute de façon formelle avec le CIPM des mesures nécessaires à prendre afin de demander à la Conférence générale des poids et mesures, lors de sa 23^e^ réunion, d’adopter l’ITRS, tel que défini par l’Union géodésique et géophysique internationale (UGGI), et réalisé de manière pratique par le Service international de la rotation terrestre et des systèmes de référence (IERS) et le Service international GNSS (IGS), comme système de référence international terrestre unique pour toutes les applications métrologiques.
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Alignement des références géodésiques et synchronisation des références de
+    temps par rapport aux références internationales
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 55
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le Système international de référence terrestre (ITRS)
+      a été recommandé par l’Union astronomique internationale (UAI) et l’Union géodésique
+      et géophysique internationale (UGGI) pour les applications dans le domaine des
+      sciences de la terre et de l’espace ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le Repère international de référence terrestre (ITRF)
+      fournit l’accès primaire à l’ITRS, et que les systèmes géodésiques globaux WGS84,
+      PZ-90, GTRF (Galileo Terrestrial Reference Frame), CGS’2000 (China Geodetic
+      System 2000), assortis de densifications régionales, y donnent également accès
+      avec une incertitude estimée de stem:[3 "cm"] à stem:[40 "cm"] ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que l’échelle de temps approuvée par la Conférence générale
+      des poids et mesures, lors de sa 15^e^ réunion en 1975, afin d’assurer la coordination
+      et la dissémination du temps dans le monde est le Temps universel coordonnée
+      (UTC) ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le BIPM assure la collaboration nécessaire afin de maintenir
+      et de disséminer l’UTC ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le temps du GPS est asservi à la réalisation en temps
+      réel de l’UTC maintenue par l’Observatoire naval des États-Unis d’Amérique,
+      UTC(USNO) (modulo stem:[1 "s"]), et le temps du GLONASS asservi à la réalisation
+      en temps réel de l’UTC maintenue par le VNIIFTRI, UTC(SU) ; et que le temps
+      de Galileo sera asservi à un ensemble de réalisations européennes de l’UTC,
+      en conservant le même décalage en nombre de secondes que le temps du GPS ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que le BIPM participe au Comité international sur le GNSS
+      (ICG) en tant qu’observateur ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: sachant que de nouveaux systèmes globaux de navigation par satellite
+      (GNSS) sont actuellement conçus et mis au point ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: sachant que l’interopérabilité des différents systèmes globaux de navigation
+      par satellite serait facilitée par l’adoption de références internationales
+      temporelles et géodésiques ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: sachant que des références temporelles et géodésiques, communes et reconnues
+      au niveau international, sont nécessaires aux activités scientifiques et civiles
+      partout dans le monde ;
+  - type: recognizing
+    date_effective: '2009-06-05'
+    message: reconnaît que le Comité international sur le GNSS (ICG) procure une structure
+      unique qui permet aux fournisseurs de services globaux de navigation par satellite
+      d’aligner leurs références de temps et géodésiques sur l’UTC et l’ITRS de manière
+      opérationnelle ;
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: |-
+      *recommande*
+
+      * que les références géodésiques utilisées pour les systèmes globaux de navigation par satellite soient alignées le plus exactement possible sur l’ITRS ;
+      * que les échelles de temps internes des systèmes globaux de navigation par satellite soient synchronisées le plus exactement possible sur l’UTC (modulo stem:[1 "s"]) ;
+      * que les systèmes globaux de navigation par satellite diffusent, outre leurs propres échelles de temps :
+      ** l’écart entre leur échelle de temps et une réalisation en temps réel de l’UTC,
+      ** les écarts entre les échelles de temps des divers systèmes globaux ;
+  - type: requests
+    date_effective: '2009-06-05'
+    message: et demande que le BIPM coordonne les actions nécessaires pour ce faire
+      au sein du Comité international sur le GNSS (ICG).
+- dates:
+  - '2009-06-05'
+  subject: CCTF
+  type: recommendation
+  title: Relation entre les prédictions des échelles de temps locales UTC(k), disséminées
+    par les systèmes globaux de navigation par satellite (GNSS), et le Temps universel
+    coordonné (UTC) et le Temps atomique international (TAI)
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cc/cctf/18-2009/resolution-6
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF18.pdf/b54a884f-01c7-7f45-7671-a132b99330ed
+  reference_name: Comptes rendus du 18e CCTF (2009), 2010
+  reference_page: 57
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que la mission du BIPM est d’assurer l’unification mondiale
+      des mesures et leur traçabilité au Système international d’unités (SI) ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant qu’à l’heure actuelle, deux systèmes globaux de navigation
+      par satellite sont en fonctionnement et que d’autres sont en cours de mise au
+      point ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que les systèmes globaux de navigation par satellite actuellement
+      utilisés disséminent des prédictions des échelles de temps locales stem:["UTC"
+      (k)] ; par exemple, le GPS dissémine des prédictions de la réalisation en temps
+      réel de l’UTC maintenue par l’Observatoire naval des États-Unis d’Amérique,
+      UTC(USNO), et le GLONASS celles de la réalisation en temps réel de l’UTC maintenue
+      par le VNIIFTRI, UTC(SU) ;
+  - type: considering
+    date_effective: '2009-06-05'
+    message: considérant que la Section 5 de la _Circulaire T_ du BIPM publie la relation
+      entre l’UTC et le TAI et les échelles de temps de ces systèmes globaux de navigation
+      par satellite ;
+  - type: having / having regard
+    date_effective: '2009-06-05'
+    message: |-
+      *ayant pour objectif*
+
+      * de faciliter l’accès, pour tout utilisateur, aux prédictions des échelles de temps locales stem:["UTC" (k)] disséminées par les systèmes globaux de navigation par satellite actuels et à venir ;
+  actions:
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que la Section 5 de la _Circulaire T_ intègre des données
+      sur la relation entre l’UTC et le TAI et les échelles de temps locales prédites
+      UTC(k), disséminées par les systèmes globaux de navigation par satellite ;
+  - type: recommends
+    date_effective: '2009-06-05'
+    message: recommande que la Section 5 de la _Circulaire T_ soit renommée « Relation
+      entre l’UTC et le TAI et les prédictions des échelles de temps locales UTC(k)
+      disséminées par les systèmes globaux de navigation par satellite, ainsi que
+      leurs échelles de temps ».
+working_documents:
+- title: CCTF/2009-00
+  pdf: https://www.bipm.org/documents/20126/28436630/working-document-ID-3333/89ee0b52-319c-13ec-66d7-b6ca27a27958
+  description: Draft agenda
+  author: BIPM
+  date: 19/02/2009
+- title: CCTF/2009-01
+  pdf: https://www.bipm.org/documents/20126/28439755/working-document-ID-3589/05fdb794-8db6-287a-867c-7ecb20068619
+  description: Report of the CCTF WG on Primary Frequency Standards
+  author: T. Parker (NIST)
+  date: 15/05/2009
+- title: CCTF/2009-02
+  pdf: https://www.bipm.org/documents/20126/28437484/working-document-ID-3575/eb47d477-e057-91e0-7a26-f40531583712
+  description: PTB report on activities
+  author: PTB
+  date: 13/05/2009
+- title: CCTF/2009-03
+  pdf: https://www.bipm.org/documents/20126/28437495/working-document-ID-3576/fb7eb36c-5687-97e4-d569-d8eb787d142d
+  description: CENAM report on activities
+  author: CENAM
+  date: 13/05/2009
+- title: CCTF/2009-04
+  pdf: https://www.bipm.org/documents/20126/28437506/working-document-ID-3577/21e9b4d5-3389-643a-4418-a98db8fb6b71
+  description: USNO report on activities
+  author: D. Matsakis (USNO)
+  date: 13/05/2009
+- title: CCTF/2009-05
+  pdf: https://www.bipm.org/documents/20126/28435970/working-document-ID-3578/6f7d8d97-4622-e2de-ba89-b39a55fe5bfd
+  description: VSL report on activities
+  author: E. Dierikx (VSL)
+  date: 13/05/2009
+- title: CCTF/2009-06
+  pdf: https://www.bipm.org/documents/20126/28435981/working-document-ID-3579/421b8b11-e209-4264-a107-aca5a052ba1e
+  description: NICT report on activities
+  author: NICT
+  date: 13/05/2009
+- title: CCTF/2009-07
+  pdf: https://www.bipm.org/documents/20126/28439766/working-document-ID-3590/bcaf5521-74e4-6bf7-cbe4-22310f215bf4
+  description: NRC report on activities
+  author: NRC
+  date: 15/05/2009
+- title: CCTF/2009-08
+  pdf: https://www.bipm.org/documents/20126/28436663/working-document-ID-3591/56480718-6f48-cc7f-0cab-b5e42902647b
+  description: NMISA report on activities
+  author: NMISA
+  date: 15/05/2009
+- title: CCTF/2009-09
+  pdf: https://www.bipm.org/documents/20126/28435992/working-document-ID-3592/ad94f9ce-08f8-0db4-822b-cce700e196ba
+  description: KRISS report on activities
+  author: KRISS
+  date: 15/05/2009
+- title: CCTF/2009-10
+  pdf: https://www.bipm.org/documents/20126/28436003/working-document-ID-3593/bca04929-bd84-22de-b1bb-db37b2960d2a
+  description: NMIJ/AIST report on activities
+  author: NMIJ/AIST
+  date: 15/05/2009
+- title: CCTF/2009-11
+  pdf: https://www.bipm.org/documents/20126/28439777/working-document-ID-3594/add12f63-6c04-a7b6-7cf5-b52705af1694
+  description: ROA report on activities
+  author: F.J. Galindo (ROA)
+  date: 15/05/2009
+- title: CCTF/2009-12
+  pdf: https://www.bipm.org/documents/20126/28436333/working-document-ID-3595/da2dd2fe-7296-d4d4-2069-8abe460120d1
+  description: NIM report on activites
+  author: X. Gao and T. Li (NIM)
+  date: 16/05/2009
+- title: CCTF/2009-13
+  pdf: https://www.bipm.org/documents/20126/28436344/working-document-ID-3596/387d296d-dfa0-3416-7a81-b987b0bf5e5e
+  description: INRIM report on activities
+  author: INRIM
+  date: 16/05/2009
+- title: CCTF/2009-14
+  pdf: https://www.bipm.org/documents/20126/28436355/working-document-ID-3597/c3371e82-f52c-fa4f-45a9-9d9b6283c743
+  description: NPL report on activities
+  author: NPL
+  date: 16/05/2009
+- title: CCTF/2009-15
+  pdf: https://www.bipm.org/documents/20126/28436366/working-document-ID-3598/1f4ed8d3-e265-d52c-c7b5-b96ce9fd2307
+  description: METAS report on activities
+  author: METAS
+  date: 16/05/2009
+- title: CCTF/2009-16
+  pdf: https://www.bipm.org/documents/20126/28439590/working-document-ID-3599/4b3371ca-8c91-f9db-aaab-e468c2c43c67
+  description: Report of the CCTF WG on TWSTFT
+  author: Members of CCTF WG on TWSTFT
+  date: 16/05/2009
+- title: CCTF/2009-17
+  pdf: https://www.bipm.org/documents/20126/28436377/working-document-ID-3600/1680f0a8-2b53-8340-2ef3-93c6931c868a
+  description: Report of the IUGG
+  author: IUGG
+  date: 16/05/2009
+- title: CCTF/2009-18
+  pdf: https://www.bipm.org/documents/20126/28436014/working-document-ID-3601/b99af1d8-1a74-257d-8b4e-94b8a551bd56
+  description: The uncertainty for the key comparison in frequency CCTF-K002.FREQ
+  author: G. Panfilo and E.F. Arias (BIPM)
+  date: 16/05/2009
+- title: CCTF/2009-19
+  pdf: https://www.bipm.org/documents/20126/28437345/working-document-ID-3609/3b185c90-2c85-03d1-cbbf-6234a7b454ed
+  description: Report on BIPM TAIPPP pilot experiment, presented at EFTF-IFCS2009
+  author: G. Petit (BIPM)
+  date: 19/05/2009
+- title: CCTF/2009-20
+  pdf: https://www.bipm.org/documents/20126/28437356/working-document-ID-3610/b1697264-fcf3-0816-e719-068b328a2b6b
+  description: Progress report  from the CCTF WG on the MRA
+  author: F. Cordara (INRIM)
+  date: 19/05/2009
+- title: CCTF/2009-21
+  pdf: https://www.bipm.org/documents/20126/28436036/working-document-ID-3612/86bde923-0484-b783-0c6c-196e26c72127
+  description: ORB report on activities
+  author: P. Defraigne (ORB)
+  date: 21/05/2009
+- title: CCTF/2009-22
+  pdf: https://www.bipm.org/documents/20126/28436047/working-document-ID-3622/a3fd8f7f-f459-c2cd-0207-8a0e1b040363
+  description: LNE-SYRTE report on activities
+  author: LNE-SYRTE
+  date: 29/05/2009
+- title: CCTF/2009-23
+  pdf: https://www.bipm.org/documents/20126/28436058/working-document-ID-3623/4b8da5c1-ef57-7a36-60b3-351dd5bcd69f
+  description: Report of the CCTF WG on GNSS Time Transfer Standards (CGGTTS)
+  author: J. Levine (NIST)
+  date: 29/05/2009
+- title: CCTF/2009-24
+  pdf: https://www.bipm.org/documents/20126/28436949/working-document-ID-3624/5b9db317-232f-7130-87d8-046814a8e8f0
+  description: Report on studies and improvement of the EAL algorithm, presented at
+    the EFTF-IFCS2009
+  author: G. Panfilo and E.F. Arias (BIPM)
+  date: 29/05/2009
+- title: CCTF/2009-25
+  pdf: https://www.bipm.org/documents/20126/28436069/working-document-ID-3637/28524154-7fdb-49fa-0bf1-467626a4d56d
+  description: A*Star-SG report on activities
+  author: A*Star-SG
+  date: 30/05/2009
+- title: CCTF/2009-26
+  pdf: https://www.bipm.org/documents/20126/28435831/working-document-ID-3638/afe7337f-b554-51bf-2813-3e1a1dbbc2a9
+  description: BIPM report on activities
+  author: E.F. Arias (BIPM)
+  date: 30/05/2009
+- title: CCTF/2009-27
+  pdf: https://www.bipm.org/documents/20126/28436080/working-document-ID-3639/6d761b17-452e-b7c1-8607-3fa175cad3ac
+  description: CCTF note on UTC (September 2007) presented to the ITU-R
+  author: CCTF
+  date: 30/05/2009
+- title: CCTF/2009-28
+  pdf: https://www.bipm.org/documents/20126/28436091/working-document-ID-3640/8c7a856e-fde5-73d8-76d1-7b1b55fc7ba8
+  description: Report on the International Committee on GNSS
+  author: E.F. Arias (BIPM)
+  date: 30/05/2009
+- title: CCTF/2009-29
+  pdf: https://www.bipm.org/documents/20126/28435842/working-document-ID-3641/fac7c23a-2aa2-47e8-06a7-87ada86fc607
+  description: Proposed recommendation - Traceability to UTC of real-time realizations
+    UTC(k) disseminated by GNSS
+  author: VNIIFTRI
+  date: 30/05/2009
+- title: CCTF/2009-30
+  pdf: https://www.bipm.org/documents/20126/28435853/working-document-ID-3642/ff41c797-a107-6d83-a58d-a19319bc6b99
+  description: Proposed recommendation -  Alignment of Geodetic References and synchronization
+    of Time References to international standards
+  author: BIPM, IGS, IUGG
+  date: 01/06/2009
+- title: CCTF/2009-31
+  pdf: https://www.bipm.org/documents/20126/28437367/working-document-ID-3643/74ad20bc-c1df-2b7b-223d-fd8be2d194c4
+  description: Proposal - Key comparison of Primary Frequency Standards
+  author: E.F.Arias (BIPM) and WG on the MRA
+  date: 01/06/2009
+- title: CCTF/2009-32
+  pdf: https://www.bipm.org/documents/20126/28435864/working-document-ID-3644/2a6ce17c-7b50-4164-9bee-64f77bfad895
+  description: Note on Coordinated Universal Time
+  author: D. McCarthy (USNO)
+  date: 02/06/2009
+- title: CCTF/2009-33
+  pdf: https://www.bipm.org/documents/20126/28436674/working-document-ID-3645/1bb79081-7bb7-c9f0-06f0-c30f075c4476
+  description: Concerning the adoption of a common terrestrial reference frame by
+    the CGPM
+  author: T.J. Quinn
+  date: 03/06/2009
+- title: CCTF/2009-34
+  pdf: https://www.bipm.org/documents/20126/28435886/working-document-ID-3648/764acba8-34be-4da6-048f-dc95d6186a7b
+  description: NIST report on activities
+  author: NIST
+  date: 04/06/2009
+- title: CCTF/2009-35
+  pdf: https://www.bipm.org/documents/20126/28435875/working-document-ID-3647/70ab2afb-8e1f-298a-b058-f771a2023501
+  description: Information on IRNSS and GAGAN projects (India)
+  author: S. Kibe (SATNAV)
+  date: 03/06/2009
+- title: CCTF/2009-36
+  pdf: https://www.bipm.org/documents/20126/28436245/working-document-ID-3651/0c6243af-ce26-c54d-2613-54acc05e21ba
+  description: NMIA report on activities
+  author: NMIA
+  date: 05/06/2009
+- title: CCTF/2009-37
+  pdf: https://www.bipm.org/documents/20126/28436256/working-document-ID-3652/13284e74-dd50-f1c5-6059-1ccf5d6b1bfa
+  description: Proposed recommendation - On the weakness of the present definition
+    of UTC
+  author: various
+  date: 05/06/2009
+- title: CCTF/2009-38
+  pdf: https://www.bipm.org/documents/20126/28436267/working-document-ID-3653/e46d3dad-78cc-b8ae-424e-11bfe8fc8348
+  description: Proposed recommendation - Concerning definition of time scales
+  author: various
+  date: 05/06/2009
+- title: CCTF/2009-39
+  pdf: https://www.bipm.org/documents/20126/28435897/working-document-ID-3654/8cbc3ce6-c546-a5ba-8d92-aa2c13ba81b0
+  description: Proposed recommendation - Characterization of delays of GNSS time transfer
+    equipment in TAI contributing laboratories
+  author: BIPM
+  date: 05/06/2009
+- title: CCTF/2009-40
+  pdf: https://www.bipm.org/documents/20126/28435919/working-document-ID-3678/76a39fee-4a4f-1837-693d-d272c1efe339
+  description: Report of the ITU-R Working Party 7A - Presentation
+  author: R. Beard (ITU-R, NRL)
+  date: 02/07/2009
+- title: CCTF/2009-41
+  pdf: https://www.bipm.org/documents/20126/28436278/working-document-ID-3679/462349b8-2e36-d1ed-5173-bcc7ec75ff51
+  description: Report of the WG on coordination of the development of advanced time
+    and frequency transfer techniques - Presentation
+  author: P. Tuckey (LNE-SYRTE)
+  date: 02/07/2009
+- title: CCTF/2009-42
+  pdf: https://www.bipm.org/documents/20126/28436685/working-document-ID-3680/071a660d-0fa2-df4a-69bd-60723f94c679
+  description: Report of the IGS Clock Products Working Group - Presentation
+  author: K. Senior (IGS, NRL)
+  date: 02/07/2009
+- title: CCTF/2009-43
+  pdf: https://www.bipm.org/documents/20126/28436696/working-document-ID-3681/52f8aaa0-d6cc-b7cb-7a2d-f2f1950de1a9
+  description: Report of the CCL-CCTF Frequency Standards Working Group- Presentation
+  author: F. Riehle (PTB) and P. Gill (NPL)
+  date: 02/07/2009
+- title: CCTF/2009-44
+  pdf: https://www.bipm.org/documents/20126/28436707/working-document-ID-3682/e963f6cf-ae94-e934-5075-09bcc8c36347
+  description: GPS changes - Presentation
+  author: D. Matsakis (USNO)
+  date: 02/07/2009
+- title: CCTF/2009-45
+  pdf: https://www.bipm.org/documents/20126/28436718/working-document-ID-3683/68650996-0678-4d49-9560-db48131a657c
+  description: Time and frequency activity at VNIIFTRI - Presentation
+  author: VNIIFTRI
+  date: 02/07/2009
+- title: CCTF/2009-46
+  pdf: https://www.bipm.org/documents/20126/28436729/working-document-ID-3684/f2c973d5-732d-4b83-f926-629c01740734
+  description: TFG work programme 2013-2016 - Presentation
+  author: E.F. Arias (BIPM)
+  date: 02/07/2009
+- title: CCTF/2009-47
+  pdf: https://www.bipm.org/documents/20126/28436289/working-document-ID-3685/0cde334d-080c-7909-77b3-c30458ea36ef
+  description: Improving the clock frequency prediction in TAI algorithm - Presentation
+  author: G. Panfilo and E.F. Arias (BIPM)
+  date: 02/07/2009
+- title: CCTF/2009-48
+  pdf: https://www.bipm.org/documents/20126/28436300/working-document-ID-3686/6c8127bf-6c1c-c2ab-4f1d-ea99e65cc33b
+  description: TT(BIPM) and primary frequency standards - Presentation
+  author: G. Petit (BIPM)
+  date: 02/07/2009
+- title: CCTF/2009-49
+  pdf: https://www.bipm.org/documents/20126/28436311/working-document-ID-3687/e25c1ec4-adde-1767-1104-d42d624b5a63
+  description: Report of the Working Group on TAI - Presentation
+  author: P. Tavella (INRIM)
+  date: 02/07/2009
+- title: CCTF/2009-50
+  pdf: https://www.bipm.org/documents/20126/28436322/working-document-ID-3688/6ef2137a-b395-8c16-82c2-5f2a29e83945
+  description: GLONASS Time transfer - Presentation
+  author: W. Lewandowski and Z. Jiang (BIPM)
+  date: 02/07/2009
+- title: CCTF/2009-51
+  pdf: https://www.bipm.org/documents/20126/28435930/working-document-ID-3689/522e1baf-2f79-251b-668f-a90c3b9cc67b
+  description: Characterization of relative delays of GPS/GLONASS time equipment -
+    Presentation
+  author: BIPM
+  date: 02/07/2009
+- title: CCTF/2009-52
+  pdf: https://www.bipm.org/documents/20126/28435941/working-document-ID-3690/aac90440-02b6-0de8-7ad3-98efd0b51f25
+  description: Multi-technique combination for UTC/TAI time/frequency transfers -
+    Presentation
+  author: Z. Jiang and G. Petit (BIPM)
+  date: 02/07/2009
+- title: CCTF/2009-53
+  pdf: https://www.bipm.org/documents/20126/28435955/working-document-ID-3691/4ad4a97e-e9c0-c213-1f2c-ca1e078778db
+  description: SIM Time Network - Presentation
+  author: SIM
+  date: 02/07/2009
+- title: CCTF/2009-hotels
+  pdf: https://www.bipm.org/documents/20126/28436641/working-document-ID-3343/fc6ce860-b6f0-56b0-a7f4-527c7156ced5
+  description: List of hotels
+  author: BIPM
+  date: 01/03/2009

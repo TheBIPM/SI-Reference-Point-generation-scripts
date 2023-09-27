@@ -1,0 +1,307 @@
+---
+metadata:
+  title: 16th meeting of the CCTF
+  identifier: '16'
+  date: '2004-04-02'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/16-2004
+resolutions:
+- dates:
+  - '2004-04-02'
+  subject: CCTF
+  type: recommendation
+  title: Concerning secondary representations of the second
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cc/cctf/16-2004/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF16.pdf/69d3d443-0372-9c79-cb1d-9d8851c65dd7
+  reference_name: Proceedings of the 16th CCTF (2004), 2005
+  reference_page: 38
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that the CCL/CCTF Joint Working Group (JWG) on Secondary
+      Representations of the Second in its meeting at the BIPM on 30 March 2004 discussed
+      possible candidates to be included in the list for secondary representations
+      of the second,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that this group has recommended a transition for this list,
+  - type: recognizing
+    date_effective: '2004-04-02'
+    message: "*and recognizes that* several optical frequency standards have been
+      reviewed by the JWG. Although none has been proposed at this stage, the JWG
+      believes that the rapid progress with these optical frequency standards requires
+      that they should again be reviewed at its next meeting for their possible use
+      as secondary representations of the second."
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2004-04-02'
+    message: "*supports this action,*"
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: '*recommends that* the unperturbed ground-state hyperfine quantum transition
+      of ^87^Rb may be used as a secondary representation of the second with a frequency
+      of stem:[f_(Rb) = 6 834 682 610.904 324 "Hz"] and an estimated relative standard
+      uncertainty (1 _σ_) of 3 × 10^−15^,'
+- dates:
+  - '2004-04-02'
+  subject: CCTF
+  type: recommendation
+  title: Concerning the reporting and use of primary frequency standards
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cc/cctf/16-2004/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF16.pdf/69d3d443-0372-9c79-cb1d-9d8851c65dd7
+  reference_name: Proceedings of the 16th CCTF (2004), 2005
+  reference_page: 39
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that CCTF Recommendation S 3 (1999) provides guidelines to
+      report the results of primary frequency standards and their uncertainties,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that the proper usage of primary frequency standards measurements
+      is essential to ensure a correct estimation of the scale unit of International
+      Atomic Time (TAI),
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that it is desirable that this estimation be based on a sufficient
+      number of measurements from different primary frequency standards,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that the uncertainty of each measurement should be adequately
+      documented and the methods of its estimation should be described,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that it is desirable that all primary frequency data be archived
+      and made available publicly,
+  actions:
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that laboratories that develop primary frequency standards
+      operate them on a regular basis to realize the SI second and provide to the
+      International Bureau of Weights and Measures (BIPM) results of comparisons of
+      the primary frequency standard with a clock contributing to TAI,
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that the uncertainty statements of each primary standard either
+      refer to the publication of all corrections, their methods of evaluation and
+      descriptions of all instrumentation, or itself constitute such a publication
+      [Recommendation S 3 (1999)],
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that all successive evaluations of a primary frequency standard
+      be accompanied by a report describing any changes since the first referenced
+      full evaluation, as well as all elements which are specific to each evaluation,
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that this documentation be archived by the BIPM and made publicly
+      available,
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that the evaluations be used for steering of TAI, unless deemed
+      detrimental to TAI in a mutual decision by the concerned laboratory and the
+      BIPM
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that the Working Group on the Expression of Uncertainties
+      in Primary Frequency Standards (PFS) reviews the use of all reported evaluations
+      of PFS.
+- dates:
+  - '2004-04-02'
+  subject: CCTF
+  type: recommendation
+  title: Concerning the steering of International Atomic Time (TAI)
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cc/cctf/16-2004/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF16.pdf/69d3d443-0372-9c79-cb1d-9d8851c65dd7
+  reference_name: Proceedings of the 16th CCTF (2004), 2005
+  reference_page: 40
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that TAI was defined by the General Conference on Weights
+      and Measures in 1971, complemented by the Consultative Committee for the Definition
+      of the Second in 1980,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that TAI is a realization of Terrestrial Time stem:[("TT")]
+      as defined, most recently, in Resolution B1.9 (2000) of the International Astronomical
+      Union,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that the scale unit of TAI has significantly deviated from
+      its definition over the past years,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that new primary frequency standards permit the determination
+      of this deviation with adequate uncertainty,
+  - type: considering
+    date_effective: '2004-04-02'
+    message: considering that it is advantageous that TAI provides direct traceability
+      to the SI second,
+  actions:
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that the procedure of TAI frequency steering be adapted with
+      the aim of ensuring that the estimation of the TAI scale unit conforms to its
+      definition within 3 σ uncertainty,
+  - type: recommends
+    date_effective: '2004-04-02'
+    message: recommends that this procedure be designed, in collaboration with the
+      Working Group on TAI, to minimize the impact on TAI stability.
+working_documents:
+- title: CCTF/2004-00
+  pdf: https://www.bipm.org/documents/20126/28438089/working-document-ID-1196/092a0c76-b0ce-c16f-f247-9263ad8c8059
+  description: Draft agenda
+  author: BIPM
+  date: 19/03/2004
+- title: CCTF/2004-01
+  pdf: https://www.bipm.org/documents/20126/28439161/working-document-ID-1220/1880b54a-3c1c-421e-ceb9-4e4847c0e38c
+  description: Time and Frequency Activities at the U.S. Naval Observatory
+  author: USNO
+  date: 19/03/2004
+- title: CCTF/2004-02
+  pdf: https://www.bipm.org/documents/20126/28438100/working-document-ID-1221/9603cd4a-64d6-30ff-3520-9d71c0119a90
+  description: Report to the 16th session of the Consultative Committee for Time and
+    Frequency (CCTF)
+  author: METAS - ON
+  date: 19/03/2004
+- title: CCTF/2004-03
+  pdf: https://www.bipm.org/documents/20126/28438111/working-document-ID-1222/59440267-69d6-5cf7-6fc6-bd19683cc4e4
+  description: Research activities on time and frequency
+  author: NMIJ/AIST
+  date: 19/03/2004
+- title: CCTF/2004-04
+  pdf: https://www.bipm.org/documents/20126/28438132/working-document-ID-1223/1f807c76-0df0-7dce-49ee-112afaadb000
+  description: Status Report to the 16th meeting of the CCTF on Time and Frequency
+    Activities at KRISS
+  author: KRISS
+  date: 19/03/2004
+- title: CCTF/2004-05
+  pdf: https://www.bipm.org/documents/20126/28438143/working-document-ID-1224/30c72c84-c1b2-56b6-5185-cf8fef3aa020
+  description: Time and Frequency Research Activity in NIM
+  author: Gao Xiaoxun  (NIM)
+  date: 19/03/2004
+- title: CCTF/2004-06
+  pdf: https://www.bipm.org/documents/20126/28438154/working-document-ID-1225/0da98ce1-ff4d-88b4-bf92-afa930b49043
+  description: Report to the CCTF from the National Measurement Laboratory
+  author: NML CSIRO
+  date: 19/03/2004
+- title: CCTF/2004-07
+  pdf: https://www.bipm.org/documents/20126/28438172/working-document-ID-1226/237f2809-5227-44c7-a040-ed11a467f1d1
+  description: Report from the CCTF WG on the consequences of the global MRA
+  author: G. de Jong (Chairman)
+  date: 19/03/2004
+- title: CCTF/2004-08
+  pdf: https://www.bipm.org/documents/20126/28438190/working-document-ID-1227/41536d7c-cafa-2a72-38e6-400f5b076558
+  description: Report of the VSL TF section NMi Van Swinden Laboratorium
+  author: NMi VSL
+  date: 19/03/2004
+- title: CCTF/2004-09
+  pdf: https://www.bipm.org/documents/20126/28438208/working-document-ID-1228/a5637e6f-57d9-c559-1eec-f581e5a59c9d
+  description: Report on Activities to the 16th Session of the CCTF
+  author: PTB
+  date: 19/03/2004
+- title: CCTF/2004-10
+  pdf: https://www.bipm.org/documents/20126/28438219/working-document-ID-1229/a135f162-4278-855e-ccdc-81dc1285198a
+  description: Summary of time and frequency activities at CRL
+  author: CRL
+  date: 23/03/2004
+- title: CCTF/2004-11
+  pdf: https://www.bipm.org/documents/20126/28438230/working-document-ID-1230/77012a47-f92f-4174-e338-2e8ca025ef45
+  description: Quasi-Zenith Satellite System - A new satellite positioning system
+    of Japan
+  author: CRL
+  date: 23/03/2004
+- title: CCTF/2004-12
+  pdf: https://www.bipm.org/documents/20126/28438241/working-document-ID-1231/8e2d5c84-21eb-37a9-7e1f-78bb0fad31b6
+  description: Development of a spaceborne Hidrogen Maser
+  author: CRL
+  date: 23/03/2004
+- title: CCTF/2004-13
+  pdf: https://www.bipm.org/documents/20126/28438252/working-document-ID-1232/040d765f-2755-5d25-860c-ef52bf0fdcee
+  description: 'CCTF 2004: Report of the Royal Observatory of Belgium'
+  author: P. Defraigne - ORB
+  date: 23/03/2004
+- title: CCTF/2004-14
+  pdf: https://www.bipm.org/documents/20126/28438263/working-document-ID-1233/7f3e85e1-ddc9-2cdc-dd8e-cac843a35e33
+  description: Report to the 16th session of the CCTF
+  author: IEN
+  date: 23/03/2004
+- title: CCTF/2004-15
+  pdf: https://www.bipm.org/documents/20126/28439172/working-document-ID-1235/7c06d6d1-3f9c-0f06-12e3-80da960db1c4
+  description: Report of the ROA TF Section
+  author: ROA
+  date: 25/03/2004
+- title: CCTF/2004-16
+  pdf: https://www.bipm.org/documents/20126/28438274/working-document-ID-1236/00c23b0f-b0c6-5cc2-4272-cfbd3156c0a9
+  description: IERS Conventions Centre
+  author: G. Petit (BIPM), D. McCarthy (USNO)
+  date: 25/03/2004
+- title: CCTF/2004-17
+  pdf: https://www.bipm.org/documents/20126/28438285/working-document-ID-1237/c32bb49a-d2ba-038f-84d6-0639fb205e41
+  description: A new realization of Terrestrial Time
+  author: G. Petit (BIPM)
+  date: 25/03/2004
+- title: CCTF/2004-18
+  pdf: https://www.bipm.org/documents/20126/28438296/working-document-ID-1238/ad63e209-0c2b-55b4-dd02-2be10e125210
+  description: Report of the TAI P3 experiment
+  author: G. Petit, Z. Jiang (BIPM)
+  date: 26/03/2004
+- title: CCTF/2004-19
+  pdf: https://www.bipm.org/documents/20126/28438307/working-document-ID-1239/45ba9031-eca5-4701-9b7c-2d8580b41866
+  description: Report of the BIPM Time section 2002-2004
+  author: F. Arias (BIPM)
+  date: 26/03/2004
+- title: CCTF/2004-20
+  pdf: https://www.bipm.org/documents/20126/28438318/working-document-ID-1240/efe48951-72d4-71f7-e099-d368bb80bdb4
+  description: Letter from Dr J. Hahn, ESA
+  author: J. Hahn
+  date: 29/03/2004
+- title: CCTF/2004-21
+  pdf: https://www.bipm.org/documents/20126/28438329/working-document-ID-1241/34a607f7-2de0-5ec0-0c0a-939071460c3d
+  description: Report on activities to the 16th session of the CCTF
+  author: NRC
+  date: 29/03/2004
+- title: CCTF/2004-22
+  pdf: https://www.bipm.org/documents/20126/28439183/working-document-ID-1242/9abb6020-9d9c-990a-fe6f-14c3d377f1ca
+  description: Activities of the NIST Time and Frequency Division
+  author: NIST
+  date: 29/03/2004
+- title: CCTF/2004-23
+  pdf: https://www.bipm.org/documents/20126/28439194/working-document-ID-1243/51bd1d6b-c2d0-0751-2b60-2dbeebc915fc
+  description: Contribution to the 16th CCTF
+  author: A. Clairon, N. Dimarcq, P. Uhrich  - BNM-SYRTE
+  date: 29/03/2004
+- title: CCTF/2004-24
+  pdf: https://www.bipm.org/documents/20126/28438340/working-document-ID-1244/03684912-3612-2032-6626-94cbc6ed8377
+  description: Time and Frequency activity at the IMVP FGUP "VNIIFTRI"
+  author: VNIIFTRI
+  date: 29/03/2004
+- title: CCTF/2004-25
+  pdf: https://www.bipm.org/documents/20126/28438351/working-document-ID-1252/9df25161-d774-f05c-6ee5-81928a2433b8
+  description: Report to the 16th session of the CCTF
+  author: NPL
+  date: 31/03/2004
+- title: CCTF/2004-26
+  pdf: https://www.bipm.org/documents/20126/28438362/working-document-ID-1254/8477614f-2b14-6a35-c17f-099777e4365d
+  description: BIPM GPS equipment calibration trips
+  author: W. Lewandowski, L. Tisserand - BIPM
+  date: 01/04/2004
+- title: CCTF/2004-27
+  pdf: https://www.bipm.org/documents/20126/28438472/working-document-ID-1255/ca6f47fc-3d3b-8555-c6eb-bc5da4873d29
+  description: UTC transition plan
+  author: WP-7A Special Repporteur Group - ITU-R
+  date: 03/04/2004
+- title: CCTF/2004-28
+  pdf: https://www.bipm.org/documents/20126/28438483/working-document-ID-1256/d300d192-61d0-5984-240e-cf9ab676abc4
+  description: Joint WG CCL/CCTF
+  author: F. Riehle - PTB (JWG co-chair)
+  date: 03/04/2004

@@ -1,0 +1,35 @@
+---
+metadata:
+  title: CCTF-WGGNSS
+  identifier: '2016-04-05'
+  date: '2016-04-05'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wggnss/2016-04-05
+  workgroup: cctf-wggnss
+resolutions: []
+working_documents:
+- title: CCTF-WGGNSS/EF-2016-01
+  pdf: https://www.bipm.org/documents/20126/48872896/working-document-ID-12191/b988ac03-1aee-9e4d-4260-a2cb8cef25b8
+  description: Report of the meeting
+  author: P. Defraigne and G. Petit
+  date: 26/04/2016
+- title: CCTF-WGGNSS/EF-2016-02
+  pdf: https://www.bipm.org/documents/20126/48872883/working-document-ID-12190/5246d60d-812a-8a4f-d14e-8b2f245c5bc0
+  description: Agenda
+  author: P. Defraigne and G. Petit
+  date: 26/04/2016
+- title: CCTF-WGGNSS/EF-2016-03
+  pdf: https://www.bipm.org/documents/20126/48872909/working-document-ID-12192/4d1099c0-f3e2-7eee-58a0-63b0ff419b8b
+  description: Group 1-2 calibrations for UTC
+  author: G. Petit
+  date: 26/04/2016
+- title: CCTF-WGGNSS/EF-2016-04
+  pdf: https://www.bipm.org/documents/20126/48872922/working-document-ID-12193/aec943bf-281f-e658-6276-9d1dad01a89d
+  description: Updates to CGGTTS V2E
+  author: G. Petit
+  date: 26/04/2016
+- title: CCTF-WGGNSS/EF-2016-05
+  pdf: https://www.bipm.org/documents/20126/48872935/working-document-ID-12194/1bd4c6d8-a540-61aa-d831-6a1f2612026c
+  description: Task Group Study on Long-term Comparison between GPS and TW Links
+  author: V. Zhang and Z. Jiang
+  date: 26/04/2016

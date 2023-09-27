@@ -1,0 +1,681 @@
+---
+metadata:
+  title: 19e réunion du CCTF
+  identifier: '19'
+  date: '2012-09-14'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012
+resolutions:
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Mises à jour de la liste des fréquences étalons
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 47
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant qu’une liste commune des « valeurs recommandées de fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » a été établie,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que le Groupe de travail commun au CCL et au CCTF sur les
+      étalons de fréquence a examiné plusieurs fréquences candidates en vue de leur
+      inclusion dans cette liste,
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande*
+
+      que les fréquences des transitions suivantes soient incluses ou mises à jour dans la liste des fréquences étalons recommandées :
+
+      * la transition optique non perturbée 3_s_^2^ ^1^S~0~ - 3_s_3_p_ ^3^P~0~ de l'ion de ^stem:[27^(Al)]+^, à la fréquence de stem:[f]~27Al+~ = stem:[1 121 015 393 207 857","3 "Hz"] avec une incertitude-type relative estimée de 1,9 × 10^−15^. +
+       Il est recommandé que le CIPM approuve cette radiation comme représentation secondaire de la seconde ;
+      * la transition optique non perturbée 5_d_^10^6_s_ ^2^S~1/2~ - 5_d_ ^9^6_s_^2^ ^2^D~5/2~ de l'ion de ^stem:[199^(Hg)]+^, à la fréquence de stem:[f]~199Hg+~ = stem:[1 064 721 609 899 145","3 "Hz"] avec une incertitude-type relative estimée de 1,9 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 6_s_^2^ ^1^S~0~ - 6_s_6_p_ ^3^P~0~ de l'atome neutre de ^199^Hg, à la fréquence de stem:[f]~199Hg~ = stem:[1 128 575 290 808 162 "Hz"] avec une incertitude-type relative estimée de 1,7 × 10^−14^ ;
+      * la transition optique non perturbée 6_s_ ^2^S~1/2~ - 4_f_ ^13^6_s_^2^ ^2^stem:["F"]~7/2~ de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f]~171Yb+~ (octupôle) = stem:[642 121 496 772 645","6 "Hz"] avec une incertitude-type relative estimée de 1,3 × 10^−15^. +
+       Il est recommandé que le CIPM approuve cette radiation comme représentation secondaire de la seconde ;
+      * la transition optique non perturbée 6_s_ ^2^S~1/2~ (stem:["F" = 0], stem:["m"_("F") = 0]) - 5_d_ ^2^D~3/2~ (stem:["F" = 2], stem:["m"_("F") = 0]) de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f]~171Yb+~ (quadripôle) = stem:[688 358 979 309 307","1 "Hz"] avec une incertitude-type relative estimée de 3 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 5_s_ ^2^S~1/2~ - 4_d_ ^2^D~5/2~ de l'ion de ^stem:[88^(Sr)]+^, à la fréquence de stem:[f]~88Sr+~ = stem:[444 779 044 095 485","3 "Hz"] avec une incertitude-type relative estimée de 4,0 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 4_s_ ^2^S~1/2~ - 3_d_ ^2^D~5/2~ de l'ion de ^stem:[40^(Ca)]+^, à la fréquence de stem:[f]~40Ca+~ = stem:[411 042 129 776 395 "Hz"] avec une incertitude-type relative estimée de 1,5 × 10^−14^ ;
+      * la transition optique non perturbée 1S - 2S de l'atome neutre de stem:[""_(1) "H"], à la fréquence de stem:[f_(1H) = 1 233 030 706 593 518 "Hz"] avec une incertitude-type relative estimée de 1,2 × 10^−14^. +
+       Remarque : Cette fréquence correspond à la moitié de l’écart en énergie entre les états 1S et 2S ;
+      * la transition optique non perturbée 5_s_^2^ ^1^S~0~ - 5_s_5_p_ ^3^P~0~ de l'atome neutre de ^87^Sr, à la fréquence de stem:[f_(87Sr) = 429 228 004 229 873","4 "Hz"] avec une incertitude-type relative estimée de 1 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 6_s_^2^ ^1^S~0~ - 6_s_6_p_ ^3^P~0~ de l'atome neutre de ^171^Yb, à la fréquence de stem:[f]~171Yb~ = stem:[518 295 836 590 865","0 "Hz"] vec une incertitude-type relative estimée de 2,7 × 10^−15^. +
+       Il est recommandé que le CIPM approuve cette radiation comme représentation secondaire de la seconde ;
+      * la transition quantique hyperfine non perturbée de l’état fondamental de l’atome de ^87^Rb, à la fréquence de stem:[f_(87Rb) = 6 834 682 610","904 312 "Hz"] avec une incertitude-type relative estimée de 1,3 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde).
+
+      Remarque : La valeur de l'incertitude-type est supposée correspondre à un niveau de confiance de 68 %. Toutefois, étant donné le nombre très limité de résultats disponibles, il se peut que, rétrospectivement, cela ne s'avère pas exact.
+  - type: requests
+    date_effective: '2012-09-14'
+    message: "*et requiert* l'approbation du CIPM."
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Concernant l’amélioration et la maintenance des services fournis par le Département
+    du temps du BIPM sur internet
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 49
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2012-09-14'
+    message: |-
+      *considérant*
+
+      * que le Bureau international des poids et mesures (BIPM) a amélioré de façon constante et par divers moyens la visibilité des informations qu’il fournit dans le domaine du temps et des fréquences, notamment en permettant leur téléchargement à partir du site internet du BIPM, ces informations comprenant :
+      ** les données horaires obtenues à partir d'étalons primaires et secondaires,
+      ** les données opérationnelles de comparaisons de temps,
+      ** les données de sauvegarde de comparaisons de temps,
+      ** les versions corrigées, traitées, synthétisées et combinées des données précédemment mentionnées,
+      ** les rapports sur les étalonnages des équipements de comparaison de temps,
+      ** les échelles de temps et autres produits créés à partir des données précédemment mentionnées,
+      ** les produits intermédiaires nécessaires à la création des produits officiels du BIPM,
+      ** les produits et données associés à des projets spécifiques, expérimentaux, et/ou non officiels, tels que le Temps universel coordonné rapide (UTCr),
+      ** d’autres publications,
+      * que ces informations sont fréquemment utilisées dans le cadre d'études, qu’elles soient officielles, non officielles, publiées, informelles ou pédagogiques,
+      * que ces informations sont utilisées par les fabricants souhaitant évaluer et améliorer la qualité de leurs produits,
+      * que la diffusion publique de ces informations est très utile à la communauté du temps et des fréquences, et qu’elle est essentielle pour améliorer le Temps universel coordonné (UTC),
+      * que des informations détaillées concernant l'infrastructure mise en oeuvre pour conserver le temps sont très utiles aux laboratoires lorsqu'ils réalisent pour la première fois leur UTC local,
+      * que le Département du temps du BIPM a récemment distribué un questionnaire afin de recueillir des avis sur les services qu’il fournit sur internet et qu’il a créé une base de données donnant accès (avec protection par mot de passe) à des descriptions de l'infrastructure mise en oeuvre par les laboratoires participant au calcul de l'UTC pour conserver le temps
+      * que les progrès à venir continueront à être accueillis favorablement,
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande* au Comité international des poids et mesures (CIPM) d’accroître les ressources allouées au Département du temps du BIPM afin que ses services fondés sur l’utilisation d’internet dans le domaine du temps et des fréquences puissent continuer à être améliorés et maintenus de façon à :
+
+      * recueillir chaque année des commentaires généraux et spécifiques concernant les informations qui devraient être mises à disposition, la structure des fichiers proposés sur internet, leur nomenclature et toute autre documentation, afin de prendre en compte ces commentaires,
+      * rassembler des informations, de différents types et nouvelles, sur la configuration historique et les performances observées des équipements commerciaux d'intérêt, tels qu’amplificateurs, étalons de fréquences et équipements de comparaisons de temps, qu’ils soient primaires ou redondants, transmises par les laboratoires en mesure de fournir ce type de données.
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Calcul et publication d'un UTC rapide (UTCr) de façon régulière
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 51
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que le Bureau international des poids et mesures (BIPM) a
+      conduit avec succès une expérience pilote visant à produire chaque semaine depuis
+      janvier 2012 une évaluation rapide du Temps universel coordonné (UTC), dénommée
+      « UTC rapide » ou « UTCr »,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant qu'un grand nombre de laboratoires participant au calcul
+      de l'UTC envoient également des données au BIPM pour le calcul de l'UTCr,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les laboratoires participant au calcul de l'UTC souhaitent
+      que l'UTCr devienne un produit permanent du BIPM, publié de façon régulière
+      une fois par semaine,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que le fait de contribuer à l'UTCr permet aux laboratoires du
+      temps de mieux piloter leur réalisation locale stem:["UTC" (k)] sur l’échelle
+      de référence UTC,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que les membres du personnel du Département du temps du BIPM doivent
+      continuer à assurer la publication mensuelle de la _Circulaire T_ du BIPM, qui
+      constitue le seul moyen d'établir la traçabilité des réalisations locales stem:["UTC"
+      (k)] à l'UTC,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que la production et la publication de l'UTCr, de façon régulière
+      et dans les délais, imposent des contraintes de temps significatives aux membres
+      du personnel du Département du temps du BIPM et requièrent un moyen de dissémination
+      fiable,
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande au BIPM*
+
+      * de poursuivre le projet pilote d'évaluation de l'UTCr et de présenter un rapport au Groupe de travail du CCTF sur le Temps atomique international (TAI) en 2013 afin que la possibilité de transformer l'UTCr en un produit courant opérationnel soit examinée,
+      * de continuer à disséminer l'UTCr en veillant à ce que les données soient publiées en temps voulu, dans un format approprié et définitif, de façon à ce que l'utilisation généralisée de l'UTCr soit soutenue et encouragée,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande par ailleurs au Comité international des poids et mesures (CIPM)*
+
+      * que des efforts soient déployés afin d'améliorer les équipements du BIPM nécessaires à l'échange, au calcul et à la distribution des données,
+      * que les ressources humaines nécessaires pour assurer le calcul et la publication de l'UTCr de façon régulière soient maintenues.
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Sur la mise à niveau des équipements des systèmes globaux de navigation par
+    satellite (GNSS) utilisés dans les laboratoires de temps contribuant au Temps
+    universel coordonné (UTC) vers des systèmes de réception multifréquences et multiconstellations
+    et leur étalonnage
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 52
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les étalons atomiques de fréquence ont atteint une stabilité
+      et une exactitude sans précédent et que d'autres progrès dans ce domaine sont
+      en cours,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que le fait de pouvoir comparer ces étalons afin de réaliser
+      l'UTC dépend de l'exactitude et de la précision des méthodes de comparaisons
+      de temps fondées sur des équipements du GNSS,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les données des satellites du Global Positioning System
+      (GPS) jouent un rôle important dans les comparaisons de temps et de fréquences,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que la constellation du GLONASS est désormais terminée et
+      qu'une modernisation du système GLONASS est en cours,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que le déploiement de la constellation européenne de Galileo
+      a commencé en 2011 et devrait s'achever ces prochaines années,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que la République populaire de Chine a commencé à lancer
+      des satellites BeiDou/COMPASS dans le cadre d'applications régionales et que
+      la constellation BeiDou/COMPASS déployée au niveau international sera opérationnelle
+      dans les années à venir,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les incertitudes résultant de l'étalonnage des équipements
+      des laboratoires de temps ont un impact significatif sur les comparaisons internationales
+      de temps et, plus particulièrement, sur l'exactitude du calcul de l'UTC,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que des comparaisons de temps fondées sur les mesures de
+      code et de phase des porteuses aux deux fréquences du GPS sont utilisées pour
+      certaines liaisons horaires dans le calcul de l'UTC,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que les coûts associés à l'acquisition, l'installation, la mise
+      en oeuvre et l'entretien des équipements sont inférieurs au prix d'achat d'un
+      étalon de fréquence au césium,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que de nombreux logiciels capables de traiter les données de mesure
+      de code et de phase des porteuses à deux fréquences existent ou sont en cours
+      d'élaboration,
+  - type: noting
+    date_effective: '2012-09-14'
+    message: notant que certains de ces algorithmes permettent déjà de combiner les
+      données des systèmes du GPS et du GLONASS,
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: recommande aux laboratoires participant au calcul de l'UTC de mettre
+      à niveau leurs équipements afin de passer à des systèmes de réception multifréquences
+      et multiconstellations permettant d’effectuer des mesures de code et des mesures
+      de phase des porteuses,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: recommande aux organismes mettant au point des logiciels pour les comparaisons
+      de temps de mettre à niveau leurs solutions multirécepteurs et multiconstellations,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: recommande au BIPM d’élaborer en collaboration avec les organisations
+      régionales de métrologie des directives concernant l’étalonnage des nouveaux
+      équipements multifréquences et multiconstellations,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: recommande au BIPM de continuer à organiser et conduire, dans les laboratoires,
+      des campagnes de mesure des retards de ces nouveaux équipements du GNSS, avec
+      le soutien des organisations régionales de métrologie pour ce qui concerne les
+      comparaisons régionales,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: recommande à l'ensemble des laboratoires, et en particulier à ceux jouant
+      un rôle unique dans le calcul du Temps atomique international (TAI) tels que
+      les laboratoires pivots et ceux contribuant directement à la Section 5 de la
+      _Circulaire T_ du BIPM, de fournir des données obtenues à partir d'au moins
+      trois récepteurs GNSS traçables à leur réalisation locale de l'UTC, ce qui permettrait
+      de vérifier la stabilité des retards de leurs équipements.
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Déploiement des réseaux de comparaisons de temps et de fréquences par fibre
+    optique à l'échelle continentale et soutien vis-à-vis des études sur l’amélioration
+    des comparaisons horaires intercontinentales
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 54
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que l’exactitude et la stabilité des étalons optiques de
+      fréquence mis au point dans des laboratoires partout dans le monde ne cessent
+      de s’améliorer,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant qu’il est nécessaire d'effectuer des comparaisons régulières
+      des étalons optiques de fréquence car elles jouent un rôle essentiel dans la
+      préparation d'une redéfinition de la seconde, ainsi que dans d'autres applications
+      telles que la participation au calcul des échelles de temps,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les techniques de comparaison de temps et de fréquences
+      utilisées de façon courante dans le monde entier afin de produire le Temps atomique
+      international (TAI) ne présentent pas une stabilité suffisante pour comparer
+      les étalons optiques de fréquence les plus performants,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant qu'il a été démontré que les liaisons par fibre optique permettent
+      de réaliser des comparaisons des étalons de fréquence parmi les plus performants
+      avec la stabilité requise, sur des distances de l'ordre de stem:[1000 "km"],
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que les liaisons par fibre optique améliorent la robustesse
+      des réseaux de comparaisons de temps et de fréquences car ces liaisons sont
+      indépendantes des systèmes globaux de navigation par satellite (GNSS) et des
+      méthodes de comparaison de temps et de fréquences par aller et retour sur satellite,
+  - type: considering
+    date_effective: '2012-09-14'
+    message: considérant que certains projets de recherche sont mis en œuvre afin
+      d’étudier d'autres méthodes de comparaisons de temps et de fréquences qui permettraient
+      d'améliorer de façon significative les comparaisons intercontinentales,
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande*
+
+      * aux laboratoires nationaux de métrologie, aux fournisseurs de réseaux à fibre optique, aux agences spatiales, aux gouvernements nationaux, aux organisations régionales de métrologie, au Comité international des poids et mesures (CIPM), à l'Union internationale des télécommunications (UIT) et aux autres organismes concernés :
+      ** de poursuivre avec vigueur le déploiement des réseaux de comparaisons de temps et de fréquences par fibre optique à l'échelle continentale,
+      ** d'encourager et de soutenir activement les travaux de recherche visant à améliorer de façon significative les comparaisons de temps et de fréquences sur des distances intercontinentales,
+      ** de se consulter et de coordonner leurs actions afin d’accéder aux infrastructures nécessaires pour mettre en œuvre les nouvelles méthodes de comparaisons de temps et de fréquences, et afin d’identifier les synergies de ces infrastructures avec d'autres applications,
+      * au BIPM de participer activement à ces avancées, notamment en préparant les données de comparaisons d'horloges effectuées à l’aide des nouvelles méthodes de comparaisons de temps et de fréquences afin que ces données puissent être utilisées pour la réalisation des échelles de temps.
+- dates:
+  - '2012-09-14'
+  subject: CCTF
+  type: recommendation
+  title: Contribution du Comité consultatif du temps et des fréquences (CCTF) à l’obtention
+    d’une échelle de temps de référence continue
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cc/cctf/19-2012/resolution-6
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF19.pdf/14d2725e-0aa7-359a-af4a-66e01aeaa69d
+  reference_name: Comptes rendus du 19e CCTF (2012), 2012
+  reference_page: 56
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: having / having regard
+    date_effective: '2012-09-14'
+    message: |-
+      *ayant examiné*
+
+      les termes de la Résolution 653 (CMR-12) intitulée « Avenir de l'échelle de temps universel coordonné », adoptée par la Conférence mondiale des radiocommunications (CMR) en 2012, qui invite la CMR de l'Union internationale des télécommunications (UIT) en 2015
+  - type: taking into account
+    date_effective: '2012-09-14'
+    message: |-
+      _« à envisager la possibilité d'obtenir une échelle de temps de référence continue, en modifiant le temps UTC ou en utilisant une autre méthode, et à prendre les mesures voulues à cet égard, compte tenu des études de l'UIT-R^1^ »_
+
+      et prie le secrétaire général de l'Union internationale des télécommunications
+  actions:
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande que les points suivants soient pris en compte dans la mise en œuvre d'une échelle de temps continue*
+
+      . il est possible d'obtenir une échelle de temps continue : le BIPM réalise et maintient une telle échelle de temps,
+      . l'UTC sans discontinuités dues à l’insertion de secondes intercalaires constitue une échelle de temps de référence continue,
+      . les concepts de continuité et d'uniformité doivent s’appliquer strictement aux échelles de temps de référence,
+      . l'unité d'une grandeur métrologique quelle qu’elle soit est unique, c'est pourquoi une échelle de temps spécifique devrait être unique,
+      . lors de la redéfinition d’une grandeur métrologique, l’invariance de son unité doit être assurée ; en ce qui concerne la seconde du Système international d'unités (SI), l'échelle correspondante doit être continue et uniforme,
+      . le terme « coordonné » dans « Temps universel coordonné » implique que les laboratoires nationaux de métrologie coordonnent leurs efforts pour l’établir, et ne se réfère en rien à la direction du Soleil par rapport à une position donnée à la surface de la Terre,
+      . le terme « universel » dans « Temps universel coordonné » signifie que l'échelle de temps doit être utilisée partout dans le monde,
+      . la dénomination « Temps universel coordonné » doit être conservée dans le cas d'une nouvelle définition de l'UTC sans insertion de secondes intercalaires,
+      . l'angle UT1 qui permet de relier les systèmes de référence terrestres et célestes ne doit pas être considéré comme une échelle de temps mais comme l'angle qui caractérise la rotation irrégulière de la Terre,
+      . le Service international de la rotation terrestre et des systèmes de référence (IERS) permet d’accéder à UT1 en temps réel en mettant régulièrement à disposition des prédictions de UT1 - UTC avec une précision 100 000 fois supérieure à l'approximation brute UT1 = UTC actuellement établie en faisant correspondre UTC à UT1 à 0,9 seconde près,
+      . il est nécessaire d'encourager une dissémination plus large d'UT1 - UTC,
+  - type: recommends
+    date_effective: '2012-09-14'
+    message: |-
+      *recommande par ailleurs*
+
+      au Comité international des poids et mesures (CIPM) et à l'Union internationale des télécommunications - secteur Radiocommunications (UIT-R) d'examiner la possibilité de former un groupe de travail commun afin d'étudier comment coordonner les actions qui seront nécessaires pour définir une échelle de temps continue de référence mondiale.
+
+      ^1^ Union internationale des télécommunications - secteur Radiocommunications
+  x-unparsed:
+  - "« de porter [la Résolution 653] à l'attention des organisations concernées, telles
+    que [...] la Conférence générale des poids et mesures (CGPM), le Comité consultatif
+    du temps et des fréquences (CCTF), le Bureau international des poids et mesures
+    (BIPM) […] »,"
+working_documents:
+- title: CCTF/2012-00
+  pdf: https://www.bipm.org/documents/20126/28435127/working-document-ID-5256/ebdbe300-28b8-3112-9523-d7fbb2c6d323
+  description: Schedule of meetings
+  author: F. Arias (BIPM)
+  date: 19/08/2012
+- title: CCTF/2012-01
+  pdf: https://www.bipm.org/documents/20126/28435138/working-document-ID-5257/ce39da16-a60c-11f5-17bc-c81d9585d3bc
+  description: Agenda of the 19th meeting of the CCTF
+  author: L. Erard (CIPM), F. Arias (CCTF)
+  date: 19/08/2012
+- title: CCTF/2012-02
+  pdf: https://www.bipm.org/documents/20126/28435281/working-document-ID-5258/7b51406e-eca9-935a-ee61-6670119dedc2
+  description: VNIIFTRI report on activities
+  author: VNIIFTRI
+  date: 19/08/2012
+- title: CCTF/2012-03
+  pdf: https://www.bipm.org/documents/20126/28435798/working-document-ID-5259/4b1451f0-4cdb-e352-ae44-7d68d4c7481c
+  description: Revised versions of Guidelines 2 and 3
+  author: CCTF WG MRA
+  date: 20/08/2012
+- title: CCTF/2012-04
+  pdf: https://www.bipm.org/documents/20126/28435149/working-document-ID-5261/12d9fce3-14fe-c119-70b0-0be79d4a82c1
+  description: Uncertainty in Frequency
+  author: G. Panfilo (BIPM), F. Cordara (CCTF WG MRA)
+  date: 20/08/2012
+- title: CCTF/2012-05
+  pdf: https://www.bipm.org/documents/20126/28435160/working-document-ID-5262/d20deabb-9f01-7250-3c75-ea1a68f6774c
+  description: The prediction uncertainty
+  author: G. Panfilo (BIPM), F. Cordara (CCTF WG MRA)
+  date: 20/08/2012
+- title: CCTF/2012-06
+  pdf: https://www.bipm.org/documents/20126/28435171/working-document-ID-5263/6b2cfc43-2f7b-8a39-e7a1-700b88407190
+  description: USNO report on activities
+  author: USNO
+  date: 20/08/2012
+- title: CCTF/2012-07
+  pdf: https://www.bipm.org/documents/20126/28435182/working-document-ID-5264/03fbf334-13b1-9a83-db1d-296919adfbda
+  description: NICT report on activities
+  author: NICT
+  date: 20/08/2012
+- title: CCTF/2012-08
+  pdf: https://www.bipm.org/documents/20126/28435193/working-document-ID-5265/02680e49-4c60-e228-38e8-cc83c3a21d31
+  description: Proposal of recommendation, corrected version 12/09/2012
+  author: D. Matsakis (USNO)
+  date: 20/08/2012
+- title: CCTF/2012-09
+  pdf: https://www.bipm.org/documents/20126/28436751/working-document-ID-5266/3fc16169-8cc8-3500-3af8-e7f501fcaad3
+  description: Proposal for a new structure of CCTF WGs and chairs
+  author: CCTF WG on Strategic Planning
+  date: 20/08/2012
+- title: CCTF/2012-10
+  pdf: https://www.bipm.org/documents/20126/28435204/working-document-ID-5267/48672c13-f7a3-cf6c-a32a-e3b07d27e7cf
+  description: Letter from the ITU General Secretary to the Director of the BIPM on
+    the future of UTC
+  author: ITU
+  date: 20/08/2012
+- title: CCTF/2012-11
+  pdf: https://www.bipm.org/documents/20126/28435776/working-document-ID-5269/d06555b0-2324-e112-379f-41a4749892a4
+  description: Report of the CCTF WG on the MRA
+  author: F. Cordara
+  date: 28/08/2012
+- title: CCTF/2012-12
+  pdf: https://www.bipm.org/documents/20126/28435215/working-document-ID-5270/17749d59-3b9d-c9c0-08f3-5b797c1e5e1d
+  description: Report of the CGGTTS
+  author: J. Levine (NIST)
+  date: 28/08/2012
+- title: CCTF/2012-13
+  pdf: https://www.bipm.org/documents/20126/28435292/working-document-ID-5271/eb7144e3-a67b-5323-1260-c91f27d6edf9
+  description: NMIJ report on activities
+  author: NMIJ
+  date: 28/08/2012
+- title: CCTF/2012-14
+  pdf: https://www.bipm.org/documents/20126/28435457/working-document-ID-5272/03edfcd3-3013-ae46-85a4-4c6f9bc6a2c7
+  description: 'Resolution 1 of the 24th CGPM: On the possible future revision of
+    the International System of Units, the SI'
+  author: 24th CGPM
+  date: 29/08/2012
+- title: CCTF/2012-15
+  pdf: https://www.bipm.org/documents/20126/28435468/working-document-ID-5274/8fbba9d8-1d92-ea34-7ff9-1613f4d65ea5
+  description: PTB report on activities
+  author: PTB
+  date: 29/08/2012
+- title: CCTF/2012-16
+  pdf: https://www.bipm.org/documents/20126/28435226/working-document-ID-5275/df646aad-5635-12d3-3775-8a19e8e72a06
+  description: SIM report on activities
+  author: M. Lopez (CENAM)
+  date: 02/09/2012
+- title: CCTF/2012-17
+  pdf: https://www.bipm.org/documents/20126/28435237/working-document-ID-5276/3f50ae7b-253b-b27d-ebf1-1372e05c4828
+  description: CENAM report on activities
+  author: CENAM
+  date: 02/09/2012
+- title: CCTF/2012-18
+  pdf: https://www.bipm.org/documents/20126/28436784/working-document-ID-5277/862142ef-37e9-e0d5-9115-16d07408ff44
+  description: LNE-SYRTE report on activities
+  author: LNE-SYRTE
+  date: 03/09/2012
+- title: CCTF/2012-19
+  pdf: https://www.bipm.org/documents/20126/28435303/working-document-ID-5278/37a34c71-bbf0-7dd3-4e36-d1686c80ccad
+  description: Report of the CCFT WG on TWSTFT
+  author: D. Piester (PTB)
+  date: 04/09/2012
+- title: CCTF/2012-20
+  pdf: https://www.bipm.org/documents/20126/28435314/working-document-ID-5279/c0b5acb0-05ff-ac48-4e82-834c1b97d88c
+  description: ORB report on activities
+  author: ORB
+  date: 04/09/2012
+- title: CCTF/2012-21
+  pdf: https://www.bipm.org/documents/20126/28436520/working-document-ID-5280/1814153a-0846-99fd-b253-2d8db112fab1
+  description: Programme of work of the BIPM Time Department for 2013-2015
+  author: F. Arias
+  date: 04/09/2012
+- title: CCTF/2012-22
+  pdf: https://www.bipm.org/documents/20126/28436531/working-document-ID-5281/98e0cca3-cbad-ebba-9426-a0c11e7a9831
+  description: TL report on activities
+  author: TL
+  date: 04/09/2012
+- title: CCTF/2012-23
+  pdf: https://www.bipm.org/documents/20126/28436542/working-document-ID-5282/d39baaaa-4c1b-c26c-3217-15adaf84f458
+  description: KRISS report on activities
+  author: KRISS
+  date: 04/09/2012
+- title: CCTF/2012-24
+  pdf: https://www.bipm.org/documents/20126/28435325/working-document-ID-5293/60a48030-34cb-5815-a3c5-2baf431087cd
+  description: 'UTCr: a rapid realization of UTC'
+  author: BIPM
+  date: 06/09/2012
+- title: CCTF/2012-25
+  pdf: https://www.bipm.org/documents/20126/28434819/working-document-ID-5294/c59562b0-0c5c-bcf2-2d76-884ae1bcec3e
+  description: Terms of reference of the CCTF WG on TWSTFT (proposed)
+  author: D. Piester (PTB)
+  date: 06/09/2012
+- title: CCTF/2012-26
+  pdf: https://www.bipm.org/documents/20126/28435809/working-document-ID-5295/ef7b97c2-cf54-619c-3158-81bc1913ea5d
+  description: SP report on activities
+  author: SP
+  date: 06/09/2012
+- title: CCTF/2012-27
+  pdf: https://www.bipm.org/documents/20126/28436223/working-document-ID-5296/8191d92a-0359-fb25-c87b-6885ad958291
+  description: Report on SP-MIKES fibre link
+  author: K. Jaldehag (SP)
+  date: 06/09/2012
+- title: CCTF/2012-28
+  pdf: https://www.bipm.org/documents/20126/28436234/working-document-ID-5297/0bc932be-4deb-55bd-37eb-be6abf9228a2
+  description: NPL report on activities
+  author: NPL
+  date: 06/09/2012
+- title: CCTF/2012-29
+  pdf: https://www.bipm.org/documents/20126/28434830/working-document-ID-5300/6d78d9ca-4000-fd86-79c6-cac9a5db4eaa
+  description: METAS report on activities
+  author: METAS
+  date: 06/09/2012
+- title: CCTF/2012-30
+  pdf: https://www.bipm.org/documents/20126/28435336/working-document-ID-5306/89c32391-2d1b-4cb5-0ca8-ac36be2837ea
+  description: NMISA report on activities
+  author: NMISA
+  date: 07/09/2012
+- title: CCTF/2012-31
+  pdf: https://www.bipm.org/documents/20126/28435347/working-document-ID-5307/925b261e-0e9a-4749-5cfc-4cc537c3d259
+  description: INRIM report on activities
+  author: INRIM
+  date: 07/09/2012
+- title: CCTF/2012-32
+  pdf: https://www.bipm.org/documents/20126/28435358/working-document-ID-5308/ae7fe6b1-0989-f361-43e1-556458c493a3
+  description: NPLI report on activities
+  author: NPLI
+  date: 07/09/2012
+- title: CCTF/2012-33
+  pdf: https://www.bipm.org/documents/20126/28436553/working-document-ID-5309/969ad981-0411-49f7-f7fb-82131cbef661
+  description: NIST report on activities
+  author: NIST
+  date: 07/09/2012
+- title: CCTF/2012-34
+  pdf: https://www.bipm.org/documents/20126/28436564/working-document-ID-5310/97e3ad86-f0e8-634f-9e4a-17117a5faacb
+  description: NRC report on activities
+  author: NRC
+  date: 07/09/2012
+- title: CCTF/2012-35
+  pdf: https://www.bipm.org/documents/20126/28434841/working-document-ID-5311/37aef57b-2203-b9cd-7485-27c735151171
+  description: Proposal of recommendation - Development of continental-scale fibre
+    optical time and frequency networks...
+  author: CCFT WG on ATFT
+  date: 10/09/2012
+- title: CCTF/2012-36
+  pdf: https://www.bipm.org/documents/20126/28436575/working-document-ID-5313/eb865ea8-0717-d706-8750-57ca86560366
+  description: VSL report on activities
+  author: VSL
+  date: 10/09/2012
+- title: CCTF/2012-37
+  pdf: https://www.bipm.org/documents/20126/28434852/working-document-ID-5314/68539f98-9845-bee7-4e71-8e1f8ec715dc
+  description: NIM report on activities
+  author: NIM
+  date: 11/09/2012
+- title: CCTF/2012-38
+  pdf: https://www.bipm.org/documents/20126/28436586/working-document-ID-5315/b89a1edb-792e-d8b5-d584-30e319437de3
+  description: APMP report on activities
+  author: Huang-Tien Lin and Chia-Shu Liao (TL)
+  date: 11/09/2012
+- title: CCTF/2012-39
+  pdf: https://www.bipm.org/documents/20126/28436795/working-document-ID-5316/aeec835c-b238-0708-5daa-3291a6a40160
+  description: ROA report on activities
+  author: ROA
+  date: 11/09/2012
+- title: CCTF/2012-40
+  pdf: https://www.bipm.org/documents/20126/28434863/working-document-ID-5317/7069094b-9b3a-89cb-92d1-98d379f7f0c8
+  description: Proposal of reccomendation on  the upgrade and calibration of GNSS
+    equipment in the timing laboratories
+  author: CGGTTS
+  date: 12/09/2012
+- title: CCTF/2012-41
+  pdf: https://www.bipm.org/documents/20126/28434874/working-document-ID-5318/a5b9a62e-d1e5-b623-8630-282860950d2a
+  description: Report of the CCTF WG on TAI
+  author: P. Tavella (INRIM)
+  date: 12/09/2012
+- title: CCTF/2012-42
+  pdf: https://www.bipm.org/documents/20126/28434885/working-document-ID-5319/cf251364-b246-dc77-e44a-fcb250b058c6
+  description: Report of the CCTF WG on PFS
+  author: T. Parker (NIST)
+  date: 13/09/2012
+- title: CCTF/2012-43
+  pdf: https://www.bipm.org/documents/20126/28436597/working-document-ID-5320/78f486bf-2fb0-1055-9492-ed0a8d8409d0
+  description: Report of the CCTF WG ATFT
+  author: P. Tuckey (LNE-SYRTE)
+  date: 13/09/2012
+- title: CCTF/2012-44
+  pdf: https://www.bipm.org/documents/20126/28434896/working-document-ID-5374/6a470f28-2d57-f5aa-01ce-08d5ff7c7339
+  description: IGS Clock products Working Group
+  author: K. Senior (IGS)
+  date: 06/10/2012
+- title: CCTF/2012-45
+  pdf: https://www.bipm.org/documents/20126/28436806/working-document-ID-5375/e12b2064-8c1c-3b5c-b5ce-7f06e5fb504d
+  description: Report on activities - BIPM Time Department
+  author: F. Arias (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-46
+  pdf: https://www.bipm.org/documents/20126/28435479/working-document-ID-5376/f48d4a82-ddba-66ab-eb87-900992a47357
+  description: Multi-technique combination for UTC/TAI time and frequency transfer
+  author: Z. Jiang, G. Petit, W. Lewandowski (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-47
+  pdf: https://www.bipm.org/documents/20126/28436817/working-document-ID-5377/caf0fa3b-16d3-bbcb-2b28-56c325d0a230
+  description: Improvements in ALGOS
+  author: G. Panfilo (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-48
+  pdf: https://www.bipm.org/documents/20126/28433444/working-document-ID-5378/ecc0a106-7c16-eb91-d7ef-d01ce9df1826
+  description: Frequency standards in TAI and realization of TT(BIPM)
+  author: G. Petit, G. Panfilo (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-49
+  pdf: https://www.bipm.org/documents/20126/28433455/working-document-ID-5379/56799d8a-370d-6571-cd16-3959a2ab0563
+  description: UTCr - A rapid realization of UTC
+  author: BIPM Time Department
+  date: 06/10/2012
+- title: CCTF/2012-50
+  pdf: https://www.bipm.org/documents/20126/28436828/working-document-ID-5380/c4655bd3-342b-6302-8e21-7c6eb28d0acb
+  description: 'GNSS processing techniques: review of some topics for the coming years'
+  author: G. Petit (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-51
+  pdf: https://www.bipm.org/documents/20126/28435490/working-document-ID-5381/193e8bca-430b-42dc-4fba-dd4977098b0b
+  description: GPS and GLONASS P3 combination
+  author: A. Harmegnies (BIPM), P. Defraigne (ORB)
+  date: 06/10/2012
+- title: CCTF/2012-52
+  pdf: https://www.bipm.org/documents/20126/28436839/working-document-ID-5382/603c969e-53de-6ee5-7454-0f55e3bf6c61
+  description: Report of the CCTF WG on the MRA (presentation)
+  author: F. Cordara (INRIM)
+  date: 06/10/2012
+- title: CCTF/2012-53
+  pdf: https://www.bipm.org/documents/20126/28436850/working-document-ID-5383/de15e256-96ff-e46a-b221-d9c3c4c6b3b6
+  description: The uncertainty in frequency and the prediction uncertainty
+  author: G. Panfilo (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-54
+  pdf: https://www.bipm.org/documents/20126/28434907/working-document-ID-5384/f74b2dc6-95e8-2dcb-9647-a4ed7dcf53be
+  description: Report of the IERS Conventions Centre
+  author: G. Petit (BIPM), B. Luzum (USNO)
+  date: 06/10/2012
+- title: CCTF/2012-55
+  pdf: https://www.bipm.org/documents/20126/28434918/working-document-ID-5385/c83c008d-59e2-668e-fece-a571a7febb6f
+  description: Time Department programme of work and budget 2013-2015 and plans for
+    2016-2019
+  author: F. Arias (BIPM)
+  date: 06/10/2012
+- title: CCTF/2012-56
+  pdf: https://www.bipm.org/documents/20126/28434929/working-document-ID-5386/556ad876-8e19-4f72-2c28-12c630ce50bd
+  description: The future of the UTC time scale
+  author: R. Beard (ITU-R)
+  date: 07/10/2012
+- title: CCTF/2012-57
+  pdf: https://www.bipm.org/documents/20126/28434940/working-document-ID-5387/1d6bff01-2565-f7a2-b38e-51fc91e95317
+  description: Possible redefinition of UTC
+  author: F. Arias (BIPM)
+  date: 07/10/2012
+- title: CCTF/2012-58
+  pdf: https://www.bipm.org/documents/20126/28434951/working-document-ID-5390/09dbe842-ac25-9137-f864-be13a3fc85c6
+  description: Summary elements for consideration - Coordinated Universal Time (UTC)
+  author: B. Nelson
+  date: 07/10/2012
+- title: CCTF/2012-59
+  pdf: https://www.bipm.org/documents/20126/28436861/working-document-ID-5391/95c84363-1a1c-9fa9-e7a3-f936508298b8
+  description: Report of the CCL-CCTF Frequency Standards Working Group
+  author: F. Riehle (PTB), P. Gill (NPL)
+  date: 07/10/2012

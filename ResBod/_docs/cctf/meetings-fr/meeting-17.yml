@@ -1,0 +1,273 @@
+---
+metadata:
+  title: 17e réunion du CCTF
+  identifier: '17'
+  date: '2006-09-15'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006
+resolutions:
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Valeurs recommandées des fréquences étalons destinées à la mise en pratique
+    de la définition du mètre et aux représentations secondaires de la seconde
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 33
+  considerations: []
+  actions: []
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Au sujet des représentations secondaires de la seconde
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 34
+  considerations: []
+  actions: []
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Au sujet de l’utilisation des mesures de l’unité d’échelle du Temps atomique
+    international (TAI)
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 35
+  considerations: []
+  actions: []
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Au sujet de l’utilisation des techniques de mesure de la phase de la porteuse
+    du Global Navigation Satellite System (GNSS) pour les comparaisons de temps et
+    de fréquence du Temps atomique international (TAI)
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 36
+  considerations: []
+  actions: []
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Amélioration des comparaisons de temps utilisant le Global Navigation Satellite
+    System (GNSS)
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 37
+  considerations: []
+  actions: []
+- dates:
+  - '2006-09-15'
+  subject: CCTF
+  type: recommendation
+  title: Coordination de la mise au point de techniques avancées de comparaison de
+    temps et de fréquences
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cc/cctf/17-2006/resolution-6
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF17.pdf/490a8599-68fe-2e16-ccb6-b4c26854d118
+  reference_name: Comptes rendus du 17e CCTF (2006), 2007
+  reference_page: 38
+  considerations: []
+  actions: []
+working_documents:
+- title: CCTF/2006-01
+  pdf: https://www.bipm.org/documents/20126/28439667/working-document-ID-2224/416bc054-798b-6acb-d14a-d3fc43ad94b4
+  description: Draft agenda
+  author: BIPM
+  date: 26/04/2006
+- title: CCTF/2006-02
+  pdf: https://www.bipm.org/documents/20126/28426359/working-document-ID-2240/e78d4281-65f9-48e1-54ad-35cb9f09d2e6
+  description: Report to the 17th Session of the CCTF
+  author: INRIM
+  date: 28/07/2006
+- title: CCTF/2006-03
+  pdf: https://www.bipm.org/documents/20126/28426381/working-document-ID-2247/f363bf4a-5d1a-c4a9-3ec3-7a810cc28c71
+  description: Status report to the 17th Meeting of the CCTF on time and frequency
+    activities at KRISS
+  author: KRISS
+  date: 15/08/2006
+- title: CCTF/2006-04
+  pdf: https://www.bipm.org/documents/20126/28426392/working-document-ID-2248/797391a3-2721-5977-c61a-15e3577e4981
+  description: Time and frequency at the US Naval Observatory
+  author: D. Matsakis
+  date: 15/08/2006
+- title: CCTF/2006-05
+  pdf: https://www.bipm.org/documents/20126/28437924/working-document-ID-2249/0c1fb24b-184f-fa43-f3d8-3792fe705615
+  description: Research on time and frequency at NMIJ/AIST
+  author: NMIJ/AIST
+  date: 15/08/2006
+- title: CCTF/2006-06
+  pdf: https://www.bipm.org/documents/20126/28439403/working-document-ID-2250/0046f147-8613-18f1-61f2-58e8c732421f
+  description: Optimizing the configuration of time transfer links for TAI
+  author: D. Matsakis et al.
+  date: 15/08/2006
+- title: CCTF/2006-07
+  pdf: https://www.bipm.org/documents/20126/28437539/working-document-ID-2251/019c9327-daf9-923c-a280-cb9e02ebf2af
+  description: Report on activities to the 17th session of the CCTF
+  author: PTB
+  date: 15/08/2006
+- title: CCTF/2006-08
+  pdf: https://www.bipm.org/documents/20126/28438494/working-document-ID-2252/73cfe65c-cd2e-7870-9433-a5ea5c74e25c
+  description: Proposed recommendation - Concerning the use of measurements of the
+    TAI scale unit
+  author: T. Parker, BIPM
+  date: 18/08/2006
+- title: CCTF/2006-09
+  pdf: https://www.bipm.org/documents/20126/28437935/working-document-ID-2253/99df9bc2-e981-85f4-255e-90094a55196f
+  description: Summary of time and frequency activities at NICT
+  author: NICT
+  date: 18/08/2006
+- title: CCTF/2006-10
+  pdf: https://www.bipm.org/documents/20126/28437946/working-document-ID-2254/c1901464-e375-df73-aed8-925b6c9790c0
+  description: New generation system of Japan Standard Time at NICT
+  author: NICT
+  date: 18/08/2006
+- title: CCTF/2006-11
+  pdf: https://www.bipm.org/documents/20126/28437968/working-document-ID-2255/bbde1a05-33df-f5c2-9b14-e83100e00082
+  description: Time and frequency activity at the IMVP FGUP "VNIIFTRI"
+  author: VNIIFTRI
+  date: 18/08/2006
+- title: CCTF/2006-12
+  pdf: https://www.bipm.org/documents/20126/28437550/working-document-ID-2256/d494baf4-f025-1c4e-808b-c48c34edf621
+  description: Proposed recommendation - Concerning unification of the reference frames
+    of global navigation systems
+  author: VNIIFTRI
+  date: 18/08/2006
+- title: CCTF/2006-13
+  pdf: https://www.bipm.org/documents/20126/28437561/working-document-ID-2259/76c5d688-f377-913b-a617-2d767b14ee61
+  description: Report to the 17th Session of the CCTF - Working Group on Primary Frequency
+    Standards
+  author: T. Parker
+  date: 19/08/2006
+- title: CCTF/2006-14
+  pdf: https://www.bipm.org/documents/20126/28426414/working-document-ID-2265/ba7594d5-0082-ce80-3851-f3e1a9962512
+  description: 'CCTF 2006: Report of the Royal Observatory of Belgium'
+  author: P. Defraigne
+  date: 29/08/2006
+- title: CCTF/2006-15
+  pdf: https://www.bipm.org/documents/20126/28426469/working-document-ID-2267/638e1a3e-c64c-69fc-46ad-c0dda9d138b6
+  description: Report to the 17th Session of the CCTF - CCL/CCTF Joint WG on Secondary
+    Representations of the Second
+  author: F. Riehle, P. Gill
+  date: 03/09/2006
+- title: CCTF/2006-16
+  pdf: https://www.bipm.org/documents/20126/28437572/working-document-ID-2270/de205166-e610-0f62-6ffa-8ca9de93528e
+  description: Progress Report  from the CCTF WG on the consequences of the global
+    MRA
+  author: G. de Jong
+  date: 05/09/2006
+- title: CCTF/2006-17
+  pdf: https://www.bipm.org/documents/20126/28426645/working-document-ID-2273/3f6359f1-4822-57c2-06d0-44da6fce8246
+  description: Comparison of GPS all-in-view and common-view
+  author: J. Levine
+  date: 06/09/2006
+- title: CCTF/2006-18
+  pdf: https://www.bipm.org/documents/20126/28437583/working-document-ID-2274/905c93cc-59fb-8779-dd03-c07964425cd6
+  description: Report of the CGGTTS
+  author: J. Levine
+  date: 06/09/2006
+- title: CCTF/2006-19
+  pdf: https://www.bipm.org/documents/20126/28439678/working-document-ID-2282/91695536-3dda-7205-4a23-78e165e3088e
+  description: Proposed recommendation - Concerning the use of GNSS carrier phase
+    techniques for time and frequency transfer in TAI
+  author: D. Matsakis, F. Arias
+  date: 07/09/2006
+- title: CCTF/2006-20
+  pdf: https://www.bipm.org/documents/20126/28437836/working-document-ID-2283/d6b5647b-2dc4-f5dc-415f-dcb4b64d042f
+  description: Contribution to the 17th CCTF, September 2006
+  author: LNE-SYRTE
+  date: 07/09/2006
+- title: CCTF/2006-21
+  pdf: https://www.bipm.org/documents/20126/28437847/working-document-ID-2288/0de38a71-ae23-fdbc-ccdb-1057673edfae
+  description: Report on activities to the 17th Session of the CCTF
+  author: NRC
+  date: '08/09/2006'
+- title: CCTF/2006-22
+  pdf: https://www.bipm.org/documents/20126/28437660/working-document-ID-2290/dcf7a65e-7931-8ae4-7d22-2fcacaa4e87b
+  description: TWSTFT Annual Report 2006
+  author: B. Klepczynski
+  date: '08/09/2006'
+- title: CCTF/2006-23
+  pdf: https://www.bipm.org/documents/20126/28437858/working-document-ID-2291/5780c815-5aca-bed9-e92c-40bed452b6f8
+  description: Report to the 17th Meeting of the CCTF - Activities of the NIST Time
+    and Frequency Division
+  author: NIST
+  date: '08/09/2006'
+- title: CCTF/2006-24
+  pdf: https://www.bipm.org/documents/20126/28437869/working-document-ID-2292/fbbeab5f-9c61-c1b4-3335-ff59b90c4b24
+  description: Report to the 17th Session of the CCTF
+  author: METAS
+  date: '08/09/2006'
+- title: CCTF/2006-25
+  pdf: https://www.bipm.org/documents/20126/28437880/working-document-ID-2293/7174d056-f4bc-f226-e46d-718a82a04554
+  description: Report of the NPL to the 17th Session of the CCTF
+  author: NPL
+  date: '08/09/2006'
+- title: CCTF/2006-26
+  pdf: https://www.bipm.org/documents/20126/28437682/working-document-ID-2298/ca359420-09b0-65ee-7eab-fa149f2d544b
+  description: Report of the BIPM Time section for the period 2004-2006
+  author: E.F. Arias
+  date: 10/09/2006
+- title: CCTF/2006-27
+  pdf: https://www.bipm.org/documents/20126/28437726/working-document-ID-2306/89fff674-7751-9f5e-8a82-10be8dcbb2e1
+  description: Proposed recommendation 1 from CCL-CCTF JWG on secondary representations
+    of the second
+  author: CCL-CCTF JWG
+  date: 13/09/2006
+- title: CCTF/2006-28
+  pdf: https://www.bipm.org/documents/20126/28437737/working-document-ID-2307/b3f04262-018a-2f3a-024a-b1e494ca2bcc
+  description: Proposed recommendation 2 from CCL-CCTF JWG on secondary representations
+    of the second
+  author: CCL-CCTF JWG
+  date: 13/09/2006
+- title: CCTF/2006-29
+  pdf: https://www.bipm.org/documents/20126/28437748/working-document-ID-2308/b32606d7-039f-291b-ca19-cfd9920722c7
+  description: Proposed recommendation - Improvement to GNSS time transfer
+  author: J. Levine, CGGTTS
+  date: 13/09/2006
+- title: CCTF/2006-30
+  pdf: https://www.bipm.org/documents/20126/28437759/working-document-ID-2309/7ccaed0e-34ee-d796-ef66-7941a508bc22
+  description: Proposed recommendation - Re-organisation of the CCTF Working Group
+    on TAI
+  author: CCTF WG on TAI
+  date: 14/09/2006
+- title: CCTF/2006-32
+  pdf: https://www.bipm.org/documents/20126/28439645/working-document-ID-2312/118543d2-2c89-8892-88e6-d300e6367f1d
+  description: Report to the CCTF from the National Measurement Institute, Australia
+  author: NMIA
+  date: 14/09/2006
+- title: CCTF/2006-33
+  pdf: https://www.bipm.org/documents/20126/28439656/working-document-ID-2313/63070fea-554f-685a-855b-d906aa73af95
+  description: Report of the NMi VSL TF section
+  author: NMi VSL
+  date: 14/09/2006
+- title: CCTF/2006-34
+  pdf: https://www.bipm.org/documents/20126/28437803/working-document-ID-2319/d355b852-6e90-e7c6-52af-964a025d1673
+  description: Report of the CCTF WG on the International Atomic Time - Presentation
+  author: P. Tavella
+  date: 18/09/2006
+- title: CCTF/2006-35
+  pdf: https://www.bipm.org/documents/20126/28439689/working-document-ID-2322/ec78c82e-f2be-a850-0f0c-73d25d57d372
+  description: Report of the IGS Clock Products Working Group - Presentation
+  author: K. Senior
+  date: 20/09/2006
+- title: CCTF/2006-36
+  pdf: https://www.bipm.org/documents/20126/28438710/working-document-ID-2462/4206d852-9e98-8dc4-4d42-fa601e319ee5
+  description: Declaration CCTF 1(2006) - Re-organization of the CCTF WG on TAI
+  author: CCTF WG on TAI
+  date: 02/02/2007

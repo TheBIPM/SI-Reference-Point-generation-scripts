@@ -1,0 +1,70 @@
+---
+metadata:
+  title: CCL-CCTF-WGFS
+  identifier: '2007-09-10'
+  date: '2007-09-11'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/ccl-cctf-wgfs/2007-09-10
+  workgroup: ccl-cctf-wgfs
+resolutions: []
+working_documents:
+- title: CCTF-WGFS/2007-01
+  pdf: https://www.bipm.org/documents/20126/48883493/working-document-ID-3318/ab0bcdb3-26c2-bd45-5f33-f53f0cd02719
+  description: Draft Agenda
+  author: BIPM
+  date: 27/07/2007
+- title: CCTF-WGFS/2007-02
+  pdf: https://www.bipm.org/documents/20126/48883506/working-document-ID-3320/c15ac0fd-70b4-71b7-d067-b47e3ca4f4b8
+  description: Questionnaire
+  author: P. Gill, F. Riehle
+  date: 27/07/2007
+- title: CCTF-WGFS/2007-03
+  pdf: https://www.bipm.org/documents/20126/48883519/working-document-ID-3332/8af4ec6f-cea5-aa5d-0ca1-53f9e58d1c2b
+  description: NPL Response to the Questionnaire
+  author: P. Gill
+  date: 28/08/2007
+- title: CCTF-WGFS/2007-04
+  pdf: https://www.bipm.org/documents/20126/48883688/working-document-ID-3361/a4686093-bd19-89ad-ffb7-3a6551216994
+  description: PTB Response to the Questionnaire
+  author: F. Riehle
+  date: 03/09/2007
+- title: CCTF-WGFS/2007-08
+  pdf: https://www.bipm.org/documents/20126/48883597/working-document-ID-3367/4361ebbd-e395-f1ad-78fb-c66eafc1d6ab
+  description: NMIJ Questionnaire 2007
+  author: F.-L. Hong
+  date: 06/09/2007
+- title: CCTF-WGFS/2007-11
+  pdf: https://www.bipm.org/documents/20126/48883610/working-document-ID-3368/84b6c950-ebae-e344-cc59-42b440a5d28e
+  description: Traceability issues in Length
+  author: N. Brown, L. Robertsson
+  date: 06/09/2007
+- title: CCTF-WGFS/2007-12
+  pdf: https://www.bipm.org/documents/20126/48883623/working-document-ID-3369/912a42d3-c7da-133a-bbb5-2c4cc7d2ed50
+  description: CMI Response to the Questionnaire
+  author: P. Balling
+  date: 06/09/2007
+- title: CCTF-WGFS/2007-13
+  pdf: https://www.bipm.org/documents/20126/48883636/working-document-ID-3370/acca1592-4ad0-9a08-8101-f5385a90a7ad
+  description: LNE-SYRTE Questionnaire 2007
+  author: P. Lemonde
+  date: 06/09/2007
+- title: CCTF-WGFS/2007-14
+  pdf: https://www.bipm.org/documents/20126/48883701/working-document-ID-3375/4b3f5ead-30bc-6ada-d610-89687861ff19
+  description: INRIM Questionnaire 2007
+  author: A. Godone
+  date: 07/09/2007
+- title: CCTF-WGFS/2007-15
+  pdf: https://www.bipm.org/documents/20126/48883714/working-document-ID-3376/ca2b4bdc-6a00-111c-cffc-61f2240119d4
+  description: CENAM Questionnaire 2007
+  author: J. M. Lopez Romero, M. Viliesid Alonso
+  date: 07/09/2007
+- title: CCTF-WGFS/2007-16
+  pdf: https://www.bipm.org/documents/20126/48883727/working-document-ID-3377/df689c80-972a-a724-560d-78f2d9d97abd
+  description: NRC-INMS Questionnaire 2007
+  author: A. Madej
+  date: 07/09/2007
+- title: CCTF-WGFS/2007-21
+  pdf: https://www.bipm.org/documents/20126/48883753/working-document-ID-3387/50bbfee0-6986-f7b3-8bb5-a588c79e3e0a
+  description: NIST Questionnaire 2007
+  author: J. Bergquist
+  date: 10/09/2007

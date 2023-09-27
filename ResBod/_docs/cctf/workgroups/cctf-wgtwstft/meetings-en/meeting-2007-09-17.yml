@@ -1,0 +1,175 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2007-09-17'
+  date: '2007-09-19'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wgtwstft/2007-09-17
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2007-01
+  pdf: https://www.bipm.org/documents/20126/48877941/working-document-ID-3472/46338dbc-2492-86c0-e591-f377bdd99906
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 24/09/2007
+- title: CCTF-WGTWSTFT/2007-02
+  pdf: https://www.bipm.org/documents/20126/48877954/working-document-ID-2975/d2656404-a5d9-8dab-e282-4b93d3460f9e
+  description: List of Hotels
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-03
+  pdf: https://www.bipm.org/documents/20126/48877967/working-document-ID-2976/38ddb0be-7765-8ac8-362c-0099401ac687
+  description: Access to METAS
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-04
+  pdf: https://www.bipm.org/documents/20126/48877980/working-document-ID-2977/b29fb5a6-11cd-11a2-cd6d-91abae3c8f61
+  description: Plan of tram lines
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-05
+  pdf: https://www.bipm.org/documents/20126/48878103/working-document-ID-2978/0e70e85e-efa5-fa46-0354-8fa5c437fc98
+  description: Tram 9 Bahnhof-Gurtenbahn
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-06
+  pdf: https://www.bipm.org/documents/20126/48878125/working-document-ID-2979/405f3ff0-d12e-245b-29a0-503aff89cd33
+  description: Tram 9 Eichholz-Bahnhof
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-07
+  pdf: https://www.bipm.org/documents/20126/48878138/working-document-ID-2980/109488ac-f502-70d1-7b38-735dc1bb722c
+  description: Bus 29 Gurtenbahn-Lindenweg
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-08
+  pdf: https://www.bipm.org/documents/20126/48878151/working-document-ID-2981/80b58a65-3c0f-a2ae-693d-18e8e555f752
+  description: Bus 29 Lindenweg-Eichholz
+  author: METAS
+  date: 02/03/2007
+- title: CCTF-WGTWSTFT/2007-09
+  pdf: https://www.bipm.org/documents/20126/48878164/working-document-ID-3390/a67fb64d-12cd-90d0-9e88-bd7935dcf2c7
+  description: Draft Agenda
+  author: B. Klepczynski
+  date: 10/09/2007
+- title: CCTF-WGTWSTFT/2007-13
+  pdf: https://www.bipm.org/documents/20126/48878177/working-document-ID-3454/68546f6d-4148-c5a3-22fb-62599cbddc22
+  description: VSL Report
+  author: NMi-VSL
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-14
+  pdf: https://www.bipm.org/documents/20126/48878190/working-document-ID-3455/bbf55075-131c-29d5-5530-58947072c249
+  description: USNO Report
+  author: J. Hirschauer, D. Matsakis
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-15
+  pdf: https://www.bipm.org/documents/20126/48878203/working-document-ID-3456/254afb7d-4faa-c396-8c5d-78b9063461d6
+  description: TL Report
+  author: C. Lin
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-16
+  pdf: https://www.bipm.org/documents/20126/48877993/working-document-ID-3457/34f9e646-c7fa-cfb5-5eef-2f38a0757b34
+  description: SP Report
+  author: C. Rieck and K. Jaldehag
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-17
+  pdf: https://www.bipm.org/documents/20126/48878387/working-document-ID-3458/6a63bae8-c2a9-8c52-6d40-e1e09377a0a7
+  description: ROA Report
+  author: ROA
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-18
+  pdf: https://www.bipm.org/documents/20126/48878413/working-document-ID-3460/a1c1904a-4726-8e02-645e-bb9a929c8d1d
+  description: PTB Report
+  author: D. Piester
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-19
+  pdf: https://www.bipm.org/documents/20126/48878006/working-document-ID-3461/1e31dc8d-e0ba-343e-f788-b36109f4e3a2
+  description: OCA Report
+  author: F. Baumont, JL Oneto, E. Samain, H. Viot
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-20
+  pdf: https://www.bipm.org/documents/20126/48878216/working-document-ID-3462/86790d52-663f-a8cc-5996-b2398910f3df
+  description: NTSC
+  author: Li Huanxin
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-21
+  pdf: https://www.bipm.org/documents/20126/48878229/working-document-ID-3463/8aace73f-6e61-2dba-bd2b-18caac313b98
+  description: NPL Report
+  author: P. Whibberley
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-22
+  pdf: https://www.bipm.org/documents/20126/48878242/working-document-ID-3464/64165bcc-17d8-05af-485a-1d1ae87c8c40
+  description: NMIJ
+  author: T. Suzuyama
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-23
+  pdf: https://www.bipm.org/documents/20126/48878255/working-document-ID-3465/aa667582-5393-3eb2-692a-71085f5cfdf6
+  description: NIST
+  author: T. Parker
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-24
+  pdf: https://www.bipm.org/documents/20126/48878268/working-document-ID-3466/b07bbd71-6419-b826-16a5-dd62a2bcb598
+  description: NICT Report
+  author: NICT
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-25
+  pdf: https://www.bipm.org/documents/20126/48878281/working-document-ID-3467/a5556b33-3749-855a-6e9b-b029dda8858e
+  description: METAS Report
+  author: Ch. Schlunegger
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-26
+  pdf: https://www.bipm.org/documents/20126/48878294/working-document-ID-3468/26565892-2f77-b88e-b592-f38257e9715c
+  description: LNE-SYRTE
+  author: J. Achkar, D. Rovera
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-27
+  pdf: https://www.bipm.org/documents/20126/48878313/working-document-ID-3469/96e2405c-b786-0846-a516-5b12ad4d6da2
+  description: INRIM Report
+  author: L. Lorini, Sesia
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-28
+  pdf: https://www.bipm.org/documents/20126/48878335/working-document-ID-3470/d6762443-8f6f-b84a-60eb-db914ddd123c
+  description: AOS Report
+  author: J. Nawrocki, P. Ligï¿½za
+  date: 21/09/2007
+- title: CCTF-WGTWSTFT/2007-29
+  pdf: https://www.bipm.org/documents/20126/48878071/working-document-ID-3473/733ba1e0-867e-929d-4af0-2f372bbed87d
+  description: Asia-Europe link
+  author: NICT
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-30
+  pdf: https://www.bipm.org/documents/20126/48878348/working-document-ID-3474/91e9e419-67f9-0370-6f96-be61da2b45ca
+  description: Summary of Satsim
+  author: SP
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-31
+  pdf: https://www.bipm.org/documents/20126/48878084/working-document-ID-3475/fb7b00fd-72f9-bf01-0c68-8502f0b89ba3
+  description: Tone ranging
+  author: TimeTech
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-32
+  pdf: https://www.bipm.org/documents/20126/48878019/working-document-ID-3476/790f4487-835b-ccc9-0b1c-41b39b723346
+  description: Spacecraft link
+  author: TimeTech
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-33
+  pdf: https://www.bipm.org/documents/20126/48878032/working-document-ID-3477/25da3552-9558-643c-61fd-47d2a6cef824
+  description: ITU Format
+  author: D. Piester
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-34
+  pdf: https://www.bipm.org/documents/20126/48878045/working-document-ID-3478/c897d936-0e18-5574-addc-59f01ad75dd5
+  description: Comments on Intelsat
+  author: D. Piester
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-35
+  pdf: https://www.bipm.org/documents/20126/48878058/working-document-ID-3479/b60e035b-123c-2c3c-becf-4a0d0e9c8e97
+  description: NICT modem
+  author: NICT
+  date: 25/09/2007
+- title: CCTF-WGTWSTFT/2007-36
+  pdf: https://www.bipm.org/documents/20126/48878361/working-document-ID-3480/90c838e9-ca58-26af-c6b1-d863748f8498
+  description: BIPM Report
+  author: Z. Jiang, W. Lewandowski
+  date: 25/09/2007

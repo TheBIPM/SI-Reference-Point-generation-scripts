@@ -1,0 +1,462 @@
+---
+metadata:
+  title: 15th meeting of the CCTF
+  identifier: '15'
+  date: '2001-06-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001
+resolutions:
+- dates:
+  - '2001-06-21'
+  subject: CCTF
+  type: recommendation
+  title: Secondary representations of the second
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF15.pdf.zip/3ed996a5-2d27-a360-e4d0-3a785613a8aa
+  reference_name: Proceedings of the 15th CCTF (2001), 2001
+  reference_page: 132
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2001-06-21'
+    message: |-
+      *considering that*
+
+      * the present definition of the second, based on the caesium-133 atom, remains unchanged,
+       +
+      * there are a number of new atoms and ions being studied as potential bases for atomic frequency standards,
+       +
+      * new optical-frequency measurement concepts may allow the use of optical transitions as practical frequency standards, since they provide for a direct microwave output from such standards,
+       +
+      * new frequency standards based on other microwave transitions are being studied,
+       +
+      * one of these new standards could eventually be considered as the basis for a new definition of the second;
+  actions:
+  - type: instructs
+    date_effective: '2001-06-21'
+    message: "*intends* to examine and approve accurate frequency measurements of
+      atom and ion transition frequencies made relative to the caesium frequency standard
+      as secondary representations of the second,"
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that a list of such secondary representations of the second
+      be established,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that the requirements for documentation of uncertainty that
+      apply to secondary representations of the second be the same as those for primary
+      caesium standards for use in International Atomic Time.
+- dates:
+  - '2001-06-21'
+  subject: CCTF
+  type: recommendation
+  title: Time and frequency comparisons using Global Positioning System (GPS) phase
+    and code measurements
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF15.pdf.zip/3ed996a5-2d27-a360-e4d0-3a785613a8aa
+  reference_name: Proceedings of the 15th CCTF (2001), 2001
+  reference_page: 133
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that the International GPS Service (IGS) has established
+      an infrastructure of a global observing network, a data distribution system,
+      a robust analysis methodology and high-quality products,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that a joint IGS/BIPM Pilot Project has been established
+      to study time and frequency comparisons using GPS phase and code measurements,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that calibration methods are being developed to exploit fully
+      the capabilities of these techniques for time comparisons;
+  actions:
+  - type: thanks / expresses-appreciation
+    date_effective: '2001-06-21'
+    message: "*fully supports* the joint IGS/BIPM Pilot Project;"
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: and recommends that timing laboratories participate in the IGS by installing
+      appropriate GPS receivers and by following the IGS standards and procedures
+      to the greatest extent possible,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: and recommends that appropriate methods be exploited to calibrate the
+      instrumental delays relating the receiver internal reference to the external
+      clock,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: and recommends that the IGS reference for clock products be aligned as
+      much as possible with Coordinated Universal Time (UTC),
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: and recommends that the timing laboratories and the BIPM take the necessary
+      steps to allow the IGS to achieve this goal.
+- dates:
+  - '2001-06-21'
+  subject: CCTF
+  type: recommendation
+  title: The meaning of the designation "<i>k</i>" in UTC(<i>k</i>) and TAI(<i>k</i>)
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF15.pdf.zip/3ed996a5-2d27-a360-e4d0-3a785613a8aa
+  reference_name: Proceedings of the 15th CCTF (2001), 2001
+  reference_page: 134
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that the International Bureau of Weights and Measures (BIPM)
+      forms International Atomic Time (TAI) and, together with the International Earth
+      Rotation Service (IERS), maintains Coordinated Universal Time (UTC) through
+      the contributed timing data from institutes throughout the world,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that there is a need for a specific international notation
+      for time scales to avoid all ambiguity as to their traceability to the international
+      time references of the BIPM,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that Recommendation ITU-R stem:["TF"].536-1 (1978, 1998)
+      “Time Scale Notations” has established notation UTC(k) for time scales realized
+      by institute “stem:[k]”;
+  - type: noting
+    date_effective: '2001-06-21'
+    message: |-
+      *Notes appended to Recommendation CCTF 3 (2001)*
+
+      . The institutes participating in the formation of TAI are:
+      .. the national metrology institutes and designated laboratories participating in the CIPM Mutual Recognition Arrangement (MRA) and
+      .. other institutes and observatories of the Member States of the Metre Convention and Associates of the CGPM officially nominated to keep time scales for scientific, navigational or astronomical purposes.
+      . It is suggested that TAIstem:[(k)] be defined by the relation stem:[TAI(k) = UTC(k)] + _DTAI_, where _DTAI_ is the number of integral seconds specified by the IERS as being the difference between UTC and TAI.
+  actions:
+  - type: affirms / reaffirming
+    date_effective: '2001-06-21'
+    message: '*concurs with* Recommendation ITU-R stem:["TF"].536-1 (1978, 1998) “Time
+      Scale Notations”; but'
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: "*recommends* that henceforth the designation of the institute “stem:[k]”
+      refers only to those institutes that participate in the formation of TAI and
+      appear in Section 1, [stem:[UTC - UTC(k)]], of the monthly BIPM _Circular T_;"
+  - type: requests
+    date_effective: '2001-06-21'
+    message: "*requests* the Director of the BIPM to write to the Director of the
+      ITU-R to notify ITU-R of the recommendation above, and to seek ITU-R consideration
+      for the adoption of nomenclature TAIstem:[(k)] analogous to that of stem:[\"UTC\"
+      (k)].\n\n "
+- dates:
+  - '2001-06-21'
+  subject: CCTF
+  type: recommendation
+  title: Calibration of time links for International Atomic Time
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF15.pdf.zip/3ed996a5-2d27-a360-e4d0-3a785613a8aa
+  reference_name: Proceedings of the 15th CCTF (2001), 2001
+  reference_page: 135
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that previous recommendations of the Consultative Committee
+      for the Definition of the Second (CCDS) and the Consultative Committee for Time
+      and Frequency (CCTF) have stressed the importance of the calibration of time-transfer
+      equipment to ensure the accuracy of time links,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that improvements in clock technology and in time transfer
+      techniques have resulted in better stability for ensemble time scales, particularly
+      for International Atomic Time (TAI),
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that uncompensated changes of the hardware delays in a time
+      link may cause a significant instability in an ensemble time scale like TAI;
+  actions:
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that absolute and differential calibration methods be continued
+      to be developed and put into operation for all time transfer techniques used
+      in TAI computation, with the aim of achieving 1 ns standard uncertainty,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that laboratories participating in TAI carry out regular calibration
+      exercises and continuous monitoring of time-transfer equipment,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that techniques used for the time links of TAI be independently
+      calibrated.
+- dates:
+  - '2001-06-21'
+  subject: CCTF
+  type: recommendation
+  title: Technical guidelines for manufacturers of Global Navigation Satellite Systems
+    receivers used for timing
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cc/cctf/15-2001/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF15.pdf.zip/3ed996a5-2d27-a360-e4d0-3a785613a8aa
+  reference_name: Proceedings of the 15th CCTF (2001), 2001
+  reference_page: 136
+  approvals:
+  - message: The Consultative Committee for Time and Frequency,
+  considerations:
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that the common-view method for observing satellites in the
+      Global Positioning System (GPS) and the Global Navigation Satellite System (GLONASS)
+      provides one of the most precise and accurate methods of time comparison between
+      remote clocks on and close to the Earth, and is used for the formation of the
+      international time references International Atomic Time (TAI) and Cordinated
+      Universal Time (UTC),
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that the uncertainty of this method due to space factors,
+      such as satellite ephemerides and ionospheric delays, and other sources of uncertainty,
+      with the exception of receiver hardware, is close to 1 ns,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that other methods using global navigation satellite systems
+      data for time and frequency transfer are under development that may provide
+      even smaller uncertainty,
+  - type: considering
+    date_effective: '2001-06-21'
+    message: considering that the main source of uncertainty of these methods is instability
+      of time receiving hardware, being frequently of several nanoseconds for short
+      periods (several days) and in extreme cases reaching up to tens of nanoseconds;
+  - type: noting
+    date_effective: '2001-06-21'
+    message: |-
+      *Note appended to Recommendation CCTF 5 (2001)*
+
+      The CGGTTS technical guidelines are available in working documents of the 15th CCTF meeting.
+  - type: noting
+    date_effective: '2001-06-21'
+    message: "*_Note:_* The guidelines have since been updated again. The latest version
+      is available at https://doi.org/10.1088/0026-1394/52/6/G1[_Metrologia_ (2015)
+      *52* G1]"
+  actions:
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that the manufacturers of receivers used for timing adopt
+      the CCTF Group on Global navigation satellite systems Time Transfer Standards
+      (CGGTTS) technical guidelines for receiver hardware for use in time and frequency
+      transfer,
+  - type: recommends
+    date_effective: '2001-06-21'
+    message: recommends that timing laboratories pay particular attention to the conditions
+      under which their time receiving equipment operates.
+  notes: |-
+    The CGGTTS technical guidelines are available as a working document of the 15th CCTF:
+
+
+
+    https://www.bipm.org/documents/20126/28425908/working-document-ID-281/976c26c9-80b2-6bc2-ff6b-29f0d8f84a7e[CCTF/2001-36]
+working_documents:
+- title: CCTF/2001-01a
+  pdf: https://www.bipm.org/documents/20126/28425457/working-document-ID-85/f89b8646-870e-58bf-2e58-a6d64a63ef78
+  description: NIST (United States).- Report to the 15th meeting of the CCTF on the
+    activities of the NIST Time and Frequency Division
+  author: ''
+- title: CCTF/2001-01b
+  pdf: https://www.bipm.org/documents/20126/28425611/working-document-ID-198/76136b32-dbb4-3add-73b8-c02b238c3572
+  description: NIST (United States).- Recommendation Concerning the Realization of
+    the Second
+  author: ''
+- title: CCTF/2001-02a
+  pdf: https://www.bipm.org/documents/20126/28425468/working-document-ID-86/bd7e078e-fc28-9fee-a547-3ea244e60683
+  description: CRL (Japan). - Summary of time and frequency activities at CRL
+  author: ''
+- title: CCTF/2001-02b
+  pdf: https://www.bipm.org/documents/20126/28425732/working-document-ID-276/540110b6-e84f-08a4-2ed1-69a2cce46421
+  description: CRL (Japan). - PowerPoint presentation
+  author: ''
+- title: CCTF/2001-03
+  pdf: https://www.bipm.org/documents/20126/28425479/working-document-ID-87/c8a5c0a7-b6da-8b05-c7ce-463ef5d57846
+  description: METAS, ON (Switzerland). - Report to the 15th session of the Consultative
+    Committee for Time and Frequency (CCTF), 20-21 June 2001
+  author: G.Dudle, P.Thomann
+- title: CCTF/2001-04
+  pdf: https://www.bipm.org/documents/20126/28425490/working-document-ID-88/a1d2f702-61d3-cbc2-601a-08577bb017bd
+  description: NPLI (India). - Status report of time and frequency activities of National
+    Physical Laboratories, New Delhi, India
+  author: ''
+- title: CCTF/2001-05
+  pdf: https://www.bipm.org/documents/20126/28425501/working-document-ID-89/cd19e075-776f-770c-dbe7-e10924e86825
+  description: KRISS (Korea). - Report to the 15th session of the Consultative Committee
+    for Time and Frequency (CCTF)
+  author: ''
+- title: CCTF/2001-06
+  pdf: https://www.bipm.org/documents/20126/28425512/working-document-ID-90/f483b32c-12e9-a49a-6a76-acca06c6e841
+  description: ORB (Belgium). - Report of the Royal Observatory of Belgium
+  author: P.Defraigne
+- title: CCTF/2001-07a
+  pdf: https://www.bipm.org/documents/20126/28425523/working-document-ID-91/f0de7b5e-a768-e452-1c7e-5121fba2a4f7
+  description: IGS/BIPM. - IGS/BIPM pilot project to study time and frequency comparisons
+    using GPS phase and code measurements
+  author: ''
+- title: CCTF/2001-07b
+  pdf: https://www.bipm.org/documents/20126/28425534/working-document-ID-92/a64abbee-9c81-ab40-6eda-0f6ae44f1ed5
+  description: IGS/BIPM. - Progress in carrier phase time transfer
+  author: J.Ray et al.
+- title: CCTF/2001-08
+  pdf: https://www.bipm.org/documents/20126/28425545/working-document-ID-141/9127d39c-7e29-bcae-97e0-7f618f169fa1
+  description: VNIIFTRI (Russia) - VNIIFTRI
+  author: ''
+  date: 15/05/2001
+- title: CCTF/2001-09
+  pdf: https://www.bipm.org/documents/20126/28425556/working-document-ID-153/09708c5b-f0a7-727f-cd2e-c8376fca2f7f
+  description: NRLM (Japan) - Research activities on Time and Frequency; National
+    Metrology Institute of Japan / AIST (Formerly called "National Research Laboratoty
+    of Metrology")
+  author: ''
+  date: 16/05/2001
+- title: CCTF/2001-10
+  pdf: https://www.bipm.org/documents/20126/28425567/working-document-ID-154/7a6344e6-b4fe-b027-cbf8-6b7893993540
+  description: USNO (United States) - Draft CCTF recommendation
+  author: D.McCarthy
+- title: CCTF/2001-11
+  pdf: https://www.bipm.org/documents/20126/28425589/working-document-ID-193/1fdec250-212a-f990-942f-c363379cf164
+  description: NML(AUS) (Australia) - Report to CCTF from the National Measurement
+    Laboratory CSIRO Australia
+  author: ''
+- title: CCTF/2001-12
+  pdf: https://www.bipm.org/documents/20126/28425600/working-document-ID-194/f3a25bff-ce33-6036-91f0-731fc50e1afb
+  description: PTB (Germany) - Report on Activities to the 15th Session of the Consultative
+    Committee for Time and Frequency, June 2001
+  author: ''
+- title: CCTF/2001-13
+  pdf: https://www.bipm.org/documents/20126/28425622/working-document-ID-200/51090b4b-a4a3-b8ad-1d67-4577bf080e99
+  description: TUG (Austria) - Report to the 15th Meeting of the Consultative Committee
+    for Time and Frequency (CCTF), June 2001
+  author: D.Kirchner
+- title: CCTF/2001-14
+  pdf: https://www.bipm.org/documents/20126/28425633/working-document-ID-201/2d70243a-2801-6b2a-f8bf-f2248d7c7696
+  description: BIPM - A revised way of fixing an upper limit to clock weights in TAI
+    computation
+  author: J. Azoubib
+  date: 29/05/2001
+- title: CCTF/2001-15
+  pdf: https://www.bipm.org/documents/20126/28425644/working-document-ID-206/d038f2a3-a0c3-c58f-4f14-95c8a59fa67f
+  description: IEN (Italy) - Report to the 15th session of the CCTF, Istituto Elettrotecnico
+    Nazionale "G. Ferraris"
+  author: ''
+- title: CCTF/2001-16
+  pdf: https://www.bipm.org/documents/20126/28425655/working-document-ID-207/27e6b848-0b59-f00c-6797-211a6837fade
+  description: URSI - URSI Commission J Working Group questionnaire concerning leap
+    seconds in UTC
+  author: ''
+  date: 06/06/2001
+- title: CCTF/2001-17
+  pdf: https://www.bipm.org/documents/20126/28425578/working-document-ID-155/559a2b7b-dac3-1d61-1af2-0fd1308133c7
+  description: ITU Radiocommunication study groups - Report of the activities of the
+    Special Rapporteur Group 7A on the future of UTC
+  author: ''
+- title: CCTF/2001-18
+  pdf: https://www.bipm.org/documents/20126/28425666/working-document-ID-212/c61b7526-7dab-7dbc-4962-082f22a35da5
+  description: NMi VSL - Contribution of the NMi Van Swinden Laboratorium, period
+    1999-2001
+  author: G. de Jong
+- title: CCTF/2001-19
+  pdf: https://www.bipm.org/documents/20126/28425677/working-document-ID-213/d765b7a2-0080-0432-911e-acb9e4b8eb40
+  description: CCTF Working Group on the consequences of the global MRA - Draft Report
+    and Proposals from the CCTF WGMRA
+  author: G. de Jong, chairman
+- title: CCTF/2001-20
+  pdf: https://www.bipm.org/documents/20126/28425688/working-document-ID-214/3c950e3a-db4c-9ce3-5d44-1bdbe48ed7f7
+  description: BIPM - Calibration of time links for TAI
+  author: ''
+- title: CCTF/2001-21
+  pdf: https://www.bipm.org/documents/20126/28425699/working-document-ID-218/ac5d2a45-f75c-8ab2-dec7-6d978c83a0be
+  description: BIPM - Use of primary frequency standards for estimating the duration
+    of the scale unit of TAI
+  author: ''
+- title: CCTF/2001-22
+  pdf: https://www.bipm.org/documents/20126/28425710/working-document-ID-219/63947be3-ecc4-33eb-a169-cd3c96722077
+  description: BIPM - A rapid computation of a prediction of TAI and UTC
+  author: ''
+- title: CCTF/2001-23
+  pdf: https://www.bipm.org/documents/20126/28425721/working-document-ID-220/96df4fa0-e218-43b8-1bdc-83a989f2ce5d
+  description: BIPM/IAU JCR - BIPM/IAU Joint Committee on relativity for space-time
+    reference systems and metrology
+  author: G. Petit, chairman
+- title: CCTF/2001-24
+  pdf: https://www.bipm.org/documents/20126/28425743/working-document-ID-221/d01c7dcf-8c77-8aae-d579-6323507a8c84
+  description: IERC/CPC - IERS Conventions Product Centre, report
+  author: G. Petit, co-director
+- title: CCTF/2001-25
+  pdf: https://www.bipm.org/documents/20126/28425754/working-document-ID-222/600c402c-9de5-7f8c-3f4d-c11b7053134e
+  description: BNM-LPTF/LHA - Contribution to the 15th CCTF
+  author: M. Granveaud and N. Dimarcq
+- title: CCTF/2001-26
+  pdf: https://www.bipm.org/documents/20126/28425765/working-document-ID-224/9f6935ab-6149-5b09-b3d2-8c7ea85db79a
+  description: BIPM - Publication of the BIPM TWSTFT reports and introduction of TWSTFT
+    into the construction of TAI
+  author: J.Azoubib, W. Lewandowski
+- title: CCTF/2001-27
+  pdf: https://www.bipm.org/documents/20126/28425776/working-document-ID-225/725d5de6-cc35-4543-bfdb-4dac599beeda
+  description: NIST - Letter of the chairman of the Committee on GPS and GLONASS Time
+    Transfer Standards
+  author: J. Levine
+- title: CCTF/2001-28
+  pdf: https://www.bipm.org/documents/20126/28425787/working-document-ID-226/4ae97333-fb7a-25a2-89e2-6537dd80c674
+  description: Sub-WG on Algorithms - Working Group on TAI, Sub-Working Group on Algorithms
+    - Report
+  author: P.Tavella
+- title: CCTF/2001-29
+  pdf: https://www.bipm.org/documents/20126/28425798/working-document-ID-227/c2f2bebb-bd35-bab4-f8a8-1c460b394027
+  description: BIPM - Report of the BIPM Time section 1999-2001
+  author: E.F.Arias
+- title: CCTF/2001-30
+  pdf: https://www.bipm.org/documents/20126/28425809/working-document-ID-228/d137f9fc-8800-0d6c-f9d8-7b616b95480c
+  description: CGGTTS - GPS and GLONASS timing receivers - Draft recommendation
+  author: ''
+- title: CCTF/2001-31
+  pdf: https://www.bipm.org/documents/20126/28425820/working-document-ID-229/af4393b0-2354-d1e9-1f0c-f1a54318b262
+  description: USNO - Report on the Time and Frequency Activities of the Time Service
+    Department of the U.S.Naval Observatory
+  author: ''
+- title: CCTF/2001-32a
+  pdf: https://www.bipm.org/documents/20126/28425831/working-document-ID-230/c858faef-d4ec-df88-ce3d-cb02f582ab49
+  description: NRC - Report on activities to the 15th session of the Consultative  Committe
+    for Time and Frequency
+  author: ''
+- title: CCTF/2001-32b
+  pdf: https://www.bipm.org/documents/20126/28425985/working-document-ID-277/393c008a-0107-118d-97ef-4c741ea6657f
+  description: NRC - PowerPoint presentation
+  author: ''
+- title: CCTF/2001-33
+  pdf: https://www.bipm.org/documents/20126/28425842/working-document-ID-231/d38d40d9-ce02-de45-6925-eb696962bae5
+  description: ITU- Report of the IUT-R working party 7A in the period 1999 to 2001
+  author: ''
+- title: CCTF/2001-34
+  pdf: https://www.bipm.org/documents/20126/28425897/working-document-ID-278/78f662ee-eb47-ad94-f1cd-2c41581e3522
+  description: 'Galileo Satellite System - UTC and Galileo time services: a report
+    from the Galileosat Working Group on the Galileo time interface'
+  author: P.Tavella, J.Laverty, J.Hahn
+- title: CCTF/2001-35
+  pdf: https://www.bipm.org/documents/20126/28425996/working-document-ID-280/261e0653-7814-1079-e860-7968f0abaddb
+  description: MRA implications on the time and frequency field - PowerPoint presentation
+  author: J.Palacio
+- title: CCTF/2001-36
+  pdf: https://www.bipm.org/documents/20126/28425908/working-document-ID-281/976c26c9-80b2-6bc2-ff6b-29f0d8f84a7e
+  description: CGGTTS - CGTTS guidelines for manufacturers of GNSS receivers used
+    for timing
+  author: ''
+- title: CCTF/2001-37
+  pdf: https://www.bipm.org/documents/20126/28426007/working-document-ID-284/14f9c48d-9ec2-ad99-e0db-e1659ed70e3f
+  description: CCTF Working Group on TWSTFT - TWSTST Report - PowerPoint presentation
+  author: W.J.Klepczynski
+  date: 07/08/2001
+- title: CCTF/2001-38
+  pdf: https://www.bipm.org/documents/20126/28425919/working-document-ID-285/ec4bfe7b-c364-5694-b52e-7786601188d0
+  description: CCTF Working Group on the consequences of the global MRA - PowerPoint
+    presentation
+  author: G. de Jong, chairman
+  date: 07/08/2001

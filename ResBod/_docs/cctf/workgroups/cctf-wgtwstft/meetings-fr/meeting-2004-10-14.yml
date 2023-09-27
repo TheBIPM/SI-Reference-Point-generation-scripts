@@ -1,0 +1,140 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2004-10-14'
+  date: '2004-10-15'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2004-10-14
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2004-00
+  pdf: https://www.bipm.org/documents/20126/48873314/working-document-ID-2031/f9b93c22-b275-8266-dc7b-b68bb88899d1
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 14/10/2004
+- title: CCTF-WGTWSTFT/2004-03
+  pdf: https://www.bipm.org/documents/20126/48873327/working-document-ID-1199/7009fbd7-ea99-9e56-170e-179ba942fb4d
+  description: Agenda
+  author: W. Lewandowski
+  date: 12/10/2004
+- title: CCTF-WGTWSTFT/2004-04
+  pdf: https://www.bipm.org/documents/20126/48873457/working-document-ID-1250/c488df62-d7d1-b783-0a73-634acd957cf3
+  description: List of participants
+  author: NICT
+  date: 30/10/2004
+- title: CCTF-WGTWSTFT/2004-05
+  pdf: https://www.bipm.org/documents/20126/48873340/working-document-ID-1206/9c97e0a4-4341-6eae-44bf-5cb4c9741ad0
+  description: Report on TWSTFT activities at IEN
+  author: L. Lorini, F. Cordara
+  date: 07/10/2004
+- title: CCTF-WGTWSTFT/2004-06
+  pdf: https://www.bipm.org/documents/20126/48873392/working-document-ID-1207/e1e16c67-a514-b398-7f39-4aaeb5411c5b
+  description: First year of TWSTFT operation at SP
+  author: K. Jaldehag, C. Rieck
+  date: '08/10/2004'
+- title: CCTF-WGTWSTFT/2004-07
+  pdf: https://www.bipm.org/documents/20126/48873470/working-document-ID-1208/e3924b0f-830d-c124-7d4f-804a6aece128
+  description: TWSTFT at METAS
+  author: Ch. Schlunegger
+  date: 11/10/2004
+- title: CCTF-WGTWSTFT/2004-08
+  pdf: https://www.bipm.org/documents/20126/48873483/working-document-ID-1219/cb1a2dba-8725-127d-490a-c6a8a70187ba
+  description: BIPM TW Data Processing
+  author: Z. Jiang, W. Lewandowski
+  date: 11/10/2004
+- title: CCTF-WGTWSTFT/2004-09
+  pdf: https://www.bipm.org/documents/20126/48873366/working-document-ID-1220/ea10976e-d509-bd7b-291e-e05c7580fbed
+  description: Comparison of TWSTFT and GPS calibrations
+  author: W. Lewandowski et al.
+  date: 12/10/2004
+- title: CCTF-WGTWSTFT/2004-10
+  pdf: https://www.bipm.org/documents/20126/48873379/working-document-ID-1221/9af4347d-498d-efaf-a245-1e16428b0362
+  description: BIPM GPS calibrations
+  author: W. Lewandowski, L. Tisserand
+  date: 12/10/2004
+- title: CCTF-WGTWSTFT/2004-11
+  pdf: https://www.bipm.org/documents/20126/48873496/working-document-ID-1226/eb0edf24-9826-2095-3cfc-6d6b984031be
+  description: NMIJ Report
+  author: M. Imae
+  date: 14/10/2004
+- title: CCTF-WGTWSTFT/2004-12
+  pdf: https://www.bipm.org/documents/20126/48873509/working-document-ID-1251/a66670a8-b035-d4d9-03d2-ddc53b50ac4e
+  description: USNO Report
+  author: D. Matsakis
+  date: 30/10/2004
+- title: CCTF-WGTWSTFT/2004-13
+  pdf: https://www.bipm.org/documents/20126/48873405/working-document-ID-1257/79f75a5e-a441-168b-0a33-77520e2a19bb
+  description: Summary of the PTB Report
+  author: D. Piester
+  date: 21/10/2004
+- title: CCTF-WGTWSTFT/2004-14
+  pdf: https://www.bipm.org/documents/20126/48873353/working-document-ID-1261/c6bfe24b-1366-ec44-613c-eb8c9e1eb0cf
+  description: PTB's TWSTFT Activities in 2004
+  author: D. Piester
+  date: 13/10/2004
+- title: CCTF-WGTWSTFT/2004-15
+  pdf: https://www.bipm.org/documents/20126/48873418/working-document-ID-1262/97f0111e-579f-13e5-6704-efb2b0b0e7af
+  description: TWSTFT between USNO and PTB
+  author: D. Piester
+  date: 13/10/2004
+- title: CCTF-WGTWSTFT/2004-16
+  pdf: https://www.bipm.org/documents/20126/48873522/working-document-ID-1358/56e02ef8-9f66-137d-3511-d4e32a462708
+  description: OP Report
+  author: J. Achkar
+  date: 11/10/2004
+- title: CCTF-WGTWSTFT/2004-17
+  pdf: https://www.bipm.org/documents/20126/48873535/working-document-ID-1359/0cf628ed-f5e8-cd5d-59f5-07cc354637f8
+  description: NICT Report
+  author: M. Hosokawa
+  date: 13/10/2004
+- title: CCTF-WGTWSTFT/2004-18
+  pdf: https://www.bipm.org/documents/20126/48873561/working-document-ID-1360/ec61dcc4-f7c0-aecc-91c4-1c14cddcfad5
+  description: KRISS Report
+  author: S. Yang
+  date: 12/10/2004
+- title: CCTF-WGTWSTFT/2004-19
+  pdf: https://www.bipm.org/documents/20126/48873574/working-document-ID-1361/ed711c1a-2253-7fb9-540e-2995b82395d4
+  description: NTSC Report
+  author: Z. Li, H. Li
+  date: 11/10/2004
+- title: CCTF-WGTWSTFT/2004-20
+  pdf: https://www.bipm.org/documents/20126/48873548/working-document-ID-1362/3ab3d88b-2dbf-6e90-516b-a65cf7a7b638
+  description: TL Report
+  author: C. Lin
+  date: 12/10/2004
+- title: CCTF-WGTWSTFT/2004-21
+  pdf: https://www.bipm.org/documents/20126/48873613/working-document-ID-1363/17d404a4-08d5-5c06-95c1-2f24979ad6f4
+  description: NIST Report
+  author: T. Parker
+  date: 14/10/2004
+- title: CCTF-WGTWSTFT/2004-22
+  pdf: https://www.bipm.org/documents/20126/48873587/working-document-ID-1364/1c4c0b1d-06f3-8cfd-b07c-24a480502ee8
+  description: NPL Report
+  author: R. Hlavac
+  date: 13/10/2004
+- title: CCTF-WGTWSTFT/2004-24
+  pdf: https://www.bipm.org/documents/20126/48873600/working-document-ID-1365/b053f8e6-0942-43b6-4fcc-27a84df0faf3
+  description: European schedule (1)
+  author: G. de Jong
+  date: 30/08/2004
+- title: CCTF-WGTWSTFT/2004-25
+  pdf: https://www.bipm.org/documents/20126/48873626/working-document-ID-1366/f306105a-3be3-05b2-6f6e-a2e005f15077
+  description: European schedule (2)
+  author: G. de Jong
+  date: 13/10/2004
+- title: CCTF-WGTWSTFT/2004-26
+  pdf: https://www.bipm.org/documents/20126/48873639/working-document-ID-1367/4a7600db-0162-d86f-2a3a-aab7d3eb8626
+  description: European TW calibration
+  author: R. Hlavac et al.
+  date: 11/10/2004
+- title: CCTF-WGTWSTFT/2004-27
+  pdf: https://www.bipm.org/documents/20126/48873667/working-document-ID-1368/5b440384-85f1-89d4-22a7-90c05fbc6471
+  description: ETS-VIII system
+  author: S. Hama et al.
+  date: 15/10/2004
+- title: CCTF-WGTWSTFT/2004-28
+  pdf: https://www.bipm.org/documents/20126/48873680/working-document-ID-1369/cfe3fcd4-1214-1ada-edfc-47daab9c750e
+  description: Quasi-Zenith Satellite System
+  author: S. Hama et al.
+  date: 15/10/2004

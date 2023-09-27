@@ -1,0 +1,60 @@
+---
+metadata:
+  title: CCTF-WGGNSS
+  identifier: '2015-09-14'
+  date: '2015-09-14'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wggnss/2015-09-14
+  workgroup: cctf-wggnss
+resolutions: []
+working_documents:
+- title: WGGNSS/CCTF-2015-01
+  pdf: https://www.bipm.org/documents/20126/31902465/working-document-wg-public-ID-11454/61e3db16-90e5-4db6-5ed4-71a24980d284
+  description: Agenda
+  author: G. Petit
+  date: '09/09/2015'
+- title: WGGNSS/CCTF-2015-02
+  pdf: https://www.bipm.org/documents/20126/31902965/working-document-wg-public-ID-11446/7f6daba4-a847-be0d-e7b8-0c9dc5f1d88a
+  description: Summary of activities 2012-2015
+  author: P. Defraigne
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-03
+  pdf: https://www.bipm.org/documents/20126/31902978/working-document-wg-public-ID-11447/3f9a71bc-9ea8-3e02-2a35-3134b1ea6500
+  description: Group1-2 calibrations for UTC
+  author: G. Petit
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-04
+  pdf: https://www.bipm.org/documents/20126/31902822/working-document-wg-public-ID-11448/30173bef-fd70-21c2-25c5-0bc62821588c
+  description: Some comments on the Calibrations Guidelines
+  author: P. Uhrich & D. Rovera
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-05
+  pdf: https://www.bipm.org/documents/20126/31902835/working-document-wg-public-ID-11449/766e5f9a-7224-7fca-b288-2c8eff6430bb
+  description: Calibration campaign between NIST, OP and PTB
+  author: S. Römisch
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-06
+  pdf: https://www.bipm.org/documents/20126/31902848/working-document-wg-public-ID-11450/0b18c30a-49b7-5af4-84f9-1d3a91e2dc63
+  description: P1-P2 comparison with calibration results
+  author: P. Defraigne
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-07
+  pdf: https://www.bipm.org/documents/20126/31902861/working-document-wg-public-ID-11451/6bc1a38e-dee7-98f1-a6b1-7b522867b084
+  description: A low-cost GPS calibrator for the G2 calibrations
+  author: C. Lin et al.
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-08
+  pdf: https://www.bipm.org/documents/20126/31902874/working-document-wg-public-ID-11452/4fddb000-7f8f-b38b-da93-a89e0255453a
+  description: A low-cost platform for traceable time and frequency
+  author: M. Wouters et al.
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-09
+  pdf: https://www.bipm.org/documents/20126/31902926/working-document-wg-public-ID-11453/7c1af76c-91c8-d770-080a-0bec07213d0f
+  description: Carrier Phase Frequency Biases in Receivers
+  author: D. Matsakis
+  date: 14/09/2015
+- title: WGGNSS/CCTF-2015-10
+  pdf: https://www.bipm.org/documents/20126/31903271/working-document-wg-public-ID-11588/8a7bab08-eeb4-25d0-1089-a3a22d1594a5
+  description: Report of the meeting
+  author: P. Defraigne and G. Petit
+  date: 30/09/2015

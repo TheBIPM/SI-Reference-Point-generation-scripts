@@ -1,0 +1,105 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2006-09-10'
+  date: '2006-09-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2006-09-10
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2006-00
+  pdf: https://www.bipm.org/documents/20126/48877876/working-document-ID-2842/7a572a4c-70a8-07fe-1e8b-421175f9ec6d
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 17/11/2006
+- title: CCTF-WGTWSTFT/2006-01
+  pdf: https://www.bipm.org/documents/20126/48877627/working-document-ID-2588/1e5f9bef-fb1a-0186-5bf9-d6cf04437fb5
+  description: 1st Call
+  author: ''
+  date: 31/01/2006
+- title: CCTF-WGTWSTFT/2006-02
+  pdf: https://www.bipm.org/documents/20126/48877640/working-document-ID-2589/dc3c63ce-361f-618e-fd12-67391c80f5a4
+  description: 2nd Call
+  author: ''
+  date: 01/06/2006
+- title: CCTF-WGTWSTFT/2006-03
+  pdf: https://www.bipm.org/documents/20126/48877653/working-document-ID-2590/8ce46331-4a20-9195-47c7-30fb037e2372
+  description: 3rd Call
+  author: ''
+  date: 17/08/2006
+- title: CCTF-WGTWSTFT/2006-04
+  pdf: https://www.bipm.org/documents/20126/48877811/working-document-ID-2587/8e551ce1-0740-df75-fcb3-6d09e3e5a2e4
+  description: Final Agenda
+  author: ''
+  date: 17/08/2006
+- title: CCTF-WGTWSTFT/2006-05
+  pdf: https://www.bipm.org/documents/20126/48877902/working-document-ID-2738/4b29deea-d5b5-5e24-9ff1-9a6c0eaa2b40
+  description: Attendees Final List
+  author: ''
+  date: 17/11/2006
+- title: CCTF-WGTWSTFT/2006-10
+  pdf: https://www.bipm.org/documents/20126/48877824/working-document-ID-2601/cb42e4f8-0e8e-b9df-5373-4b69783fc0e9
+  description: BIPM Report
+  author: W. Lewandowski
+  date: '09/09/2006'
+- title: CCTF-WGTWSTFT/2006-11
+  pdf: https://www.bipm.org/documents/20126/48877744/working-document-ID-2602/d520f7b6-63bf-9744-5e5f-ed4ef4da3da9
+  description: NICT Report
+  author: Sh. Hama
+  date: '09/09/2006'
+- title: CCTF-WGTWSTFT/2006-12
+  pdf: https://www.bipm.org/documents/20126/48877666/working-document-ID-2603/536a8314-804b-070e-be98-4bae4c25357b
+  description: USNO Report
+  author: D. Matsakis, J. Brad
+  date: '09/09/2006'
+- title: CCTF-WGTWSTFT/2006-13
+  pdf: https://www.bipm.org/documents/20126/48877679/working-document-ID-2604/ae13634f-2619-1c19-888c-d47f03021d4a
+  description: VSL Report
+  author: VSL
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-14
+  pdf: https://www.bipm.org/documents/20126/48877798/working-document-ID-2605/d9dc861e-a8f2-5973-0dc6-4f9c84b3adf8
+  description: TL Report
+  author: C. S. Liao
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-15
+  pdf: https://www.bipm.org/documents/20126/48877692/working-document-ID-2606/65c196f1-8faa-73cc-5d4b-79e0e6edaad5
+  description: SP Report
+  author: K. Jaldehag, C. Rieck
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-16
+  pdf: https://www.bipm.org/documents/20126/48877837/working-document-ID-2607/ec2a45cc-ee9a-e525-46b7-d165354a844a
+  description: PTB Report
+  author: PTB
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-17
+  pdf: https://www.bipm.org/documents/20126/48877705/working-document-ID-2608/7d07e1ba-6e17-bb44-22da-5b604eaa5a78
+  description: NTSC Report
+  author: Li Huanxin
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-18
+  pdf: https://www.bipm.org/documents/20126/48877763/working-document-ID-2609/0659f05b-bb67-96a0-8621-57d228f508b9
+  description: NPL Report
+  author: P. Whibberley
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-19
+  pdf: https://www.bipm.org/documents/20126/48877718/working-document-ID-2610/cb4fbf99-5529-dcc3-8885-cd6407416ee3
+  description: NMIJ Report
+  author: NMIJ
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-20
+  pdf: https://www.bipm.org/documents/20126/48877850/working-document-ID-2611/7f1b304d-334f-cd21-0ce4-5df4ae139788
+  description: NIST Report
+  author: T.E. Parker
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-21
+  pdf: https://www.bipm.org/documents/20126/48877863/working-document-ID-2612/409dc8ce-99af-e6ee-5583-099e23b6957f
+  description: METAS Report
+  author: Ch. Schlunegger
+  date: 10/09/2006
+- title: CCTF-WGTWSTFT/2006-22
+  pdf: https://www.bipm.org/documents/20126/48877731/working-document-ID-2613/2d8ecc57-5fb5-8b4c-7846-1c7ebd57b3de
+  description: OP Report
+  author: J. Achkar
+  date: 10/09/2006

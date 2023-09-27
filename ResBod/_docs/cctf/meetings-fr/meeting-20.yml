@@ -1,0 +1,786 @@
+---
+metadata:
+  title: 20e réunion du CCTF
+  identifier: '20'
+  date: '2015-09-18'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015
+resolutions:
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Mises à jour de la liste des fréquences étalons
+  identifier: 1
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 39
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF) et le Comité
+      consultatif des longueurs (CCL),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’une liste commune des « valeurs recommandées de fréquences
+      étalons destinées à la mise en pratique de la définition du mètre et aux représentations
+      secondaires de la seconde » a été établie,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le Groupe de travail commun au CCL et au CCTF sur les
+      étalons de fréquence a examiné plusieurs fréquences candidates afin de mettre
+      à jour cette liste,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: |-
+      *recommandent*
+
+      que les fréquences des transitions suivantes soient mises à jour dans la liste des fréquences étalons recommandées :
+
+      * la transition optique non perturbée 6s^2^ ^1^S~0~ - 6s6p ^3^P~0~ de l’atome neutre de ^199^Hg, à la fréquence de stem:[f]~199Hg~ = stem:[1 128 575 290 808 154","8 "Hz"] avec une incertitude-type relative estimée de 6 × 10^−16^ ;
+      * la transition optique non perturbée 6s ^2^S~1/2~ - 4f 13 6s^2^ ^2^stem:["F"]~7/2~ de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f]~171Yb+ ~(octupôle) = stem:[642 121 496 772 645","0 "Hz"] avec une incertitude-type relative estimée de 6 × 10^−16^ +
+       (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 6s ^2^S~1/2~ (stem:[F = 0], stem:[m_(F) = 0]) - 5d ^2^D~3/2~ (stem:[F = 2], stem:[m_(F) = 0]) de l'ion de ^stem:[171^(Yb)]+^, à la fréquence de stem:[f]~171Yb+ ~(quadripôle) = stem:[688 358 979 309 308","3 "Hz"] avec une incertitude-type relative estimée de 6 × 10^−16^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 5s ^2^S~1/2~ - 4d ^2^D~5/2~ de l'ion de ^stem:[88^(Sr)]+^, à la fréquence de stem:[f]~88Sr+~ = stem:[444 779 044 095 486","6 "Hz"] avec une incertitude-type relative estimée de 1,6 × 10^−15^ +
+       (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 4s ^2^S~1/2~ - 3d ^2^D~5/2~ de l'ion de ^stem:[40^(Ca)]+^, à la fréquence de stem:[f]~40Ca+~ = stem:[411 042 129 776 398","4 "Hz"] avec une incertitude-type relative estimée de 1,2 × 10^−14^ ;
+      * la transition optique non perturbée 1S - 2S de l'atome neutre de stem:[""_(1) "H"], à la fréquence de stem:[f_(1H) = 1 233 030 706 593 514 "Hz"] avec une incertitude-type relative estimée de 9,0 × 10^−15^. +
+       Remarque : cette fréquence correspond à la moitié de l’écart en énergie entre les états 1S et 2S ;
+      * la transition optique non perturbée 5s^2^ ^1^S~0~ - 5s5p ^3^P~0~ de l'atome neutre de ^87^Sr, à la fréquence de stem:[f_(87Sr) = 429 228 004 229 873","2 "Hz"] avec une incertitude-type relative estimée de 5 × 10^−16^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition optique non perturbée 6s^2^ ^1^S~0~ - 6s6p ^3^P~0~ de l'atome neutre de ^171^Yb, à la fréquence de stem:[f]~171Yb~ = stem:[518 295 836 590 864","0 "Hz"] avec une incertitude-type relative estimée de 2 × 10^−15^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+      * la transition hyperfine non perturbée de l’état fondamental de l’atome de ^87^Rb, à la fréquence de stem:[f_(87Rb) = 6 834 682 610","904 310 "Hz"] avec une incertitude-type relative estimée de 7 × 10^−16^ (cette radiation a déjà été approuvée par le CIPM comme représentation secondaire de la seconde) ;
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: |-
+      *recommandent* par ailleurs
+
+      que les fréquences des transitions suivantes soient incluses dans la liste des fréquences étalons recommandées :
+
+      * Molécule absorbante de ^127^I~2~, composante a~1~ du spectre d’absorption saturée, transition R(36) 32-0. Les valeurs +
+      stem:[f_(a1) = 564 074 632","42 "MHz"] +
+      _λ_~a1~ = 531 476 582,65 fm +
+       avec une incertitude-type relative estimée de 1 × 10^−10^ s’appliquent à la radiation d’un laser à diode à rétroaction répartie doublé en fréquence, asservi à l’aide d’une cellule d’iode située à l’extérieur du laser.
+       +
+      * Atome absorbant de ^87^Rb, transition 5S~1/2~ - 5P~3/2~ , croisement de niveaux entre les composantes hyperfines d et f de l’absorption saturée à 780 nm (transition D2). Les valeurs +
+      stem:[f]~d/f croisement~ = stem:[384 227 981","9 "MHz"] +
+      _λ_~d/f croisement~ = 780 246 291,6 fm +
+       avec une incertitude-type relative estimée de 5 × 10^−10^ s’appliquent à la radiation d’un laser accordable à diode et à cavité externe, asservi sur la résonance de croisement de niveaux d/f dans une cellule de rubidium située à l’extérieur du laser.
+
+      Remarque : La valeur de l’incertitude-type est supposée correspondre à un niveau de confiance de 68 %. Toutefois, étant donné le nombre très limité de résultats disponibles, il se peut que, rétrospectivement, cela ne s’avère pas exact.
+  - type: requests
+    date_effective: '2015-09-18'
+    message: "*et requièrent* l’adoption de ces fréquences étalons recommandées par
+      le CIPM."
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Prédictions de l’UTC disséminées à l’aide de systèmes globaux de navigation
+    par satellite (GNSS)
+  identifier: 2
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 41
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le BIPM a pour mission d’assurer l’uniformité mondiale
+      des mesures et leur traçabilité au Système international d’unités (SI),
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’à l’heure actuelle deux systèmes GNSS existent et que
+      d’autres sont en cours de développement,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’au moins deux autres systèmes GNSS, BeiDou et Galileo,
+      offrent des services, ou sont sur le point d’en offrir,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que la Section 5 de la _Circulaire T_ du BIPM indique la
+      relation UTC/TAI, ainsi que les prédictions d’UTC(k) disséminées à l’aide des
+      systèmes GPS et GLONASS,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: a pour objectif de faciliter l’accès des utilisateurs aux prédictions
+      en temps réel de l’UTC disséminées à l’aide des systèmes GNSS actuels et à venir,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que la Section 5 de la _Circulaire T_ du BIPM soit renommée
+      « Relations of UTC and TAI with predictions of UTC disseminated by GNSS » (Relations
+      entre l’UTC et le TAI avec prédictions de l’UTC disséminées à l’aide de systèmes
+      GNSS) et que des informations similaires sur les nouveaux systèmes GNSS soient
+      intégrées à la _Circulaire T_ à mesure que ces systèmes GNSS deviennent opérationnels.
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Sur l’étalonnage des équipements de comparaison de temps par GNSS
+  identifier: 3
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 42
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que l’aptitude à comparer des étalons atomiques de fréquence
+      afin de réaliser l’UTC dépend de l’exactitude et de la précision des méthodes
+      de comparaison de temps fondées sur des observations obtenues à l’aide de systèmes
+      globaux de navigation par satellite (GNSS),
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que la caractérisation des retards des équipements GNSS de
+      comparaison de temps est essentielle pour garantir l’exactitude des liaisons
+      horaires utilisées pour le calcul de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que, pour une liaison horaire, toute variation due à des
+      retards d’équipement qui n’est pas corrigée peut conduire à une instabilité
+      conséquente de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que des campagnes périodiques d’étalonnage sont nécessaires
+      pour que l’incertitude des liaisons horaires utilisées pour le calcul de l’UTC
+      soit égale ou inférieure à 3 ns,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le Comité consultatif pour la définition de la seconde
+      (CCDS) puis le Comité consultatif du temps et des fréquences (CCTF) ont souligné,
+      dans les recommandations qu’ils ont formulées, l’importance d’étalonner les
+      équipements de comparaison de temps dans les laboratoires qui envoient des données
+      au BIPM pour le calcul de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le Comité consultatif du temps et des fréquences (CCTF),
+      dans sa Recommandation 2 (2009) et dans sa Recommandation 4 (2012), a recommandé
+      aux organisations régionales de métrologie d’apporter leur soutien au BIPM en
+      organisant des campagnes de mesure des retards des équipements GNSS au niveau
+      régional, qui seront liées à celles menées par le BIPM,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que des directives d’étalonnage ont été préparées par le BIPM
+      et le Groupe de travail du CCTF sur les comparaisons de temps par GNSS et qu’elles
+      ont été publiées sur le site internet du BIPM,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: 'notant que, parmi les laboratoires contribuant au calcul de l’UTC, un
+      ensemble de laboratoires constituant le « Groupe 1 » a été sélectionné par les
+      organisations régionales de métrologie : le BIPM organisera les étalonnages
+      des laboratoires du Groupe 1 qui procéderont à leur tour à l’étalonnage des
+      équipements GNSS des autres laboratoires, constituant le « Groupe 2 »,'
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant qu’il est attendu que la mise en œuvre de ce nouveau schéma d’étalonnages
+      permette d’améliorer de façon significative l’exactitude des liaisons horaires,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que le BIPM a achevé la première campagne d’étalonnage des équipements
+      GNSS des laboratoires du Groupe 1 et organisera sous peu la seconde,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que les organisations régionales de métrologie ou les laboratoires
+      membres d’une organisation régionale de métrologie organisent périodiquement
+      des campagnes d’étalonnage pour les laboratoires du Groupe 2,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que les campagnes d’étalonnage soient planifiées en étroite
+      collaboration avec le BIPM afin que l’ensemble des laboratoires du Groupe 2
+      en bénéficient,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que ces étalonnages soient réalisés conformément aux directives
+      publiées par le BIPM.
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Sur la procédure « Common Generic GNSS Time Transfer Standard » (CGGTTS)
+  identifier: 4
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 44
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que la procédure et le format CGGTTS sont utilisés par les
+      laboratoires de temps pour transférer leurs données horaires afin de contribuer
+      au calcul de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le logiciel R2CGGTTS est couramment utilisé par les laboratoires
+      participant au calcul de l’UTC pour générer des données CGGTTS,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que le déploiement des constellations de Galileo, QZSS et
+      BeiDou progresse et devrait s’achever ces prochaines années,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que plusieurs fabricants de récepteurs fournissent déjà des
+      observations fondées sur des systèmes globaux de navigation par satellite (GNSS)
+      de différentes constellations,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: |-
+      *notant*
+
+      * qu’une extension du format CGGTTS a été définie sous le nom V2E de façon à inclure les résultats de comparaisons de temps obtenus à partir des satellites GPS, GLONASS, BeiDou, Galileo et QZSS,
+      * qu’une description complète du format V2E est disponible dans _Metrologia_ 2015 *52* G1
+      ,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que le Groupe de travail du CCTF sur les comparaisons de temps
+      par GNSS coopère avec les fabricants de récepteurs de temps afin de leur demander
+      de mettre à niveau leur logiciel interne pour qu’ils puissent fournir la version
+      V2E du format CGGTTS,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que les laboratoires de temps fournissent au BIPM des fichiers
+      CGGTTS au format V2E,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que le logiciel R2CGGTTS soit mis à niveau pour générer la
+      version V2E.
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Sur la conception des récepteurs des systèmes globaux de navigation par satellite
+    (GNSS)
+  identifier: 5
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 45
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que l’utilisation combinée de mesures de phase et de code
+      des signaux du GNSS permettent d’effectuer des comparaisons de temps et de fréquences
+      de très haute précision,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que cette technique est couramment utilisée pour le calcul
+      de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’il est attendu que les mesures GNSS soient utilisées par
+      un plus grand nombre d’applications requérant un haut niveau de précision, telles
+      que la comparaison d’étalons optiques de fréquence et de fontaines atomiques,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que l’exactitude des comparaisons de temps et de fréquences
+      à partir de systèmes GNSS repose sur la connaissance précise du temps de verrouillage
+      (temps réel de réception) de chaque mesure,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que, bien que considérés comme synchrones, les temps de verrouillage
+      des données de phase et de code peuvent être systématiquement décalés de quelques
+      microsecondes,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que certains récepteurs produisent des mesures de code corrigées
+      pour un biais constant afin de tenir compte des retards internes dus au matériel,
+      ce qui induit un décalage manifeste du temps de verrouillage entre les mesures
+      de phase de la porteuse et les mesures de code,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que la différence entre les temps de verrouillage pour la phase
+      et le code génère une variation de l’effet Doppler pour les mesures de phase
+      de la porteuse par rapport aux mesures de code, ce qui crée un biais de fréquence
+      pour les données de phase et donc pour la solution d’horloge obtenue par l’analyse
+      GNSS,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant qu’en raison de ce biais de fréquence, la fréquence de l’horloge
+      de laboratoire apparaît biaisée de 30 ps par jour pour chaque microseconde de
+      décalage du temps de verrouillage,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande au Groupe de travail du CCTF sur les comparaisons de temps
+      GNSS de coopérer avec les fabricants de récepteurs pour leur demander de mettre
+      à jour la conception des récepteurs et leur logiciel interne afin que la valeur
+      absolue concernant le décalage du temps de verrouillage entre les mesures de
+      phase et de code, telle que fournie dans les fichiers d’observation, soit inférieure
+      à 100 ns. Les fabricants devraient prendre en considération toutes les données
+      pertinentes relatives aux retards internes des récepteurs et les intégrer aux
+      spécifications des récepteurs.
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Développement des liaisons nationales et internationales afin d’améliorer
+    les méthodes intercontinentales de comparaison d’horloges et de dissémination
+    des données de temps et de fréquence aux parties prenantes
+  identifier: 6
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-6
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 46
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences (CCTF),
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que certains étalons optiques de fréquence ont déjà permis
+      d’obtenir des incertitudes relatives de l’ordre de stem:[10^(-18)] et que l’incertitude
+      et l’instabilité des étalons optiques de fréquence mis au point dans les laboratoires
+      du monde entier vont continuer à être réduites,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’il a été démontré qu’il était possible de comparer des
+      horloges sur de longues distances avec des liaisons par fibre optique obtenant
+      une stabilité et une incertitude compatibles avec les meilleurs étalons optiques
+      de fréquence actuels et à venir,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’il est nécessaire de comparer régulièrement ces étalons,
+      ce qui est essentiel dans le cadre de la préparation d’une redéfinition de la
+      seconde, ainsi que pour d’autres applications telles que l’établissement des
+      échelles de temps,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que la stabilité des techniques de comparaison de temps et
+      de fréquence couramment utilisées dans le monde pour produire le Temps atomique
+      international (TAI) n’est pas suffisante pour comparer les meilleurs étalons
+      optiques de fréquence,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que l’intérêt des communautés scientifiques des sciences
+      de la Terre et de la géodésie ne cesse de croître vis-à-vis de la géodésie chronométrique,
+      c’est-à-dire vis-à-vis de nouvelles applications pour les étalons optiques de
+      fréquence afin de déterminer les différences de potentiel gravitationnel et
+      d’améliorer, grâce à ces mesures, les modèles de gravité de la Terre ainsi que
+      les systèmes de référence,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que l’industrie, en particulier les secteurs des télécommunications
+      et de l’aérospatiale, a de plus en plus besoin que soient améliorées les aptitudes
+      dans le domaine du temps et des fréquences par l’utilisation de meilleures méthodes
+      de comparaison,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: |-
+      *recommande*
+
+      * aux laboratoires nationaux de métrologie, fournisseurs de réseaux de fibre optique, agences spatiales, gouvernements, organisations régionales de métrologie, ainsi qu’à l’Union internationale des télécommunications (UIT) et aux autres organismes pertinents :
+      ** de soutenir vigoureusement la recherche et le développement sur les techniques de comparaison de temps et de fréquence afin qu’elles présentent une stabilité et une incertitude similaires à celles des étalons de fréquence les plus avancés. Ces techniques peuvent concerner les liaisons par fibre optique, les liaisons micro-ondes par satellite avancées, les liaisons optiques sol-espace et espace-espace, les étalons de fréquence transportables et les horloges spatiales de pointe,
+      ** de contribuer à la mise en place d’une infrastructure pérenne de liaisons continentales et intercontinentales sélectionnées qui formeront la colonne vertébrale métrologique dans le domaine du temps et des fréquences pour ces nouvelles technologies,
+      ** de prendre les dispositions nécessaires afin que ces nouvelles technologies puissent être appliquées, avec le degré d’exactitude approprié, à d’autres domaines de la science, de l’industrie et de la société,
+      * au BIPM de participer activement à ces développements, notamment en préparant, dans le cadre de l’établissement des échelles de temps, l’exploitation des données de comparaisons d’horloges obtenues à partir de nouvelles méthodes de comparaison de temps et de fréquence,
+      * aux laboratoires contribuant au calcul de l’UTC et effectuant des comparaisons de temps en continu par fibre optique de soumettre régulièrement leurs résultats au Département du temps du BIPM.
+- dates:
+  - '2015-09-18'
+  subject: CCTF
+  type: recommendation
+  title: Sur la mise en oeuvre et la maintenance des réseaux de comparaison de temps
+    et de fréquences par aller et retour par satellite (TWSTFT) pour les comparaisons
+    internationales des horloges atomiques et des échelles de temps
+  identifier: 7
+  url: https://www.bipm.org/fr/committees/cc/cctf/20-2015/resolution-7
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF20.pdf/b3f5e382-5e0d-fd49-5622-f0823261662f
+  reference_name: Comptes rendus du 20e CCTF (2015), 2016
+  reference_page: 48
+  approvals:
+  - message: Le Comité consultatif du temps et des fréquences,
+  considerations:
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que des comparaisons de temps et de fréquences par aller
+      et retour par satellite (TWSTFT) sont effectuées depuis 16 ans pour réaliser
+      l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant qu’une vingtaine de laboratoires situés en Asie, en Europe
+      et en Amérique du Nord participent régulièrement au calcul de l’UTC en fournissant
+      des données de comparaisons de temps et de fréquences par aller et retour par
+      satellite, de façon continue et quotidienne pour la plupart des laboratoires,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que les liaisons TWSTFT entre l’Asie et l’Europe ont été
+      interrompues en décembre 2014,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que des étalonnages réguliers permettent d’obtenir une incertitude
+      des comparaisons de temps de l’ordre de 1 ns, ce qui représente la meilleure
+      incertitude atteinte pour les comparaisons de temps internationales opérationnelles,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que les techniques de mesure redondantes et indépendantes
+      accroissent la robustesse de l’UTC,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que les récents développements des comparaisons de temps
+      et de fréquences par aller et retour par satellite, tels que l’utilisation de
+      la phase de la porteuse ou de récepteurs à technique radio logicielle SDR, pourraient
+      améliorer de façon spectaculaire les comparaisons d’horloges optiques effectuées
+      sur de longues distances à l’aide de satellites,
+  - type: considering
+    date_effective: '2015-09-18'
+    message: considérant que les liaisons par fibre optique ne sont opérationnelles
+      que sur de courtes distances,
+  - type: noting
+    date_effective: '2015-09-18'
+    message: notant que la réalisation des comparaisons de temps par aller et retour
+      par satellite repose sur les services satellitaires, ce qui représente des coûts
+      conséquents pour les laboratoires participants,
+  actions:
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que les laboratoires participant au calcul de l’UTC continuent
+      à soutenir les activités de comparaison de temps et de fréquences par aller
+      et retour par satellite, telles que la mise en œuvre continue du réseau international
+      de comparaisons de temps, la restauration des liaisons entre l’Asie et l’Europe,
+      et l’étalonnage périodique des liaisons,
+  - type: recommends
+    date_effective: '2015-09-18'
+    message: recommande que de nouveaux travaux de développement soient entrepris
+      dans le domaine des comparaisons de temps et de fréquences par aller et retour
+      par satellite afin d’améliorer de façon significative les comparaisons à distance
+      de temps et de fréquences, en particulier celles effectuées entre continents,
+      et de réduire les coûts en utilisant de nouveaux types de signaux transmis.
+working_documents:
+- title: CCTF/2015-01
+  pdf: https://www.bipm.org/documents/20126/28426689/working-document-ID-7106/238ad22d-49a4-6850-7727-4340ba5d4d67
+  description: Draft agenda (v0.4 of 4/09/2015)
+  author: L. Erard, F. Arias
+  date: 03/04/2015
+- title: CCTF/2015-02
+  pdf: https://www.bipm.org/documents/20126/28426700/working-document-ID-7107/68784c0c-9b5d-66e0-12ac-4af7887ba1bd
+  description: Schedule of 20th Meeting of the CCTF and satellite meetings (version
+    09/02/2015)
+  author: BIPM
+  date: 03/04/2015
+- title: CCTF/2015-03
+  pdf: https://www.bipm.org/documents/20126/28428570/working-document-ID-7278/413efc9d-6f26-e0e1-a6d0-95f7683e24c1
+  description: Time and frequency activity at the VNIIFTRI
+  author: VNIIFTRI - Russia
+  date: 18/08/2015
+- title: CCTF/2015-04
+  pdf: https://www.bipm.org/documents/20126/28428581/working-document-ID-7279/c68ecaf8-ce26-4683-0130-ff7cb3def70e
+  description: Proposed recommendation - Real time realizations UTC(k) disseminated
+    by GNSS
+  author: VNIIFTRI - Russia
+  date: 18/08/2015
+- title: CCTF/2015-05
+  pdf: https://www.bipm.org/documents/20126/28428592/working-document-ID-7280/95244350-647a-0077-e860-a053ebc68842
+  description: Report to the 20th meeting of the CCTF - INRIM`s time and frequency
+    activities
+  author: INRIM
+  date: 18/08/2015
+- title: CCTF/2015-06
+  pdf: https://www.bipm.org/documents/20126/28429451/working-document-ID-7291/d538a71b-e3eb-a736-4da6-46bb33c67ff7
+  description: BIPM Time metrology Programme of Work  for 2016-2019
+  author: E.F. Arias (BIPM)
+  date: 24/08/2015
+- title: CCTF/2015-07
+  pdf: https://www.bipm.org/documents/20126/28429462/working-document-ID-7292/c08e617d-c42e-48ab-92d7-a64433cdbd57
+  description: First evaluation and frequency measurement of the strontium lattice
+    clock at NIM (publication)
+  author: Z. Fang et al. (NIM)
+  date: 24/08/2015
+- title: CCTF/2015-08
+  pdf: https://www.bipm.org/documents/20126/28429054/working-document-ID-7296/035a276e-932f-ec54-a8c7-5b7769d81e7a
+  description: Actions for the recognition of the International Terrestrial Reference
+    System and Frame
+  author: Claude Boucher  (IUGG)
+  date: 26/08/2015
+- title: CCTF/2015-09
+  pdf: https://www.bipm.org/documents/20126/28429660/working-document-ID-7298/9cbe3337-da41-53c4-6c85-055c9258724e
+  description: The relevant activities of the Central Office of Measurements in the
+    time and frequency domain
+  author: GUM
+  date: 26/08/2015
+- title: CCTF/2015-10
+  pdf: https://www.bipm.org/documents/20126/28428603/working-document-ID-7299/1f50ed76-c1f0-bfc2-b6ea-b1bd653d3c69
+  description: Report on PTB`s activities to the 20th Session of the CCTF
+  author: PTB (Germany)
+  date: 26/08/2015
+- title: CCTF/2015-11
+  pdf: https://www.bipm.org/documents/20126/28428845/working-document-ID-7302/72a55a63-2d86-5cf3-454c-7a9fa3de2526
+  description: Report to the 20th Session of the CCTF- WG on GNSS time transfer
+  author: P. Defraigne (ORB)
+  date: 28/08/2015
+- title: CCTF/2015-12
+  pdf: https://www.bipm.org/documents/20126/28428856/working-document-ID-7303/c49a6c39-cafe-270a-705d-79816b2512a6
+  description: Report to the 20th Session of the CCTF - Activities of the Working
+    Group on Primary and Secondary Frequency Standards
+  author: S. Jefferts (NIST)
+  date: 28/08/2015
+- title: CCTF/2015-13
+  pdf: https://www.bipm.org/documents/20126/28428867/working-document-ID-7304/f53d1da8-2e22-6216-8e5d-d50dbe8abd11
+  description: Report of Time and Frequency Activities at NICT (2012-2015)
+  author: NICT
+  date: 28/08/2015
+- title: CCTF/2015-14
+  pdf: https://www.bipm.org/documents/20126/28429506/working-document-ID-7315/2e9668a0-f71d-f299-e199-f7c1bcdf6fff
+  description: Report of the CCTF WG on algorithms to the 20th session of the CCTF
+  author: Y. Hanado (NICT)
+  date: 01/09/2015
+- title: CCTF/2015-15
+  pdf: https://www.bipm.org/documents/20126/28429517/working-document-ID-7336/7f98b1eb-3509-3631-7cd2-31c6dbce8a91
+  description: Report of the CCTF WG on the MRA
+  author: J.M. L???pez Romero (CENAM)
+  date: 04/09/2015
+- title: CCTF/2015-16
+  pdf: https://www.bipm.org/documents/20126/28426711/working-document-ID-7337/19cc0893-f89f-6521-b533-2616c0385fe7
+  description: Report from the NPL to the 20th session of the CCTF, 2015
+  author: NPL
+  date: 04/09/2015
+- title: CCTF/2015-17
+  pdf: https://www.bipm.org/documents/20126/28426722/working-document-ID-7338/24e65a21-36bf-e3f9-ea97-bf53de56136e
+  description: Report on SASO-NMCC Time and Frequency activities to the 20th meeting
+    of the CCTF
+  author: SASO
+  date: 04/09/2015
+- title: CCTF/2015-18
+  pdf: https://www.bipm.org/documents/20126/28428614/working-document-ID-7339/1501e142-dfea-75be-fadc-2ca77d242224
+  description: Report on Activities to the 20th meeting of the CCTF
+  author: SP
+  date: 04/09/2015
+- title: CCTF/2015-19
+  pdf: https://www.bipm.org/documents/20126/28428878/working-document-ID-7340/37e38a67-480b-eec2-01c4-80f82234f5a5
+  description: Report of UME to the 20th Session of the CCTF
+  author: UME
+  date: 04/09/2015
+- title: CCTF/2015-20
+  pdf: https://www.bipm.org/documents/20126/28429297/working-document-ID-7341/7a80cc54-367e-5042-80be-8f0dbe0eceaf
+  description: Report on relevant MIRS/SIQ time and frequency activities
+  author: R. Lapuh (MIRS)
+  date: 04/09/2015
+- title: CCTF/2015-21
+  pdf: https://www.bipm.org/documents/20126/28428889/working-document-ID-7343/9354fdc0-e492-5213-9041-676a197637b5
+  description: 'CCTF2015: Report of the Royal Observatory of Belgium'
+  author: P. Defraigne (ORB)
+  date: 10/09/2015
+- title: CCTF/2015-22
+  pdf: https://www.bipm.org/documents/20126/28428196/working-document-ID-7344/c5c6b7a3-cff3-104a-7ab5-b7311e3f66a6
+  description: Report to the 20th CCTF
+  author: LNE-SYRTE
+  date: 10/09/2015
+- title: CCTF/2015-23
+  pdf: https://www.bipm.org/documents/20126/28429473/working-document-ID-7345/cc3c3f6b-e81d-05d2-d7a4-7a495d716136
+  description: 'Proposed recommendation: On the operation and maintenance of Two-Way
+    Satellite Time and Frequency Transfer (TWSTFT) networks for international atomic
+    clock and time scale comparisons'
+  author: CCTF WG TWSTFT
+  date: 12/09/2015
+- title: CCTF/2015-24
+  pdf: https://www.bipm.org/documents/20126/28428625/working-document-ID-7346/ca74e3f7-aca7-71d3-b7c8-805d4a81038e
+  description: Report to the 20th Meeting of CCTF - Research Activities on Time and
+    Frequency (NMIJ/AIST)
+  author: NMIJ/AIST
+  date: 12/09/2015
+- title: CCTF/2015-25
+  pdf: https://www.bipm.org/documents/20126/28429671/working-document-ID-7347/cbf83020-145b-d9f5-912b-11054effa66f
+  description: APMP TCTF Report to the 20th Meeting of the CCTF
+  author: M. Wouters (NMIA)
+  date: 14/09/2015
+- title: CCTF/2015-26
+  pdf: https://www.bipm.org/documents/20126/28429286/working-document-ID-7350/6d64daea-57bd-ff6a-f8f7-467384f0a0a1
+  description: 'Proposed recommendation: on the Common generic GNSS time transfer
+    standard (CGGTTS)'
+  author: CCTF WG GNSS
+  date: 15/09/2015
+- title: CCTF/2015-27
+  pdf: https://www.bipm.org/documents/20126/28429308/working-document-ID-7351/99d1a0c9-8140-b3f4-18ec-00a3d4345698
+  description: 'Proposed recommendation: on the BIPM guidelines for calibration'
+  author: CCTF WG GNSS
+  date: 15/09/2015
+- title: CCTF/2015-28
+  pdf: https://www.bipm.org/documents/20126/28429043/working-document-ID-7352/9abf5520-ff69-4208-f57e-4bf6f62704d7
+  description: Report of VSL activities to the 20th session of the BIPM
+  author: Erik Dierikx (VSL)
+  date: 16/09/2015
+- title: CCTF/2015-29
+  pdf: https://www.bipm.org/documents/20126/28428900/working-document-ID-7353/245fc9df-fd8c-7f75-2b32-2544e804879a
+  description: Status Report to the 20th meeting of the CCTF on Time and Frequency
+    Activities at KRISS
+  author: KRISS
+  date: 16/09/2015
+- title: CCTF/2015-30
+  pdf: https://www.bipm.org/documents/20126/28426733/working-document-ID-7354/bc6a70ca-0630-4085-1c03-3083c774ac6c
+  description: 'Proposed recommendation: On the design of GNSS receivers'
+  author: CCTF WG GNSS
+  date: 16/09/2015
+- title: CCTF/2015-31
+  pdf: https://www.bipm.org/documents/20126/28426744/working-document-ID-7355/af08e0ad-a614-9e51-cfed-7eb699c508f8
+  description: 'Proposed recommendation: Development of national and international
+    time and frequency links, to improve methods for intercontinental clock comparisons
+    and for dissemination to stakeholders'
+  author: CCTF WG ATFT
+  date: 16/09/2015
+- title: CCTF/2015-32
+  pdf: https://www.bipm.org/documents/20126/28429528/working-document-ID-7356/800f2745-1129-2454-a016-3e621c8de25a
+  description: Report of the NRC to the 20th Meeting of the CCTF
+  author: Frequency and Time Group, Measurement Science and Standards, NRC
+  date: 17/09/2015
+- title: CCTF/2015-33
+  pdf: https://www.bipm.org/documents/20126/28429539/working-document-ID-7357/6977dac3-744e-45b6-39a4-5098e55ae616
+  description: Activities report to the 20th Session of the CCTF
+  author: NIM
+  date: 17/09/2015
+- title: CCTF/2015-34
+  pdf: https://www.bipm.org/documents/20126/28429792/working-document-ID-7373/faa53129-21c3-cf1b-05dd-4e8d34efe27f
+  description: Presentation - Report of the CCTF WG PSFS
+  author: S. Jefferts (NIST), G. Petit (BIPM)
+  date: 24/09/2015
+- title: CCTF/2015-35
+  pdf: https://www.bipm.org/documents/20126/28429550/working-document-ID-7374/ef919755-c4fb-d4c0-e650-b3dc58dc26d8
+  description: Presentation - Report of the CCL-CCTF WGFS
+  author: F. Riehle (PTB), P. Gill (NPL)
+  date: 24/09/2015
+- title: CCTF/2015-36
+  pdf: https://www.bipm.org/documents/20126/28429561/working-document-ID-7375/a4a2375a-4265-242b-0c49-c3d153bd433f
+  description: Presentation - Frequency standards in TAI and realization of TT(BIPM)
+  author: G. Petit, G. Panfilo (BIPM)
+  date: 24/09/2015
+- title: CCTF/2015-37
+  pdf: https://www.bipm.org/documents/20126/28428636/working-document-ID-7376/1dcddf6c-417a-3159-5070-a0b4d457afa8
+  description: Presentation - Report of the CCTF WG TAI
+  author: L. Erard
+  date: 24/09/2015
+- title: CCTF/2015-38
+  pdf: https://www.bipm.org/documents/20126/28426755/working-document-ID-7377/414367fc-1e58-b53d-d72b-244d4b04e657
+  description: Presentation - Report on the activities of the BIPM TIme Department
+  author: E.F. Arias (BIPM)
+  date: 24/09/2015
+- title: CCTF/2015-39
+  pdf: https://www.bipm.org/documents/20126/28429803/working-document-ID-7378/001cb378-2d7e-b756-8eb8-3de38a887e8c
+  description: Presentation - Report of the CCTF WG-Algo
+  author: Y. Hanado (NICT)
+  date: 25/09/2015
+- title: CCTF/2015-40
+  pdf: https://www.bipm.org/documents/20126/28429814/working-document-ID-7379/6a534dc8-0a84-7d95-4d6a-0df6f1e9cba9
+  description: Presentation - Improvements in the algorithms for UTC
+  author: G. Panfilo (BIPM)
+  date: 25/09/2015
+- title: CCTF/2015-41
+  pdf: https://www.bipm.org/documents/20126/28429825/working-document-ID-7380/a16bedad-3ffc-059b-d12a-678fda26f410
+  description: Presentation - Report on Rapid UTC (UTCr)
+  author: BIPM, G. Petit
+  date: 25/09/2015
+- title: CCTF/2015-42
+  pdf: https://www.bipm.org/documents/20126/28429836/working-document-ID-7381/6a0a9abf-1289-4179-c51f-406283fcc769
+  description: Presentation - Report of the CCTF WG TWSTFT
+  author: D. Piester (PTB)
+  date: 25/09/2015
+- title: CCTF/2015-43
+  pdf: https://www.bipm.org/documents/20126/28429847/working-document-ID-7382/cb221279-4164-e820-876e-660432c97207
+  description: Presentation - Report of the CCTF WG GNSS time transfer
+  author: P. Defraigne (ORB)
+  date: 25/09/2015
+- title: CCTF/2015-44
+  pdf: https://www.bipm.org/documents/20126/28429858/working-document-ID-7383/c907da52-438a-d20e-b53c-d2e0b3059c47
+  description: Presentation - GNSS calibrations for UTC and the new calibration scheme
+  author: BIPM, G. Petit
+  date: 25/09/2015
+- title: CCTF/2015-45
+  pdf: https://www.bipm.org/documents/20126/28428647/working-document-ID-7384/02a07ecb-583c-d2dc-8450-7af013a7288e
+  description: Presentation - Status report of the IGS clock products
+  author: M. Coleman (IGS)
+  date: 25/09/2015
+- title: CCTF/2015-46
+  pdf: https://www.bipm.org/documents/20126/28428658/working-document-ID-7388/3cf23da5-7367-0352-1cc3-3dbaf2538cbe
+  description: Presentation - Report of the CCTF WG ATFT
+  author: Feng-Lei Hong (NMIJ, Yokohama National Univ., Japan)
+  date: 29/09/2015
+- title: CCTF/2015-47
+  pdf: https://www.bipm.org/documents/20126/28428669/working-document-ID-7389/0e06b923-8323-7a7b-1037-76fb51ba802b
+  description: Presentation - Towards Accurate Optical Fibre Time Transfer for UTC
+    Generation
+  author: Z. Jiang, E.F. Arias (BIPM)
+  date: 29/09/2015
+- title: CCTF/2015-48
+  pdf: https://www.bipm.org/documents/20126/28428680/working-document-ID-7390/85685508-b06f-25b7-cfef-62becb35d508
+  description: 'Presentation - GNSS processing techniques: review of some topics over
+    recent years'
+  author: G. Petit (BIPM)
+  date: 29/09/2015
+- title: CCTF/2015-49
+  pdf: https://www.bipm.org/documents/20126/28428691/working-document-ID-7391/8bcd0078-e0a8-6e29-4f5e-d547b6f41245
+  description: Presentation - Report of the CCTF WG MRA
+  author: J.M. L???pez Romero (CENAM)
+  date: 29/09/2015
+- title: CCTF/2015-50
+  pdf: https://www.bipm.org/documents/20126/28428911/working-document-ID-7392/a4caf730-a6b8-d0d4-11b1-c7b6f7838b38
+  description: Presentation - SIM report to the 20th CCTF
+  author: M. Lombardi (NIST), M. Lopez (CENAM)
+  date: 29/09/2015
+- title: CCTF/2015-51
+  pdf: https://www.bipm.org/documents/20126/28428922/working-document-ID-7393/fb67d9b4-ee5d-7b2e-f8ca-d4da1089c2f4
+  description: Presentation - Report of the EURAMET TC Time and Frequency
+  author: R. Hamid (UME)
+  date: 29/09/2015
+- title: CCTF/2015-52
+  pdf: https://www.bipm.org/documents/20126/28428933/working-document-ID-7394/3789b3a1-519e-1b4c-b566-43b0b1adb6db
+  description: Presentation - Financial sector engagement
+  author: L. Lobo (NPL)
+  date: 29/09/2015
+- title: CCTF/2015-53
+  pdf: https://www.bipm.org/documents/20126/28429693/working-document-ID-7395/2d19aaed-14cf-2f71-c7d5-92a2b0aa4412
+  description: Presentation - Time and Frequency Activities at GUM, Poland
+  author: A. Czubla (GUM)
+  date: 29/09/2015
+- title: CCTF/2015-54
+  pdf: https://www.bipm.org/documents/20126/28428944/working-document-ID-7396/a4347a2a-ca31-05f1-abbc-f240e4a97314
+  description: Presentation - National Metrology Instirute (UME) of Turke - Time,
+    frequency and wavelength laboratory
+  author: R. Hamid (UME)
+  date: 29/09/2015
+- title: CCTF/2015-55
+  pdf: https://www.bipm.org/documents/20126/28428955/working-document-ID-7397/eb9359b1-03bc-77df-dfff-36738b013f0f
+  description: Presentation - Saudi Standards, Metrology and Quality Org.
+  author: SASO
+  date: 29/09/2015
+- title: CCTF/2015-56
+  pdf: https://www.bipm.org/documents/20126/28428966/working-document-ID-7398/bda35c4c-d385-66eb-8a83-a570d1c3974f
+  description: Presentation - The future of the UTC time scale
+  author: R. Beard (ITU-R)
+  date: 29/09/2015
+- title: CCTF/2015-57
+  pdf: https://www.bipm.org/documents/20126/28429869/working-document-ID-7399/aed6f662-7a8a-64b3-3b70-f36d3c8ef037
+  description: Presentation - IERS Earth Rotation (UT1) Dissemination
+  author: B. Luzum, C. Bizouard (IERS)
+  date: 29/09/2015
+- title: CCTF/2015-58
+  pdf: https://www.bipm.org/documents/20126/28428977/working-document-ID-7400/1d1628b8-cbf9-043b-54c7-f7936bc433cd
+  description: Presentation - Report of the IERS Conventions Centre
+  author: G. Petit (BIPM), B. Luzum (IERS)
+  date: 29/09/2015
+- title: CCTF/2015-59
+  pdf: https://www.bipm.org/documents/20126/28428988/working-document-ID-7401/606dfbb7-06b8-a658-de82-7b03f5e09ffe
+  description: Presentation - Actions for the recognition of the International Terrestrial
+    Reference System and Frame
+  author: C. Boucher (IUGG)
+  date: 29/09/2015
+- title: CCTF/2015-60
+  pdf: https://www.bipm.org/documents/20126/28428999/working-document-ID-7402/ed85d375-47d2-bec2-b06a-28aa43a976f7
+  description: Presentation - Outcome of the 25th CGPM
+  author: L. Erard
+  date: 29/09/2015
+- title: CCTF/2015-61
+  pdf: https://www.bipm.org/documents/20126/28429010/working-document-ID-7403/cd2650bb-85ca-6313-03b5-edda1be8f97a
+  description: Presentation - Programme of work and budget for 2016-2019 - Time Department
+  author: E.F. Arias (BIPM)
+  date: 29/09/2015
+- title: CCTF/2015-62
+  pdf: https://www.bipm.org/documents/20126/28429021/working-document-ID-7404/f01b35bf-a1e4-8714-2168-79d889c8aa49
+  description: Presentation - Report of the CCTF WG SP
+  author: L. Erard
+  date: 29/09/2015

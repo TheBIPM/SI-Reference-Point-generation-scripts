@@ -1,0 +1,77 @@
+---
+metadata:
+  title: CCTF-WGTAI
+  identifier: '2009-06-03'
+  date: '2009-06-03'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtai/2009-06-03
+  workgroup: cctf-wgtai
+resolutions: []
+working_documents:
+- title: CCTF-WGTAI/2009-00
+  pdf: https://www.bipm.org/documents/20126/48885072/working-document-ID-9433/2bba6ccc-9467-fdb1-e978-87a825743f6b
+  description: Agenda of the meeting
+  author: P. Tavella (INRIM), F. Arias (BIPM)
+  date: 05/03/2009
+- title: CCTF-WGTAI/2009-01
+  pdf: https://www.bipm.org/documents/20126/48885085/working-document-ID-9434/ac081f56-e752-a827-6f8c-3c3648d64b95
+  description: Considerations for establishing a timing laboratory
+  author: J. Levine (NIST)
+  date: 29/05/2009
+- title: CCTF-WGTAI/2009-02
+  pdf: https://www.bipm.org/documents/20126/48885150/working-document-ID-9435/5fe94718-727e-64c2-186b-2aae1f60a0ed
+  description: Time scale steering
+  author: D. Matsakis (USNO)
+  date: 30/05/2009
+- title: CCTF-WGTAI/2009-03
+  pdf: https://www.bipm.org/documents/20126/48885098/working-document-ID-9436/16fad5bb-655d-0b55-c059-997d64603b7e
+  description: Status report of AStar-SG
+  author: AStar-SG
+  date: 30/05/2009
+- title: CCTF-WGTAI/2009-04
+  pdf: https://www.bipm.org/documents/20126/48885046/working-document-ID-9437/75adb87a-28cd-5e5a-9ffb-c6032895b174
+  description: Report on the answers to the questionnaire on the leap second issued
+    by the BIPM
+  author: E.F. Arias (BIPM)
+  date: 31/05/2009
+- title: CCTF-WGTAI/2009-05
+  pdf: https://www.bipm.org/documents/20126/48885176/working-document-ID-9438/a04ad48c-f2cc-11d8-15ce-31caa461e63e
+  description: Improvement in TW time links treatment
+  author: A. Harmegnies, G. Panfilo (BIPM)
+  date: 02/06/2009
+- title: CCTF-WGTAI/2009-06
+  pdf: https://www.bipm.org/documents/20126/48885189/working-document-ID-9439/af3aabe7-809a-90c0-3c5b-21c13981aca0
+  description: Calibration of UTC Time Links - Presentation
+  author: BIPM
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-07
+  pdf: https://www.bipm.org/documents/20126/48885202/working-document-ID-9440/8502dd8f-dd11-3ea4-f720-f4fd4d2ffc85
+  description: Comparisons between time transfer techniques and methods - Presentation
+  author: Z. Jiang (BIPM)
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-08
+  pdf: https://www.bipm.org/documents/20126/48885163/working-document-ID-9441/e2523919-fa40-e5f0-2031-c2b2369cc851
+  description: GLONASS Time transfer - Presentation
+  author: BIPM
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-09
+  pdf: https://www.bipm.org/documents/20126/48885111/working-document-ID-9442/6a4fe9fa-3757-d39c-531f-7e4b61cd8361
+  description: Status report on TAI - Presentation
+  author: E.F. Arias (BIPM)
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-10
+  pdf: https://www.bipm.org/documents/20126/48885124/working-document-ID-9443/dccef891-5787-6729-64b2-ddb57e6c445f
+  description: Improvements in TAI computation - Data collection and checking - Presentation
+  author: A. Harmegnies (BIPM)
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-11
+  pdf: https://www.bipm.org/documents/20126/48885137/working-document-ID-9444/20442a35-4099-838e-828b-89532249a80c
+  description: Multi-technique combination for UTC/TAI time/frequency transfers -
+    Presentation
+  author: Z. Jiang and G. Petit (BIPM)
+  date: 02/07/2009
+- title: CCTF-WGTAI/2009-hotels
+  pdf: https://www.bipm.org/documents/20126/48885059/working-document-ID-9432/4a44d506-b39e-96a7-780c-2bb1c47602b7
+  description: List of hotels
+  author: BIPM
+  date: 05/03/2009

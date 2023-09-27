@@ -1,0 +1,66 @@
+---
+metadata:
+  title: CCL-CCTF-WGFS
+  identifier: '2006-09-11'
+  date: '2006-09-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/ccl-cctf-wgfs/2006-09-11
+  workgroup: ccl-cctf-wgfs
+resolutions: []
+working_documents:
+- title: CCTF-WGFS/2006-00
+  pdf: https://www.bipm.org/documents/20126/48883259/working-document-ID-2600/7e18d69b-5fb7-4c33-d9f7-21f24ce14f04
+  description: List of participants
+  author: BIPM
+  date: '08/09/2006'
+- title: CCTF-WGFS/2006-01
+  pdf: https://www.bipm.org/documents/20126/48883198/working-document-ID-2469/50821a59-09d9-b0d5-e42d-48d7ab2850de
+  description: Proposed agenda
+  author: BIPM
+  date: 13/06/2006
+- title: CCTF-WGFS/2006-02
+  pdf: https://www.bipm.org/documents/20126/48883324/working-document-ID-2470/dff0f3f5-56f4-aa76-dd88-267cc970b1f8
+  description: Questionnaire
+  author: F. Riehle
+  date: 13/06/2006
+- title: CCTF-WGFS/2006-03
+  pdf: https://www.bipm.org/documents/20126/48883337/working-document-ID-2473/01a903a7-c772-b3be-07d2-cbe28d5e3fb1
+  description: Report of meeting September 2005
+  author: P. Gill, F. Riehle
+  date: 14/06/2006
+- title: CCTF-WGFS/2006-04
+  pdf: https://www.bipm.org/documents/20126/48883350/working-document-ID-2533/5df8fbec-9955-36cc-ede2-16328a620124
+  description: NRC response to the questionnaire
+  author: A. Madej
+  date: 01/07/2006
+- title: CCTF-WGFS/2006-08
+  pdf: https://www.bipm.org/documents/20126/48883220/working-document-ID-2537/aecc1a32-5f11-fb22-0c34-9d3784326924
+  description: LNE-SYRTE response to the questionnaire
+  author: P. Lemonde and A. Clairon
+  date: 03/07/2006
+- title: CCTF-WGFS/2006-10
+  pdf: https://www.bipm.org/documents/20126/48883298/working-document-ID-2565/1991efae-d5cd-ea00-4590-13d60a63e4bc
+  description: INRIM response to the questionnaire
+  author: A. Godone
+  date: '08/07/2006'
+- title: CCTF-WGFS/2006-11
+  pdf: https://www.bipm.org/documents/20126/48883415/working-document-ID-2578/0b4539f6-5b0a-1a7e-559b-e13ab7909239
+  description: PTB response to the questionnaire
+  author: F. Riehle
+  date: 10/08/2006
+- title: CCTF-WGFS/2006-15
+  pdf: https://www.bipm.org/documents/20126/48883285/working-document-ID-2582/964c49ba-c96e-d0ea-4b24-5a4651527c95
+  description: NMIJ/AIST response to the questionnaire
+  author: NMIJ/AIST
+  date: 10/08/2006
+- title: CCTF-WGFS/2006-17
+  pdf: https://www.bipm.org/documents/20126/48883441/working-document-ID-2597/87a76c13-2987-d5e0-c1e1-cec2264a197f
+  description: NIST reponse to the questionnaire
+  author: J. Bergquist
+  date: 01/09/2006
+- title: CCTF-WGFS/2006-19
+  pdf: https://www.bipm.org/documents/20126/48883272/working-document-ID-2617/995aa334-5313-cc6d-4fc0-4b66bc35d747
+  description: Proposed recommendation 1 from CCL-CCTF JWG on secondary representations
+    of the second
+  author: JWG CCL-CCTF
+  date: 13/09/2006

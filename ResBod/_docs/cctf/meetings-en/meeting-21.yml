@@ -1,0 +1,632 @@
+---
+metadata:
+  title: 21st meeting of the CCTF
+  identifier: '21'
+  date: '2017-06-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017
+resolutions:
+- dates:
+  - '2017-06-09'
+  subject: CCTF
+  type: recommendation
+  title: Recommendations for operating, comparing and reporting frequency standards
+    as secondary representations of the second in preparation for a redefinition of
+    the second by optical transitions
+  identifier: 1
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017/resolution-1
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF21.pdf/525bb9fb-23db-377f-03d5-947b58731c2d
+  reference_name: Proceedings of the 21st CCTF (2017), 2017
+  reference_page: 48
+  approvals:
+  - message: The Consultative Committee for Time and Frequency (CCTF), at its 21st
+      session in 2017,
+  considerations:
+  - type: considering
+    date_effective: '2017-06-09'
+    message: |-
+      *considering that*
+
+      * a list of secondary representations of the second (SRS) has been maintained following the recommendations of the CIPM,
+       +
+      * different optical SRS have estimated fractional frequency uncertainties nearly two orders of magnitude lower than those of the best caesium primary standards,
+       +
+      * improvements in uncertainty associated with optical frequency standards are ongoing,
+       +
+      * a roadmap for a future redefinition of the second using optical frequency standards has been agreed by the CCTF;
+  actions:
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends that*
+
+      * the institutes put effort into operating their frequency standards to realize SRS in such a way that they routinely contribute to TAI via reporting to the BIPM,
+       +
+      * the optical standards be compared with uncertainties that are comparable to the estimated uncertainties of the standards themselves,
+       +
+      * the institutes measure the frequencies of the realizations of their SRS with respect to the best primary caesium standards as a necessary requirement for a possible future redefinition of the second in terms of optical transitions,
+       +
+      * the relevant CCTF working groups finalize the milestones for a redefinition and regularly inform the CIPM about the progress towards meeting these milestones.
+- dates:
+  - '2017-06-09'
+  subject: CCTF
+  type: recommendation
+  title: Updates to the CIPM list of standard frequencies
+  identifier: 2
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017/resolution-2
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF21.pdf/525bb9fb-23db-377f-03d5-947b58731c2d
+  reference_name: Proceedings of the 21st CCTF (2017), 2017
+  reference_page: 49
+  approvals:
+  - message: The Consultative Committee for Time and Frequency (CCTF), at its 21st
+      session in 2017,
+  considerations:
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that a common list of “Recommended values of standard frequencies
+      for applications including the practical realization of the metre and secondary
+      representations of the second” has been established,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that the CCL-CCTF Frequency Standards Working Group (WGFS)
+      has reviewed several candidates for updating the list;
+  actions:
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends that*
+
+      the following transition frequencies shall be updated in the list of recommended values of standard frequencies:
+
+      * the unperturbed optical transition 5s^2^ ^1^S~0~ - 5s5p ^3^P~0~ of the ^stem:[115^(In)]+^ ion with a frequency of stem:[f]~115In+~ = stem:[1 267 402 452 901 050 "Hz"] and an estimated relative standard uncertainty of stem:[1.6 * 10^(-14)];
+      * the unperturbed optical transition 6s^2^ ^1^S~0~ - 6s6p ^3^P~0~ of the ^199^Hg neutral atom with a frequency of stem:[f]~199Hg~ = stem:[1 128 575 290 808 154.4 "Hz"] and an estimated relative standard uncertainty of stem:[5 * 10^(-16)]; +
+       This radiation is now endorsed as a secondary representation of the second;
+      * the unperturbed optical transition 6s^2^ ^1^S~0~ - 6s6p ^3^P~0~ of the ^171^Yb neutral atom with a frequency of stem:[f]~171Yb~ = stem:[518 295 836 590 863.6 "Hz"] and an estimated relative standard uncertainty of stem:[5 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 5s ^2^S~1/2~ - 4d ^2^D~5/2~ of the ^stem:[88^(Sr)]+^ ion with a frequency of stem:[f]~88Sr+~ = stem:[444 779 044 095 486.5 "Hz"] and an estimated relative standard uncertainty of stem:[1.5 * 10^(-15)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 5s^2^ ^1^S~0~ - 5s5p ^3^P~0~ of the ^88^Sr neutral atom with a frequency of stem:[f_(88Sr) = 429 228 066 418 007.0 "Hz"] and an estimated relative standard uncertainty of 6 × 10^−16^;
+      * the unperturbed optical transition 5s^2^ ^1^S~0~ - 5s5p ^3^P~0~ of the ^87^Sr neutral atom with a frequency of stem:[f_(87Sr) = 429 228 004 229 873.0 "Hz"] and an estimated relative standard uncertainty of stem:[4 * 10^(-16)] (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+      * the unperturbed optical transition 4s ^2^S~1/2~ - 3d ^2^D~5/2~ of the ^stem:[40^(Ca)]+^ ion with a frequency of stem:[f]~40Ca+~ = stem:[411 042 129 776 399.8 "Hz"] and an estimated relative standard uncertainty of stem:[2.4 * 10^(-15)];
+      * the unperturbed ground-state hyperfine transition of ^87^Rb with a frequency of stem:[f_(87Rb) = 6 834 682 610.904 312 6 "Hz"] and an estimated relative standard uncertainty of 6 × 10^−16^ (this radiation is already endorsed by the CIPM as a secondary representation of the second);
+  - type: instructs
+    date_effective: '2017-06-09'
+    message: "*and informs* the CIPM accordingly."
+- dates:
+  - '2017-06-09'
+  subject: CCTF
+  type: recommendation
+  title: Recommendation on the definition of time scales
+  identifier: 3
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017/resolution-3
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF21.pdf/525bb9fb-23db-377f-03d5-947b58731c2d
+  reference_name: Proceedings of the 21st CCTF (2017), 2017
+  reference_page: 51
+  considerations:
+  - type: considering
+    date_effective: '2017-06-09'
+    message: |-
+      The Consultative Committee for Time and Frequency (CCTF), at its 21st session in 2017, considering that
+
+      * Resolution 1 of the 14th CGPM (1971) requested the CIPM to define International Atomic Time (TAI),
+       +
+      * no complete self-contained definition of TAI has been provided officially by the CIPM,
+       +
+      * the Consultative Committee for the Definition of the Second (CCDS) proposed in its Recommendation S2 (1970) a definition which was extended by a Declaration of the CCDS in 1980,
+       +
+      * the 15th CGPM (1975) noted that Coordinated Universal Time (UTC), derived from TAI, provides the basis of civil time, and strongly endorsed this usage;
+  - type: recognizing
+    date_effective: '2017-06-09'
+    message: |-
+      *recognizing that*
+
+      * the mission of the BIPM is to ensure and promote the global comparability of measurements, including and providing a coherent international system of units,
+       +
+      * the International Astronomical Union (IAU) and the International Union of Geodesy and Geophysics (IUGG) with the International Association of Geodesy (IAG) are responsible for defining reference systems for Earth and space applications,
+       +
+      * the International Telecommunication Union Radiocommunication Sector (ITU-R) is responsible for coordinating the dissemination of time and frequency signals and making relevant recommendations,
+       +
+      * the International Earth Rotation and Reference Systems Service (IERS), a service of the IAU and IUGG, is responsible for providing information required to relate terrestrial and celestial reference systems, including time-varying measurements of the Earth’s rotation angle, [stem:[UT1 - UTC]], the low-precision prediction of [stem:[UT1 - UTC]] for time signal broadcasts, DUT1, and for deciding and announcing leap second insertions;
+  - type: noting
+    date_effective: '2017-06-09'
+    message: |-
+      *noting that*
+
+      * Resolution A4 (1991) of the IAU defined, in Recommendations I and II, the Geocentric Reference System as a system of space-time coordinates for the Earth within the framework of general relativity, and, in Recommendation III, named the time coordinate of that reference system “Geocentric Coordinate Time” (TCG),
+       +
+      * Resolution A4 (1991) of the IAU further defined, in Recommendation IV, Terrestrial Time stem:[("TT")] as another time coordinate in the Geocentric Reference System, differing from TCG by a constant rate; the unit of measurement of stem:["TT"] being chosen to agree with the SI second on the geoid,
+       +
+      * Resolution B1.9 (2000) of the IAU redefined stem:["TT"] to be a time scale differing from TCG by a constant rate: d_TT_/d_TCG_ = stem:[1 - L_(G)], where stem:[L_(G) = 6.969290134] × 10^−10^ is a defining constant*,
+       +
+      * the redefinition of stem:["TT"] in 2000 introduced an ambiguity between stem:["TT"] and TAI as the CCDS had stated in 1980 that TAI was to have “the SI second as realized on the rotating geoid as the scale unit” while the definition of stem:["TT"] does not refer to the geoid;
+  actions:
+  - type: states
+    date_effective: '2017-06-09'
+    message: |-
+      *states that*
+
+      * TAI is a continuous time scale produced by the BIPM based on the best realizations of the SI second, and is a realization of stem:["TT"] as defined by IAU Resolution B1.9 (2000),
+       +
+      * in the transformation from the proper time of a clock to TAI, the relativistic rate shift is computed with respect to the conventionally adopted equipotential stem:[W_(0) = 62 636 856.0 "m"^(2) * "s"]^−2^ of the Earth’s gravity potential, which conforms to the constant stem:[L_(G)] defining the rate of stem:["TT"],
+       +
+      * as stated in the IAU Resolution A4 (1991), [stem:[TT - TAI]] = stem:[32.184 "s"] exactly at 1 January 1977, 0h TAI at the geocentre, in order to ensure continuity of stem:["TT"] with Ephemeris Time,
+       +
+      * UTC produced by the BIPM, based on TAI, is the only recommended time scale for international reference and the basis of civil time in most countries,
+       +
+      * UTC differs from TAI only by an integral number of seconds as published by the BIPM,
+       +
+      * users can derive the rotation angle of the Earth by applying to UTC the observed or predicted values of [stem:[UT1 - UTC]] as provided by the IERS,
+       +
+      * UTC provides a means to measure time intervals and to disseminate the standard of frequency during intervals in which leap seconds do not occur,
+       +
+      * traceability to UTC is obtained through local real-time realizations stem:["UTC" (k)] maintained by laboratories contributing data to the calculation of UTC, identified by “stem:[k]”,
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends the following definitions of TAI and UTC be adopted by the CIPM*
+
+      * International Atomic Time (TAI) is a continuous time scale produced by the BIPM based on the best realizations of the SI second. TAI is a realization of Terrestrial Time stem:[("TT")] with the same rate as that of stem:["TT"], as defined by the IAU Resolution B1.9 (2000),
+       +
+      * Coordinated Universal Time (UTC) is a time scale produced by the BIPM with the same rate as TAI, but differing from TAI only by an integral number of seconds,
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: "*and further recommends that*\n\n* all relevant unions and organizations
+      consider these definitions and work together to develop a common understanding
+      on reference time scales, their realization and dissemination with a view to
+      reconsidering the present limitation on the maximum magnitude of [stem:[UT1
+      - UTC]] so as to meet the needs of the current and future user communities,\n
+      +\n* all relevant unions and organizations work together to improve further
+      the accuracy of the prediction of [stem:[UT1 - UTC]] and the method for its
+      dissemination to satisfy the future requirements of the users.\n\n\n\n* * *\n\n*.
+      The numerical value of stem:[L_(G)] was chosen to conform to the value stem:[W_(0)
+      = 62 636 856.0 \"m\"^(2) * \"s\"]^−2^ for the gravity potential on the geoid
+      as recommended by Special Commission 3 of the IAG in 1999.\n\n "
+- dates:
+  - '2017-06-09'
+  subject: CCTF
+  type: recommendation
+  title: On the utilization and monitoring of redundant time transfer equipment in
+    the  timing laboratories contributing to UTC
+  identifier: 4
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017/resolution-4
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF21.pdf/525bb9fb-23db-377f-03d5-947b58731c2d
+  reference_name: Proceedings of the 21st CCTF (2017), 2017
+  reference_page: 53
+  approvals:
+  - message: The Consultative Committee for Time and Frequency (CCTF), at its 21st
+      session in 2017,
+  considerations:
+  - type: observing
+    date_effective: '2017-06-09'
+    message: realizing that atomic frequency standards have achieved unprecedented
+      accuracy, and that further rapid advances in this field are under way,
+  - type: observing
+    date_effective: '2017-06-09'
+    message: realizing that the ability to compare these standards for the realization
+      of UTC is limited by the accuracy and stability of time transfer equipment;
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that time and frequency transfer data from the use of Global
+      Navigation Satellite Systems (GNSS) signals and from Two-Way Satellite Time
+      and Frequency Transfer (TWSTFT) systems play an important role in the realization
+      of UTC,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that regular TWSTFT time link calibrations and GNSS equipment
+      calibrations have been carried out through cooperation of the BIPM, the Regional
+      Metrology Organizations (RMOs) and the UTC-contributing laboratories, resulting
+      in calibration uncertainties at the level of order of 1 ns to 1.5 ns,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that hardware delay variations limit the validity of calibration
+      results, and random variations in measurements also limit the ability to combine
+      data from redundant and complementary techniques;
+  - type: noting
+    date_effective: '2017-06-09'
+    message: noting that Recommendation CCTF 4 (2012) recommended laboratories that
+      contribute to UTC to upgrade their GNSS equipment towards multi-frequency multi-constellation
+      receiving systems providing code- and carrier-phase measurements and to supply
+      data from at least three receivers,
+  - type: noting
+    date_effective: '2017-06-09'
+    message: noting that the calibration of GNSS receivers of the Group One (G1) laboratories
+      designated by the RMOs has special importance as they influence the calibrations
+      or links of other multiple laboratories in a significant manner,
+  - type: noting
+    date_effective: '2017-06-09'
+    message: noting that variations of the common clock differences (CCD) between
+      GNSS systems and variations of the double clock differences (DCD) between Global
+      Positioning System (GPS) and TWSTFT links, which exceed the combined calibration
+      uncertainty of the most recent calibrations, have been observed,
+  - type: noting
+    date_effective: '2017-06-09'
+    message: noting that several ongoing studies consider ways to mitigate the effects
+      of time transfer systems’ calibration variations;
+  actions:
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends* that laboratories participating in UTC generation
+
+      * maintain at least two (three in the case of G1 laboratories) independent GNSS systems, some of which being state-of-the-art if resources are available,
+      * provide all data from redundant GNSS systems to the BIPM,
+      * monitor their CCDs and the internal characteristics of their laboratory reference signals, such as the shape of their pulse-per-second signal as seen at their time transfer systems, on an annual or other appropriate basis,
+      * document all setup and configuration changes relevant to time transfer and report this data to the BIPM,
+      * record and maintain both external and relevant internal temperature and humidity information and report this data to the BIPM,
+      * evaluate the correlation between the time transfer solutions and the local temperature and humidity measurements,
+      * calibrate at least one operational link every two years;
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends* that the BIPM and the CCTF WGs on TWSTFT and on GNSS Time Transfer
+
+      * coordinate TWSTFT and GNSS calibrations so that they can be compared and that the seasonal impacts can be studied and their effects minimized,
+      * study the impact of introducing calibration results on the long-term CCD and DCD series,
+      * define the format for the submissions of temperature and humidity information;
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends* that the BIPM
+
+      * continue to publish its computed time transfer differences (links and link comparisons) on its web pages in computer files with self-explanatory names,
+      * continue to publish the information about system configurations and calibration results on its web pages, along with the associated reports,
+      * continue to study the use of redundant time transfer systems in UTC generation,
+      * add the station temperature and humidity information to the Time Department database and make these data available to the WGs,
+      * add the station setup and configuration changes relevant to time transfer to the Time Department database.
+- dates:
+  - '2017-06-09'
+  subject: CCTF
+  type: recommendation
+  title: On  improving  the  uncertainty  of  Two-Way Satellite Time  and  Frequency   Transfer
+    (TWSTFT) for UTC Generation
+  identifier: 5
+  url: https://www.bipm.org/en/committees/cc/cctf/21-2017/resolution-5
+  reference: https://www.bipm.org/documents/20126/2071143/CCTF21.pdf/525bb9fb-23db-377f-03d5-947b58731c2d
+  reference_name: Proceedings of the 21st CCTF (2017), 2017
+  reference_page: 55
+  approvals:
+  - message: The Consultative Committee for Time and Frequency (CCTF), at its 21st
+      session in 2017,
+  considerations:
+  - type: observing
+    date_effective: '2017-06-09'
+    message: realizing that atomic frequency standards have achieved unprecedented
+      accuracy, and that further rapid advances in this field are under way,
+  - type: observing
+    date_effective: '2017-06-09'
+    message: realizing that time and frequency transfer data from the use of TWSTFT
+      systems plays an important role in realization of UTC,
+  - type: observing
+    date_effective: '2017-06-09'
+    message: realizing that the uncertainty of current TWSTFT systems for the realization
+      of UTC is limited by technical constraints that can result in a daily variation
+      (diurnal) in time transfer results;
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that the experimental use of Software Defined Radio (SDR)
+      receivers in the Asia-Pacific region (SDR receivers measure the timing signals
+      generated by the currently used TWSTFT equipment) demonstrated that SDR TWSTFT
+      significantly reduced the diurnal and measurement noise,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that a pilot study on using SDR TWSTFT for UTC was organized
+      by the BIPM and the CCTF Working Group on Two-Way Satellite Time and Frequency
+      Transfer (WGTWSTFT) in February 2016 to investigate the impact of SDR TWSTFT
+      for the Asia-Asia, Asia-Europe, Europe-Europe, Europe-US and US-US links using
+      different geostationary satellites,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that all UTC laboratories engaged in TWSTFT expressed their
+      interest in participating in the pilot study and that twelve stations in Asia,
+      Europe and the USA have installed SDR systems and carried out measurements contributing
+      to the pilot study,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that the BIPM global validation of the SDR TWSTFT results
+      has revealed a significant reduction of the diurnal and measurement noise in
+      the inner-continental TWSTFT links with a gain factor of two to three in the
+      time link stability as compared to the currently used TWSTFT results,
+  - type: considering
+    date_effective: '2017-06-09'
+    message: considering that a few digital TWSTFT modems have been under development
+      in recent years, some of which are capable of supporting both code-phase and
+      carrier-phase measurements, which could further improve the uncertainty of TWSTFT;
+  actions:
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends* that laboratories operating TWSTFT stations
+
+      * continue to study the SDR TWSTFT technique by maintaining SDR operation or installing SDR systems in stations, and providing SDR TWSTFT data to the BIPM in parallel to the data from the currently used TWSTFT equipment, with the aim of improving the uncertainty of time links with the current TWSTFT by a reduction of the diurnal noise,
+      * support and participate in the test of new digital TWSTFT modems as they become available with the perspective of further improving the uncertainty of TWSTFT, potentially making it practical for the comparison of optical clocks at the level of their accuracies;
+  - type: recommends
+    date_effective: '2017-06-09'
+    message: |-
+      *recommends* that the BIPM
+
+      * work towards implementing the use of SDR TWSTFT data in UTC generation,
+      * support studies to improve TWSTFT with redundant measurements in the TWSTFT network and with digital modems when data becomes available.
+working_documents:
+- title: CCTF/2017-01
+  pdf: https://www.bipm.org/documents/20126/28427844/working-document-ID-9068/9ced3e2f-ea09-38e4-e550-89c766c1a3a0
+  description: Agenda (draft 31/05/2017)
+  author: F. Arias (BIPM, Ex. Secretary), L. Erard (LNE, President)
+  date: 04/04/2017
+- title: CCTF/2017-02
+  pdf: https://www.bipm.org/documents/20126/28430144/working-document-ID-9069/0de9b4c1-f21c-36b2-382c-20a1b11e0241
+  description: Schedule of CCTF and associated meetings
+  author: F. Arias (BIPM, Ex. Secretary)
+  date: 04/04/2017
+- title: CCTF/2017-03
+  pdf: https://www.bipm.org/documents/20126/28430188/working-document-ID-9114/5b6e32b8-dd4c-e5d7-70b1-08804adefcd5
+  description: 'Lecture: History of the second'
+  author: D. McCarthy (IAU, invited)
+  date: 07/05/2017
+- title: CCTF/2017-04
+  pdf: https://www.bipm.org/documents/20126/28430199/working-document-ID-9115/60a763ad-fb93-43fd-5d35-74e1590530ab
+  description: Recommendation (proposed) "On the definition of time scales"
+  author: Task Group on Time Scales Definition
+  date: 07/05/2017
+- title: CCTF/2017-05
+  pdf: https://www.bipm.org/documents/20126/28430364/working-document-ID-9116/4c76d56a-ff2d-e394-a80d-e9c7f03f5260
+  description: Recommendation (proposed) "On the utilization and monitoring of redundant
+    time transfer equipment in the timing laboratories contributing to UTC"
+  author: CCTF WGs GNSS and TWSTFT
+  date: 07/05/2017
+- title: CCTF/2017-06
+  pdf: https://www.bipm.org/documents/20126/28430375/working-document-ID-9117/a0d0a9ce-2a46-c309-1ac1-2324d0f5a1c4
+  description: Recommendation (proposed) "On improving Two-Way Satellite Time and
+    Frequency Transfer (TWSTFT) for UTC Generation"
+  author: CCTF WG TWSTFT
+  date: 07/05/2017
+- title: CCTF/2017-07
+  pdf: https://www.bipm.org/documents/20126/28430210/working-document-ID-9118/e7dab94f-62df-95df-6f22-c99256b89d18
+  description: Report on PTB`s activities to the 21st session of the CCTF, June 2017
+  author: PTB
+  date: 07/05/2017
+- title: CCTF/2017-08
+  pdf: https://www.bipm.org/documents/20126/28430221/working-document-ID-9119/e1b5b0f0-d2d2-451d-ec90-9447858417f0
+  description: Status report to the 21st CCTF on time and frequency activities at
+    KRISS
+  author: KRISS
+  date: 07/05/2017
+- title: CCTF/2017-09
+  pdf: https://www.bipm.org/documents/20126/28430232/working-document-ID-9120/61c0ba50-1f0a-7b73-fed0-006483700918
+  description: Time and frequency activities at the VNIIFTRI
+  author: VNIIFTRI
+  date: 07/05/2017
+- title: CCTF/2017-10
+  pdf: https://www.bipm.org/documents/20126/28430243/working-document-ID-9121/129f5251-45e3-4eec-6b74-588ec1554e97
+  description: CIPM ad hoc Working Group on Implementing the Recommendations from
+    the Review of the CIPM MRA
+  author: CIPM
+  date: 07/05/2017
+- title: CCTF/2017-11
+  pdf: https://www.bipm.org/documents/20126/28430408/working-document-ID-10155/d625a7bd-0b2d-dc10-aec5-b41cf32f552d
+  description: Report of the CCTF WG on the MRA
+  author: J.M. Lopez Romero (CINVESTAV, chair)
+  date: 23/05/2017
+- title: CCTF/2017-12
+  pdf: https://www.bipm.org/documents/20126/28430419/working-document-ID-10156/ac327dad-8f72-5559-6235-a01ced648f24
+  description: Report to the 21st Session of the CCTF - WG on GNSS time transfer
+  author: P. Defraigne (ORB, chair)
+  date: 23/05/2017
+- title: CCTF/2017-13
+  pdf: https://www.bipm.org/documents/20126/28430430/working-document-ID-10157/27fac310-f8b5-6923-10c9-db9d4918a69b
+  description: METAS report to the CCTF 2017
+  author: METAS
+  date: 23/05/2017
+- title: CCTF/2017-14
+  pdf: https://www.bipm.org/documents/20126/28431288/working-document-ID-10184/017d29be-5699-cb32-0def-38949fb4723a
+  description: Report to the 21st Session of the CCTF- Actvities of the WGPSFS
+  author: S. Jefferts (NIST, chair) and G. Petit (BIPM, Ex. secretary)
+  date: 24/05/2017
+- title: CCTF/2017-15
+  pdf: https://www.bipm.org/documents/20126/28431299/working-document-ID-10185/18da060e-bdb0-7727-d497-905e4c5c29ee
+  description: Report to the 21st CCTF - Improving the stability of UTCr
+  author: G. Petit, A. Harmegnies, G. Panfilo (BIPM)
+  date: 24/05/2017
+- title: CCTF/2017-16
+  pdf: https://www.bipm.org/documents/20126/28430463/working-document-ID-10188/e538c609-77ab-055e-9082-0c4abb9c5ee9
+  description: Report of the CCL-CCTF Frequency Standards Working Group (WGFS) to
+    the CCTF 2017
+  author: F. Riehle (PTB), P. Gill (NPL) (co-chairs)
+  date: 26/05/2017
+- title: CCTF/2017-17
+  pdf: https://www.bipm.org/documents/20126/28431101/working-document-ID-10189/4462fce8-cd0c-2f75-20fa-f86d984705bc
+  description: Recommendation (proposed) "On the list of recommened frequencies"
+  author: CCL-CCTF WGFS
+  date: 26/05/2017
+- title: CCTF/2017-18
+  pdf: https://www.bipm.org/documents/20126/28430474/working-document-ID-10191/e9a4ca5a-345a-2108-2b11-d895c1d829a7
+  description: Report from NPL to the 21st session of the CCTF, 2017
+  author: NPL
+  date: 29/05/2017
+- title: CCTF/2017-19
+  pdf: https://www.bipm.org/documents/20126/28430485/working-document-ID-10192/8fc66ba8-9998-665f-dc0f-8657aedd9795
+  description: Report of the NRC to the 21st Meeting of the CCTF
+  author: NRC
+  date: 29/05/2017
+- title: CCTF/2017-20
+  pdf: https://www.bipm.org/documents/20126/28430496/working-document-ID-10196/c3717413-90c9-6906-55ec-f0b74e883eb7
+  description: Report on activities to the 21st meeting of the CCTF, June 2017
+  author: RISE (formerly SP)
+  date: 30/05/2017
+- title: CCTF/2017-21
+  pdf: https://www.bipm.org/documents/20126/28430507/working-document-ID-10201/f1497cb5-075a-f1db-7fac-0512089af57e
+  description: Report to the 21st Meeting of the CCTF - INRIM`s Time and Frequency
+    activities
+  author: INRIM
+  date: 31/05/2017
+- title: CCTF/2017-22
+  pdf: https://www.bipm.org/documents/20126/28430518/working-document-ID-10202/8ba5d9ef-7cd2-31f9-1e70-64fea2aff2aa
+  description: Report of Time and Frequency actvites at NICT (2015-2017)
+  author: NICT
+  date: 01/06/2017
+- title: CCTF/2017-23
+  pdf: https://www.bipm.org/documents/20126/28431178/working-document-ID-10203/527b697a-9394-f690-6cb5-c0992e201de7
+  description: Report of the CCTF WG on TWSTFT
+  author: V. Zhang (NIST, chair) and Z. Jiang (BIPM, Ex. Secretary)
+  date: 01/06/2017
+- title: CCTF/2017-24
+  pdf: https://www.bipm.org/documents/20126/28431189/working-document-ID-10204/ef6123c1-bdd4-f348-25f1-63828a8123ea
+  description: 'Report to the 21st CCTF: The uncertainties of [UTC-UTC(k)]'
+  author: G. Panfilo, G. Petit, A. Harmegnies (BIPM)
+  date: 01/06/2017
+- title: CCTF/2017-25
+  pdf: https://www.bipm.org/documents/20126/28431321/working-document-ID-10205/c10ba27c-c2ae-f0f4-5471-0f248f4052c8
+  description: 'CCTF 2017: Report of the Royal Observatory of Belgium'
+  author: P. Defraigne (ORB)
+  date: 01/06/2017
+- title: CCTF/2017-26
+  pdf: https://www.bipm.org/documents/20126/28431332/working-document-ID-10207/5dce8b12-4a03-1b07-b435-04ec05db602e
+  description: APMP report to the 21st meeting of the CCTF
+  author: M. Wouters (chair, APMP TCTF)
+  date: 02/06/2017
+- title: CCTF/2017-27
+  pdf: https://www.bipm.org/documents/20126/28431200/working-document-ID-10208/54b4d63c-8757-bc15-f8f5-68111b5c3ace
+  description: GULFMET TC-EMTF Report
+  author: TC-EMTF GULFMET
+  date: 02/06/2017
+- title: CCTF/2017-28
+  pdf: https://www.bipm.org/documents/20126/28430529/working-document-ID-10209/d95293ba-b5b4-a184-1161-a5cf920f00d6
+  description: Report to the 21st Meeting of the CCTF - Research Activites on Time
+    and Frequency - NMIJ/AIST
+  author: NMIJ
+  date: 02/06/2017
+- title: CCTF/2017-29
+  pdf: https://www.bipm.org/documents/20126/28431211/working-document-ID-10210/f22dc39d-a1c3-a95b-7067-22e7d5337498
+  description: Report to the 21st Meeting of the CCTF - Activites at the NIST Time
+    and Frequency Divison
+  author: NIST
+  date: 02/06/2017
+- title: CCTF/2017-30
+  pdf: https://www.bipm.org/documents/20126/28430540/working-document-ID-10213/b3b5aa1d-25ed-10f9-a2cd-750aad3ee01c
+  description: Report to the 21st  CCTF - LNE-SYRTE
+  author: LNE-SYRTE
+  date: '08/06/2017'
+- title: CCTF/2017-31
+  pdf: https://www.bipm.org/documents/20126/28430837/working-document-ID-10214/cdfa95a1-8545-e85d-d575-5ea5ce7fe0c6
+  description: Report to the 21st  Meeting of the CCTF - Study Group on Optical Fibres
+    of the WG ATFT
+  author: D. Calonico (chair, INRIM)
+  date: '08/06/2017'
+- title: CCTF/2017-32
+  pdf: https://www.bipm.org/documents/20126/28430551/working-document-ID-10215/c2af6868-ae2d-bcb0-00f4-174a10d1a742
+  description: Report of VSL activities to the 21st Session of the CCTF
+  author: VSL
+  date: '08/06/2017'
+- title: CCTF/2017-33
+  pdf: https://www.bipm.org/documents/20126/28430738/working-document-ID-10277/8d2575ad-13d6-335e-d37f-5805aca58d3c
+  description: In memoriam Dr Bernard Guinot
+  author: BIPM
+  date: 13/06/2017
+- title: CCTF/2017-34
+  pdf: https://www.bipm.org/documents/20126/28430749/working-document-ID-10278/0a54aa4b-0f04-eeef-9e67-faeef5d94c88
+  description: Presentation - CCTF meeting - Update on re-definiton of the SI
+  author: M. Milton (BIPM Director)
+  date: 13/06/2017
+- title: CCTF/2017-35
+  pdf: https://www.bipm.org/documents/20126/28431376/working-document-ID-10279/65c2ddb2-dfff-e6c4-1323-2baf37f5b579
+  description: Presentation - Report on the activities of the BIPM Time Department
+    to the 21st Meetng of the CCTF
+  author: F. Arias (BIPM)
+  date: 13/06/2017
+- title: CCTF/2017-36
+  pdf: https://www.bipm.org/documents/20126/28431387/working-document-ID-10280/60255b0b-7305-b8a7-e646-1646f5d7663e
+  description: Presentation - Frequency standards in TA and realization of TT(BIPM)
+  author: G. Petit, G. Panfilo (BIPM)
+  date: 13/06/2017
+- title: CCTF/2017-37
+  pdf: https://www.bipm.org/documents/20126/28431398/working-document-ID-10281/acf93c53-839e-d1d4-5f49-1128e8325925
+  description: Presentation - Report of the CCTF WG TAI to the 21st meeting of the
+    CCTF
+  author: F. Arias (chair, BIPM)
+  date: 13/06/2017
+- title: CCTF/2017-38
+  pdf: https://www.bipm.org/documents/20126/28431409/working-document-ID-10282/75c9bf5c-5feb-6939-7352-bf4817292869
+  description: Presentation - Status of the algorithms for TAI
+  author: G. Panfilo (BIPM)
+  date: 13/06/2017
+- title: CCTF/2017-39
+  pdf: https://www.bipm.org/documents/20126/28430760/working-document-ID-10283/1efd5761-e66a-af48-45cd-924ba4822cec
+  description: Presentation - Report on Rapid UTC
+  author: BIPM Time Department
+  date: 13/06/2017
+- title: CCTF/2017-40
+  pdf: https://www.bipm.org/documents/20126/28431497/working-document-ID-10293/906fc546-2f95-005c-7d13-bca650e55543
+  description: Presentation - Report of the CCTF WG TWSTFT
+  author: V. Zhang (NIST, chair) and Z. Jiang (BIPM, Ex. Secretary)
+  date: 14/06/2017
+- title: CCTF/2017-41
+  pdf: https://www.bipm.org/documents/20126/28431508/working-document-ID-10294/cbba23f7-9aa6-514f-ba25-868acd308d74
+  description: Presentation - Report of the CCTF WG GNSS
+  author: P. Defraigne (ORB, chair)
+  date: 14/06/2017
+- title: CCTF/2017-42
+  pdf: https://www.bipm.org/documents/20126/28431519/working-document-ID-10295/048231cb-c438-b8c0-f088-bb975cb6fabe
+  description: Presentation - GPS calibratons for UTC
+  author: BIPM Time Department
+  date: 14/06/2017
+- title: CCTF/2017-43
+  pdf: https://www.bipm.org/documents/20126/28430782/working-document-ID-10296/fcaf18dc-bc09-4e36-2227-36077f8a1c7b
+  description: Presentation - International Committee on Global Navigation Satellite
+    Systems (ICG)
+  author: G. Petit (BIPM)
+  date: 14/06/2017
+- title: CCTF/2017-44
+  pdf: https://www.bipm.org/documents/20126/28430793/working-document-ID-10297/258c6e78-e96b-0e54-4ec4-1103908b5542
+  description: Presentation - Report of the CCL-CCTF WG FS
+  author: F. Riehle (PTB), P. Gill (NPL) (co-chairs)
+  date: 14/06/2017
+- title: CCTF/2017-45
+  pdf: https://www.bipm.org/documents/20126/28431530/working-document-ID-10298/2ef181de-16a5-5ece-2202-63d0247e930b
+  description: Presentation - Report of the CCTF WG on Advanced Time and Frequency
+    Transfer Technology
+  author: F.-L. Hong (NMIJ, Yokohama Nat. Univ., chair)
+  date: 14/06/2017
+- title: CCTF/2017-46
+  pdf: https://www.bipm.org/documents/20126/28431541/working-document-ID-10299/f1168c52-164d-0564-6a57-e839a1ccb9b4
+  description: Presentation - Study Group on Optical Fibre Links for UTC under the
+    CCTF WG ATFT
+  author: D. Calonico (INRIM, chair)
+  date: 14/06/2017
+- title: CCTF/2017-47
+  pdf: https://www.bipm.org/documents/20126/28431266/working-document-ID-10301/5e89d95f-f2dc-13cd-7807-3d97d390ee06
+  description: Presentation - Report of the CCTF WG MRA
+  author: J.M. Lopez Romero (CINVESTAV, chair), G. Panfilo (BIPM, Exec. Secretary)
+  date: 15/06/2017
+- title: CCTF/2017-48
+  pdf: https://www.bipm.org/documents/20126/28431277/working-document-ID-10302/011f5c88-2721-b9f0-b263-2a392c1dea78
+  description: Presentation - APMP Technical Committee for Time and Frequency Activity
+    Report
+  author: A. Zhang (NIM, chair Elect, M. Wouters (NMIA, chair)
+  date: 15/06/2017
+- title: CCTF/2017-49
+  pdf: https://www.bipm.org/documents/20126/28430804/working-document-ID-10303/b026fd90-c2ef-c8f4-f72f-904724944b35
+  description: Presentation - EURAMET TC-TF report to CCTF
+  author: P. Whibberley (NPL, chair)
+  date: 15/06/2017
+- title: CCTF/2017-50
+  pdf: https://www.bipm.org/documents/20126/28430815/working-document-ID-10304/9a8f79b8-d9dc-732f-ad99-6fa1c9a7d429
+  description: Presentation - SIM Report to the 21st CCTF meeting
+  author: R. Sol???s Betancur (CENAMEP, chair), J.M. L???pez Romero (CINVESTAV)
+  date: 15/06/2017
+- title: CCTF/2017-51
+  pdf: https://www.bipm.org/documents/20126/28431552/working-document-ID-10313/80fd8464-d94f-e407-7e37-55e933e155eb
+  description: Presentation - Space-time references and General Relativity
+  author: G. Petit (BIPM)
+  date: 15/06/2017
+- title: CCTF/2017-52
+  pdf: https://www.bipm.org/documents/20126/28430826/working-document-ID-10315/e8f201fb-1420-83a2-239f-2781fdd8bd46
+  description: BIPM strategy for time metrology (2018-2025)
+  author: F. Arias, L. Erard
+  date: 15/06/2017
+- title: CCTF/2017-53
+  pdf: https://www.bipm.org/documents/20126/28431563/working-document-ID-10316/9603b887-fede-f010-f1eb-4f7fb1fd8a67
+  description: Presentation - Time and Frequency Activities - TL, Chinese Taipei
+  author: H.-T. Lin, C.-S. Liao (TL)
+  date: 15/06/2017
+- title: CCTF/2017-54
+  pdf: https://www.bipm.org/documents/20126/28433565/working-document-ID-10558/bc67b5fd-159b-d8af-536f-9a635e316bcb
+  description: Notes for the CCTF report
+  author: USNO
+  date: 07/09/2017

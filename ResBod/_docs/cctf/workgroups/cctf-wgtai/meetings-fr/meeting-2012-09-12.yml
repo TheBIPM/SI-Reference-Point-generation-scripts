@@ -1,0 +1,184 @@
+---
+metadata:
+  title: CCTF-WGTAI
+  identifier: '2012-09-12'
+  date: '2012-09-12'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtai/2012-09-12
+  workgroup: cctf-wgtai
+resolutions: []
+working_documents:
+- title: CCTF-WGTAI/2012-01
+  pdf: https://www.bipm.org/documents/20126/48885449/working-document-ID-9445/1dfb5017-971a-9400-b81d-344417dba36e
+  description: Agenda of the meeting
+  author: P. Tavella, F. Arias
+  date: 29/08/2012
+- title: CCTF-WGTAI/2012-02
+  pdf: https://www.bipm.org/documents/20126/48885215/working-document-ID-9446/c75bf735-e3c2-2325-fb5d-57ff6372a2be
+  description: Programme for the training (11/09/2012)
+  author: P. Tavella, F. Arias
+  date: 29/08/2012
+- title: CCTF-WGTAI/2012-03
+  pdf: https://www.bipm.org/documents/20126/48885293/working-document-ID-9447/9619e9b5-2593-4264-2746-789a48f7f309
+  description: Letter from the ITU General Secretary to the Director of the BIPM on
+    the future of UTC (also CCTF/12-10)
+  author: ITU
+  date: 29/08/2012
+- title: CCTF-WGTAI/2012-04
+  pdf: https://www.bipm.org/documents/20126/48885462/working-document-ID-9448/70bb3153-0151-e1a9-a24f-7e3413353436
+  description: Proposal of recommendation, corrected version 12/09/2012 (also CCTF/12-08)
+  author: D. Matsakis (USNO)
+  date: 29/08/2012
+- title: CCTF-WGTAI/2012-05
+  pdf: https://www.bipm.org/documents/20126/48885475/working-document-ID-9449/df5eeed2-ec6a-2679-b30d-633c4d550cca
+  description: NAO  report on activities
+  author: NAO
+  date: 29/08/2012
+- title: CCTF-WGTAI/2012-06
+  pdf: https://www.bipm.org/documents/20126/48885488/working-document-ID-9450/ceffa291-575a-df93-1b74-86b2a07ef766
+  description: VNIIFTRI report on activities (also CCTF/12-02)
+  author: VNIIFTRI
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-07
+  pdf: https://www.bipm.org/documents/20126/48885501/working-document-ID-9451/e9c4b94b-e285-a302-6c35-15576405e410
+  description: USNO report on activities (also CCTF/12-06)
+  author: USNO
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-08
+  pdf: https://www.bipm.org/documents/20126/48885514/working-document-ID-9452/1c415edd-7a5c-6c00-6ee1-6c53a0323ef7
+  description: NICT report on activities (also CCTF/12-07)
+  author: NICT
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-09
+  pdf: https://www.bipm.org/documents/20126/48885527/working-document-ID-9453/a53de2ff-3bf9-ed8b-d726-bcbacd927a8d
+  description: NMIJ report on activities (also CCTF/12-13)
+  author: NMIJ
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-10
+  pdf: https://www.bipm.org/documents/20126/48885540/working-document-ID-9454/98772716-5c55-8b67-cf29-ef2a5d8ce7df
+  description: PTB report on activities (also CCTF/12-15)
+  author: PTB
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-11
+  pdf: https://www.bipm.org/documents/20126/48885553/working-document-ID-9455/bcdbacf6-e400-e4c1-7ddd-fb91b0fba474
+  description: SIM report on activities (also CCTF/12-16)
+  author: M. Lopez (CENAM)
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-12
+  pdf: https://www.bipm.org/documents/20126/48885566/working-document-ID-9456/85fe7b40-eaf9-2f45-5bb7-2347e32c0268
+  description: CENAM report on activities (also CCTF/12-17)
+  author: CENAM
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-13
+  pdf: https://www.bipm.org/documents/20126/48885579/working-document-ID-9457/249712e1-0e3b-b9b8-ca9c-da1d970c9a22
+  description: LNE-SYRTE report on activities (also CCTF/12-18)
+  author: LNE-SYRTE
+  date: 03/09/2012
+- title: CCTF-WGTAI/2012-14
+  pdf: https://www.bipm.org/documents/20126/48885592/working-document-ID-9458/7761cd7c-5563-7b39-761d-05190351fe36
+  description: ORB report on activities (also CCTF/12-20)
+  author: ORB
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-15
+  pdf: https://www.bipm.org/documents/20126/48885228/working-document-ID-9459/cb2fb770-9fb9-e8e5-ab83-ee02b96ed0d7
+  description: Programme of work of the BIPM Time Department for 2013-2015 (also CCTF/12-21)
+  author: E.F. Arias (BIPM)
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-16
+  pdf: https://www.bipm.org/documents/20126/48885306/working-document-ID-9460/09277052-d127-ef42-814b-983da511138d
+  description: TL report on activities (also CCTF/12-22)
+  author: TL
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-17
+  pdf: https://www.bipm.org/documents/20126/48885319/working-document-ID-9461/e2bc59bd-b14c-70c9-c954-59c26d4773b0
+  description: KRISS report on activities (also CCTF/12-23)
+  author: KRISS
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-18
+  pdf: https://www.bipm.org/documents/20126/48885605/working-document-ID-9462/84253afb-ee1b-5e47-cc44-f88b5100ceca
+  description: 'UTCr: a rapid realization of UTC (also CCTF/12-24)'
+  author: BIPM
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-19
+  pdf: https://www.bipm.org/documents/20126/48885241/working-document-ID-9463/8c26c42c-2dcf-f13a-2099-7fb8e0492135
+  description: SP report on activities (also CCTF/12-26)
+  author: SP
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-20
+  pdf: https://www.bipm.org/documents/20126/48885436/working-document-ID-9464/384e3690-c71a-742a-6897-0033f5ba3843
+  description: NPL report on activities (also CCTF/12-28)
+  author: NPL
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-21
+  pdf: https://www.bipm.org/documents/20126/48885618/working-document-ID-9465/b80d78d9-a6bf-552a-4b0b-970569d70b7c
+  description: METAS report on activities (also CCTF/12-29)
+  author: METAS
+  date: 06/09/2012
+- title: CCTF-WGTAI/2012-22
+  pdf: https://www.bipm.org/documents/20126/48885254/working-document-ID-9466/55234008-5b83-80db-2455-4fdb58e0c267
+  description: NMISA report on activities (also CCTF/12-30)
+  author: NMISA
+  date: 07/09/2012
+- title: CCTF-WGTAI/2012-23
+  pdf: https://www.bipm.org/documents/20126/48885332/working-document-ID-9467/5bb4fcec-e3e1-a6d2-52ac-772ed5d1d305
+  description: INRIM report on activities (also CCTF/12-31)
+  author: INRIM
+  date: 07/09/2012
+- title: CCTF-WGTAI/2012-24
+  pdf: https://www.bipm.org/documents/20126/48885345/working-document-ID-9468/24fe0911-00c7-57c0-1599-4c86275d84af
+  description: NPLI report on activities (also CCTF/12-32)
+  author: NPLI
+  date: 07/09/2012
+- title: CCTF-WGTAI/2012-25
+  pdf: https://www.bipm.org/documents/20126/48885358/working-document-ID-9469/55024abe-22f0-acc1-9e80-5e55e7d0348e
+  description: NIST report on activities (also CCTF/12-33)
+  author: NIST
+  date: 07/09/2012
+- title: CCTF-WGTAI/2012-26
+  pdf: https://www.bipm.org/documents/20126/48885371/working-document-ID-9470/16e38854-aca0-aa96-f97c-760eae6445f9
+  description: NRC report on activities (also CCTF/12-34)
+  author: NRC
+  date: 07/09/2012
+- title: CCTF-WGTAI/2012-27
+  pdf: https://www.bipm.org/documents/20126/48885384/working-document-ID-9471/972190ec-be50-68bb-96d9-8494060ec53f
+  description: Proposal of recommendation - Development of continental-scale fibre
+    optical time and frequency networks...(also CCTF/12-35
+  author: CCFT WG on ATFT
+  date: 10/09/2012
+- title: CCTF-WGTAI/2012-28
+  pdf: https://www.bipm.org/documents/20126/48885397/working-document-ID-9472/2d49a0f3-b3d2-9a24-cf0e-04f3fe7b9c69
+  description: VSL report on activities (also CCTF/12-36)
+  author: VSL
+  date: 10/09/2012
+- title: CCTF-WGTAI/2012-29
+  pdf: https://www.bipm.org/documents/20126/48885631/working-document-ID-9473/8c09c635-d367-fc84-b323-bb7433ad2c19
+  description: NIM report on activities (also CCTF/12-37)
+  author: NIM
+  date: 11/09/2012
+- title: CCTF-WGTAI/2012-30
+  pdf: https://www.bipm.org/documents/20126/48885267/working-document-ID-9474/ef28216b-de51-8ed9-060d-93121f8f8c6e
+  description: APMP report on activities (also CCTF/12-38)
+  author: Huang-Tien Lin and Chia-Shu Liao (TL)
+  date: 11/09/2012
+- title: CCTF-WGTAI/2012-31
+  pdf: https://www.bipm.org/documents/20126/48885410/working-document-ID-9475/86e9c1ed-9052-6087-97bc-a2a42ad54f0a
+  description: ROA report on activities (also CCTF:12-39)
+  author: ROA
+  date: 11/09/2012
+- title: CCTF-WGTAI/2012-32
+  pdf: https://www.bipm.org/documents/20126/48885423/working-document-ID-9476/8deb4b22-6d35-980d-0fd5-938d745cf5bf
+  description: Proposal of recommendation on supporting the BIPM for the regular calculation
+    and publication of the rapid UTC
+  author: CCTF WG on TAI
+  date: 12/09/2012
+- title: CCTF-WGTAI/2012-33
+  pdf: https://www.bipm.org/documents/20126/48885644/working-document-ID-9477/0e67d698-2b3a-31ab-fa18-379054d4280d
+  description: Proposal of recommendation on concerning the upgrade and calibration
+    of GNSS equipment in the timing laboratories (also CCTF/12-40
+  author: CGGTTS
+  date: 12/09/2012
+- title: CCTF-WGTAI/2012-34
+  pdf: https://www.bipm.org/documents/20126/48885280/working-document-ID-9478/43ee0449-0c7b-c7a6-5ee8-c817bc8d4857
+  description: Report of the CCTF WG on TAI (also CCTF/12-41)
+  author: P. Tavella (INRIM)
+  date: 13/09/2012

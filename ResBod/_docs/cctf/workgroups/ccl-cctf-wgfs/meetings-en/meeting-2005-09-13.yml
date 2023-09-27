@@ -1,0 +1,70 @@
+---
+metadata:
+  title: CCL-CCTF-WGFS
+  identifier: '2005-09-13'
+  date: '2005-09-14'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/ccl-cctf-wgfs/2005-09-13
+  workgroup: ccl-cctf-wgfs
+resolutions: []
+working_documents:
+- title: CCTF-WGFS/2005-01
+  pdf: https://www.bipm.org/documents/20126/48882564/working-document-ID-1816/246191e3-e24a-df61-e7c9-40bfabca0ea2
+  description: Proposed agenda
+  author: BIPM
+  date: 04/07/2005
+- title: CCTF-WGFS/2005-02
+  pdf: https://www.bipm.org/documents/20126/48882577/working-document-ID-1817/9765aed9-10fa-62ed-3882-8451c7133986
+  description: Questionnaire
+  author: F. Riehle
+  date: 04/07/2005
+- title: CCTF-WGFS/2005-03
+  pdf: https://www.bipm.org/documents/20126/48882590/working-document-ID-1822/e29309a2-e5b4-f73f-cc53-b613e7e3ccde
+  description: IEN response to the questionnaire
+  author: A. Godone
+  date: 21/07/2005
+- title: CCTF-WGFS/2005-04
+  pdf: https://www.bipm.org/documents/20126/48882603/working-document-ID-1855/1391dfdd-a0ad-f2ff-2f39-5ff972c6585e
+  description: NRC response to the questionnaire
+  author: A. Madej
+  date: 24/08/2005
+- title: CCTF-WGFS/2005-05
+  pdf: https://www.bipm.org/documents/20126/48882616/working-document-ID-1856/0fa11531-c443-48fe-4357-e3b0b65554e1
+  description: NPL response to the questionnaire
+  author: P. Gill
+  date: 24/08/2005
+- title: CCTF-WGFS/2005-06
+  pdf: https://www.bipm.org/documents/20126/48882652/working-document-ID-1857/64f65502-c6b0-1c0d-1bbb-233cc8685d1c
+  description: NMIJ/AIST response to the questionnaire
+  author: NMIJ/AIST
+  date: 24/08/2005
+- title: CCTF-WGFS/2005-07
+  pdf: https://www.bipm.org/documents/20126/48882696/working-document-ID-1886/93e02642-558a-58d1-11fe-d5f7a38c3e57
+  description: PTB response to the questionnaire
+  author: F. Riehle
+  date: 30/08/2005
+- title: CCTF-WGFS/2005-08
+  pdf: https://www.bipm.org/documents/20126/48882635/working-document-ID-1899/ddf462c3-6c96-e08a-86b0-ce29c9a1a720
+  description: LNE-SYRTE response to the questionnaire
+  author: A. Clairon
+  date: '09/09/2005'
+- title: CCTF-WGFS/2005-09
+  pdf: https://www.bipm.org/documents/20126/48882670/working-document-ID-1904/93e24533-14bf-c378-6a5e-b9e2a65c121c
+  description: Yb PTB report
+  author: PTB
+  date: 13/09/2005
+- title: CCTF-WGFS/2005-10
+  pdf: https://www.bipm.org/documents/20126/48882683/working-document-ID-1905/40e94898-1460-0761-4e2b-a7fa3e09a15b
+  description: Ca PTB report
+  author: PTB
+  date: 13/09/2005
+- title: CCTF-WGFS/2005-11
+  pdf: https://www.bipm.org/documents/20126/48882538/working-document-ID-2471/4b9015b1-9b4c-cac4-65f1-4ba9d12ac49e
+  description: Report of the meeting on 30 March 2004
+  author: F. Riehle, P. Gill
+  date: 13/06/2006
+- title: CCTF-WGFS/2005-12
+  pdf: https://www.bipm.org/documents/20126/48882551/working-document-ID-2472/3702a443-fb23-d33a-9612-ddadf959c8a4
+  description: Recommendation CCTF1(2004)
+  author: CCTF
+  date: 13/06/2006

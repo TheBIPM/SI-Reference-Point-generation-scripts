@@ -1,0 +1,82 @@
+---
+metadata:
+  title: CCTF-WGTAI
+  identifier: '2015-09-16'
+  date: '2015-09-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wgtai/2015-09-16
+  workgroup: cctf-wgtai
+resolutions: []
+working_documents:
+- title: CCTF-WGTAI/2015-01
+  pdf: https://www.bipm.org/documents/20126/48884065/working-document-ID-11354/f93b8730-b5d6-f797-50b2-3fbe16ea5e71
+  description: Draft agenda (4/09/2015)
+  author: E.F. Arias (BIPM)
+  date: 31/08/2015
+- title: CCTF-WGTAI/2015-02
+  pdf: https://www.bipm.org/documents/20126/48884078/working-document-ID-11355/935bd780-112f-8fb0-aba9-256be6995394
+  description: Draft recommendation on Real Time Realizations UTC(k) disseminated
+    by GNSS (CCTF/15-04)
+  author: VNIIFTRI
+  date: 31/08/2015
+- title: CCTF-WGTAI/2015-03
+  pdf: https://www.bipm.org/documents/20126/48884104/working-document-ID-11526/1ed35dae-8a7b-946b-7dbb-a70f490c79a5
+  description: Presentation - Status of UTC
+  author: E.F. Arias (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-04
+  pdf: https://www.bipm.org/documents/20126/48884117/working-document-ID-11527/31a5847f-9ebd-4e55-0752-c0e62f0fedfd
+  description: Presentation - Performance of the UTC Time Links
+  author: Z. Jiang, G. Petit, F. Arias (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-05
+  pdf: https://www.bipm.org/documents/20126/48884091/working-document-ID-11528/b9af5081-2780-7c50-7602-3542ce4eee1b
+  description: Presentation - Improvements in the algorithms for UTC
+  author: G. Panfilo (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-06
+  pdf: https://www.bipm.org/documents/20126/48884130/working-document-ID-11529/a46ee170-6cf0-d247-a4a3-a90dc5b10793
+  description: Presentation - Frequency standards in TAI and realization of TT(BIPM)
+  author: G. Petit, G. Panfilo (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-07
+  pdf: https://www.bipm.org/documents/20126/48884143/working-document-ID-11530/6cb08ecc-d81c-cc5f-2637-0e97b4c0058c
+  description: Presentation - Report on Rapid UTC (UTCr)
+  author: G. Petit (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-08
+  pdf: https://www.bipm.org/documents/20126/48884156/working-document-ID-11531/d4562f5b-75b4-069e-60fc-b34d15779815
+  description: Presentation - Key issues on contributing to UTC and UTCr
+  author: E.F. Arias (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-09
+  pdf: https://www.bipm.org/documents/20126/48884169/working-document-ID-11532/22495d2e-1f21-facc-c573-52ed17715efb
+  description: Presentation - GNSS calibrations for UTC and the new calibration scheme
+  author: G. Petit (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-10
+  pdf: https://www.bipm.org/documents/20126/48884182/working-document-ID-11533/432a0dac-d29d-7fbf-4fa6-7011d21779c5
+  description: Presentation - GNSS systems calibration, cooperation with RMOs
+  author: H. Esteban, F.J. Galindo (ROA)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-11
+  pdf: https://www.bipm.org/documents/20126/48884195/working-document-ID-11534/462a7127-f185-3795-5556-eeacf590b7e8
+  description: Presentation - TWSTFT time link calibrations
+  author: Z. Jiang (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-12
+  pdf: https://www.bipm.org/documents/20126/48884208/working-document-ID-11535/49085fcc-0fac-810b-8d28-fa521d18fddc
+  description: Presentation - The European TW calibration campaign 2014 in the scope
+    of Galileo (TGVF-FOC)
+  author: F.J. Galindo (ROA)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-13
+  pdf: https://www.bipm.org/documents/20126/48884221/working-document-ID-11536/f771993a-252d-b91d-4c1d-08bc97d7aa7b
+  description: New contributions to UTC - Contributions in preparation
+  author: E.F. Arias (BIPM)
+  date: 24/09/2015
+- title: CCTF-WGTAI/2015-14
+  pdf: https://www.bipm.org/documents/20126/48884234/working-document-ID-11537/5befabf4-ffe2-e4ae-e85b-a626fda2a325
+  description: Presentation - The future of the UTC time scale
+  author: R. Beard (ITU-R)
+  date: 24/09/2015

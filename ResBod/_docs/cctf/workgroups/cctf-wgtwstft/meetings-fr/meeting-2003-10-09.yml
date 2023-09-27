@@ -1,0 +1,60 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2003-10-09'
+  date: '2003-10-10'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2003-10-09
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2003-01
+  pdf: https://www.bipm.org/documents/20126/48873836/working-document-ID-1158/ac50728b-c345-c2fd-5f28-4a773a632d97
+  description: Meeting report
+  author: W. Lewandowski
+  date: 17/09/2004
+- title: CCTF-WGTWSTFT/2003-02
+  pdf: https://www.bipm.org/documents/20126/48873823/working-document-ID-1157/437f3c17-14b5-9b1f-ac98-d68b8bf957bd
+  description: NPL Welcome Slide
+  author: ''
+  date: '09/10/2003'
+- title: CCTF-WGTWSTFT/2003-03
+  pdf: https://www.bipm.org/documents/20126/48873849/working-document-ID-1159/5de66067-4e6c-9183-e1b8-1c07f998c45b
+  description: OP status report
+  author: J. Achkar
+  date: 17/09/2004
+- title: CCTF-WGTWSTFT/2003-04
+  pdf: https://www.bipm.org/documents/20126/48873862/working-document-ID-1160/a6de5671-4422-e957-fd61-c73b2c1625ad
+  description: OCA status report
+  author: F. Baumont
+  date: '09/10/2003'
+- title: CCTF-WGTWSTFT/2003-05
+  pdf: https://www.bipm.org/documents/20126/48873946/working-document-ID-1161/0e975e89-3d6e-a1a9-a971-d2dc419a3b1a
+  description: OCA presentation
+  author: F. Baumont
+  date: 07/10/2003
+- title: CCTF-WGTWSTFT/2003-06
+  pdf: https://www.bipm.org/documents/20126/48873875/working-document-ID-1162/b9fc8546-520d-509a-1042-5047fd9561b6
+  description: PTB status report
+  author: D. Piester
+  date: 17/09/2004
+- title: CCTF-WGTWSTFT/2003-07
+  pdf: https://www.bipm.org/documents/20126/48873888/working-document-ID-1163/9dbcf8e7-7424-c414-6d08-6e292cb8be71
+  description: USNO status report
+  author: ''
+  date: '09/10/2003'
+- title: CCTF-WGTWSTFT/2003-08
+  pdf: https://www.bipm.org/documents/20126/48873901/working-document-ID-1164/3f86db36-6244-2afd-ce59-b455f7027d58
+  description: IEN status report
+  author: L. Lorini and F. Cordara
+  date: '09/10/2003'
+- title: CCTF-WGTWSTFT/2003-09
+  pdf: https://www.bipm.org/documents/20126/48873914/working-document-ID-1165/bc16d1d6-fc98-2cc7-b8f0-ef60e0e34119
+  description: ROA status report
+  author: J. Palacio
+  date: '09/10/2003'
+- title: CCTF-WGTWSTFT/2003-10
+  pdf: https://www.bipm.org/documents/20126/48873927/working-document-ID-1166/02c664ca-558d-9346-9f59-415806a8370f
+  description: NTSC status report
+  author: H. Li and Z. Li
+  date: '09/10/2003'

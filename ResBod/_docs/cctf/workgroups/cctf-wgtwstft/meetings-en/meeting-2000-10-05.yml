@@ -1,0 +1,60 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2000-10-05'
+  date: '2000-10-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/wg/cctf-wgtwstft/2000-10-05
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2000-01
+  pdf: https://www.bipm.org/documents/20126/48873732/working-document-ID-1124/d4d52603-9ebf-a058-8ac7-0293a7edef8c
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 17/11/2000
+- title: CCTF-WGTWSTFT/2000-02
+  pdf: https://www.bipm.org/documents/20126/48873706/working-document-ID-1127/cb1ea6ee-27dd-fed4-69b6-7c5e59abad18
+  description: TUG status report
+  author: D. Kirchner
+  date: 06/10/2000
+- title: CCTF-WGTWSTFT/2000-03
+  pdf: https://www.bipm.org/documents/20126/48873745/working-document-ID-1128/2307e691-66b5-7c68-8d5c-0aab48af9e1f
+  description: IEN status report
+  author: V. Pettiti
+  date: 06/10/2000
+- title: CCTF-WGTWSTFT/2000-04
+  pdf: https://www.bipm.org/documents/20126/48873758/working-document-ID-1129/5e532a87-4e36-abeb-1d13-0a1b811f30d4
+  description: PTB status report
+  author: P. Hetzel
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-05
+  pdf: https://www.bipm.org/documents/20126/48873771/working-document-ID-1130/6c667624-9371-2170-122b-c3776422f76f
+  description: NIST status report
+  author: T. Parker
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-06
+  pdf: https://www.bipm.org/documents/20126/48873784/working-document-ID-1131/d46917dc-a4a6-00ec-9a6c-52000271e3f9
+  description: TL status report
+  author: S.Y. Liu
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-07
+  pdf: https://www.bipm.org/documents/20126/48873719/working-document-ID-1132/b461dd87-61f9-25b3-af3c-d18e37e24df0
+  description: NPL status report
+  author: S. Shemar and J. Davis
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-08
+  pdf: https://www.bipm.org/documents/20126/48873693/working-document-ID-1133/0b4f08c0-30fd-88b0-82a5-5f202b59239a
+  description: CSAO status report
+  author: Z. Li and H. Li
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-09
+  pdf: https://www.bipm.org/documents/20126/48873797/working-document-ID-1134/797483aa-5f31-4d17-22b5-b5dafde0200f
+  description: USNO status report
+  author: D. Matsakis
+  date: 05/10/2000
+- title: CCTF-WGTWSTFT/2000-10
+  pdf: https://www.bipm.org/documents/20126/48873810/working-document-ID-1135/4c14c859-a505-e9f3-2817-da691f9ad88d
+  description: BIPM report
+  author: J. Azoubib
+  date: 06/10/2000

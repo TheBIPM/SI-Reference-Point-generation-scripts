@@ -1,0 +1,53 @@
+---
+metadata:
+  title: 22nd meeting of the CCTF (Session I - online)
+  identifier: 22-1
+  date: '2020-10-29'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/en/committees/cc/cctf/22-_1-2020
+pdf:
+- https://www.bipm.org/documents/20126/52313136/Introduction_letter_CCTF_President_Dec_2020.pdf/45fb8f7f-58e1-9337-5151-23980540a936
+- https://www.bipm.org/documents/20126/52354676/CCTF_2020_Task_force_Introduction_Finale.pdf/62bb4dc1-a662-a07e-dd9c-d9ed17829d70
+- https://www.bipm.org/documents/20126/52354657/CCTF_22_TF_A_20200930.pdf/fa223f43-2fea-9cf9-f594-2ad3b2718f5a
+- https://www.bipm.org/documents/20126/52354646/CCTF_presentation_redefinition_task_force_subgroup_B_v8.pdf/57402d86-e763-62de-1229-1e8be38d67b7
+- https://www.bipm.org/documents/20126/52354627/CCTF_PresentingTaskForce_SGc_20201005_V5.pdf/006389b7-320f-0eec-8c8b-90a9144ac86b
+- https://www.bipm.org/documents/20126/52354616/CCTF_UTC_presentation.pdf/0a8f0954-7c00-9142-8da2-f4221c7e0269
+- https://www.bipm.org/documents/20126/52354597/Hot_Topic_CCTF_2020_GNSS_final.pdf/7d7adc92-68ce-9aba-d475-2606289d8870
+- https://www.bipm.org/documents/20126/52354586/CBKT_CCTF.pdf/4f7cabf2-1b7b-f9cb-3232-c9f95b281bf4
+resolutions: []
+working_documents:
+- title: CCTF/2020-00
+  pdf: https://www.bipm.org/documents/20126/52313136/Introduction_letter_CCTF_President_Dec_2020.pdf/45fb8f7f-58e1-9337-5151-23980540a936
+  description: Letter from the CCTF President to introduce the online survey
+  author: N. Dimarcq
+- title: CCTF/2020-03
+  pdf: https://www.bipm.org/documents/20126/52354676/CCTF_2020_Task_force_Introduction_Finale.pdf/62bb4dc1-a662-a07e-dd9c-d9ed17829d70
+  description: Task Force "Roadmap for the redefinion of the second" - Introduction
+  author: N. Dimarcq
+- title: CCTF/2020-04
+  pdf: https://www.bipm.org/documents/20126/52354657/CCTF_22_TF_A_20200930.pdf/fa223f43-2fea-9cf9-f594-2ad3b2718f5a
+  description: Task Force "Roadmap for the redefinion of the second", A - Request
+    from user communities, NMIs, and Liaisons
+  author: M. Gertsvolf, NRC; G. Mileti UNINE
+- title: CCTF/2020-05
+  pdf: https://www.bipm.org/documents/20126/52354646/CCTF_presentation_redefinition_task_force_subgroup_B_v8.pdf/57402d86-e763-62de-1229-1e8be38d67b7
+  description: Task Force "Roadmap for the redefinion of the second", B- Atomic frequency
+    standards, and possible redefinition approaches
+  author: S. Bize, OP; E. Peik, PTB; C. Oates, NIST
+- title: CCTF/2020-06
+  pdf: https://www.bipm.org/documents/20126/52354627/CCTF_PresentingTaskForce_SGc_20201005_V5.pdf/006389b7-320f-0eec-8c8b-90a9144ac86b
+  description: Task Force "Roadmap for the redefinion of the second", C - TF Dissemination
+    and time scales
+  author: D. Calonico, INRIM; T. Ido NICT
+- title: CCTF/2020-07
+  pdf: https://www.bipm.org/documents/20126/52354616/CCTF_UTC_presentation.pdf/0a8f0954-7c00-9142-8da2-f4221c7e0269
+  description: Leap second in UTC - building a consensus for a continuous time scale
+  author: J. Levine, NIST; P. Tavella, BIPM
+- title: CCTF/2020-08
+  pdf: https://www.bipm.org/documents/20126/52354597/Hot_Topic_CCTF_2020_GNSS_final.pdf/7d7adc92-68ce-9aba-d475-2606289d8870
+  description: Promoting the mutual benefit of UTC and GNSS
+  author: P. Defraigne, ORB; A. Bauch, PTB
+- title: CCTF/2020-09
+  pdf: https://www.bipm.org/documents/20126/52354586/CBKT_CCTF.pdf/4f7cabf2-1b7b-f9cb-3232-c9f95b281bf4
+  description: Sharing resources to improve international timekeeping
+  author: M. Gertsvolf, NRC; Y. Hanado, NICT

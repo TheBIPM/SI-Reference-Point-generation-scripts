@@ -1,0 +1,72 @@
+---
+metadata:
+  title: CCL-CCTF-WGFS
+  identifier: '2004-03-30'
+  date: '2004-03-30'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/ccl-cctf-wgfs/2004-03-30
+  workgroup: ccl-cctf-wgfs
+resolutions: []
+working_documents:
+- title: CCTF-WGFS/2004-01
+  pdf: https://www.bipm.org/documents/20126/48882408/working-document-ID-870/94da16ce-1491-ed8a-9cef-a9e3b65eddbe
+  description: List of the participants
+  author: BIPM
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-02
+  pdf: https://www.bipm.org/documents/20126/48882421/working-document-ID-871/40692f31-86a7-b7e1-aee3-cc7e42e09085
+  description: Agenda
+  author: BIPM
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-03
+  pdf: https://www.bipm.org/documents/20126/48882434/working-document-ID-872/4c59b920-28f5-0677-2d3a-c8ba14cd93f2
+  description: Nomination form
+  author: BIPM
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-04
+  pdf: https://www.bipm.org/documents/20126/48882525/working-document-ID-873/95a6eba5-0d38-a0cc-c119-129b3d66b35e
+  description: Draft Report of the 2003 CCL-CCTF JWG
+  author: Zucco
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-05
+  pdf: https://www.bipm.org/documents/20126/48882382/working-document-ID-874/b83db4da-3684-c587-6a59-629b9b60d696
+  description: Report of the seconReprSec to the CCTF
+  author: Riehle and Gill
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-06
+  pdf: https://www.bipm.org/documents/20126/48882395/working-document-ID-875/4352dfc3-b8fb-7397-2b9d-ab7b6e2f99e5
+  description: Response of the BNM-SYRTE
+  author: Clairon
+  date: 16/03/2004
+- title: CCTF-WGFS/2004-07
+  pdf: https://www.bipm.org/documents/20126/48882447/working-document-ID-879/09252b9c-b043-2165-b494-a3a256ac1024
+  description: Response of the PTB
+  author: Riehle
+  date: 18/03/2004
+- title: CCTF-WGFS/2004-08
+  pdf: https://www.bipm.org/documents/20126/48882460/working-document-ID-880/1027d7f8-00bb-faa6-48e0-2a6a1760e77c
+  description: Report to the CCL/CCTF joint group meeting from Japan
+  author: NMIJ/AIST
+  date: 19/03/2004
+- title: CCTF-WGFS/2004-09
+  pdf: https://www.bipm.org/documents/20126/48882473/working-document-ID-881/7b58731a-eb17-25bc-a8dc-c324abbdea15
+  description: Measurement of the 88S+ reference transition frequency with anew probe
+    laser system
+  author: Dubé, Marmet, Madej, Bernard (NRC)
+  date: 23/03/2004
+- title: CCTF-WGFS/2004-10
+  pdf: https://www.bipm.org/documents/20126/48882486/working-document-ID-882/831853cd-665e-d294-6eee-649a4c59e4c7
+  description: Absolute frequency of the 88Sr+, 5s 2S1/2- 4d 2D5/2 referencetransition
+    at 445 THz and evaluation systematic shifts
+  author: Madej, Bernard, Dubé, Marmet (NRC)
+  date: 23/03/2004
+- title: CCTF-WGFS/2004-11
+  pdf: https://www.bipm.org/documents/20126/48882499/working-document-ID-891/28488c65-119d-85b5-b6f4-0c9202fcfcfb
+  description: Response of the NIST
+  author: Bergquist
+  date: 01/04/2004
+- title: CCTF-WGFS/2004-12
+  pdf: https://www.bipm.org/documents/20126/48882512/working-document-ID-892/6c54db06-075b-784f-5595-dc4bb98f48e2
+  description: Response of the NPL
+  author: Gill
+  date: 01/04/2004

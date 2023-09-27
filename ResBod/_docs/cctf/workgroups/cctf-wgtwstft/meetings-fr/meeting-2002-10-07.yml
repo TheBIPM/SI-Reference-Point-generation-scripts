@@ -1,0 +1,40 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2002-10-07'
+  date: '2002-10-09'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2002-10-07
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2002-1
+  pdf: https://www.bipm.org/documents/20126/48874007/working-document-ID-1151/e9aa7218-0997-a314-b2c2-4f247702990d
+  description: Meeting report
+  author: W. Lewandowski
+  date: 15/02/2003
+- title: CCTF-WGTWSTFT/2002-2
+  pdf: https://www.bipm.org/documents/20126/48873981/working-document-ID-1152/a66bed87-ccd6-0f3e-8372-ad2fdd41a632
+  description: PTB status report
+  author: ''
+  date: 07/10/2002
+- title: CCTF-WGTWSTFT/2002-3
+  pdf: https://www.bipm.org/documents/20126/48874020/working-document-ID-1153/27343060-4a27-c8d6-99db-1f76641fd79c
+  description: IEN status report
+  author: ''
+  date: 07/10/2002
+- title: CCTF-WGTWSTFT/2002-4
+  pdf: https://www.bipm.org/documents/20126/48873994/working-document-ID-1154/968dcde4-f73e-2bc0-5a24-72acc5ef41a3
+  description: IEN presentation
+  author: ''
+  date: 07/10/2002
+- title: CCTF-WGTWSTFT/2002-5
+  pdf: https://www.bipm.org/documents/20126/48874033/working-document-ID-1155/ec221cdc-0665-19ce-f689-2aa013e48330
+  description: TimeTech calibration proposal
+  author: W. Schaefer
+  date: '08/12/2002'
+- title: CCTF-WGTWSTFT/2002-6
+  pdf: https://www.bipm.org/documents/20126/48873968/working-document-ID-1156/0e5383f3-d162-ce12-cf4b-0723e17b150f
+  description: TUG calibration proposal
+  author: " "
+  date: '08/12/2002'

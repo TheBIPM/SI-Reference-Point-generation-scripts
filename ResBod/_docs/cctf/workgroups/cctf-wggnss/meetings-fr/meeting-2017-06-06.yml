@@ -1,0 +1,20 @@
+---
+metadata:
+  title: CCTF-WGGNSS
+  identifier: '2017-06-06'
+  date: '2017-06-06'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wggnss/2017-06-06
+  workgroup: cctf-wggnss
+resolutions: []
+working_documents:
+- title: WGGNSS/CCTF-2017-01
+  pdf: https://www.bipm.org/documents/20126/31902655/working-document-wg-public-ID-14665/bf10ad77-9d3b-ecb8-9307-ceae2b5ea950
+  description: Agenda
+  author: P. Defraigne
+  date: 01/06/2017
+- title: WGGNSS/CCTF-2017-02
+  pdf: https://www.bipm.org/documents/20126/31903004/working-document-wg-public-ID-14905/448763ac-4105-5be9-229d-8e160f574dfb
+  description: Report of the meeting
+  author: P. Defraigne and G. Petit
+  date: 26/10/2017

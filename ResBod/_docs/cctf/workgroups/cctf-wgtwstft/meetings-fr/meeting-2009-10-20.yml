@@ -1,0 +1,50 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2009-10-20'
+  date: '2009-10-21'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2009-10-20
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2009-00
+  pdf: https://www.bipm.org/documents/20126/48879043/working-document-ID-5381/39879436-6afb-30b7-7773-7dfd409f24d2
+  description: Meeting Report
+  author: W. Lewandowski
+  date: 18/12/2009
+- title: CCTF-WGTWSTFT/2009-01
+  pdf: https://www.bipm.org/documents/20126/48879161/working-document-ID-5133/0dc93b1f-a23c-06c3-fa21-9e8799628bee
+  description: Announcement
+  author: BIPM
+  date: 18/10/2009
+- title: CCTF-WGTWSTFT/2009-02
+  pdf: https://www.bipm.org/documents/20126/48879190/working-document-ID-5147/8261bbee-243f-065f-f72f-227316e251d0
+  description: Agenda
+  author: BIPM
+  date: 19/10/2009
+- title: CCTF-WGTWSTFT/2009-03
+  pdf: https://www.bipm.org/documents/20126/48879082/working-document-ID-5031/88ca2081-1630-4af6-9c94-c934c616f3c0
+  description: Airport_Timetable
+  author: AOS
+  date: 26/06/2009
+- title: CCTF-WGTWSTFT/2009-04
+  pdf: https://www.bipm.org/documents/20126/48879056/working-document-ID-5032/8a2c5342-ca82-3958-ed7c-cbe3aec68cdb
+  description: Trains from Berlin and Warsaw
+  author: AOS
+  date: 29/06/2009
+- title: CCTF-WGTWSTFT/2009-05
+  pdf: https://www.bipm.org/documents/20126/48879069/working-document-ID-5066/8e3a0c15-7964-59e5-f20f-2cd40ba4a341
+  description: Hotels in Poznan
+  author: AOS
+  date: 21/07/2009
+- title: CCTF-WGTWSTFT/2009-06
+  pdf: https://www.bipm.org/documents/20126/48879601/working-document-ID-5145/bf74198f-b1af-802b-e818-4e10bf41686c
+  description: Session timetable
+  author: AOS
+  date: 19/10/2009
+- title: CCTF-WGTWSTFT/2009-07
+  pdf: https://www.bipm.org/documents/20126/48879221/working-document-ID-5149/eb396a9c-0143-95b8-e3c0-cbc56c47aee6
+  description: Attendees
+  author: AOS
+  date: 20/10/2009

@@ -1,0 +1,30 @@
+---
+metadata:
+  title: CCTF-WGTWSTFT
+  identifier: '2014-09-15'
+  date: '2014-09-16'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wgtwstft/2014-09-15
+  workgroup: cctf-wgtwstft
+resolutions: []
+working_documents:
+- title: CCTF-WGTWSTFT/2014-01-01
+  pdf: https://www.bipm.org/documents/20126/48875544/working-document-ID-10275/a75f1b4b-8700-24c8-f952-7b822852b6f0
+  description: Announcement
+  author: ''
+  date: 06/06/2014
+- title: CCTF-WGTWSTFT/2014-01-02
+  pdf: https://www.bipm.org/documents/20126/48875929/working-document-ID-10481/0369bd6d-af1b-0893-9c95-208cf6a93587
+  description: Agenda
+  author: D Piester, Z Jiang
+  date: 23/09/2014
+- title: CCTF-WGTWSTFT/2014-01-03
+  pdf: https://www.bipm.org/documents/20126/48875557/working-document-ID-10482/f51a5b5c-fb9a-7ff2-6458-7638cc98f3d5
+  description: Time Table
+  author: A. Naumov, D Piester, Z Jiang
+  date: 23/09/2014
+- title: CCTF-WGTWSTFT/2014-01-04
+  pdf: https://www.bipm.org/documents/20126/48875903/working-document-ID-10668/773fe4c8-136a-2ef8-a30b-2d42af7088a4
+  description: Meeting Report
+  author: E. Dierikx, D Piester and Z Jiang
+  date: 28/10/2014

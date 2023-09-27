@@ -1,0 +1,18 @@
+---
+metadata:
+  title: Workshop 2018 du CCTF-WGGNSS
+  identifier: '2018-11-28'
+  date: '2018-11-28'
+  source: BIPM - Pavillon de Breteuil
+  url: https://www.bipm.org/fr/committees/cc/cctf/wg/cctf-wggnss/2018-11-28
+  workgroup: cctf-wggnss
+resolutions: []
+working_documents:
+- title: CCTF-WGGNSS/WS18-01
+  pdf: https://www.bipm.org/documents/20126/48924148/WGGNSS_workshop2018_Agenda.pdf/bec33b2f-7e28-92bc-016a-188fe01f2f59
+  description: Agenda
+  author: P. Defraigne
+- title: CCTF-WGGNSS/WS18-02
+  pdf: https://www.bipm.org/documents/20126/48924188/WGGNSS_workshop2018_CR.pdf/7840a742-40e6-3809-0d51-37950b5c00e6
+  description: Report of the workshop
+  author: P. Defraigne and G. Petit
