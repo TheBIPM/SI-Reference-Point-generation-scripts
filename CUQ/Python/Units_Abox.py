@@ -14,6 +14,7 @@ import openpyxl
 import re
 
 PDF = SiElements()
+CGPM_ns = SIURL + "bodies/CGPM#"
 SIURL = SIURL + "SI"
 BASESTR = str(PDF.BASE_PATH)
 
@@ -146,7 +147,7 @@ for row in range(2, basedefs.max_row + 1):
             # change any symbols to latex
             DefiningText_en = formattxt(DefiningText_en, 'latex')
             PDF.g.add((element, PDF.hasDefiningText, Literal(DefiningText_en, lang='en')))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + DefiningResolution)))
+        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + DefiningResolution)))
         if DefiningEquation is not None:
             if "@" in DefiningEquation:
                 DefiningEquation = formattxt(DefiningEquation, 'latex', 1)
@@ -221,7 +222,7 @@ for row in range(2, sheet.max_row + 1):
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
         PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(PDF.ResBod_ns + defres)))
+        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + defres)))
         if othersi:
             if "@" in othersi:
                 othersi = formattxt(othersi, 'latex', 1)
