@@ -39,3 +39,7 @@ echo "Done.`n"
 echo "generating cctf.ttl"
 python ./ResBod/Python/ResBod_ABox_CCTF.py
 echo "Done.`n"
+
+# compress into archive
+$git_hash = git log --pretty=format:'%h' -n 1
+Compress-Archive -Path Testing\API\*.ttl -DestinationPath si-app-turtle-$git_hash.zip
