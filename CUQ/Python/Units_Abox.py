@@ -267,7 +267,7 @@ for row in range(7, sheet.max_row + 1):
         PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
         PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(unitOfQtyKind)))
         PDF.g.add((element, PDF.hasConversionFactor, Literal(conversionFactor, datatype=XSD.double)))
-        PDF.g.add((element, PDF.hasConversionUnit, PDF.set_uri(conversionUnit)))
+        PDF.g.add((element, PDF.hasConversionUnit, PDF.set_unit_uri(conversionUnit)))
 
 # 7) serialization
 PDF.g.serialize(format='ttl', destination=APIPATH + 'units.ttl')
