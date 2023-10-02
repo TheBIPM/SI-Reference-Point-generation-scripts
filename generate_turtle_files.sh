@@ -42,4 +42,4 @@ echo -e "Done.\n"
 
 # compress into archive
 export git_hash=$(git log --pretty=format:'%h' -n 1)
-zip si-app-turtle-$git_hash.zip Testing/API/*.ttl
+zip -j si-app-turtle-$git_hash.zip Testing/API/*.ttl
