@@ -3,8 +3,11 @@
 Set-Variable -Name "PYTHONPATH" -Value "."
 
 # currently all files are generated into "./Testing/API/"
+echo "generating si.ttl"
+python ./CUQ/Python/CUQ_TBox.py
+echo "Done.`n"
 
-echo "generating si.ttl + quantities.ttl"
+echo "generating quantities.ttl"
 python ./CUQ/Python/Quantities_ABox.py
 echo "Done.`n"
 

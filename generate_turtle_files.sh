@@ -4,7 +4,11 @@
 export PYTHONPATH=$(pwd)
 
 # currently all files are generated into "./Testing/API/"
-echo "generating si.ttl + quantities.ttl"
+echo "generating si.ttl"
+python ./CUQ/Python/CUQ_TBox.py
+echo -e "Done.\n"
+
+echo "generating quantities.ttl"
 python ./CUQ/Python/Quantities_ABox.py
 echo -e "Done.\n"
 
