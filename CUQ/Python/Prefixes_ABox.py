@@ -15,16 +15,20 @@ from settings import *
 import openpyxl
 import re
 
+# import CUQ TBox
 PDF = SiElements()
-CGPM_ns = SIURL + "bodies/CGPM#"
-SIURL = SIURL + "SI"
+g = Graph()
+
+# copy over all namespaces from PDF.g to g
+for key, val in PDF.g.namespaces():
+    g.bind(key, val) 
 
 # Annotations to the ontology (name, Version number)
-PDF.g.add((URIRef(SIURL), RDF.type, OWL.Ontology))
-PDF.g.add((URIRef(SIURL), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
-PDF.g.add((URIRef(SIURL), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering measurement units "
-                                                "(SI base units and SI units with special names) and prefixes.")))
-PDF.g.add((URIRef(SIURL), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+g.add((URIRef(PDF.namespace_prefixes), RDF.type, OWL.Ontology))
+g.add((URIRef(PDF.namespace_prefixes), SKOS.prefLabel, Literal("SI Reference Point - Prefixes", datatype=XSD.string)))
+g.add((URIRef(PDF.namespace_prefixes), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering "
+                                                             "prefixes for the SI measurement units.")))
+g.add((URIRef(PDF.namespace_prefixes), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # 1) open XLS files with information
 units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Units_Prefixes.xlsx')
@@ -90,14 +94,14 @@ for row in range(2, sheet.max_row + 1):
     defres = sheet.cell(row, column=6).value
 
     if uri_text is not None:
-        element = PDF.set_uri(uri_text)
-        PDF.g.add((element, RDF.type, PDF.SIPrefix))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
-        PDF.g.add((element, PDF.hasDatatype, XSD.integer))
-        PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + defres)))
+        element = PDF.set_prefix_uri(uri_text)
+        g.add((element, RDF.type, PDF.SIPrefix))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
+        g.add((element, PDF.hasDatatype, XSD.integer))
+        g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+        g.add((element, PDF.hasDefiningResolution, URIRef(PDF.set_cgpm_uri(defres))))
 
 # 5) Serialization prefixes
-PDF.g.serialize(format='turtle', destination=APIPATH + 'prefixes.ttl')
+g.serialize(format='turtle', destination=APIPATH + 'prefixes.ttl')
