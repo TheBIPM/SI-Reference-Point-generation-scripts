@@ -1,7 +1,8 @@
 from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD
+from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS, SKOS
 from pathlib import Path
 from settings import *
+from datetime import date
 
 ResBod_ns = SIURL + "bodies#"
 
@@ -11,17 +12,32 @@ class SiElements:
         self.g = Graph()  # a triple store as the main data structure
         self.namespace = namespace
         self.namespace_units = SIURL + "SI/units/"
+        self.namespace_prefixes = SIURL + "SI/prefixes/"
+        self.namespace_quantities = SIURL + "quantities/"
+        self.namespace_constants = SIURL + "constants/"
+        self.namespace_cgpm = SIURL + "bodies/CGPM#"
+
         self.g.bind(prefix, self.namespace)
         self.g.bind("units", self.namespace_units)
-
-        self.g.bind("skos", SKOSURL)
-        self.g.bind("dcterms", DCTURL)
+        self.g.bind("prefixes", self.namespace_prefixes)
+        self.g.bind("quantities", self.namespace_quantities)
+        self.g.bind("constants", self.namespace_constants)
+        self.g.bind("cgpm", self.namespace_cgpm)
         self.g.bind('rb', ResBod_ns)
 
         self.BASE_PATH = Path(__file__).resolve().parent.parent
         self.ResBod_ns = ResBod_ns
 
         # Classes
+
+        # general
+        self.g.add((URIRef(self.namespace), RDF.type, OWL.Ontology))
+        self.g.add((URIRef(self.namespace), SKOS.prefLabel, Literal("SI Reference Point - Base Ontology", datatype=XSD.string)))
+        self.g.add((URIRef(self.namespace), RDFS.comment,
+                Literal("Ontology, part of the SI reference point, providing base concepts and their relations.",
+                        datatype=XSD.string)))
+        self.g.add((URIRef(self.namespace), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+
 
         # for Constants
         self.Constant = self.set_uri("Constant")
@@ -496,8 +512,6 @@ class SiElements:
         self.g.add((self.isUnitOfQtyKind, RDFS.comment,
                     Literal("Associer une unité de mesure à son type de quantité.", lang="fr")))
 
-        self.g.serialize(format='ttl', destination=APIPATH + 'si.ttl')
-
     # for Quantities
     # none
 
@@ -508,3 +522,24 @@ class SiElements:
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)
+
+    def set_prefix_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_prefixes + name)
+
+    def set_quantity_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_quantities + name)
+    
+    def set_constant_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_constants + name)
+    
+    def set_cgpm_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_cgpm + name)
+
+
+if __name__ == "__main__":
+    si_base_onto = SiElements()
+    si_base_onto.g.serialize(format='ttl', destination=APIPATH + 'si.ttl')
