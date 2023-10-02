@@ -13,20 +13,22 @@ from settings import *
 import openpyxl
 import re
 
-# import units TBox
+# import CUQ TBox
 PDF = SiElements()
-CGPM_ns = SIURL + "bodies/CGPM#"
-SIURL = PDF.namespace
+g = Graph()
+
+# copy over all namespaces from PDF.g to g
+for key, val in PDF.g.namespaces():
+    g.bind(key, val) 
+
 BASESTR = str(PDF.BASE_PATH)
 
-PDF.g.bind("cgpm", CGPM_ns)
-
 # Annotations to the ontology (name, Version number)
-PDF.g.add((URIRef(SIURL), RDF.type, OWL.Ontology))
-PDF.g.add((URIRef(SIURL), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
-PDF.g.add((URIRef(SIURL), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering measurement units "
+g.add((URIRef(PDF.namespace), RDF.type, OWL.Ontology))
+g.add((URIRef(PDF.namespace), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
+g.add((URIRef(PDF.namespace), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering measurement units "
                                                 "(SI base units and SI units with special names) and prefixes.")))
-PDF.g.add((URIRef(SIURL), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+g.add((URIRef(PDF.namespace), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # 1) open XLS files with information
 units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Units_Prefixes.xlsx')
@@ -94,21 +96,21 @@ for row in range(2, sheet.max_row + 1):
 
     if uri_text is not None:
         element = PDF.set_unit_uri(uri_text)
-        PDF.g.add((element, RDF.type, PDF.SIBaseUnit))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
-        PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
-        PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+        g.add((element, RDF.type, PDF.SIBaseUnit))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
+        g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
 
         for kolonne in range(6, sheet.max_column + 1):
             curr_def = sheet.cell(row, column=kolonne).value
             next_def = sheet.cell(row, column=kolonne + 1).value
             if curr_def is not None:
-                PDF.g.add((element, PDF.hasDefinition, PDF.set_uri(curr_def)))
+                g.add((element, PDF.hasDefinition, PDF.set_uri(curr_def)))
                 if next_def is not None:
-                    PDF.g.add((PDF.set_uri(curr_def), PDF.hasNextDefinition, PDF.set_uri(next_def)))
+                    g.add((PDF.set_uri(curr_def), PDF.hasNextDefinition, PDF.set_uri(next_def)))
 
 # 4.2 Declare all definitions
 # uri_text values are a concatenation of the lowercase unit name and the year of the definition, e.g., ampere2018
@@ -134,31 +136,31 @@ for row in range(2, basedefs.max_row + 1):
     # add data
     if uri_text is not None:
         element = PDF.set_uri(uri_text)
-        PDF.g.add((element, RDF.type, PDF.Definition))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasStartValidity, Literal(StartValidity, datatype=XSD.date)))
+        g.add((element, RDF.type, PDF.Definition))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        g.add((element, PDF.hasStartValidity, Literal(StartValidity, datatype=XSD.date)))
         if EndValidity is not None:
-            PDF.g.add((element, PDF.hasEndValidity, Literal(EndValidity, datatype=XSD.date)))
+            g.add((element, PDF.hasEndValidity, Literal(EndValidity, datatype=XSD.date)))
         if DefiningText_fr is not None:
             # change any symbols to latex
             DefiningText_fr = formattxt(DefiningText_fr, 'latex')
-            PDF.g.add((element, PDF.hasDefiningText, Literal(DefiningText_fr, lang='fr')))
+            g.add((element, PDF.hasDefiningText, Literal(DefiningText_fr, lang='fr')))
         if DefiningText_en is not None:
             # change any symbols to latex
             DefiningText_en = formattxt(DefiningText_en, 'latex')
-            PDF.g.add((element, PDF.hasDefiningText, Literal(DefiningText_en, lang='en')))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + DefiningResolution)))
+            g.add((element, PDF.hasDefiningText, Literal(DefiningText_en, lang='en')))
+        g.add((element, PDF.hasDefiningResolution, URIRef(PDF.set_cgpm_uri(DefiningResolution))))
         if DefiningEquation is not None:
             if "@" in DefiningEquation:
                 DefiningEquation = formattxt(DefiningEquation, 'latex', 1)
-            PDF.g.add((element, PDF.hasDefiningEquation, Literal(DefiningEquation, datatype=XSD.string)))
+            g.add((element, PDF.hasDefiningEquation, Literal(DefiningEquation, datatype=XSD.string)))
         if DefiningConstant is not None:
-            PDF.g.add((element, PDF.hasDefiningConstant, PDF.set_uri(DefiningConstant)))
+            g.add((element, PDF.hasDefiningConstant, PDF.set_uri(DefiningConstant)))
         if Status is not None:
-            PDF.g.add((element, PDF.hasStatus, Literal(Status, datatype=XSD.string)))
+            g.add((element, PDF.hasStatus, Literal(Status, datatype=XSD.string)))
 
         # notes
         # get all the notes for a definition
@@ -182,10 +184,10 @@ for row in range(2, basedefs.max_row + 1):
 
                 note_uri = uri_text + "note" + str(nidx)
                 notenode = PDF.set_uri(note_uri)
-                PDF.g.add((element, PDF.hasDefinitionNote, notenode))
-                PDF.g.add((notenode, RDF.type, PDF.DefinitionNote))
-                PDF.g.add((notenode, PDF.hasNoteIndex, Literal(nidx)))
-                PDF.g.add((notenode, PDF.hasNoteText, Literal(note, lang='en')))
+                g.add((element, PDF.hasDefinitionNote, notenode))
+                g.add((notenode, RDF.type, PDF.DefinitionNote))
+                g.add((notenode, PDF.hasNoteIndex, Literal(nidx)))
+                g.add((notenode, PDF.hasNoteText, Literal(note, lang='en')))
 
         if notes_fr:
             for nidx, note_fr in notes_fr.items():
@@ -194,7 +196,7 @@ for row in range(2, basedefs.max_row + 1):
 
                 note_uri = uri_text + "note" + str(nidx)
                 notenode = PDF.set_uri(note_uri)
-                PDF.g.add((notenode, PDF.hasNoteText, Literal(note_fr, lang='fr')))
+                g.add((notenode, PDF.hasNoteText, Literal(note_fr, lang='fr')))
 
 
 # 5 SI Units Special Names
@@ -218,26 +220,26 @@ for row in range(2, sheet.max_row + 1):
             symbol = formattxt(symbol, 'latex')
             
         element = PDF.set_unit_uri(uri_text)
-        PDF.g.add((element, RDF.type, PDF.SISpecialNamedUnit))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Named SI derived unit', lang='en')))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI dérivée ayant un nom spécial', lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
-        PDF.g.add((element, PDF.hasDefiningResolution, URIRef(CGPM_ns + defres)))
+        g.add((element, RDF.type, PDF.SISpecialNamedUnit))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Named SI derived unit', lang='en')))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI dérivée ayant un nom spécial', lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
+        g.add((element, PDF.hasDefiningResolution, URIRef(PDF.set_cgpm_uri(defres))))
         if othersi:
             if "@" in othersi:
                 othersi = formattxt(othersi, 'latex', 1)
-            PDF.g.add((element, PDF.inOtherSIUnits, Literal(othersi, datatype=XSD.string)))
+            g.add((element, PDF.inOtherSIUnits, Literal(othersi, datatype=XSD.string)))
         if inbasesi:
             if "@" in inbasesi:
                 inbasesi = formattxt(inbasesi, 'latex', 1)
-            PDF.g.add((element, PDF.inBaseSIUnits, Literal(inbasesi, datatype=XSD.string)))
+            g.add((element, PDF.inBaseSIUnits, Literal(inbasesi, datatype=XSD.string)))
         if equation:
             if "@" in equation:
                 equation = formattxt(equation, 'latex', 1)
-            PDF.g.add((element, PDF.hasDefiningEquation, Literal(equation, datatype=XSD.string)))
+            g.add((element, PDF.hasDefiningEquation, Literal(equation, datatype=XSD.string)))
 
 # 6) non SI units
 sheet = units_wb_obj["NonSIUnits"]
@@ -258,16 +260,16 @@ for row in range(7, sheet.max_row + 1):
             symbol = formattxt(symbol, 'latex')
 
         element = PDF.set_unit_uri(uri_text)
-        PDF.g.add((element, RDF.type, PDF.nonSIUnit))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Non-SI unit accepted for use with the SI', lang='en')))
-        PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité en dehors du SI '
+        g.add((element, RDF.type, PDF.nonSIUnit))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Non-SI unit accepted for use with the SI', lang='en')))
+        g.add((element, PDF.hasUnitTypeAsString, Literal('Unité en dehors du SI '
                                                              'dont l\'usage est accepté avec le SI', lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
-        PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        PDF.g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        PDF.g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(unitOfQtyKind)))
-        PDF.g.add((element, PDF.hasConversionFactor, Literal(conversionFactor, datatype=XSD.double)))
-        PDF.g.add((element, PDF.hasConversionUnit, PDF.set_unit_uri(conversionUnit)))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
+        g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+        g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(unitOfQtyKind)))
+        g.add((element, PDF.hasConversionFactor, Literal(conversionFactor, datatype=XSD.double)))
+        g.add((element, PDF.hasConversionUnit, PDF.set_unit_uri(conversionUnit)))
 
 # 7) serialization
-PDF.g.serialize(format='ttl', destination=APIPATH + 'units.ttl')
+g.serialize(format='ttl', destination=APIPATH + 'units.ttl')
