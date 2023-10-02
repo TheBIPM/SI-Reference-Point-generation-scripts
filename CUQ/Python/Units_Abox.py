@@ -13,9 +13,10 @@ from settings import *
 import openpyxl
 import re
 
+# import units TBox
 PDF = SiElements()
 CGPM_ns = SIURL + "bodies/CGPM#"
-SIURL = SIURL + "SI"
+SIURL = PDF.namespace
 BASESTR = str(PDF.BASE_PATH)
 
 PDF.g.bind("cgpm", CGPM_ns)
@@ -92,7 +93,7 @@ for row in range(2, sheet.max_row + 1):
     symbol = sheet.cell(row, column=5).value
 
     if uri_text is not None:
-        element = PDF.set_uri(uri_text)
+        element = PDF.set_unit_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SIBaseUnit))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         PDF.g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
@@ -216,7 +217,7 @@ for row in range(2, sheet.max_row + 1):
         if "@" in symbol:
             symbol = formattxt(symbol, 'latex')
             
-        element = PDF.set_uri(uri_text)
+        element = PDF.set_unit_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.SISpecialNamedUnit))
         PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Named SI derived unit', lang='en')))
         PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI dérivée ayant un nom spécial', lang='fr')))
@@ -256,7 +257,7 @@ for row in range(7, sheet.max_row + 1):
         if "@" in symbol:
             symbol = formattxt(symbol, 'latex')
 
-        element = PDF.set_uri(uri_text)
+        element = PDF.set_unit_uri(uri_text)
         PDF.g.add((element, RDF.type, PDF.nonSIUnit))
         PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Non-SI unit accepted for use with the SI', lang='en')))
         PDF.g.add((element, PDF.hasUnitTypeAsString, Literal('Unité en dehors du SI '

@@ -21,6 +21,7 @@ from rdflib.container import Seq
 g = Graph()
 PDF = SiElements()
 g.bind("si", PDF.namespace)
+g.bind("units", PDF.namespace_units)
 BASESTR = str(PDF.BASE_PATH)
 
 # Annotations to the ontology (name, creation date, comment)

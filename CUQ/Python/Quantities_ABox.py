@@ -45,7 +45,7 @@ for row in range(2, sheet.max_row):
     PDF.g.add((element, SKOS.altLabel, Literal(identifier, datatype=XSD.string)))
     if sheet.cell(row, column=4).value is not None:
         unit = sheet.cell(row, column=4).value
-        PDF.g.add((element, PDF.hasUnit, PDF.set_uri(unit)))
+        PDF.g.add((element, PDF.hasUnit, PDF.set_unit_uri(unit)))
     if sheet.cell(row, column=5).value is not None:
         sameas = sheet.cell(row, column=5).value
         PDF.g.add((element, OWL.sameAs, PDF.set_uri(sameas)))

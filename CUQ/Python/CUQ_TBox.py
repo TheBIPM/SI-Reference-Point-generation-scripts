@@ -10,7 +10,9 @@ class SiElements:
     def __init__(self, namespace: str = SIURL + "SI#", prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
         self.namespace = namespace
-        self.g.bind(prefix, namespace)
+        self.namespace_units = SIURL + "SI/units/"
+        self.g.bind(prefix, self.namespace)
+        self.g.bind("units", self.namespace_units)
 
         self.g.bind("skos", SKOSURL)
         self.g.bind("dcterms", DCTURL)
@@ -502,3 +504,7 @@ class SiElements:
     def set_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace + name)
+
+    def set_unit_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_units + name)
