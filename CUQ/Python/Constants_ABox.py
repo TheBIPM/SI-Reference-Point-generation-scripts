@@ -20,17 +20,19 @@ from rdflib.container import Seq
 
 g = Graph()
 PDF = SiElements()
-g.bind("si", PDF.namespace)
-g.bind("units", PDF.namespace_units)
 BASESTR = str(PDF.BASE_PATH)
 
+# copy over all namespaces from PDF.g to g
+for key, val in PDF.g.namespaces():
+    g.bind(key, val) 
+
 # Annotations to the ontology (name, creation date, comment)
-PDF.g.add((URIRef(SIURL + "constants"), RDF.type, OWL.Ontology))
-PDF.g.add((URIRef(SIURL + "SI"), SKOS.prefLabel, Literal("SI Reference Point - Constants", datatype=XSD.string)))
-PDF.g.add((URIRef(SIURL + "constants"), RDFS.comment,
+g.add((URIRef(PDF.namespace_constants), RDF.type, OWL.Ontology))
+g.add((URIRef(PDF.namespace_constants), SKOS.prefLabel, Literal("SI Reference Point - Constants", datatype=XSD.string)))
+g.add((URIRef(PDF.namespace_constants), RDFS.comment,
            Literal("Ontology, part of the SI reference point, covering the seven underpinning constants of the SI",
                    datatype=XSD.string)))
-PDF.g.add((URIRef(SIURL + "constants"), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+g.add((URIRef(PDF.namespace_constants), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # worksheet containing the basic information
 cst_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'SI_Constants.xlsx')
@@ -38,6 +40,7 @@ sheet = cst_wb_obj.active
 
 # load Units graph (to allow identification of URI for a given unit symbol)
 units_g = Graph()
+units_g.parse(APIPATH + 'si.ttl')
 units_g.parse(APIPATH + 'units.ttl')
 owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(units_g)
 
@@ -142,7 +145,7 @@ for row in range(2, sheet.max_row + 1):
     unit_str = sheet.cell(row, column=9).value
     symbol = sheet.cell(row, column=10).value
     updated = sheet.cell(row, column=11).value
-    element = PDF.set_uri(identifier)
+    element = PDF.set_constant_uri(identifier)
 
     if "@" in symbol:
         symbol = formattxt(symbol, 'latex')
