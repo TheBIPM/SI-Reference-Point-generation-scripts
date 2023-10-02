@@ -1,11 +1,14 @@
 import openpyxl
+import os
 from rdflib import Graph, URIRef, Namespace
 
 from settings import APIPATH
 
 # load existing decisions.ttl
 g = Graph()
-g.parse("CUQ\_docs\decisions_without_cipm.ttl", format="ttl")
+g.parse(os.path.join("CUQ",
+                     "_docs",
+                     "decisions_without_cipm.ttl"), format="ttl")
 
 # add required namespaces
 CIPM = Namespace("http://si-digital-framework.org/bodies/CIPM#")
@@ -16,7 +19,8 @@ g.bind("cctf", CCTF)
 g.bind("dec", DEC)
 
 # load missing entries from excel file
-missing_entries_file = openpyxl.load_workbook("CUQ\_docs\missing_definitions_cipm.xlsx")
+missing_entries_file = openpyxl.load_workbook(os.path.join(
+    "CUQ", "_docs", "missing_definitions_cipm.xlsx"))
 ws = missing_entries_file["Feuil1"]
 dec_ids = ws["A"]
 res_ids = ws["F"]
