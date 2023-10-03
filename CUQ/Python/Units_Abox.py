@@ -158,7 +158,7 @@ for row in range(2, basedefs.max_row + 1):
                 DefiningEquation = formattxt(DefiningEquation, 'latex', 1)
             g.add((element, PDF.hasDefiningEquation, Literal(DefiningEquation, datatype=XSD.string)))
         if DefiningConstant is not None:
-            g.add((element, PDF.hasDefiningConstant, PDF.set_uri(DefiningConstant)))
+            g.add((element, PDF.hasDefiningConstant, PDF.set_constant_uri(DefiningConstant)))
         if Status is not None:
             g.add((element, PDF.hasStatus, Literal(Status, datatype=XSD.string)))
 
