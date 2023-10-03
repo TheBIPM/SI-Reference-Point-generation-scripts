@@ -480,6 +480,7 @@ class SiElements:
         self.g.add((self.hasDefiningResolution, RDFS.label, Literal("has defining resolution", lang="en")))
         self.g.add((self.hasDefiningResolution, RDFS.label, Literal("a une résolution déterminante", lang="fr")))
         self.g.add((self.hasDefiningResolution, RDFS.domain, self.Definition))
+        self.g.add((self.hasDefiningResolution, RDFS.domain, self.Constant))
         self.g.add((self.hasDefiningResolution, RDFS.range, URIRef(self.ResBod_ns + "Resolution")))  # text needed?
         self.g.add((self.hasDefiningResolution, RDFS.comment,
                     Literal("Linking an SI definition to the resolution by which it was adopted.", lang="en")))
@@ -493,6 +494,7 @@ class SiElements:
         self.g.add((self.isDefiningResolutionOf, RDFS.label, Literal("définit la résolution de", lang="fr")))
         self.g.add((self.isDefiningResolutionOf, RDFS.domain, URIRef(self.ResBod_ns + "Resolution")))  # text needed?
         self.g.add((self.isDefiningResolutionOf, RDFS.range, self.Definition))
+        self.g.add((self.isDefiningResolutionOf, RDFS.range, self.Constant))
         self.g.add((self.isDefiningResolutionOf, OWL.inverseOf, self.hasDefiningResolution))
         self.g.add((self.hasDefiningResolution, OWL.inverseOf, self.isDefiningResolutionOf))
         self.g.add((self.isDefiningResolutionOf, RDFS.comment,
