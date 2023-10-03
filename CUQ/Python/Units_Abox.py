@@ -101,7 +101,7 @@ for row in range(2, sheet.max_row + 1):
         g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         g.add((element, PDF.hasUnitTypeAsString, Literal('SI base unit', lang='en')))
         g.add((element, PDF.hasUnitTypeAsString, Literal('Unité SI de base', lang='fr')))
-        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_quantity_uri(UnitOfQtyKind)))
         g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
 
         for kolonne in range(6, sheet.max_column + 1):
@@ -226,7 +226,7 @@ for row in range(2, sheet.max_row + 1):
         g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(UnitOfQtyKind)))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_quantity_uri(UnitOfQtyKind)))
         g.add((element, PDF.hasDefiningResolution, URIRef(PDF.set_cgpm_uri(defres))))
         if othersi:
             if "@" in othersi:
@@ -267,7 +267,7 @@ for row in range(7, sheet.max_row + 1):
         g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
-        g.add((element, PDF.isUnitOfQtyKind, PDF.set_uri(unitOfQtyKind)))
+        g.add((element, PDF.isUnitOfQtyKind, PDF.set_quantity_uri(unitOfQtyKind)))
         g.add((element, PDF.hasConversionFactor, Literal(conversionFactor, datatype=XSD.double)))
         g.add((element, PDF.hasConversionUnit, PDF.set_unit_uri(conversionUnit)))
 
