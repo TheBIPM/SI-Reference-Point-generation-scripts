@@ -145,6 +145,7 @@ for row in range(2, sheet.max_row + 1):
     unit_str = sheet.cell(row, column=9).value
     symbol = sheet.cell(row, column=10).value
     updated = sheet.cell(row, column=11).value
+    defining_res = sheet.cell(row, column=12).value
     element = PDF.set_constant_uri(identifier)
 
     if "@" in symbol:
@@ -164,6 +165,7 @@ for row in range(2, sheet.max_row + 1):
     g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
     g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
     g.add((element, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
+    g.add((element, PDF.hasDefiningResolution, PDF.set_cgpm_uri(defining_res)))
 
     piece_list = []
     pieces = unit.split(".")
