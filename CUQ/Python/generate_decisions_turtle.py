@@ -28,7 +28,7 @@ res_ids = ws["F"]
 ns_dict = dict(g.namespaces())
 
 for sub, obj in zip(dec_ids[1:], res_ids[1:]):
-    print(f"{sub.value :13s} -->   {obj.value}")
+    #print(f"{sub.value :13s} -->   {obj.value}")
 
     # split the object string
     obj_ns, obj_ref = obj.value.split(":")
