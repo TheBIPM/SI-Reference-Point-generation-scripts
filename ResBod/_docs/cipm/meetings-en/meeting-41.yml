@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Definitions of photometric units
   identifier: 1
-  url: https://www.bipm.org/en/committees/ci/cipm/41-1946/resolution-1
+  url: https://doi.org/10.59161/CIPM1946RES1E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
   reference_name: Proceedings of the 41st CIPM (1946), 1947
   reference_page: 129
@@ -36,7 +36,7 @@ resolutions:
   type: resolution
   title: Definitions of electric units
   identifier: 2
-  url: https://www.bipm.org/en/committees/ci/cipm/41-1946/resolution-2
+  url: https://doi.org/10.59161/CIPM1946RES2E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM41.pdf/07357119-16e6-d078-01d0-7acbca5c4d14
   reference_name: Proceedings of the 41st CIPM (1946), 1947
   reference_page: 129

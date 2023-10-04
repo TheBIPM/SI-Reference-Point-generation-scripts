@@ -58,7 +58,7 @@ resolutions:
   type: recommendation
   title: Clarification of the definition of the kelvin, unit of thermodynamic temperature
   identifier: 2
-  url: https://www.bipm.org/en/committees/ci/cipm/94-2005/resolution-2
+  url: https://doi.org/10.59161/CIPM2005REC2E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
   reference_name: Proceedings of the 94th CIPM (2005), 2006
   reference_page: 235
@@ -103,7 +103,7 @@ resolutions:
   type: recommendation
   title: Revision of the <i>Mise en pratique</i> list of recommended radiations
   identifier: 3
-  url: https://www.bipm.org/en/committees/ci/cipm/94-2005/resolution-3
+  url: https://doi.org/10.59161/CIPM2005REC3E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM94.pdf.zip/ab888502-d10a-1104-1926-62931e1c5f22
   reference_name: Proceedings of the 94th CIPM (2005), 2006
   reference_page: 236

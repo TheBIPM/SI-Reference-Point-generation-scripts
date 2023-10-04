@@ -13,7 +13,7 @@ resolutions:
   type: recommendation
   title: The neper and the bel
   identifier: 1
-  url: https://www.bipm.org/en/committees/ci/cipm/90-2001/resolution-1
+  url: https://doi.org/10.59161/CIPM2001DECLE1
   reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
   reference_name: Proceedings of the 90th CIPM (2001), 2002
   reference_page: 153
@@ -78,7 +78,7 @@ resolutions:
   type: declaration
   title: '"SI units" and "units of the SI"'
   identifier: 2001
-  url: https://www.bipm.org/en/committees/ci/cipm/90-2001/resolution-
+  url: https://doi.org/10.59161/CIPM2001DECLE
   reference: https://www.bipm.org/documents/20126/17315032/CIPM90.pdf.zip/7f2b0d50-feef-ef64-83fa-7ee56da888ad
   reference_name: Proceedings of the 90th CIPM (2001), 2002
   reference_page: 120

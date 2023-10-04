@@ -144,7 +144,7 @@ resolutions:
   type: recommendation
   title: The International Temperature Scale of 1990
   identifier: 5
-  url: https://www.bipm.org/en/committees/ci/cipm/78-1989/resolution-5
+  url: https://doi.org/10.59161/CIPM1989REC5E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
   reference_name: Proceedings of the 78th CIPM (1989), 1990
   reference_page: 115

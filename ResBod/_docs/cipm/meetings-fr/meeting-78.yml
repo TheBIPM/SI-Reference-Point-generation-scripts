@@ -144,7 +144,7 @@ resolutions:
   type: recommendation
   title: L’Échelle internationale de température de 1990
   identifier: 5
-  url: https://www.bipm.org/fr/committees/ci/cipm/78-1989/resolution-5
+  url: https://doi.org/10.59161/CIPM1989REC5F
   reference: https://www.bipm.org/documents/20126/17315032/CIPM78.pdf/078200cd-d8b2-f33b-da22-a2a3badeee10
   reference_name: Comptes rendus du 78e CIPM (1989), 1990
   reference_page: 26

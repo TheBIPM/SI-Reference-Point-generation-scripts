@@ -13,7 +13,7 @@ resolutions:
   type: resolution
   title: Définition de l’unité de temps (seconde)
   identifier: 1
-  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956/resolution-1
+  url: https://doi.org/10.59161/CIPM1956RES1F
   reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
   reference_name: Comptes rendus du 46e CIPM (1956), 1957
   reference_page: 77
@@ -70,7 +70,7 @@ resolutions:
   type: resolution
   title: Système International d'Unités
   identifier: 3
-  url: https://www.bipm.org/fr/committees/ci/cipm/46-1956/resolution-3
+  url: https://doi.org/10.59161/CIPM1956RES3F
   reference: https://www.bipm.org/documents/20126/17315032/CIPM46.pdf/31124ce6-06d5-4981-7c93-a49484479053
   reference_name: Comptes rendus du 46e CIPM (1956), 1957
   reference_page: 83

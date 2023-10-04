@@ -13,7 +13,7 @@ resolutions:
   type: recommendation
   title: Representation of the volt by means of the Josephson effect
   identifier: 1
-  url: https://www.bipm.org/en/committees/ci/cipm/77-1988/resolution-1
+  url: https://doi.org/10.59161/CIPM1988REC1E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM77.pdf/34e84af6-3490-c42f-7215-84e771f25f00
   reference_name: Proceedings of the 77th CIPM (1988), 1989
   reference_page: 44
@@ -74,7 +74,7 @@ resolutions:
   type: recommendation
   title: Representation of the ohm by means of the quantum Hall effect
   identifier: 2
-  url: https://www.bipm.org/en/committees/ci/cipm/77-1988/resolution-2
+  url: https://doi.org/10.59161/CIPM1988REC2E
   reference: https://www.bipm.org/documents/20126/17315032/CIPM77.pdf/34e84af6-3490-c42f-7215-84e771f25f00
   reference_name: Proceedings of the 77th CIPM (1988), 1989
   reference_page: 45
