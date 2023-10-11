@@ -1,0 +1,316 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix math: <http://cll.niimm.ksu.ru/ontologies/mathematics#> .
+
+@prefix si: <http://si-digital-framework.org/SI#> .
+@prefix units: <http://si-digital-framework.org/SI/units/> .
+@prefix quantities: <http://si-digital-framework.org/quantities/> .
+@prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
+
+
+# define some (abstract) mathematical operations
+
+si:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "Operation that is applied to operands" ;
+    rdfs:seeAlso math:E1301 .
+
+si:hasOperand a owl:ObjectProperty ;
+    rdfs:label "has operand" ;
+    rdfs:domain si:Operation .
+
+si:Multiplication a si:Operation ;
+    rdfs:label "multiplication" ;
+    rdfs:seeAlso math:E1318 .
+
+si:hasFactor a owl:ObjectProperty ;
+    rdfs:label "has factor" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:domain si:Multiplication .
+
+si:Exponentiation a si:Operation ;
+    rdfs:label "multiplication" ;
+    rdfs:seeAlso math:E1302 .
+
+si:hasBase a owl:ObjectProperty ;
+    rdfs:label "has base" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:domain si:Exponentiation .
+
+si:hasExponent a owl:ObjectProperty ;
+    rdfs:label "has exponent" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:domain si:Exponentiation ;
+    rdfs:range xsd:double, xsd:integer, xsd:decimal .
+
+
+# derived quantities
+
+si:DerivedQuantityKind a owl:Class ;
+    rdfs:label "derived quantitykind" ;    
+    rdfs:subClassOf si:QuantityKind .
+
+si:QuantityKindProduct a si:Multiplication ;
+    rdfs:label "quantitykind product" ;
+    rdfs:subClassOf 
+        si:DerivedQuantityKind ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:allValuesFrom si:QuantityKind
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:minCardinality 2
+        ] .
+
+si:QuantityKindPower a si:Exponentiation ;
+    rdfs:label "quantitykind to the power" ;    
+    rdfs:subClassOf 
+        si:DerivedQuantityKind ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:allValuesFrom si:QuantityKind
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:cardinality 1
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasExponent ;
+            owl:cardinality 1
+        ] .
+
+si:hasPhysicalDimension a owl:FunctionalProperty ;
+    rdfs:label "" ;
+    rdfs:domain si:QuantityKind ;
+    rdfs:range si:PhysicalDimension .
+
+
+# physical dimension
+
+si:PhysicalDimension a owl:Class ;
+    rdfs:label "physical dimension" .
+
+si:DerivedPhysicalDimension a owl:Class ;
+    rdfs:label "derived physical dimension" ;    
+    rdfs:subClassOf si:PhysicalDimension .
+
+si:PhysicalDimensionProduct a si:Multiplication ;
+    rdfs:label "quantitykind product" ;
+    rdfs:subClassOf 
+        si:DerivedPhysicalDimension ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:allValuesFrom si:PhysicalDimension
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:minCardinality 2
+        ] .
+
+si:PhysicalDimensionPower a si:Exponentiation ;
+    rdfs:label "quantitykind to the power" ;    
+    rdfs:subClassOf 
+        si:DerivedPhysicalDimension ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:allValuesFrom si:PhysicalDimension
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:cardinality 1
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasExponent ;
+            owl:cardinality 1
+        ] .
+
+si:TimeDim a si:PhysicalDimension ;
+    rdfs:label "SI dimension of time" .
+si:LengthDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of length" .
+si:MassDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of mass" .
+si:ElectricCurrentDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of electric current" .
+si:ThermodynamicTempDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of therodynamisc temperature" .
+si:AmountOfSubstanceDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of amount of substance" .
+si:LuminousIntensityDimension a si:PhysicalDimension ;
+    rdfs:label "SI dimension of liminous intensity" .
+
+si:BaseDimension a owl:Class ;
+    rdfs:label "base physical dimension" ;
+    owl:oneOf 
+        (
+            si:TimeDim 
+            si:LengthDimension 
+            si:MassDimension 
+            si:ElectricCurrentDimension 
+            si:ThermodynamicTempDimension 
+            si:AmountOfSubstanceDimension             
+            si:LuminousIntensityDimension 
+        ) .
+
+si:DistinctDimensions a owl:AllDifferent ;
+    owl:distinctMembers (
+        si:TimeDim 
+        si:LengthDimension 
+        si:MassDimension 
+        si:ElectricCurrentDimension 
+        si:ThermodynamicTempDimension 
+        si:AmountOfSubstanceDimension             
+        si:LuminousIntensityDimension 
+    ) .
+
+
+# derived units
+
+si:DerivedUnit a owl:Class ;
+    rdfs:label "derived unit" ;    
+    rdfs:subClassOf si:MeasurementUnit .
+
+si:UnitProduct a si:Multiplication ;
+    rdfs:label "unit product" ;
+    rdfs:subClassOf 
+        si:DerivedUnit ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:allValuesFrom si:MeasurementUnit
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasFactor ;
+            owl:minCardinality 2
+        ] .
+
+si:UnitPower a si:Exponentiation ;
+    rdfs:label "unit to the power" ;    
+    rdfs:subClassOf 
+        si:DerivedUnit ,
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:allValuesFrom si:MeasurementUnit
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBase ;
+            owl:cardinality 1
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasExponent ;
+            owl:cardinality 1
+        ] .
+
+
+# prefixed and coherent unit
+
+prefix:none a si:SIPrefix ;
+    si:hasScalingFactor 1 ;
+    si:hasSymbol ""^^xsd:string ;
+    skos:prefLabel ""@en, ""@fr .
+
+si:PrefixedUnit a si:MeasurementUnit ;
+    rdfs:label "prefixed unit" ;  
+    rdfs:subClassOf 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasPrefix ;
+            owl:allValuesFrom si:SIPrefix
+        ], 
+        [
+            a owl:Restriction; 
+            owl:onProperty si:hasBaseUnit ;
+            owl:allValuesFrom si:NonPrefixedUnit
+        ] .
+
+si:NonPrefixedUnit a owl:Class ;
+    owl:unionOf (
+        si:MeasurementUnit
+        [
+            a owl:Class ;
+            owl:oneOf (
+                [
+                    a owl:Class ;
+                    owl:complementOf 
+                    [
+                        a owl:Restriction; 
+                        owl:onProperty si:hasPrefix ;
+                        owl:allValuesFrom si:SIPrefix
+                    ]
+                ]
+                [
+                        a owl:Restriction; 
+                        owl:onProperty si:hasPrefix ;
+                        owl:hasValue prefix:none
+                ]
+            )
+        ]
+    ) .
+
+si:CoherentUnit a si:MeasurementUnit ;
+    rdfs:label "coherent unit" ;
+    rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty si:includesUseOfUnit ;
+        owl:allValuesFrom si:SIBaseUnit, si:SISpecialNamedUnit
+    ] 
+    [
+        a owl:Restriction ;
+        owl:onProperty si:includesUseOfPrefix ;
+        owl:hasValue [
+            a Class; 
+            owl:oneOf (prefix:none, owl:Nothing)
+        ]
+    ] . # probably needs fruther refinement
+
+si:hasPrefix a owl:ObjectProperty ;
+    rdfs:label "has prefix" ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:range si:SIPrefix .
+
+si:hasBaseUnit a owl:ObjectProperty ;
+    rdfs:label "has base unit" ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:range si:NonPrefixedUnit .
+
+
+# further properties 
+
+si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyKind ???
+    rdfs:label "associated with" ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:range si:QuantityKind .
+
+si:includesUseOf a owl:TransitiveProperty ;
+    rdfs:label "includes use of" ;
+    owl:inverseOf si:hasFactor, si:hasBase .
+
+si:includesUseOfUnit a owl:TransitiveProperty ;
+    rdfs:label "includes use of" ;
+    owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit .
+
+si:includesUseOfPrefix a owl:TransitiveProperty ;
+    rdfs:label "includes use of prefix" ;
+    owl:inverseOf si:hasPrefix .
+
+# some key questions:
+# 1. Would it in line with the SI, that a prefixed unit is also a derived unit?
+# 2. Is a unit like "millimetre per millisecond" a coherent unit with regard to the SI?
+#    (in this proposed concept, the expression for coherent unit _cannot_ account for that)
