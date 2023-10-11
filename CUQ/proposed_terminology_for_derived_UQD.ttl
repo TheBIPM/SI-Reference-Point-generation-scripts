@@ -136,7 +136,7 @@ si:PhysicalDimensionPower a si:Exponentiation ;
             owl:cardinality 1
         ] .
 
-si:TimeDim a si:PhysicalDimension ;
+si:TimeDimension a si:PhysicalDimension ;
     rdfs:label "SI dimension of time" .
 si:LengthDimension a si:PhysicalDimension ;
     rdfs:label "SI dimension of length" .
@@ -155,7 +155,7 @@ si:BaseDimension a owl:Class ;
     rdfs:label "base physical dimension" ;
     owl:oneOf 
         (
-            si:TimeDim 
+            si:TimeDimension 
             si:LengthDimension 
             si:MassDimension 
             si:ElectricCurrentDimension 
@@ -166,7 +166,7 @@ si:BaseDimension a owl:Class ;
 
 si:DistinctDimensions a owl:AllDifferent ;
     owl:distinctMembers (
-        si:TimeDim 
+        si:TimeDimension 
         si:LengthDimension 
         si:MassDimension 
         si:ElectricCurrentDimension 
@@ -220,10 +220,9 @@ si:UnitPower a si:Exponentiation ;
 
 # prefixed and coherent unit
 
-prefix:none a si:SIPrefix ;
+prefixes:none a si:SIPrefix ;
     si:hasScalingFactor 1 ;
-    si:hasSymbol ""^^xsd:string ;
-    skos:prefLabel ""@en, ""@fr .
+    si:hasSymbol ""^^xsd:string .
 
 si:PrefixedUnit a si:MeasurementUnit ;
     rdfs:label "prefixed unit" ;  
@@ -257,7 +256,7 @@ si:NonPrefixedUnit a owl:Class ;
                 [
                         a owl:Restriction; 
                         owl:onProperty si:hasPrefix ;
-                        owl:hasValue prefix:none
+                        owl:hasValue prefixes:none
                 ]
             )
         ]
@@ -270,13 +269,13 @@ si:CoherentUnit a si:MeasurementUnit ;
         a owl:Restriction ;
         owl:onProperty si:includesUseOfUnit ;
         owl:allValuesFrom si:SIBaseUnit, si:SISpecialNamedUnit
-    ] 
+    ], 
     [
         a owl:Restriction ;
         owl:onProperty si:includesUseOfPrefix ;
         owl:hasValue [
-            a Class; 
-            owl:oneOf (prefix:none, owl:Nothing)
+            a owl:Class ; 
+            owl:oneOf (prefixes:none owl:Nothing)
         ]
     ] . # probably needs fruther refinement
 
@@ -298,19 +297,53 @@ si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyK
     rdfs:domain si:MeasurementUnit ;
     rdfs:range si:QuantityKind .
 
-si:includesUseOf a owl:TransitiveProperty ;
-    rdfs:label "includes use of" ;
-    owl:inverseOf si:hasFactor, si:hasBase .
+#si:includesUseOf a owl:TransitiveProperty ;
+#    rdfs:label "includes use of" ;
+#    owl:inverseOf si:hasFactor, si:hasBase .
 
 si:includesUseOfUnit a owl:TransitiveProperty ;
     rdfs:label "includes use of" ;
-    owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit .
+    rdfs:subPropertyOf [owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit] .
 
 si:includesUseOfPrefix a owl:TransitiveProperty ;
     rdfs:label "includes use of prefix" ;
-    owl:inverseOf si:hasPrefix .
+    rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
 
 # some key questions:
 # 1. Would it in line with the SI, that a prefixed unit is also a derived unit?
 # 2. Is a unit like "millimetre per millisecond" a coherent unit with regard to the SI?
 #    (in this proposed concept, the expression for coherent unit _cannot_ account for that)
+
+
+
+
+###############################################
+########### TESTING INDIVIDUALS ###############
+###############################################s
+@prefix ex: <http://example.org/> .
+
+ex:nanosecond a si:MeasurementUnit ;
+    si:hasBaseUnit units:second ;
+    si:hasPrefix prefixes:nano .
+
+## ex:metre_per_second a si:Multiplication ;
+##     si:factor units:metre ;
+##     si:hasPrefix prefixes:nano .
+## 
+## ex:newton a si:Multiplication ;
+##     si:factor units:metre ;
+##     si:factor units:kilogram ;
+##     si:factor [
+##         a si:Exponentiation ;
+##         si:hasBase units:second ;
+##         si:hasExponent -2
+##     ] .
+## 
+## ex:newton a si:Multiplication ;
+##     si:factor units:metre ;
+##     si:factor units:kilogram ;
+##     si:factor [
+##         a si:Exponentiation ;
+##         si:hasBase ex:nanosecond ;
+##         si:hasExponent -2
+##     ] .
