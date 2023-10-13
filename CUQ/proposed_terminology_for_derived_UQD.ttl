@@ -324,28 +324,51 @@ si:includesUseOfPrefix a owl:TransitiveProperty ;
 ###############################################s
 @prefix ex: <http://example.org/> .
 
-ex:nanosecond a si:MeasurementUnit ;
+ex:true_second_custom owl:sameAs units:second .
+
+ex:none_second_custom a si:MeasurementUnit ;
+    si:hasBaseUnit units:second ;
+    si:hasPrefix prefixes:none .
+
+ex:second_custom a si:MeasurementUnit ;
+    si:hasBaseUnit units:second .
+
+ex:nanosecond_custom a si:MeasurementUnit ;
     si:hasBaseUnit units:second ;
     si:hasPrefix prefixes:nano .
 
-## ex:metre_per_second a si:Multiplication ;
-##     si:factor units:metre ;
-##     si:hasPrefix prefixes:nano .
+## ex:voltmetre a si:Multiplication ;
+##     si:hasFactor units:volt ;
+##     si:hasFactor units:metre .
+
+ex:custom_newton a si:Multiplication ;
+    si:hasFactor units:metre ;
+    si:hasFactor units:kilogram ;
+    si:hasFactor [
+        a si:Exponentiation ;
+        si:hasBase units:second ;
+        si:hasExponent -2
+    ] .
+
+
+
+
+#
+
+## units:gram a si:MeasurementUnit ;
+##     si:hasSymbol "g"^^xsd:string ;
+##     si:isUnitOfQtyKind quantities:MASS ;
+##     si:hasPrefix prefixes:none .
 ## 
-## ex:newton a si:Multiplication ;
-##     si:factor units:metre ;
-##     si:factor units:kilogram ;
-##     si:factor [
-##         a si:Exponentiation ;
-##         si:hasBase units:second ;
-##         si:hasExponent -2
-##     ] .
-## 
-## ex:newton a si:Multiplication ;
-##     si:factor units:metre ;
-##     si:factor units:kilogram ;
-##     si:factor [
-##         a si:Exponentiation ;
-##         si:hasBase ex:nanosecond ;
-##         si:hasExponent -2
-##     ] .
+## units:kilogram a si:MeasurementUnit ;
+##     si:hasBaseUnit units:gram ;
+##     si:hasPrefix prefixes:kilo .
+
+
+ex:velocityDimension a si:Multiplication ;
+    si:hasFactor si:LengthDimension ;
+    si:hasFactor [
+        a si:Exponentiation ;
+        si:hasBase si:TimeDimension ;
+        si:hasExponent -1
+    ] .
