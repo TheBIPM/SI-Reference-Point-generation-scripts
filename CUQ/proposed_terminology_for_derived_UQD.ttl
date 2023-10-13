@@ -51,40 +51,41 @@ si:DerivedQuantityKind a owl:Class ;
     rdfs:label "derived quantitykind" ;    
     rdfs:subClassOf si:QuantityKind .
 
-si:QuantityKindProduct a si:Multiplication ;
+si:QuantityKindProduct a owl:Class ;
     rdfs:label "quantitykind product" ;
-    rdfs:subClassOf 
-        si:DerivedQuantityKind ,
+    rdfs:subClassOf si:DerivedQuantityKind ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Multiplication
         [
             a owl:Restriction; 
             owl:onProperty si:hasFactor ;
-            owl:allValuesFrom si:QuantityKind
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
-            owl:minCardinality 2
-        ] .
+                owl:someValuesFrom si:QuantityKind ;
+                # owl:minCardinality 2 # not supported in OWL2 RL
+            ] 
+        )
+    ].
 
-si:QuantityKindPower a si:Exponentiation ;
-    rdfs:label "quantitykind to the power" ;    
-    rdfs:subClassOf 
-        si:DerivedQuantityKind ,
+si:QuantityKindPower a owl:Class ;
+    rdfs:label "quantitykind power" ;
+    rdfs:subClassOf si:DerivedQuantityKind ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Exponentiation
         [
             a owl:Restriction; 
             owl:onProperty si:hasBase ;
-            owl:allValuesFrom si:QuantityKind
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
-            owl:cardinality 1
-        ], 
+                owl:someValuesFrom si:QuantityKind ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
         [
             a owl:Restriction; 
             owl:onProperty si:hasExponent ;
-            owl:cardinality 1
-        ] .
+                owl:someValuesFrom owl:Thing ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+        )
+    ].
 
 si:hasPhysicalDimension a owl:FunctionalProperty ;
     rdfs:label "" ;
@@ -101,40 +102,41 @@ si:DerivedPhysicalDimension a owl:Class ;
     rdfs:label "derived physical dimension" ;    
     rdfs:subClassOf si:PhysicalDimension .
 
-si:PhysicalDimensionProduct a si:Multiplication ;
-    rdfs:label "quantitykind product" ;
-    rdfs:subClassOf 
-        si:DerivedPhysicalDimension ,
+si:PhysicalDimensionProduct a owl:Class ;
+    rdfs:label "physical dimension product" ;
+    rdfs:subClassOf si:DerivedPhysicalDimension ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Multiplication
         [
             a owl:Restriction; 
             owl:onProperty si:hasFactor ;
-            owl:allValuesFrom si:PhysicalDimension
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
-            owl:minCardinality 2
-        ] .
+                owl:someValuesFrom si:PhysicalDimension ;
+                # owl:minCardinality 2 # not supported in OWL2 RL
+            ] 
+        )
+    ].
 
-si:PhysicalDimensionPower a si:Exponentiation ;
-    rdfs:label "quantitykind to the power" ;    
-    rdfs:subClassOf 
-        si:DerivedPhysicalDimension ,
+si:PhysicalDimensionPower a owl:Class ;
+    rdfs:label "physical dimension power" ;
+    rdfs:subClassOf si:DerivedPhysicalDimension ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Exponentiation
         [
             a owl:Restriction; 
             owl:onProperty si:hasBase ;
-            owl:allValuesFrom si:PhysicalDimension
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
-            owl:cardinality 1
-        ], 
+                owl:someValuesFrom si:PhysicalDimension ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
         [
             a owl:Restriction; 
             owl:onProperty si:hasExponent ;
-            owl:cardinality 1
-        ] .
+                owl:someValuesFrom owl:Thing ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+        )
+    ].
 
 si:TimeDimension a si:PhysicalDimension ;
     rdfs:label "SI dimension of time" .
@@ -182,43 +184,43 @@ si:DerivedUnit a owl:Class ;
     rdfs:label "derived unit" ;    
     rdfs:subClassOf si:MeasurementUnit .
 
-si:UnitProduct a si:Multiplication ;
+si:UnitProduct a owl:Class ;
     rdfs:label "unit product" ;
-    rdfs:subClassOf 
-        si:DerivedUnit ,
+    rdfs:subClassOf si:DerivedUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Multiplication
         [
             a owl:Restriction; 
             owl:onProperty si:hasFactor ;
-            owl:allValuesFrom si:MeasurementUnit
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
-            owl:minCardinality 2
-        ] .
+                owl:someValuesFrom si:MeasurementUnit; # allValuesFrom?
+                # owl:minCardinality 2 # not supported in OWL2 RL
+            ] 
+        )
+    ].
 
-si:UnitPower a si:Exponentiation ;
-    rdfs:label "unit to the power" ;    
-    rdfs:subClassOf 
-        si:DerivedUnit ,
+si:UnitPower a owl:Class ;
+    rdfs:label "unit power" ;
+    rdfs:subClassOf si:DerivedUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Exponentiation
         [
             a owl:Restriction; 
             owl:onProperty si:hasBase ;
-            owl:allValuesFrom si:MeasurementUnit
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
-            owl:cardinality 1
-        ], 
+                owl:someValuesFrom si:MeasurementUnit ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
         [
             a owl:Restriction; 
             owl:onProperty si:hasExponent ;
-            owl:cardinality 1
-        ] .
+                owl:someValuesFrom owl:Thing ;
+                # owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+        )
+    ].
 
 
-# prefixed and coherent unit
 
 prefixes:none a si:SIPrefix ;
     si:hasScalingFactor 1 ;
