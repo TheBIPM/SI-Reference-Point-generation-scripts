@@ -8,6 +8,7 @@ knowledge_bases = {
     "si_base": {"path": "Testing/API/si.ttl", "format": "ttl"},
     "units": {"path": "Testing/API/units.ttl", "format": "ttl"},
     "quantities": {"path": "Testing/API/quantities.ttl", "format": "ttl"},
+    "prefixes": {"path": "Testing/API/prefixes.ttl", "format": "ttl"},
 } 
 
 # load them into rdflib-graph
@@ -18,15 +19,49 @@ for kb, kb_val in knowledge_bases.items():
 # infer implicit triples by reasoning
 owlrl.DeductiveClosure(owlrl.RDFS_OWLRL_Semantics).expand(g_rdf)
 
-# remove owl:sameAs relations, if they only cover identity
-for subj, pred, obj in g_rdf.triples((None, RDF.type, None)):
 
-    #if "hasFactor" in pred:
-    #    print(subj.n3(g_rdf.namespace_manager), pred.n3(g_rdf.namespace_manager), obj.n3(g_rdf.namespace_manager))
+####################################
+query_all = """
+    SELECT ?s ?p ?o
+    WHERE {
+        ?s ?p ?o .
+        ?s si:includesUseOfPrefix ?p .
+        #?unit rdf:type ?val .
+        #?unit rdf:type si:MeasurementUnit .
+    }
+"""
 
-    #if "custom_newton" in subj or "custom_newton" in obj:
-    #    print(subj.n3(g_rdf.namespace_manager), pred.n3(g_rdf.namespace_manager), obj.n3(g_rdf.namespace_manager))
+qres = g_rdf.query(query_all)
+print("\nIncludes use of units:")
+for row in qres:
+    unit = row.s.n3(g_rdf.namespace_manager)
+    prop = row.p.n3(g_rdf.namespace_manager)
+    val = row.o.n3(g_rdf.namespace_manager)
 
+    #if unit.startswith("ex:") or unit.startswith("_:") or unit == "units:kilogram" or unit == "units:gram":
+    print(f"{unit} --> {prop} --> {val}")
 
-    if "second_custom" in subj or "second_custom" in obj:
-        print(subj.n3(g_rdf.namespace_manager), pred.n3(g_rdf.namespace_manager), obj.n3(g_rdf.namespace_manager))
+####################################
+query_prefixed = """
+    SELECT ?unit
+    WHERE {
+        ?unit rdf:type si:PrefixedUnit .
+    }
+"""
+print("\nPrefixed units:")
+for row in g_rdf.query(query_prefixed):
+    unit = row.unit.n3(g_rdf.namespace_manager)
+    print(unit)
+
+####################################
+query_coherent = """
+    SELECT ?unit
+    WHERE {
+        ?unit rdf:type si:CoherentUnit .
+    }
+"""
+print("\nCoherent units:")
+for row in g_rdf.query(query_coherent):
+    unit = row.unit.n3(g_rdf.namespace_manager)
+    print(unit)
+
