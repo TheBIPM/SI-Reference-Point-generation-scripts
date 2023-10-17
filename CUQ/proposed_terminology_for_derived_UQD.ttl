@@ -42,7 +42,7 @@ si:hasExponent a owl:ObjectProperty ;
     rdfs:label "has exponent" ;
     rdfs:subPropertyOf si:hasOperand ;
     rdfs:domain si:Exponentiation ;
-    rdfs:range xsd:double, xsd:integer, xsd:decimal .
+    rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
 
 
 # derived quantities
