@@ -274,6 +274,23 @@ si:PrefixedUnit a owl:Class ;
         )
     ] .
 
+si:CoherentUnit a owl:Class ;
+    rdfs:label "coherent unit" ;
+    rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty si:includesUseOfUnit ;
+                owl:allValuesFrom [owl:oneOf (si:SIBaseUnit si:SISpecialNamedUnit)]
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty si:includesUseOfPrefix ;
+                owl:hasValue [owl:oneOf (prefixes:none owl:Nothing)]
+            ]
+        )
+    ] .
 
 si:hasPrefix a owl:ObjectProperty ;
     rdfs:label "has prefix" ;
@@ -285,6 +302,15 @@ si:hasBaseUnit a owl:ObjectProperty ;
     rdfs:domain si:MeasurementUnit .
     #rdfs:range si:NonPrefixedUnit .
 
+units:gram a si:MeasurementUnit ;
+    si:hasSymbol "g"^^xsd:string ;
+    si:isUnitOfQtyKind quantities:MASS ;
+    si:hasPrefix prefixes:none .
+
+units:kilogram a si:MeasurementUnit ;
+    si:hasBaseUnit units:gram ;
+    si:hasPrefix prefixes:kilo .
+
 
 # further properties 
 
@@ -293,17 +319,16 @@ si:hasBaseUnit a owl:ObjectProperty ;
 ##     rdfs:domain si:MeasurementUnit ;
 ##     rdfs:range si:QuantityKind .
 ## 
-## #si:includesUseOf a owl:TransitiveProperty ;
-## #    rdfs:label "includes use of" ;
-## #    owl:inverseOf si:hasFactor, si:hasBase .
-## 
-## si:includesUseOfUnit a owl:TransitiveProperty ;
-##     rdfs:label "includes use of" ;
-##     rdfs:subPropertyOf [owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit] .
-## 
-## si:includesUseOfPrefix a owl:TransitiveProperty ;
-##     rdfs:label "includes use of prefix" ;
-##     rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
+
+si:includesUseOfUnit a owl:TransitiveProperty ;
+    rdfs:label "includes use of" ;
+    rdfs:subPropertyOf [owl:inverseOf si:hasFactor] ;
+    rdfs:subPropertyOf [owl:inverseOf si:hasBase] ;
+    rdfs:subPropertyOf [owl:inverseOf si:hasBaseUnit] .
+
+si:includesUseOfPrefix a owl:TransitiveProperty ;
+    rdfs:label "includes use of prefix" ;
+    rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
 
 # some key questions:
 # 1. Would it in line with the SI, that a prefixed unit is also a derived unit?
