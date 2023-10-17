@@ -61,7 +61,7 @@ si:QuantityKindProduct a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:QuantityKind ;
-                # owl:minCardinality 2 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
             ] 
         )
     ].
@@ -76,13 +76,13 @@ si:QuantityKindPower a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:QuantityKind ;
-                # owl:minCardinality 1 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
-                # owl:minCardinality 1 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
         )
     ].
@@ -112,7 +112,7 @@ si:PhysicalDimensionProduct a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:PhysicalDimension ;
-                # owl:minCardinality 2 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
             ] 
         )
     ].
@@ -127,7 +127,7 @@ si:PhysicalDimensionPower a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:PhysicalDimension ;
-                # owl:minCardinality 1 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
             [
                 a owl:Restriction; 
@@ -194,7 +194,7 @@ si:UnitProduct a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:MeasurementUnit; # allValuesFrom?
-                # owl:minCardinality 2 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
             ] 
         )
     ].
@@ -209,13 +209,13 @@ si:UnitPower a owl:Class ;
                 a owl:Restriction; 
                 owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:MeasurementUnit ;
-                # owl:minCardinality 1 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
-                # owl:minCardinality 1 # not supported in OWL2 RL
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
         )
     ].
