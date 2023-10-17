@@ -48,7 +48,7 @@ si:hasExponent a owl:ObjectProperty ;
 # derived quantities
 
 si:DerivedQuantityKind a owl:Class ;
-    rdfs:label "derived quantitykind" ;    
+    rdfs:label "derived quantitykind" ; 
     rdfs:subClassOf si:QuantityKind .
 
 si:QuantityKindProduct a owl:Class ;
@@ -57,9 +57,9 @@ si:QuantityKindProduct a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Multiplication
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:QuantityKind ;
                 # owl:minCardinality 2 # not supported in OWL2 RL
             ] 
@@ -72,15 +72,15 @@ si:QuantityKindPower a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Exponentiation
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:QuantityKind ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasExponent ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
@@ -108,9 +108,9 @@ si:PhysicalDimensionProduct a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Multiplication
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:PhysicalDimension ;
                 # owl:minCardinality 2 # not supported in OWL2 RL
             ] 
@@ -123,15 +123,15 @@ si:PhysicalDimensionPower a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Exponentiation
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:PhysicalDimension ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasExponent ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
@@ -181,7 +181,7 @@ si:DistinctDimensions a owl:AllDifferent ;
 # derived units
 
 si:DerivedUnit a owl:Class ;
-    rdfs:label "derived unit" ;    
+    rdfs:label "derived unit" ;  
     rdfs:subClassOf si:MeasurementUnit .
 
 si:UnitProduct a owl:Class ;
@@ -190,9 +190,9 @@ si:UnitProduct a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Multiplication
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasFactor ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasFactor ;
                 owl:someValuesFrom si:MeasurementUnit; # allValuesFrom?
                 # owl:minCardinality 2 # not supported in OWL2 RL
             ] 
@@ -205,15 +205,15 @@ si:UnitPower a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             si:Exponentiation
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBase ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBase ;
                 owl:someValuesFrom si:MeasurementUnit ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasExponent ;
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
                 # owl:minCardinality 1 # not supported in OWL2 RL
             ]
@@ -221,65 +221,147 @@ si:UnitPower a owl:Class ;
     ].
 
 
+## # prefixed and coherent unit
 
 prefixes:none a si:SIPrefix ;
     si:hasScalingFactor 1 ;
     si:hasSymbol ""^^xsd:string .
 
-si:PrefixedUnit a si:MeasurementUnit ;
-    rdfs:label "prefixed unit" ;  
-    rdfs:subClassOf 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasPrefix ;
-            owl:allValuesFrom si:SIPrefix
-        ], 
-        [
-            a owl:Restriction; 
-            owl:onProperty si:hasBaseUnit ;
-            owl:allValuesFrom si:NonPrefixedUnit
-        ] .
-
-si:NonPrefixedUnit a owl:Class ;
-    owl:unionOf (
-        si:MeasurementUnit
-        [
-            a owl:Class ;
-            owl:oneOf (
-                [
-                    a owl:Class ;
-                    owl:complementOf 
-                    [
-                        a owl:Restriction; 
-                        owl:onProperty si:hasPrefix ;
-                        owl:allValuesFrom si:SIPrefix
-                    ]
+si:PrefixedUnit a owl:Class ;
+    rdfs:label "prefixed unit" ;
+    rdfs:subClassOf si:MeasurementUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            #[
+            #    a owl:Restriction; 
+            #    owl:onProperty si:hasPrefix ;
+            #    owl:someValuesFrom si:SIPrefix ;
+            #]
+            [
+                owl:complementOf [
+                    a owl:Restriction; 
+                    owl:onProperty si:hasPrefix ;
+                    owl:hasValue prefixes:none 
                 ]
-                [
-                        a owl:Restriction; 
-                        owl:onProperty si:hasPrefix ;
-                        owl:hasValue prefixes:none
-                ]
-            )
-        ]
-    ) .
+            ]
+            #[
+            #    a owl:Restriction; 
+            #    owl:onProperty si:hasBaseUnit ;
+            #    owl:someValuesFrom si:MeasurementUnit ;
+            #]
+        )
+    ] .
 
-si:CoherentUnit a si:MeasurementUnit ;
-    rdfs:label "coherent unit" ;
-    rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty si:includesUseOfUnit ;
-        owl:allValuesFrom si:SIBaseUnit, si:SISpecialNamedUnit
-    ], 
-    [
-        a owl:Restriction ;
-        owl:onProperty si:includesUseOfPrefix ;
-        owl:hasValue [
-            a owl:Class ; 
-            owl:oneOf (prefixes:none owl:Nothing)
-        ]
-    ] . # probably needs fruther refinement
+
+
+### si:PrefixedUnit a owl:Class ;
+###     rdfs:label "prefixed unit" ;
+###     rdfs:subClassOf si:MeasurementUnit ;
+###     owl:equivalentClass [
+###         owl:unionOf (
+###             si:GeneralizedPrefixUnit
+###             [
+###                 owl:complementOf si:PrefixNoneUnit
+###             ]
+###             [
+###                 a owl:Restriction; 
+###                 owl:onProperty si:hasBaseUnit ;
+###                 #owl:someValuesFrom si:NonPrefixedUnit ;
+###                 owl:minCardinality 1
+###             ]
+###         )
+###     ].
+### 
+### si:NonPrefixedUnit a owl:Class ;
+###     rdfs:label "unit without prefix" ;
+###     rdfs:subClassOf si:MeasurementUnit ;
+###     owl:equivalentClass
+###     [
+###         owl:unionOf (
+###             [
+###                 owl:complementOf si:GeneralizedPrefixUnit
+###             ]
+###             si:PrefixNoneUnit
+###         )
+###     ] .
+### 
+### si:GeneralizedPrefixUnit a owl:Class ;
+###     rdfs:label "generalized prefix unit" ;
+###     owl:equivalentClass [
+###         owl:intersectionOf (
+###             [
+###                 a owl:Restriction; 
+###                 owl:onProperty si:hasPrefix ;
+###                 owl:someValuesFrom si:SIPrefix ;
+###             ]
+###             [
+###                 a owl:Restriction; 
+###                 owl:onProperty si:hasPrefix ;
+###                 owl:minCardinality 1
+###             ]
+###         )
+### 
+###     ] .
+### 
+### si:PrefixNoneUnit a owl:Class ;
+###     rdfs:label "none-prefix unit" ;
+###     owl:equivalentClass [
+###         a owl:Restriction; 
+###         owl:onProperty si:hasPrefix ;
+###         owl:hasValue prefixes:none 
+###     ] .
+### 
+### si:ComplementOfPrefixUnit a owl:Class ;
+###     rdfs:label "none-prefix unit" ;
+###     owl:equivalentClass [
+###         owl:complementOf si:GeneralizedPrefixUnit
+###     ] .
+
+
+# #si:NonPrefixedUnit a owl:Class ;
+# #    rdfs:label "non-prefixed unit" ;
+# #    owl:equivalentClass [
+# #        owl:unionOf (
+# #            si:MeasurementUnit
+# #            [
+# #                owl:oneOf (
+# #                    [
+# #                        owl:complementOf 
+# #                        [
+# #                            a owl:Restriction; 
+# #                            owl:onProperty si:hasPrefix ;
+# #                            owl:allValuesFrom si:SIPrefix ;
+# #                            owl:minCardinality 1 ;
+# #                        ]
+# #                    ]
+# #                    [
+# #                            a owl:Restriction; 
+# #                            owl:onProperty si:hasPrefix ;
+# #                            owl:hasValue prefixes:none ;
+# #                            owl:cardinality 1 ;
+# #                    ]
+# #                )
+# #            ]
+# #        )
+# #    ] .
+# #
+
+## si:CoherentUnit a si:MeasurementUnit ;
+##     rdfs:label "coherent unit" ;
+##     rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
+##     rdfs:subClassOf [
+##         a owl:Restriction ;
+##         owl:onProperty si:includesUseOfUnit ;
+##         owl:allValuesFrom si:SIBaseUnit, si:SISpecialNamedUnit
+##     ], 
+##     [
+##         a owl:Restriction ;
+##         owl:onProperty si:includesUseOfPrefix ;
+##         owl:hasValue [
+##             a owl:Class ; 
+##             owl:oneOf (prefixes:none owl:Nothing)
+##         ]
+##     ] . # probably needs fruther refinement
 
 si:hasPrefix a owl:ObjectProperty ;
     rdfs:label "has prefix" ;
@@ -288,28 +370,28 @@ si:hasPrefix a owl:ObjectProperty ;
 
 si:hasBaseUnit a owl:ObjectProperty ;
     rdfs:label "has base unit" ;
-    rdfs:domain si:MeasurementUnit ;
-    rdfs:range si:NonPrefixedUnit .
+    rdfs:domain si:MeasurementUnit .
+    #rdfs:range si:NonPrefixedUnit .
 
 
 # further properties 
 
-si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyKind ???
-    rdfs:label "associated with" ;
-    rdfs:domain si:MeasurementUnit ;
-    rdfs:range si:QuantityKind .
-
-#si:includesUseOf a owl:TransitiveProperty ;
-#    rdfs:label "includes use of" ;
-#    owl:inverseOf si:hasFactor, si:hasBase .
-
-si:includesUseOfUnit a owl:TransitiveProperty ;
-    rdfs:label "includes use of" ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit] .
-
-si:includesUseOfPrefix a owl:TransitiveProperty ;
-    rdfs:label "includes use of prefix" ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
+## si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyKind ???
+##     rdfs:label "associated with" ;
+##     rdfs:domain si:MeasurementUnit ;
+##     rdfs:range si:QuantityKind .
+## 
+## #si:includesUseOf a owl:TransitiveProperty ;
+## #    rdfs:label "includes use of" ;
+## #    owl:inverseOf si:hasFactor, si:hasBase .
+## 
+## si:includesUseOfUnit a owl:TransitiveProperty ;
+##     rdfs:label "includes use of" ;
+##     rdfs:subPropertyOf [owl:inverseOf si:hasFactor, si:hasBase, si:hasBaseUnit] .
+## 
+## si:includesUseOfPrefix a owl:TransitiveProperty ;
+##     rdfs:label "includes use of prefix" ;
+##     rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
 
 # some key questions:
 # 1. Would it in line with the SI, that a prefixed unit is also a derived unit?
