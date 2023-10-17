@@ -318,24 +318,26 @@ si:hasBaseUnit a owl:ObjectProperty ;
 ###############################################s
 @prefix ex: <http://example.org/> .
 
-ex:true_second_custom owl:sameAs units:second .
-
-ex:none_second_custom a si:MeasurementUnit ;
-    si:hasBaseUnit units:second ;
-    si:hasPrefix prefixes:none .
-
-ex:second_custom a si:MeasurementUnit ;
+ex:second a si:MeasurementUnit ;
     si:hasBaseUnit units:second .
 
-ex:nanosecond_custom a si:MeasurementUnit ;
+ex:nanosecond a si:MeasurementUnit ;
     si:hasBaseUnit units:second ;
     si:hasPrefix prefixes:nano .
 
-## ex:voltmetre a si:Multiplication ;
-##     si:hasFactor units:volt ;
-##     si:hasFactor units:metre .
+ex:millimetre a si:MeasurementUnit ;
+    si:hasBaseUnit units:metre ;
+    si:hasPrefix prefixes:milli .
 
-ex:custom_newton a si:Multiplication ;
+ex:voltmetre a si:Multiplication ;
+    si:hasFactor units:volt ;
+    si:hasFactor units:metre .
+
+ex:voltmillimetre a si:Multiplication ;
+    si:hasFactor units:volt ;
+    si:hasFactor ex:millimetre .
+
+ex:newton a si:Multiplication ;
     si:hasFactor units:metre ;
     si:hasFactor units:kilogram ;
     si:hasFactor [
@@ -343,21 +345,6 @@ ex:custom_newton a si:Multiplication ;
         si:hasBase units:second ;
         si:hasExponent -2
     ] .
-
-
-
-
-#
-
-## units:gram a si:MeasurementUnit ;
-##     si:hasSymbol "g"^^xsd:string ;
-##     si:isUnitOfQtyKind quantities:MASS ;
-##     si:hasPrefix prefixes:none .
-## 
-## units:kilogram a si:MeasurementUnit ;
-##     si:hasBaseUnit units:gram ;
-##     si:hasPrefix prefixes:kilo .
-
 
 ex:velocityDimension a si:Multiplication ;
     si:hasFactor si:LengthDimension ;
