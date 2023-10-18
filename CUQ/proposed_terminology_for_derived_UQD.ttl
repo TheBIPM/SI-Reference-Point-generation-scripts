@@ -322,26 +322,15 @@ units:kilogram a si:MeasurementUnit ;
     si:hasBaseUnit units:gram ;
     si:hasPrefix prefixes:kilo .
 
+# si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyKind ???
+#     rdfs:label "associated with" ;
+#     rdfs:domain si:MeasurementUnit ;
+#     rdfs:range si:QuantityKind .
+# 
 
-# further properties 
-
-## si:associatedWith a owl:ObjectProperty ;  # relaxed alternative for isUnitOfQtyKind ???
-##     rdfs:label "associated with" ;
-##     rdfs:domain si:MeasurementUnit ;
-##     rdfs:range si:QuantityKind .
-## 
-
-si:includesUseOfUnit a owl:TransitiveProperty ;
-    rdfs:label "includes use of" ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasFactor] ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasBase] ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasBaseUnit] .
-
-si:includesUseOfPrefix a owl:TransitiveProperty ;
-    rdfs:label "includes use of prefix" ;
-    rdfs:subPropertyOf [owl:inverseOf si:hasPrefix] .
 
 # some key questions:
+
 # 1. Would it in line with the SI, that a prefixed unit is also a derived unit?
 # 2. Is a unit like "millimetre per millisecond" a coherent unit with regard to the SI?
 #    (in this proposed concept, the expression for coherent unit _cannot_ account for that)
