@@ -25,11 +25,12 @@ query_all = """
     SELECT ?s ?p ?o
     WHERE {
         ?s ?p ?o .
-        ?s si:includesUseOfPrefix ?p .
+        ?s si:includesUseOf ?o .
         #?unit rdf:type ?val .
         #?unit rdf:type si:MeasurementUnit .
     }
 """
+        
 
 qres = g_rdf.query(query_all)
 print("\nIncludes use of units:")
@@ -57,7 +58,7 @@ for row in g_rdf.query(query_prefixed):
 query_coherent = """
     SELECT ?unit
     WHERE {
-        ?unit rdf:type si:CoherentUnit .
+        ?unit rdf:type si:StrictCoherentUnit .
     }
 """
 print("\nCoherent units:")

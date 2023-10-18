@@ -256,6 +256,16 @@ prefixes:none a si:SIPrefix ;
     si:hasScalingFactor 1 ;
     si:hasSymbol ""^^xsd:string .
 
+si:hasPrefix a owl:ObjectProperty ;
+    rdfs:label "has prefix" ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:range si:SIPrefix .
+
+si:hasBaseUnit a owl:ObjectProperty ;
+    rdfs:label "has base unit" ;
+    rdfs:domain si:MeasurementUnit .
+    #rdfs:range si:NonPrefixedUnit .
+
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit" ;
     rdfs:subClassOf si:MeasurementUnit ;
