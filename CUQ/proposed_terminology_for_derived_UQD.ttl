@@ -27,6 +27,7 @@ si:Multiplication a si:Operation ;
 si:hasFactor a owl:ObjectProperty ;
     rdfs:label "has factor" ;
     rdfs:subPropertyOf si:hasOperand ;
+    rdfs:subPropertyOf si:includesUseOf ;
     rdfs:domain si:Multiplication .
 
 si:Exponentiation a si:Operation ;
@@ -36,6 +37,7 @@ si:Exponentiation a si:Operation ;
 si:hasBase a owl:ObjectProperty ;
     rdfs:label "has base" ;
     rdfs:subPropertyOf si:hasOperand ;
+    rdfs:subPropertyOf si:includesUseOf ;
     rdfs:domain si:Exponentiation .
 
 si:hasExponent a owl:ObjectProperty ;
@@ -221,7 +223,7 @@ si:UnitPower a owl:Class ;
     ].
 
 
-## # prefixed and coherent unit
+# prefixed unit
 
 si:BasePrefixes a owl:Class ;
     rdfs:subClassOf si:SIPrefix ;
@@ -284,33 +286,32 @@ si:PrefixedUnit a owl:Class ;
         )
     ] .
 
+
+# coherent unit
+
+si:includesUseOf a owl:ObjectProperty ;
+    rdfs:label "includes use of" .
+
 si:CoherentUnit a owl:Class ;
     rdfs:label "coherent unit" ;
     rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
+    rdfs:subClassOf si:MeasurementUnit .
+
+si:SIBaseUnit rdfs:subClassOf si:CoherentUnit .
+
+si:StrictCoherentUnit a owl:Class ;
+    rdfs:label "strictly coherent unit" ;
+    rdfs:comment "unit that has no prefixes and only consists of combinations of si:SIBaseUnit" ;
+    rdfs:subClassOf si:CoherentUnit ;
     owl:equivalentClass [
-        owl:intersectionOf (
-            [
-                a owl:Restriction ;
-                owl:onProperty si:includesUseOfUnit ;
-                owl:allValuesFrom [owl:oneOf (si:SIBaseUnit si:SISpecialNamedUnit)]
-            ]
-            [
-                a owl:Restriction ;
-                owl:onProperty si:includesUseOfPrefix ;
-                owl:hasValue [owl:oneOf (prefixes:none owl:Nothing)]
-            ]
-        )
+        a owl:Restriction ;
+        owl:onProperty si:includesUseOf ;
+        owl:someValuesFrom si:CoherentUnit
+        # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
     ] .
 
-si:hasPrefix a owl:ObjectProperty ;
-    rdfs:label "has prefix" ;
-    rdfs:domain si:MeasurementUnit ;
-    rdfs:range si:SIPrefix .
 
-si:hasBaseUnit a owl:ObjectProperty ;
-    rdfs:label "has base unit" ;
-    rdfs:domain si:MeasurementUnit .
-    #rdfs:range si:NonPrefixedUnit .
+# further properties 
 
 units:gram a si:MeasurementUnit ;
     si:hasSymbol "g"^^xsd:string ;
