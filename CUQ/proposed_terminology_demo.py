@@ -19,6 +19,22 @@ for kb, kb_val in knowledge_bases.items():
 # infer implicit triples by reasoning
 owlrl.DeductiveClosure(owlrl.RDFS_OWLRL_Semantics).expand(g_rdf)
 
+####################################
+query_mu = """
+    SELECT ?s ?o
+    WHERE {
+        ?s rdf:type ?o .
+        ?s rdf:type si:MeasurementUnit .
+    }
+"""
+
+qres = g_rdf.query(query_mu)
+print("\nMeasurement units and their types:")
+for row in qres:
+    unit = row.s.n3(g_rdf.namespace_manager)
+    val = row.o.n3(g_rdf.namespace_manager)
+
+    print(f"{unit} --> {val}")
 
 ####################################
 query_all = """
@@ -30,7 +46,6 @@ query_all = """
         #?unit rdf:type si:MeasurementUnit .
     }
 """
-        
 
 qres = g_rdf.query(query_all)
 print("\nIncludes use of units:")
