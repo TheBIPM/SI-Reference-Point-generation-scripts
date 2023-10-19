@@ -1,4 +1,5 @@
 from rdflib import Graph, URIRef, Literal, BNode
+from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS, SKOS
 from pathlib import Path
 from settings import *
@@ -196,13 +197,17 @@ class SiElements:
                             lang="fr")))
 
         # hasUnitTypeAsString
+        self.hasUnitTypeAsString_oneOf_node = BNode()
+        self.hasUnitTypeAsString_oneOf_subnode = BNode()
+        self.hasUnitTypeAsString_oneOf_list = [self.SIBaseUnit, self.SISpecialNamedUnit, self.nonSIUnit]
+        self.hasUnitTypeAsString_oneOf_col = Collection(self.g, self.hasUnitTypeAsString_oneOf_subnode, self.hasUnitTypeAsString_oneOf_list)
         self.hasUnitTypeAsString = self.set_uri("hasUnitTypeAsString")
+
         self.g.add((self.hasUnitTypeAsString, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasUnitTypeAsString, RDFS.label, Literal("unit type as a string", lang="en")))
         self.g.add((self.hasUnitTypeAsString, RDFS.label, Literal("type d'unité sous forme de chaîne", lang="fr")))
-        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.SIBaseUnit))
-        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.SISpecialNamedUnit))
-        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.nonSIUnit))
+        self.g.add((self.hasUnitTypeAsString, RDFS.domain, self.hasUnitTypeAsString_oneOf_node))
+        self.g.add((self.hasUnitTypeAsString_oneOf_node, OWL.oneOf, self.hasUnitTypeAsString_oneOf_subnode))
         self.g.add((self.hasUnitTypeAsString, RDFS.range, XSD.string))
 
         # for Constants
@@ -216,12 +221,17 @@ class SiElements:
         self.g.add((self.hasValue, RDFS.range, XSD.double))  # better than a literal, but good enough?
 
         # hasDatatype
+        self.hasDatatype_oneOf_node = BNode()
+        self.hasDatatype_oneOf_subnode = BNode()
+        self.hasDatatype_oneOf_list = [self.Constant, self.SIPrefix]
+        self.hasDatatype_oneOf_col = Collection(self.g, self.hasDatatype_oneOf_subnode, self.hasDatatype_oneOf_list)
         self.hasDatatype = self.set_uri("hasDatatype")
+        
         self.g.add((self.hasDatatype, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDatatype, RDFS.label, Literal("has datatype", lang="en")))
         self.g.add((self.hasDatatype, RDFS.label, Literal("a un type de données", lang="fr")))
-        self.g.add((self.hasDatatype, RDFS.domain, self.Constant))
-        self.g.add((self.hasDatatype, RDFS.domain, self.SIPrefix))
+        self.g.add((self.hasDatatype, RDFS.domain, self.hasDatatype_oneOf_node))
+        self.g.add((self.hasDatatype_oneOf_node, OWL.oneOf, self.hasDatatype_oneOf_subnode))
         self.g.add((self.hasDatatype, RDFS.range, XSD.anyURI))
 
         # hasValueAsString
@@ -475,12 +485,17 @@ class SiElements:
         self.g.add((self.SIPrefix, RDFS.subClassOf, restr_hasScalingFactor))
 
         # hasDefiningResolution
+        self.hasDefiningResolution_oneOf_node = BNode()
+        self.hasDefiningResolution_oneOf_subnode = BNode()
+        self.hasDefiningResolution_oneOf_list = [self.Definition, self.Constant]
+        self.hasDefiningResolution_oneOf_col = Collection(self.g, self.hasDefiningResolution_oneOf_subnode, self.hasDefiningResolution_oneOf_list)
         self.hasDefiningResolution = self.set_uri("hasDefiningResolution")
+
         self.g.add((self.hasDefiningResolution, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasDefiningResolution, RDFS.label, Literal("has defining resolution", lang="en")))
         self.g.add((self.hasDefiningResolution, RDFS.label, Literal("a une résolution déterminante", lang="fr")))
-        self.g.add((self.hasDefiningResolution, RDFS.domain, self.Definition))
-        self.g.add((self.hasDefiningResolution, RDFS.domain, self.Constant))
+        self.g.add((self.hasDefiningResolution, RDFS.domain, self.hasDefiningResolution_oneOf_node))
+        self.g.add((self.hasDefiningResolution_oneOf_node, OWL.oneOf, self.hasDefiningResolution_oneOf_subnode))
         self.g.add((self.hasDefiningResolution, RDFS.range, URIRef(self.ResBod_ns + "Resolution")))  # text needed?
         self.g.add((self.hasDefiningResolution, RDFS.comment,
                     Literal("Linking an SI definition to the resolution by which it was adopted.", lang="en")))
@@ -488,15 +503,19 @@ class SiElements:
                     Literal("Associer une définition SI à la résolution par laquelle elle a été adoptée.", lang="fr")))
 
         # isDefiningResolutionOf
+        self.isDefiningResolutionOf_oneOf_node = BNode()
+        self.isDefiningResolutionOf_oneOf_subnode = BNode()
+        self.isDefiningResolutionOf_oneOf_list = [self.Definition, self.Constant]
+        self.isDefiningResolutionOf_oneOf_col = Collection(self.g, self.isDefiningResolutionOf_oneOf_subnode, self.isDefiningResolutionOf_oneOf_list)
         self.isDefiningResolutionOf = self.set_uri("isDefiningResolutionOf")
+
         self.g.add((self.isDefiningResolutionOf, RDF.type, OWL.ObjectProperty))
         self.g.add((self.isDefiningResolutionOf, RDFS.label, Literal("is defining resolution of", lang="en")))
         self.g.add((self.isDefiningResolutionOf, RDFS.label, Literal("définit la résolution de", lang="fr")))
         self.g.add((self.isDefiningResolutionOf, RDFS.domain, URIRef(self.ResBod_ns + "Resolution")))  # text needed?
-        self.g.add((self.isDefiningResolutionOf, RDFS.range, self.Definition))
-        self.g.add((self.isDefiningResolutionOf, RDFS.range, self.Constant))
+        self.g.add((self.isDefiningResolutionOf, RDFS.range, self.isDefiningResolutionOf_oneOf_node))
+        self.g.add((self.isDefiningResolutionOf_oneOf_node, OWL.oneOf, self.isDefiningResolutionOf_oneOf_subnode))
         self.g.add((self.isDefiningResolutionOf, OWL.inverseOf, self.hasDefiningResolution))
-        self.g.add((self.hasDefiningResolution, OWL.inverseOf, self.isDefiningResolutionOf))
         self.g.add((self.isDefiningResolutionOf, RDFS.comment,
                     Literal("Linking a resolution to the SI definition it defined.", lang="en")))
         self.g.add((self.isDefiningResolutionOf, RDFS.comment,
