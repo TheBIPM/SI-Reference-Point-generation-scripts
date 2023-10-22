@@ -25,6 +25,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from datetime import date, datetime
 from settings import *
+import re
 
 BASE_PATH = PROJECTBASE + "Testing/API/"
 
@@ -53,6 +54,7 @@ g.parse(APIPATH + '/cgpm.ttl')
 # owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(g)
 
 # list of the possible parameters of the API call
+param_list_base_unit_grps = ["lang"]
 param_list_base_units = ["lang", "datestr"]
 param_list_named_units = ["lang"]
 param_list_named_unit = ["lang"]
@@ -619,6 +621,179 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
         )
 
 
+@app.get("/baseunit/{unitname}")
+def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang: str | None = 'en',
+                             datestr: str | None = str(date.today())):
+    # 20230710_datamodel_event_ok
+    for param in request.query_params:
+        if param not in param_list_base_unit_grps:
+            error_msg = "Parameter " + param + " unknown. Allowed parameters: "
+            for allowed_para in param_list_base_units:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(status_code=404, detail=error_msg)
+
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language not available {lang}")
+
+    # these are the names of the units in the ttl file, language specific not needed here
+    allowed = ['ampere', 'metre', 'kilogram', 'second', 'mole', 'candela', 'kelvin', 'arcminute', 'arcsecond', 'dalton',
+               'astronomicalunit', 'day', 'degree', 'electronvolt', 'hour', 'litre', 'minute', 'tonne', 'becquerel',
+               'coulomb', 'degreeCelsius', 'farad', 'gray', 'henry', 'hertz', 'joule', 'katal', 'lumen', 'lux',
+               'newton', 'ohm', 'pascal', 'radian', 'siemens', 'sievert', 'steradian', 'tesla', 'volt', 'watt', 'weber']
+
+    if unitname not in allowed:
+        raise HTTPException(
+            status_code=404, detail=f"No acceptable SI unit with name '{unitname}'.")
+
+    # SPARQL query to get the general information about a unit of measurement
+    unit_query = """
+        PREFIX si: <http://si-digital-framework.org/SI#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX units: <http://si-digital-framework.org/SI/units/>
+        
+        SELECT ?Unit ?sym ?quant ?defns ?eLabel ?fLabel ?unitType
+        WHERE {
+            ?Unit	rdf:type ?unitType ;
+                    si:isUnitOfQtyKind ?quant ;
+                    skos:prefLabel ?eLabel ;
+                    skos:prefLabel ?fLabel ;
+                    si:hasSymbol ?sym .
+            FILTER (lang(?eLabel) = "en").
+            FILTER (lang(?fLabel) = "fr") .
+            FILTER (?unitType IN (si:SIBaseUnit, si:nonSIUnit, si:SISpecialNamedUnit)) .
+            FILTER (?Unit=units:""" + unitname + """) .
+        }
+    """
+
+    unitset = g.query(unit_query)
+
+    # organize data
+    response: dict = {}
+    baseurl = "http://si-digital-framework.org/SI"
+    uniturl = baseurl + '/units/' + unitname
+    unitdata = {}
+    for row in unitset:
+        if str(row['eLabel']) == unitname:
+            unitdata = row
+
+    # SPARQL query to get definitions
+    defns_query = """
+            PREFIX si: <http://si-digital-framework.org/SI#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX units: <http://si-digital-framework.org/SI/units/>
+
+            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?notes 
+                    ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
+            WHERE {
+                units:""" + unitname + """ si:hasDefinition ?UnitDefn .
+                ?UnitDefn	rdf:type si:Definition ;
+                            si:hasStatus ?status ;
+                            si:hasStartValidity ?vfrom ;
+                            si:hasDefiningResolution ?res ;
+                            si:hasDefiningText ?eText ;
+                            si:hasDefiningText ?fText ;
+                            skos:prefLabel ?eLabel ;
+                            skos:prefLabel ?fLabel .
+                ?res    rb:hasDOI ?eDOI ;
+                        rb:hasDOI ?fDOI .
+                OPTIONAL {?UnitDefn si:hasEndValidity ?vtill .}
+                OPTIONAL {?UnitDefn si:hasNextDefinition ?next .}
+                OPTIONAL {?UnitDefn si:hasDefiningConstant ?const .}
+                OPTIONAL {?UnitDefn si:hasDefiningEquation ?eqn .}
+                FILTER (lang(?eLabel) = "en")
+                FILTER (lang(?eText) = "en")
+                FILTER (lang(?eDOI) = "en")
+                FILTER (lang(?fLabel) = "fr")
+                FILTER (lang(?fText) = "fr")
+                FILTER (lang(?fDOI) = "fr")
+        }
+        """
+
+    #  output
+    accept = request.headers.get("Accept")
+    if not accept or accept == "application/json":
+        return {'unit': unitdata}
+    elif accept == 'application/ld+json':
+        resp = unitdata
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": baseurl + "#"},
+               {"@base": uniturl}]
+        # # populate graph
+        utype = resp['unitType'].replace(baseurl + '#', 'si:'),
+        gph = {"@context": ctx, "@id": uniturl, "@type": utype}
+        gph.update({"name_en": resp['eLabel']})
+        gph.update({"name_fr": resp['fLabel']})
+        gph.update({"symbol": resp['sym']})
+        gph.update({"quantity": resp['quant']})
+
+        # add definitions
+        defns = g.query(defns_query)
+        defs = []
+        for defn in defns:
+            dfn = {}
+            dfn.update({'@id': defn['UnitDefn'], '@type': 'si:Definition'})
+            dfn.update({'status': defn['status']})
+            dfn.update({'label_en': defn['eLabel']})
+            dfn.update({'label_fr': defn['fLabel']})
+            dfn.update({"definition_en": defn['eText']})
+            dfn.update({"definition_fr": defn['fText']})
+            dfn.update({'defining_resolution_en': defn['eDOI']})
+            dfn.update({'defining_resolution_fr': defn['fDOI']})
+            dfn.update({'valid_from': defn['vfrom']})
+            if defn['vtill']:
+                dfn.update({'valid_till': defn['vtill']})
+            if defn['const']:
+                dfn.update({'defining_constant': defn['const']})
+            if defn['eqn']:
+                dfn.update({'defining_equation': defn['eqn'].replace("\\\\", "\\")})
+            if defn['next']:
+                dfn.update({'next_definition': defn['next']})
+
+            # search for and add notes
+            defnname = defn['UnitDefn'].replace(baseurl + '#', '')
+            notes_query = """
+                PREFIX si: <http://si-digital-framework.org/SI#>
+                SELECT ?note ?index ?eText ?fText
+                WHERE {
+                    si:""" + defnname + """	si:hasDefinitionNote ?note .
+                    ?note 			        si:hasNoteIndex ?index ;
+                                            si:hasNoteText ?eText ;
+                                            si:hasNoteText ?fText ;
+                    FILTER (lang(?eText) = "en")
+                    FILTER (lang(?fText) = "fr")
+                }
+            """
+
+            # add notes
+            notes = g.query(notes_query)
+            ntes = []
+            for note in notes:
+                nte = {}
+                nte.update({'@id': note['note'], '@type': 'si:DefinitionNote'})
+                nte.update({'noteindex': note['index']})
+                nte.update({'notetext_en': note['eText']})
+                nte.update({'notetext_fr': note['fText']})
+                ntes.append(nte)
+            dfn.update({'notes': ntes})
+
+            defs.append(dfn)
+        gph.update({'definitions': defs})
+
+        # build JSON-LD
+        # jld = {"@context": ctx, "@id": uniturl, "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        return gph
+    else:
+        return TEMPLATES.TemplateResponse(
+            "BaseUnitLayout.html",
+            {"request": request, "units": response, "language": lang}
+        )
+
+
 # ----------------------------------------------------------------------------------------
 @app.get("/si-baseunit/{baseunitid}")
 def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, lang: str | None = 'en',
@@ -1149,16 +1324,21 @@ def displ_prefixes(request: Request):
     if not accept or accept == "application/json":
         return {'prefixes': responses}
     elif accept == 'application/ld+json':
-        # create url
-        url = 'https://si-digital-framework.org/si-prefixes/'
+        # create urls
+        si = 'http://62.161.69.201/SI'
+        main = si + '#prefixesTab'
+        fix = si + '/prefixes/'
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/prefixes.jsonld",
-               {"si": "http://si-digital-framework.org/SI/sio.owl"},
-               {"@base": url}]
-        gph = {"@id": url, "@type": "si:SIPrefix"}
+               {"si": si + "/sio.owl#",
+                "fix": fix},
+               {"@base": fix}]
+        gph = {"@id": main, "@type": "si:prefixes"}
         gph.update({"prefixes": []})
         for resp in responses:
             pfix = {}
+            pfix.update({"@id": 'fix:' + resp['Symbol']})
+            pfix.update({"@type": 'si:prefix'})
             pfix.update({"name": resp['Label']})
             pfix.update({"nom": resp['Labelfr']})
             pfix.update({'symbol': resp['Symbol']})
@@ -1169,11 +1349,11 @@ def displ_prefixes(request: Request):
             else:
                 pfix.update({'factor': f})
             pfix.update({'datatype': 'xsd:integer'})
-            pfix.update({'url': resp['Link']})
+            # pfix.update({'url': resp['Link']})
             gph['prefixes'].append(pfix)
 
         jld = {
-            "@context": ctx, "@id": url,
+            "@context": ctx, "@id": fix,
             "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
         return jld
     else:
