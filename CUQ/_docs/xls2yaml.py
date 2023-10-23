@@ -30,7 +30,11 @@ def sheet2yaml(sheet, output_name, special_case=None):
     # Get fields list by parsing first row
     field_list = []
     for col in range(1, last_col + 1):
-        field_list.append(sheet.cell(first_row, col).value)
+        field_label = sheet.cell(first_row, col).value
+        # Avoid special char (poor design by me !)
+        if field_label == '#':
+            field_label = 'Num'
+        field_list.append(field_label)
     for row in range(first_row + 1, last_row + 1):
         buf = {}
         for i, f in enumerate(field_list):
@@ -67,3 +71,6 @@ sheet2yaml(quantities_wb_obj['Sheet1'], 'quantities')
 
 missing_def = openpyxl.load_workbook('missing_definitions_cipm.xlsx')
 sheet2yaml(missing_def['Feuil1'], 'missing_definitions_cipm')
+
+si_constants = openpyxl.load_workbook('SI_Constants.xlsx')
+sheet2yaml(si_constants['Sheet1'], 'si_constants')
