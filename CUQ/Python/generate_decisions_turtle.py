@@ -1,4 +1,4 @@
-import openpyxl
+from ruamel.yaml import YAML
 import os
 from rdflib import Graph, URIRef, Namespace
 
@@ -18,29 +18,19 @@ g.bind("cipm", CIPM)
 g.bind("cctf", CCTF)
 g.bind("dec", DEC)
 
-# load missing entries from excel file
-missing_entries_file = openpyxl.load_workbook(os.path.join(
-    "CUQ", "_docs", "missing_definitions_cipm.xlsx"))
-ws = missing_entries_file["Feuil1"]
-dec_ids = ws["A"]
-res_ids = ws["F"]
+
+yaml = YAML()
+# load missing entries from yaml file
+with open(os.path.join("CUQ", "_docs", "missing_definitions_cipm.yaml")) as fp:
+    missing_list = yaml.load(fp)
 
 ns_dict = dict(g.namespaces())
-
-for sub, obj in zip(dec_ids[1:], res_ids[1:]):
-    #print(f"{sub.value :13s} -->   {obj.value}")
-
-    # split the object string
-    obj_ns, obj_ref = obj.value.split(":")
+for missing in missing_list:
+    obj_ns, obj_ref = missing['ID-resolution'].split(":")
     OBJ_NAMESPACE = Namespace(ns_dict[obj_ns])
-
-    g.add(
-        (
-            URIRef(DEC.term(sub.value)),
-            URIRef(DEC.correspondingResolution),
-            URIRef(OBJ_NAMESPACE.term(obj_ref)),
-        )
-    )
-
+    g.add((URIRef(DEC.term(missing['ID'])),
+           URIRef(DEC.correspondingResolution),
+           URIRef(OBJ_NAMESPACE.term(obj_ref)),
+           ))
 # output
 g.serialize(format="turtle", destination=APIPATH + "decisions.ttl")
