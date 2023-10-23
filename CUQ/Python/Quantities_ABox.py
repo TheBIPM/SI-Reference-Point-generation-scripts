@@ -40,6 +40,7 @@ with open(os.path.join(XLS_FILES_FOLDER, 'quantities.yaml')) as fp:
     qty_list = yaml.load(fp)
 for qty in qty_list:
     element = PDF.set_quantity_uri(qty['identifier'])
+    g.add((element, RDF.type, PDF.QuantityKind))
     g.add((element, SKOS.prefLabel, Literal(qty['quantity-en'], lang="en")))
     g.add((element, SKOS.prefLabel, Literal(qty['quantity-fr'], lang="fr")))
     g.add((element, SKOS.altLabel, Literal(qty['identifier'],
