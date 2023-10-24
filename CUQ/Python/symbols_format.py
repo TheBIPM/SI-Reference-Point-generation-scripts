@@ -19,13 +19,16 @@ def formattxt(txt, fmt='html'):
     """
     if fmt not in ['html', 'latex', 'json', 'text']:
         return txt
+    if txt is None or txt == "":
+        return txt
     depth = 0
-
     while '@' in txt and depth < 3:
         for symcode in symbols.keys():
             if f'@{symcode}@' in txt:
                 txt = txt.replace(f'@{symcode}@', symbols[symcode][fmt])
         depth += 1
+    if fmt == "latex":
+        txt = "${}$".format(txt)
     """
     # Previous version : obsolete ?
     matches = re.findall(f"@(.*?)@", txt)

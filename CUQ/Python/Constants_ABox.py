@@ -104,7 +104,7 @@ for cst in cst_list:
         g.add((element, PDF.hasDatatype, XSD.double))
         g.add((element, PDF.hasValue,
                Literal(cst['value'], datatype=XSD.double, normalize=False)))
-    latex_symbol = "${}$".format(sf.formattxt(cst['symbol'], 'latex'))
+    latex_symbol = sf.formattxt(cst['symbol'], 'latex')
     g.add((element, PDF.hasSymbol,
            Literal(latex_symbol, datatype=XSD.string)))
     g.add((element, PDF.hasUpdatedDate,
