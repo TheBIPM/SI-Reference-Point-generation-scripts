@@ -6,7 +6,7 @@ import openpyxl
 from ruamel.yaml import YAML
 
 
-def sheet2yaml(sheet, output_name, special_case=None):
+def sheet2yaml(sheet, output_name, write=True):
     """ Assume first row is list of fields then each row is a record
     """
     output = []
@@ -34,6 +34,8 @@ def sheet2yaml(sheet, output_name, special_case=None):
         # Avoid special char (poor design by me !)
         if field_label == '#':
             field_label = 'Num'
+        if output_name in ["notes_en", "notes_fr"] and field_label == "note":
+            field_label = "note_" + output_name.split('_')[1]
         field_list.append(field_label)
     for row in range(first_row + 1, last_row + 1):
         buf = {}
@@ -50,8 +52,10 @@ def sheet2yaml(sheet, output_name, special_case=None):
                 if defid is not None:
                     output[row - 2]['definitions'].append(defid)
     yaml = YAML()
-    with open(output_name + '.yaml', 'w') as fp:
-        yaml.dump(output, fp)
+    if write:
+        with open(output_name + '.yaml', 'w') as fp:
+            yaml.dump(output, fp)
+    return output
 
 
 units_wb_obj = openpyxl.load_workbook('Units_Prefixes.xlsx')
@@ -62,8 +66,15 @@ sheet2yaml(units_wb_obj['SIUnitsSpecialNames'], 'si_units_special_names')
 sheet2yaml(units_wb_obj['NonSIUnits'], 'non_si_units')
 
 notes_wb_obj = openpyxl.load_workbook('Notes.xlsx')
-sheet2yaml(notes_wb_obj['en'], 'notes_en')
-sheet2yaml(notes_wb_obj['fr'], 'notes_fr')
+# Merge notes
+notes = sheet2yaml(notes_wb_obj['en'], 'notes_en', write=False)
+notes_fr = sheet2yaml(notes_wb_obj['fr'], 'notes_fr', write=False)
+for i, n in enumerate(notes):
+    notes[i]['note_fr'] = notes_fr[i]['note_fr']
+yaml = YAML()
+with open('notes.yaml', 'w') as fp:
+    yaml.dump(notes, fp)
+
 sheet2yaml(notes_wb_obj['symbols'], 'symbols')
 
 quantities_wb_obj = openpyxl.load_workbook('quantities.xlsx')
