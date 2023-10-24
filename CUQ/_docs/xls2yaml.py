@@ -36,6 +36,8 @@ def sheet2yaml(sheet, output_name, write=True):
             field_label = 'Num'
         if output_name in ["notes_en", "notes_fr"] and field_label == "note":
             field_label = "note_" + output_name.split('_')[1]
+        if output_name == "si_constants" and field_label == "value_nist":
+            field_label = "value"
         field_list.append(field_label)
     for row in range(first_row + 1, last_row + 1):
         buf = {}
@@ -75,7 +77,20 @@ yaml = YAML()
 with open('notes.yaml', 'w') as fp:
     yaml.dump(notes, fp)
 
-sheet2yaml(notes_wb_obj['symbols'], 'symbols')
+symbols = sheet2yaml(notes_wb_obj['symbols'], 'symbols', write=False)
+symbols_dict = {}
+for item in symbols:
+    symbols_dict[item['code']] = {
+        'name_en': item['name_en'],
+        'name_fr': '',
+        'type': item['type'],
+        'latex': item['latex'],
+        'text': item['text'],
+        'html': '',
+        'json': '',
+    }
+with open('symbols.yaml', 'w') as fp:
+    yaml.dump(symbols_dict, fp)
 
 quantities_wb_obj = openpyxl.load_workbook('quantities.xlsx')
 sheet2yaml(quantities_wb_obj['Sheet1'], 'quantities')
