@@ -48,7 +48,7 @@
     hertz and that has a radiant intensity in that direction of @radi@ watt per steradian.
   hasDefiningResolution: CGPM16-Res3
   hasDefiningEquation:
-  hasDefiningConstant: n
+  hasDefiningConstant: LuminousEfficacy
   UnitOfQtyKind: LUIN
   Status: superseded
 - URI: candela2018

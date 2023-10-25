@@ -5,7 +5,6 @@
   UnitOfQtyKind: TIME
   ConversionFactor: 60
   ConversionUnit: second
-  null:
 - URI: hour
   prefLabel_fr: heure
   prefLabel_en: hour
@@ -13,7 +12,6 @@
   UnitOfQtyKind: TIME
   ConversionFactor: 3600
   ConversionUnit: second
-  null:
 - URI: day
   prefLabel_fr: jour
   prefLabel_en: day
@@ -21,7 +19,6 @@
   UnitOfQtyKind: TIME
   ConversionFactor: 86400
   ConversionUnit: second
-  null:
 - URI: astronomicalunit
   prefLabel_fr: unité astronomique
   prefLabel_en: astronomical unit
@@ -29,7 +26,6 @@
   UnitOfQtyKind: LENG
   ConversionFactor: 149597870700
   ConversionUnit: metre
-  null:
 - URI: degree
   prefLabel_fr: degré
   prefLabel_en: degree
@@ -37,7 +33,6 @@
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.0174532925199433
   ConversionUnit: radian
-  null:
 - URI: arcminute
   prefLabel_fr: arcminute
   prefLabel_en: arcminute
@@ -45,7 +40,6 @@
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.000290888208665722
   ConversionUnit: radian
-  null:
 - URI: arcsecond
   prefLabel_fr: arcseconde
   prefLabel_en: arcsecond
@@ -53,7 +47,6 @@
   UnitOfQtyKind: ANGP
   ConversionFactor: 4.84813681109536e-06
   ConversionUnit: radian
-  null:
 - URI: litre
   prefLabel_fr: litre
   prefLabel_en: litre
@@ -61,7 +54,6 @@
   UnitOfQtyKind: VOLU
   ConversionFactor: 0.001
   ConversionUnit: metre
-  null:
 - URI: tonne
   prefLabel_fr: tonne
   prefLabel_en: tonne
@@ -69,7 +61,6 @@
   UnitOfQtyKind: MASS
   ConversionFactor: 1000
   ConversionUnit: kilogram
-  null:
 - URI: dalton
   prefLabel_fr: dalton
   prefLabel_en: dalton
@@ -77,7 +68,6 @@
   UnitOfQtyKind: MASS
   ConversionFactor: 1.6605390666e-27
   ConversionUnit: kilogram
-  null:
 - URI: electronvolt
   prefLabel_fr: électronvolt
   prefLabel_en: electronvolt
@@ -85,84 +75,3 @@
   UnitOfQtyKind: ENGY
   ConversionFactor: 1.602176634e-19
   ConversionUnit: joule
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:
-- URI:
-  prefLabel_fr:
-  prefLabel_en:
-  Symbol:
-  UnitOfQtyKind:
-  ConversionFactor:
-  ConversionUnit:
-  null:

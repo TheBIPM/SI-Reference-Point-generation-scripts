@@ -168,7 +168,7 @@
   Unit:
 - identifier: DYVI
   quantity-en: dynamic viscosity
-  quantity-fr: 'viscosité dynamique '
+  quantity-fr: 'viscosité dynamique '
   Unit:
 - identifier: TORQ
   quantity-en: moment of force
@@ -184,7 +184,7 @@
   Unit:
 - identifier: ACCA
   quantity-en: angular acceleration
-  quantity-fr: 'accélération angulaire '
+  quantity-fr: 'accelération angulaire '
   Unit:
 - identifier: HEFD
   quantity-en: heat flux density
@@ -192,19 +192,19 @@
   Unit:
 - identifier: HECA
   quantity-en: heat capacity
-  quantity-fr: 'capacité thermique '
+  quantity-fr: 'capacité thermique '
   Unit:
 - identifier: SHEC
   quantity-en: specific heat capacity
-  quantity-fr: 'capacité thermique massique '
+  quantity-fr: 'capacité thermique massique '
   Unit:
 - identifier: SENG
   quantity-en: specific energy
-  quantity-fr: 'énergie massique '
+  quantity-fr: 'énergie massique '
   Unit:
 - identifier: TCON
   quantity-en: thermal conductivity
-  quantity-fr: 'conductivité thermique '
+  quantity-fr: 'conductivité thermique '
   Unit:
 - identifier: ENGD
   quantity-en: energy density
@@ -216,27 +216,27 @@
   Unit:
 - identifier: ELCD
   quantity-en: electric charge density
-  quantity-fr: 'charge électrique volumique '
+  quantity-fr: 'charge électrique volumique '
   Unit:
 - identifier: SUCD
   quantity-en: surface charge density
-  quantity-fr: 'charge électrique surfacique '
+  quantity-fr: 'charge électrique surfacique '
   Unit:
 - identifier: ELFD
   quantity-en: electric flux density
-  quantity-fr: 'induction électrique '
+  quantity-fr: 'induction électrique '
   Unit:
 - identifier: PRMI
   quantity-en: permittivity
-  quantity-fr: permittivité
+  quantity-fr: permittivité
   Unit:
 - identifier: PRME
   quantity-en: permeability
-  quantity-fr: perméabilité
+  quantity-fr: perméabilitté
   Unit:
 - identifier: MOEG
   quantity-en: molar energy
-  quantity-fr: 'énergie molaire '
+  quantity-fr: 'énergie molaire '
   Unit:
 - identifier: MOEN
   quantity-en: molar entropy
@@ -248,17 +248,17 @@
   Unit:
 - identifier: ABDR
   quantity-en: absorbed dose rate
-  quantity-fr: 'débit de dose absorbée '
+  quantity-fr: 'débit de dose absorbée '
   Unit:
 - identifier: RAIN
   quantity-en: radiant intensity
-  quantity-fr: 'intensité énergétique '
+  quantity-fr: 'intensité énergétique '
   Unit:
 - identifier: RADI
   quantity-en: radiance
-  quantity-fr: 'luminance énergétique '
+  quantity-fr: 'luminance énergétique '
   Unit:
 - identifier: CTAC
   quantity-en: catalytic activity concentration
-  quantity-fr: 'concentration de l’activité catalytique '
+  quantity-fr: 'concentration de l’activité catalytique '
   Unit:
