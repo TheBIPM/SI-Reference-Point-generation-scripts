@@ -40,6 +40,9 @@ def sheet2yaml(sheet, output_name, write=True):
             field_label = "value"
         field_list.append(field_label)
     for row in range(first_row + 1, last_row + 1):
+        if (output_name in ["notes_en", "notes_fr"] and
+                sheet.cell(row, 1).value is None):
+            continue
         buf = {}
         for i, f in enumerate(field_list):
             buf[f] = sheet.cell(row, i + 1).value
@@ -96,7 +99,7 @@ quantities_wb_obj = openpyxl.load_workbook('quantities.xlsx')
 sheet2yaml(quantities_wb_obj['Sheet1'], 'quantities')
 
 missing_def = openpyxl.load_workbook('missing_definitions_cipm.xlsx')
-sheet2yaml(missing_def['Feuil1'], 'missing_definitions_cipm')
+sheet2yaml(missing_def.active, 'missing_definitions_cipm')
 
 si_constants = openpyxl.load_workbook('SI_Constants.xlsx')
 sheet2yaml(si_constants['Sheet1'], 'si_constants')
