@@ -1,0 +1,264 @@
+- identifier: TIME
+  quantity-en: time
+  quantity-fr: temps
+  Unit: second
+- identifier: LENG
+  quantity-en: length
+  quantity-fr: longueur
+  Unit: metre
+- identifier: MASS
+  quantity-en: mass
+  quantity-fr: masse
+  Unit: kilogram
+- identifier: ELCU
+  quantity-en: electric current
+  quantity-fr: courant électrique
+  Unit: ampere
+- identifier: TEMT
+  quantity-en: thermodynamic temperature
+  quantity-fr: température thermodynamique
+  Unit: kelvin
+- identifier: AMSU
+  quantity-en: amount of substance
+  quantity-fr: quantité de matière
+  Unit: mole
+- identifier: LUIN
+  quantity-en: luminous intensity
+  quantity-fr: intensité lumineuse
+  Unit: candela
+- identifier: ANGP
+  quantity-en: plane angle
+  quantity-fr: angle plan
+  Unit: radian
+- identifier: ANGS
+  quantity-en: solid angle
+  quantity-fr: angle solide
+  Unit: steradian
+- identifier: FREQ
+  quantity-en: frequency
+  quantity-fr: fréquence
+  Unit: hertz
+- identifier: FORC
+  quantity-en: force
+  quantity-fr: force
+  Unit: newton
+- identifier: PRES
+  quantity-en: pressure
+  quantity-fr: pression, contrainte
+  Unit: pascal
+- identifier: ENGY
+  quantity-en: energy
+  quantity-fr: énergie
+  Unit: joule
+- identifier: POWR
+  quantity-en: power
+  quantity-fr: puissance, flux énergétique
+  Unit: watt
+- identifier: ELCH
+  quantity-en: electric charge
+  quantity-fr: charge électrique
+  Unit: coulomb
+- identifier: ELPD
+  quantity-en: electric potential difference
+  quantity-fr: différence de potentiel électrique
+  Unit: volt
+- identifier: ELCA
+  quantity-en: capacitance
+  quantity-fr: capacité électrique
+  Unit: farad
+- identifier: ELRE
+  quantity-en: electric resistance
+  quantity-fr: résistance électrique
+  Unit: ohm
+- identifier: ELCO
+  quantity-en: electric conductance
+  quantity-fr: conductance électrique
+  Unit: siemens
+- identifier: MGFL
+  quantity-en: magnetic flux
+  quantity-fr: flux d'induction magnétique
+  Unit: weber
+- identifier: MGFD
+  quantity-en: magnetic flux density
+  quantity-fr: induction magnétique
+  Unit: tesla
+- identifier: ELIN
+  quantity-en: inductance
+  quantity-fr: inductance
+  Unit: henry
+- identifier: TEMC
+  quantity-en: Celsius temperature
+  quantity-fr: Température Celsius
+  Unit: degreeCelsius
+- identifier: LUFL
+  quantity-en: luminous flux
+  quantity-fr: flux lumineux
+  Unit: lumen
+- identifier: ILLU
+  quantity-en: illuminance
+  quantity-fr: éclairement lumineux
+  Unit: lux
+- identifier: ARRN
+  quantity-en: activity referred to a radionuclide
+  quantity-fr: activité d'un radionucléide
+  Unit: becquerel
+- identifier: ABDO
+  quantity-en: absorbed dose
+  quantity-fr: dose absorbée, kerma
+  Unit: gray
+- identifier: DOEQ
+  quantity-en: dose equivalent
+  quantity-fr: équivalent de dose
+  Unit: sievert
+- identifier: CATA
+  quantity-en: catalytic activity
+  quantity-fr: activité catalytique
+  Unit: katal
+- identifier: AREA
+  quantity-en: area
+  quantity-fr: superficie
+  Unit: meters2
+- identifier: VOLU
+  quantity-en: volume
+  quantity-fr: volume
+  Unit:
+- identifier: VELO
+  quantity-en: velocity
+  quantity-fr: vitesse
+  Unit:
+- identifier: ACCE
+  quantity-en: acceleration
+  quantity-fr: accélération
+  Unit:
+- identifier: WANU
+  quantity-en: wavenumber
+  quantity-fr: nombre d'ondes
+  Unit:
+- identifier: DENS
+  quantity-en: density
+  quantity-fr: masse volumique
+  Unit:
+- identifier: SUDE
+  quantity-en: surface density
+  quantity-fr: masse surfacique
+  Unit:
+- identifier: SPVO
+  quantity-en: specific volume
+  quantity-fr: volume massique
+  Unit:
+- identifier: CUDE
+  quantity-en: current density
+  quantity-fr: densité de courant
+  Unit:
+- identifier: MAFD
+  quantity-en: magnetic field strength
+  quantity-fr: champ magnétique
+  Unit:
+- identifier: AMSC
+  quantity-en: 'amount of substance concentration '
+  quantity-fr: concentration de quantité de matière
+  Unit:
+- identifier: MACO
+  quantity-en: mass concentration
+  quantity-fr: concentration massique
+  Unit:
+- identifier: LUMA
+  quantity-en: luminance
+  quantity-fr: luminance lumineuse
+  Unit:
+- identifier: DYVI
+  quantity-en: dynamic viscosity
+  quantity-fr: 'viscosité dynamique '
+  Unit:
+- identifier: TORQ
+  quantity-en: moment of force
+  quantity-fr: 'moment d’une force '
+  Unit:
+- identifier: SUTE
+  quantity-en: surface tension
+  quantity-fr: 'tension superficielle '
+  Unit:
+- identifier: VELA
+  quantity-en: angular velocity
+  quantity-fr: 'vitesse angulaire '
+  Unit:
+- identifier: ACCA
+  quantity-en: angular acceleration
+  quantity-fr: 'accélération angulaire '
+  Unit:
+- identifier: HEFD
+  quantity-en: heat flux density
+  quantity-fr: 'flux thermique surfacique '
+  Unit:
+- identifier: HECA
+  quantity-en: heat capacity
+  quantity-fr: 'capacité thermique '
+  Unit:
+- identifier: SHEC
+  quantity-en: specific heat capacity
+  quantity-fr: 'capacité thermique massique '
+  Unit:
+- identifier: SENG
+  quantity-en: specific energy
+  quantity-fr: 'énergie massique '
+  Unit:
+- identifier: TCON
+  quantity-en: thermal conductivity
+  quantity-fr: 'conductivité thermique '
+  Unit:
+- identifier: ENGD
+  quantity-en: energy density
+  quantity-fr: énergie volumique
+  Unit:
+- identifier: ELFS
+  quantity-en: electric field strength
+  quantity-fr: champ électrique
+  Unit:
+- identifier: ELCD
+  quantity-en: electric charge density
+  quantity-fr: 'charge électrique volumique '
+  Unit:
+- identifier: SUCD
+  quantity-en: surface charge density
+  quantity-fr: 'charge électrique surfacique '
+  Unit:
+- identifier: ELFD
+  quantity-en: electric flux density
+  quantity-fr: 'induction électrique '
+  Unit:
+- identifier: PRMI
+  quantity-en: permittivity
+  quantity-fr: permittivité
+  Unit:
+- identifier: PRME
+  quantity-en: permeability
+  quantity-fr: perméabilité
+  Unit:
+- identifier: MOEG
+  quantity-en: molar energy
+  quantity-fr: 'énergie molaire '
+  Unit:
+- identifier: MOEN
+  quantity-en: molar entropy
+  quantity-fr: entropie molaire
+  Unit:
+- identifier: XPOS
+  quantity-en: exposure
+  quantity-fr: 'exposition (rayons x et γ) '
+  Unit:
+- identifier: ABDR
+  quantity-en: absorbed dose rate
+  quantity-fr: 'débit de dose absorbée '
+  Unit:
+- identifier: RAIN
+  quantity-en: radiant intensity
+  quantity-fr: 'intensité énergétique '
+  Unit:
+- identifier: RADI
+  quantity-en: radiance
+  quantity-fr: 'luminance énergétique '
+  Unit:
+- identifier: CTAC
+  quantity-en: catalytic activity concentration
+  quantity-fr: 'concentration de l’activité catalytique '
+  Unit:

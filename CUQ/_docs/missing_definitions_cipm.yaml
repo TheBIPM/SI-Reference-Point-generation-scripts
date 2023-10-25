@@ -1,0 +1,235 @@
+- ID: SI-A-1.0.3
+  Body: CIPM
+  Year: 1956
+  Type: Resolution
+  Num: 3
+  ID-resolution: cipm:CIPM46-Res3
+  Text in brochure: 'decision to adopt the name “Système International d’Unités” '
+- ID: SI-A-1.0.5
+  Body: CIPM
+  Year: 1969
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM58-Rec1
+  Text in brochure: declarations concerning base, supplementary, derived and coherent
+    units, and the use of prefixes
+- ID: SI-A-1.0.6
+  Body: CIPM
+  Year: 2001
+  Type: Declaration
+  Num: ' '
+  ID-resolution: cipm:CIPM90-Decl2001
+  Text in brochure: '“SI units” and “units of the SI” '
+- ID: SI-A-1.0.10
+  Body: CIPM
+  Year: 2017
+  Type: Decision
+  Num: 10
+  ID-resolution: cipm:CIPM106-Dec106-10
+  Text in brochure: On progress towards the redefinition of the SI
+- ID: SI-A-2.1.1
+  Body: 1st CGPM
+  Year: 1889
+  Type:
+  Num:
+  ID-resolution: cgpm:CGPM1-Res1
+  Text in brochure: sanction of the prototype metre
+- ID: SI-A-2.1.7
+  Body: CIPM
+  Year: 2002
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM91-Rec1
+  Text in brochure: specifies the rules for the practical realization of the definition
+    of the metre
+- ID: SI-A-2.1.8
+  Body: CIPM
+  Year: 2003
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM92-Rec1
+  Text in brochure: revision of the list of recommended radiations
+- ID: SI-A-2.1.9
+  Body: CIPM
+  Year: 2005
+  Type: Recommendation
+  Num: 3
+  ID-resolution: cipm:CIPM94-Rec3
+  Text in brochure: 'revision of the list of recommended radiations '
+- ID: SI-A-2.1.10
+  Body: CIPM
+  Year: 2007
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM96-Rec1
+  Text in brochure: revision of the list of recommended radiations
+- ID: SI-A-2.1.12
+  Body: CIPM
+  Year: 2009
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM98-Rec2
+  Text in brochure: 'updates to the list of standard frequencies '
+- ID: SI-A-2.1.15
+  Body: CIPM
+  Year: 2013
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM102-1-Rec1
+  Text in brochure: 'updates to the list of standard frequencies '
+- ID: SI-A-2.2.4
+  Body: CIPM
+  Year: 1967
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM56-Rec2
+  Text in brochure: declaration on applying prefixes to the gram
+- ID: SI-A-2.3.2
+  Body: CIPM
+  Year: 1956
+  Type: Resolution
+  Num: 1
+  ID-resolution: cipm:CIPM46-Res1
+  Text in brochure: definition of the second as a fraction of the tropical year 1900
+- ID: SI-A-2.3.4
+  Body: CIPM
+  Year: 1964
+  Type: Declaration
+  Num:
+  ID-resolution: cipm:CIPM53-Decl1964
+  Text in brochure: declares the caesium 133 hyperfine transition to be the recommended
+    standard
+- ID: SI-A-2.3.7
+  Body: CCDS
+  Year: 1970
+  Type:
+  Num:
+  ID-resolution: cctf:CCTF5-Rec2
+  Text in brochure: defines International Atomic Time, TAI
+- ID: SI-A-2.3.10
+  Body: CIPM
+  Year: 2006
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM95-Rec1
+  Text in brochure: secondary representations of the second
+- ID: SI-A-2.3.12
+  Body: CIPM
+  Year: 2009
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM98-Rec2
+  Text in brochure: updates to the list of standard frequencies
+- ID: SI-A-2.3.15
+  Body: CIPM
+  Year: 2013
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM102-1-Rec1
+  Text in brochure: updates to the list of standard frequencies
+- ID: SI-A-2.3.16
+  Body: CIPM
+  Year: 2015
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM104-1-Rec2
+  Text in brochure: updates to the list of standard frequencies
+- ID: SI-A-2.4.1
+  Body: CIPM
+  Year: 1946
+  Type: Resolution
+  Num: 2
+  ID-resolution: cipm:CIPM41-Res2
+  Text in brochure: definitions of coherent electrical units in the metre-kilogram-second
+    (MKS) system of units (to enter into force on 1 January 1948)
+- ID: SI-A-2.4.3
+  Body: 14th CGPM
+  Year: 1971
+  Type:
+  Num:
+  ID-resolution: cgpm:CGPM14-Decl
+  Text in brochure: adopts the name siemens, symbol S, for electrical conductance
+- ID: SI-A-2.4.5
+  Body: CIPM
+  Year: 1988
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM77-Rec1
+  Text in brochure: conventional value of the Josephson constant defined (to enter
+    into force on 1 January 1990)
+- ID: SI-A-2.4.6
+  Body: CIPM
+  Year: 1988
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM77-Rec2
+  Text in brochure: conventional value of the von Klitzing constant defined (to enter
+    into force on 1 January 1990)
+- ID: SI-A-2.5.2
+  Body: CIPM
+  Year: 1948
+  Type: Resolution
+  Num:
+  ID-resolution: cipm:CIPM42-Res1948
+  Text in brochure: adopts the name degree Celsius for the Celsius temperature scale
+- ID: SI-A-2.5.6
+  Body: CIPM
+  Year: 1989
+  Type: Recommendation
+  Num: 5
+  ID-resolution: cipm:CIPM78-Rec5
+  Text in brochure: the International Temperature Scale of 1990, ITS-90
+- ID: SI-A-2.5.7
+  Body: CIPM
+  Year: 2005
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM94-Rec2
+  Text in brochure: note added to the definition of the kelvin concerning the isotopic
+    composition of water
+- ID: SI-A-2.6.3
+  Body: 23rd CGPM
+  Year: 2007
+  Type:
+  Num:
+  ID-resolution: cgpm:CGPM23-Res1
+  Text in brochure: on the possible redefinition of certain base units of the International
+    System of Units (SI)
+- ID: SI-A-2.7.1
+  Body: CIPM
+  Year: 1946
+  Type: 'Resolution '
+  Num: 1
+  ID-resolution: cipm:CIPM41-Res1
+  Text in brochure: definition of photometric units, new candle and new lumen (to
+    enter into force on 1 January 1948)
+- ID: SI-A-3.1.7
+  Body: CIPM
+  Year: 1984
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM73-Rec1
+  Text in brochure: decides to clarify the relationship between absorbed dose (SI
+    unit gray) and dose equivalent (SI unit sievert)
+- ID: SI-A-3.1.9
+  Body: CIPM
+  Year: 2002
+  Type: Recommendation
+  Num: 2
+  ID-resolution: cipm:CIPM91-Rec2
+  Text in brochure: modifies the relationship between absorbed dose and dose equivalent
+- ID: SI-A-3.2.2
+  Body: CIPM
+  Year: 1980
+  Type: Recommendation
+  Num: 1
+  ID-resolution: cipm:CIPM69-Rec1
+  Text in brochure: decides to interpret supplementary units as dimensionless derived
+    units
+- ID: SI-A-4.5.3
+  Body: CIPM
+  Year: 1961
+  Type: Recommendation
+  Num:
+  ID-resolution: cipm:CIPM50-Rec1961
+  Text in brochure: recommends that volume be expressed in SI units and not in litres

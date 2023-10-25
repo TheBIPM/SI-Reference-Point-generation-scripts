@@ -1,0 +1,60 @@
+- URI: ampere
+  prefLabel(fr): ampère
+  prefLabel(en): ampere
+  isUnitOfQtyKind: ELCU
+  hasSymbol: A
+  definitions:
+  - ampere1948
+  - ampere2018
+- URI: candela
+  prefLabel(fr): candela
+  prefLabel(en): candela
+  isUnitOfQtyKind: LUIN
+  hasSymbol: cd
+  definitions:
+  - candela1979
+  - candela2018
+- URI: kelvin
+  prefLabel(fr): kelvin
+  prefLabel(en): kelvin
+  isUnitOfQtyKind: TEMT
+  hasSymbol: K
+  definitions:
+  - kelvin1967
+  - kelvin2018
+- URI: kilogram
+  prefLabel(fr): kilogramme
+  prefLabel(en): kilogram
+  isUnitOfQtyKind: MASS
+  hasSymbol: kg
+  definitions:
+  - kilogram1901
+  - kilogram2018
+- URI: metre
+  prefLabel(fr): mètre
+  prefLabel(en): metre
+  isUnitOfQtyKind: LENG
+  hasSymbol: m
+  definitions:
+  - metre1889
+  - metre1927
+  - metre1960
+  - metre1983
+  - metre2018
+- URI: mole
+  prefLabel(fr): mole
+  prefLabel(en): mole
+  isUnitOfQtyKind: AMSU
+  hasSymbol: mol
+  definitions:
+  - mole1971
+  - mole2018
+- URI: second
+  prefLabel(fr): seconde
+  prefLabel(en): second
+  isUnitOfQtyKind: TIME
+  hasSymbol: s
+  definitions:
+  - second1960
+  - second1967
+  - second2018
