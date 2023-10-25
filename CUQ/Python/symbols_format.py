@@ -12,47 +12,38 @@ with open(os.path.join(XLS_FILES_FOLDER, 'symbols.yaml')) as fp:
     symbols = yaml.load(fp)
 
 
-def formattxt(txt, fmt='html'):
+def formattxt(txt, fmt='latex', add_delim=True):
     """
     formats a text string with symbols replaced in any of the following formats
     html, latex, json, text
+
+    txt : input string
+    fmt : one of ['html', 'latex', 'json', 'text']
+    add_delim : boolean, adds delimiter at beginning and end (e.g. "$")
     """
     if fmt not in ['html', 'latex', 'json', 'text']:
         return txt
-    if txt is None or txt == "":
+    if txt is None or txt == "" or '@' not in txt:
         return txt
-    depth = 0
-    while '@' in txt and depth < 3:
-        for symcode in symbols.keys():
-            if f'@{symcode}@' in txt:
-                txt = txt.replace(f'@{symcode}@', symbols[symcode][fmt])
-        depth += 1
-    if fmt == "latex":
-        txt = "${}$".format(txt)
-    """
-    # Previous version : obsolete ?
-    matches = re.findall(f"@(.*?)@", txt)
-    # order matches by length of substituting string (smallest first) so that
-    # replacement of substrings
-    # at the top level does not result in multiple replacements at top level
-    # (resulting in $$)
-    tmatches = {}
-    for match in matches:
-        strlen = len(syms[fmt][match])
-        tmatches.update({match: strlen})
-    omatches = dict(sorted(tmatches.items(), key=lambda item: item[1]))
-    if omatches:
-        for grp in omatches:
-            if lvl == 0 and fmt == 'latex':
-                # add latex delimiters at the top level
-                if symtypes[grp] == 'symbol':
-                    txt = txt.replace(
-                        '@' + grp + '@', "$" + syms[fmt][grp] + "$")
-                elif symtypes[grp] == 'equation':
-                    txt = txt.replace(
-                        '@' + grp + '@', "$$" + syms[fmt][grp] + "$$")
-            else:
-                txt = txt.replace('@' + grp + '@',  syms[fmt][grp])
-        txt = txt.replace('\n', ' ')
-    """
+    delim = {'latex': ['$', '$'],
+             'html': ['', ''],
+             'json': ['', ''],
+             'text': ['', '']}
+    matches = re.findall(r"@(.*?)@", txt)
+    for symcode in matches:
+        depth = 0
+        replacement = symbols[symcode][fmt]
+        while '@' in replacement:
+            # Handle nested macros up to 3 levels
+            if depth > 3:
+                print('Error, too many levels of @')
+                break
+            inner_matches = re.findall(r"@(.*?)@", replacement)
+            for inner_symcode in inner_matches:
+                replacement = replacement.replace(f"@{inner_symcode}@",
+                                                  symbols[inner_symcode][fmt])
+            depth += 1
+        if add_delim:
+            replacement = delim[fmt][0] + replacement + delim[fmt][1]
+        txt = txt.replace(f"@{symcode}@", replacement)
     return txt

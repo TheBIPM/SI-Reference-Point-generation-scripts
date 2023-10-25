@@ -117,7 +117,8 @@ for bdef in basedefs:
                URIRef(PDF.set_cgpm_uri(bdef['hasDefiningResolution']))))
         if bdef['hasDefiningEquation'] is not None:
             g.add((element, PDF.hasDefiningEquation,
-                   Literal(sf.formattxt(bdef['hasDefiningEquation'], 'latex'),
+                   Literal(sf.formattxt(bdef['hasDefiningEquation'],
+                                        'latex', add_delim=False),
                            datatype=XSD.string)))
         if bdef['hasDefiningConstant'] is not None:
             g.add((element, PDF.hasDefiningConstant,
@@ -136,9 +137,11 @@ for bdef in basedefs:
                 g.add((notenode, RDF.type, PDF.DefinitionNote))
                 g.add((notenode, PDF.hasNoteIndex, Literal(note['index'])))
                 g.add((notenode, PDF.hasNoteText,
-                       Literal(sf.formattxt(note['note_en']), lang='en')))
+                       Literal(sf.formattxt(note['note_en'], 'latex'),
+                               lang='en')))
                 g.add((notenode, PDF.hasNoteText,
-                       Literal(sf.formattxt(note['note_fr']), lang='fr')))
+                       Literal(sf.formattxt(note['note_fr'], 'latex'),
+                               lang='fr')))
 
 # 5 SI Units Special Names
 with open(os.path.join(XLS_FILES_FOLDER, 'si_units_special_names.yaml')) as fp:
@@ -165,16 +168,18 @@ for sisp in si_spec_list:
                URIRef(PDF.set_cgpm_uri(sisp['hasDefiningResolution']))))
         if sisp['inOtherSIUnits']:
             g.add((element, PDF.inOtherSIUnits,
-                   Literal(sf.formattxt(sisp['inOtherSIUnits'], 'latex'),
+                   Literal(sf.formattxt(sisp['inOtherSIUnits'],
+                                        'latex', add_delim=False),
                            datatype=XSD.string)))
         if sisp['inBaseSIUnits']:
             g.add((element, PDF.inBaseSIUnits,
-                   Literal(sf.formattxt(sisp['inBaseSIUnits'], 'latex'),
+                   Literal(sf.formattxt(sisp['inBaseSIUnits'],
+                                        'latex', add_delim=False),
                            datatype=XSD.string)))
         if sisp['hasDefiningEquation']:
             g.add((element, PDF.hasDefiningEquation,
                    Literal(sf.formattxt(sisp['hasDefiningEquation'],
-                                        'latex'),
+                                        'latex', add_delim=False),
                            datatype=XSD.string)))
 
 # 6) non SI units
@@ -195,7 +200,7 @@ for nsi in non_si_list:
         g.add((element, SKOS.prefLabel,
                Literal(nsi['prefLabel_en'], lang='en')))
         g.add((element, PDF.hasSymbol,
-               Literal(sf.formattxt(['Symbol'], 'latex'),
+               Literal(sf.formattxt(nsi['Symbol'], 'latex'),
                        datatype=XSD.string)))
         g.add((element, PDF.isUnitOfQtyKind,
                PDF.set_quantity_uri(nsi['UnitOfQtyKind'])))
