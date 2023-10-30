@@ -440,7 +440,9 @@ def displ_constants(request: Request, lang: str | None = 'en'):
                         si:hasValueAsString ?sval ;
                         skos:prefLabel ?eText ;
                         skos:prefLabel ?fText .
-            ?unit		si:hasDefiningConstant ?constant .
+            ?unit		si:hasDefiningConstant ?constant ;
+                        si:hasStatus ?status .
+            FILTER (?status = "current")
             FILTER (lang(?eText) = "en")
             FILTER (lang(?fText) = "fr")
         }
