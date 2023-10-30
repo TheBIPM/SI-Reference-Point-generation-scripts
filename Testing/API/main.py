@@ -413,6 +413,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 # noinspection DuplicatedCode
 @app.get("/constants")
 def displ_constants(request: Request, lang: str | None = 'en'):
+    # check params
     for param in request.query_params:
         if param not in param_list_constants:
             error_msg = "Parameter " + param + " unknown. Allowed parameter: "
@@ -421,96 +422,75 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+    # check lang
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
 
-    knows_query = """
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            PREFIX si: <http://si-digital-framework.org/SI#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    # SPARQL query to get all the information about all defing constants
+    constants_query = """
+        SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?s?eText ?fText
+        WHERE {
+            ?constant	rdf:type si:Constant ;
+                        si:hasDefiningResolution ?res ;
+                        si:hasSymbol ?sym ;
+                        si:hasUnitAsString ?ustr ;
+                        si:hasUpdatedDate ?date ;
+                        si:hasValue ?nval ;
+                        si:hasValueAsString ?sval ;
+                        skos:prefLabel ?eText ;
+                        skos:prefLabel ?fText .
+            ?unit		si:hasDefiningConstant ?constant .
+            FILTER (lang(?eText) = "en")
+            FILTER (lang(?fText) = "fr")
+        }
+    """
 
-            SELECT ?Label ?Value ?Unit ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
-            WHERE { 
-                ?SIBaseUnit si:hasDefiningConstant ?Constant .
-                ?Constant skos:prefLabel ?Label ;
-                    skos:hiddenLabel ?Hidden ;
-                    si:hasValueAsString ?Valuestr ;
-                    si:hasUnitAsString ?Unitstr ;
-                    si:hasUpdatedDate ?Updated ;
-                    si:hasDatatype ?Type ;
-                    si:hasValue ?Value ;
-                    si:hasUnitElement ?list ;
-                    si:hasSymbol ?Symbol .
-                ?list rdf:_1 ?el1 .
-                ?el1 si:hasUnit ?u1 ;
-                     si:hasUnitPwr ?p1.
-                     ?u1 si:hasSymbol ?sym1 .
-                     BIND(IF(?p1=1, str(?sym1), CONCAT(str(?sym1),"<sup>",str(?p1),'</sup>')) AS ?u1Str)
+    # run SPARQL query
+    consset = g.query(constants_query)
 
-                OPTIONAl {
-                    ?list rdf:_2 ?el2 .
-                    ?el2 si:hasUnit ?u2 ;
-                        si:hasUnitPwr ?p2.
-                        ?u2 si:hasSymbol ?sym2 .
-                        BIND(IF(?p2=1, str(?sym2), CONCAT(str(?sym2),"<sup>",str(?p2),'</sup>')) AS ?u2Str)
-                }
-                
-                FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                BIND(IF(EXISTS {?list rdf:_2 ?el }, CONCAT(?u1Str, " ", ?u2Str ), ?u1Str) AS ?Unit)
-            }
-        """
-
-    qres = g.query(knows_query)
-    responses: List[dict] = []
-
-    server = request.headers['host']
-
-    for element in qres:
-        responses.append(
-            {
-                'Cst_Label': element['Label'],
-                'Cst_Symbol': element['Symbol'],
-                'Cst_Value': element['Value'],
-                'Cst_Valuestr': element['Valuestr'],
-                'Cst_Date': element['Updated'],
-                'Cst_Unit': element['Unit'],
-                'Cst_Unitstr': element['Unitstr'],
-                'Cst_Link': server + '/constant/' + element['Hidden'] + '/',
-                'Cst_Datatype': element['Type']
-            }
-        )
-
-    if not responses:
+    # check for data
+    if not consset:
         raise HTTPException(
-            status_code=404, detail=f"No Constant found.")
+            status_code=404, detail=f"No constant data found.")
+
+    # generate output
+    baseurl = "http://si-digital-framework.org"
+    consurl = baseurl + '/constants/'
+    siurl = baseurl + '/SI#'
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
-        return {'constants': responses}
+        return {'constants': consset}
     elif accept == 'application/ld+json':
         # create url
-        url = 'https://si-digital-framework.org/constants/'
+        url = consurl
         # create context
-        ctx = ["https://stuchalk.github.io/scidata/contexts/constants.jsonld",
-               {"si": "http://si-digital-framework.org/SI/sio.owl"},
-               {"@base": url}]
-        gph = {"@id": url, "@type": "si:Constant"}
-        gph.update({"constants": []})
-        for resp in responses:
-            con = {}
-            con.update({"name": resp['Cst_Label']})
-            con.update({'url': resp['Cst_Link']})
-            gph['constants'].append(con)
-
-        jld = {
-            "@context": ctx, "@id": url,
-            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": siurl,
+                "constants": consurl},
+               {"@base": consurl}]
+        jld = {"@context": ctx, "@id": consurl, "@type": "si:Constant"}
+        cons = []
+        for constant in consset:
+            name = constant['constant'].replace(consurl, 'constants:')
+            con = {"@id": name, "@type": "si:Constant"}
+            con.update({"name_en": constant['eText']})
+            con.update({"name_fr": constant['fText']})
+            con.update({"symbol": constant['sym']})
+            con.update({"value": constant['nval']})
+            con.update({"value_str": constant['sval']})
+            con.update({"unit": constant['ustr']})
+            con.update({'defining_resolution': constant['res']})
+            unit = constant['unit'].replace(siurl, 'si:')
+            con.update({'defines': unit})
+            cons.append(con)
+        jld.update({"constants": cons})
         return jld
     else:
         return TEMPLATES.TemplateResponse(
             "ConstantsLayout.html",
-            {"request": request, "constants": responses, "language": lang}
+            {"request": request, "constants": consset, "language": lang}
         )
 
 
