@@ -429,7 +429,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
 
     # SPARQL query to get all the information about all defing constants
     constants_query = """
-        SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?s?eText ?fText
+        SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?label ?eText ?fText
         WHERE {
             ?constant	rdf:type si:Constant ;
                         si:hasDefiningResolution ?res ;
@@ -438,6 +438,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
                         si:hasUpdatedDate ?date ;
                         si:hasValue ?nval ;
                         si:hasValueAsString ?sval ;
+                        skos:hiddenLabel ?label ;
                         skos:prefLabel ?eText ;
                         skos:prefLabel ?fText .
             ?unit		si:hasDefiningConstant ?constant ;
@@ -463,7 +464,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
-        return {'constants': consset}
+        return {'constants': consset.bindings}
     elif accept == 'application/ld+json':
         # create url
         url = consurl
@@ -492,7 +493,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     else:
         return TEMPLATES.TemplateResponse(
             "ConstantsLayout.html",
-            {"request": request, "constants": consset, "language": lang}
+            {"request": request, "cons": consset, "lang": lang}
         )
 
 
