@@ -7,8 +7,12 @@
     {% extends 'ParentLayout.html' %}
     {% block main %}
     <h1>Defining Constants</h1>
-    {% for constant in constants %}
-        <h2><a href="{{constant.Cst_Link}}?lang={{language}}">{{constant.Cst_Label}}</a></h2>
+    {% for con in cons %}
+        {% if lang == 'en' %}
+            <h2><a href="/constant/{{con.label}}?lang={{lang}}">{{con.eText}}</a></h2>
+        {% elif lang == 'fr' %}
+            <h2><a href="/constant/{{con.label}}?lang={{lang}}">{{con.fText}}</a></h2>
+        {%  endif %}
     {% endfor %}
 {% endblock %}
 </body>
