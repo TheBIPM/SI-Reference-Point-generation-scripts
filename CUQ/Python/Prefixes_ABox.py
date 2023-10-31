@@ -92,14 +92,22 @@ for row in range(2, sheet.max_row + 1):
     scalingFactor = sheet.cell(row, column=4).value
     symbol = sheet.cell(row, column=5).value
     defres = sheet.cell(row, column=6).value
+    datatype = sheet.cell(row, column=7).value
 
     if uri_text is not None:
         element = PDF.set_prefix_uri(uri_text)
         g.add((element, RDF.type, PDF.SIPrefix))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
-        g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
-        g.add((element, PDF.hasDatatype, XSD.integer))
+        if datatype == "integer":
+            g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.integer)))
+            g.add((element, PDF.hasDatatype, XSD.integer))
+        elif datatype == "decimal":
+            g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.decimal)))
+            g.add((element, PDF.hasDatatype, XSD.decimal))
+        elif datatype == "float":
+            g.add((element, PDF.hasScalingFactor, Literal(scalingFactor, datatype=XSD.float)))
+            g.add((element, PDF.hasDatatype, XSD.float))
         g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
         g.add((element, PDF.hasDefiningResolution, URIRef(PDF.set_cgpm_uri(defres))))
 

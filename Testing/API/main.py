@@ -1253,96 +1253,81 @@ def displ_prefix(request: Request, sym: str | None = None):
 # ----------------------------------------------------------------------------------------
 @app.get("/si-prefixes/")
 def displ_prefixes(request: Request):
-    for param in request.query_params:
-        if param not in param_list_prefixes:
-            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
-            for allowed_para in param_list_prefixes:
-                error_msg += allowed_para + ", "
-            error_msg = error_msg[:-2]
-            raise HTTPException(
-                status_code=404, detail=error_msg)
+    """ endpoint to get the full list of SI prefixes """
 
-    knows_query = """
-        PREFIX si: <http://si-digital-framework.org/SI#>
+    # SPARQL query to get all the information about all defining constants
+    fixes_query = """
+        PREFIX rb: <http://si-digital-framework.org/bodies#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        SELECT ?Label ?PrefixSymbol ?ScalingFactor
-        WHERE
-        {
-            ?SIPrefix si:hasSymbol ?PrefixSymbol ;
-                skos:prefLabel ?Label ;
-                si:hasScalingFactor ?ScalingFactor .
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX si: <http://si-digital-framework.org/SI#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        SELECT ?fix ?factor ?type ?sym ?res ?eDOI ?fDOI ?eText ?fText
+        WHERE {
+            ?fix 	rdf:type si:SIPrefix ;
+                    si:hasScalingFactor ?factor ;
+                    si:hasDatatype ?type ;
+                    si:hasSymbol ?sym ;
+                    si:hasDefiningResolution ?res ;
+                    skos:prefLabel ?eText ;
+                    skos:prefLabel ?fText .
+            ?res	rb:hasDOI ?eDOI ;
+                    rb:hasDOI ?fDOI .
+            FILTER (lang(?eDOI) = "en")
+            FILTER (lang(?fDOI) = "fr")
+            FILTER (lang(?eText) = "en")
+            FILTER (lang(?fText) = "fr")
         }
-        ORDER By DESC(?ScalingFactor)
+        ORDER BY DESC(?factor)
     """
 
-    qres = g.query(knows_query)
-    responses: List[dict] = []
+    # run SPARQL query
+    fixset = g.query(fixes_query)
 
-    server = request.headers['host']
-
-    # remove duplicates and add French label
-    done = []
-    idx = 0
-    for element in qres:
-        if element['PrefixSymbol'] in done:
-            responses[(idx - 1)].update({'Labelfr': element['Label']})
-            idx = 0
-        else:
-            done.append(element['PrefixSymbol'])
-            idx = len(done)
-            responses.append(
-                {
-                    'Label': element['Label'],
-                    'Symbol': element['PrefixSymbol'],
-                    'Factor': element['ScalingFactor'],
-                    'Link': server + '/prefix/' + element['PrefixSymbol']
-                }
-            )
-
-    if not responses:
+    # check for data
+    if not fixset:
         raise HTTPException(
             status_code=404, detail=f"SPARQL query not working?.")
 
+    # generate output
+    baseurl = "http://si-digital-framework.org"
+    fixesurl = baseurl + '/si-prefixes/'
+    siurl = baseurl + '/SI#'
+
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
-        return {'prefixes': responses}
+        return {'prefixes': fixset.bindings}
     elif accept == 'application/ld+json':
-        # create urls
-        si = 'http://62.161.69.201/SI'
-        main = si + '#prefixesTab'
-        fix = si + '/prefixes/'
         # create context
-        ctx = ["https://stuchalk.github.io/scidata/contexts/prefixes.jsonld",
-               {"si": si + "/sio.owl#",
-                "fix": fix},
-               {"@base": fix}]
-        gph = {"@id": main, "@type": "si:prefixes"}
-        gph.update({"prefixes": []})
-        for resp in responses:
-            pfix = {}
-            pfix.update({"@id": 'fix:' + resp['Symbol']})
-            pfix.update({"@type": 'si:prefix'})
-            pfix.update({"name": resp['Label']})
-            pfix.update({"nom": resp['Labelfr']})
-            pfix.update({'symbol': resp['Symbol']})
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": siurl,
+                "prefixes": fixesurl},
+               {"@base": fixesurl}]
+        jld = {"@context": ctx, "@id": fixesurl, "@type": "si:Prefix"}
+        fixes = []
+        for prefix in fixset:
+            name = prefix['fix'].replace(fixesurl, 'prefixes:')
+            fix = {"@id": name, "@type": "si:Prefix"}
+            fix.update({"name_en": prefix['eText']})
+            fix.update({"name_fr": prefix['fText']})
+            fix.update({'symbol': prefix['sym']})
             # needed to correctly display factor as numeric value in JSON
-            f = float(resp['Factor'])
-            if 1 < f < 1e+18:
-                pfix.update({'factor': int(f)})
+            f = float(prefix['factor'])
+            if 1 < f < 1E+18:
+                fix.update({'factor': int(f)})
             else:
-                pfix.update({'factor': f})
-            pfix.update({'datatype': 'xsd:integer'})
-            # pfix.update({'url': resp['Link']})
-            gph['prefixes'].append(pfix)
-
-        jld = {
-            "@context": ctx, "@id": fix,
-            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+                fix.update({'factor': f})
+            fix.update({'datatype': prefix['type']})
+            fix.update({'resolution_en': prefix['eDOI']})
+            fix.update({'resolution_fr': prefix['fDOI']})
+            fixes.append(fix)
+        jld.update({"prefixes": fixes})
         return jld
     else:
         return TEMPLATES.TemplateResponse(
             "PrefixesLayout.html",
-            {"request": request, "prefixes": responses}
+            {"request": request, "prefixes": fixset}
         )
 
 
