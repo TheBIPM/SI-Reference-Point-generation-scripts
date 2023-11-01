@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="language">
 <head>
-    <title>Units</title>
+    <title>Quantities</title>
 </head>
 <body>
     {% extends 'ParentLayout.html' %}
     {% block main %}
         {% if language == 'fr' %}
             <h1>Grandeurs</h1>
-            {% for unit in units %}
-                <h2>{{unit.Q_Label}}</h2>
-                {% set url_address = unit.Link ~'?lang=' ~language %}   
+            {% for quant in quants %}
+                <h2>{{quant.fText}}</h2>
+                {% set url_address = "/si-unit/" + quant.usym ~'?lang=' ~language %}
                 <p>
-                    Le type de grandeur {{unit.Q_Label}} (code: {{unit.Q_Code}}) a l'unité
-                    <a href="{{url_address}}">{{unit.U_Label}}</a> (symbole {{unit.U_Symbol}}).
+                    Le type de grandeur {{quant.fText}} (code: {{quant.code}}) a l'unité
+                    <a href="{{url_address}}">{{quant.fText}}</a> (symbole {{quant.usym}}).
                 </p>
             {% endfor %}
         {% else %}
             <h1>Quantities</h1>
-            {% for unit in units %}
-                <h2>{{unit.Q_Label}}</h2>
-                {% set url_address = unit.Link ~'?lang=' ~language %}   
+            {% for quant in quants %}
+                <h2>{{quant.eText}}</h2>
+                {% set url_address = "/si-unit/" + quant.usym ~'?lang=' ~language %}
                 <p>
-                    The kind of quantity {{unit.Q_Label}} (code: {{unit.Q_Code}}) has the
-                    unit <a href="{{url_address}}">{{unit.U_Label}}</a> (symbol {{unit.U_Symbol}}).
+                    The kind of quantity {{quant.eText}} (code: {{quant.code}}) has the
+                    unit <a href="{{url_address}}">{{quant.eText}}</a> (symbol {{quant.usym}}).
                 </p>
             {% endfor %}
         {% endif %}

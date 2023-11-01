@@ -1483,74 +1483,81 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
 # ----------------------------------------------------------------------------------------
 @app.get("/quantities/")
 def displ_quants(request: Request, lang: str | None = 'en'):
+    """ generate a list of the quantities referenced in the SI brochure"""
+
+    # check the language is allowed
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
 
-    knows_query = """
-                PREFIX si: <http://si-digital-framework.org/SI#>
-                PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                SELECT DISTINCT ?Q_Label ?U_Label ?U_Symbol ?Q_Code
-                WHERE {
-                        {?Unit a si:SIBaseUnit}   
-                        UNION
-                        {?Unit a si:SISpecialNamedUnit}
-                        ?Quantity a si:QuantityKind ;
-                                    skos:altLabel ?Q_Code ;
-                                    skos:prefLabel ?Q_Label ;
-                                    si:hasUnit ?Unit.	
-                        ?Unit si:hasSymbol ?U_Symbol ;
-                                skos:prefLabel ?U_Label.
-                        FILTER (langmatches(lang(?Q_Label),'""" + lang + """')) .
-                        FILTER (langmatches(lang(?U_Label),'""" + lang + """')) . 
-                    }
-                """
+    # SPARQL query to get all the information about quantities and related SI allowed units
+    quants_query = """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX si: <http://si-digital-framework.org/SI#>
+        
+        SELECT ?quant ?code ?unit ?usym ?eText ?fText
+        WHERE {
+            ?quant 	rdf:type si:QuantityKind ;
+                    skos:altLabel ?code ;
+                    skos:prefLabel ?eText ;
+                    skos:prefLabel ?fText .
+            ?unit	si:isUnitOfQtyKind ?quant ;
+                    si:hasSymbol ?usym.
+            FILTER (lang(?eText) = "en")
+            FILTER (lang(?fText) = "fr")
+        }
+        ORDER BY ASC(?eText)
+    """
 
-    qres = g.query(knows_query)
-    responses: List[dict] = []
+    # run SPARQL query
+    quantset = g.query(quants_query)
 
-    for element in qres:
-        responses.append(
-            {
-                'Q_Label': element['Q_Label'],
-                'Q_Code': element['Q_Code'],
-                'U_Label': element['U_Label'],
-                'U_Symbol': element['U_Symbol'],
-                'Link': BASE_URL + "si-unit/" + element['U_Symbol']
-            }
-        )
-    if not responses:
+    # check for data
+    if not quantset:
         raise HTTPException(
             status_code=404,
             detail=f"No Quantity corresponding to the request (Language = {lang}).")
 
+    # generate output
+    baseurl = "http://si-digital-framework.org"
+    quantsurl = baseurl + '/quantities/'
+    unitsurl = baseurl + '/SI/units/'
+
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
-        return {'units': responses}
+        return {'quantities': quantset.bindings}
     elif accept == 'application/ld+json':
-        # create url
-        url = 'https://si-digital-framework.org/quantities/'
+        # preprocess units as some quantities have more than one
+        units = {}
+        for q in quantset:
+            if q['code'] not in units.keys():
+                units.update({q['code']: []})
+            u = q['unit'].replace(unitsurl, "units:")
+            units[q['code']].append(u)
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/quantities.jsonld",
                {"si": "http://si-digital-framework.org/SI/sio.owl"},
-               {"@base": url}]
-        gph = {"@id": url, "@type": "si:Quantity"}
-        gph.update({"quantities": []})
-        for resp in responses:
-            qty = {}
-            qty.update({"name": resp['Q_Label']})
-            qty.update({'code': resp['Q_Code']})
-            qty.update({'siunit': {'name': resp['U_Label'], 'symbol': resp['U_Symbol']}})
-            gph['quantities'].append(qty)
-        jld = {
-            "@context": ctx, "@id": url,
-            "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
+               {"@base": quantsurl}]
+        jld = {"@context": ctx, "@id": quantsurl, "@type": "si:QuantityKind"}
+        quants = []
+        for quant in quantset:
+            # check if this is the quantity with the first unit in units[quant.code], if not ignore
+            u = quant['unit'].replace(unitsurl, "units:")
+            if u == units[quant['code']][0]:
+                name = quant['quant'].replace(quantsurl, "quantities:")
+                qty = {"@id": name, "@type":"siQuantityKind"}
+                qty.update({"name_en": quant['eText']})
+                qty.update({"name_fr": quant['fText']})
+                qty.update({'code': quant['code']})
+                qty.update({'siunits': units[quant.code]})
+                quants.append(qty)
+        jld.update({"quantities": quants})
         return jld
-
     else:
         return TEMPLATES.TemplateResponse(
             "QtyLayout.html",
-            {"request": request, "units": responses, "language": lang}
+            {"request": request, "quants": quantset, "language": lang}
         )
 
 
