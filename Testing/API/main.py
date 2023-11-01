@@ -413,6 +413,8 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 # noinspection DuplicatedCode
 @app.get("/constants")
 def displ_constants(request: Request, lang: str | None = 'en'):
+    """ endpoint to get the full list of defining constants """
+
     # check params
     for param in request.query_params:
         if param not in param_list_constants:
@@ -422,12 +424,13 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
-    # check lang
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
 
-    # SPARQL query to get all the information about all defing constants
+    # SPARQL query to get all the information about all defining constants
     constants_query = """
         SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?label ?eText ?fText
         WHERE {
@@ -466,8 +469,6 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     if not accept or accept == "application/json":
         return {'constants': consset.bindings}
     elif accept == 'application/ld+json':
-        # create url
-        url = consurl
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
                {"si": siurl,
