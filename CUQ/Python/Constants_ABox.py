@@ -8,8 +8,7 @@
 # export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
-from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS, OWL, XSD
+from rdflib import *
 from CUQ_TBox import SiElements
 from datetime import date
 from settings import *
