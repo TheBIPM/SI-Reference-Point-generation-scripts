@@ -158,8 +158,10 @@ for row in range(2, sheet.max_row + 1):
         g.add((element, PDF.hasDatatype,  XSD.integer))
         g.add((element, PDF.hasValue, Literal(value, datatype=XSD.integer, normalize=False)))
     elif unit_type == "xsd:double":
-        g.add((element, PDF.hasDatatype, XSD.double))
-        g.add((element, PDF.hasValue, Literal(value, datatype=XSD.double, normalize=False)))
+        # changing the output datatype to xsd:float as RDFLib has a known bug that loses precision in value
+        # https://github.com/RDFLib/rdflib/issues/1852
+        g.add((element, PDF.hasDatatype, XSD.float))
+        g.add((element, PDF.hasValue, Literal(value, datatype=XSD.float, normalize=False)))
     g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))
     g.add((element, PDF.hasUpdatedDate, Literal(updated, datatype=XSD.date)))
     g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
