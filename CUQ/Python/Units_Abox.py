@@ -76,6 +76,15 @@ for dc in def_collectors:
                     g.add((PDF.set_uri(curr_def), PDF.hasNextDefinition,
                            PDF.set_uri(next_def)))
 
+            if i > 0:
+                prev_def = dc['definitions'][i - 1]
+            else:
+                prev_def = None
+            if curr_def is not None:
+                if prev_def is not None:
+                    g.add((PDF.set_uri(curr_def), PDF.hasPreviousDefinition,
+                           PDF.set_uri(prev_def)))
+
 # 4.2 Declare all definitions
 # uri_text values are a concatenation of the lowercase unit name and the
 # year of the definition, e.g., ampere2018
