@@ -32,11 +32,11 @@ class SiElements:
 
         # general
         self.g.add((URIRef(self.namespace), RDF.type, OWL.Ontology))
-        self.g.add((URIRef(self.namespace), SKOS.prefLabel, Literal("SI Reference Point - Base Ontology",
-                                                                    datatype=XSD.string)))
+        self.g.add((URIRef(self.namespace), SKOS.prefLabel,
+                    Literal("SI Reference Point - Base Ontology", datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), RDFS.comment,
-                    Literal("Ontology, part of the SI reference point, providing base concepts and their relations.",
-                            datatype=XSD.string)))
+                Literal("Ontology, part of the SI reference point, providing base concepts and their relations.",
+                        datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
         # for Constants

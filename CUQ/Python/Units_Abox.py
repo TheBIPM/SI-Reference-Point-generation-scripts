@@ -25,11 +25,11 @@ BASESTR = str(PDF.BASE_PATH)
 
 # Annotations to the ontology (name, Version number)
 g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
-g.add((URIRef(PDF.namespace_units), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes",
-                                                            datatype=XSD.string)))
-g.add((URIRef(PDF.namespace_units), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering "
-                                                          "measurement units (SI base units and SI units with special "
-                                                          "names) and prefixes.")))
+g.add((URIRef(PDF.namespace_units), SKOS.prefLabel,
+       Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
+g.add((URIRef(PDF.namespace_units), RDFS.comment,
+       Literal("Ontology, part of the SI Reference Point, covering measurement units "
+               "(SI base units and SI units with special names) and prefixes.")))
 g.add((URIRef(PDF.namespace_units), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # 1) open XLS files with information

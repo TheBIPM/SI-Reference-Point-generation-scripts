@@ -23,14 +23,14 @@ BASESTR = str(PDF.BASE_PATH)
 
 # copy over all namespaces from PDF.g to g
 for key, val in PDF.g.namespaces():
-    g.bind(key, val) 
+    g.bind(key, val)
 
 # Annotations to the ontology (name, creation date, comment)
 g.add((URIRef(PDF.namespace_constants), RDF.type, OWL.Ontology))
 g.add((URIRef(PDF.namespace_constants), SKOS.prefLabel, Literal("SI Reference Point - Constants", datatype=XSD.string)))
 g.add((URIRef(PDF.namespace_constants), RDFS.comment,
-           Literal("Ontology, part of the SI reference point, covering the seven underpinning constants of the SI",
-                   datatype=XSD.string)))
+       Literal("Ontology, part of the SI reference point, covering the seven underpinning constants of the SI",
+               datatype=XSD.string)))
 g.add((URIRef(PDF.namespace_constants), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # worksheet containing the basic information
@@ -42,6 +42,7 @@ units_g = Graph()
 units_g.parse(APIPATH + 'si.ttl')
 units_g.parse(APIPATH + 'units.ttl')
 owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(units_g)
+
 
 # define auxilary functions
 
@@ -73,7 +74,7 @@ def get_uri_for_symbol(sym: str) -> URIRef:
             ?Unit SI:hasSymbol ?Symbol .
             FILTER (?Symbol='""" + sym + """')
         }"""
-    
+
     qres = units_g.query(query)
     ausgabe = None
     for elment in qres:
@@ -154,7 +155,7 @@ for row in range(2, sheet.max_row + 1):
     g.add((element, PDF.hasValueAsString, Literal(value_str, datatype=XSD.string)))
     g.add((element, PDF.hasUnitAsString, Literal(unit_str, datatype=XSD.string)))
     if unit_type == "xsd:integer":
-        g.add((element, PDF.hasDatatype,  XSD.integer))
+        g.add((element, PDF.hasDatatype, XSD.integer))
         g.add((element, PDF.hasValue, Literal(value, datatype=XSD.integer, normalize=False)))
     elif unit_type == "xsd:double":
         # changing the output datatype to xsd:float as RDFLib has a known bug that loses precision in value
@@ -166,7 +167,8 @@ for row in range(2, sheet.max_row + 1):
     g.add((element, SKOS.prefLabel, Literal(label_en, lang="en")))
     g.add((element, SKOS.prefLabel, Literal(label_fr, lang="fr")))
     g.add((element, SKOS.hiddenLabel, Literal(hidden_label, datatype=XSD.string)))
-    g.add((element, PDF.hasDefiningResolution, PDF.set_cgpm_uri(defining_res)))
+    g.add((element, PDF.hasDefiningResolution, URIRef(defining_res)))
+    # g.add((element, PDF.hasDefiningResolution, PDF.set_cgpm_uri(defining_res)))
 
     piece_list = []
     pieces = unit.split(".")
