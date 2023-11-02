@@ -19,21 +19,22 @@ g = Graph()
 
 # copy over all namespaces from PDF.g to g
 for key, val in PDF.g.namespaces():
-    g.bind(key, val) 
+    g.bind(key, val)
 
 BASESTR = str(PDF.BASE_PATH)
 
 # Annotations to the ontology (name, Version number)
 g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
-g.add((URIRef(PDF.namespace_units), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string)))
-g.add((URIRef(PDF.namespace_units), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering measurement units "
-                                                "(SI base units and SI units with special names) and prefixes.")))
+g.add((URIRef(PDF.namespace_units), SKOS.prefLabel, Literal("SI Reference Point - Units and Prefixes",
+                                                            datatype=XSD.string)))
+g.add((URIRef(PDF.namespace_units), RDFS.comment, Literal("Ontology, part of the SI Reference Point, covering "
+                                                          "measurement units (SI base units and SI units with special "
+                                                          "names) and prefixes.")))
 g.add((URIRef(PDF.namespace_units), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
 # 1) open XLS files with information
 units_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Units_Prefixes.xlsx')
 notes_wb_obj = openpyxl.load_workbook(XLS_FILES_FOLDER + 'Notes.xlsx')
-
 
 # 2) create dictionary with the note symbol codes (@xxx@) in text
 notessym = notes_wb_obj["symbols"]
@@ -74,11 +75,11 @@ def formattxt(txt, fmt='html', lvl=0):
                 elif symtypes[grp] == 'equation':
                     txt = txt.replace('@' + grp + '@', syms[fmt][grp])
             else:
-                txt = txt.replace('@' + grp + '@',  syms[fmt][grp])
+                txt = txt.replace('@' + grp + '@', syms[fmt][grp])
         txt = txt.replace('\n', ' ')
         # check for text still containing symbols based on symbols being parts of other symbols
         if '@' in txt:
-            lvl = lvl+1
+            lvl = lvl + 1
             txt = formattxt(txt, fmt, lvl)
     return txt
 
@@ -198,7 +199,6 @@ for row in range(2, basedefs.max_row + 1):
                 notenode = PDF.set_uri(note_uri)
                 g.add((notenode, PDF.hasNoteText, Literal(note_fr, lang='fr')))
 
-
 # 5 SI Units Special Names
 sheet = units_wb_obj["SIUnitsSpecialNames"]
 
@@ -218,7 +218,7 @@ for row in range(2, sheet.max_row + 1):
     if uri_text is not None:
         if "@" in symbol:
             symbol = formattxt(symbol, 'latex')
-            
+
         element = PDF.set_unit_uri(uri_text)
         g.add((element, RDF.type, PDF.SISpecialNamedUnit))
         g.add((element, PDF.hasUnitTypeAsString, Literal('Named SI derived unit', lang='en')))
@@ -263,7 +263,7 @@ for row in range(7, sheet.max_row + 1):
         g.add((element, RDF.type, PDF.nonSIUnit))
         g.add((element, PDF.hasUnitTypeAsString, Literal('Non-SI unit accepted for use with the SI', lang='en')))
         g.add((element, PDF.hasUnitTypeAsString, Literal('Unité en dehors du SI '
-                                                             'dont l\'usage est accepté avec le SI', lang='fr')))
+                                                         'dont l\'usage est accepté avec le SI', lang='fr')))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
         g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
         g.add((element, PDF.hasSymbol, Literal(symbol, datatype=XSD.string)))

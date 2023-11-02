@@ -1,6 +1,5 @@
-from rdflib import Graph, URIRef, Literal, BNode
+from rdflib import *
 from rdflib.collection import Collection
-from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS, SKOS
 from pathlib import Path
 from settings import *
 from datetime import date
@@ -33,12 +32,12 @@ class SiElements:
 
         # general
         self.g.add((URIRef(self.namespace), RDF.type, OWL.Ontology))
-        self.g.add((URIRef(self.namespace), SKOS.prefLabel, Literal("SI Reference Point - Base Ontology", datatype=XSD.string)))
+        self.g.add((URIRef(self.namespace), SKOS.prefLabel, Literal("SI Reference Point - Base Ontology",
+                                                                    datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), RDFS.comment,
-                Literal("Ontology, part of the SI reference point, providing base concepts and their relations.",
-                        datatype=XSD.string)))
+                    Literal("Ontology, part of the SI reference point, providing base concepts and their relations.",
+                            datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
-
 
         # for Constants
         self.Constant = self.set_uri("Constant")
@@ -200,7 +199,8 @@ class SiElements:
         self.hasUnitTypeAsString_oneOf_node = BNode()
         self.hasUnitTypeAsString_oneOf_subnode = BNode()
         self.hasUnitTypeAsString_oneOf_list = [self.SIBaseUnit, self.SISpecialNamedUnit, self.nonSIUnit]
-        self.hasUnitTypeAsString_oneOf_col = Collection(self.g, self.hasUnitTypeAsString_oneOf_subnode, self.hasUnitTypeAsString_oneOf_list)
+        self.hasUnitTypeAsString_oneOf_col = Collection(self.g, self.hasUnitTypeAsString_oneOf_subnode,
+                                                        self.hasUnitTypeAsString_oneOf_list)
         self.hasUnitTypeAsString = self.set_uri("hasUnitTypeAsString")
 
         self.g.add((self.hasUnitTypeAsString, RDF.type, OWL.DatatypeProperty))
@@ -226,7 +226,7 @@ class SiElements:
         self.hasDatatype_oneOf_list = [self.Constant, self.SIPrefix]
         self.hasDatatype_oneOf_col = Collection(self.g, self.hasDatatype_oneOf_subnode, self.hasDatatype_oneOf_list)
         self.hasDatatype = self.set_uri("hasDatatype")
-        
+
         self.g.add((self.hasDatatype, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDatatype, RDFS.label, Literal("has datatype", lang="en")))
         self.g.add((self.hasDatatype, RDFS.label, Literal("a un type de données", lang="fr")))
@@ -488,7 +488,8 @@ class SiElements:
         self.hasDefiningResolution_oneOf_node = BNode()
         self.hasDefiningResolution_oneOf_subnode = BNode()
         self.hasDefiningResolution_oneOf_list = [self.Definition, self.Constant]
-        self.hasDefiningResolution_oneOf_col = Collection(self.g, self.hasDefiningResolution_oneOf_subnode, self.hasDefiningResolution_oneOf_list)
+        self.hasDefiningResolution_oneOf_col = Collection(self.g, self.hasDefiningResolution_oneOf_subnode,
+                                                          self.hasDefiningResolution_oneOf_list)
         self.hasDefiningResolution = self.set_uri("hasDefiningResolution")
 
         self.g.add((self.hasDefiningResolution, RDF.type, OWL.ObjectProperty))
@@ -506,7 +507,8 @@ class SiElements:
         self.isDefiningResolutionOf_oneOf_node = BNode()
         self.isDefiningResolutionOf_oneOf_subnode = BNode()
         self.isDefiningResolutionOf_oneOf_list = [self.Definition, self.Constant]
-        self.isDefiningResolutionOf_oneOf_col = Collection(self.g, self.isDefiningResolutionOf_oneOf_subnode, self.isDefiningResolutionOf_oneOf_list)
+        self.isDefiningResolutionOf_oneOf_col = Collection(self.g, self.isDefiningResolutionOf_oneOf_subnode,
+                                                           self.isDefiningResolutionOf_oneOf_list)
         self.isDefiningResolutionOf = self.set_uri("isDefiningResolutionOf")
 
         self.g.add((self.isDefiningResolutionOf, RDF.type, OWL.ObjectProperty))
@@ -551,11 +553,11 @@ class SiElements:
     def set_quantity_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_quantities + name)
-    
+
     def set_constant_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_constants + name)
-    
+
     def set_cgpm_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_cgpm + name)
