@@ -1,4 +1,4 @@
-from rdflib import Graph, URIRef, Literal, BNode
+from rdflib import *
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
 from pathlib import Path
@@ -37,9 +37,9 @@ class SiElements:
                     Literal("SI Reference Point - Base Ontology",
                             datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), RDFS.comment,
-                    Literal("Ontology, part of the SI reference point, "
-                            "providing base concepts and their relations.",
-                            datatype=XSD.string)))
+                Literal("Ontology, part of the SI reference point, "
+                        "providing base concepts and their relations.",
+                        datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), DCTERMS.created,
                     Literal(str(date.today()), datatype=XSD.date)))
 

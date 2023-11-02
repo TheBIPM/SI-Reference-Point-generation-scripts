@@ -8,8 +8,7 @@
 # export PYTHONPATH=(path where the package is located) (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
-from rdflib import URIRef, Literal, Graph
-from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS, OWL, XSD
+from rdflib import *
 from CUQ_TBox import SiElements
 from datetime import date
 from settings import *
@@ -46,5 +45,4 @@ for qty in qty_list:
                                            datatype=XSD.string)))
     if 'Unit' in qty and qty['Unit'] is not None:
         g.add((element, PDF.hasUnit, PDF.set_unit_uri(qty['Unit'])))
-
 g.serialize(format='turtle', destination=APIPATH + 'quantities.ttl')

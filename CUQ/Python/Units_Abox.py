@@ -44,7 +44,6 @@ g.add((URIRef(PDF.namespace_units), DCTERMS.created,
 with open(os.path.join(XLS_FILES_FOLDER, 'def_collectors.yaml')) as fp:
     def_collectors = yaml.safe_load(fp)
 
-
 # 4) Base unit definitions
 # 4.1) Define the BaseUnit (to which one can subsequently attach several
 # definitions)

@@ -12,8 +12,7 @@
 # (e.g. /Users/gregordudle/Development/Semantic-SI)
 #
 
-from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS, OWL, XSD
+from rdflib import *
 from CUQ_TBox import SiElements
 import symbols_format as sf
 from datetime import date

@@ -1,8 +1,6 @@
 from datetime import date
 
-from rdflib import Graph, Literal, URIRef
-from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
-
+from rdflib import *
 from settings import *
 
 ResBod_ns = SIURL + "bodies#"
@@ -16,10 +14,11 @@ class ResBod:
         self._g.bind("skos", SKOSURL)
 
         self._g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
-        self._g.add((URIRef(ResBod_ns), SKOS.prefLabel, Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
+        self._g.add((URIRef(ResBod_ns), SKOS.prefLabel,
+                     Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
         self._g.add((URIRef(ResBod_ns), RDFS.comment,
-                Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their resolutions, "
-                        "decisions, etc", datatype=XSD.string)))
+                     Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their "
+                             "resolutions, decisions, etc", datatype=XSD.string)))
         self._g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
         self.ResBod = self.set_uri('ResBod')
