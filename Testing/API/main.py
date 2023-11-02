@@ -620,10 +620,11 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
 
 
 # ----------------------------------------------------------------------------------------
-@app.get("/baseunit/{unitname}")
-def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang: str | None = 'en',
-                             datestr: str | None = str(date.today())):
-    # 20230710_datamodel_event_ok
+@app.get("/unit/{unitname}")
+def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang: str | None = 'en'):
+    # endpoint to get a particular SI allowed unit "
+
+    # check that parameters are allowed
     for param in request.query_params:
         if param not in param_list_base_unit_grps:
             error_msg = "Parameter " + param + " unknown. Allowed parameters: "
@@ -632,6 +633,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             error_msg = error_msg[:-2]
             raise HTTPException(status_code=404, detail=error_msg)
 
+    # check that language is allowed
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language not available {lang}")
@@ -643,6 +645,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
                'lumen', 'lux', 'newton', 'ohm', 'pascal', 'radian', 'siemens', 'sievert', 'steradian', 'tesla', 'volt',
                'watt', 'weber', 'neper']
 
+    # check that the unitname string is an allowed value
     if unitname not in allowed:
         raise HTTPException(
             status_code=404, detail=f"No acceptable SI unit with name '{unitname}'.")
@@ -668,24 +671,27 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
         }
     """
 
+    # check for data
     unitset = g.query(unit_query)
 
-    # organize data
-    response: dict = {}
-    uniturl = baseurl + '/units/' + unitname
+    # get the data for the specified unit
     unitdata = {}
     for row in unitset:
         if str(row['eLabel']) == unitname:
             unitdata = row
 
+    # organize data
+    uniturl = baseurl + '/units/' + unitname
+
     # SPARQL query to get definitions
     defns_query = """
+            PREFIX rb: <http://si-digital-framework.org/bodies#>
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             PREFIX units: <http://si-digital-framework.org/SI/units/>
 
-            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?notes 
+            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes 
                     ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
             WHERE {
                 units:""" + unitname + """ si:hasDefinition ?UnitDefn .
@@ -701,6 +707,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
                         rb:hasDOI ?fDOI .
                 OPTIONAL {?UnitDefn si:hasEndValidity ?vtill .}
                 OPTIONAL {?UnitDefn si:hasNextDefinition ?next .}
+                OPTIONAL {?UnitDefn si:hasPreviousDefinition ?prev .}
                 OPTIONAL {?UnitDefn si:hasDefiningConstant ?const .}
                 OPTIONAL {?UnitDefn si:hasDefiningEquation ?eqn .}
                 FILTER (lang(?eLabel) = "en")
@@ -712,7 +719,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
         }
         """
 
-    #  output
+    # output
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'unit': unitdata}
@@ -720,22 +727,27 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
         resp = unitdata
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
-               {"si": baseurl + "#"},
+               {"si": siurl,
+                "units": unitsurl,
+                "quantities": quantsurl,
+                "constants": consurl},
                {"@base": uniturl}]
         # # populate graph
-        utype = resp['unitType'].replace(baseurl + '#', 'si:'),
+        utype = resp['unitType'].replace(siurl, 'si:'),
         gph = {"@context": ctx, "@id": uniturl, "@type": utype}
         gph.update({"name_en": resp['eLabel']})
         gph.update({"name_fr": resp['fLabel']})
         gph.update({"symbol": resp['sym']})
-        gph.update({"quantity": resp['quant']})
+        quant = resp['quant'].replace(quantsurl, 'quantities:')
+        gph.update({"quantity": quant})
 
         # add definitions
         defns = g.query(defns_query)
         defs = []
         for defn in defns:
             dfn = {}
-            dfn.update({'@id': defn['UnitDefn'], '@type': 'si:Definition'})
+            defnname = defn['UnitDefn'].replace(siurl, 'si:')
+            dfn.update({'@id': defnname, '@type': 'si:Definition'})
             dfn.update({'status': defn['status']})
             dfn.update({'label_en': defn['eLabel']})
             dfn.update({'label_fr': defn['fLabel']})
@@ -747,16 +759,22 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             if defn['vtill']:
                 dfn.update({'valid_till': defn['vtill']})
             if defn['const']:
-                dfn.update({'defining_constant': defn['const']})
+                const = defn['const'].replace(consurl, 'constants:')
+                dfn.update({'defining_constant': const})
             if defn['eqn']:
                 dfn.update({'defining_equation': defn['eqn'].replace("\\\\", "\\")})
             if defn['next']:
-                dfn.update({'next_definition': defn['next']})
+                nxt = defn['next'].replace(siurl, 'si:'),
+                dfn.update({'next_definition': nxt})
+            if defn['prev']:
+                prev = defn['prev'].replace(siurl, 'si:'),
+                dfn.update({'previous_definition': prev})
 
             # search for and add notes
-            defnname = defn['UnitDefn'].replace(baseurl + '#', '')
+            defnname = defn['UnitDefn'].replace(siurl, '')
             notes_query = """
                 PREFIX si: <http://si-digital-framework.org/SI#>
+                
                 SELECT ?note ?index ?eText ?fText
                 WHERE {
                     si:""" + defnname + """	si:hasDefinitionNote ?note .
@@ -773,7 +791,8 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             ntes = []
             for note in notes:
                 nte = {}
-                nte.update({'@id': note['note'], '@type': 'si:DefinitionNote'})
+                notename = note['note'].replace(siurl, 'si:')
+                nte.update({'@id': notename, '@type': 'si:DefinitionNote'})
                 nte.update({'noteindex': note['index']})
                 nte.update({'notetext_en': note['eText']})
                 nte.update({'notetext_fr': note['fText']})
@@ -783,13 +802,11 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             defs.append(dfn)
         gph.update({'definitions': defs})
 
-        # build JSON-LD
-        # jld = {"@context": ctx, "@id": uniturl, "generatedAt": str(datetime.now()), "version": 1, "@graph": gph}
         return gph
     else:
         return TEMPLATES.TemplateResponse(
-            "BaseUnitLayout.html",
-            {"request": request, "units": response, "language": lang}
+            "UnitLayout.html",
+            {"request": request, "units": unitdata, "language": lang}
         )
 
 
@@ -970,7 +987,7 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
         return jld
     else:
         return TEMPLATES.TemplateResponse(
-            "BaseUnitLayout.html",
+            "UnitLayout.html",
             {"request": request, "units": responses, "notes": nresponses, "language": lang}
         )
 
@@ -1077,7 +1094,7 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
     else:
         return TEMPLATES.TemplateResponse(
-            "BaseUnitsLayout.html",
+            "UnitsLayout.html",
             {"request": request, "units": responses, "language": lang}
         )
 
@@ -1128,7 +1145,7 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
                 'Q_Label': element['Q_Label'],
                 'Q_Link': BASE_URL + "quantity/" + element['Q_Code'],
                 'N_Link': BASE_URL + "page/" + element['Label'],
-                'C_Link': BASE_URL + "si-unit/" + element['Symbol']
+                'C_Link': BASE_URL + "unit/" + element['Label']
             }
         )
 
@@ -1148,7 +1165,7 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
 
 # ----------------------------------------------------------------------------------------
 # selects from ALL SI units, i.e. SI Units with special names AND SI Base Units
-@app.get("/si-unit/{sym}")
+@app.get("/SI/Unit/{sym}")
 def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'):
     for param in request.query_params:
         if param not in param_list_named_unit:
