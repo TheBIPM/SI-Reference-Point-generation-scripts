@@ -411,7 +411,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 
 # ----------------------------------------------------------------------------------------
 # noinspection DuplicatedCode
-@app.get("/constants")
+@app.get("/constants/")
 def displ_constants(request: Request, lang: str | None = 'en'):
     """ endpoint to get the full list of defining constants """
 
@@ -432,7 +432,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
 
     # SPARQL query to get all the information about all defining constants
     constants_query = """
-        SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?label ?eText ?fText
+        SELECT ?unit ?constant ?res ?sym ?ustr ?date ?nval ?sval ?dtype ?label ?eDOI ?fDOI ?eText ?fText
         WHERE {
             ?constant	rdf:type si:Constant ;
                         si:hasDefiningResolution ?res ;
@@ -441,12 +441,17 @@ def displ_constants(request: Request, lang: str | None = 'en'):
                         si:hasUpdatedDate ?date ;
                         si:hasValue ?nval ;
                         si:hasValueAsString ?sval ;
+                        si:hasDatatype ?dtype ;
                         skos:hiddenLabel ?label ;
                         skos:prefLabel ?eText ;
                         skos:prefLabel ?fText .
             ?unit		si:hasDefiningConstant ?constant ;
                         si:hasStatus ?status .
+            ?res        rb:hasDOI ?eDOI ;
+                        rb:hasDOI ?fDOI .
             FILTER (?status = "current")
+            FILTER (lang(?eDOI) = "en")
+            FILTER (lang(?fDOI) = "fr")
             FILTER (lang(?eText) = "en")
             FILTER (lang(?fText) = "fr")
         }
@@ -458,12 +463,13 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     # check for data
     if not consset:
         raise HTTPException(
-            status_code=404, detail=f"No constant data found.")
+            status_code=404, detail=f"No constants data found.")
 
     # generate output
     baseurl = "http://si-digital-framework.org"
     consurl = baseurl + '/constants/'
     siurl = baseurl + '/SI#'
+    xsdurl = 'http://www.w3.org/2001/XMLSchema#'
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -472,7 +478,8 @@ def displ_constants(request: Request, lang: str | None = 'en'):
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
                {"si": siurl,
-                "constants": consurl},
+                "constants": consurl,
+                'xsd': xsdurl},
                {"@base": consurl}]
         jld = {"@context": ctx, "@id": consurl, "@type": "si:Constant"}
         cons = []
@@ -482,10 +489,17 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             con.update({"name_en": constant['eText']})
             con.update({"name_fr": constant['fText']})
             con.update({"symbol": constant['sym']})
-            con.update({"value": constant['nval']})
+            # needed to correctly display numeric value
+            dtype = constant['dtype'].replace(xsdurl, 'xsd:')
+            if dtype == 'xsd:integer':
+                con.update({'value': int(constant['nval'])})
+            elif dtype == 'xsd:float':
+                con.update({'value': float(constant['nval'])})
             con.update({"value_str": constant['sval']})
+            con.update({'datatype': dtype})
             con.update({"unit": constant['ustr']})
-            con.update({'defining_resolution': constant['res']})
+            con.update({'defining_resolution_en': constant['eDOI']})
+            con.update({'defining_resolution_fr': constant['fDOI']})
             unit = constant['unit'].replace(siurl, 'si:')
             con.update({'defines': unit})
             cons.append(con)
@@ -1252,7 +1266,7 @@ def displ_prefix(request: Request, sym: str | None = None):
 
 
 # ----------------------------------------------------------------------------------------
-@app.get("/si-prefixes/")
+@app.get("/SI/prefixes/")
 def displ_prefixes(request: Request):
     """ endpoint to get the full list of SI prefixes """
 
@@ -1293,8 +1307,9 @@ def displ_prefixes(request: Request):
 
     # generate output
     baseurl = "http://si-digital-framework.org"
-    fixesurl = baseurl + '/si-prefixes/'
+    fixesurl = baseurl + '/SI/prefixes/'
     siurl = baseurl + '/SI#'
+    xsdurl = 'http://www.w3.org/2001/XMLSchema#'
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -1303,7 +1318,8 @@ def displ_prefixes(request: Request):
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
                {"si": siurl,
-                "prefixes": fixesurl},
+                "prefixes": fixesurl,
+                "xsd": xsdurl},
                {"@base": fixesurl}]
         jld = {"@context": ctx, "@id": fixesurl, "@type": "si:Prefix"}
         fixes = []
@@ -1319,7 +1335,8 @@ def displ_prefixes(request: Request):
                 fix.update({'factor': int(f)})
             else:
                 fix.update({'factor': f})
-            fix.update({'datatype': prefix['type']})
+            dtype = prefix['type'].replace(xsdurl, 'xsd:')
+            fix.update({'datatype': dtype})
             fix.update({'resolution_en': prefix['eDOI']})
             fix.update({'resolution_fr': prefix['fDOI']})
             fixes.append(fix)
