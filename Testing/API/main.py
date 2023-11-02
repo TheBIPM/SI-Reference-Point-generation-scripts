@@ -64,7 +64,7 @@ param_list_lang = ['en', 'fr']
 
 # produce dictionaries of symbol:units / symobol:prefix_name / symbol:prefix_scaling
 # unit_list_dict
-units_query = """
+unts_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
             SELECT ?Unit ?Symbol 
             WHERE
@@ -79,7 +79,7 @@ units_query = """
             """
 
 # run SPARQL query for units
-unitlist = g.query(units_query)
+unitlist = g.query(unts_query)
 unit_list_dict = dict()
 
 for unit in unitlist:
@@ -616,6 +616,185 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
         return TEMPLATES.TemplateResponse(
             "ConstantLayout.html",
             {"request": request, "constant": response}
+        )
+
+
+# ----------------------------------------------------------------------------------------
+@app.get("/units/")
+def displ_baseunitdefinition(request: Request, lang: str | None = 'en'):
+    # endpoint to get all SI allowed unit "
+
+    # check that parameters are allowed
+    for param in request.query_params:
+        if param not in param_list_base_unit_grps:
+            error_msg = "Parameter " + param + " unknown. Allowed parameters: "
+            for allowed_para in param_list_base_units:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(status_code=404, detail=error_msg)
+
+    # check that language is allowed
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language not available {lang}")
+
+    # SPARQL query to get the general information about a unit of measurement
+    units_query = """
+        PREFIX si: <http://si-digital-framework.org/SI#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX units: <http://si-digital-framework.org/SI/units/>
+
+        SELECT ?Unit ?sym ?quant ?defns ?eLabel ?fLabel ?unitType
+        WHERE {
+            ?Unit	rdf:type ?unitType ;
+                    si:isUnitOfQtyKind ?quant ;
+                    skos:prefLabel ?eLabel ;
+                    skos:prefLabel ?fLabel ;
+                    si:hasSymbol ?sym .
+            FILTER (lang(?eLabel) = "en").
+            FILTER (lang(?fLabel) = "fr") .
+            FILTER (?unitType IN (si:SIBaseUnit, si:nonSIUnit, si:SISpecialNamedUnit)) .
+        }
+        ORDER BY ASC(?Unit)
+    """
+
+    # check for data
+    unitset = g.query(units_query)
+
+    # output
+    accept = request.headers.get("Accept")
+    if not accept or accept == "application/json":
+        return {'unit': unitset.bindings}
+    elif accept == 'application/ld+json':
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": siurl,
+                "units": unitsurl,
+                "quantities": quantsurl,
+                "constants": consurl},
+               {"@base": unitsurl}]
+
+        # populate graph
+        jld = {"@context": ctx, "@id": unitsurl, "@type": "si:units"}
+
+        # iterate over units
+        units = []
+        for u in unitset:
+            name = u['Unit'].replace(unitsurl, 'units:')
+            utype = u['unitType'].replace(siurl, 'si:')
+            gph = {"@id": name, "@type": utype}
+            gph.update({"name_en": u['eLabel']})
+            gph.update({"name_fr": u['fLabel']})
+            gph.update({"symbol": u['sym']})
+            quant = u['quant'].replace(quantsurl, 'quantities:')
+            gph.update({"quantity": quant})
+
+            # SPARQL query to get definitions
+            unitname = u['Unit'].replace(unitsurl, '')
+            defns_query = """
+                        PREFIX rb: <http://si-digital-framework.org/bodies#>
+                        PREFIX si: <http://si-digital-framework.org/SI#>
+                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                        PREFIX units: <http://si-digital-framework.org/SI/units/>
+    
+                        SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes 
+                                ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
+                        WHERE {
+                            units:""" + unitname + """ si:hasDefinition ?UnitDefn .
+                            ?UnitDefn	rdf:type si:Definition ;
+                                        si:hasStatus ?status ;
+                                        si:hasStartValidity ?vfrom ;
+                                        si:hasDefiningResolution ?res ;
+                                        si:hasDefiningText ?eText ;
+                                        si:hasDefiningText ?fText ;
+                                        skos:prefLabel ?eLabel ;
+                                        skos:prefLabel ?fLabel .
+                            ?res    rb:hasDOI ?eDOI ;
+                                    rb:hasDOI ?fDOI .
+                            OPTIONAL {?UnitDefn si:hasEndValidity ?vtill .}
+                            OPTIONAL {?UnitDefn si:hasNextDefinition ?next .}
+                            OPTIONAL {?UnitDefn si:hasPreviousDefinition ?prev .}
+                            OPTIONAL {?UnitDefn si:hasDefiningConstant ?const .}
+                            OPTIONAL {?UnitDefn si:hasDefiningEquation ?eqn .}
+                            FILTER (lang(?eLabel) = "en")
+                            FILTER (lang(?eText) = "en")
+                            FILTER (lang(?eDOI) = "en")
+                            FILTER (lang(?fLabel) = "fr")
+                            FILTER (lang(?fText) = "fr")
+                            FILTER (lang(?fDOI) = "fr")
+                    }
+                    """
+
+            # add definitions
+            defns = g.query(defns_query)
+            if defns:
+                defs = []
+                for defn in defns:
+                    dfn = {}
+                    defnname = defn['UnitDefn'].replace(siurl, 'si:')
+                    dfn.update({'@id': defnname, '@type': 'si:Definition'})
+                    dfn.update({'status': defn['status']})
+                    dfn.update({'label_en': defn['eLabel']})
+                    dfn.update({'label_fr': defn['fLabel']})
+                    dfn.update({"definition_en": defn['eText']})
+                    dfn.update({"definition_fr": defn['fText']})
+                    dfn.update({'defining_resolution_en': defn['eDOI']})
+                    dfn.update({'defining_resolution_fr': defn['fDOI']})
+                    dfn.update({'valid_from': defn['vfrom']})
+                    if defn['vtill']:
+                        dfn.update({'valid_till': defn['vtill']})
+                    if defn['const']:
+                        const = defn['const'].replace(consurl, 'constants:')
+                        dfn.update({'defining_constant': const})
+                    if defn['eqn']:
+                        dfn.update({'defining_equation': defn['eqn'].replace("\\\\", "\\")})
+                    if defn['next']:
+                        nxt = defn['next'].replace(siurl, 'si:'),
+                        dfn.update({'next_definition': nxt})
+                    if defn['prev']:
+                        prev = defn['prev'].replace(siurl, 'si:'),
+                        dfn.update({'previous_definition': prev})
+
+                    # search for and add notes
+                    defnname = defn['UnitDefn'].replace(siurl, '')
+                    notes_query = """
+                        PREFIX si: <http://si-digital-framework.org/SI#>
+        
+                        SELECT ?note ?index ?eText ?fText
+                        WHERE {
+                            si:""" + defnname + """	si:hasDefinitionNote ?note .
+                            ?note 			        si:hasNoteIndex ?index ;
+                                                    si:hasNoteText ?eText ;
+                                                    si:hasNoteText ?fText ;
+                            FILTER (lang(?eText) = "en")
+                            FILTER (lang(?fText) = "fr")
+                        }
+                    """
+
+                    # add notes
+                    notes = g.query(notes_query)
+                    ntes = []
+                    for note in notes:
+                        nte = {}
+                        notename = note['note'].replace(siurl, 'si:')
+                        nte.update({'@id': notename, '@type': 'si:DefinitionNote'})
+                        nte.update({'noteindex': note['index']})
+                        nte.update({'notetext_en': note['eText']})
+                        nte.update({'notetext_fr': note['fText']})
+                        ntes.append(nte)
+                    dfn.update({'notes': ntes})
+                    defs.append(dfn)
+                gph.update({'definitions': defs})
+            units.append(gph)
+        jld.update({'units': units})
+
+        return jld
+    else:
+        return TEMPLATES.TemplateResponse(
+            "UnitLayout.html",
+            {"request": request, "units": unitset, "language": lang}
         )
 
 
