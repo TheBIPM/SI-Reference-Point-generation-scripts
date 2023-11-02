@@ -117,7 +117,7 @@
 - identifier: AREA
   quantity-en: area
   quantity-fr: superficie
-  Unit: meters2
+  Unit:
 - identifier: VOLU
   quantity-en: volume
   quantity-fr: volume

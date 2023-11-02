@@ -25,7 +25,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from datetime import date, datetime
 from settings import *
-import re
 
 BASE_PATH = PROJECTBASE + "Testing/API/"
 
@@ -80,10 +79,10 @@ units_query = """
             """
 
 # run SPARQL query for units
-units = g.query(units_query)
+unitlist = g.query(units_query)
 unit_list_dict = dict()
 
-for unit in units:
+for unit in unitlist:
     unit_list_dict[str(unit['Symbol'])] = unit['Unit']
 
 # prefix_list_dict / scaling_list_dict
@@ -101,18 +100,26 @@ fixquery = """
             """
 
 # run SPARQL query for prefixes
-fixes = g.query(fixquery)
+fixlist = g.query(fixquery)
 prefix_list_dict = dict()
 scaling_list_dict = dict()
 
-for fix in fixes:
-    prefix_list_dict[str(fix['Symbol'])] = fix['Prefix']
-    scaling_list_dict[str(fix['Symbol'])] = fix['ScalingFactor']
+for f in fixlist:
+    prefix_list_dict[str(f['Symbol'])] = f['Prefix']
+    scaling_list_dict[str(f['Symbol'])] = f['ScalingFactor']
+
+# define the endpoint urls for the different sections of data
+baseurl = "http://si-digital-framework.org"
+siurl = baseurl + '/SI#'
+quantsurl = baseurl + '/quantities/'
+unitsurl = baseurl + '/SI/units/'
+consurl = baseurl + '/constants/'
+fixesurl = baseurl + '/SI/prefixes/'
+xsdurl = 'http://www.w3.org/2001/XMLSchema#'
 
 
 # ----------------------------------------------------------------------------------------
 # function definitions
-#
 
 
 # get the name of a unit based on the symbol
@@ -256,7 +263,6 @@ def prefixedunit(unit_element: str):
 
 # ----------------------------------------------------------------------------------------
 # API endpoints
-#
 
 
 # ----------------------------------------------------------------------------------------
@@ -275,7 +281,7 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX si: <http://si-digital-framework.org/SI#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX rb: <http://si-digital-framework.org/ResBod#>
+    PREFIX rb: <http://si-digital-framework.org/bodies#>
     
 
     SELECT ?CGPM_title ?Identifier ?Conf_date 
@@ -340,7 +346,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX si: <http://si-digital-framework.org/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX rb: <http://si-digital-framework.org/ResBod#>
+        PREFIX rb: <http://si-digital-framework.org/bodies#>
 
         SELECT ?Event_title ?Conf ?Identifier ?Event_date
         WHERE {
@@ -361,7 +367,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX si: <http://si-digital-framework.org/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-            PREFIX rb: <http://si-digital-framework.org/ResBod#>
+            PREFIX rb: <http://si-digital-framework.org/bodies#>
 
             SELECT ?Event_title ?Event_date ?Outcome_Nr ?Outcome_title ?Outcome_DOI
             WHERE {
@@ -410,7 +416,6 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 
 
 # ----------------------------------------------------------------------------------------
-# noinspection DuplicatedCode
 @app.get("/constants/")
 def displ_constants(request: Request, lang: str | None = 'en'):
     """ endpoint to get the full list of defining constants """
@@ -466,11 +471,6 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             status_code=404, detail=f"No constants data found.")
 
     # generate output
-    baseurl = "http://si-digital-framework.org"
-    consurl = baseurl + '/constants/'
-    siurl = baseurl + '/SI#'
-    xsdurl = 'http://www.w3.org/2001/XMLSchema#'
-
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'constants': consset.bindings}
@@ -500,8 +500,8 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             con.update({"unit": constant['ustr']})
             con.update({'defining_resolution_en': constant['eDOI']})
             con.update({'defining_resolution_fr': constant['fDOI']})
-            unit = constant['unit'].replace(siurl, 'si:')
-            con.update({'defines': unit})
+            unt = constant['unit'].replace(siurl, 'si:')
+            con.update({'defines': unt})
             cons.append(con)
         jld.update({"constants": cons})
         return jld
@@ -619,6 +619,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
         )
 
 
+# ----------------------------------------------------------------------------------------
 @app.get("/baseunit/{unitname}")
 def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang: str | None = 'en',
                              datestr: str | None = str(date.today())):
@@ -637,9 +638,10 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
 
     # these are the names of the units in the ttl file, language specific not needed here
     allowed = ['ampere', 'metre', 'kilogram', 'second', 'mole', 'candela', 'kelvin', 'arcminute', 'arcsecond', 'dalton',
-               'astronomicalunit', 'day', 'degree', 'electronvolt', 'hour', 'litre', 'minute', 'tonne', 'becquerel',
-               'coulomb', 'degreeCelsius', 'farad', 'gray', 'henry', 'hertz', 'joule', 'katal', 'lumen', 'lux',
-               'newton', 'ohm', 'pascal', 'radian', 'siemens', 'sievert', 'steradian', 'tesla', 'volt', 'watt', 'weber']
+               'astronomicalunit', 'becquerel', 'bel', 'day', 'decibel', 'degree', 'electronvolt', 'hour', 'litre',
+               'minute', 'tonne', 'coulomb', 'degreeCelsius', 'farad', 'gray', 'henry', 'hertz', 'joule', 'katal',
+               'lumen', 'lux', 'newton', 'ohm', 'pascal', 'radian', 'siemens', 'sievert', 'steradian', 'tesla', 'volt',
+               'watt', 'weber', 'neper']
 
     if unitname not in allowed:
         raise HTTPException(
@@ -670,7 +672,6 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
 
     # organize data
     response: dict = {}
-    baseurl = "http://si-digital-framework.org/SI"
     uniturl = baseurl + '/units/' + unitname
     unitdata = {}
     for row in unitset:
@@ -813,7 +814,7 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     PREFIX si: <http://si-digital-framework.org/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    PREFIX rb: <http://si-digital-framework.org/ResBod#>
+                    PREFIX rb: <http://si-digital-framework.org/bodies#>
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
@@ -889,7 +890,7 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX si: <http://si-digital-framework.org/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX rb: <http://si-digital-framework.org/ResBod#>
+        PREFIX rb: <http://si-digital-framework.org/bodies#>
 
         SELECT DISTINCT ?NoteIndex ?NoteText           
             WHERE 
@@ -995,7 +996,7 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     PREFIX si: <http://si-digital-framework.org/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    PREFIX rb: <http://si-digital-framework.org/ResBod#>
+                    PREFIX rb: <http://si-digital-framework.org/bodies#>
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution ?NoteText
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
@@ -1083,7 +1084,7 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
 # ----------------------------------------------------------------------------------------
 # displays ALL SI units, i.e. SI Units with special names AND SI Base Units
-@app.get("/si-units/")
+@app.get("/SI/units/")
 def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en'):
     for param in request.query_params:
         if param not in param_list_named_units:
@@ -1306,11 +1307,6 @@ def displ_prefixes(request: Request):
             status_code=404, detail=f"SPARQL query not working?.")
 
     # generate output
-    baseurl = "http://si-digital-framework.org"
-    fixesurl = baseurl + '/SI/prefixes/'
-    siurl = baseurl + '/SI#'
-    xsdurl = 'http://www.w3.org/2001/XMLSchema#'
-
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'prefixes': fixset.bindings}
@@ -1330,11 +1326,11 @@ def displ_prefixes(request: Request):
             fix.update({"name_fr": prefix['fText']})
             fix.update({'symbol': prefix['sym']})
             # needed to correctly display factor as numeric value in JSON
-            f = float(prefix['factor'])
-            if 1 < f < 1E+18:
-                fix.update({'factor': int(f)})
+            factor = float(prefix['factor'])
+            if 1 < factor < 1E+18:
+                fix.update({'factor': int(factor)})
             else:
-                fix.update({'factor': f})
+                fix.update({'factor': factor})
             dtype = prefix['type'].replace(xsdurl, 'xsd:')
             fix.update({'datatype': dtype})
             fix.update({'resolution_en': prefix['eDOI']})
@@ -1537,10 +1533,6 @@ def displ_quants(request: Request, lang: str | None = 'en'):
             detail=f"No Quantity corresponding to the request (Language = {lang}).")
 
     # generate output
-    baseurl = "http://si-digital-framework.org"
-    quantsurl = baseurl + '/quantities/'
-    unitsurl = baseurl + '/SI/units/'
-
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
         return {'quantities': quantset.bindings}
@@ -1553,8 +1545,9 @@ def displ_quants(request: Request, lang: str | None = 'en'):
             u = q['unit'].replace(unitsurl, "units:")
             units[q['code']].append(u)
         # create context
-        ctx = ["https://stuchalk.github.io/scidata/contexts/quantities.jsonld",
-               {"si": "http://si-digital-framework.org/SI/sio.owl"},
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": "http://si-digital-framework.org/SI#",
+                'units': unitsurl},
                {"@base": quantsurl}]
         jld = {"@context": ctx, "@id": quantsurl, "@type": "si:QuantityKind"}
         quants = []
@@ -1563,7 +1556,7 @@ def displ_quants(request: Request, lang: str | None = 'en'):
             u = quant['unit'].replace(unitsurl, "units:")
             if u == units[quant['code']][0]:
                 name = quant['quant'].replace(quantsurl, "quantities:")
-                qty = {"@id": name, "@type":"siQuantityKind"}
+                qty = {"@id": name, "@type": "si:QuantityKind"}
                 qty.update({"name_en": quant['eText']})
                 qty.update({"name_fr": quant['fText']})
                 qty.update({'code': quant['code']})
