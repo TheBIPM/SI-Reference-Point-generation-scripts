@@ -1,0 +1,323 @@
+- URI: ampere1948
+  prefLabel_fr: ampère1948
+  prefLabel_en: ampere1948
+  hasStartValidity: '1948-05-20'
+  hasEndValidity: '2019-05-20'
+  hasDefiningText_fr: L’ampère est l’intensité d’un courant constant qui, maintenu
+    dans deux conducteurs parallèles, rectilignes, de longueur infinie, de section
+    circulaire négligeable et placés à une distance de 1 mètre l’un de l’autre dans
+    le vide, produirait entre ces conducteurs une force égale à @afev@ newton par
+    mètre de longueur.
+  hasDefiningText_en: The ampere is that constant current which, if maintained in
+    two straight parallel conductors of infinite length, of negligible circular cross-section,
+    and placed 1 metre apart in vacuum, would produce between these conductors a force
+    equal to @afev@ newton per metre of length.
+  hasDefiningResolution: CGPM9-Res2
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: ELCU
+  Status: superseded
+- URI: ampere2018
+  prefLabel_fr: ampère2018
+  prefLabel_en: ampere2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: L’ampère, symbole @amps@, est l’unité de courant électrique
+    du SI. Il est défini en prenant la valeur numérique fixée de la charge élémentaire,
+    @elms@, égale à @elmv@ lorsqu’elle est exprimée en @cous@, unité égale à @amss@,
+    la seconde étant définie en fonction de @hfcs@.
+  hasDefiningText_en: The ampere, symbol @amps@, is the SI unit of electric current.
+    It is defined by taking the fixed numerical value of the elementary charge, @elms@,
+    to be @elmv@ when expressed in the unit @cous@, which is equal to @amss@, where
+    the second is defined in terms of @hfcs@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@amps@} = \left(\frac{@elms@}{@elmv@}\right) {@secs@}^{-1}
+  hasDefiningConstant: ElementaryCharge
+  UnitOfQtyKind: ELCU
+  Status: current
+- URI: candela1979
+  prefLabel_fr: candela1979
+  prefLabel_en: candela1979
+  hasStartValidity: '1979-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: La candela est l’intensité lumineuse, dans une direction donnée,
+    d’une source qui émet un rayonnement monochromatique de fréquence @morv@ hertz
+    et dont l’intensité énergétique dans cette direction est @radi@ watt par stéradian.
+  hasDefiningText_en: The candela is the luminous intensity, in a given direction,
+    of a source that emits monochromatic radiation of frequency \(540 \times 10^{12}\)
+    hertz and that has a radiant intensity in that direction of @radi@ watt per steradian.
+  hasDefiningResolution: CGPM16-Res3
+  hasDefiningEquation:
+  hasDefiningConstant: LuminousEfficacy
+  UnitOfQtyKind: LUIN
+  Status: superseded
+- URI: candela2018
+  prefLabel_fr: candela2018
+  prefLabel_en: candela2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: La candela, symbole @cans@, est l’unité du SI d’intensité lumineuse
+    dans une direction donnée. Elle est définie en prenant la valeur numérique fixée
+    de l’efficacité lumineuse d’un rayonnement monochromatique de fréquence @movu@,
+    @mors@, égale à @radv@ lorsqu’elle est exprimée en @lpws@, unité égale à @csws@,
+    ou @csks@, le kilogramme, le mètre et la seconde étant définis en fonction de
+    @plks@, @sols@ et @hfcs@.
+  hasDefiningText_en: The candela, symbol @cans@, is the SI unit of luminous intensity
+    in a given direction. It is defined by taking the fixed numerical value of the
+    luminous efficacy of monochromatic radiation of frequency @movu@, @mors@, to be
+    @radv@ when expressed in the unit @lpws@, which is equal to @csws@, or @csks@,
+    where the kilogram, metre and second are defined in terms of @plks@, @sols@ and
+    @hfcs@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@cans@} = \left(\frac{@lecs@}{@lecv@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}\;{@strs@}^{-1}
+  hasDefiningConstant: LuminousEfficacy
+  UnitOfQtyKind: LUIN
+  Status: current
+- URI: kelvin1967
+  prefLabel_fr: kelvin1967
+  prefLabel_en: kelvin1967
+  hasStartValidity: '1967-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: Le kelvin, unité de température thermodynamique, est la fraction
+    @celi@ de la température thermodynamique du point triple de l'eau.
+  hasDefiningText_en: The kelvin, unit of thermodynamic temperature, is the fraction
+    @celi@ of the thermodynamic temperature of the triple point of water.
+  hasDefiningResolution: CGPM13-Res4
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: TEMT
+  Status: superseded
+- URI: kelvin2018
+  prefLabel_fr: kelvin2018
+  prefLabel_en: kelvin2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: Le kelvin, symbole @kels@, est l’unité de température thermodynamique
+    du SI. Il est défini en prenant la valeur numérique fixée de la constante de Boltzmann,
+    @bols@, égale à @bolv@ lorsqu’elle est exprimée en @jpks@, unité égale à @kgss@,
+    le kilogramme, le mètre et la seconde étant définis en fonction de @plks@, @sols@
+    et @hfcs@.
+  hasDefiningText_en: The kelvin, symbol @kels@, is the SI unit of thermodynamic temperature.
+    It is defined by taking the fixed numerical value of the Boltzmann constant, @bols@,
+    to be @bolv@ when expressed in the unit @jpks@, which is equal to @kgss@, where
+    the kilogram, metre and second are defined in terms of @plks@, @sols@ and @hfcs@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@kels@} = \left(\frac{@bolv@}{@bols@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}
+  hasDefiningConstant: BoltzmannConstant
+  UnitOfQtyKind: TEMT
+  Status: current
+- URI: kilogram1901
+  prefLabel_fr: kilogramme1901
+  prefLabel_en: kilogram1901
+  hasStartValidity: '1901-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: Le kilogramme est l’unité de masse ; il est égal à la masse
+    du prototype international du kilogramme.
+  hasDefiningText_en: The kilogram is the unit of mass; it is equal to the mass of
+    the international prototype of the kilogram.
+  hasDefiningResolution: CGPM3-Res2
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: MASS
+  Status: superseded
+- URI: kilogram2018
+  prefLabel_fr: kilogramme2018
+  prefLabel_en: kilogram2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: Le kilogramme, symbole @kgms@, est l’unité de masse du SI. Il
+    est défini en prenant la valeur numérique fixée de la constante de Planck, @plks@,
+    égale à @plkv@ lorsqu’elle est exprimée en @plku@, unité égale à @kmis@, le mètre
+    et la seconde étant définis en fonction de @sols@ et @hfcs@.
+  hasDefiningText_en: The kilogram, symbol @kgms@, is the SI unit of mass. It is defined
+    by taking the fixed numerical value of the Planck constant, @plks@, to be @plkv@
+    when expressed in the unit @plku@, which is equal to @kmis@, where the metre and
+    the second are defined in terms of @sols@ and @hfcs@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@kgms@} = \left(\frac{@plks@}{@plkv@}\right) {@mtrs@}^{-2}\;{@secs@}
+  hasDefiningConstant: PlanckConstant
+  UnitOfQtyKind: MASS
+  Status: current
+- URI: metre1889
+  prefLabel_fr: mètre1889
+  prefLabel_en: metre1889
+  hasStartValidity: '1889-05-20'
+  hasEndValidity: '1927-05-19'
+  hasDefiningText_fr: La CGPM sanctionne le Prototype du mètre choisi par le Comité
+    international. Ce prototype représentera désormais, à la température de la glace
+    fondante, l'unité métrique de longueur.
+  hasDefiningText_en: The CGPM sanctions the Prototype of the metre chosen by the
+    CIPM. This prototype, at the temperature of melting ice, shall henceforth represent
+    the metric unit of length.
+  hasDefiningResolution: CGPM1-Res1
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: LENG
+  Status: superseded
+- URI: metre1927
+  prefLabel_fr: mètre1927
+  prefLabel_en: metre1927
+  hasStartValidity: '1927-05-20'
+  hasEndValidity: '1960-05-19'
+  hasDefiningText_fr: L'unité de longueur est le mètre, défini par la distance, à
+    @zdeg@, des axes des deux traits médians tracés sur la barre de platine iridié
+    déposée au Bureau international des poids et mesures, et déclarée Prototype du
+    mètre par la Première Conférence générale des poids et mesures, cette règle étant
+    soumise à la pression atmosphérique normale et supportée par deux rouleaux d'au
+    moins un centimètre de diamètre, situés symétriquement dans un même plan horizontal
+    et à la distance de @mpvu@ l'un de l'autre.
+  hasDefiningText_en: The unit of length is the metre, defined by the distance, at
+    0°, between the axes of the two central lines marked on the bar of platinum-iridium
+    kept at the Bureau International des Poids et Mesures and declared Prototype of
+    the metre by the 1st Conférence Générale des Poids et Mesures, this bar being
+    subject to standard atmospheric pressure and supported on two cylinders of at
+    least one centimetre diameter, symmetrically placed in the same horizontal plane
+    at a distance of @mpvu@ from each other.
+  hasDefiningResolution: CGPM7-Res1
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: LENG
+  Status: superseded
+- URI: metre1960
+  prefLabel_fr: mètre1960
+  prefLabel_en: metre1960
+  hasStartValidity: '1960-05-20'
+  hasEndValidity: '1983-05-19'
+  hasDefiningText_fr: Le mètre est la longueur égale à @mvwv@ longueurs d'onde dans
+    le vide de la radiation correspondant à la transition entre les niveaux @porb@
+    et @dorb@ de l'atome de krypton 86.
+  hasDefiningText_en: The metre is the length equal to @mvwv@ wavelengths in vacuum
+    of the radiation corresponding to the transition between the levels @porb@ and
+    @dorb@ of the krypton 86 atom.
+  hasDefiningResolution: CGPM11-Res6
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: LENG
+  Status: superseded
+- URI: metre1983
+  prefLabel_fr: mètre1983
+  prefLabel_en: metre1983
+  hasStartValidity: '1983-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: Le mètre est la longueur du trajet parcouru dans le vide par
+    la lumière pendant une durée de @soli@ de seconde.
+  hasDefiningText_en: The metre is the length of the path travelled by light in vacuum
+    during a time interval of @soli@ of a second.
+  hasDefiningResolution: CGPM17-Res1
+  hasDefiningEquation:
+  hasDefiningConstant: SpeedOfLight
+  UnitOfQtyKind: LENG
+  Status: superseded
+- URI: metre2018
+  prefLabel_fr: mètre2018
+  prefLabel_en: metre2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: Le mètre, symbole @mtrs@, est l’unité de longueur du SI. Il
+    est défini en prenant la valeur numérique fixée de la vitesse de la lumière dans
+    le vide, @sols@, égale à @solv@ lorsqu’elle est exprimée en @solu@, la seconde
+    étant définie en fonction de @hfcs@.
+  hasDefiningText_en: The metre, symbol @mtrs@, is the SI unit of length. It is defined
+    by taking the fixed numerical value of the speed of light in vacuum, @sols@, to
+    be @solv@ when expressed in the unit @solu@, where the second is defined in terms
+    of the caesium frequency @hfcs@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@mtrs@} = \left(\frac{@sols@}{@solv@}\right) {@secs@} =
+    \frac{@hfcv@}{@solv@} \frac{@sols@}{@hfcs@} \approx @hslv@ \frac{@sols@}{@hfcs@}
+  hasDefiningConstant: SpeedOfLight
+  UnitOfQtyKind: LENG
+  Status: current
+- URI: mole1971
+  prefLabel_fr: mole1971
+  prefLabel_en: mole1971
+  hasStartValidity: '1971-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: 1. La mole est la quantité de matière d’un système contenant
+    autant d’entités élémentaires qu’il y a d’atomes dans 0,012 kilogramme de carbone
+    12 ; son symbole est « mol ». 2. Lorsqu’on emploie la mole, les entités élémentaires
+    doivent être spécifiées et peuvent être des atomes, des molécules, des ions, des
+    électrons, d’autres particules ou des groupements spécifiés de telles particules.
+  hasDefiningText_en: 1. The mole is the amount of substance of a system which contains
+    as many elementary entities as there are atoms in 0.012 kilogram of carbon 12;
+    its symbol is “mol”. 2. When the mole is used, the elementary entities must be
+    specified and may be atoms, molecules, ions, electrons, other particles, or specified
+    groups of such particles.
+  hasDefiningResolution: CGPM14-Res3
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: AMSU
+  Status: superseded
+- URI: mole2018
+  prefLabel_fr: mole2018
+  prefLabel_en: mole2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: La mole, symbole @mols@, est l’unité de quantité de matière
+    du SI. Une mole contient exactement @avov@ entités élémentaires. Ce nombre, appelé
+    « nombre d’Avogadro », correspond à la valeur numérique fixée de la constante
+    d’Avogadro, @avos@, lorsqu’elle est exprimée en @moli@. La quantité de matière,
+    symbole @aoss@, d’un système est une représentation du nombre d’entités élémentaires
+    spécifiées. Une entité élémentaire peut être un atome, une molécule, un ion, un
+    électron, ou toute autre particule ou groupement spécifié de particules.
+  hasDefiningText_en: The mole, symbol @mols@, is the SI unit of amount of substance.
+    One mole contains exactly @avov@ elementary entities. This number is the fixed
+    numerical value of the Avogadro constant, @avos@, when expressed in the unit @moli@
+    and is called the Avogadro number. The amount of substance, symbol @aoss@, of
+    a system is a measure of the number of specified elementary entities. An elementary
+    entity may be an atom, a molecule, an ion, an electron, any other particle or
+    specified group of particles.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@mols@} = \left(\frac{@avov@}{@avos@}\right)
+  hasDefiningConstant: AvogadroConstant
+  UnitOfQtyKind: AMSU
+  Status: current
+- URI: second1960
+  prefLabel_fr: seconde1960
+  prefLabel_en: second1960
+  hasStartValidity: '1960-05-20'
+  hasEndValidity: '1967-05-19'
+  hasDefiningText_fr: La seconde est la fraction @secf@ de l'année tropique pour 1900
+    janvier 0 à 12 heures de temps des éphémérides.
+  hasDefiningText_en: The second is the fraction @secf@ of the tropical year for 1900
+    January 0 at 12 hours ephemeris time.
+  hasDefiningResolution: CGPM11-Res9
+  hasDefiningEquation:
+  hasDefiningConstant:
+  UnitOfQtyKind: TIME
+  Status: superseded
+- URI: second1967
+  prefLabel_fr: seconde1967
+  prefLabel_en: second1967
+  hasStartValidity: '1967-05-20'
+  hasEndValidity: '2019-05-19'
+  hasDefiningText_fr: La seconde est la durée de @hfcv@ périodes de la radiation correspondant
+    à la transition entre les deux niveaux hyperfins de l’état fondamental de l’atome
+    de césium 133.
+  hasDefiningText_en: The second is the duration of @hfcv@ periods of the radiation
+    corresponding to the transition between the two hyperfine levels of the ground
+    state of the caesium 133 atom.
+  hasDefiningResolution: CGPM13-Res1
+  hasDefiningEquation:
+  hasDefiningConstant: HyperfineTransitionFrequencyOfCs-133
+  UnitOfQtyKind: TIME
+  Status: superseded
+- URI: second2018
+  prefLabel_fr: seconde2018
+  prefLabel_en: second2018
+  hasStartValidity: '2019-05-20'
+  hasEndValidity:
+  hasDefiningText_fr: La seconde, symbole @secs@, est l’unité de temps du SI. Elle
+    est définie en prenant la valeur numérique fixée de la fréquence du césium, @hfcs@,
+    la fréquence de la transition hyperfine de l’état fondamental de l’atome de césium
+    133 non perturbé, égale à @hfcv@ lorsqu’elle est exprimée en @hfcu@, unité égale
+    à @seci@.
+  hasDefiningText_en: The second, symbol @secs@, is the SI unit of time. It is defined
+    by taking the fixed numerical value of the caesium frequency, @hfcs@, the unperturbed
+    ground-state hyperfine transition frequency of the caesium 133 atom, to be @hfcv@
+    when expressed in the unit @hfcu@, which is equal to @seci@.
+  hasDefiningResolution: CGPM26-Res1
+  hasDefiningEquation: 1\;{@htzs@} = \frac{@hfcs@}{@hfcv@} \quad {\rm{or}} \quad 1\;{@secs@}
+    = \frac{@hfcv@}{@hfcs@}
+  hasDefiningConstant: HyperfineTransitionFrequencyOfCs-133
+  UnitOfQtyKind: TIME
+  Status: current

@@ -1,0 +1,1245 @@
+90cs:
+  name_en: ITS-90 Celsius symbol
+  name_fr: ''
+  type: symbol
+  latex: t_{90}
+  text:
+  html: ''
+  json: ''
+90ks:
+  name_en: ITS-90 Kelvin symbol
+  name_fr: ''
+  type: symbol
+  latex: T_{90}
+  text:
+  html: ''
+  json: ''
+afev:
+  name_en: Ampere force equivalent value
+  name_fr: ''
+  type: symbol
+  latex: 2 \times 10^{-7}
+  text:
+  html: ''
+  json: ''
+ampa:
+  name_en: Ampere alternate equation
+  name_fr: ''
+  type: equation
+  latex: 1\;@amps@ = \frac{1}{(@hfcv@)(@elmv@)}\,@hfcs@\;@elms@ \approx @icev@ @hfcs@\;@elms@
+  text:
+  html: ''
+  json: ''
+ampd:
+  name_en: Ampere definition equation
+  name_fr: ''
+  type: equation
+  latex: 1\;@amps@ = \left(\frac{@elms@}{@elmv@}\right)\ @seci@
+  text:
+  html: ''
+  json: ''
+amps:
+  name_en: Ampere unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{A}
+  text: A
+  html: ''
+  json: ''
+amss:
+  name_en: Ampere second unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@amps@\ @secs@'
+  text: '@amps@ @secs@'
+  html: ''
+  json: ''
+aoss:
+  name_en: Amount of substance quantity symbol
+  name_fr: ''
+  type: symbol
+  latex: n
+  text:
+  html: ''
+  json: ''
+arcm:
+  name_en: arcminute
+  name_fr: ''
+  type: symbol
+  latex: ^{\prime}
+  text:
+  html: ''
+  json: ''
+arcs:
+  name_en: arcsecond
+  name_fr: ''
+  type: symbol
+  latex: ^{\prime \prime}
+  text:
+  html: ''
+  json: ''
+avos:
+  name_en: Avogadro constant symbol
+  name_fr: ''
+  type: symbol
+  latex: N_{\rm{A}}
+  text:
+  html: ''
+  json: ''
+avov:
+  name_en: Avogadro constant value
+  name_fr: ''
+  type: symbol
+  latex: 6.022\:140\:76 \times 10^{23}
+  text:
+  html: ''
+  json: ''
+avox:
+  name_en: Avogadro constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@avos@ = @avov@\ @moli@'
+  text:
+  html: ''
+  json: ''
+becs:
+  name_en: Becquerel unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Bq}
+  text:
+  html: ''
+  json: ''
+bols:
+  name_en: Boltzmann constant symbol
+  name_fr: ''
+  type: symbol
+  latex: k
+  text:
+  html: ''
+  json: ''
+bolu:
+  name_en: Boltzmann constant unit
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\:@mtrs@^{2}\:@secs@^{-2}'
+  text:
+  html: ''
+  json: ''
+bolv:
+  name_en: Boltzmann constant value
+  name_fr: ''
+  type: symbol
+  latex: 1.380\:649 \times 10^{-23}
+  text:
+  html: ''
+  json: ''
+bolx:
+  name_en: Boltzmann constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@bols@ = @bolv@\ @kmss@'
+  text:
+  html: ''
+  json: ''
+bpev:
+  name_en: Boltzmann constant / (Planck constant *elementary charge) value
+  name_fr: ''
+  type: symbol
+  latex: 2.266\:6653
+  text:
+  html: ''
+  json: ''
+c2kd:
+  name_en: Celsius to Kelvin definition
+  name_fr: ''
+  type: equation
+  latex: '@cels@/@ceus@ = @tmps@/@kels@ - @celo@'
+  text:
+  html: ''
+  json: ''
+cana:
+  name_en: Candela unit alternate definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@cans@ = \frac{1}{(@plkv@)\:(@hfcv@)^{2}\:@radv@} (@hfcs@)^{2}\:@plks@\:@mors@
+    \approx 2.614\:830 \times 10^{10} (@hfcs@)^{2}\:@plks@\:@mors@
+  text:
+  html: ''
+  json: ''
+cand:
+  name_en: Candela unit definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@cans@ = \left(\frac{@mors@}{@radv@}\right)\ @cnsi@
+  text:
+  html: ''
+  json: ''
+cans:
+  name_en: Candela unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{cd}
+  text:
+  html: ''
+  json: ''
+cefi:
+  name_en: Inverse Celsius to Kelvin offset (French)
+  name_fr: ''
+  type: symbol
+  latex: 1/@cefo@
+  text:
+  html: ''
+  json: ''
+cefo:
+  name_en: Celsius to Kelvin offset (French)
+  name_fr: ''
+  type: symbol
+  latex: 273,16
+  text:
+  html: ''
+  json: ''
+celd:
+  name_en: Celsius temperature quantity definition
+  name_fr: ''
+  type: equation
+  latex: '@cels@ = @tmps@ - @fpws@'
+  text:
+  html: ''
+  json: ''
+cele:
+  name_en: Celsius temperature quantity equation
+  name_fr: ''
+  type: equation
+  latex: '@cels@/@ceus@ = @tmps@/@kels@ - @celo@'
+  text:
+  html: ''
+  json: ''
+celi:
+  name_en: Inverse Celsius to Kelvin offset (English)
+  name_fr: ''
+  type: symbol
+  latex: 1/@celo@
+  text:
+  html: ''
+  json: ''
+celo:
+  name_en: Celsius to Kelvin offset (English)
+  name_fr: ''
+  type: symbol
+  latex: '273.16'
+  text:
+  html: ''
+  json: ''
+cels:
+  name_en: Celsius temperature quantity symbol
+  name_fr: ''
+  type: symbol
+  latex: t
+  text:
+  html: ''
+  json: ''
+ceus:
+  name_en: Celsius unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{@circ@{C}}
+  text:
+  html: ''
+  json: ''
+circ:
+  name_en: Degree
+  name_fr: ''
+  type: symbol
+  latex: ^\circ
+  text:
+  html: ''
+  json: ''
+cnsi:
+  name_en: Candela unit in SI symbol
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\ @mtrs@^2\ @secs@^{-3}\ @strs@^{-1}'
+  text:
+  html: ''
+  json: ''
+cous:
+  name_en: Coulomb unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{C}
+  text: C
+  html: ''
+  json: ''
+csis:
+  name_en: Caesium 133 isotope symbol
+  name_fr: ''
+  type: symbol
+  latex: ^{133}\rm{Cs}
+  text:
+  html: ''
+  json: ''
+csks:
+  name_en: Candela steradian per kilogram inv. metre squared. second cubed unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@cans@\ @strs@\ @kgms@^{-1}\ @mtrs@^{-2}\ @secs@^{3}'
+  text:
+  html: ''
+  json: ''
+csws:
+  name_en: Candela steradian per watt unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@cans@\ @strs@\ @wats@^{-1}'
+  text:
+  html: ''
+  json: ''
+divu:
+  name_en: Radiation direction value/unit
+  name_fr: ''
+  type: symbol
+  latex: '@radi@\ @wpss@'
+  text:
+  html: ''
+  json: ''
+dorb:
+  name_en: 5d5 orbital
+  name_fr: ''
+  type: symbol
+  latex: 5\rm{d}^{5}
+  text:
+  html: ''
+  json: ''
+ebts:
+  name_en: Energy as Boltzmann * temperature symbol
+  name_fr: ''
+  type: symbol
+  latex: '@bols@@tmps@'
+  text:
+  html: ''
+  json: ''
+ebtv:
+  name_en: Energy as Boltzmann * temperature value
+  name_fr: ''
+  type: symbol
+  latex: '@bolv@\ @jles@'
+  text:
+  html: ''
+  json: ''
+eces:
+  name_en: Elementry chemical entity symbol
+  name_fr: ''
+  type: symbol
+  latex: m(\rm{X})
+  text:
+  html: ''
+  json: ''
+elmd:
+  name_en: Elementary charge constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@elms@ = @elmv@\ @amss@'
+  text:
+  html: ''
+  json: ''
+elmi:
+  name_en: Inverse elementary charge constant value
+  name_fr: ''
+  type: symbol
+  latex: 1/(@elmv@)
+  text:
+  html: ''
+  json: ''
+elms:
+  name_en: Elementary charge constant symbol
+  name_fr: ''
+  type: symbol
+  latex: e
+  text: e
+  html: ''
+  json: ''
+elmv:
+  name_en: Elementary charge constant value
+  name_fr: ''
+  type: symbol
+  latex: 1.602\:176\:634 \times 10^{-19}
+  text: 1.602 176 634 x 10^-19
+  html: ''
+  json: ''
+emms:
+  name_en: Entity molar mass symbol
+  name_fr: ''
+  type: symbol
+  latex: M(\rm{X})
+  text:
+  html: ''
+  json: ''
+fars:
+  name_en: Farad unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{F}
+  text:
+  html: ''
+  json: ''
+fpwd:
+  name_en: Freezing point of water definition
+  name_fr: ''
+  type: symbol
+  latex: '@fpws@ = @celo@\ @kels@'
+  text:
+  html: ''
+  json: ''
+fpws:
+  name_en: Freezing point of water symbol
+  name_fr: ''
+  type: symbol
+  latex: T_{0}
+  text:
+  html: ''
+  json: ''
+frqs:
+  name_en: Frequency symbol
+  name_fr: ''
+  type: symbol
+  latex: \nu
+  text:
+  html: ''
+  json: ''
+fscd:
+  name_en: Fine structure constant definition
+  name_fr: ''
+  type: symbol
+  latex: '@fscs@ = @elms@^{2} (2@sols@@veps@@plks@)'
+  text:
+  html: ''
+  json: ''
+fscs:
+  name_en: Fine structure constant symbol
+  name_fr: ''
+  type: symbol
+  latex: \alpha
+  text:
+  html: ''
+  json: ''
+grys:
+  name_en: Gray unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Gy}
+  text:
+  html: ''
+  json: ''
+hens:
+  name_en: Henry unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{H}
+  text:
+  html: ''
+  json: ''
+htzs:
+  name_en: Hertz unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Hz}
+  text:
+  html: ''
+  json: ''
+hfcs:
+  name_en: Hyperfine caesium constant symbol
+  name_fr: ''
+  type: symbol
+  latex: \Delta\nu_{\rm{Cs}}
+  text: ΔνCs
+  html: ''
+  json: ''
+hfcu:
+  name_en: Hyperfine caesium constant unit
+  name_fr: ''
+  type: symbol
+  latex: '@htzs@'
+  text:
+  html: ''
+  json: ''
+hfcv:
+  name_en: Hyperfine caesium constant value
+  name_fr: ''
+  type: symbol
+  latex: 9\:192\:631\:770
+  text: 9 192 631 770
+  html: ''
+  json: ''
+hfcx:
+  name_en: Hyperfine caesium constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@hfcs@ = @hfcv@\ @hfcu@'
+  text:
+  html: ''
+  json: ''
+hslv:
+  name_en: Hyperfine caesium/speed of light value
+  name_fr: ''
+  type: symbol
+  latex: 30.663\:319
+  text: 30.663 319
+  html: ''
+  json: ''
+icev:
+  name_en: Inverse hyperfine caesium elementary charge value
+  name_fr: ''
+  type: symbol
+  latex: 6.789\:687 \times 10^{8}
+  text:
+  html: ''
+  json: ''
+jles:
+  name_en: Joule unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{J}
+  text: J
+  html: ''
+  json: ''
+jpks:
+  name_en: Joule per kelvin unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@jles@\ @kels@^{-1}'
+  text:
+  html: ''
+  json: ''
+kats:
+  name_en: Katal unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{kat}
+  text:
+  html: ''
+  json: ''
+kels:
+  name_en: Kelvin unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{K}
+  text:
+  html: ''
+  json: ''
+kgmd:
+  name_en: Kilogram unit definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@kgms@ = \left(\frac{@plks@}{@plkv@}\right)\ @smsu@
+  text: 1 @kgms@ = (@plks@/@plkv@) @smsu@
+  html: ''
+  json: ''
+kgmp:
+  name_en: Kilogram prototype symbol
+  name_fr: ''
+  type: symbol
+  latex: m(\mathcal{K})
+  text: m(𝒦)
+  html: ''
+  json: ''
+kgms:
+  name_en: Kilogram unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{kg}
+  text: kg
+  html: ''
+  json: ''
+kgod:
+  name_en: Kilogram alternate definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@kgms@ = \frac{(@solv@)^{2}}{(@plkv@)(@hfcv@)} \frac{@plks@\,@hfcs@}{@sols@^{2}}
+    \approx @sphv@ \frac{@plks@\,@hfcs@}{@sols@^{2}}
+  text: 1 @kgms@ = (@sols@^2;/(@plkv@)(@hfcv@)) (@plks@ @hfcs@)/@solv@^2; ≈ @sphv@
+    (@plks@ @hfcs@)/@sols@^2;
+  html: ''
+  json: ''
+kgss:
+  name_en: Kilogram, metre squared, inverse second squared, per kelvin unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\ @mtrs@^{2}\ @secs@^{-2}\ @kels@^{-1}'
+  text:
+  html: ''
+  json: ''
+kims:
+  name_en: Kilogram per mole unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{kg/mol}
+  text:
+  html: ''
+  json: ''
+kmis:
+  name_en: Kilogram, metre squared, inverse second unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\ @mtrs@^{2}\ @secs@^{-1}'
+  text:
+  html: ''
+  json: ''
+kmss:
+  name_en: Kilogram metre squared second inv. squared per kelvin unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\ @mtrs@^{2}\ @secs@^{-2}\ @kels@^{-1}'
+  text:
+  html: ''
+  json: ''
+kpms:
+  name_en: Kilogram prototype definition
+  name_fr: ''
+  type: symbol
+  latex: '@kgmp@ = 1\ @kgms@'
+  text: '@kgmp@ = 1 @kgms@'
+  html: ''
+  json: ''
+lecs:
+  name_en: luminous efficacy constant symbol
+  name_fr: ''
+  type: symbol
+  latex: K_{\rm{cd}}
+  text:
+  html: ''
+  json: ''
+lecv:
+  name_en: luminous efficacy constant value
+  name_fr: ''
+  type: symbol
+  latex: '683'
+  text:
+  html: ''
+  json: ''
+lpws:
+  name_en: Lumen per watt unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@lums@\ @wats@^{-1} '
+  text:
+  html: ''
+  json: ''
+lums:
+  name_en: Lumen unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{lm}
+  text:
+  html: ''
+  json: ''
+luxs:
+  name_en: Lux unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{lx}
+  text:
+  html: ''
+  json: ''
+mcos:
+  name_en: Molar mass constant symbol
+  name_fr: ''
+  type: symbol
+  latex: M_{\rm{u}}
+  text:
+  html: ''
+  json: ''
+mcov:
+  name_en: Molar mass constant value
+  name_fr: ''
+  type: symbol
+  latex: '@mmcs@/12'
+  text:
+  html: ''
+  json: ''
+mmav:
+  name_en: Molar mass via Avogadro constant definition
+  name_fr: ''
+  type: equation
+  latex: '@mcos@ = @avos@\,@uams@'
+  text:
+  html: ''
+  json: ''
+mmcs:
+  name_en: Molar mass of carbon symbol
+  name_fr: ''
+  type: symbol
+  latex: M(^{12}\rm{C})
+  text:
+  html: ''
+  json: ''
+mmcu:
+  name_en: Molar mass of carbon uncertainty
+  name_fr: ''
+  type: symbol
+  latex: 4.5 \times 10^{-10}
+  text:
+  html: ''
+  json: ''
+mmcv:
+  name_en: Molar mass of carbon value
+  name_fr: ''
+  type: symbol
+  latex: 0.012\ @kims@
+  text:
+  html: ''
+  json: ''
+mmed:
+  name_en: Elemenary molar mass definition
+  name_fr: ''
+  type: equation
+  latex: '@emms@ = @avos@\,@eces@ = @avos@\,@rams@\,@uams@'
+  text:
+  html: ''
+  json: ''
+mmxd:
+  name_en: Molar mass of chemical definition
+  name_fr: ''
+  type: equation
+  latex: '@emms@ = @rams@[@mmcs@/12] = @rams@\,@mcos@'
+  text:
+  html: ''
+  json: ''
+mold:
+  name_en: Mole unit definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@mols@ = (\frac{@avov@}{@avos@})
+  text:
+  html: ''
+  json: ''
+moli:
+  name_en: Inverse mole unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@mols@^{-1}'
+  text:
+  html: ''
+  json: ''
+mols:
+  name_en: Mole unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{mol}
+  text:
+  html: ''
+  json: ''
+morf:
+  name_en: Mono. radiation 540 THz frequency
+  name_fr: ''
+  type: symbol
+  latex: '@frqs@ = @morv@\ @hfcu@'
+  text:
+  html: ''
+  json: ''
+morr:
+  name_en: Mono. radiation 540 THz exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@mors@ = @radv@\ @radu@'
+  text:
+  html: ''
+  json: ''
+mors:
+  name_en: Mono. radiation 540 THz symbol
+  name_fr: ''
+  type: symbol
+  latex: K_{@cans@}
+  text:
+  html: ''
+  json: ''
+morv:
+  name_en: Mono. radiation 540 THz value
+  name_fr: ''
+  type: symbol
+  latex: 540 \times 10^{12}
+  text:
+  html: ''
+  json: ''
+movu:
+  name_en: Mono. radiation 540 THz value/unit
+  name_fr: ''
+  type: symbol
+  latex: '@morv@\ @hfcu@'
+  text:
+  html: ''
+  json: ''
+mpvu:
+  name_en: Metre horizontal plane distance value/unit
+  name_fr: ''
+  type: symbol
+  latex: 571\ \rm{mm}
+  text:
+  html: ''
+  json: ''
+mtrd:
+  name_en: Metre unit definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@mtrs@ = (\frac{@sols@}{@solv@})\ @secs@ = \frac{@hfcv@}{@solv@} \frac{@sols@}{@hfcs@}
+    ≈ @hslv@ \frac{@sols@}{@hfcs@}
+  text: 1 m = (c/299 792 458) s = 9 192 631 770/299 792 458 c/ΔνCs ≈ 30.663 319 c/ΔνCs
+  html: ''
+  json: ''
+mtrs:
+  name_en: Metre unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{m}
+  text: m
+  html: ''
+  json: ''
+mvwv:
+  name_en: Metre vacuum wavelengths value
+  name_fr: ''
+  type: symbol
+  latex: 1\,650\,763.73
+  text:
+  html: ''
+  json: ''
+news:
+  name_en: Newton unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{N}
+  text:
+  html: ''
+  json: ''
+ohms:
+  name_en: Ohm unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \Omega
+  text:
+  html: ''
+  json: ''
+pass:
+  name_en: Pascal unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Pa}
+  text:
+  html: ''
+  json: ''
+pksi:
+  name_en: Planck constant in SI unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@kgms@\ @mtrs@^{2}\ @seci@'
+  text: '@kgms@ @mtrs@^2 @seci@'
+  html: ''
+  json: ''
+plke:
+  name_en: Planck constant uncertainty
+  name_fr: ''
+  type: symbol
+  latex: 1 \times 10^{-8}
+  text: 1 x 10^-8
+  html: ''
+  json: ''
+plks:
+  name_en: Planck constant symbol
+  name_fr: ''
+  type: symbol
+  latex: h
+  text: h
+  html: ''
+  json: ''
+plku:
+  name_en: Planck constant unit
+  name_fr: ''
+  type: symbol
+  latex: '@jles@\ @secs@'
+  text: '@jles@ @secs@'
+  html: ''
+  json: ''
+plkv:
+  name_en: Planck constant value
+  name_fr: ''
+  type: symbol
+  latex: 6.626\:070\:15 \times 10^{-34}
+  text: 6.626 070 15 x 10^-34
+  html: ''
+  json: ''
+plkx:
+  name_en: Planck constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@plks@ = @plkv@\ @kmis@'
+  text: '@plks@ = @plkv@ @kmis@'
+  html: ''
+  json: ''
+porb:
+  name_en: 2p10 orbital
+  name_fr: ''
+  type: symbol
+  latex: 2\rm{p}^{10}
+  text:
+  html: ''
+  json: ''
+radi:
+  name_en: Radiation direction inverse value
+  name_fr: ''
+  type: symbol
+  latex: 1/@radv@
+  text:
+  html: ''
+  json: ''
+radu:
+  name_en: Radiation direction unit
+  name_fr: ''
+  type: symbol
+  latex: '@cans@\:@strs@\:@kgms@^{-1}\:@mtrs@^{-2}\:@secs@^{3}'
+  text:
+  html: ''
+  json: ''
+radv:
+  name_en: Radiation direction value
+  name_fr: ''
+  type: symbol
+  latex: '@lecv@'
+  text:
+  html: ''
+  json: ''
+rams:
+  name_en: Relative atomic mass symbol
+  name_fr: ''
+  type: symbol
+  latex: A_{\rm{r}}(\rm{X})
+  text:
+  html: ''
+  json: ''
+secd:
+  name_en: Second unit definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@hfcu@ = \frac{@hfcs@}{@hfcv@}\ \rm{or}\ 1\ @secs@ = \frac{@hfcv@}{@hfcs@}
+  text:
+  html: ''
+  json: ''
+secf:
+  name_en: Second fraction value
+  name_fr: ''
+  type: symbol
+  latex: 1/31556925.9747
+  text:
+  html: ''
+  json: ''
+seci:
+  name_en: Inverse second unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@secs@^{-1}'
+  text: '@secs@^-1'
+  html: ''
+  json: ''
+secs:
+  name_en: Second unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{s}
+  text: s
+  html: ''
+  json: ''
+smsu:
+  name_en: Per square metre second unit symbol
+  name_fr: ''
+  type: symbol
+  latex: '@mtrs@^{-2}\ @secs@'
+  text: '@mtrs@^-2 @secs@'
+  html: ''
+  json: ''
+soli:
+  name_en: Inverse speed of light value
+  name_fr: ''
+  type: symbol
+  latex: 1/@solv@
+  text:
+  html: ''
+  json: ''
+sies:
+  name_en: Siemens unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{S}
+  text:
+  html: ''
+  json: ''
+sevs:
+  name_en: Sievert unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Sv}
+  text:
+  html: ''
+  json: ''
+sols:
+  name_en: Speed of light constant symbol
+  name_fr: ''
+  type: symbol
+  latex: c
+  text: c
+  html: ''
+  json: ''
+solu:
+  name_en: Speed of light constant unit
+  name_fr: ''
+  type: symbol
+  latex: '@mtrs@\ @seci@'
+  text: '@mtrs@/@secs@'
+  html: ''
+  json: ''
+solv:
+  name_en: Speed of light constant value
+  name_fr: ''
+  type: symbol
+  latex: 299\:792\:458
+  text: 299 792 458
+  html: ''
+  json: ''
+solx:
+  name_en: Speed of light constant exact relation
+  name_fr: ''
+  type: symbol
+  latex: '@sols@ = @solv@\ @solu@'
+  text: c = 299 792 458 m s^-1
+  html: ''
+  json: ''
+sphv:
+  name_en: Speed of light * Planck * hyperfine value
+  name_fr: ''
+  type: symbol
+  latex: 1.475\:5214 \times 10^{40}
+  text: 1.475 5214 x 10^40
+  html: ''
+  json: ''
+strs:
+  name_en: Steradian unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{sr}
+  text:
+  html: ''
+  json: ''
+tmpa:
+  name_en: Temperature alt quantity definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@kels@ = \frac{@bolv@}{(@plkv@)(@hfcv@)}\frac{@hfcs@\;@plks@}{@bols@}
+    \approx @bpev@ \frac{@hfcs@\;@plks@}{@bols@}
+  text:
+  html: ''
+  json: ''
+tmpd:
+  name_en: Temperature quantity definition
+  name_fr: ''
+  type: equation
+  latex: 1\;@kels@ = \left(\frac{@bolv@}{@bols@}\right)\ {@bolu@}
+  text:
+  html: ''
+  json: ''
+tmps:
+  name_en: Temperature quantity symbol
+  name_fr: ''
+  type: symbol
+  latex: T
+  text:
+  html: ''
+  json: ''
+tess:
+  name_en: Tesla unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{T}
+  text:
+  html: ''
+  json: ''
+uams:
+  name_en: Unified atomic mass constant symbol
+  name_fr: ''
+  type: symbol
+  latex: m_{\rm{u}}
+  text:
+  html: ''
+  json: ''
+uamv:
+  name_en: Unified atomic mass constant value
+  name_fr: ''
+  type: symbol
+  latex: m(^{12}{\rm{C}})/12
+  text:
+  html: ''
+  json: ''
+vadd:
+  name_en: Vacuum admittance definition
+  name_fr: ''
+  type: symbol
+  latex: 1/@vmps@@sols@
+  text:
+  html: ''
+  json: ''
+vads:
+  name_en: Vacuum admittance symbol
+  name_fr: ''
+  type: symbol
+  latex: Y_{0}
+  text:
+  html: ''
+  json: ''
+vcid:
+  name_en: Vacuum char. imped. definition
+  name_fr: ''
+  type: symbol
+  latex: '@vmps@@sols@'
+  text:
+  html: ''
+  json: ''
+vcis:
+  name_en: Vacuum char. imped. symbol
+  name_fr: ''
+  type: symbol
+  latex: Z_{0}
+  text:
+  html: ''
+  json: ''
+vcmq:
+  name_en: Vac. char. imped. / Vac. mag. perm.
+  name_fr: ''
+  type: symbol
+  latex: '@vcis@/@vmps@ = @sols@'
+  text:
+  html: ''
+  json: ''
+vemp:
+  name_en: Vac. elec. perm. * Vac. mag. perm.
+  name_fr: ''
+  type: symbol
+  latex: '@veps@ @vmps@ = 1/@sols@^{2}'
+  text:
+  html: ''
+  json: ''
+vepd:
+  name_en: Vacuum elec. perm. definition
+  name_fr: ''
+  type: symbol
+  latex: 1/@vmps@@sols@^{2}
+  text:
+  html: ''
+  json: ''
+veps:
+  name_en: Vacuum elec. perm. symbol
+  name_fr: ''
+  type: symbol
+  latex: \varepsilon_{0}
+  text:
+  html: ''
+  json: ''
+vmpe:
+  name_en: Vacuum mag. perm. value/unit
+  name_fr: ''
+  type: symbol
+  latex: '@vmpv@\ {@hens@\ @mtrs@}^{-1} = @vmpv@\ @news@\ @amps@^{-2}'
+  text:
+  html: ''
+  json: ''
+vmps:
+  name_en: Vacuum mag. perm. symbol
+  name_fr: ''
+  type: symbol
+  latex: \mu_{0}
+  text:
+  html: ''
+  json: ''
+vmpu:
+  name_en: Vacuum mag. perm. uncertainty
+  name_fr: ''
+  type: symbol
+  latex: 2.3 \times 10^{-10}
+  text:
+  html: ''
+  json: ''
+vmpv:
+  name_en: Vacuum mag. perm. value
+  name_fr: ''
+  type: symbol
+  latex: 4\pi \times 10^{-7}
+  text:
+  html: ''
+  json: ''
+vmvu:
+  name_en: Vacuum mag. perm. value/unit
+  name_fr: ''
+  type: symbol
+  latex: 4\pi \times 10^{-7}\ @hens@/@mtrs@
+  text:
+  html: ''
+  json: ''
+vlts:
+  name_en: Volt unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{V}
+  text:
+  html: ''
+  json: ''
+wats:
+  name_en: Watt unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{W}
+  text:
+  html: ''
+  json: ''
+wpss:
+  name_en: Watt per steradian symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{W sr}^{-1}
+  text:
+  html: ''
+  json: ''
+webs:
+  name_en: Weber unit symbol
+  name_fr: ''
+  type: symbol
+  latex: \rm{Wb}
+  text:
+  html: ''
+  json: ''
+wtps:
+  name_en: Water triple point symbol
+  name_fr: ''
+  type: symbol
+  latex: T_{\rm{TPW}}
+  text:
+  html: ''
+  json: ''
+wtpu:
+  name_en: Water triple point uncertainty
+  name_fr: ''
+  type: symbol
+  latex: 3.7 \times 10^{-7}
+  text:
+  html: ''
+  json: ''
+wtvu:
+  name_en: Water triple point value/unit
+  name_fr: ''
+  type: symbol
+  latex: '@celo@\ @kels@'
+  text:
+  html: ''
+  json: ''
+zdeg:
+  name_en: Zero degree angle
+  name_fr: ''
+  type: symbol
+  latex: 0@circ@
+  text:
+  html: ''
+  json: ''

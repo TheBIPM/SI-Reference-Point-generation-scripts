@@ -1,0 +1,48 @@
+""" symbols_format
+manage string substitution for symbols
+"""
+import os
+import re
+import yaml
+from settings import XLS_FILES_FOLDER
+
+# Load symbols data
+with open(os.path.join(XLS_FILES_FOLDER, 'symbols.yaml')) as fp:
+    symbols = yaml.safe_load(fp)
+
+
+def formattxt(txt, fmt='latex', add_delim=True):
+    """
+    formats a text string with symbols replaced in any of the following formats
+    html, latex, json, text
+
+    txt : input string
+    fmt : one of ['html', 'latex', 'json', 'text']
+    add_delim : boolean, adds delimiter at beginning and end (e.g. "$")
+    """
+    if fmt not in ['html', 'latex', 'json', 'text']:
+        return txt
+    if txt is None or txt == "" or '@' not in txt:
+        return txt
+    delim = {'latex': ['$', '$'],
+             'html': ['', ''],
+             'json': ['', ''],
+             'text': ['', '']}
+    matches = re.findall(r"@(.*?)@", txt)
+    for symcode in matches:
+        depth = 0
+        replacement = symbols[symcode][fmt]
+        while '@' in replacement:
+            # Handle nested macros up to 3 levels
+            if depth > 3:
+                print('Error, too many levels of @')
+                break
+            inner_matches = re.findall(r"@(.*?)@", replacement)
+            for inner_symcode in inner_matches:
+                replacement = replacement.replace(f"@{inner_symcode}@",
+                                                  symbols[inner_symcode][fmt])
+            depth += 1
+        if add_delim:
+            replacement = delim[fmt][0] + replacement + delim[fmt][1]
+        txt = txt.replace(f"@{symcode}@", replacement)
+    return txt

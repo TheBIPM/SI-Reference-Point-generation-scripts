@@ -1,10 +1,20 @@
 Semantic SI
 ===========
 created: Jan 2023 / GD
-last modified: 2023-07-25
+last modified: 2023-10-26
 
 This package implements the SI Reference point, a part of the SI digital framework. The package allows to produce a machine readable version of the SI Brochures (knowledge graph). 
-A good entry point to understand the philosophy of the package is the Generation_TTL.pdf (showing the general principle for the generation of the knowledge graphs) SIDataModel.pdf (depicting the underlying data model used for this part of the si digital framework).
+General principle for the generation of the knowledge graphs :
+
+```mermaid
+flowchart TD
+    A["Graph structure\n(py script)"] --> C{"Graph producer\n(py script)"}
+    B["Information\n(YAML files)"] --> C
+    C --> F["Serialised Knowledge Graph (ttl file)"]
+```
+
+
+See also SIDataModel.pdf (depicting the underlying data model used for this part of the si digital framework).
  
 The package contains also a test Website (based on FastAPI), allowing to interrogate the produced knowledge graphs. Note that this is only provided for demo purposes. 
 
@@ -18,7 +28,7 @@ The subfolder Python contains several Python codes that allow to produce 4 seria
 - the Quantities, 
 - the Units.
 The TBox (classes and properties) is common to all parts, the ABoxes (allowing to fill the knowledge graphs with individuals) are separate for the different parts. 
-Each ABox gets the relevant information from an XLS file. The location of the input and output files is defined in settings.py
+Each ABox gets the relevant information from one or more YAML file(s). The location of the input and output files is defined in settings.py
 
 ResBod
 ------

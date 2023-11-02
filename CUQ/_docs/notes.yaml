@@ -1,0 +1,618 @@
+- dbid: 1
+  uri: second2018
+  index: 1
+  note_en: 'This definition implies the exact relation @hfcx@. Inverting this relation
+    gives an expression for the unit second in terms of the defining constant @hfcs@:
+    \[@secd@\]'
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Cette définition implique la relation exacte @hfcx@. En inversant cette
+    relation, la seconde est exprimée en fonction de la constante @hfcs@ : \[@secd@\]'
+- dbid: 2
+  uri: second2018
+  index: 2
+  note_en: The effect of this definition is that the second is equal to the duration
+    of @hfcv@ periods of the radiation corresponding to the transition between the
+    two hyperfine levels of the unperturbed ground state of the @csis@ atom.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il résulte de cette définition que la seconde est égale à la durée de @hfcv@
+    périodes de la radiation correspondant à la transition entre les deux niveaux
+    hyperfins de l’état fondamental de l’atome de césium 133 non perturbé.
+- dbid: 3
+  uri: second2018
+  index: 3
+  note_en: The reference to an unperturbed atom is intended to make it clear that
+    the definition of the SI second is based on an isolated caesium atom that is unperturbed
+    by any external field, such as ambient black-body radiation.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il est fait référence à un atome non perturbé afin d’indiquer clairement
+    que la définition de la seconde du SI se fonde sur un atome de césium isolé qui
+    n’est pas perturbé par un champ externe quel qu’il soit, tel que la radiation
+    d’un corps noir à température ambiante.
+- dbid: 4
+  uri: second2018
+  index: 4
+  note_en: The second, so defined, is the unit of proper time in the sense of the
+    general theory of relativity. To allow the provision of a coordinated time scale,
+    the signals of different primary clocks in different locations are combined, which
+    have to be corrected for relativistic caesium frequency shifts.
+  updated: 2023-02-21 15:59:14
+  note_fr: La seconde ainsi définie est l’unité de temps propre, au sens de la théorie
+    générale de la relativité. Pour établir une échelle de temps coordonné, les signaux
+    de différentes horloges primaires dans le monde sont combinés, puis des corrections
+    sont appliquées pour tenir compte du décalage relativiste de fréquence entre les
+    étalons à césium.
+- dbid: 5
+  uri: second2018
+  index: 5
+  note_en: The CIPM has adopted various secondary representations of the second, based
+    on a selected number of spectral lines of atoms, ions or molecules. The unperturbed
+    frequencies of these lines can be determined with a relative uncertainty not lower
+    than that of the realization of the second based on the @csis@ hyperfine transition
+    frequency, but some can be reproduced with superior stability.
+  updated: 2023-02-21 15:59:14
+  note_fr: Le CIPM a adopté différentes représentations secondaires de la seconde
+    fondées sur un nombre choisi de raies spectrales d’atomes, ions ou molécules.
+    Les fréquences non perturbées de ces raies peuvent être déterminées avec une incertitude
+    relative qui n’est pas inférieure à celle de la réalisation de la seconde fondée
+    sur la transition hyperfine de l’atome de @csis@ mais certaines peuvent être reproduites
+    avec une meilleure stabilité.
+- dbid: 6
+  uri: metre2018
+  index: 1
+  note_en: 'This definition implies the exact relation @solx@. Inverting this relation
+    gives an exact expression for the metre in terms of the defining constants @sols@
+    and @hfcs@: \[@mtrd@\]'
+  updated: 2023-06-27 08:04:19
+  note_fr: 'Cette définition implique la relation exacte @solx@. En inversant cette
+    relation, le mètre est exprimé en fonction des constantes @sols@ et @hfcs@ : \[@mtrd@\]'
+- dbid: 7
+  uri: metre2018
+  index: 2
+  note_en: The effect of this definition is that one metre is the length of the path
+    travelled by light in vacuum during a time interval with duration of @soli@ of
+    a second.
+  updated: 2023-06-27 08:46:25
+  note_fr: Il résulte de cette définition que le mètre est la longueur du trajet parcouru
+    dans le vide par la lumière pendant une durée de @soli@ de seconde.
+- dbid: 8
+  uri: kilogram2018
+  index: 1
+  note_en: 'This definition implies the exact relation @plkx@. Inverting this relation
+    gives an exact expression for the kilogram in terms of the three defining constants
+    @plks@, @hfcs@ and @sols@: \[@kgmd@\] which is equal to \[@kgod@\].'
+  updated: 2023-06-28 03:21:54
+  note_fr: 'Cette définition implique la relation exacte @plkx@. En inversant cette
+    relation, le kilogramme est exprimé en fonction des trois constantes @plks@, @hfcs@
+    et @sols@ : \[@kgmd@\] relation identique à \[@kgod@\]. '
+- dbid: 9
+  uri: kilogram2018
+  index: 2
+  note_en: The effect of this definition is to define the unit @pksi@ (the unit of
+    both the physical quantities action and angular momentum). Together with the definitions
+    of the second and the metre this leads to a definition of the unit of mass expressed
+    in terms of the Planck constant @plks@.
+  updated: 2023-06-28 03:42:05
+  note_fr: Cette définition permet de définir l’unité @pksi@ (l’unité des grandeurs
+    physiques « action » et « moment cinétique »). Ainsi associée aux définitions
+    de la seconde et du mètre, l’unité de masse est exprimée en fonction de la constante
+    de Planck @plks@.
+- dbid: 10
+  uri: kilogram2018
+  index: 4
+  note_en: The number chosen for the numerical value of the Planck constant in this
+    definition is such that at the time of its adoption, the kilogram was equal to
+    the mass of the international prototype, @kpms@, with a relative standard uncertainty
+    of @plke@, which was the standard uncertainty of the combined best estimates of
+    the value of the Planck constant at that time.
+  updated: 2023-06-28 03:54:45
+  note_fr: Le nombre choisi pour fixer la valeur numérique de la constante de Planck
+    est tel qu’au moment de l’adoption de cette définition de l’unité de masse, le
+    kilogramme était égal à la masse du prototype international @kpms@ avec une incertitude-type
+    relative égale à @plke@, soit l’incertitude-type de la combinaison des meilleures
+    estimations de la valeur de la constante de Planck à ce moment-là.
+- dbid: 11
+  uri: kilogram2018
+  index: 5
+  note_en: Note that with the present definition, primary realizations can be established,
+    in principle, at any point in the mass scale.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il est à noter que cette définition de l’unité de masse permet d’établir,
+    en principe, des réalisations primaires à tout point de l’échelle de masse.
+- dbid: 12
+  uri: kilogram2018
+  index: 3
+  note_en: The previous definition of the kilogram fixed the value of the mass of
+    the international prototype of the kilogram, @kgmp@, to be equal to one kilogram
+    exactly and the value of the Planck constant @plks@ had to be determined by experiment.
+    The present definition fixes the numerical value of @plks@ exactly and the mass
+    of the prototype has now to be determined by experiment.
+  updated: 2023-06-28 03:48:34
+  note_fr: La précédente définition du kilogramme fixait la valeur de la masse du
+    prototype international du kilogramme, @kgmp@, à exactement un kilogramme ; la
+    valeur de la constante de Planck @plks@ devait donc être déterminée de façon expérimentale.
+    L’actuelle définition du kilogrammme fixe la valeur numérique de @plks@ de façon
+    exacte et la masse du prototype doit désormais être déterminée de façon expérimentale.
+- dbid: 13
+  uri: ampere2018
+  index: 1
+  note_en: 'This definition implies the exact relation @elmd@. Inverting this relation
+    gives an exact expression for the unit ampere in terms of the defining constants
+    @elms@ and @hfcs@: \[@ampd@\] which is equal to \[@ampa@\].'
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Cette définition implique la relation exacte @elmd@. En inversant cette
+    relation, l’ampère est exprimé en fonction des constante @elms@ et @hfcs@ : \[@ampd@\]
+    relation identique à  \[@ampa@\].'
+- dbid: 14
+  uri: ampere2018
+  index: 2
+  note_en: The effect of this definition is that one ampere is the electric current
+    corresponding to the flow of @elmi@ elementary charges per second.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il résulte de cette définition qu’un ampère est le courant électrique correspondant
+    au flux de @elmi@ charges élémentaires par seconde.
+- dbid: 15
+  uri: ampere2018
+  index: 3
+  note_en: The previous definition of the ampere was based on the force between two
+    current carrying conductors and had the effect of fixing the value of the vacuum
+    magnetic permeability @vmps@ (also known as the magnetic constant) to be exactly
+    @vmpe@, where @hens@ and @news@ denote the coherent derived units henry and newton,
+    respectively. The new definition of the ampere fixes the value of @elms@ instead
+    of @vmps@. As a result, @vmps@ must be determined experimentally.
+  updated: 2023-02-21 15:59:14
+  note_fr: La précédente définition de l’ampère, fondée sur la force produite entre
+    deux conducteurs traversés par du courant, fixait la valeur de la perméabilité
+    magnétique du vide @vmps@ (également connue sous le nom de constante magnétique)
+    à exactement @vmpe@, @hens@ et @news@ représentant les unités dérivées cohérentes
+    « henry » et « newton », respectivement. La nouvelle définition de l’ampère fixe
+    la valeur numérique de @elms@ et non plus celle de @vmps@. Par conséquent, @vmps@
+    doit désormais être déterminée de façon expérimentale.
+- dbid: 16
+  uri: ampere2018
+  index: 4
+  note_en: It also follows that since the vacuum electric permittivity @veps@ (also
+    known as the electric constant), the characteristic impedance of vacuum @vcis@,
+    and the admittance of vacuum @vads@ are equal to @vepd@, @vcid@, and @vadd@,  the
+    values of @veps@, @vcis@ and @vads@ must now also be determined experimentally,
+    and are affected by the same relative standard uncertainty as @vmps@ since @elms@
+    is exactly known. The product @vemp@ and quotient @vcmq@ remain exact.  At the
+    time of adopting the present definition of the ampere, @vmps@ was equal to @vmvu@
+    with a relative uncertainty of @vmpu@.
+  updated: 2023-02-21 15:59:14
+  note_fr: Ainsi, comme la permittivité diélectrique du vide @veps@ (également connue
+    sous le nom de constante électrique), l’impédance du vide caractéristique @vcis@
+    et l’admittance du vide @vads@ sont égales à @vepd@, @vcid@, et @vadd@ respectivement,
+    les valeurs de @veps@, @vcis@ et @vads@ doivent désormais être déterminées de
+    façon expérimentale et ont la même incertitude-type relative que @vmps@ puisque
+    la valeur de @elms@ est connue avec exactitude. Le produit @vemp@ et le quotient
+    @vcmq@ restent exacts. Au moment de l’adoption de l’actuelle définition de l’ampère,
+    @vmps@ était égale à @vmvu@ avec une incertitude-type relative de @vmpu@.
+- dbid: 17
+  uri: kelvin2018
+  index: 1
+  note_en: 'This definition implies the exact relation @bolx@. Inverting this relation
+    gives an exact expression for the kelvin in terms of the defining constants @bols@,
+    @plks@ and @hfcs@: \[@tmpd@\] which is equal to \[@tmpa@\].'
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Cette définition implique la relation exacte @bolx@. En inversant cette
+    relation, le kelvin est exprimé en fonction des constantes @bols@, @plks@ et @hfcs@
+    : \[@tmpd@\] relation identique à \[@tmpa@\].'
+- dbid: 18
+  uri: kelvin2018
+  index: 2
+  note_en: The effect of this definition is that one kelvin is equal to the change
+    of thermodynamic temperature that results in a change of thermal energy @ebts@
+    by @ebtv@.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il résulte de cette définition qu’un kelvin est égal au changement de la
+    température thermodynamique résultant d’un changement de l’énergie thermique @ebts@
+    de @ebtv@.
+- dbid: 19
+  uri: kelvin2018
+  index: 3
+  note_en: The previous definition of the kelvin set the temperature of the triple
+    point of water, @wtps@, to be exactly @wtvu@. Due to the fact that the present
+    definition of the kelvin fixes the numerical value of @bols@ instead of @wtps@,
+    the latter must now be determined experimentally. At the time of adopting the
+    present definition @wtps@ was equal to @wtvu@ with a relative standard uncertainty
+    of @wtpu@ based on measurements of @bols@ made prior to the redefinition.
+  updated: 2023-02-21 15:59:14
+  note_fr: "La précédente définition du kelvin établissait la température du point
+    triple de l’eau @wtps@ comme étant exactement égale à @wtvu@. Étant donné que
+    l’actuelle définition du kelvin\nfixe la valeur numérique de @bols@ et non plus
+    celle de @wtps@, cette dernière doit désormais être déterminée de façon expérimentale.
+    Au moment de l’adoption de l’actuelle définition du kelvin, @wtps@ était égale
+    à @wtvu@ avec une incertitude-type relative de @wtpu@ déterminée à partir des
+    mesures de @bols@ réalisées avant la redéfinition.."
+- dbid: 20
+  uri: kelvin2018
+  index: 4
+  note_en: As a result of the way temperature scales used to be defined, it remains
+    common practice to express a thermodynamic temperature, symbol @tmps@, in terms
+    of its difference from the reference temperature @fpwd@, close to the ice point.
+    This difference is called the Celsius temperature, symbol @cels@ which is defined
+    by the quantity equation \[@celd@\].
+  updated: 2023-02-21 15:59:14
+  note_fr: "En raison de la manière dont les échelles de température étaient habituellement
+    définies, il est resté d’usage courant d’exprimer la température thermodynamique,
+    symbole @tmps@, en fonction de sa différence par rapport à la température de référence
+    @fpwd@ proche du point de congélation de l’eau. Cette différence de température
+    est appelée température Celsius, symbole @cels@ ; elle est définie par l’équation
+    aux grandeurs :\n\\[@celd@\\]."
+- dbid: 21
+  uri: kelvin2018
+  index: 5
+  note_en: The unit of Celsius temperature is the degree Celsius, symbol @ceus@, which
+    is by definition equal in magnitude to the unit kelvin. A difference or interval
+    of temperature may be expressed in kelvin or in degrees Celsius, the numerical
+    value of the temperature difference being the same in either case. However, the
+    numerical value of a Celsius temperature expressed in degrees Celsius is related
+    to the numerical value of the thermodynamic temperature expressed in kelvin by
+    the relation \[@c2kd@\].
+  updated: 2023-02-21 15:59:14
+  note_fr: "L’unité de température Celsius est le degré Celsius, symbole @ceus@, qui
+    par définition est égal en amplitude à l’unité « kelvin ». Une différence ou un
+    intervalle de température peut s’exprimer aussi bien en kelvins qu’en degrés Celsius,
+    la valeur numérique de la différence de température étant la même dans les deux
+    cas. La valeur numérique de la température Celsius exprimée en degrés Celsius
+    est liée à la valeur numérique de la température thermodynamique exprimée en kelvins
+    par la relation :\n\\[@c2kd@\\]."
+- dbid: 22
+  uri: kelvin2018
+  index: 6
+  note_en: The kelvin and the degree Celsius are also units of the International Temperature
+    Scale of 1990 (ITS-90) adopted by the CIPM in 1989 in Recommendation 5 (CI-1989,
+    PV, 57, 115). Note that the ITS-90 defines two quantities @90ks@ and @90cs@ which
+    are close approximations to the corresponding thermodynamic temperatures @tmps@
+    and @cels@.
+  updated: 2023-02-21 15:59:14
+  note_fr: Le kelvin et le degré Celsius sont aussi les unités de l’Échelle internationale
+    de température de 1990 (EIT-90) adoptée par le CIPM en 1989 dans sa Recommandation
+    5 (CI-1989, PV, 57, 26). Il est à noter que l’EIT-90 définit les deux grandeurs
+    @90ks@ et @90cs@ qui sont de très bonnes approximations des températures thermodynamiques
+    correspondantes @tmps@ et @cels@.
+- dbid: 23
+  uri: kelvin2018
+  index: 7
+  note_en: Note that with the present definition, primary realizations of the kelvin
+    can, in principle, be established at any point of the temperature scale.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il est également à noter que l’actuelle définition de l’unité de température
+    thermodynamique permet d’établir, en principe, des réalisations primaires du kelvin
+    à tout point de l’échelle de température.
+- dbid: 24
+  uri: mole2018
+  index: 1
+  note_en: 'This definition implies the exact relation @avox@. Inverting this relation
+    gives an exact expression for the mole in terms of the defining constant @avos@:
+    \[@mold@\].'
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Cette définition implique la relation exacte  @avox@. En inversant cette
+    relation, on obtient l’expression exacte de la mole en fonction de la constante
+    @avos@ : \[@mold@\].'
+- dbid: 25
+  uri: mole2018
+  index: 2
+  note_en: The effect of this definition is that the mole is the amount of substance
+    of a system that contains @avov@ specified elementary entities.
+  updated: 2023-02-21 15:59:14
+  note_fr: Il résulte de cette définition que la mole est la quantité de matière d’un
+    système qui contient @avov@ entités élémentaires spécifiées.
+- dbid: 26
+  uri: mole2018
+  index: 3
+  note_en: The previous definition of the mole fixed the value of the molar mass of
+    carbon 12, @mmcs@, to be exactly @mmcv@. According to the present definition @mmcs@
+    is no longer known exactly and must be determined experimentally. The value chosen
+    for @avos@ is such that at the time of adopting the present definition of the
+    mole, @mmcs@ was equal to @mmcv@ with a relative standard uncertainty of @mmcu@.
+  updated: 2023-02-21 15:59:14
+  note_fr: La précédente définition de la mole fixait la valeur de la masse molaire
+    du carbone 12, @mmcs@), comme étant exactement égale à @mmcv@. Selon l’actuelle
+    définition de la mole, @mmcs@ n’est plus connue avec exactitude et doit être déterminée
+    de façon expérimentale. La valeur choisie pour @avos@ est telle qu’au moment de
+    l’adoption de la présente définition de la mole, @mmcs@ était égale à @mmcv@ avec
+    une incertitude-type relative de @mmcu@.
+- dbid: 27
+  uri: mole2018
+  index: 4
+  note_en: The molar mass of any atom or molecule X may still be obtained from its
+    relative atomic mass from the equation \[@mmxd@\] and the molar mass of any atom
+    or molecule X is also related to the mass of the elementary entity @eces@ by the
+    relation \[@mmed@\].
+  updated: 2023-02-21 15:59:14
+  note_fr: 'La masse molaire d’un atome ou d’une molécule X peut toujours être obtenue
+    à partir de sa masse atomique relative à l’aide de l’équation : \[@mmxd@\]  et
+    la masse molaire d’un atome ou d’une molécule X est également reliée à la masse
+    d’une entité élémentaire m(X) par la relation : @eces@ by the relation \[@mmed@\].'
+- dbid: 28
+  uri: mole2018
+  index: 5
+  note_en: In these equations @mcos@ is the molar mass constant, equal to @mcov@ and
+    @uams@ is the unified atomic mass constant, equal to @uamv@. They are related
+    to the Avogadro constant through the relation \[@mmav@\].
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Dans ces équations, @mcos@ est la constante de masse molaire, égale à
+    @mcov@ et @uams@ est la constante de masse atomique unifiée, égale à @uamv@. Elles
+    sont liées à la constante d’Avogadro par la relation : \[@mmav@\].'
+- dbid: 29
+  uri: mole2018
+  index: 6
+  note_en: In the name "amount of substance", the word "substance" will typically
+    be replaced by words to specify the substance concerned in any particular application,
+    for example "amount of hydrogen chloride", or "amount of benzene". It is important
+    to give a precise definition of the entity involved (as emphasized in the definition
+    of the mole); this should preferably be done by specifying the molecular chemical
+    formula of the material involved. Although the word "amount" has a more general
+    dictionary definition, the abbreviation of the full name "amount of substance"
+    to "amount" may be used for brevity. This also applies to derived quantities such
+    as "amount-of-substance concentration", which may simply be called "amount concentration".
+    In the field of clinical chemistry, the name "amount-of-substance concentration"
+    is generally abbreviated to "substance concentration".
+  updated: 2023-02-21 15:59:14
+  note_fr: Dans le terme « quantité de matière », le mot « matière » sera généralement
+    remplacé par d’autres mots précisant la matière en question pour chaque application
+    particulière ; on pourrait par exemple parler de « quantité de chlorure d’hydrogène
+    » ou de « quantité de benzène ». Il est important de définir précisément l’entité
+    en question (comme le souligne la définition de la mole), de préférence en précisant
+    la formule chimique moléculaire du matériau concerné. Bien que le mot « quantité
+    » ait une définition plus générale dans le dictionnaire, cette abréviation du
+    nom complet « quantité de matière » est parfois utilisée par souci de concision.
+    Ceci s’applique aussi aux grandeurs dérivées telles que la concentration de quantité
+    de matière, qui peut simplement être appelée « concentration de quantité ». Dans
+    le domaine de la chimie clinique, le nom « concentration de quantité de matière
+    » est généralement abrégé en « concentration de matière ».
+- dbid: 30
+  uri: candela2018
+  index: 1
+  note_en: 'This definition implies the exact relation @morr@ for monochromatic radiation
+    of frequency @morf@. Inverting this relation gives an exact expression for the
+    candela in terms of the defining constants @mors@, @plks@ and @hfcs@: \[@cand@\]
+    which is equal to \[@cana@\].'
+  updated: 2023-02-21 15:59:14
+  note_fr: 'Cette définition implique la relation exacte @morr@ pour le rayonnement
+    monochromatique de fréquence @morf@. En inversant cette relation, la candela est
+    exprimée en fonction des constantes @mors@, @plks@ et @hfcs@ : \[@cand@\] relation
+    identique à  \[@cana@\].'
+- dbid: 31
+  uri: candela2018
+  index: 2
+  note_en: The effect of this definition is that one candela is the luminous intensity,
+    in a given direction, of a source that emits monochromatic radiation of frequency
+    @movu@ and has a radiant intensity in that direction of @divu@ The definition
+    of the steradian is given below Table 4.
+  updated: 2023-01-18 17:18:26
+  note_fr: 'Il résulte de cette définition que la candela est l’intensité lumineuse,
+    dans une direction donnée, d’une source qui émet un rayonnement monochromatique
+    de fréquence @movu@ et dont l’intensité énergétique dans cette direction est @divu@. '
+- dbid: 32
+  uri: radian
+  index: 1
+  note_en: The radian was formerly an SI supplementary unit, but this category was
+    abolished in 1995.
+  updated: 2023-01-18 17:30:46
+  note_fr: 'Le radian était auparavant une unité SI supplémentaire mais cette catégorie
+    a été supprimée en 1995. '
+- dbid: 33
+  uri: steradian
+  index: 1
+  note_en: Like the radian, the steradian was formerly an SI supplementary unit.
+  updated: 2023-01-18 17:31:11
+  note_fr: 'Comme le radian, le stéradian était auparavant une unité SI supplémentaire. '
+- dbid: 34
+  uri: hertz
+  index: 2
+  note_en: The hertz shall only be used for periodic phenomena.
+  updated: 2023-01-18 17:29:19
+  note_fr: Le hertz ne doit être utilisé que pour les phénomènes périodiques
+    .
+- dbid: 35
+  uri: electricpotential
+  index: 1
+  note_en: Electric potential difference is also called "voltage" in many countries,
+    as well as "electric tension" or simply "tension" in some countries.
+  updated: 2023-01-18 17:32:10
+  note_fr: La différence de potentiel électrique est également appelée « tension
+    » ou « tension électrique » dans certains pays.
+- dbid: 36
+  uri: celsius
+  index: 2
+  note_en: The numerical value of a temperature difference or temperature interval
+    is the same when expressed in either degrees Celsius or in kelvin.
+  updated: 2023-01-18 17:33:10
+  note_fr: La valeur numérique d’une différence de température ou d’un intervalle
+    de température est identique quand elle est exprimée en degrés Celsius ou en kelvins.
+- dbid: 37
+  uri: steradian
+  index: 1
+  note_en: In photometry the name steradian and the symbol sr are usually retained
+    in expressions for units.
+  updated: 2023-01-18 17:34:00
+  note_fr: En photométrie, on maintient généralement le nom et le symbole du stéradian,
+    sr, dans l’expression des unités.
+- dbid: 38
+  uri: becquerel
+  index: 2
+  note_en: The hertz shall only be used for periodic phenomena and the becquerel shall
+    only be used for stochastic processes in activity referred to a radionuclide.
+  updated: 2023-01-18 17:34:55
+  note_fr: 'Le becquerel ne doit être utilisé que pour les processus aléatoires liés
+    à la mesure de l’activité d’un radionucléide. '
+- dbid: 39
+  uri: becquerel
+  index: 3
+  note_en: Activity referred to a radionuclide is sometimes incorrectly called radioactivity.
+  updated: 2023-01-18 17:34:52
+  note_fr: L’activité d’un radionucléide est parfois appelée de manière incorrecte
+    radioactivité.
+- dbid: 40
+  uri: radian per second
+  index: 2
+  note_en: The SI unit of angular velocity and angular frequency is radian per second,
+    whereas the SI unit of frequency is hertz.
+  updated: 2023-01-18 17:30:46
+  note_fr: L’unité SI de vitesse angulaire et de fréquence angulaire est le radian
+    par seconde.
+- dbid: 41
+  uri: radian per second
+  index: 3
+  note_en: It is particularly important to carefully distinguish frequencies from
+    angular frequencies, because by definition their numerical values differ by a
+    factor of 2π.
+  updated: 2023-01-18 17:30:46
+  note_fr: Il est particulièrement important de distinguer les fréquences des fréquences
+    angulaires car leurs valeurs numériques diffèrent par définition d’un facteur
+    de 2π.
+- dbid: 42
+  uri: hertz
+  index: 1
+  note_en: The hertz is the SI coherent derived unit for frequency.
+  updated: 2023-01-18 17:29:21
+  note_fr: L’unité SI de fréquence est le hertz.
+- dbid: 43
+  uri: hertz
+  index: 3
+  note_en: The SI unit of angular velocity and angular frequency is radian per second.
+  updated: 2023-01-18 17:29:16
+  note_fr: L’unité SI de vitesse angulaire et de fréquence angulaire est le radian
+    par seconde
+- dbid: 44
+  uri: hertz
+  index: 4
+  note_en: It is particularly important to carefully distinguish frequencies from
+    angular frequencies, because by definition their numerical values differ by a
+    factor of 2π.
+  updated: 2023-01-18 17:29:14
+  note_fr: Il est particulièrement important de distinguer les fréquences des fréquences
+    angulaires car leurs valeurs numériques diffèrent par définition d’un facteur1
+    de 2π.
+- dbid: 45
+  uri: becquerel
+  index: 1
+  note_en: The becquerel is the SI coherent derived unit for activity referred to
+    a radionuclide.
+  updated: 2023-01-18 17:34:57
+  note_fr: L’unité SI d’activité est le becquerel.
+- dbid: 46
+  uri: becquerel
+  index: 4
+  note_en: L'unité bequerel implique un comptage par seconde.
+  updated: 2023-01-18 17:34:50
+  note_fr: L'unité bequerel implique un comptage par seconde.
+- dbid: 47
+  uri: celsius
+  index: 1
+  note_en: '-'
+  updated: 2023-01-18 17:33:13
+  note_fr: '-'
+- dbid: 48
+  uri: celsius
+  index: 3
+  note_en: The numerical value of a Celsius temperature @cels@ expressed in degrees
+    Celsius is related to the numerical value of the thermodynamic temperature @tmps@
+    expressed in kelvin by the relation\n@cele@.
+  updated: 2023-01-18 17:33:07
+  note_fr: La valeur numérique de la température Celsius exprimée en degrés Celsius
+    est liée à la valeur numérique de la température thermodynamique exprimée en kelvins
+    par la relation \n@cele@.
+- dbid: 49
+  uri: ampere
+  index: 2
+  note_en: The elementary charge corresponds to a coupling strength of the electromagnetic
+    force via the fine-structure constant @fscd@, where @veps@ is the vacuum electric
+    permittivity or electric constant.
+  updated: 2023-02-21 15:59:14
+  note_fr: 'La charge élémentaire, @elms@, correspond à une constante de couplage
+    de la force électromagnétique via la constante de structure fine @fscd@, où @veps@
+    est la permittivité diélectrique du vide (également connue sous le nom de constante
+    électrique). '
+- dbid: 50
+  uri: ampere1948
+  index: 1
+  note_en: The expression « MKS unit of force » which occurs in the original text
+    has been replaced here by «newton», a name adopted for this unit by the 9th CGPM
+    (1948, Resolution 7).
+  updated: 2023-07-19 14:56:00
+  note_fr: L’expression « unité MKS de force » qui figure dans le texte original de
+    1946 a été remplacée ici par « newton », nom adopté pour cette unité par la 9ᵉ
+    CGPM (1948, Résolution 7).
+- dbid: 51
+  uri: candela1979
+  index: 1
+  note_en: No notes
+  updated:
+  note_fr: No notes
+- dbid: 52
+  uri: kelvin1967
+  index: 1
+  note_en: The 13th CGPM (1967, Resolution 3) also decided that the unit kelvin and
+    its symbol $K$ should be used to express an interval or a difference of temperature.
+  updated: 2023-07-19 14:56:00
+  note_fr: La 13ᵉ CGPM (1967 Résolution 3) décida aussi que l'unité kelvin et son
+    symbole K sont utilisés pour exprimer un intervalle ou une différence de température.
+- dbid: 53
+  uri: kelvin1967
+  index: 2
+  note_en: In addition to the thermodynamic temperature (symbol $T$), expressed in
+    kelvins, use is also made of Celsius temperature (symbol $t$) defined by the equation
+    where @fpws@ = 273,15 K by definition. To express celsius temperature, the unit
+    "degree Celsius" which is equal to the unit "kelvin" is used; in this case, "degree
+    Celsius" is a special name used in place of "kelvin". An interval or difference
+    of Celsius temperature can however, be expressed in kelvin as well as in degrees
+    Celsius.
+  updated: 2023-07-19 14:56:00
+  note_fr: En dehors de la température thermodynamique (symbole $T$), exprimée en
+    kelvins, on utilise aussi la température Célsius (symbole $t$) définie par l'équation
+    où @fpws@ = 273,15 K par définition. Pour exprimer la température, on utilise
+    l'unité « degré Célsius » qui est égale à l'unitié « kelvin » ; « degré Célsius
+    » est un nom spécial employé dans ce cas au lieu de « kelvin ». Un intervalle
+    ou une différence de température Célsius peuvent toutefois s'exprimer aussi bien
+    en kelvins qu'en degrés Célsius.
+- dbid: 54
+  uri: kilogram1901
+  index: 1
+  note_en: This international prototype, made of platinum-iridium, is kept at the
+    BIPM under conditions specified by the 1st CGPM in 1889.
+  updated: 2023-07-19 14:56:00
+  note_fr: Ce prototype international en platine iridié est conservé au Bureau International
+    dans des conditions qui ont été fixées par la CGPM en 1889.
+- dbid: 55
+  uri: metre1983
+  index: 1
+  note_en: The old international prototype of the metre which was sanctioned by the
+    1st CGPM in 1889 is still kept at the BIPM under the conditions specified in 1889.
+  updated: 2023-07-19 14:56:00
+  note_fr: "L'ancien prototype international du metre, qui fut sanctionné par la 1ʳᵉ
+    CGPM en 1889, est toujours conservé au Bureau International des Poids et Mesures
+    dans les conditions fixées en 1889. "
+- dbid: 56
+  uri: metre1960
+  index: 1
+  note_en: The old international prototype of the metre which was sanctioned by the
+    1st CGPM in 1889 is still kept at the BIPM under the conditions specified in 1889.
+  updated: 2023-07-19 14:56:00
+  note_fr: "L'ancien prototype international du metre, qui fut sanctionné par la 1ʳᵉ
+    CGPM en 1889, est toujours conservé au Bureau International des Poids et Mesures
+    dans les conditions fixées en 1889. "
+- dbid: 57
+  uri: mole1971
+  index: 1
+  note_en: In the definition of the mole, it is understood that unbound atoms of carbon
+    12, at rest and in their ground state, are referred to.
+  updated: 2023-07-19 14:56:00
+  note_fr: "Dans la définition de la mole, il est entendu que l'on se réfère à des
+    atomes de carbone 12 non liés, au repos et dans leur état fondamental. "
+- dbid: 58
+  uri: mole1971
+  index: 2
+  note_en: Note that this definition specifies at the same time the nature of the
+    quantity whose unit is the mole.
+  updated: 2023-07-19 14:56:00
+  note_fr: Cette définition précise en même temps la nature de la grandeur dont la
+    mole est l'unité.
+- dbid: 59
+  uri: second1967
+  index: 1
+  note_en: No notes
+  updated: 2023-07-19 14:56:00
+  note_fr: No notes
