@@ -4,10 +4,10 @@ manage string substitution for symbols
 import os
 import re
 import yaml
-from settings import XLS_FILES_FOLDER
+from si_ref_point.settings import CUQ_FILES_FOLDER
 
 # Load symbols data
-with open(os.path.join(XLS_FILES_FOLDER, 'symbols.yaml')) as fp:
+with open(os.path.join(CUQ_FILES_FOLDER, 'symbols.yaml')) as fp:
     symbols = yaml.safe_load(fp)
 
 

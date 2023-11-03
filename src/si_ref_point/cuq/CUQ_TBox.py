@@ -1,9 +1,10 @@
-from rdflib import *
+from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
 from pathlib import Path
-from settings import SIURL, APIPATH
+from si_ref_point.settings import SIURL, APIPATH
 from datetime import date
+import os
 
 ResBod_ns = SIURL + "bodies#"
 
@@ -37,9 +38,9 @@ class SiElements:
                     Literal("SI Reference Point - Base Ontology",
                             datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), RDFS.comment,
-                Literal("Ontology, part of the SI reference point, "
-                        "providing base concepts and their relations.",
-                        datatype=XSD.string)))
+                    Literal("Ontology, part of the SI reference point, "
+                            "providing base concepts and their relations.",
+                            datatype=XSD.string)))
         self.g.add((URIRef(self.namespace), DCTERMS.created,
                     Literal(str(date.today()), datatype=XSD.date)))
 
@@ -748,6 +749,12 @@ class SiElements:
         return URIRef(self.namespace_cgpm + name)
 
 
-if __name__ == "__main__":
+def main():
     si_base_onto = SiElements()
+    if not os.path.exists(APIPATH):
+        os.makedirs(APIPATH)
     si_base_onto.g.serialize(format='ttl', destination=APIPATH + 'si.ttl')
+
+
+if __name__ == "__main__":
+    main()

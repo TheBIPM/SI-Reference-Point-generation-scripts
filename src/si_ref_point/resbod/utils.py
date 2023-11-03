@@ -6,9 +6,9 @@ from datetime import date
 import yaml
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
-from ResBod_TBox import ResBod_ns
+from si_ref_point.resbod.ResBod_TBox import ResBod_ns
 
-from settings import *
+from si_ref_point.settings import SIURL, APIPATH
 
 RB = Namespace(ResBod_ns)
 

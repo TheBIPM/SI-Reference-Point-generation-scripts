@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "si_ref_point"
+version = "0.1.0"
+description = "SI reference point generation scripts and source data"
+authors = [
+    {name = "Stuart Chalk", email =  "n00002621@unf.edu"},
+    {name = "Gregor Dudle", email =  "gregor.dudle@ost.ch"},
+    {name = "Max Gruber", email = "maximilian.gruber@ptb.de"},
+    {name = "Jean-Laurent Hippolyte", email = "jean-laurent.hippolyte@npl.co.uk"},
+    {name = "Frédéric Meynadier", email = "Frederic.Meynadier@bipm.org"},
+    {name = "Janet Miles", email = "jmiles@bipm.org"}
+] 
+readme = "Readme.md"
+requires-python = ">=3.11"
+dependencies = [
+    "rdflib",
+    "Jinja2",
+    "PyYAML",
+    "uvicorn",
+    "owlrl",    
+    "fastapi",
+    "pydantic>=1.10,<2.0",
+    "pyshacl"
+]
+
+
+[project.scripts]
+generate_turtle_files = "si_ref_point.main:main"
+
+
