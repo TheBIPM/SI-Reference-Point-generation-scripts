@@ -20,7 +20,7 @@ def main():
 
     # load missing entries from yaml file
     with open(os.path.join(CUQ_FILES_FOLDER,
-                           "missing_definitions_cipm.yaml")) as fp:
+                           "missing_definitions_cipm.yaml"), encoding="utf8") as fp:
         missing_list = yaml.safe_load(fp)
 
     ns_dict = dict(g.namespaces())

@@ -30,7 +30,7 @@ def main():
            Literal(str(date.today()), datatype=XSD.date)))
 
     # crawl through the items of the YAML file
-    with open(os.path.join(CUQ_FILES_FOLDER, 'quantities.yaml')) as fp:
+    with open(os.path.join(CUQ_FILES_FOLDER, 'quantities.yaml'), encoding="utf8") as fp:
         qty_list = yaml.safe_load(fp)
     for qty in qty_list:
         element = PDF.set_quantity_uri(qty['identifier'])

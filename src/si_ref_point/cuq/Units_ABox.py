@@ -81,9 +81,9 @@ def main():
     # uri_text values are a concatenation of the lowercase unit name and the
     # year of the definition, e.g., ampere2018
 
-    with open(os.path.join(CUQ_FILES_FOLDER, 'base_units_defs.yaml')) as fp:
+    with open(os.path.join(CUQ_FILES_FOLDER, 'base_units_defs.yaml'), encoding="utf8") as fp:
         basedefs = yaml.safe_load(fp)
-    with open(os.path.join(CUQ_FILES_FOLDER, 'notes.yaml')) as fp:
+    with open(os.path.join(CUQ_FILES_FOLDER, 'notes.yaml'), encoding="utf8") as fp:
         notes = yaml.safe_load(fp)
 
     for bdef in basedefs:

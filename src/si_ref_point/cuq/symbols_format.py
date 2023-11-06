@@ -7,7 +7,7 @@ import yaml
 from si_ref_point.settings import CUQ_FILES_FOLDER
 
 # Load symbols data
-with open(os.path.join(CUQ_FILES_FOLDER, 'symbols.yaml')) as fp:
+with open(os.path.join(CUQ_FILES_FOLDER, 'symbols.yaml'), encoding="utf8") as fp:
     symbols = yaml.safe_load(fp)
 
 

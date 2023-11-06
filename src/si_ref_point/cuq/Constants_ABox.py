@@ -69,7 +69,7 @@ def main():
            Literal(str(date.today()), datatype=XSD.date)))
 
     # worksheet containing the basic information
-    with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml')) as fp:
+    with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'), encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
 
     # load Units graph (to allow identification of URI for a given unit symbol)
