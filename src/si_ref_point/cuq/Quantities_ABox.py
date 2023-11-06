@@ -1,7 +1,6 @@
 #
 # Quantities ABox
 #
-#
 
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
 from si_ref_point.cuq.CUQ_TBox import SiElements

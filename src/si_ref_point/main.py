@@ -3,7 +3,6 @@
 
 import argparse
 import logging
-import subprocess
 import si_ref_point.cuq.CUQ_TBox as CUQ_TBox
 import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
@@ -15,9 +14,10 @@ import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
 from si_ref_point.settings import APIPATH
+from si_ref_point import __version__
 import os
 import datetime
-import gzip
+from zipfile import ZipFile
 
 
 def get_parser():
@@ -25,7 +25,19 @@ def get_parser():
     autogenerate doc too
     """
     parser = argparse.ArgumentParser(
-        description="Generate SIreference point TTL files")
+        description="Generate SI reference point TTL files")
+    parser.add_argument(
+        '-z', '--zipfile', action='store_true',
+        help="Generate zip file")
+    parser.add_argument(
+        '-d', '--debug', action='store_true',
+        help='debug')
+    parser.add_argument(
+        '--version', action='version',
+        version='%(prog)s' + __version__)
+    parser.add_argument(
+        '--only', type=str,
+        help='Generate on ttl with names containing this string')
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
@@ -36,49 +48,41 @@ def get_parser():
 
 def main():
     args = get_parser().parse_args()
+    if args.debug:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
 
-    logging.info("generating si.ttl")
-    CUQ_TBox.main()
-    logging.info("..done")
+    file_generator = {'si.ttl': CUQ_TBox.main,
+                      'quantities.ttl': Quantities_ABox.main,
+                      'units.ttl': Units_ABox.main,
+                      'constants.ttl': Constants_ABox.main,
+                      'prefixes.ttl': Prefixes_ABox.main,
+                      'decisions.ttl': gen_decisions.main,
+                      'bodies.ttl': ResBod_TBox.main,
+                      'cgpm.ttl': ResBod_ABox_CGPM.main,
+                      'cipm.ttl': ResBod_ABox_CIPM.main,
+                      'cctf.ttl': ResBod_ABox_CCTF.main,
+                      }
 
-    logging.info("generating quantities.ttl")
-    Quantities_ABox.main()
-    logging.info("..done")
-
-    logging.info("generating units.ttl")
-    Units_ABox.main()
-    logging.info("..done")
-
-    logging.info("generating constants.ttl")
-    Constants_ABox.main()
-    logging.info("..done")
-
-    logging.info("generating prefixes.ttl")
-    Prefixes_ABox.main()
-    logging.info("..done")
-
-    logging.info("generating decisions.ttl")
-    gen_decisions.main()
-    logging.info("..done")
-
-    logging.info("generating bodies.ttl")
-    ResBod_TBox.main()
-    logging.info("..done")
-
-    logging.info("generating cgpm.ttl")
-    ResBod_ABox_CGPM.main()
-    logging.info("..done")
-
-    logging.info("generating cipm.ttl")
-    ResBod_ABox_CIPM.main()
-    logging.info("..done")
-
-    logging.info("generating cctf.ttl")
-    ResBod_ABox_CCTF.main()
-    logging.info("..done")
+    for ttl_file, generator in file_generator.items():
+        if args.only and args.only not in ttl_file:
+            continue
+        logging.info(f"generating {ttl_file}")
+        generator()
+        logging.info("..done")
 
     # compress into archive
-    # export git_hash=$(git log --pretty=format:'%h' -n 1)
-    now = datetime.datetime.now()
-    timetag = now.strftime('%Y%m%dT%H:%M')
-
+    if args.zipfile:
+        if args.only:
+            logging.warning(
+                "Only selected ttl files generated -> no zip output")
+            raise SystemExit
+        now = datetime.datetime.now()
+        timetag = now.strftime('%Y%m%dT%H%M%S')
+        githash = __version__.split('+')[1].split('.')[0]
+        zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
+        logging.info(f'generating {zipname}')
+        with ZipFile(zipname, 'w') as zf:
+            for ttl_file, generator in file_generator.items():
+                zf.write(os.path.join(APIPATH, ttl_file), arcname=ttl_file)

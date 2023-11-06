@@ -25,7 +25,8 @@ Testing/Vocabulary/Vocabulary.txt
 # cache files
 __pycache__
 Testing/API/__pycache__
-
+build
+src/si_ref_point.egg-info/
 
 # playground
 Testing/API/exercise.py
@@ -35,3 +36,7 @@ Testing/API/unit_parser.py
 
 # IDE config
 .vscode/
+
+# Pyenv
+.python-version
+
