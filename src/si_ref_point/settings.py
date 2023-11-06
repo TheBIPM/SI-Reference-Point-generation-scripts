@@ -19,5 +19,5 @@ CCTF_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cctf")
 # Folder for XLS-files for constants, units, quantities
 CUQ_FILES_FOLDER = os.path.join(package_dir, "cuq_data")
 
-# Folder for API (this is also the location of the output TTL files)
+# Folder for API
 APIPATH = "./API/"

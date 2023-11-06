@@ -7,7 +7,7 @@ from rdflib import (URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal,
 from si_ref_point.cuq.CUQ_TBox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from datetime import date
-from si_ref_point.settings import CUQ_FILES_FOLDER, APIPATH
+from si_ref_point.settings import CUQ_FILES_FOLDER
 import owlrl
 import yaml
 import os
@@ -49,7 +49,7 @@ def get_uri_for_symbol(sym: str, units_g) -> URIRef:
     return ausgabe  # error indicates wrong type...
 
 
-def main():
+def main(si_graph: Graph, units_graph: Graph):
     g = Graph()
     PDF = SiElements()
 
@@ -74,8 +74,8 @@ def main():
 
     # load Units graph (to allow identification of URI for a given unit symbol)
     units_g = Graph()
-    units_g.parse(APIPATH + 'si.ttl')
-    units_g.parse(APIPATH + 'units.ttl')
+    units_g += si_graph
+    units_g += units_graph
     owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(units_g)
 
     for cst in cst_list:
@@ -126,8 +126,4 @@ def main():
         seq_uri = Seq(g, BNode(), piece_list).uri
         g.add((element, PDF.hasUnitElement, seq_uri))
 
-    g.serialize(format='turtle', destination=APIPATH + 'constants.ttl')
-
-
-if __name__ == "__main__":
-    main()
+    return g

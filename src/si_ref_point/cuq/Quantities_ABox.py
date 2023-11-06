@@ -5,7 +5,7 @@
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
 from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
-from si_ref_point.settings import CUQ_FILES_FOLDER, APIPATH
+from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
 
@@ -43,8 +43,4 @@ def main():
                                                datatype=XSD.string)))
         if 'Unit' in qty and qty['Unit'] is not None:
             g.add((element, PDF.hasUnit, PDF.set_unit_uri(qty['Unit'])))
-    g.serialize(format='turtle', destination=APIPATH + 'quantities.ttl')
-
-
-if __name__ == "__main__":
-    main()
+    return g

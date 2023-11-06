@@ -4,7 +4,7 @@
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
 from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
-from si_ref_point.settings import CUQ_FILES_FOLDER, APIPATH
+from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
 
@@ -64,9 +64,4 @@ def main():
             g.add((element, PDF.hasDefiningResolution,
                    URIRef(PDF.set_cgpm_uri(defres))))
 
-    # 5) Serialization prefixes
-    g.serialize(format='turtle', destination=APIPATH + 'prefixes.ttl')
-
-
-if __name__ == "__main__":
-    main()
+    return g

@@ -2,7 +2,7 @@ from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
 from pathlib import Path
-from si_ref_point.settings import SIURL, APIPATH
+from si_ref_point.settings import SIURL
 from datetime import date
 import os
 
@@ -751,10 +751,4 @@ class SiElements:
 
 def main():
     si_base_onto = SiElements()
-    if not os.path.exists(APIPATH):
-        os.makedirs(APIPATH)
-    si_base_onto.g.serialize(format='ttl', destination=APIPATH + 'si.ttl')
-
-
-if __name__ == "__main__":
-    main()
+    return si_base_onto.g
