@@ -1,12 +1,5 @@
 # Apple files
 .DS_Store
-CUQ/.DS_Store
-CUQ/_docs/.DS_Store
-CUQ/Protege/.DS_Store
-CUQ/Python/.DS_Store
-ResBod/.DS_Store
-ResBod/_docs/.DS_Store
-ResBod/Python/.DS_Store
 Testing/.DS_Store
 Testing/API/.DS_Store
 Testing/API/static/.DS_Store
@@ -14,11 +7,6 @@ Testing/API/templates/.DS_Store
 
 # the Service categories part (these are all ttl files)
 ServiceCategories
-
-# the localssettings.py file. This file is specific to the installation
-# (it contains just one line pointing to the root where 'Semantic-SI' is installed
-#  e.g. LOCALBASE = /Users/gregordudle/Developments)
-localsettings.py
 
 # output files that are produced (TTL and vocabulary)
 Testing/API/bodies.ttl
@@ -34,22 +22,9 @@ Testing/API/decisions.ttl
 Testing/Vocabulary/Vocabulary.txt
 *.zip
 
-#XLS file (copy from Pascal's github)
-CUQ/_docs/CODATA_Constants.xlsx
-
-
 # cache files
 __pycache__
-CUQ/Python/__pycache__
-CUQ/Python/catalog-v001.xml
-CUQ/_docs/catalog-v001.xml
-ResBod/Python/__pycache__
 Testing/API/__pycache__
-Testing/API/catalog-v00xml
-
-
-# Jupyter Notebooks (used for developments as sandbox)
-ResBod/Python/.ipynb_checkpoints
 
 
 # playground
@@ -57,7 +32,6 @@ Testing/API/exercise.py
 Testing/API/unit_parser.py
 
 .idea/
-Pipfile.lock
 
 # IDE config
 .vscode/
