@@ -2,54 +2,16 @@
 # Constants ABox
 #
 
-from rdflib import (URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal,
-                    BNode)
+from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
 from si_ref_point.cuq.CUQ_TBox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from datetime import date
 from si_ref_point.settings import CUQ_FILES_FOLDER
-import owlrl
 import yaml
 import os
-from rdflib.container import Seq
 
 
-# function to get the power of the unit element
-def get_pwr(qty_str: str) -> int:
-    try:
-        int(qty_str[-1:])
-    except ValueError:
-        return 1
-    else:
-        return int(qty_str[-2:])
-
-
-# function to get the URI of a unit knowing its symbol
-def get_uri_for_symbol(sym: str, units_g) -> URIRef:
-    query = """
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX SI: <http://si-digital-framework.org/SI#>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?Unit
-        WHERE
-        {
-            ?Unit a SI:MeasurementUnit .
-            OPTIONAL{?Unit SI:hasEndValidity ?EndValidity}
-            FILTER(!BOUND(?EndValidity))
-
-            ?Unit SI:hasSymbol ?Symbol .
-            FILTER (?Symbol='""" + sym + """')
-        }"""
-
-    qres = units_g.query(query)
-    ausgabe = None
-    for elment in qres:
-        ausgabe = elment['Unit']
-    return ausgabe  # error indicates wrong type...
-
-
-def main(si_graph: Graph, units_graph: Graph):
+def main():
     g = Graph()
     PDF = SiElements()
 
@@ -69,14 +31,9 @@ def main(si_graph: Graph, units_graph: Graph):
            Literal(str(date.today()), datatype=XSD.date)))
 
     # worksheet containing the basic information
-    with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'), encoding="utf8") as fp:
+    with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'),
+              encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
-
-    # load Units graph (to allow identification of URI for a given unit symbol)
-    units_g = Graph()
-    units_g += si_graph
-    units_g += units_graph
-    owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(units_g)
 
     for cst in cst_list:
         element = PDF.set_constant_uri(cst['id'])
@@ -110,20 +67,5 @@ def main(si_graph: Graph, units_graph: Graph):
                Literal(cst['hidden_label'], datatype=XSD.string)))
         g.add((element, PDF.hasDefiningResolution,
                PDF.set_cgpm_uri(cst['hasDefiningResolution'])))
-
-        piece_list = []
-        pieces = cst['unit'].split(".")
-        for piece in pieces:
-            pwr = get_pwr(piece)
-            if pwr != 1:
-                piece = piece[:-2]
-            blankNodeID = BNode()
-            URI_unit = get_uri_for_symbol(piece, units_g)
-            g.add((blankNodeID, PDF.hasUnit, URI_unit))
-            g.add((blankNodeID, PDF.hasUnitPwr, Literal(pwr)))
-            piece_list.append(blankNodeID)
-
-        seq_uri = Seq(g, BNode(), piece_list).uri
-        g.add((element, PDF.hasUnitElement, seq_uri))
 
     return g

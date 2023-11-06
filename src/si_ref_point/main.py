@@ -13,6 +13,7 @@ import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
+import si_ref_point.cuq.second_stage as second_stage
 from si_ref_point import __version__
 import os
 import datetime
@@ -52,38 +53,36 @@ def main():
     else:
         logging.basicConfig(level=logging.INFO)
 
-    file_generator = {'si.ttl': CUQ_TBox.main,
-                      'quantities.ttl': Quantities_ABox.main,
-                      'units.ttl': Units_ABox.main,
-                      'constants.ttl': Constants_ABox.main,
-                      'prefixes.ttl': Prefixes_ABox.main,
-                      'decisions.ttl': gen_decisions.main,
-                      'bodies.ttl': ResBod_TBox.main,
-                      'cgpm.ttl': ResBod_ABox_CGPM.main,
-                      'cipm.ttl': ResBod_ABox_CIPM.main,
-                      'cctf.ttl': ResBod_ABox_CCTF.main,
+    file_generator = {'si': CUQ_TBox.main,
+                      'quantities': Quantities_ABox.main,
+                      'units': Units_ABox.main,
+                      'constants': Constants_ABox.main,
+                      'prefixes': Prefixes_ABox.main,
+                      'decisions': gen_decisions.main,
+                      'bodies': ResBod_TBox.main,
+                      'cgpm': ResBod_ABox_CGPM.main,
+                      'cipm': ResBod_ABox_CIPM.main,
+                      'cctf': ResBod_ABox_CCTF.main,
                       }
-    output_ttl = {}
-    for ttl_file, generator in file_generator.items():
-        if args.only and args.only not in ttl_file:
+    output = {}
+    for label, generator in file_generator.items():
+        if args.only and args.only not in label:
             continue
-        logging.info(f"generating {ttl_file}")
+        logging.info(f"generating {label} graph")
         # Generator will return a rdflib.Graph object
-        if ttl_file == 'constants.ttl':
-            # This is a special case which requires previous ttl files
-            output_ttl[ttl_file] = generator(
-                si_graph=output_ttl['si.ttl'],
-                units_graph=output_ttl['units.ttl'])
-        else:
-            output_ttl[ttl_file] = generator()
+        output[label] = generator()
         logging.info("..done")
+
+    # 2nd-stage operations on graphs
+    # output['constants'] = second_stage.add_unitpwr(output)
 
     # Serialize all graphs in their respective turtle files
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
-    for ttl_file, graph in output_ttl.items():
+    for label, graph in output.items():
         graph.serialize(format='ttl',
-                        destination=os.path.join(args.output_dir, ttl_file))
+                        destination=os.path.join(args.output_dir,
+                                                 label + '.ttl'))
 
     # compress into archive
     if args.zipfile:
@@ -97,6 +96,7 @@ def main():
         zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')
         with ZipFile(zipname, 'w') as zf:
-            for ttl_file, generator in file_generator.items():
+            for label, generator in file_generator.items():
+                ttl_file = label + ".ttl"
                 zf.write(os.path.join(args.output_dir, ttl_file),
                          arcname=ttl_file)
