@@ -245,17 +245,11 @@ class SiElements:
         self.g.add((self.hasUnit, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasUnit, RDFS.label, Literal("has unit", lang="en")))
         self.g.add((self.hasUnit, RDFS.label, Literal("a l'unité", lang="fr")))
-        # should this be domain? then below is true?
-        # self.g.add((self.hasUnit, RDFS.domain, self.MeasurementUnit))
-        # self.g.add((self.hasUnit, RDFS.range, self.SIBaseUnit))
-        # self.g.add((self.hasUnit, RDFS.range, self.SISpecialNamedUnit))
+        self.g.add((self.hasUnit, RDFS.range, self.MeasurementUnit))
         self.g.add((self.hasUnit, RDFS.comment,
-                    Literal("Linking a measurement unit to an SI base or "
-                            "specially named unit.", lang="en")))
+                    Literal("Linking a measurement unit to an object.", lang="en")))
         self.g.add((self.hasUnit, RDFS.comment,
-                    Literal("Associer une unité de mesure à une base SI ou "
-                            "à une unité spécialement nommée.",
-                            lang="fr")))
+                    Literal("Associer une unité de mesure à un objet.", lang="fr")))
 
         # hasUnitTypeAsString
         self.hasUnitTypeAsString_oneOf_node = BNode()
@@ -343,38 +337,8 @@ class SiElements:
         self.g.add((self.hasUnitAsString, RDFS.domain, self.Constant))
         self.g.add((self.hasUnitAsString, RDFS.range, XSD.string))
 
-        # hasUnitPwr
-        # [TODO] suggest changing to hasUnitPower
-        self.hasUnitPwr = self.set_uri("hasUnitPwr")
-        self.g.add((self.hasUnitPwr, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasUnitPwr, RDFS.label,
-                    Literal("has unit power", lang="en")))
-        self.g.add((self.hasUnitPwr, RDFS.label,
-                    Literal("a une puissance unitaire", lang="fr")))
-        self.g.add((self.hasUnitPwr, RDFS.comment,
-                    Literal("Derived units are defined as products of powers "
-                            "of the base units."
-                            "An SI base unit has a power of 1 by definition.",
-                            lang="en")))
-        self.g.add((self.hasUnitPwr, RDFS.comment,
-                    Literal("Associer une unité de mesure à une base SI ou "
-                            "à une unité spécialement nommée."
-                            "Une unité de base SI a une puissance de 1 par "
-                            "définition.", lang="fr")))
-
-        # hasUnitElement  # what is this referring to?
-        self.hasUnitElement = self.set_uri("hasUnitElement")
-        self.g.add((self.hasUnitElement, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasUnitElement, RDFS.label,
-                    Literal("has unit element", lang="en")))
-        self.g.add((self.hasUnitElement, RDFS.label,
-                    Literal("a un élément d'unité", lang="fr")))
 
         # for Units
-
-        # Suggestions for additional unit predictates
-        # isDerivedUnit (True|False)
-        # isCoherentDerivedUnit (True|False)
 
         # hasDefinition
         self.hasDefinition = self.set_uri("hasDefinition")
