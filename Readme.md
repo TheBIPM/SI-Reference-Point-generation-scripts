@@ -1,6 +1,6 @@
 # Semantic SI
 created: Jan 2023 / GD
-last modified: 2023-10-26
+last modified: 2023-11-07
 
 This package implements the SI Reference point, a part of the SI digital framework. The package allows to produce a machine readable version of the SI Brochures (knowledge graph). 
 General principle for the generation of the knowledge graphs :
@@ -26,16 +26,21 @@ Install as a python package
 Python >= 3.11 required, for other requirements see pyproject.toml.
 
 ## Usage
-After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files  in an API subfolder. Copy (or symlink) them to the path/to/repo/API folder to make the fastAPI operational.
+After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files in a subfolder.
 
 The `-z` option generates a zip file.
 
+For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
+
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to ./API. So if you execute the command in another folder than the package's root, make sure to indicate the right path here (or move the ttl files in `path/to/SI-Reference-Point-2023/API` after execution).
+
+`-h / --help` provides a list of available options.
 
 
 ## Short description of the `src/si_ref_point/` sub directories
 
 ### cuq
-The subfolder Python contains several Python codes that allow to produce 4 serialized knowledge graphs (as ttl) containing information about:
+Contains several Python codes that allow to produce 4 serialized knowledge graphs (as ttl) containing information about:
 - the 7 constants underpinning the SI, 
 - the Prefixes,
 - the Quantities, 
@@ -47,7 +52,7 @@ Each ABox gets the relevant information from one or more YAML file(s). The locat
 The YAML files containing all the input data. Initially generated from the Excel spreadsheets.
 
 ### resbod
-Contains a Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
+Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
 The information is read from yaml files (provided by Ron Tse). The code is separated in TBox (definition of the classes and properties) and ABox (istances using TBox)
 The location of the input and output files is defined in settings.py
 
@@ -57,5 +62,5 @@ Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, 
 
 
 ### Testing
-Contains a Python code that can be run under uvicorn to offer an API
+Contains Python code that can be run under uvicorn to offer an API
 
