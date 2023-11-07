@@ -26,10 +26,15 @@ Install as a python package
 Python >= 3.11 required, for other requirements see pyproject.toml.
 
 ## Usage
-After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files  in an API subfolder. Copy (or symlink) them to the path/to/repo/API folder to make the fastAPI operational.
+After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files in a subfolder.
 
 The `-z` option generates a zip file.
 
+For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
+
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to ./API. So if you execute the command in another folder than the package's root, make sure to indicate the right path here (or move the ttl files in `path/to/SI-Reference-Point-2023/API` after execution).
+
+`-h / --help` provides a list of available options.
 
 
 ## Short description of the `src/si_ref_point/` sub directories
