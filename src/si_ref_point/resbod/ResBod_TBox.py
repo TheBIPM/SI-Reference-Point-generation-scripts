@@ -1,7 +1,7 @@
 from datetime import date
 
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
-from si_ref_point.settings import SIURL, SKOSURL, APIPATH
+from si_ref_point.settings import SIURL, SKOSURL
 
 
 ResBod_ns = SIURL + "bodies#"
@@ -218,9 +218,4 @@ class ResBod:
 
 def main():
     resbod_TBox = ResBod()
-    resbod_TBox.g.serialize(format='turtle',
-                            destination=APIPATH + 'bodies.ttl')
-
-
-if __name__ == "__main__":
-    main()
+    return resbod_TBox.g

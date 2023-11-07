@@ -1,5 +1,4 @@
-Semantic SI
-===========
+# Semantic SI
 created: Jan 2023 / GD
 last modified: 2023-10-26
 
@@ -14,14 +13,28 @@ flowchart TD
 ```
 
 
-See also SIDataModel.pdf (depicting the underlying data model used for this part of the si digital framework).
+See also SIDataModel.pdf (depicting the underlying data model used for this part of the si digital framework \[may be obsolete on some aspects\]).
  
 The package contains also a test Website (based on FastAPI), allowing to interrogate the produced knowledge graphs. Note that this is only provided for demo purposes. 
 
-Short description of the sub directories
+## Installation
+Install as a python package
 
-CUQ
----
+- Clone repository or download zip file and unzip it
+- `pip install path/to/repo` (or `pip install -e path/to/repo` if you plan to edit the code and see the changes immediately, "editable mode")
+
+Python >= 3.11 required, for other requirements see pyproject.toml.
+
+## Usage
+After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files  in an API subfolder. Copy (or symlink) them to the path/to/repo/API folder to make the fastAPI operational.
+
+The `-z` option generates a zip file.
+
+
+
+## Short description of the `src/si_ref_point/` sub directories
+
+### cuq
 The subfolder Python contains several Python codes that allow to produce 4 serialized knowledge graphs (as ttl) containing information about:
 - the 7 constants underpinning the SI, 
 - the Prefixes,
@@ -30,37 +43,19 @@ The subfolder Python contains several Python codes that allow to produce 4 seria
 The TBox (classes and properties) is common to all parts, the ABoxes (allowing to fill the knowledge graphs with individuals) are separate for the different parts. 
 Each ABox gets the relevant information from one or more YAML file(s). The location of the input and output files is defined in settings.py
 
-ResBod
-------
+### cuq\_data
+The YAML files containing all the input data. Initially generated from the Excel spreadsheets.
+
+### resbod
 Contains a Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
-For the moment, only information about the CGPM conferences (1,3 and 7 to 26 are present. Conferences 2, 4, 5, 6 and 27 are missing)
 The information is read from yaml files (provided by Ron Tse). The code is separated in TBox (definition of the classes and properties) and ABox (istances using TBox)
 The location of the input and output files is defined in settings.py
 
-A summary of the input- and output-files together with the name of the graph producing engine (xxx_ABox.py) is given in the documentation.
+### resbod\_data
+Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, obtained from Ron Tse, see: https://github.com/metanorma/bipm-data-outcomes/tree/main) 
 
-Testing
--------
+
+
+### Testing
 Contains a Python code that can be run under uvicorn to offer an API
-
-
-Remark on usage of the package
-------------------------------
-For most users and use cases it will be sufficient to use the TTL files that are provided. The following instructions are only of interest for those who need (want) to re-generate one or several TTL file. 
-
-To re-generate the TTL file, download the whole package to your local machine.
-At the top level (in the folder "Semantic-SI") create a file 'localsettings.py' (not present in the distribution). This file should contain one line:
-LOCALBASE = "/Users/gregordudle/Developments/"
-where the right hand side of the equal sign points to the place where the package is installed.
-
-Once this is fixed, you can run the *_ABox.py files, 
-~/CUQ/Python/Constants_ABox.py
-~/CUQ/Python/Prefixes_ABox.py
-~/CUQ/Python/Quantities_ABox.py
-~/CUQ/Python/Units_ABox.py
-~/ResBod/Python/ResBod_ABox_CGPM.py
-~/ResBod/Python/ResBod_ABox_CIPM.py
-
-
-
 

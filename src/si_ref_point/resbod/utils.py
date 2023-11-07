@@ -8,7 +8,7 @@ from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
 from si_ref_point.resbod.ResBod_TBox import ResBod_ns
 
-from si_ref_point.settings import SIURL, APIPATH
+from si_ref_point.settings import SIURL
 
 RB = Namespace(ResBod_ns)
 
@@ -19,7 +19,6 @@ class MeetingsFileExtractor:
         base_url=SIURL + "bodies/",
         resbod_acronym="CIPM",
         meeting_files_directory="",
-        output_dir=APIPATH,
     ):
         self.own_acronym = resbod_acronym
         meeting_files_directory = meeting_files_directory
@@ -35,15 +34,12 @@ class MeetingsFileExtractor:
             self.OWN_NS.term(self.own_acronym)
         )  # e.g. cipm:CIPM
 
-        # output directory
-        self.output_dir = output_dir
-
     # main call from outside
-    def create_and_save_turtle(self):
+    def create_and_return_graph(self):
         self.init_graph()
         self.add_general_description()
         self.add_meeting_information()
-        self.serialize_graph_to_turtle()
+        return self.g
 
     def init_graph(self):
         self.g = Graph()
@@ -249,10 +245,6 @@ class MeetingsFileExtractor:
                                 Literal(action["message"], lang="en"),
                             )
                         )
-
-    def serialize_graph_to_turtle(self):
-        dst = os.path.join(self.output_dir, f"{self.own_acronym.lower()}.ttl")
-        self.g.serialize(format="turtle", destination=dst)
 
     def get_outcome_values(self, outcome, conf_Nr):
         out_id = outcome["identifier"]

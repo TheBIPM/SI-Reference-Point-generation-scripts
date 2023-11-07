@@ -8,4 +8,4 @@ def main():
         meeting_files_directory=CIPM_FILES_FOLDER,
     )
 
-    mfe.create_and_save_turtle()
+    return mfe.create_and_return_graph()

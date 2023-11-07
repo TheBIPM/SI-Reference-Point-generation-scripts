@@ -1,7 +1,7 @@
 import yaml
 import os
 from rdflib import Graph, URIRef, Namespace
-from si_ref_point.settings import APIPATH, CUQ_FILES_FOLDER
+from si_ref_point.settings import CUQ_FILES_FOLDER
 
 
 def main():
@@ -31,9 +31,4 @@ def main():
                URIRef(DEC.correspondingResolution),
                URIRef(OBJ_NAMESPACE.term(obj_ref)),
                ))
-    # output
-    g.serialize(format="turtle", destination=APIPATH + "decisions.ttl")
-
-
-if __name__ == "__main__":
-    main()
+    return g
