@@ -1,0 +1,357 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix math: <http://cll.niimm.ksu.ru/ontologies/mathematics#> .
+
+@prefix si: <http://si-digital-framework.org/SI#> .
+@prefix units: <http://si-digital-framework.org/SI/units/> .
+@prefix quantities: <http://si-digital-framework.org/quantities/> .
+@prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
+
+
+# define some (abstract) mathematical operations
+
+## Operation
+si:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "Operation that is applied to operands" ;
+    rdfs:seeAlso math:E1301 .
+
+si:hasOperand a owl:ObjectProperty ;
+    rdfs:label "has operand" ;
+    rdfs:domain si:Operation .
+
+## Multiplication
+si:Multiplication a si:Operation ;
+    rdfs:label "multiplication" ;
+    rdfs:seeAlso math:E1318 .
+
+si:hasFactor a owl:ObjectProperty ;
+    rdfs:label "has factor" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:subPropertyOf si:includesUseOf ;
+    rdfs:domain si:Multiplication .
+
+## Exponentiation
+si:Exponentiation a si:Operation ;
+    rdfs:label "multiplication" ;
+    rdfs:seeAlso math:E1302 .
+
+si:hasBase a owl:ObjectProperty ;
+    rdfs:label "has base" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:subPropertyOf si:includesUseOf ;
+    rdfs:domain si:Exponentiation .
+
+si:hasExponent a owl:ObjectProperty ;
+    rdfs:label "has exponent" ;
+    rdfs:subPropertyOf si:hasOperand ;
+    rdfs:domain si:Exponentiation ;
+    rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
+
+
+# compound quantities
+
+si:CompoundQuantityKind a owl:Class ;  # DerivedQuantity?
+    rdfs:label "compound quantitykind" ; 
+    rdfs:subClassOf si:QuantityKind .
+
+si:QuantityKindProduct a owl:Class ;
+    rdfs:label "quantitykind product" ;
+    rdfs:subClassOf si:CompoundQuantityKind ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Multiplication
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasFactor ;
+                owl:someValuesFrom si:QuantityKind ;
+                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
+            ] 
+        )
+    ].
+
+si:QuantityKindPower a owl:Class ;
+    rdfs:label "quantitykind power" ;
+    rdfs:subClassOf si:CompoundQuantityKind ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Exponentiation
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBase ;
+                owl:someValuesFrom si:QuantityKind ;
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasExponent ;
+                owl:someValuesFrom owl:Thing ;
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+        )
+    ].
+
+
+# compound units
+
+si:CompoundUnit a owl:Class ;
+    rdfs:label "compound unit" ;  
+    rdfs:subClassOf si:MeasurementUnit .
+
+si:UnitProduct a owl:Class ;
+    rdfs:label "unit product" ;
+    rdfs:subClassOf si:CompoundUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Multiplication
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasFactor ;
+                owl:someValuesFrom si:MeasurementUnit; # allValuesFrom?
+                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
+            ] 
+        )
+    ].
+
+si:UnitPower a owl:Class ;
+    rdfs:label "unit power" ;
+    rdfs:subClassOf si:CompoundUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            si:Exponentiation
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBase ;
+                owl:someValuesFrom si:MeasurementUnit ;
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasExponent ;
+                owl:someValuesFrom owl:Thing ;
+                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+            ]
+        )
+    ].
+
+
+# prefixed unit
+
+si:BasePrefixes a owl:Class ;
+    rdfs:subClassOf si:SIPrefix ;
+    owl:oneOf (
+        prefixes:atto
+        prefixes:centi
+        prefixes:deca
+        prefixes:deci
+        prefixes:exa
+        prefixes:femto
+        prefixes:giga
+        prefixes:hecto
+        prefixes:kilo
+        prefixes:mega
+        prefixes:micro
+        prefixes:milli
+        prefixes:nano
+        prefixes:peta
+        prefixes:pico
+        prefixes:quecto
+        prefixes:quetta
+        prefixes:ronna
+        prefixes:ronto
+        prefixes:tera
+        prefixes:uetta
+        prefixes:yocto
+        prefixes:yotta
+        prefixes:zepto
+    ) .
+
+si:hasPrefix a owl:ObjectProperty ;
+    rdfs:label "has prefix" ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:range si:SIPrefix .
+
+si:hasBaseUnit a owl:ObjectProperty ;
+    rdfs:label "has base unit" ;
+    rdfs:domain si:MeasurementUnit .
+    #rdfs:range si:NonPrefixedUnit .
+
+si:PrefixedUnit a owl:Class ;
+    rdfs:label "prefixed unit" ;
+    rdfs:subClassOf si:MeasurementUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasPrefix ;
+                owl:someValuesFrom si:BasePrefixes
+            ]
+            [
+                a owl:Restriction; 
+                owl:onProperty si:hasBaseUnit ;
+                owl:someValuesFrom si:MeasurementUnit  # actually, we only want non-prefixed units here
+            ]
+        )
+    ] .
+
+
+# needs to go elsewhere:
+
+prefixes:none a si:SIPrefix ;
+    si:hasScalingFactor 1 ;
+    si:hasSymbol ""^^xsd:string .
+
+units:gram a si:MeasurementUnit ;
+    si:hasSymbol "g"^^xsd:string ;
+    si:isUnitOfQtyKind quantities:MASS ;
+    si:hasPrefix prefixes:none .
+
+units:kilogram a si:MeasurementUnit ;
+    si:hasBaseUnit units:gram ;
+    si:hasPrefix prefixes:kilo .
+
+
+
+
+####################
+## FOR FUTURE USE ##
+####################
+
+# # coherent unit
+# 
+# si:includesUseOf a owl:ObjectProperty ;
+#     rdfs:label "includes use of" .
+# 
+# si:CoherentUnit a owl:Class ;
+#     rdfs:label "coherent unit" ;
+#     rdfs:comment "unit that has conversion factor 1 w.r.t. to a combination of si:SIBaseUnit" ;
+#     rdfs:subClassOf si:MeasurementUnit .
+# 
+# si:SIBaseUnit rdfs:subClassOf si:CoherentUnit .
+# 
+# si:StrictCoherentUnit a owl:Class ;
+#     rdfs:label "strictly coherent unit" ;
+#     rdfs:comment "unit that has no prefixes and only consists of combinations of si:SIBaseUnit" ;
+#     rdfs:subClassOf si:CoherentUnit ;
+#     owl:equivalentClass [
+#         a owl:Restriction ;
+#         owl:onProperty si:includesUseOf ;
+#         owl:someValuesFrom si:CoherentUnit
+#         # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+#     ] .
+
+
+# # physical dimension
+# 
+# si:PhysicalDimension a owl:Class ;
+#     rdfs:label "physical dimension" .
+# 
+# si:hasPhysicalDimension a owl:FunctionalProperty ;
+#     rdfs:label "" ;
+#     rdfs:domain si:QuantityKind ;
+#     rdfs:range si:PhysicalDimension .
+# 
+# si:CompoundPhysicalDimension a owl:Class ;
+#     rdfs:label "compound physical dimension" ;    
+#     rdfs:subClassOf si:PhysicalDimension .
+# 
+# si:PhysicalDimensionProduct a owl:Class ;
+#     rdfs:label "physical dimension product" ;
+#     rdfs:subClassOf si:CompoundPhysicalDimension ;
+#     owl:equivalentClass [
+#         owl:intersectionOf (
+#             si:Multiplication
+#             [
+#                 a owl:Restriction; 
+#                 owl:onProperty si:hasFactor ;
+#                 owl:someValuesFrom si:PhysicalDimension ;
+#                 # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
+#             ] 
+#         )
+#     ].
+# 
+# si:PhysicalDimensionPower a owl:Class ;
+#     rdfs:label "physical dimension power" ;
+#     rdfs:subClassOf si:CompoundPhysicalDimension ;
+#     owl:equivalentClass [
+#         owl:intersectionOf (
+#             si:Exponentiation
+#             [
+#                 a owl:Restriction; 
+#                 owl:onProperty si:hasBase ;
+#                 owl:someValuesFrom si:PhysicalDimension ;
+#                 # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
+#             ]
+#             [
+#                 a owl:Restriction; 
+#                 owl:onProperty si:hasExponent ;
+#                 owl:someValuesFrom owl:Thing ;
+#                 # owl:minCardinality 1 # not supported in OWL2 RL
+#             ]
+#         )
+#     ].
+# 
+# si:TimeDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of time" .
+# si:LengthDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of length" .
+# si:MassDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of mass" .
+# si:ElectricCurrentDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of electric current" .
+# si:ThermodynamicTempDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of therodynamisc temperature" .
+# si:AmountOfSubstanceDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of amount of substance" .
+# si:LuminousIntensityDimension a si:PhysicalDimension ;
+#     rdfs:label "SI dimension of liminous intensity" .
+# 
+# si:BaseDimension a owl:Class ;
+#     rdfs:label "base physical dimension" ;
+#     owl:oneOf 
+#         (
+#             si:TimeDimension 
+#             si:LengthDimension 
+#             si:MassDimension 
+#             si:ElectricCurrentDimension 
+#             si:ThermodynamicTempDimension 
+#             si:AmountOfSubstanceDimension             
+#             si:LuminousIntensityDimension 
+#         ) .
+# 
+# si:DistinctDimensions a owl:AllDifferent ;
+#     owl:distinctMembers (
+#         si:TimeDimension 
+#         si:LengthDimension 
+#         si:MassDimension 
+#         si:ElectricCurrentDimension 
+#         si:ThermodynamicTempDimension 
+#         si:AmountOfSubstanceDimension             
+#         si:LuminousIntensityDimension 
+#     ) .
+
+
+# # logarithm operation
+# si:Logarithm a si:Operation ;
+#     rdfs:label "logarithm" ;
+#     rdfs:seeAlso math:E1308 .
+# 
+# si:hasLogBase a owl:ObjectProperty ;
+#     rdfs:label "has logarithm base" ;
+#     rdfs:subPropertyOf si:hasOperand ;
+#     rdfs:domain si:Logarithm ;
+#     rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
+# 
+# si:hasLogArgument a owl:ObjectProperty ;
+#     rdfs:label "has logarithm argument" ;
+#     rdfs:subPropertyOf si:hasOperand ;
+#     rdfs:subPropertyOf si:includesUseOf ;
+#     rdfs:domain si:Logarithm .
+
+
+# # relaxed alternative for isUnitOfQtyKind ?
+# si:associatedWith a owl:ObjectProperty ;  
+#     rdfs:label "associated with" ;
+#     rdfs:domain si:MeasurementUnit ;
+#     rdfs:range si:QuantityKind .
