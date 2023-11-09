@@ -114,7 +114,7 @@ class SiElements:
                             "unités de base mais qui ont un nom "
                             "spécial.", lang="fr")))
 
-        # inOtherSIUnits
+        # inBaseSIUnits
         self.inBaseSIUnits = self.set_uri("inBaseSIUnits")
         self.g.add((self.inBaseSIUnits, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.inBaseSIUnits, RDFS.label,
