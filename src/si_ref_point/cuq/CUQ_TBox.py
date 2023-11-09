@@ -254,9 +254,13 @@ class SiElements:
         # hasUnitTypeAsString
         self.hasUnitTypeAsString_oneOf_node = BNode()
         self.hasUnitTypeAsString_oneOf_subnode = BNode()
-        self.hasUnitTypeAsString_oneOf_list = [self.SIBaseUnit,
-                                               self.SISpecialNamedUnit,
-                                               self.nonSIUnit]
+        self.hasUnitTypeAsString_oneOf_list = [
+            self.SIBaseUnit,
+            self.SISpecialNamedUnit,
+            self.nonSIUnit,
+            self.MeasurementUnit,
+            self.Definition,
+        ]
         self.hasUnitTypeAsString_oneOf_col = Collection(
             self.g, self.hasUnitTypeAsString_oneOf_subnode,
             self.hasUnitTypeAsString_oneOf_list)
@@ -271,7 +275,7 @@ class SiElements:
                     self.hasUnitTypeAsString_oneOf_node))
         self.g.add((self.hasUnitTypeAsString_oneOf_node, OWL.oneOf,
                     self.hasUnitTypeAsString_oneOf_subnode))
-        self.g.add((self.hasUnitTypeAsString, RDFS.range, XSD.string))
+        self.g.add((self.hasUnitTypeAsString, RDFS.range, RDFS.Literal))
 
         # for Constants
 
