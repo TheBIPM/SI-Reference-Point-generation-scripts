@@ -196,24 +196,6 @@ si:PrefixedUnit a owl:Class ;
     ] .
 
 
-# needs to go elsewhere:
-
-prefixes:none a si:SIPrefix ;
-    si:hasScalingFactor 1 ;
-    si:hasSymbol ""^^xsd:string .
-
-units:gram a si:MeasurementUnit ;
-    si:hasSymbol "g"^^xsd:string ;
-    si:isUnitOfQtyKind quantities:MASS ;
-    si:hasPrefix prefixes:none .
-
-units:kilogram a si:MeasurementUnit ;
-    si:hasBaseUnit units:gram ;
-    si:hasPrefix prefixes:kilo .
-
-
-
-
 ####################
 ## FOR FUTURE USE ##
 ####################
