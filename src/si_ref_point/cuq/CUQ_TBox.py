@@ -281,6 +281,13 @@ class SiElements:
 
         # hasValue
         # or hasNumericValue might be better
+        self.hasValue_oneOf_node = BNode()
+        self.hasValue_oneOf_subnode = BNode()
+        self.hasValue_oneOf_list = [XSD.double, XSD.float, XSD.decimal, XSD.integer, RDFS.Literal]
+        self.hasValue_oneOf_col = Collection(
+            self.g, self.hasValue_oneOf_subnode,
+            self.hasValue_oneOf_list)
+
         self.hasValue = self.set_uri("hasValue")
         self.g.add((self.hasValue, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasValue, RDFS.label,
@@ -288,8 +295,8 @@ class SiElements:
         self.g.add((self.hasValue, RDFS.label,
                     Literal("a de la valeur", lang="fr")))
         self.g.add((self.hasValue, RDFS.domain, self.Constant))
-        # better than a literal, but good enough?
-        self.g.add((self.hasValue, RDFS.range, XSD.double))
+        self.g.add((self.hasValue, RDFS.range, self.hasValue_oneOf_node))
+        self.g.add((self.hasValue_oneOf_node, OWL.oneOf, self.hasValue_oneOf_subnode))
 
         # hasDatatype
         self.hasDatatype_oneOf_node = BNode()
