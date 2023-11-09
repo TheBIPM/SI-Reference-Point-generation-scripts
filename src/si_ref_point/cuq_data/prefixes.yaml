@@ -4,7 +4,7 @@
   ScalingFactor: 1e+30
   hasSymbol: Q
   hasDefiningResolution: CGPM27-Res3
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: ronna
   prefLabel_en: ronna
@@ -12,7 +12,7 @@
   ScalingFactor: 1e+27
   hasSymbol: R
   hasDefiningResolution: CGPM27-Res3
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: yotta
   prefLabel_en: yotta
@@ -20,7 +20,7 @@
   ScalingFactor: 1e+24
   hasSymbol: Y
   hasDefiningResolution: CGPM19-Res4
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: zetta
   prefLabel_en: zetta
@@ -28,7 +28,7 @@
   ScalingFactor: 1e+21
   hasSymbol: Z
   hasDefiningResolution: CGPM19-Res4
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: exa
   prefLabel_en: exa
@@ -36,7 +36,7 @@
   ScalingFactor: 1e+18
   hasSymbol: E
   hasDefiningResolution: CGPM15-Res10
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: peta
   prefLabel_en: peta
@@ -44,7 +44,7 @@
   ScalingFactor: 1000000000000000
   hasSymbol: P
   hasDefiningResolution: CGPM15-Res10
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: tera
   prefLabel_en: tera
@@ -52,7 +52,7 @@
   ScalingFactor: 1000000000000
   hasSymbol: T
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: giga
   prefLabel_en: giga
@@ -60,7 +60,7 @@
   ScalingFactor: 1000000000
   hasSymbol: G
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: mega
   prefLabel_en: mega
@@ -68,7 +68,7 @@
   ScalingFactor: 1000000
   hasSymbol: M
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: kilo
   prefLabel_en: kilo
@@ -76,7 +76,7 @@
   ScalingFactor: 1000
   hasSymbol: k
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: hecto
   prefLabel_en: hecto
@@ -84,7 +84,7 @@
   ScalingFactor: 100
   hasSymbol: h
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: deca
   prefLabel_en: deca
@@ -92,7 +92,7 @@
   ScalingFactor: 10
   hasSymbol: da
   hasDefiningResolution: CGPM11-Res12
-  datatype: integer
+  xsd_type: integer
   Comments:
 - URI: deci
   prefLabel_en: deci
@@ -100,7 +100,7 @@
   ScalingFactor: 0.1
   hasSymbol: d
   hasDefiningResolution: CGPM11-Res12
-  datatype: decimal
+  xsd_type: decimal
   Comments:
 - URI: centi
   prefLabel_en: centi
@@ -108,7 +108,7 @@
   ScalingFactor: 0.01
   hasSymbol: c
   hasDefiningResolution: CGPM11-Res12
-  datatype: decimal
+  xsd_type: decimal
   Comments:
 - URI: milli
   prefLabel_en: milli
@@ -116,7 +116,7 @@
   ScalingFactor: 0.001
   hasSymbol: m
   hasDefiningResolution: CGPM11-Res12
-  datatype: decimal
+  xsd_type: decimal
   Comments:
 - URI: micro
   prefLabel_en: micro
@@ -124,7 +124,7 @@
   ScalingFactor: 1e-06
   hasSymbol: µ
   hasDefiningResolution: CGPM11-Res12
-  datatype: float
+  xsd_type: float
   Comments: Tried with latex - fine without bold, but more difficult with.  Would
     require two symbols one bolded the other not.
 - URI: nano
@@ -133,7 +133,7 @@
   ScalingFactor: 1e-09
   hasSymbol: n
   hasDefiningResolution: CGPM11-Res12
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: pico
   prefLabel_en: pico
@@ -141,7 +141,7 @@
   ScalingFactor: 1e-12
   hasSymbol: p
   hasDefiningResolution: CGPM11-Res12
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: femto
   prefLabel_en: femto
@@ -149,7 +149,7 @@
   ScalingFactor: 1e-15
   hasSymbol: f
   hasDefiningResolution: CGPM12-Res8
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: atto
   prefLabel_en: atto
@@ -157,7 +157,7 @@
   ScalingFactor: 1e-18
   hasSymbol: a
   hasDefiningResolution: CGPM12-Res8
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: zepto
   prefLabel_en: zepto
@@ -165,7 +165,7 @@
   ScalingFactor: 1e-21
   hasSymbol: z
   hasDefiningResolution: CGPM19-Res4
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: yocto
   prefLabel_en: yocto
@@ -173,7 +173,7 @@
   ScalingFactor: 1e-24
   hasSymbol: y
   hasDefiningResolution: CGPM19-Res4
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: ronto
   prefLabel_en: ronto
@@ -181,7 +181,7 @@
   ScalingFactor: 1e-27
   hasSymbol: r
   hasDefiningResolution: CGPM27-Res3
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: quecto
   prefLabel_en: quecto
@@ -189,7 +189,7 @@
   ScalingFactor: 1e-30
   hasSymbol: q
   hasDefiningResolution: CGPM27-Res3
-  datatype: float
+  xsd_type: float
   Comments:
 - URI: none
   prefLabel_en: none
@@ -197,5 +197,5 @@
   ScalingFactor: 1e0
   hasSymbol: 
   hasDefiningResolution: 
-  datatype: float
+  xsd_type: float
   Comments: "not an official prefix"
