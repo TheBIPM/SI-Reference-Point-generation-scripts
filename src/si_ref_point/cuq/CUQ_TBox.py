@@ -377,7 +377,7 @@ class SiElements:
 
         # hasDefinitionNote
         self.hasDefinitionNote = self.set_uri("hasDefinitionNote")
-        self.g.add((self.hasDefinitionNote, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDefinitionNote, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasDefinitionNote, RDFS.label,
                     Literal("has definition note", lang="en")))
         self.g.add((self.hasDefinitionNote, RDFS.label,
