@@ -1,7 +1,3 @@
-#
-# Constants ABox
-#
-
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
 from si_ref_point.cuq.CUQ_TBox import SiElements
 import si_ref_point.cuq.symbols_format as sf
@@ -42,18 +38,14 @@ def main():
                Literal(cst['value_str'], datatype=XSD.string)))
         g.add((element, PDF.hasUnitAsString,
                Literal(cst['unit_str'], datatype=XSD.string)))
-        if cst['value_type'] == "xsd:integer":
-            g.add((element, PDF.hasDatatype,  XSD.integer))
-            g.add((element, PDF.hasValue,
-                   Literal(cst['value'], datatype=XSD.integer,
-                           normalize=False)))
-        elif cst['value_type'] == "xsd:double":
-            # changing the output datatype to xsd:float as RDFLib has a
-            # known bug that loses precision in value
-            # https://github.com/RDFLib/rdflib/issues/1852
-            g.add((element, PDF.hasDatatype, XSD.float))
-            g.add((element, PDF.hasValue,
-                   Literal(cst['value'], datatype=XSD.float, normalize=False)))
+        g.add((element, PDF.hasValue,
+               Literal(cst['value'], datatype=XSD[cst['xsd_type']], normalize=False)))
+        g.add((element, PDF.hasDatatype, XSD[cst['xsd_type']]))
+        # note on xsd:double :
+        # RDFLib has a known bug that loses precision in value for xsd:double
+        # https://github.com/RDFLib/rdflib/issues/1852
+        # xsd:float should be preferred
+
         latex_symbol = sf.formattxt(cst['symbol'], 'latex')
         g.add((element, PDF.hasSymbol,
                Literal(latex_symbol, datatype=XSD.string)))
@@ -69,3 +61,7 @@ def main():
                PDF.set_cgpm_uri(cst['hasDefiningResolution'])))
 
     return g
+
+
+if __name__ == "__main__":
+    main()
