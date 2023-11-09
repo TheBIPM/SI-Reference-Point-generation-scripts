@@ -47,6 +47,7 @@ def main():
             g.add((element, RDF.type, PDF.SIPrefix))
             g.add((element, SKOS.prefLabel, Literal(prefLabel_fr, lang='fr')))
             g.add((element, SKOS.prefLabel, Literal(prefLabel_en, lang='en')))
+            
             if datatype == "integer":
                 g.add((element, PDF.hasScalingFactor,
                        Literal(scalingFactor, datatype=XSD.integer)))
@@ -59,9 +60,13 @@ def main():
                 g.add((element, PDF.hasScalingFactor,
                        Literal(scalingFactor, datatype=XSD.float)))
                 g.add((element, PDF.hasDatatype, XSD.float))
-            g.add((element, PDF.hasSymbol,
+            
+            if symbol:
+                g.add((element, PDF.hasSymbol,
                    Literal(symbol, datatype=XSD.string)))
-            g.add((element, PDF.hasDefiningResolution,
-                   URIRef(PDF.set_cgpm_uri(defres))))
+                
+            if defres:
+                g.add((element, PDF.hasDefiningResolution,
+                     URIRef(PDF.set_cgpm_uri(defres))))
 
     return g
