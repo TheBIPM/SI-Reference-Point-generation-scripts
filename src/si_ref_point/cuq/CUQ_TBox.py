@@ -551,13 +551,24 @@ class SiElements:
                             "de validité.", lang="fr")))
 
         # hasDefiningEquation
+        self.hasDefiningEquation_oneOf_node = BNode()
+        self.hasDefiningEquation_oneOf_subnode = BNode()
+        self.hasDefiningEquation_oneOf_list = [self.Definition,
+                                                 self.Constant]
+        self.hasDefiningEquation_oneOf_col = Collection(
+            self.g, self.hasDefiningEquation_oneOf_subnode,
+            self.hasDefiningEquation_oneOf_list)
+        
         self.hasDefiningEquation = self.set_uri("hasDefiningEquation")
         self.g.add((self.hasDefiningEquation, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDefiningEquation, RDFS.label,
                     Literal("has defining equation", lang="en")))
         self.g.add((self.hasDefiningEquation, RDFS.label,
                     Literal("a une équation de définition", lang="fr")))
-        self.g.add((self.hasDefiningEquation, RDFS.domain, self.Definition))
+        self.g.add((self.hasDefiningEquation, RDFS.domain,
+                    self.hasDefiningEquation_oneOf_node))
+        self.g.add((self.hasDefiningEquation_oneOf_node, OWL.oneOf,
+                    self.hasDefiningEquation_oneOf_subnode))
         self.g.add((self.hasDefiningEquation, RDFS.range, RDFS.Literal))
         self.g.add((self.hasDefiningEquation, RDFS.comment,
                     Literal("Linking a SI definition to its defining "
