@@ -187,6 +187,11 @@ si:PrefixedUnit a owl:Class ;
                 owl:onProperty si:hasPrefix ;
                 owl:someValuesFrom si:BasePrefix
             ]
+            #[  # not working as intended, need to look further into semantics
+            #    a owl:Restriction; 
+            #    owl:onProperty si:hasPrefix ;
+            #    owl:cardinality "1"^^xsd:nonNegativeInteger
+            #]
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasBaseUnit ;
