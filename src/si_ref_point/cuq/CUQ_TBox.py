@@ -300,7 +300,7 @@ class SiElements:
             self.hasDatatype_oneOf_list)
         self.hasDatatype = self.set_uri("hasDatatype")
 
-        self.g.add((self.hasDatatype, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDatatype, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasDatatype, RDFS.label,
                     Literal("has datatype", lang="en")))
         self.g.add((self.hasDatatype, RDFS.label,
@@ -309,7 +309,6 @@ class SiElements:
                     self.hasDatatype_oneOf_node))
         self.g.add((self.hasDatatype_oneOf_node, OWL.oneOf,
                     self.hasDatatype_oneOf_subnode))
-        self.g.add((self.hasDatatype, RDFS.range, XSD.anyURI))
 
         # hasValueAsString
         self.hasValueAsString = self.set_uri("hasValueAsString")
