@@ -46,6 +46,7 @@ amps:
   text: A
   html: ''
   json: ''
+  uri: units:ampere
 amss:
   name_en: Ampere second unit symbol
   name_fr: ''
@@ -183,6 +184,7 @@ cans:
   text:
   html: ''
   json: ''
+  uri: units:candela
 cefi:
   name_en: Inverse Celsius to Kelvin offset (French)
   name_fr: ''
@@ -271,6 +273,7 @@ cous:
   text: C
   html: ''
   json: ''
+  uri: units:coulomb
 csis:
   name_en: Caesium 133 isotope symbol
   name_fr: ''
@@ -503,6 +506,7 @@ jles:
   text: J
   html: ''
   json: ''
+  uri: units:joule
 jpks:
   name_en: Joule per kelvin unit symbol
   name_fr: ''
@@ -527,6 +531,7 @@ kels:
   text:
   html: ''
   json: ''
+  uri: units:kelvin
 kgmd:
   name_en: Kilogram unit definition
   name_fr: ''
@@ -551,6 +556,7 @@ kgms:
   text: kg
   html: ''
   json: ''
+  uri: units:kilogram
 kgod:
   name_en: Kilogram alternate definition
   name_fr: ''
@@ -633,6 +639,7 @@ lums:
   text:
   html: ''
   json: ''
+  uri: units:lumen
 luxs:
   name_en: Lux unit symbol
   name_fr: ''
@@ -729,6 +736,7 @@ mols:
   text:
   html: ''
   json: ''
+  uri: units:mole
 morf:
   name_en: Mono. radiation 540 THz frequency
   name_fr: ''
@@ -794,6 +802,7 @@ mtrs:
   text: m
   html: ''
   json: ''
+  uri: units:metre
 mvwv:
   name_en: Metre vacuum wavelengths value
   name_fr: ''
@@ -810,6 +819,7 @@ news:
   text:
   html: ''
   json: ''
+  uri: units:newton
 ohms:
   name_en: Ohm unit symbol
   name_fr: ''
@@ -946,6 +956,7 @@ secs:
   text: s
   html: ''
   json: ''
+  uri: units:second
 smsu:
   name_en: Per square metre second unit symbol
   name_fr: ''
@@ -1026,6 +1037,7 @@ strs:
   text:
   html: ''
   json: ''
+  uri: units:steradian
 tmpa:
   name_en: Temperature alt quantity definition
   name_fr: ''
@@ -1187,6 +1199,7 @@ vlts:
   text:
   html: ''
   json: ''
+  uri: units:volt
 wats:
   name_en: Watt unit symbol
   name_fr: ''
@@ -1195,6 +1208,7 @@ wats:
   text:
   html: ''
   json: ''
+  uri: units:watt
 wpss:
   name_en: Watt per steradian symbol
   name_fr: ''
@@ -1211,6 +1225,7 @@ webs:
   text:
   html: ''
   json: ''
+  uri: units:weber
 wtps:
   name_en: Water triple point symbol
   name_fr: ''
