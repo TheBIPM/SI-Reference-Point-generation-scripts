@@ -7,48 +7,7 @@
 @prefix units: <http://si-digital-framework.org/SI/units/> .
 @prefix quantities: <http://si-digital-framework.org/quantities/> .
 @prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
-
-
-# define some (abstract) mathematical operations
-
-## Operation
-si:Operation a owl:Class ;
-    rdfs:label "Operation" ;
-    rdfs:comment "Operation that is applied to operands" ;
-    rdfs:seeAlso math:E1301 .
-
-si:hasOperand a owl:ObjectProperty ;
-    rdfs:label "has operand" ;
-    rdfs:domain si:Operation .
-
-## Multiplication
-si:Multiplication a si:Operation ;
-    rdfs:label "multiplication" ;
-    rdfs:seeAlso math:E1318 .
-
-si:hasFactor a owl:ObjectProperty ;
-    rdfs:label "has factor" ;
-    rdfs:subPropertyOf si:hasOperand ;
-    rdfs:subPropertyOf si:includesUseOf ;
-    rdfs:domain si:Multiplication .
-
-## Exponentiation
-si:Exponentiation a si:Operation ;
-    rdfs:label "multiplication" ;
-    rdfs:seeAlso math:E1302 .
-
-si:hasBase a owl:ObjectProperty ;
-    rdfs:label "has base" ;
-    rdfs:subPropertyOf si:hasOperand ;
-    rdfs:subPropertyOf si:includesUseOf ;
-    rdfs:domain si:Exponentiation .
-
-si:hasExponent a owl:ObjectProperty ;
-    rdfs:label "has exponent" ;
-    rdfs:subPropertyOf si:hasOperand ;
-    rdfs:domain si:Exponentiation ;
-    rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
-
+@prefix ops: <http://si-digital-framework.org/operations/> .
 
 # compound quantities
 
@@ -61,7 +20,7 @@ si:QuantityKindProduct a owl:Class ;
     rdfs:subClassOf si:CompoundQuantityKind ;
     owl:equivalentClass [
         owl:intersectionOf (
-            si:Multiplication
+            ops:Multiplication
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasFactor ;
@@ -76,7 +35,7 @@ si:QuantityKindPower a owl:Class ;
     rdfs:subClassOf si:CompoundQuantityKind ;
     owl:equivalentClass [
         owl:intersectionOf (
-            si:Exponentiation
+            ops:Exponentiation
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasBase ;
@@ -104,7 +63,7 @@ si:UnitProduct a owl:Class ;
     rdfs:subClassOf si:CompoundUnit ;
     owl:equivalentClass [
         owl:intersectionOf (
-            si:Multiplication
+            ops:Multiplication
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasFactor ;
@@ -119,7 +78,7 @@ si:UnitPower a owl:Class ;
     rdfs:subClassOf si:CompoundUnit ;
     owl:equivalentClass [
         owl:intersectionOf (
-            si:Exponentiation
+            ops:Exponentiation
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasBase ;
@@ -248,7 +207,7 @@ si:PrefixedUnit a owl:Class ;
 #     rdfs:subClassOf si:CompoundPhysicalDimension ;
 #     owl:equivalentClass [
 #         owl:intersectionOf (
-#             si:Multiplication
+#             ops:Multiplication
 #             [
 #                 a owl:Restriction; 
 #                 owl:onProperty si:hasFactor ;
@@ -263,7 +222,7 @@ si:PrefixedUnit a owl:Class ;
 #     rdfs:subClassOf si:CompoundPhysicalDimension ;
 #     owl:equivalentClass [
 #         owl:intersectionOf (
-#             si:Exponentiation
+#             ops:Exponentiation
 #             [
 #                 a owl:Restriction; 
 #                 owl:onProperty si:hasBase ;
@@ -317,26 +276,6 @@ si:PrefixedUnit a owl:Class ;
 #         si:AmountOfSubstanceDimension             
 #         si:LuminousIntensityDimension 
 #     ) .
-
-
-# # logarithm operation
-# si:Logarithm a si:Operation ;
-#     rdfs:label "logarithm" ;
-#     rdfs:seeAlso math:E1308 .
-# 
-# si:hasLogBase a owl:ObjectProperty ;
-#     rdfs:label "has logarithm base" ;
-#     rdfs:subPropertyOf si:hasOperand ;
-#     rdfs:domain si:Logarithm ;
-#     rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
-# 
-# si:hasLogArgument a owl:ObjectProperty ;
-#     rdfs:label "has logarithm argument" ;
-#     rdfs:subPropertyOf si:hasOperand ;
-#     rdfs:subPropertyOf si:includesUseOf ;
-#     rdfs:domain si:Logarithm .
-
-
 # # relaxed alternative for isUnitOfQtyKind ?
 # si:associatedWith a owl:ObjectProperty ;  
 #     rdfs:label "associated with" ;

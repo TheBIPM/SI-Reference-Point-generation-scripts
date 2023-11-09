@@ -4,6 +4,7 @@
 import argparse
 import logging
 import si_ref_point.cuq.CUQ_TBox_Extension as CUQ_TBox_Extension
+import si_ref_point.cuq.Operations_TBox as Operations_TBox
 import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
 import si_ref_point.cuq.Constants_ABox as Constants_ABox
@@ -56,6 +57,7 @@ def main():
     file_generator = {
         #'si': CUQ_TBox.main,
         'si': CUQ_TBox_Extension.main,
+        'operations': Operations_TBox.main,
         'quantities': Quantities_ABox.main,
         'units': Units_ABox.main,
         'constants': Constants_ABox.main,
