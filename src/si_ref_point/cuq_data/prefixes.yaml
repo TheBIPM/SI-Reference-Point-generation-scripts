@@ -191,3 +191,11 @@
   hasDefiningResolution: CGPM27-Res3
   datatype: float
   Comments:
+- URI: none
+  prefLabel_en: none
+  prefLabel_fr: aucun
+  ScalingFactor: 1e0
+  hasSymbol: 
+  hasDefiningResolution: 
+  datatype: float
+  Comments: "not an official prefix"
