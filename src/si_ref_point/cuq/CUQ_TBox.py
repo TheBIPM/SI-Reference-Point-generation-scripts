@@ -612,7 +612,7 @@ class SiElements:
         self.g.add((restr_hasScalingFactor, RDF.type, OWL.Restriction))
         self.g.add((restr_hasScalingFactor, OWL.onProperty,
                     self.hasScalingFactor))
-        self.g.add((restr_hasScalingFactor, OWL.cardinality,
+        self.g.add((restr_hasScalingFactor, OWL.minCardinality,
                     Literal(1, datatype=XSD.int)))
         self.g.add((self.SIPrefix, RDFS.subClassOf, restr_hasScalingFactor))
 
