@@ -29,6 +29,13 @@ ops:hasFactor a owl:ObjectProperty ;
     rdfs:subPropertyOf ops:includesUseOf ;
     rdfs:domain ops:Multiplication .
 
+ops:hasFactorA a owl:ObjectProperty ;
+    rdfs:label "has factor A" ;
+    rdfs:subPropertyOf ops:hasFactor .
+
+ops:hasFactorB a owl:ObjectProperty ;
+    rdfs:label "has factor B" ;
+    rdfs:subPropertyOf ops:hasFactor .
 
 ## Exponentiation
 ops:Exponentiation a ops:Operation ;
