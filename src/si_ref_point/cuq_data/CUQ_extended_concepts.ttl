@@ -138,7 +138,7 @@ si:UnitPower a owl:Class ;
 
 # prefixed unit
 
-si:BasePrefixes a owl:Class ;
+si:BasePrefix a owl:Class ;
     rdfs:subClassOf si:SIPrefix ;
     owl:oneOf (
         prefixes:atto
@@ -185,7 +185,7 @@ si:PrefixedUnit a owl:Class ;
             [
                 a owl:Restriction; 
                 owl:onProperty si:hasPrefix ;
-                owl:someValuesFrom si:BasePrefixes
+                owl:someValuesFrom si:BasePrefix
             ]
             [
                 a owl:Restriction; 
