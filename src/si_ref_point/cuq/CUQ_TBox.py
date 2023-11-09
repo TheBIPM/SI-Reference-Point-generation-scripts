@@ -525,14 +525,14 @@ class SiElements:
                     Literal("Associer une définition SI à sa date de début "
                             "de validité.", lang="fr")))
 
-        # restriction on "hasStartValidity": cardinality = 1
+        # restriction on "hasStartValidity": minCardinality = 1 (exact cardinality not good in open world assumption)
         restr_hasStartValidity = BNode()
         self.g.add((restr_hasStartValidity, RDF.type, OWL.Restriction))
         self.g.add((restr_hasStartValidity, OWL.onProperty,
                     self.hasStartValidity))
-        self.g.add((restr_hasStartValidity, OWL.cardinality,
+        self.g.add((restr_hasStartValidity, OWL.minCardinality,
                     Literal(1, datatype=XSD.int)))
-        self.g.add((self.SIBaseUnit, RDFS.subClassOf, restr_hasStartValidity))
+        self.g.add((self.Definition, RDFS.subClassOf, restr_hasStartValidity))
 
         # hasEndValidity
         self.hasEndValidity = self.set_uri("hasEndValidity")
@@ -549,13 +549,6 @@ class SiElements:
         self.g.add((self.hasEndValidity, RDFS.comment,
                     Literal("Associer une définition SI à sa date de fin "
                             "de validité.", lang="fr")))
-
-        # restriction on "hasEndValidity" : maxCardinality = 1
-        restr_hasEndValidity = BNode()
-        self.g.add((restr_hasEndValidity, RDF.type, OWL.Restriction))
-        self.g.add((restr_hasEndValidity, OWL.onProperty, self.hasEndValidity))
-        self.g.add((restr_hasEndValidity, OWL.maxCardinality, Literal(1)))
-        self.g.add((self.SIBaseUnit, RDFS.subClassOf, restr_hasEndValidity))
 
         # hasDefiningEquation
         self.hasDefiningEquation = self.set_uri("hasDefiningEquation")
