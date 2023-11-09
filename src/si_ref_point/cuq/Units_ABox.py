@@ -40,42 +40,61 @@ def main():
     # 4.1) Define the BaseUnit (to which one can subsequently attach several
     # definitions)
     for dc in def_collectors:
-        if dc['URI'] is not None:
+        if dc['URI'] is not None:           
             element = PDF.set_unit_uri(dc['URI'])
-            g.add((element, RDF.type, PDF.SIBaseUnit))
-            g.add((element, SKOS.prefLabel,
-                   Literal(dc['prefLabel(fr)'], lang='fr')))
-            g.add((element, SKOS.prefLabel,
-                   Literal(dc['prefLabel(en)'], lang='en')))
-            g.add((element, PDF.hasUnitTypeAsString,
-                   Literal('SI base unit', lang='en')))
-            g.add((element, PDF.hasUnitTypeAsString,
-                   Literal('Unité SI de base', lang='fr')))
-            g.add((element, PDF.isUnitOfQtyKind,
-                   PDF.set_quantity_uri(dc['isUnitOfQtyKind'])))
-            g.add((element, PDF.hasSymbol,
-                   Literal(dc['hasSymbol'], datatype=XSD.string)))
 
-            for i, dfn in enumerate(dc['definitions']):
-                curr_def = dfn
-                try:
-                    next_def = dc['definitions'][i + 1]
-                except IndexError:
-                    next_def = None
-                if curr_def is not None:
-                    g.add((element, PDF.hasDefinition, PDF.set_uri(curr_def)))
-                    if next_def is not None:
-                        g.add((PDF.set_uri(curr_def), PDF.hasNextDefinition,
-                               PDF.set_uri(next_def)))
+            if dc['URI'] != "gram":
+                g.add((element, RDF.type, PDF.SIBaseUnit))
+                g.add((element, SKOS.prefLabel,
+                       Literal(dc['prefLabel(fr)'], lang='fr')))
+                g.add((element, SKOS.prefLabel,
+                       Literal(dc['prefLabel(en)'], lang='en')))
+                g.add((element, PDF.hasUnitTypeAsString,
+                       Literal('SI base unit', lang='en')))
+                g.add((element, PDF.hasUnitTypeAsString,
+                       Literal('Unité SI de base', lang='fr')))
+                g.add((element, PDF.isUnitOfQtyKind,
+                       PDF.set_quantity_uri(dc['isUnitOfQtyKind'])))
+                g.add((element, PDF.hasSymbol,
+                       Literal(dc['hasSymbol'], datatype=XSD.string)))
+                if "hasPrefix" in dc.keys():
+                     g.add((element, PDF.set_uri("hasPrefix"),
+                         PDF.set_prefix_uri(dc["hasPrefix"])))
+                if "hasBaseUnit" in dc.keys():
+                     g.add((element, PDF.set_uri("hasBaseUnit"),
+                         PDF.set_unit_uri(dc["hasBaseUnit"])))
 
-                if i > 0:
-                    prev_def = dc['definitions'][i - 1]
-                else:
-                    prev_def = None
-                if curr_def is not None:
-                    if prev_def is not None:
-                        g.add((PDF.set_uri(curr_def), PDF.hasPreviousDefinition,
-                               PDF.set_uri(prev_def)))
+                for i, dfn in enumerate(dc['definitions']):
+                    curr_def = dfn
+                    try:
+                        next_def = dc['definitions'][i + 1]
+                    except IndexError:
+                        next_def = None
+                    if curr_def is not None:
+                        g.add((element, PDF.hasDefinition, PDF.set_uri(curr_def)))
+                        if next_def is not None:
+                            g.add((PDF.set_uri(curr_def), PDF.hasNextDefinition,
+                                   PDF.set_uri(next_def)))
+
+                    if i > 0:
+                        prev_def = dc['definitions'][i - 1]
+                    else:
+                        prev_def = None
+                    if curr_def is not None:
+                        if prev_def is not None:
+                            g.add((PDF.set_uri(curr_def), PDF.hasPreviousDefinition,
+                                   PDF.set_uri(prev_def)))
+            else: # gram
+                g.add((element, RDF.type, PDF.MeasurementUnit))
+                g.add((element, SKOS.prefLabel,
+                       Literal(dc['prefLabel(fr)'], lang='fr')))
+                g.add((element, SKOS.prefLabel,
+                       Literal(dc['prefLabel(en)'], lang='en')))
+                g.add((element, PDF.isUnitOfQtyKind,
+                       PDF.set_quantity_uri(dc['isUnitOfQtyKind'])))
+                g.add((element, PDF.hasSymbol,
+                       Literal(dc['hasSymbol'], datatype=XSD.string)))
+
 
     # 4.2 Declare all definitions
     # uri_text values are a concatenation of the lowercase unit name and the

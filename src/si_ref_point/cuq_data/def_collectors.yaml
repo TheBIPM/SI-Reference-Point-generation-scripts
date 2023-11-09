@@ -27,6 +27,8 @@
   prefLabel(en): kilogram
   isUnitOfQtyKind: MASS
   hasSymbol: kg
+  hasPrefix: kilo
+  hasBaseUnit: gram
   definitions:
   - kilogram1901
   - kilogram2018
@@ -58,3 +60,8 @@
   - second1960
   - second1967
   - second2018
+- URI: gram
+  prefLabel(fr): gramme
+  prefLabel(en): gram
+  isUnitOfQtyKind: MASS
+  hasSymbol: g
