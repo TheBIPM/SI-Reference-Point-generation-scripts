@@ -280,14 +280,6 @@ class SiElements:
         # for Constants
 
         # hasValue
-        # or hasNumericValue might be better
-        self.hasValue_oneOf_node = BNode()
-        self.hasValue_oneOf_subnode = BNode()
-        self.hasValue_oneOf_list = [XSD.double, XSD.float, XSD.decimal, XSD.integer, RDFS.Literal]
-        self.hasValue_oneOf_col = Collection(
-            self.g, self.hasValue_oneOf_subnode,
-            self.hasValue_oneOf_list)
-
         self.hasValue = self.set_uri("hasValue")
         self.g.add((self.hasValue, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasValue, RDFS.label,
@@ -295,8 +287,7 @@ class SiElements:
         self.g.add((self.hasValue, RDFS.label,
                     Literal("a de la valeur", lang="fr")))
         self.g.add((self.hasValue, RDFS.domain, self.Constant))
-        self.g.add((self.hasValue, RDFS.range, self.hasValue_oneOf_node))
-        self.g.add((self.hasValue_oneOf_node, OWL.oneOf, self.hasValue_oneOf_subnode))
+        self.g.add((self.hasValue, RDFS.range, RDFS.Literal))
 
         # hasDatatype
         self.hasDatatype_oneOf_node = BNode()
@@ -601,22 +592,14 @@ class SiElements:
                             lang='fr')))
 
         # hasScalingFactor
-        self.hasScalingFactor_oneOf_node = BNode()
-        self.hasScalingFactor_oneOf_subnode = BNode()
-        self.hasScalingFactor_oneOf_list = self.hasValue_oneOf_list
-        self.hasScalingFactor_oneOf_col = Collection(
-            self.g, self.hasScalingFactor_oneOf_subnode,
-            self.hasScalingFactor_oneOf_list)
-        
         self.hasScalingFactor = self.set_uri("hasScalingFactor")
-        self.g.add((self.hasScalingFactor, RDF.type, OWL.ObjectProperty))  # Datatypeproperty results in reasoning error
+        self.g.add((self.hasScalingFactor, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasScalingFactor, RDFS.label,
                     Literal("has scaling factor", lang="en")))
         self.g.add((self.hasScalingFactor, RDFS.label,
                     Literal("a un facteur d'échelle", lang="fr")))
         self.g.add((self.hasScalingFactor, RDFS.domain, self.SIPrefix))
-        self.g.add((self.hasScalingFactor, RDFS.range, self.hasScalingFactor_oneOf_node))
-        self.g.add((self.hasScalingFactor_oneOf_node, OWL.oneOf, self.hasScalingFactor_oneOf_subnode))
+        self.g.add((self.hasScalingFactor, RDFS.range, RDFS.Literal))
         self.g.add((self.hasScalingFactor, RDFS.comment,
                     Literal("Linking an SI prefix to its scaling factor.",
                             lang="en")))
