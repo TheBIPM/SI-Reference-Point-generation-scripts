@@ -473,32 +473,23 @@ def main():
                     URIRef(PDF.set_cgpm_uri(sisp["hasDefiningResolution"])),
                 )
             )
+
             if sisp["inOtherSIUnits"]:
-                g.add(
-                    (
-                        element,
-                        PDF.inOtherSIUnits,
-                        Literal(
-                            sf.formattxt(
-                                sisp["inOtherSIUnits"], "latex", add_delim=False
-                            ),
-                            datatype=XSD.string,
-                        ),
-                    )
+                g, node = insert_unit_expr(
+                    g, sisp["inOtherSIUnits"], PDF, "inOtherSIUnits"
                 )
+                g.add((element, PDF.inOtherSIUnits, node))
+                tmp = sf.formattxt(sisp["inOtherSIUnits"], "latex", add_delim=False)
+                g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
+
             if sisp["inBaseSIUnits"]:
-                g.add(
-                    (
-                        element,
-                        PDF.inBaseSIUnits,
-                        Literal(
-                            sf.formattxt(
-                                sisp["inBaseSIUnits"], "latex", add_delim=False
-                            ),
-                            datatype=XSD.string,
-                        ),
-                    )
+                g, node = insert_unit_expr(
+                    g, sisp["inBaseSIUnits"], PDF, "inBaseSIUnits"
                 )
+                g.add((element, PDF.inBaseSIUnits, node))
+                tmp = sf.formattxt(sisp["inBaseSIUnits"], "latex", add_delim=False)
+                g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
+
             if sisp["hasDefiningEquation"]:
                 g.add(
                     (
