@@ -118,29 +118,25 @@ class SiElements:
 
         # inBaseSIUnits
         self.inBaseSIUnits = self.set_uri("inBaseSIUnits")
-        self.g.add((self.inBaseSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inBaseSIUnits, RDF.type, OWL.ObjectProperty))
         self.g.add((self.inBaseSIUnits, RDFS.label,
                     Literal("can be expressed in base SI units as",
                             lang="en")))
         self.g.add((self.inBaseSIUnits, RDFS.label,
                     Literal("peut être exprimé en unités SI de base sous "
                             "la forme", lang="fr")))
-        self.g.add((self.inBaseSIUnits, RDFS.domain, self.SISpecialNamedUnit))
-        # better than a literal, but good enough? :
-        self.g.add((self.inBaseSIUnits, RDFS.range, XSD.string))
+        self.g.add((self.inBaseSIUnits, RDFS.range, self.MeasurementUnit))
 
         # inOtherSIUnits
         self.inOtherSIUnits = self.set_uri("inOtherSIUnits")
-        self.g.add((self.inOtherSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inOtherSIUnits, RDF.type, OWL.ObjectProperty))
         self.g.add((self.inOtherSIUnits, RDFS.label,
                     Literal("can be expressed in other SI units as",
                             lang="en")))
         self.g.add((self.inOtherSIUnits, RDFS.label,
                     Literal("peut être exprimé dans d’autres unités SI sous "
                             "la forme", lang="fr")))
-        self.g.add((self.inOtherSIUnits, RDFS.domain, self.SISpecialNamedUnit))
-        # better than a literal, but good enough? :
-        self.g.add((self.inOtherSIUnits, RDFS.range, XSD.string))
+        self.g.add((self.inOtherSIUnits, RDFS.range, self.MeasurementUnit))
 
         # NonSIUnit
         self.nonSIUnit = self.set_uri("nonSIUnit")
@@ -702,6 +698,10 @@ class SiElements:
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)
+
+    def set_operation_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_operations + name)
 
     def set_prefix_uri(self, name: str) -> URIRef:
         """ Utility method """
