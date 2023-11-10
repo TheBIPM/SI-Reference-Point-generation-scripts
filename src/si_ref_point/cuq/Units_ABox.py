@@ -2,13 +2,149 @@
 Units ABox
 """
 
-from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
+from rdflib import URIRef, BNode, Graph, Literal
+from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
 from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
 from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
+import re
 import si_ref_point.cuq.symbols_format as sf
+
+
+def parse_fragments(fragments, syntax):
+    expression = {"mult": []}
+
+    for i, frag in enumerate(fragments):
+        not_last_fragment = i < len(fragments) - 1
+
+        if re.fullmatch(syntax["variable"], frag):
+            # get variable name
+            var_name = re.findall(syntax["var_name"], frag)[0]
+
+            if not_last_fragment:
+                # check if next fragment indicates exponentiation
+                if re.fullmatch(syntax["exponent"], fragments[i + 1]):
+                    exp_number = re.findall(syntax["exp_number"], fragments[i + 1])[0]
+                    expression["mult"].append({"exp": [var_name, exp_number]})
+                else:
+                    expression["mult"].append(var_name)
+            else:
+                expression["mult"].append(var_name)
+
+        if re.fullmatch(syntax["division"], frag):
+            if not_last_fragment:
+                # represent division as exponentiation
+                div_expr = parse_fragments(fragments[i + 1 :], syntax)
+                expression["mult"].append({"exp": [div_expr, "-1"]})
+                break
+
+    # reduce expression, if only one factor
+    if len(expression["mult"]) == 1:
+        expression = expression["mult"][0]
+
+    return expression
+
+
+def transform_to_graph(expression, PDF, graph, symbols):
+    expr_node = BNode()
+
+    if isinstance(expression, str):
+        # default
+        expr_node = Literal(expression)
+
+        # check if lookup possible
+        if expression in symbols.keys():
+            if "uri" in symbols[expression]:
+                unit_short_uri = symbols[expression]["uri"]
+                unit_name = unit_short_uri.split(":")[1]
+                expr_node = PDF.set_unit_uri(unit_name)
+
+    elif isinstance(expression, dict):
+        if "mult" in expression.keys():
+            # set type of expression node
+            graph.add((expr_node, RDF.type, PDF.set_operation_uri("Multiplication")))
+
+            # shortnames
+            hasFactor = PDF.set_uri("hasFactor")
+
+            # insert factors
+            for factor in expression["mult"]:
+                graph, node = transform_to_graph(factor, PDF, graph, symbols)
+                graph.add((expr_node, hasFactor, node))
+
+        elif "exp" in expression.keys():
+            # set type of expression node
+            graph.add((expr_node, RDF.type, PDF.set_operation_uri("Exponentiation")))
+
+            # shortnames
+            hasBase = PDF.set_uri("hasBase")
+            hasExponent = PDF.set_uri("hasExponent")
+
+            # insert base and exponent
+            graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
+            graph.add((expr_node, hasBase, node))
+            graph.add((expr_node, hasExponent, Literal(expression["exp"][1])))
+
+        else:
+            raise ValueError(
+                f"Unrecognized keys in expression-object: {expression.keys()}."
+            )
+
+    else:
+        raise ValueError(
+            f"Expecting either a string or dict. Got '{type(expression)}'."
+        )
+
+    return graph, expr_node
+
+
+def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
+    # define syntax style
+    if syntax_type == "inOtherSIUnits":
+        sx = {
+            "division": "/",
+            "times": "\\;",
+            "exponent": "\^[-0-9]+",
+            "exp_number": "\^([-0-9]+)",
+            "variable": "@[a-z]+@",
+            "var_name": "@([a-z]+)@",
+        }
+
+    elif syntax_type == "inBaseSIUnits":
+        # TODO: untested
+        sx = {
+            "division": "/",  # not used
+            "times": "\\;",
+            "exponent": "\^[\{]?[-0-9]+[\}]?",
+            "exp_number": "\^[\{]?([-0-9]+)[\}]?",
+            "variable": "\{@[a-z]+@\}",
+            "var_name": "\{@([a-z]+)@\}",
+        }
+
+    else:
+        ValueError(f"Unknown syntax type '{syntax_type}'.")
+
+    # parse txt into fragments
+    expression_atoms = re.compile(
+        f'({sx["variable"]}|{sx["division"]}|{sx["times"]}|{sx["exponent"]})'
+    )
+    fragments = re.findall(expression_atoms, txt_expression)
+
+    # extract factors / division / exponents from fragments
+    expression = parse_fragments(fragments, syntax=sx)
+
+    # transform into RDF triples via lookup from symbols
+    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"), encoding="utf8") as fp:
+        symbols = yaml.safe_load(fp)
+    g, node = transform_to_graph(expression, PDF, graph=g, symbols=symbols)
+
+    # print(txt_expression)
+    # print(expression)
+    # print("=" * 30)
+
+    return g, node
 
 
 def main():
