@@ -86,7 +86,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
             # insert base and exponent
             graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
             exponent = BNode()
-            graph.add((exponent, RDF.type, PDF.set_uri("Numeric")))
+            #graph.add((exponent, RDF.type, PDF.set_uri("Numeric"))) # inferable
             graph.add((exponent, value, Literal(expression["exp"][1])))
             graph.add((expr_node, hasBase, node))
             graph.add((expr_node, hasExponent, exponent))
@@ -543,7 +543,7 @@ def main():
             hasFactor = PDF.set_operation_uri("hasFactor")
             conversion_factor = BNode()
 
-            g.add((conversion_factor, RDF.type, PDF.set_uri("Numeric")))
+            #g.add((conversion_factor, RDF.type, PDF.set_uri("Numeric"))) # inferable
             g.add(
                 (
                     conversion_factor,
