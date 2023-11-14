@@ -154,9 +154,23 @@ si:PrefixedUnit a owl:Class ;
     ] .
 
 
-####################
-## FOR FUTURE USE ##
-####################
+##########################
+## IDEAS FOR FUTURE USE ##
+##########################
+
+# # rolification of, e.g. measurement unit
+#
+# si:R_MeasurementUnit a owl:ObjectProperty .
+#
+# si:MeasurementUnit a owl:Class ; 
+#     owl:equivalentClass [
+#         a owl:Restriction ;
+#         owl:hasSelf "true"^^xsd:boolean ;
+#         owl:onProperty si:R_MeasurementUnit 
+#     ] .
+#
+# si:hasUnitFactor a owl:ObjectProperty ;
+#    owl:propertyChainAxiom (ops:hasFactor si:R_MeasurementUnit) .
 
 # # coherent unit
 # 
