@@ -241,7 +241,7 @@ def main():
                     g.add(
                         (
                             element,
-                            PDF.set_uri("hasPrefix"),
+                            PDF.set_operation_uri("hasFactor"),
                             PDF.set_prefix_uri(dc["hasPrefix"]),
                         )
                     )
@@ -249,7 +249,7 @@ def main():
                     g.add(
                         (
                             element,
-                            PDF.set_uri("hasBaseUnit"),
+                            PDF.set_operation_uri("hasFactor"),
                             PDF.set_unit_uri(dc["hasBaseUnit"]),
                         )
                     )
