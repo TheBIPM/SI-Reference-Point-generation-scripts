@@ -1,0 +1,65 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix math: <http://cll.niimm.ksu.ru/ontologies/mathematics#> .
+
+@prefix si: <http://si-digital-framework.org/SI#> .
+@prefix units: <http://si-digital-framework.org/SI/units/> .
+@prefix quantities: <http://si-digital-framework.org/quantities/> .
+@prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
+@prefix ops: <http://si-digital-framework.org/operations/> .
+
+
+
+###############################################
+########### TESTING INDIVIDUALS ###############
+###############################################s
+@prefix ex: <http://example.org/> .
+
+ex:second a ops:Multiplication ;
+    ops:hasFactor units:second .
+
+ex:nanosecond a ops:Multiplication ;
+    ops:hasFactor units:second ;
+    ops:hasFactor prefixes:nano .
+
+ex:millimetre a si:MeasurementUnit ;
+    ops:hasFactor units:metre ;
+    ops:hasFactor prefixes:milli .
+
+ex:millimetre_alt1 a ops:Multiplication ;
+    ops:hasFactor units:metre ;
+    ops:hasFactor prefixes:milli .
+
+ex:millimetre_alt2 a ops:Multiplication ;
+    ops:hasFactor [a si:Numeric; si:value 0.001] ;
+    ops:hasFactor units:metre .
+
+ex:voltmetre a ops:Multiplication ;
+    ops:hasFactor units:volt ;
+    ops:hasFactor units:metre .
+
+ex:foot a ops:Multiplication ;
+   ops:hasFactor [a si:Numeric; si:value "0.3048"^^xsd:decimal];
+   ops:hasFactor units:metre .
+
+ex:voltmillimetre a ops:Multiplication ;
+    ops:hasFactor units:volt ;
+    ops:hasFactor ex:millimetre .
+
+ex:newton a ops:Multiplication ;
+    ops:hasFactor units:metre ;
+    ops:hasFactor units:kilogram ;
+    ops:hasFactor [
+        a ops:Exponentiation ;
+        ops:hasBase units:second ;
+        ops:hasExponent -2
+    ] .
+
+ex:velocityDimension a ops:Multiplication ;
+    ops:hasFactor si:LengthDimension ;
+    ops:hasFactor [
+        a ops:Exponentiation ;
+        ops:hasBase si:TimeDimension ;
+        ops:hasExponent -1
+    ] .
