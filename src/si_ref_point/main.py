@@ -76,9 +76,6 @@ def main():
         output[label] = generator()
         logging.info("..done")
 
-    # 2nd-stage operations on graphs
-    # output['constants'] = second_stage.add_unitpwr(output)
-
     # Serialize all graphs in their respective turtle files
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
