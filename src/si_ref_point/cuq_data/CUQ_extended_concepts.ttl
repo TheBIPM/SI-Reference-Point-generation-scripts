@@ -55,6 +55,25 @@ si:CompoundUnit a owl:Class ;
     rdfs:label "compound unit" ;  
     rdfs:subClassOf si:MeasurementUnit .
 
+si:UnitMultiple a owl:Class ;
+    rdfs:label "unit product" ;
+    rdfs:subClassOf si:CompoundUnit ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            ops:Multiplication
+            [
+                a owl:Restriction ; 
+                owl:onProperty ops:hasFactor ;
+                owl:someValuesFrom si:MeasurementUnit ;
+            ] 
+            [
+                a owl:Restriction ; 
+                owl:onProperty ops:hasFactor ;
+                owl:someValuesFrom si:Numeric ;
+            ] 
+        )
+    ].
+
 si:UnitProduct a owl:Class ;
     rdfs:label "unit product" ;
     rdfs:subClassOf si:CompoundUnit ;
