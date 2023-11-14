@@ -48,6 +48,14 @@ si:QuantityKindPower a owl:Class ;
         )
     ].
 
+# numeric values 
+# (reasoning over mixed Object/DataProperties is otherwise difficult)
+si:Numeric a owl:Class .
+
+si:value a owl:DatatypeProperty ;
+    owl:domain si:Numeric ;
+    owl:range [owl:oneOf (xsd:decimal xsd:float xsd:double xsd:integer)] .
+
 
 # compound units
 
