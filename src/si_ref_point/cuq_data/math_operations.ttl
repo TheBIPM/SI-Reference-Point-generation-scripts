@@ -26,7 +26,6 @@ ops:Multiplication a ops:Operation ;
 ops:hasFactor a owl:ObjectProperty ;
     rdfs:label "has factor" ;
     rdfs:subPropertyOf ops:hasOperand ;
-    rdfs:subPropertyOf ops:includesUseOf ;
     rdfs:domain ops:Multiplication .
 
 ops:hasFactorA a owl:ObjectProperty ;
@@ -45,7 +44,6 @@ ops:Exponentiation a ops:Operation ;
 ops:hasBase a owl:ObjectProperty ;
     rdfs:label "has base" ;
     rdfs:subPropertyOf ops:hasOperand ;
-    rdfs:subPropertyOf ops:includesUseOf ;
     rdfs:domain ops:Exponentiation .
 
 ops:hasExponent a owl:ObjectProperty ;
@@ -68,5 +66,4 @@ ops:hasLogBase a owl:ObjectProperty ;
 ops:hasLogArgument a owl:ObjectProperty ;
     rdfs:label "has logarithm argument" ;
     rdfs:subPropertyOf ops:hasOperand ;
-    rdfs:subPropertyOf ops:includesUseOf ;
     rdfs:domain ops:Logarithm .
