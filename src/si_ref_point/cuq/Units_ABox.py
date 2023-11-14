@@ -319,16 +319,6 @@ def main():
         if bdef["URI"] is not None:
             element = PDF.set_uri(bdef["URI"])
             g.add((element, RDF.type, PDF.Definition))
-            g.add(
-                (element, PDF.hasUnitTypeAsString, Literal("SI base unit", lang="en"))
-            )
-            g.add(
-                (
-                    element,
-                    PDF.hasUnitTypeAsString,
-                    Literal("Unité SI de base", lang="fr"),
-                )
-            )
             g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
             g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
             g.add(

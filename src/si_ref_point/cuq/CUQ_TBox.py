@@ -257,7 +257,6 @@ class SiElements:
             self.SISpecialNamedUnit,
             self.nonSIUnit,
             self.MeasurementUnit,
-            self.Definition,
         ]
         self.hasUnitTypeAsString_oneOf_col = Collection(
             self.g, self.hasUnitTypeAsString_oneOf_subnode,
