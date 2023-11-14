@@ -545,20 +545,12 @@ def main():
                     PDF.set_quantity_uri(nsi["UnitOfQtyKind"]),
                 )
             )
-            g.add(
-                (
-                    element,
-                    PDF.hasConversionFactor,
-                    Literal(nsi["ConversionFactor"], datatype=XSD.double),
-                )
-            )
-            g.add(
-                (
-                    element,
-                    PDF.hasConversionUnit,
-                    PDF.set_unit_uri(nsi["ConversionUnit"]),
-                )
-            )
+            unit_multiple = BNode()
+            hasFactor = PDF.set_operation_uri("hasFactor")
+            g.add((unit_multiple, RDF.type, PDF.set_operation_uri("Multiplication")))
+            g.add((unit_multiple, hasFactor, PDF.set_unit_uri(nsi["ConversionUnit"])))
+            g.add((unit_multiple, hasFactor, Literal(nsi["ConversionFactor"])))
+            g.add((element, PDF.inOtherSIUnits, unit_multiple))
     return g
 
 
