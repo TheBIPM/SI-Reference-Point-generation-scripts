@@ -48,7 +48,7 @@ class SiElements:
 
         # for Constants
         self.Constant = self.set_uri("Constant")
-        self.g.add((self.Constant, RDF.type, SKOS.Concept))
+        self.g.add((self.Constant, RDF.type, OWL.Class))
         self.g.add((self.Constant, RDFS.label,
                     Literal("defining constant", lang="en")))
         self.g.add((self.Constant, RDFS.label,
@@ -64,7 +64,7 @@ class SiElements:
 
         # MeasurementUnit
         self.MeasurementUnit = self.set_uri("MeasurementUnit")
-        self.g.add((self.MeasurementUnit, RDF.type, SKOS.Concept))
+        self.g.add((self.MeasurementUnit, RDF.type, OWL.Class))
         self.g.add((self.MeasurementUnit, RDFS.label,
                     Literal("measurement unit", lang="en")))
         self.g.add((self.MeasurementUnit, RDFS.label,
@@ -154,7 +154,7 @@ class SiElements:
 
         # Definition
         self.Definition = self.set_uri("Definition")
-        self.g.add((self.Definition, RDF.type, SKOS.Concept))
+        self.g.add((self.Definition, RDF.type, OWL.Class))
         self.g.add((self.Definition, RDFS.label,
                     Literal("definition of a base unit", lang="en")))
         self.g.add((self.Definition, RDFS.label,
@@ -168,7 +168,7 @@ class SiElements:
 
         # Definition Note
         self.DefinitionNote = self.set_uri("DefinitionNote")
-        self.g.add((self.DefinitionNote, RDF.type, SKOS.Concept))
+        self.g.add((self.DefinitionNote, RDF.type, OWL.Class))
         self.g.add((self.DefinitionNote, RDFS.label,
                     Literal("unit definition note", lang="en")))
         self.g.add((self.DefinitionNote, RDFS.label,
@@ -182,7 +182,7 @@ class SiElements:
 
         # SIPrefix
         self.SIPrefix = self.set_uri("SIPrefix")
-        self.g.add((self.SIPrefix, RDF.type, SKOS.Concept))
+        self.g.add((self.SIPrefix, RDF.type, OWL.Class))
         self.g.add((self.SIPrefix, RDFS.label,
                     Literal("SI prefix", lang="en")))
         self.g.add((self.SIPrefix, RDFS.label,
@@ -194,7 +194,7 @@ class SiElements:
 
         # Classes for Quantities
         self.QuantityKind = self.set_uri("QuantityKind")
-        self.g.add((self.QuantityKind, RDF.type, SKOS.Concept))
+        self.g.add((self.QuantityKind, RDF.type, OWL.Class))
         self.g.add((self.QuantityKind, RDFS.label,
                     Literal("kind of quantity", lang="en")))
         self.g.add((self.QuantityKind, RDFS.label,
