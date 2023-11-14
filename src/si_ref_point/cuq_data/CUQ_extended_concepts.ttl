@@ -23,9 +23,8 @@ si:QuantityKindProduct a owl:Class ;
             ops:Multiplication
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasFactor ;
+                owl:onProperty ops:hasFactor ;
                 owl:someValuesFrom si:QuantityKind ;
-                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
             ] 
         )
     ].
@@ -38,15 +37,13 @@ si:QuantityKindPower a owl:Class ;
             ops:Exponentiation
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasBase ;
+                owl:onProperty ops:hasBase ;
                 owl:someValuesFrom si:QuantityKind ;
-                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasExponent ;
+                owl:onProperty ops:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
-                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
         )
     ].
@@ -66,9 +63,8 @@ si:UnitProduct a owl:Class ;
             ops:Multiplication
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasFactor ;
-                owl:someValuesFrom si:MeasurementUnit; # allValuesFrom?
-                # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
+                owl:onProperty ops:hasFactor ;
+                owl:someValuesFrom si:MeasurementUnit ;
             ] 
         )
     ].
@@ -81,15 +77,13 @@ si:UnitPower a owl:Class ;
             ops:Exponentiation
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasBase ;
+                owl:onProperty ops:hasBase ;
                 owl:someValuesFrom si:MeasurementUnit ;
-                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasExponent ;
+                owl:onProperty ops:hasExponent ;
                 owl:someValuesFrom owl:Thing ;
-                # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
             ]
         )
     ].
