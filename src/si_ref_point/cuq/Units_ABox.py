@@ -67,7 +67,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
             graph.add((expr_node, RDF.type, PDF.set_operation_uri("Multiplication")))
 
             # shortnames
-            hasFactor = PDF.set_uri("hasFactor")
+            hasFactor = PDF.set_operation_uri("hasFactor")
 
             # insert factors
             for factor in expression["mult"]:
@@ -79,8 +79,8 @@ def transform_to_graph(expression, PDF, graph, symbols):
             graph.add((expr_node, RDF.type, PDF.set_operation_uri("Exponentiation")))
 
             # shortnames
-            hasBase = PDF.set_uri("hasBase")
-            hasExponent = PDF.set_uri("hasExponent")
+            hasBase = PDF.set_operation_uri("hasBase")
+            hasExponent = PDF.set_operation_uri("hasExponent")
 
             # insert base and exponent
             graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
