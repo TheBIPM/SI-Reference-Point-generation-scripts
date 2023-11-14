@@ -49,8 +49,7 @@ ops:hasBase a owl:ObjectProperty ;
 ops:hasExponent a owl:ObjectProperty ;
     rdfs:label "has exponent" ;
     rdfs:subPropertyOf ops:hasOperand ;
-    rdfs:domain ops:Exponentiation ;
-    rdfs:range [owl:oneOf (xsd:double xsd:integer xsd:decimal)] .
+    rdfs:domain ops:Exponentiation .
 
 # logarithm operation
 ops:Logarithm a ops:Operation ;
