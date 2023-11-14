@@ -81,11 +81,15 @@ def transform_to_graph(expression, PDF, graph, symbols):
             # shortnames
             hasBase = PDF.set_operation_uri("hasBase")
             hasExponent = PDF.set_operation_uri("hasExponent")
+            value = PDF.set_uri("value")
 
             # insert base and exponent
             graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
+            exponent = BNode()
+            graph.add((exponent, RDF.type, PDF.set_uri("Numeric")))
+            graph.add((exponent, value, Literal(expression["exp"][1])))
             graph.add((expr_node, hasBase, node))
-            graph.add((expr_node, hasExponent, Literal(expression["exp"][1])))
+            graph.add((expr_node, hasExponent, exponent))
 
         else:
             raise ValueError(
@@ -537,9 +541,19 @@ def main():
             )
             unit_multiple = BNode()
             hasFactor = PDF.set_operation_uri("hasFactor")
+            conversion_factor = BNode()
+
+            g.add((conversion_factor, RDF.type, PDF.set_uri("Numeric")))
+            g.add(
+                (
+                    conversion_factor,
+                    PDF.set_uri("value"),
+                    Literal(nsi["ConversionFactor"]),
+                )
+            )
             g.add((unit_multiple, RDF.type, PDF.set_operation_uri("Multiplication")))
             g.add((unit_multiple, hasFactor, PDF.set_unit_uri(nsi["ConversionUnit"])))
-            g.add((unit_multiple, hasFactor, Literal(nsi["ConversionFactor"])))
+            g.add((unit_multiple, hasFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
     return g
 
