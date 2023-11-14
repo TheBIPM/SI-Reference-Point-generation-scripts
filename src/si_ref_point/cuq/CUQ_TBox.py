@@ -4,7 +4,6 @@ from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
 from pathlib import Path
 from si_ref_point.settings import SIURL
 from datetime import date
-import os
 
 ResBod_ns = SIURL + "bodies#"
 
