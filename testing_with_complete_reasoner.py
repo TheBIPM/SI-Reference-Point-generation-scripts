@@ -6,19 +6,20 @@ from owlready2 import World, sync_reasoner_pellet, sync_reasoner_hermit
 
 # script parameters
 do_RDFS_completion = True  # infer rdfs hierarchies
-do_OWLRL_completion = False  # rule based semantics reasoner
+do_OWLRL_completion = True  # rule based semantics reasoner
 do_OWLDL_completion = (
     not do_OWLRL_completion  # direct semantics reasoner, HermiT/Pellet is used
 )
 do_OWLDL_with_Pellet = True 
 
 knowledge_bases = {
-    "test": {"path": "testing.ttl", "format": "ttl"},
+    #"test": {"path": "testing.ttl", "format": "ttl"},
     "si_base": {"path": "build/si.ttl", "format": "ttl"},
-    #"units": {"path": "build/units.ttl", "format": "ttl"},
-    #"quantities": {"path": "build/quantities.ttl", "format": "ttl"},
-    #"prefixes": {"path": "build/prefixes.ttl", "format": "ttl"},
-    #"constants": {"path": "build/constants.ttl", "format": "ttl"},
+    "operations": {"path": "build/operations.ttl", "format": "ttl"},
+    "units": {"path": "build/units.ttl", "format": "ttl"},
+    "quantities": {"path": "build/quantities.ttl", "format": "ttl"},
+    "prefixes": {"path": "build/prefixes.ttl", "format": "ttl"},
+    "constants": {"path": "build/constants.ttl", "format": "ttl"},
     "examples": {"path": "examples.ttl", "format": "ttl"},
 }
 
