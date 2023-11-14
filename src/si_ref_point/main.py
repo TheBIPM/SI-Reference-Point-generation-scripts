@@ -14,7 +14,6 @@ import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
-import si_ref_point.cuq.second_stage as second_stage
 from si_ref_point import __version__
 import os
 import datetime
