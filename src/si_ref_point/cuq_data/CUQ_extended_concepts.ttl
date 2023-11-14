@@ -120,38 +120,24 @@ si:BasePrefix a owl:Class ;
         prefixes:zepto
     ) .
 
-si:hasPrefix a owl:ObjectProperty ;
-    rdfs:label "has prefix" ;
-    rdfs:domain si:MeasurementUnit ;
-    rdfs:range si:SIPrefix .
-
-si:hasBaseUnit a owl:ObjectProperty ;
-    rdfs:label "has base unit" ;
-    rdfs:domain si:MeasurementUnit .
-    #rdfs:range si:NonPrefixedUnit .
-
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit" ;
-    rdfs:subClassOf si:MeasurementUnit ;
+    rdfs:subClassOf si:CompoundUnit ;
     owl:equivalentClass [
         owl:intersectionOf (
+            ops:Multiplication
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasPrefix ;
-                owl:someValuesFrom si:BasePrefix
-            ]
-            #[  # not working as intended, need to look further into semantics
-            #    a owl:Restriction; 
-            #    owl:onProperty si:hasPrefix ;
-            #    owl:cardinality "1"^^xsd:nonNegativeInteger
-            #]
+                owl:onProperty ops:hasFactor ;
+                owl:someValuesFrom si:MeasurementUnit
+            ] 
             [
                 a owl:Restriction; 
-                owl:onProperty si:hasBaseUnit ;
-                owl:someValuesFrom si:MeasurementUnit  # actually, we only want non-prefixed units here
-            ]
+                owl:onProperty ops:hasFactor ;
+                owl:someValuesFrom si:SIPrefix
+            ] 
         )
-    ] .
+    ].
 
 
 ##########################
