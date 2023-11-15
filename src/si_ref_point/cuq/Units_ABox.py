@@ -542,8 +542,9 @@ def main():
             unit_multiple = BNode()
             hasFactor = PDF.set_operation_uri("hasFactor")
             conversion_factor = BNode()
-
-            #g.add((conversion_factor, RDF.type, PDF.set_uri("Numeric"))) # inferable
+            g, conversion_unit = insert_unit_expr(
+                g, nsi["ConversionUnit"], PDF, syntax_type="inBaseSIUnits"
+            )
             g.add(
                 (
                     conversion_factor,
@@ -552,7 +553,7 @@ def main():
                 )
             )
             g.add((unit_multiple, RDF.type, PDF.set_operation_uri("Multiplication")))
-            g.add((unit_multiple, hasFactor, PDF.set_unit_uri(nsi["ConversionUnit"])))
+            g.add((unit_multiple, hasFactor, conversion_unit))
             g.add((unit_multiple, hasFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
     return g
