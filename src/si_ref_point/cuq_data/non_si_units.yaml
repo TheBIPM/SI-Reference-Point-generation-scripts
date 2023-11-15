@@ -4,74 +4,74 @@
   Symbol: min
   UnitOfQtyKind: TIME
   ConversionFactor: 60
-  ConversionUnit: second
+  ConversionUnit: '{@secs@}'
 - URI: hour
   prefLabel_fr: heure
   prefLabel_en: hour
   Symbol: h
   UnitOfQtyKind: TIME
   ConversionFactor: 3600
-  ConversionUnit: second
+  ConversionUnit: '{@secs@}'
 - URI: day
   prefLabel_fr: jour
   prefLabel_en: day
   Symbol: d
   UnitOfQtyKind: TIME
   ConversionFactor: 86400
-  ConversionUnit: second
+  ConversionUnit: '{@secs@}'
 - URI: astronomicalunit
   prefLabel_fr: unité astronomique
   prefLabel_en: astronomical unit
   Symbol: au
   UnitOfQtyKind: LENG
   ConversionFactor: 149597870700
-  ConversionUnit: metre
+  ConversionUnit: '{@mtrs@}'
 - URI: degree
   prefLabel_fr: degré
   prefLabel_en: degree
   Symbol: '@circ@'
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.0174532925199433
-  ConversionUnit: radian
+  ConversionUnit: '{@rads@}'
 - URI: arcminute
   prefLabel_fr: arcminute
   prefLabel_en: arcminute
   Symbol: '@arcm@'
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.000290888208665722
-  ConversionUnit: radian
+  ConversionUnit: '{@rads@}'
 - URI: arcsecond
   prefLabel_fr: arcseconde
   prefLabel_en: arcsecond
   Symbol: '@arcs@'
   UnitOfQtyKind: ANGP
   ConversionFactor: 4.84813681109536e-06
-  ConversionUnit: radian
+  ConversionUnit: '{@rads@}'
 - URI: litre
   prefLabel_fr: litre
   prefLabel_en: litre
   Symbol: L
   UnitOfQtyKind: VOLU
   ConversionFactor: 0.001
-  ConversionUnit: metre
+  ConversionUnit: '{@mtrs@}^3'
 - URI: tonne
   prefLabel_fr: tonne
   prefLabel_en: tonne
   Symbol: t
   UnitOfQtyKind: MASS
   ConversionFactor: 1000
-  ConversionUnit: kilogram
+  ConversionUnit: '{@kgms@}'
 - URI: dalton
   prefLabel_fr: dalton
   prefLabel_en: dalton
   Symbol: Da
   UnitOfQtyKind: MASS
   ConversionFactor: 1.6605390666e-27
-  ConversionUnit: kilogram
+  ConversionUnit: '{@kgms@}'
 - URI: electronvolt
   prefLabel_fr: électronvolt
   prefLabel_en: electronvolt
   Symbol: eV
   UnitOfQtyKind: ENGY
   ConversionFactor: 1.602176634e-19
-  ConversionUnit: joule
+  ConversionUnit: '@{jles}@'
