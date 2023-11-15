@@ -900,6 +900,15 @@ radi:
   text:
   html: ''
   json: ''
+rads:
+  name_en: Radian unit symbol
+  name_fr: ''
+  type: symbol
+  latex: rad
+  text: 
+  html: ''
+  json: ''
+  uri: units:radian
 radu:
   name_en: Radiation direction unit
   name_fr: ''
