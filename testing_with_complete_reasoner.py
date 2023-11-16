@@ -15,7 +15,6 @@ do_OWLDL_with_Pellet = True
 knowledge_bases = {
     #"test": {"path": "testing.ttl", "format": "ttl"},
     "si_base": {"path": "build/si.ttl", "format": "ttl"},
-    "operations": {"path": "build/operations.ttl", "format": "ttl"},
     "units": {"path": "build/units.ttl", "format": "ttl"},
     "quantities": {"path": "build/quantities.ttl", "format": "ttl"},
     "prefixes": {"path": "build/prefixes.ttl", "format": "ttl"},

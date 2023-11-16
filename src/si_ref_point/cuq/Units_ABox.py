@@ -64,10 +64,10 @@ def transform_to_graph(expression, PDF, graph, symbols):
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
             # set type of expression node
-            graph.add((expr_node, RDF.type, PDF.set_operation_uri("Multiplication")))
+            graph.add((expr_node, RDF.type, PDF.set_uri("UnitProduct")))
 
             # shortnames
-            hasFactor = PDF.set_operation_uri("hasFactor")
+            hasFactor = PDF.set_uri("hasFactor")
 
             # insert factors
             for factor in expression["mult"]:
@@ -76,18 +76,15 @@ def transform_to_graph(expression, PDF, graph, symbols):
 
         elif "exp" in expression.keys():
             # set type of expression node
-            graph.add((expr_node, RDF.type, PDF.set_operation_uri("Exponentiation")))
+            graph.add((expr_node, RDF.type, PDF.set_uri("UnitPower")))
 
             # shortnames
-            hasBase = PDF.set_operation_uri("hasBase")
-            hasExponent = PDF.set_operation_uri("hasExponent")
-            value = PDF.set_uri("value")
+            hasBase = PDF.set_uri("hasBase")
+            hasExponent = PDF.set_uri("hasExponent")
 
             # insert base and exponent
             graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
-            exponent = BNode()
-            # graph.add((exponent, RDF.type, PDF.set_uri("Numeric"))) # inferable
-            graph.add((exponent, value, Literal(expression["exp"][1])))
+            exponent = Literal(expression["exp"][1])
             graph.add((expr_node, hasBase, node))
             graph.add((expr_node, hasExponent, exponent))
 
@@ -238,10 +235,11 @@ def main():
                     )
                 )
                 if "hasPrefix" in dc.keys():
+                    g.add((element, RDF.type, PDF.set_uri("PrefixedUnit")))
                     g.add(
                         (
                             element,
-                            PDF.set_operation_uri("hasFactor"),
+                            PDF.set_uri("hasPrefix"),
                             PDF.set_prefix_uri(dc["hasPrefix"]),
                         )
                     )
@@ -249,7 +247,7 @@ def main():
                     g.add(
                         (
                             element,
-                            PDF.set_operation_uri("hasFactor"),
+                            PDF.set_uri("hasBaseUnit"),
                             PDF.set_unit_uri(dc["hasBaseUnit"]),
                         )
                     )
@@ -540,22 +538,17 @@ def main():
                 )
             )
             unit_multiple = BNode()
-            hasFactor = PDF.set_operation_uri("hasFactor")
-            conversion_factor = BNode()
+            hasBaseUnit = PDF.set_uri("hasBaseUnit")
+            hasNumericFactor = PDF.set_uri("hasNumericFactor")
+            conversion_factor = Literal(nsi["ConversionFactor"])
             g, conversion_unit = insert_unit_expr(
                 g, nsi["ConversionUnit"], PDF, syntax_type="inBaseSIUnits"
             )
-            g.add(
-                (
-                    conversion_factor,
-                    PDF.set_uri("value"),
-                    Literal(nsi["ConversionFactor"]),
-                )
-            )
-            g.add((unit_multiple, RDF.type, PDF.set_operation_uri("Multiplication")))
-            g.add((unit_multiple, hasFactor, conversion_unit))
-            g.add((unit_multiple, hasFactor, conversion_factor))
+            g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
+            g.add((unit_multiple, hasBaseUnit, conversion_unit))
+            g.add((unit_multiple, hasNumericFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
+    
     return g
 
 
