@@ -21,6 +21,15 @@ si:QuantityKindProduct a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             ops:Multiplication
+            # Note: 
+            # "allValuesFrom + someValuesFrom" supported by OWL RL
+            # "allValuesFrom + minCardinality 1" not supported by OWL RL
+            # https://www.w3.org/TR/owl2-profiles/#OWL_2_RL
+            [
+                a owl:Restriction; 
+                owl:onProperty ops:hasFactor ;
+                owl:allValuesFrom si:QuantityKind ;
+            ]
             [
                 a owl:Restriction; 
                 owl:onProperty ops:hasFactor ;
@@ -35,6 +44,9 @@ si:QuantityKindPower a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             ops:Exponentiation
+            # Note: 
+            # "someValuesFrom + maxCardinality 1" supported by OWL RL
+            # "allValuesFrom + cardinality 1" not supported by OWL RL
             [
                 a owl:Restriction; 
                 owl:onProperty ops:hasBase ;
@@ -42,8 +54,18 @@ si:QuantityKindPower a owl:Class ;
             ]
             [
                 a owl:Restriction; 
+                owl:onProperty ops:hasBase ;
+                owl:maxCardinality 1 ;
+            ]
+            [
+                a owl:Restriction; 
                 owl:onProperty ops:hasExponent ;
-                owl:someValuesFrom owl:Thing ;
+                owl:someValuesFrom si:Numeric ;
+            ]
+            [
+                a owl:Restriction; 
+                owl:onProperty ops:hasExponent ;
+                owl:maxCardinality 1 ;
             ]
         )
     ].
@@ -67,15 +89,28 @@ si:UnitMultiple a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             ops:Multiplication
+            # Note: 
+            # "someValuesFrom + maxCardinality 1" supported by OWL RL
+            # "allValuesFrom + cardinality 1" not supported by OWL RL
             [
                 a owl:Restriction ; 
                 owl:onProperty ops:hasFactor ;
                 owl:someValuesFrom si:MeasurementUnit ;
             ] 
             [
+                a owl:Restriction ;
+                owl:onProperty ops:hasFactor ;
+                owl:maxCardinality 1 ;
+            ] 
+            [
                 a owl:Restriction ; 
                 owl:onProperty ops:hasFactor ;
                 owl:someValuesFrom si:Numeric ;
+            ] 
+            [
+                a owl:Restriction; 
+                owl:onProperty ops:hasFactor ;
+                owl:maxCardinality 1 ;
             ] 
         )
     ].
@@ -86,6 +121,14 @@ si:UnitProduct a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             ops:Multiplication
+            # Note: 
+            # "allValuesFrom + someValuesFrom" supported by OWL RL
+            # "allValuesFrom + minCardinality 1" not supported by OWL RL
+            [
+                a owl:Restriction; 
+                owl:onProperty ops:hasFactor ;
+                owl:allValuesFrom si:MeasurementUnit ;
+            ] 
             [
                 a owl:Restriction; 
                 owl:onProperty ops:hasFactor ;
@@ -100,6 +143,9 @@ si:UnitPower a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             ops:Exponentiation
+            # Note: 
+            # "someValuesFrom + maxCardinality 1" supported by OWL RL
+            # "allValuesFrom + cardinality 1" not supported by OWL RL
             [
                 a owl:Restriction; 
                 owl:onProperty ops:hasBase ;
@@ -107,8 +153,18 @@ si:UnitPower a owl:Class ;
             ]
             [
                 a owl:Restriction; 
+                owl:onProperty ops:hasBase ;
+                owl:maxCardinality 1 ;
+            ]
+            [
+                a owl:Restriction; 
                 owl:onProperty ops:hasExponent ;
-                owl:someValuesFrom owl:Thing ;
+                owl:someValuesFrom si:Numeric ;
+            ]
+            [
+                a owl:Restriction; 
+                owl:onProperty ops:hasExponent ;
+                owl:maxCardinality 1 ;
             ]
         )
     ].
@@ -227,12 +283,7 @@ si:PrefixedUnit a owl:Class ;
 #     owl:equivalentClass [
 #         owl:intersectionOf (
 #             ops:Multiplication
-#             [
-#                 a owl:Restriction; 
-#                 owl:onProperty si:hasFactor ;
-#                 owl:someValuesFrom si:PhysicalDimension ;
-#                 # allValuesFrom, owl:minCardinality 2 # not supported in OWL2 RL
-#             ] 
+#             ...
 #         )
 #     ].
 # 
@@ -242,18 +293,7 @@ si:PrefixedUnit a owl:Class ;
 #     owl:equivalentClass [
 #         owl:intersectionOf (
 #             ops:Exponentiation
-#             [
-#                 a owl:Restriction; 
-#                 owl:onProperty si:hasBase ;
-#                 owl:someValuesFrom si:PhysicalDimension ;
-#                 # allValuesFrom, owl:minCardinality 1 # not supported in OWL2 RL
-#             ]
-#             [
-#                 a owl:Restriction; 
-#                 owl:onProperty si:hasExponent ;
-#                 owl:someValuesFrom owl:Thing ;
-#                 # owl:minCardinality 1 # not supported in OWL2 RL
-#             ]
+#             ...
 #         )
 #     ].
 # 
