@@ -14,7 +14,6 @@ class SiElements:
         self.namespace = namespace
         self.namespace_units = SIURL + "SI/units/"
         self.namespace_prefixes = SIURL + "SI/prefixes/"
-        self.namespace_operations = SIURL + "operations/"
         self.namespace_quantities = SIURL + "quantities/"
         self.namespace_constants = SIURL + "constants/"
         self.namespace_cgpm = SIURL + "bodies/CGPM#"
@@ -22,7 +21,6 @@ class SiElements:
         self.g.bind(prefix, self.namespace)
         self.g.bind("units", self.namespace_units)
         self.g.bind("prefixes", self.namespace_prefixes)
-        self.g.bind("ops", self.namespace_operations)
         self.g.bind("quantities", self.namespace_quantities)
         self.g.bind("constants", self.namespace_constants)
         self.g.bind("cgpm", self.namespace_cgpm)
@@ -696,10 +694,6 @@ class SiElements:
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)
-
-    def set_operation_uri(self, name: str) -> URIRef:
-        """ Utility method """
-        return URIRef(self.namespace_operations + name)
 
     def set_prefix_uri(self, name: str) -> URIRef:
         """ Utility method """

@@ -7,7 +7,38 @@
 @prefix units: <http://si-digital-framework.org/SI/units/> .
 @prefix quantities: <http://si-digital-framework.org/quantities/> .
 @prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
-@prefix ops: <http://si-digital-framework.org/operations/> .
+
+
+# properties
+
+si:hasFactor a owl:ObjectProperty ;
+    rdfs:label "has factor" ;
+    rdfs:domain si:MeasurementUnit .
+
+si:hasNumericFactor a owl:DataProperty ;
+    rdfs:subPropertyOf si:hasFactor ;
+    rdfs:label "has numeric factor" .
+
+si:hasLeftFactor a owl:ObjectProperty ;
+    rdfs:label "has factor A" ;
+    rdfs:subPropertyOf si:hasFactor .
+
+si:hasRightFactor a owl:ObjectProperty ;
+    rdfs:label "has factor B" ;
+    rdfs:subPropertyOf si:hasFactor .
+
+si:hasBase a owl:ObjectProperty ;
+    rdfs:label "has base" .
+
+si:hasExponent a owl:DatatypeProperty ;
+    rdfs:label "has exponent" .
+
+si:hasPrefix a owl:ObjectProperty ;
+    rdfs:label "has exponent" .
+
+si:hasBaseUnit a owl:ObjectProperty ;
+    rdfs:label "has base" .
+
 
 # compound quantities
 
@@ -17,65 +48,12 @@ si:CompoundQuantityKind a owl:Class ;  # DerivedQuantity?
 
 si:QuantityKindProduct a owl:Class ;
     rdfs:label "quantitykind product" ;
-    rdfs:subClassOf si:CompoundQuantityKind ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Multiplication
-            # Note: 
-            # "allValuesFrom + someValuesFrom" supported by OWL RL
-            # "allValuesFrom + minCardinality 1" not supported by OWL RL
-            # https://www.w3.org/TR/owl2-profiles/#OWL_2_RL
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:allValuesFrom si:QuantityKind ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:QuantityKind ;
-            ] 
-        )
-    ].
+    rdfs:subClassOf si:CompoundQuantityKind .
 
 si:QuantityKindPower a owl:Class ;
     rdfs:label "quantitykind power" ;
-    rdfs:subClassOf si:CompoundQuantityKind ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Exponentiation
-            # Note: 
-            # "someValuesFrom + maxCardinality 1" supported by OWL RL
-            # "allValuesFrom + cardinality 1" not supported by OWL RL
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasBase ;
-                owl:someValuesFrom si:QuantityKind ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasBase ;
-                owl:maxCardinality 1 ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasExponent ;
-                owl:someValuesFrom si:Numeric ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasExponent ;
-                owl:maxCardinality 1 ;
-            ]
-        )
-    ].
+    rdfs:subClassOf si:CompoundQuantityKind .
 
-# numeric values 
-# (reasoning over mixed Object/DataProperties is otherwise difficult)
-si:Numeric a owl:Class .
-
-si:value a owl:DatatypeProperty ;
-    rdfs:domain si:Numeric .
 
 # compound units
 
@@ -85,140 +63,19 @@ si:CompoundUnit a owl:Class ;
 
 si:UnitMultiple a owl:Class ;
     rdfs:label "unit product" ;
-    rdfs:subClassOf si:CompoundUnit ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Multiplication
-            # Note: 
-            # "someValuesFrom + maxCardinality 1" supported by OWL RL
-            # "allValuesFrom + cardinality 1" not supported by OWL RL
-            [
-                a owl:Restriction ; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:MeasurementUnit ;
-            ] 
-            [
-                a owl:Restriction ;
-                owl:onProperty ops:hasFactor ;
-                owl:maxCardinality 1 ;
-            ] 
-            [
-                a owl:Restriction ; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:Numeric ;
-            ] 
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:maxCardinality 1 ;
-            ] 
-        )
-    ].
+    rdfs:subClassOf si:CompoundUnit .
 
 si:UnitProduct a owl:Class ;
     rdfs:label "unit product" ;
-    rdfs:subClassOf si:CompoundUnit ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Multiplication
-            # Note: 
-            # "allValuesFrom + someValuesFrom" supported by OWL RL
-            # "allValuesFrom + minCardinality 1" not supported by OWL RL
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:allValuesFrom si:MeasurementUnit ;
-            ] 
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:MeasurementUnit ;
-            ] 
-        )
-    ].
+    rdfs:subClassOf si:CompoundUnit .
 
 si:UnitPower a owl:Class ;
     rdfs:label "unit power" ;
-    rdfs:subClassOf si:CompoundUnit ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Exponentiation
-            # Note: 
-            # "someValuesFrom + maxCardinality 1" supported by OWL RL
-            # "allValuesFrom + cardinality 1" not supported by OWL RL
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasBase ;
-                owl:someValuesFrom si:MeasurementUnit ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasBase ;
-                owl:maxCardinality 1 ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasExponent ;
-                owl:someValuesFrom si:Numeric ;
-            ]
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasExponent ;
-                owl:maxCardinality 1 ;
-            ]
-        )
-    ].
-
-
-# prefixed unit
-
-si:BasePrefix a owl:Class ;
-    rdfs:subClassOf si:SIPrefix ;
-    owl:oneOf (
-        prefixes:atto
-        prefixes:centi
-        prefixes:deca
-        prefixes:deci
-        prefixes:exa
-        prefixes:femto
-        prefixes:giga
-        prefixes:hecto
-        prefixes:kilo
-        prefixes:mega
-        prefixes:micro
-        prefixes:milli
-        prefixes:nano
-        prefixes:peta
-        prefixes:pico
-        prefixes:quecto
-        prefixes:quetta
-        prefixes:ronna
-        prefixes:ronto
-        prefixes:tera
-        prefixes:uetta
-        prefixes:yocto
-        prefixes:yotta
-        prefixes:zepto
-    ) .
+    rdfs:subClassOf si:CompoundUnit .
 
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit" ;
-    rdfs:subClassOf si:CompoundUnit ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            ops:Multiplication
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:MeasurementUnit
-            ] 
-            [
-                a owl:Restriction; 
-                owl:onProperty ops:hasFactor ;
-                owl:someValuesFrom si:SIPrefix
-            ] 
-        )
-    ].
+    rdfs:subClassOf si:CompoundUnit .
 
 
 ##########################
