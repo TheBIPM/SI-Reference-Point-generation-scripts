@@ -76,6 +76,7 @@ class SiElements:
 
         # SIBaseUnit
         self.SIBaseUnit = self.set_uri("SIBaseUnit")
+        self.g.add((self.SIBaseUnit, RDF.type, OWL.Class))
         self.g.add((self.SIBaseUnit, RDFS.subClassOf, self.MeasurementUnit))
         self.g.add((self.SIBaseUnit, RDFS.label,
                     Literal("base unit", lang="en")))
@@ -97,6 +98,7 @@ class SiElements:
 
         # SISpecialNamedUnit
         self.SISpecialNamedUnit = self.set_uri("SISpecialNamedUnit")
+        self.g.add((self.SISpecialNamedUnit, RDF.type, OWL.Class))
         self.g.add((self.SISpecialNamedUnit, RDFS.subClassOf,
                     self.MeasurementUnit))
         self.g.add((self.SISpecialNamedUnit, RDFS.label,
@@ -137,6 +139,7 @@ class SiElements:
 
         # NonSIUnit
         self.nonSIUnit = self.set_uri("nonSIUnit")
+        self.g.add((self.nonSIUnit, RDF.type, OWL.Class))
         self.g.add((self.nonSIUnit, RDFS.subClassOf, self.MeasurementUnit))
         self.g.add((self.nonSIUnit, RDFS.label,
                     Literal("non SI unit", lang="en")))
