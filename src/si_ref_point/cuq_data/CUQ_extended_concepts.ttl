@@ -15,7 +15,7 @@ si:hasFactor a owl:ObjectProperty ;
     rdfs:label "has factor" ;
     rdfs:domain si:MeasurementUnit .
 
-si:hasNumericFactor a owl:DataProperty ;
+si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasFactor ;
     rdfs:label "has numeric factor" .
 
