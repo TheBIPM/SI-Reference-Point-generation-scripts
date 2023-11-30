@@ -67,7 +67,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
             graph.add((expr_node, RDF.type, PDF.set_uri("UnitProduct")))
 
             # shortnames
-            hasFactor = PDF.set_uri("hasFactor")
+            hasFactor = PDF.set_uri("hasUnitFactor")
 
             # insert factors
             for factor in expression["mult"]:
@@ -79,8 +79,8 @@ def transform_to_graph(expression, PDF, graph, symbols):
             graph.add((expr_node, RDF.type, PDF.set_uri("UnitPower")))
 
             # shortnames
-            hasBase = PDF.set_uri("hasBase")
-            hasExponent = PDF.set_uri("hasExponent")
+            hasBase = PDF.set_uri("hasUnitBase")
+            hasExponent = PDF.set_uri("hasNumericExponent")
 
             # insert base and exponent
             graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
@@ -243,12 +243,12 @@ def main():
                             PDF.set_prefix_uri(dc["hasPrefix"]),
                         )
                     )
-                if "hasBaseUnit" in dc.keys():
+                if "hasNonPrefixedUnit" in dc.keys():
                     g.add(
                         (
                             element,
-                            PDF.set_uri("hasBaseUnit"),
-                            PDF.set_unit_uri(dc["hasBaseUnit"]),
+                            PDF.set_uri("hasNonPrefixedUnit"),
+                            PDF.set_unit_uri(dc["hasNonPrefixedUnit"]),
                         )
                     )
 
@@ -538,14 +538,14 @@ def main():
                 )
             )
             unit_multiple = BNode()
-            hasBaseUnit = PDF.set_uri("hasBaseUnit")
+            hasUnitFactor = PDF.set_uri("hasUnitFactor")
             hasNumericFactor = PDF.set_uri("hasNumericFactor")
             conversion_factor = Literal(nsi["ConversionFactor"])
             g, conversion_unit = insert_unit_expr(
                 g, nsi["ConversionUnit"], PDF, syntax_type="inBaseSIUnits"
             )
             g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
-            g.add((unit_multiple, hasBaseUnit, conversion_unit))
+            g.add((unit_multiple, hasUnitFactor, conversion_unit))
             g.add((unit_multiple, hasNumericFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
     
