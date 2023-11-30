@@ -1,7 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix math: <http://cll.niimm.ksu.ru/ontologies/mathematics#> .
+@prefix schema: <https://schema.org/> .
 
 @prefix si: <http://si-digital-framework.org/SI#> .
 @prefix units: <http://si-digital-framework.org/SI/units/> .
@@ -11,34 +11,79 @@
 
 # properties
 
+## for products + multiples
 si:hasFactor a owl:ObjectProperty ;
-    rdfs:label "has factor" ;
-    rdfs:domain si:MeasurementUnit .
+    rdfs:label "has factor" .
+
+si:hasUnitFactor a owl:ObjectProperty ;
+    rdfs:subPropertyOf si:hasFactor ;
+    rdfs:label "has unit factor" ;
+    schema:domainIncludes si:MeasurementUnit ;
+    schema:rangeIncludes si:MeasurementUnit .
+
+si:hasQuantityFactor a owl:ObjectProperty ;
+    rdfs:subPropertyOf si:hasFactor ;
+    rdfs:label "has quantity factor" ;
+    schema:domainIncludes si:QuantityKind ;
+    schema:rangeIncludes si:QuantityKind .
 
 si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasFactor ;
+    schema:domainIncludes si:MeasurementUnit ;
     rdfs:label "has numeric factor" .
 
-si:hasLeftFactor a owl:ObjectProperty ;
-    rdfs:label "has factor A" ;
-    rdfs:subPropertyOf si:hasFactor .
+si:hasLeftUnitFactor a owl:ObjectProperty ;
+    rdfs:label "has left unit factor" ;
+    rdfs:comment "preserve order of multiplication" ;
+    rdfs:subPropertyOf si:hasUnitFactor .
 
-si:hasRightFactor a owl:ObjectProperty ;
-    rdfs:label "has factor B" ;
-    rdfs:subPropertyOf si:hasFactor .
+si:hasRightUnitFactor a owl:ObjectProperty ;
+    rdfs:label "has right unit factor" ;
+    rdfs:comment "preserve order of multiplication" ;
+    rdfs:subPropertyOf si:hasUnitFactor .
 
+## for powers
 si:hasBase a owl:ObjectProperty ;
-    rdfs:label "has base" .
+    rdfs:label "has base" ;
+    rdfs:comment "Base ^ NumericExponent" .
 
-si:hasExponent a owl:DatatypeProperty ;
-    rdfs:label "has exponent" .
+si:hasUnitBase a owl:ObjectProperty ;
+    rdfs:subPropertyOf si:hasBase ;
+    rdfs:label "has unit base" ;
+    rdfs:comment "UnitBase ^ NumericExponent" .
 
+si:hasNumericExponent a owl:DatatypeProperty ;
+    rdfs:label "has numeric exponent" ;
+    rdfs:comment "UnitBase ^ NumericExponent" .
+
+si:hasQuantityBase a owl:ObjectProperty ;
+    rdfs:subPropertyOf si:hasBase ;
+    rdfs:label "has quantity base" ;
+    rdfs:comment "QuantityBase ^ NumericExponent" .
+
+## for prefixunits
 si:hasPrefix a owl:ObjectProperty ;
-    rdfs:label "has exponent" .
+    rdfs:label "has prefix" ;
+    rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
+    rdfs:domain si:PrefixedUnit ;
+    rdfs:range si:SIPrefix .
 
-si:hasBaseUnit a owl:ObjectProperty ;
-    rdfs:label "has base" .
+si:hasNonPrefixedUnit a owl:ObjectProperty ;
+    rdfs:label "has non prefixed unit" ;
+    rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
+    rdfs:domain si:PrefixedUnit ;
+    schema:rangeIncludes si:MeasurementUnit . # to generic?
 
+## for log-units
+si:hasNumericBase a owl:DatatypeProperty ;
+    rdfs:domain si:LogarithmicUnit ;
+    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>); X is the actual quantity value" ;
+    rdfs:label "has log base" .
+
+si:hasRatioDenominator a owl:ObjectProperty ;
+    rdfs:domain si:LogarithmicUnit ;
+    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>)" ;
+    rdfs:label "has ratio denominator" .
 
 # compound quantities
 
@@ -77,6 +122,9 @@ si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit" ;
     rdfs:subClassOf si:CompoundUnit .
 
+si:LogarithmicUnit a owl:Class ;
+    rdfs:label "unit power" ;
+    rdfs:subClassOf si:MeasurementUnit .
 
 ##########################
 ## IDEAS FOR FUTURE USE ##
