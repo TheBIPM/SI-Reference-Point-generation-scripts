@@ -28,7 +28,7 @@
   isUnitOfQtyKind: MASS
   hasSymbol: kg
   hasPrefix: kilo
-  hasBaseUnit: gram
+  hasNonPrefixedUnit: gram
   definitions:
   - kilogram1901
   - kilogram2018
