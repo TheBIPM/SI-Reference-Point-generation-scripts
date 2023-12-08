@@ -14,16 +14,22 @@ class SiElements:
         self.namespace = namespace
         self.namespace_units = SIURL + "SI/units/"
         self.namespace_prefixes = SIURL + "SI/prefixes/"
+        self.namespace_decisions = SIURL + "SI/decisions/"
         self.namespace_quantities = SIURL + "quantities/"
         self.namespace_constants = SIURL + "constants/"
         self.namespace_cgpm = SIURL + "bodies/CGPM#"
+        self.namespace_cgpm = SIURL + "bodies/CIPM#"
+        self.namespace_cgpm = SIURL + "bodies/CCTF#"
 
         self.g.bind(prefix, self.namespace)
         self.g.bind("units", self.namespace_units)
         self.g.bind("prefixes", self.namespace_prefixes)
         self.g.bind("quantities", self.namespace_quantities)
         self.g.bind("constants", self.namespace_constants)
+        self.g.bind("decisions", self.namespace_decisions)
         self.g.bind("cgpm", self.namespace_cgpm)
+        self.g.bind("cipm", self.namespace_cgpm)
+        self.g.bind("cctf", self.namespace_cgpm)
         self.g.bind('rb', ResBod_ns)
 
         self.BASE_PATH = Path(__file__).resolve().parent.parent
@@ -192,6 +198,42 @@ class SiElements:
         self.g.add((self.SIPrefix, RDFS.comment,
                     Literal("La classe pour les préfixes SI.", lang="fr")))
 
+        # SIDecisions
+        self.SIDecision = self.set_uri("SIDecision")
+        self.g.add((self.SIDecision, RDF.type, OWL.Class))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("SI Decision", lang="en")))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("Décision SI", lang="fr")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("The class for SI decisions.", lang="en")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("La classe pour les décisions SI.", lang="fr")))
+
+        self.SIDecisionScope = self.set_uri("SIDecisionScope")
+        self.g.add((self.SIDecision, RDF.type, OWL.Class))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("SI Decision scope", lang="en")))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("Champ de la décision SI", lang="fr")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("The class for SI decisions scopes.", lang="en")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("La classe pour les champs de décisions SI.",
+                            lang="fr")))
+
+        self.SIDecisionTarget = self.set_uri("SIDecisionTarget")
+        self.g.add((self.SIDecision, RDF.type, OWL.Class))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("SI Decision target", lang="en")))
+        self.g.add((self.SIDecision, RDFS.label,
+                    Literal("Cible d'une décision SI", lang="fr")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("The class for SI decisions target.", lang="en")))
+        self.g.add((self.SIDecision, RDFS.comment,
+                    Literal("La classe pour les cibles de décisions SI.",
+                            lang="fr")))
+
         # Classes for Quantities
         self.QuantityKind = self.set_uri("QuantityKind")
         self.g.add((self.QuantityKind, RDF.type, OWL.Class))
@@ -273,6 +315,35 @@ class SiElements:
         self.g.add((self.hasUnitTypeAsString_oneOf_node, OWL.oneOf,
                     self.hasUnitTypeAsString_oneOf_subnode))
         self.g.add((self.hasUnitTypeAsString, RDFS.range, RDFS.Literal))
+
+        # for Decisions
+        self.hasTarget = self.set_uri("hasTarget")
+        self.g.add((self.hasTarget, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasTarget, RDFS.label,
+                    Literal("has target", lang="en")))
+        self.g.add((self.hasTarget, RDFS.label,
+                    Literal("a pour cible", lang="fr")))
+
+        self.isTargetOf = self.set_uri("isTargetOf")
+        self.g.add((self.isTargetOf, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.isTargetOf, RDFS.label,
+                    Literal("is target of", lang="en")))
+        self.g.add((self.isTargetOf, RDFS.label,
+                    Literal("est la cible de", lang="fr")))
+
+        self.hasDecision = self.set_uri("hasDecision")
+        self.g.add((self.hasDecision, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDecision, RDFS.label,
+                    Literal("has decision", lang="en")))
+        self.g.add((self.hasTarget, RDFS.label,
+                    Literal("a pour décision", lang="fr")))
+
+        self.isDecisionOf = self.set_uri("isDecisionOf")
+        self.g.add((self.isDecisionOf, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.isDecisionOf, RDFS.label,
+                    Literal("is decision of", lang="en")))
+        self.g.add((self.isTargetOf, RDFS.label,
+                    Literal("est la décision de", lang="fr")))
 
         # for Constants
 
@@ -553,7 +624,7 @@ class SiElements:
         self.hasDefiningEquation_oneOf_col = Collection(
             self.g, self.hasDefiningEquation_oneOf_subnode,
             self.hasDefiningEquation_oneOf_list)
-        
+
         self.hasDefiningEquation = self.set_uri("hasDefiningEquation")
         self.g.add((self.hasDefiningEquation, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDefiningEquation, RDFS.label,
@@ -701,6 +772,10 @@ class SiElements:
     def set_prefix_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_prefixes + name)
+
+    def set_decision_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_decisions + name)
 
     def set_quantity_uri(self, name: str) -> URIRef:
         """ Utility method """

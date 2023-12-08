@@ -8,7 +8,7 @@ import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
 import si_ref_point.cuq.Constants_ABox as Constants_ABox
 import si_ref_point.cuq.Prefixes_ABox as Prefixes_ABox
-import si_ref_point.cuq.generate_decisions_turtle as gen_decisions
+import si_ref_point.cuq.Decisions_ABox as Decisions_ABox
 import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
@@ -59,7 +59,7 @@ def main():
         'units': Units_ABox.main,
         'constants': Constants_ABox.main,
         'prefixes': Prefixes_ABox.main,
-        'decisions': gen_decisions.main,
+        'decisions': Decisions_ABox.main,
         'bodies': ResBod_TBox.main,
         'cgpm': ResBod_ABox_CGPM.main,
         'cipm': ResBod_ABox_CIPM.main,
