@@ -2,7 +2,7 @@
   hidden_label: HyperfineSplitting
   name_en: hyperfine transition frequency of Cs-133
   name_fr: fréquence de la transition hyperfine du césium
-  value_type: xsd:integer
+  xsd_type: integer
   value_str: 9 192 631 770
   value: 9192631770
   unit: Hz
@@ -15,7 +15,7 @@
   hidden_label: SpeedOfLight
   name_en: speed of light
   name_fr: vitesse de la lumière dans le vide
-  value_type: xsd:integer
+  xsd_type: integer
   value_str: 299 792 458
   value: 299792458
   unit: m.s-1
@@ -28,7 +28,7 @@
   hidden_label: Planck
   name_en: Planck constant
   name_fr: constante de Planck
-  value_type: xsd:double
+  xsd_type: float
   value_str: 6.626 070 15 x 10⁻³⁴
   value: 6.62607015e-34
   unit: J.s
@@ -41,7 +41,7 @@
   hidden_label: ElementaryCharge
   name_en: elementary charge
   name_fr: charge élementaire
-  value_type: xsd:double
+  xsd_type: float
   value_str: 1.602 176 634 x 10⁻¹⁹
   value: 1.602176634e-19
   unit: C
@@ -54,7 +54,7 @@
   hidden_label: Boltzmann
   name_en: Boltzmann constant
   name_fr: constante de Boltzmann
-  value_type: xsd:double
+  xsd_type: float
   value_str: 1.380 649 x 10⁻²³
   value: 1.380649e-23
   unit: J.K-1
@@ -67,7 +67,7 @@
   hidden_label: Avogadro
   name_en: Avogadro constant
   name_fr: constante d'Avogadro
-  value_type: xsd:double
+  xsd_type: float
   value_str: 6.022 140 76 x 10²³
   value: 6.02214076e+23
   unit: mol-1
@@ -80,7 +80,7 @@
   hidden_label: LuminousEfficacy
   name_en: luminous efficacy
   name_fr: efficacité lumineuse
-  value_type: xsd:integer
+  xsd_type: integer
   value_str: '683'
   value: 683
   unit: lm.W-1

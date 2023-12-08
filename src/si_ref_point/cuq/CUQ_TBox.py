@@ -4,7 +4,6 @@ from rdflib.namespace import RDF, RDFS, SKOS, OWL, XSD, DCTERMS
 from pathlib import Path
 from si_ref_point.settings import SIURL
 from datetime import date
-import os
 
 ResBod_ns = SIURL + "bodies#"
 
@@ -46,7 +45,7 @@ class SiElements:
 
         # for Constants
         self.Constant = self.set_uri("Constant")
-        self.g.add((self.Constant, RDF.type, SKOS.Concept))
+        self.g.add((self.Constant, RDF.type, OWL.Class))
         self.g.add((self.Constant, RDFS.label,
                     Literal("defining constant", lang="en")))
         self.g.add((self.Constant, RDFS.label,
@@ -62,7 +61,7 @@ class SiElements:
 
         # MeasurementUnit
         self.MeasurementUnit = self.set_uri("MeasurementUnit")
-        self.g.add((self.MeasurementUnit, RDF.type, SKOS.Concept))
+        self.g.add((self.MeasurementUnit, RDF.type, OWL.Class))
         self.g.add((self.MeasurementUnit, RDFS.label,
                     Literal("measurement unit", lang="en")))
         self.g.add((self.MeasurementUnit, RDFS.label,
@@ -77,6 +76,7 @@ class SiElements:
 
         # SIBaseUnit
         self.SIBaseUnit = self.set_uri("SIBaseUnit")
+        self.g.add((self.SIBaseUnit, RDF.type, OWL.Class))
         self.g.add((self.SIBaseUnit, RDFS.subClassOf, self.MeasurementUnit))
         self.g.add((self.SIBaseUnit, RDFS.label,
                     Literal("base unit", lang="en")))
@@ -98,6 +98,7 @@ class SiElements:
 
         # SISpecialNamedUnit
         self.SISpecialNamedUnit = self.set_uri("SISpecialNamedUnit")
+        self.g.add((self.SISpecialNamedUnit, RDF.type, OWL.Class))
         self.g.add((self.SISpecialNamedUnit, RDFS.subClassOf,
                     self.MeasurementUnit))
         self.g.add((self.SISpecialNamedUnit, RDFS.label,
@@ -114,34 +115,31 @@ class SiElements:
                             "unités de base mais qui ont un nom "
                             "spécial.", lang="fr")))
 
-        # inOtherSIUnits
+        # inBaseSIUnits
         self.inBaseSIUnits = self.set_uri("inBaseSIUnits")
-        self.g.add((self.inBaseSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inBaseSIUnits, RDF.type, OWL.ObjectProperty))
         self.g.add((self.inBaseSIUnits, RDFS.label,
                     Literal("can be expressed in base SI units as",
                             lang="en")))
         self.g.add((self.inBaseSIUnits, RDFS.label,
                     Literal("peut être exprimé en unités SI de base sous "
                             "la forme", lang="fr")))
-        self.g.add((self.inBaseSIUnits, RDFS.domain, self.SISpecialNamedUnit))
-        # better than a literal, but good enough? :
-        self.g.add((self.inBaseSIUnits, RDFS.range, XSD.string))
+        self.g.add((self.inBaseSIUnits, RDFS.range, self.MeasurementUnit))
 
         # inOtherSIUnits
         self.inOtherSIUnits = self.set_uri("inOtherSIUnits")
-        self.g.add((self.inOtherSIUnits, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.inOtherSIUnits, RDF.type, OWL.ObjectProperty))
         self.g.add((self.inOtherSIUnits, RDFS.label,
                     Literal("can be expressed in other SI units as",
                             lang="en")))
         self.g.add((self.inOtherSIUnits, RDFS.label,
                     Literal("peut être exprimé dans d’autres unités SI sous "
                             "la forme", lang="fr")))
-        self.g.add((self.inOtherSIUnits, RDFS.domain, self.SISpecialNamedUnit))
-        # better than a literal, but good enough? :
-        self.g.add((self.inOtherSIUnits, RDFS.range, XSD.string))
+        self.g.add((self.inOtherSIUnits, RDFS.range, self.MeasurementUnit))
 
         # NonSIUnit
         self.nonSIUnit = self.set_uri("nonSIUnit")
+        self.g.add((self.nonSIUnit, RDF.type, OWL.Class))
         self.g.add((self.nonSIUnit, RDFS.subClassOf, self.MeasurementUnit))
         self.g.add((self.nonSIUnit, RDFS.label,
                     Literal("non SI unit", lang="en")))
@@ -156,7 +154,7 @@ class SiElements:
 
         # Definition
         self.Definition = self.set_uri("Definition")
-        self.g.add((self.Definition, RDF.type, SKOS.Concept))
+        self.g.add((self.Definition, RDF.type, OWL.Class))
         self.g.add((self.Definition, RDFS.label,
                     Literal("definition of a base unit", lang="en")))
         self.g.add((self.Definition, RDFS.label,
@@ -170,7 +168,7 @@ class SiElements:
 
         # Definition Note
         self.DefinitionNote = self.set_uri("DefinitionNote")
-        self.g.add((self.DefinitionNote, RDF.type, SKOS.Concept))
+        self.g.add((self.DefinitionNote, RDF.type, OWL.Class))
         self.g.add((self.DefinitionNote, RDFS.label,
                     Literal("unit definition note", lang="en")))
         self.g.add((self.DefinitionNote, RDFS.label,
@@ -184,7 +182,7 @@ class SiElements:
 
         # SIPrefix
         self.SIPrefix = self.set_uri("SIPrefix")
-        self.g.add((self.SIPrefix, RDF.type, SKOS.Concept))
+        self.g.add((self.SIPrefix, RDF.type, OWL.Class))
         self.g.add((self.SIPrefix, RDFS.label,
                     Literal("SI prefix", lang="en")))
         self.g.add((self.SIPrefix, RDFS.label,
@@ -196,7 +194,7 @@ class SiElements:
 
         # Classes for Quantities
         self.QuantityKind = self.set_uri("QuantityKind")
-        self.g.add((self.QuantityKind, RDF.type, SKOS.Concept))
+        self.g.add((self.QuantityKind, RDF.type, OWL.Class))
         self.g.add((self.QuantityKind, RDFS.label,
                     Literal("kind of quantity", lang="en")))
         self.g.add((self.QuantityKind, RDFS.label,
@@ -245,24 +243,21 @@ class SiElements:
         self.g.add((self.hasUnit, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasUnit, RDFS.label, Literal("has unit", lang="en")))
         self.g.add((self.hasUnit, RDFS.label, Literal("a l'unité", lang="fr")))
-        # should this be domain? then below is true?
-        # self.g.add((self.hasUnit, RDFS.domain, self.MeasurementUnit))
-        # self.g.add((self.hasUnit, RDFS.range, self.SIBaseUnit))
-        # self.g.add((self.hasUnit, RDFS.range, self.SISpecialNamedUnit))
+        self.g.add((self.hasUnit, RDFS.range, self.MeasurementUnit))
         self.g.add((self.hasUnit, RDFS.comment,
-                    Literal("Linking a measurement unit to an SI base or "
-                            "specially named unit.", lang="en")))
+                    Literal("Linking a measurement unit to an object.", lang="en")))
         self.g.add((self.hasUnit, RDFS.comment,
-                    Literal("Associer une unité de mesure à une base SI ou "
-                            "à une unité spécialement nommée.",
-                            lang="fr")))
+                    Literal("Associer une unité de mesure à un objet.", lang="fr")))
 
         # hasUnitTypeAsString
         self.hasUnitTypeAsString_oneOf_node = BNode()
         self.hasUnitTypeAsString_oneOf_subnode = BNode()
-        self.hasUnitTypeAsString_oneOf_list = [self.SIBaseUnit,
-                                               self.SISpecialNamedUnit,
-                                               self.nonSIUnit]
+        self.hasUnitTypeAsString_oneOf_list = [
+            self.SIBaseUnit,
+            self.SISpecialNamedUnit,
+            self.nonSIUnit,
+            self.MeasurementUnit,
+        ]
         self.hasUnitTypeAsString_oneOf_col = Collection(
             self.g, self.hasUnitTypeAsString_oneOf_subnode,
             self.hasUnitTypeAsString_oneOf_list)
@@ -277,12 +272,11 @@ class SiElements:
                     self.hasUnitTypeAsString_oneOf_node))
         self.g.add((self.hasUnitTypeAsString_oneOf_node, OWL.oneOf,
                     self.hasUnitTypeAsString_oneOf_subnode))
-        self.g.add((self.hasUnitTypeAsString, RDFS.range, XSD.string))
+        self.g.add((self.hasUnitTypeAsString, RDFS.range, RDFS.Literal))
 
         # for Constants
 
         # hasValue
-        # or hasNumericValue might be better
         self.hasValue = self.set_uri("hasValue")
         self.g.add((self.hasValue, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasValue, RDFS.label,
@@ -290,8 +284,7 @@ class SiElements:
         self.g.add((self.hasValue, RDFS.label,
                     Literal("a de la valeur", lang="fr")))
         self.g.add((self.hasValue, RDFS.domain, self.Constant))
-        # better than a literal, but good enough?
-        self.g.add((self.hasValue, RDFS.range, XSD.double))
+        self.g.add((self.hasValue, RDFS.range, RDFS.Literal))
 
         # hasDatatype
         self.hasDatatype_oneOf_node = BNode()
@@ -302,7 +295,7 @@ class SiElements:
             self.hasDatatype_oneOf_list)
         self.hasDatatype = self.set_uri("hasDatatype")
 
-        self.g.add((self.hasDatatype, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDatatype, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasDatatype, RDFS.label,
                     Literal("has datatype", lang="en")))
         self.g.add((self.hasDatatype, RDFS.label,
@@ -311,7 +304,6 @@ class SiElements:
                     self.hasDatatype_oneOf_node))
         self.g.add((self.hasDatatype_oneOf_node, OWL.oneOf,
                     self.hasDatatype_oneOf_subnode))
-        self.g.add((self.hasDatatype, RDFS.range, XSD.anyURI))
 
         # hasValueAsString
         self.hasValueAsString = self.set_uri("hasValueAsString")
@@ -343,38 +335,8 @@ class SiElements:
         self.g.add((self.hasUnitAsString, RDFS.domain, self.Constant))
         self.g.add((self.hasUnitAsString, RDFS.range, XSD.string))
 
-        # hasUnitPwr
-        # [TODO] suggest changing to hasUnitPower
-        self.hasUnitPwr = self.set_uri("hasUnitPwr")
-        self.g.add((self.hasUnitPwr, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasUnitPwr, RDFS.label,
-                    Literal("has unit power", lang="en")))
-        self.g.add((self.hasUnitPwr, RDFS.label,
-                    Literal("a une puissance unitaire", lang="fr")))
-        self.g.add((self.hasUnitPwr, RDFS.comment,
-                    Literal("Derived units are defined as products of powers "
-                            "of the base units."
-                            "An SI base unit has a power of 1 by definition.",
-                            lang="en")))
-        self.g.add((self.hasUnitPwr, RDFS.comment,
-                    Literal("Associer une unité de mesure à une base SI ou "
-                            "à une unité spécialement nommée."
-                            "Une unité de base SI a une puissance de 1 par "
-                            "définition.", lang="fr")))
-
-        # hasUnitElement  # what is this referring to?
-        self.hasUnitElement = self.set_uri("hasUnitElement")
-        self.g.add((self.hasUnitElement, RDF.type, OWL.DatatypeProperty))
-        self.g.add((self.hasUnitElement, RDFS.label,
-                    Literal("has unit element", lang="en")))
-        self.g.add((self.hasUnitElement, RDFS.label,
-                    Literal("a un élément d'unité", lang="fr")))
 
         # for Units
-
-        # Suggestions for additional unit predictates
-        # isDerivedUnit (True|False)
-        # isCoherentDerivedUnit (True|False)
 
         # hasDefinition
         self.hasDefinition = self.set_uri("hasDefinition")
@@ -410,7 +372,7 @@ class SiElements:
 
         # hasDefinitionNote
         self.hasDefinitionNote = self.set_uri("hasDefinitionNote")
-        self.g.add((self.hasDefinitionNote, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.hasDefinitionNote, RDF.type, OWL.ObjectProperty))
         self.g.add((self.hasDefinitionNote, RDFS.label,
                     Literal("has definition note", lang="en")))
         self.g.add((self.hasDefinitionNote, RDFS.label,
@@ -558,14 +520,14 @@ class SiElements:
                     Literal("Associer une définition SI à sa date de début "
                             "de validité.", lang="fr")))
 
-        # restriction on "hasStartValidity": cardinality = 1
+        # restriction on "hasStartValidity": minCardinality = 1 (exact cardinality not good in open world assumption)
         restr_hasStartValidity = BNode()
         self.g.add((restr_hasStartValidity, RDF.type, OWL.Restriction))
         self.g.add((restr_hasStartValidity, OWL.onProperty,
                     self.hasStartValidity))
-        self.g.add((restr_hasStartValidity, OWL.cardinality,
+        self.g.add((restr_hasStartValidity, OWL.minCardinality,
                     Literal(1, datatype=XSD.int)))
-        self.g.add((self.SIBaseUnit, RDFS.subClassOf, restr_hasStartValidity))
+        self.g.add((self.Definition, RDFS.subClassOf, restr_hasStartValidity))
 
         # hasEndValidity
         self.hasEndValidity = self.set_uri("hasEndValidity")
@@ -583,21 +545,25 @@ class SiElements:
                     Literal("Associer une définition SI à sa date de fin "
                             "de validité.", lang="fr")))
 
-        # restriction on "hasEndValidity" : maxCardinality = 1
-        restr_hasEndValidity = BNode()
-        self.g.add((restr_hasEndValidity, RDF.type, OWL.Restriction))
-        self.g.add((restr_hasEndValidity, OWL.onProperty, self.hasEndValidity))
-        self.g.add((restr_hasEndValidity, OWL.maxCardinality, Literal(1)))
-        self.g.add((self.SIBaseUnit, RDFS.subClassOf, restr_hasEndValidity))
-
         # hasDefiningEquation
+        self.hasDefiningEquation_oneOf_node = BNode()
+        self.hasDefiningEquation_oneOf_subnode = BNode()
+        self.hasDefiningEquation_oneOf_list = [self.Definition,
+                                                 self.Constant]
+        self.hasDefiningEquation_oneOf_col = Collection(
+            self.g, self.hasDefiningEquation_oneOf_subnode,
+            self.hasDefiningEquation_oneOf_list)
+        
         self.hasDefiningEquation = self.set_uri("hasDefiningEquation")
         self.g.add((self.hasDefiningEquation, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDefiningEquation, RDFS.label,
                     Literal("has defining equation", lang="en")))
         self.g.add((self.hasDefiningEquation, RDFS.label,
                     Literal("a une équation de définition", lang="fr")))
-        self.g.add((self.hasDefiningEquation, RDFS.domain, self.Definition))
+        self.g.add((self.hasDefiningEquation, RDFS.domain,
+                    self.hasDefiningEquation_oneOf_node))
+        self.g.add((self.hasDefiningEquation_oneOf_node, OWL.oneOf,
+                    self.hasDefiningEquation_oneOf_subnode))
         self.g.add((self.hasDefiningEquation, RDFS.range, RDFS.Literal))
         self.g.add((self.hasDefiningEquation, RDFS.comment,
                     Literal("Linking a SI definition to its defining "
@@ -630,7 +596,7 @@ class SiElements:
         self.g.add((self.hasScalingFactor, RDFS.label,
                     Literal("a un facteur d'échelle", lang="fr")))
         self.g.add((self.hasScalingFactor, RDFS.domain, self.SIPrefix))
-        self.g.add((self.hasScalingFactor, RDFS.range, XSD.double))
+        self.g.add((self.hasScalingFactor, RDFS.range, RDFS.Literal))
         self.g.add((self.hasScalingFactor, RDFS.comment,
                     Literal("Linking an SI prefix to its scaling factor.",
                             lang="en")))
@@ -643,7 +609,7 @@ class SiElements:
         self.g.add((restr_hasScalingFactor, RDF.type, OWL.Restriction))
         self.g.add((restr_hasScalingFactor, OWL.onProperty,
                     self.hasScalingFactor))
-        self.g.add((restr_hasScalingFactor, OWL.cardinality,
+        self.g.add((restr_hasScalingFactor, OWL.minCardinality,
                     Literal(1, datatype=XSD.int)))
         self.g.add((self.SIPrefix, RDFS.subClassOf, restr_hasScalingFactor))
 

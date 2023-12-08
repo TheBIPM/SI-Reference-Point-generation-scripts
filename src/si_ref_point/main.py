@@ -3,7 +3,7 @@
 
 import argparse
 import logging
-import si_ref_point.cuq.CUQ_TBox as CUQ_TBox
+import si_ref_point.cuq.CUQ_TBox_Extension as CUQ_TBox_Extension
 import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
 import si_ref_point.cuq.Constants_ABox as Constants_ABox
@@ -13,7 +13,6 @@ import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
-import si_ref_point.cuq.second_stage as second_stage
 from si_ref_point import __version__
 import os
 import datetime
@@ -53,17 +52,19 @@ def main():
     else:
         logging.basicConfig(level=logging.INFO)
 
-    file_generator = {'si': CUQ_TBox.main,
-                      'quantities': Quantities_ABox.main,
-                      'units': Units_ABox.main,
-                      'constants': Constants_ABox.main,
-                      'prefixes': Prefixes_ABox.main,
-                      'decisions': gen_decisions.main,
-                      'bodies': ResBod_TBox.main,
-                      'cgpm': ResBod_ABox_CGPM.main,
-                      'cipm': ResBod_ABox_CIPM.main,
-                      'cctf': ResBod_ABox_CCTF.main,
-                      }
+    file_generator = {
+        #'si': CUQ_TBox.main,
+        'si': CUQ_TBox_Extension.main,
+        'quantities': Quantities_ABox.main,
+        'units': Units_ABox.main,
+        'constants': Constants_ABox.main,
+        'prefixes': Prefixes_ABox.main,
+        'decisions': gen_decisions.main,
+        'bodies': ResBod_TBox.main,
+        'cgpm': ResBod_ABox_CGPM.main,
+        'cipm': ResBod_ABox_CIPM.main,
+        'cctf': ResBod_ABox_CCTF.main,
+    }
     output = {}
     for label, generator in file_generator.items():
         if args.only and args.only not in label:
@@ -72,9 +73,6 @@ def main():
         # Generator will return a rdflib.Graph object
         output[label] = generator()
         logging.info("..done")
-
-    # 2nd-stage operations on graphs
-    # output['constants'] = second_stage.add_unitpwr(output)
 
     # Serialize all graphs in their respective turtle files
     if not os.path.exists(args.output_dir):

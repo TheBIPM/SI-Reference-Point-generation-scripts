@@ -21,7 +21,8 @@ dependencies = [
     "Jinja2",
     "PyYAML",
     "uvicorn",
-    "owlrl",    
+    "owlready2",
+    "owlrl",
     "fastapi",
     "pydantic>=1.10,<2.0",
     "pyshacl"
