@@ -107,8 +107,8 @@ def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
         sx = {
             "division": "/",
             "times": "\\;",
-            "exponent": "\^[-0-9]+",
-            "exp_number": "\^([-0-9]+)",
+            "exponent": r"\^[-0-9]+",
+            "exp_number": r"\^([-0-9]+)",
             "variable": "@[a-z]+@",
             "var_name": "@([a-z]+)@",
         }
@@ -118,10 +118,10 @@ def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
         sx = {
             "division": "/",  # not used
             "times": "\\;",
-            "exponent": "\^[\{]?[-0-9]+[\}]?",
-            "exp_number": "\^[\{]?([-0-9]+)[\}]?",
-            "variable": "\{@[a-z]+@\}",
-            "var_name": "\{@([a-z]+)@\}",
+            "exponent": r"\^[\{]?[-0-9]+[\}]?",
+            "exp_number": r"\^[\{]?([-0-9]+)[\}]?",
+            "variable": r"\{@[a-z]+@\}",
+            "var_name": r"\{@([a-z]+)@\}",
         }
 
     else:
@@ -548,7 +548,7 @@ def main():
             g.add((unit_multiple, hasUnitFactor, conversion_unit))
             g.add((unit_multiple, hasNumericFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
-    
+
     return g
 
 
