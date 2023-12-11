@@ -1,19 +1,19 @@
 #############################################################################
 #
-# SI Reference Point 
+# SI Reference Point
 # to launch the service, type the following line in a Terminal
 # uvicorn main_html:app --reload
 #
 # This app returns html pages (using Jinja2Templates)
 #
 # Based on a tutorial found at: http://www.youtube.com/watch?v=SORiTsvnU28
-# 
-# to start the API server use: uvicorn main:app --host=0.0.0.0 
+#
+# to start the API server use: uvicorn main:app --host=0.0.0.0
 #  (the --host=0.0.0.0 ensures that the server can be reached from the same network)
 #
 # G. Dudle/ 16.02.2023
 # ATTENTION: apparently this code requires at least Python 3.11 (Type issue)
-# 
+#
 #
 from typing import List
 from pathlib import Path
@@ -24,17 +24,16 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from datetime import date, datetime
-from settings import *
+import os
+from si_ref_point.settings import BASE_URL
 
-BASE_PATH = PROJECTBASE + "Testing/API/"
-
-TEMPLATES = Jinja2Templates(directory=str(BASE_PATH + "templates"))
+BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+TEMPLATES = Jinja2Templates(directory=os.path.join(BASE_PATH, "templates"))
+TTL_PATH = "./"
 
 app = FastAPI(title="API Semantic SI", openapi_url="/openapi.json")
 
 app.mount("/static", StaticFiles(directory=Path(BASE_PATH, 'static')), name="static")
-
-templates = Jinja2Templates(directory="templates")
 
 api_router = APIRouter()
 
@@ -43,11 +42,11 @@ api_router = APIRouter()
 #
 # load ttl files into knowledge graph
 g = Graph()
-g.parse(APIPATH + '/units.ttl')
-g.parse(APIPATH + '/prefixes.ttl')
-g.parse(APIPATH + '/quantities.ttl')
-g.parse(APIPATH + '/constants.ttl')
-g.parse(APIPATH + '/cgpm.ttl')
+g.parse(os.path.join(TTL_PATH, 'units.ttl'))
+g.parse(os.path.join(TTL_PATH, 'prefixes.ttl'))
+g.parse(os.path.join(TTL_PATH, 'quantities.ttl'))
+g.parse(os.path.join(TTL_PATH, 'constants.ttl'))
+g.parse(os.path.join(TTL_PATH, 'cgpm.ttl'))
 
 # reasoner (used e.g. to infer "?Conf CGPM:adopted ?Res" is equivalent to "?Res CGPM:wasAdoptedBy ?Conf")
 # owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(g)
@@ -66,16 +65,16 @@ param_list_lang = ['en', 'fr']
 # unit_list_dict
 unts_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
-            SELECT ?Unit ?Symbol 
+            SELECT ?Unit ?Symbol
             WHERE
             {
                 {?Unit a si:SISpecialNamedUnit }
                 UNION
-                {?Unit a si:SIBaseUnit } 
+                {?Unit a si:SIBaseUnit }
                 UNION
                 {?Unit a si:nonSIUnit}
                 ?Unit si:hasSymbol ?Symbol
-            } 
+            }
             """
 
 # run SPARQL query for units
@@ -88,7 +87,7 @@ for unit in unitlist:
 # prefix_list_dict / scaling_list_dict
 fixquery = """
             PREFIX si: <http://si-digital-framework.org/SI#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Prefix ?PrefixLabel ?Symbol ?ScalingFactor
             WHERE
             {
@@ -96,7 +95,7 @@ fixquery = """
                         skos:prefLabel ?PrefixLabel ;
                         si:hasScalingFactor ?ScalingFactor ;
                         si:hasSymbol ?Symbol
-            } 
+            }
             """
 
 # run SPARQL query for prefixes
@@ -126,7 +125,7 @@ xsdurl = 'http://www.w3.org/2001/XMLSchema#'
 def get_unit_name(sym: str, lang: str | None = 'en'):
     unit_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Unit ?Label
             WHERE
             {
@@ -136,7 +135,7 @@ def get_unit_name(sym: str, lang: str | None = 'en'):
                 UNION
                 {?Unit a si:nonSIUnit}
                 ?Unit skos:prefLabel ?Label .
-                ?Unit si:hasSymbol ?Symbol . 
+                ?Unit si:hasSymbol ?Symbol .
                 FILTER (?Symbol='""" + sym + """') .
                 FILTER (langmatches(lang(?Label),'""" + lang + """'))}"""
 
@@ -150,13 +149,13 @@ def get_unit_name(sym: str, lang: str | None = 'en'):
 def get_prefix_name(sym: str):
     prefix_query = """
             PREFIX si: <http://si-digital-framework.org/SI#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Prefix ?Label
             WHERE
             {
                 ?Prefix a si:SIPrefix .
                 ?Prefix skos:prefLabel ?Label .
-                ?Prefix si:hasSymbol ?Symbol . 
+                ?Prefix si:hasSymbol ?Symbol .
                 FILTER (?Symbol='""" + sym + """')}"""
 
     # run SPARQL query for units
@@ -181,7 +180,7 @@ def get_scalingfactor(symbol: str) -> float:
 
 
 # ----------------------------------------------------------------------------------------
-# parser of prefixed unit 
+# parser of prefixed unit
 def prefixedunit(unit_element: str):
     dictionary = {}
 
@@ -282,9 +281,9 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
     PREFIX si: <http://si-digital-framework.org/SI#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     PREFIX rb: <http://si-digital-framework.org/bodies#>
-    
 
-    SELECT ?CGPM_title ?Identifier ?Conf_date 
+
+    SELECT ?CGPM_title ?Identifier ?Conf_date
     WHERE {
         ?Conf a rb:Event ;
               skos:prefLabel ?CGPM_title ;
@@ -533,7 +532,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
             SELECT ?Label ?Value ?Unit ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
-            WHERE { 
+            WHERE {
                 ?SIBaseUnit si:hasDefiningConstant ?Constant .
                 ?Constant skos:prefLabel ?Label ;
                     skos:hiddenLabel ?Hidden ;
@@ -557,7 +556,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
                         ?u2 si:hasSymbol ?sym2 .
                         BIND(IF(?p2=1, str(?sym2), CONCAT(str(?sym2),"<sup>",str(?p2),'</sup>')) AS ?u2Str)
                 }
-                
+
                 FILTER (langmatches(lang(?Label),'""" + lang + """')) .
                 FILTER (?Hidden='""" + name + """') .
                 BIND(IF(EXISTS {?list rdf:_2 ?el }, CONCAT(?u1Str, " ", ?u2Str ), ?u1Str) AS ?Unit)
@@ -698,8 +697,8 @@ def displ_baseunitdefinition(request: Request, lang: str | None = 'en'):
                         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                         PREFIX units: <http://si-digital-framework.org/SI/units/>
-    
-                        SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes 
+
+                        SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes
                                 ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
                         WHERE {
                             units:""" + unitname + """ si:hasDefinition ?UnitDefn .
@@ -761,7 +760,7 @@ def displ_baseunitdefinition(request: Request, lang: str | None = 'en'):
                     defnname = defn['UnitDefn'].replace(siurl, '')
                     notes_query = """
                         PREFIX si: <http://si-digital-framework.org/SI#>
-        
+
                         SELECT ?note ?index ?eText ?fText
                         WHERE {
                             si:""" + defnname + """	si:hasDefinitionNote ?note .
@@ -793,7 +792,7 @@ def displ_baseunitdefinition(request: Request, lang: str | None = 'en'):
         return jld
     else:
         return TEMPLATES.TemplateResponse(
-            "UnitLayout.html",
+            "BaseUnitLayout.html",
             {"request": request, "units": unitset, "language": lang}
         )
 
@@ -835,7 +834,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX units: <http://si-digital-framework.org/SI/units/>
-        
+
         SELECT ?Unit ?sym ?quant ?defns ?eLabel ?fLabel ?unitType
         WHERE {
             ?Unit	rdf:type ?unitType ;
@@ -870,7 +869,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             PREFIX units: <http://si-digital-framework.org/SI/units/>
 
-            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes 
+            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes
                     ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
             WHERE {
                 units:""" + unitname + """ si:hasDefinition ?UnitDefn .
@@ -953,7 +952,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
             defnname = defn['UnitDefn'].replace(siurl, '')
             notes_query = """
                 PREFIX si: <http://si-digital-framework.org/SI#>
-                
+
                 SELECT ?note ?index ?eText ?fText
                 WHERE {
                     si:""" + defnname + """	si:hasDefinitionNote ?note .
@@ -984,7 +983,7 @@ def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang
         return gph
     else:
         return TEMPLATES.TemplateResponse(
-            "UnitLayout.html",
+            "BaseUnitLayout.html",
             {"request": request, "units": unitdata, "language": lang}
         )
 
@@ -1014,24 +1013,24 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
-                    WHERE 
-                    { 
+                    WHERE
+                    {
                         VALUES ?datum {'""" + datestr + """'^^xsd:date} .
                         ?SIBaseUnit a si:SIBaseUnit ;
                             si:hasSymbol ?Symbol ;
                             skos:prefLabel ?Label .
                         FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                        
+
                         ?SIBaseUnit si:hasDefinition ?Definition .
                         ?Definition si:hasDefiningText ?DefiningText .
                         FILTER (langmatches(lang(?DefiningText),'""" + lang + """')) .
-                        
-                        
+
+
                         OPTIONAL {?SIBaseUnit si:isUnitOfQtyKind ?QtyKind .}
                         OPTIONAL {?QtyKind skos:prefLabel ?Q_Label ;
                                            skos:altLabel ?Q_Code .
                                 FILTER (langmatches(lang(?Q_Label),'""" + lang + """'))}.
-                        
+
                         OPTIONAL {?Definition si:hasDefiningConstant ?Constant .
                                   ?Constant skos:prefLabel ?Cst_Label ;
                                             skos:hiddenLabel ?Cst_Hidden .
@@ -1039,22 +1038,22 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
 
                         ?Definition si:hasStartValidity ?StartValidity .
                         OPTIONAL {?Definition si:hasEndValidity ?EndValidity} .
-                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) || 
-                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))). 
-                        
+                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) ||
+                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))).
+
                         ?Definition si:hasDefiningResolution ?DefiningResolution .
                         OPTIONAL {?Definition si:hasDefinitionNote ?Note .
                                    ?Note    si:hasNoteIndex ?NoteIndex;
                                             si:hasNoteText ?NoteText .
                                   FILTER (langmatches(lang(?NoteText),'""" + lang + """')) .
-                        
+
                                 }
                         ?Conf rb:hasOutcome ?DefiningResolution ;
                               rb:hasEventNr ?ConfNr .
                         ?DefiningResolution rb:hasOutcomeNr ?ResNr ;
                                             rb:hasDOI ?Res_DOI .
-                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """')) 
-                        
+                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """'))
+
                         OPTIONAL {?Definition si:hasDefiningEquation ?Equation} .}"""
     if len(baseunitid) < 4:
         knows_query = knows_query[:-1] + """FILTER (?Symbol='""" + baseunitid + """') .}"""
@@ -1088,22 +1087,22 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX rb: <http://si-digital-framework.org/bodies#>
 
-        SELECT DISTINCT ?NoteIndex ?NoteText           
-            WHERE 
-                { 
+        SELECT DISTINCT ?NoteIndex ?NoteText
+            WHERE
+                {
                     VALUES ?datum {'""" + datestr + """'^^xsd:date} .
                     ?SIBaseUnit a si:SIBaseUnit ;
                         si:hasSymbol ?Symbol ;
                         skos:prefLabel ?Label .
                     FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                        
+
                     ?SIBaseUnit si:hasDefinition ?Definition .
 
                     ?Definition si:hasStartValidity ?StartValidity .
                     OPTIONAL {?Definition si:hasEndValidity ?EndValidity} .
-                    FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) || 
-                            ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))). 
-                        
+                    FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) ||
+                            ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))).
+
                     OPTIONAL {?Definition si:hasDefinitionNote ?Note .
                             ?Note    si:hasNoteIndex ?NoteIndex;
                                      si:hasNoteText ?NoteText .
@@ -1166,7 +1165,7 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
         return jld
     else:
         return TEMPLATES.TemplateResponse(
-            "UnitLayout.html",
+            "BaseUnitLayout.html",
             {"request": request, "units": responses, "notes": nresponses, "language": lang}
         )
 
@@ -1196,30 +1195,30 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution ?NoteText
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
-                    WHERE 
-                    { 
+                    WHERE
+                    {
                         VALUES ?datum {'""" + datestr + """'^^xsd:date} .
                         ?SIBaseUnit a si:SIBaseUnit ;
                             si:hasSymbol ?Symbol ;
                             skos:prefLabel ?Label .
                         FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-                        
+
                         ?SIBaseUnit si:hasDefinition ?Definition .
                         ?Definition si:hasDefiningText ?DefiningText .
                         FILTER (langmatches(lang(?DefiningText),'""" + lang + """')) .
-                        
+
                         OPTIONAL {
                             ?SIBaseUnit si:hasDefinitionNote ?Note .
                             ?Note si:hasNoteIndex ?NoteIndex .
                             ?Note si:hasNoteText ?NoteText .
                             FILTER (?NoteIndex = 1) .
                         }
-                        
+
                         OPTIONAL {?SIBaseUnit si:isUnitOfQtyKind ?QtyKind .}
                         OPTIONAL {?QtyKind skos:prefLabel ?Q_Label ;
                                            skos:altLabel ?Q_Code .
                                 FILTER (langmatches(lang(?Q_Label),'""" + lang + """'))}.
-                        
+
                         OPTIONAL {?Definition si:hasDefiningConstant ?Constant .
                                   ?Constant skos:prefLabel ?Cst_Label ;
                                             skos:hiddenLabel ?Cst_Hidden .
@@ -1227,16 +1226,16 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
                         ?Definition si:hasStartValidity ?StartValidity .
                         OPTIONAL {?Definition si:hasEndValidity ?EndValidity} .
-                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) || 
-                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))). 
-                        
+                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) ||
+                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))).
+
                         ?Definition si:hasDefiningResolution ?DefiningResolution .
                         ?Conf rb:hasOutcome ?DefiningResolution ;
                               rb:hasEventNr ?ConfNr .
                         ?DefiningResolution rb:hasOutcomeNr ?ResNr ;
                                             rb:hasDOI ?Res_DOI .
-                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """')) 
-                        
+                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """'))
+
                         OPTIONAL {?Definition si:hasDefiningEquation ?Equation} .}"""
     if sym is not None:
         knows_query = knows_query[:-1] + """FILTER (?Symbol='""" + sym + """') .}"""
@@ -1273,7 +1272,7 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
     else:
         return TEMPLATES.TemplateResponse(
-            "UnitsLayout.html",
+            "BaseUnitsLayout.html",
             {"request": request, "units": responses, "language": lang}
         )
 
@@ -1298,8 +1297,8 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
                     PREFIX si: <http://si-digital-framework.org/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                     SELECT DISTINCT ?Symbol ?Label ?Description ?Q_Label ?Q_Code
-                    WHERE { 
-                        {?Unit a si:SIBaseUnit}   
+                    WHERE {
+                        {?Unit a si:SIBaseUnit}
                         UNION
                         {?Unit a si:SISpecialNamedUnit}
                         ?Unit si:hasSymbol ?Symbol ;
@@ -1362,8 +1361,8 @@ def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'
                     PREFIX si: <http://si-digital-framework.org/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                     SELECT DISTINCT ?Symbol ?Label ?Description ?Q_Label ?Q_Code
-                    WHERE { 
-                            {?Unit a si:SIBaseUnit}   
+                    WHERE {
+                            {?Unit a si:SIBaseUnit}
                             UNION
                             {?Unit a si:SISpecialNamedUnit}
                             ?Unit si:hasSymbol ?Symbol ;
@@ -1586,7 +1585,7 @@ def displ_nonsiunits(request: Request, lang: str | None = 'en'):
         PREFIX si: <http://si-digital-framework.org/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?Factor ?SIUnitSymbol
-        WHERE { 
+        WHERE {
                 ?Unit a si:nonSIUnit .
                 ?Unit si:hasSymbol ?Symbol ;
                         skos:prefLabel ?Label ;
@@ -1643,7 +1642,7 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
         PREFIX si: <http://si-digital-framework.org/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?Factor ?SIUnitSymbol
-        WHERE { 
+        WHERE {
                 VALUES ?identifier {'""" + identifier + """'@""" + lang + """}
                 ?Unit a si:nonSIUnit .
                 ?Unit si:hasSymbol ?Symbol ;
@@ -1704,7 +1703,7 @@ def displ_quants(request: Request, lang: str | None = 'en'):
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX si: <http://si-digital-framework.org/SI#>
-        
+
         SELECT ?quant ?code ?unit ?usym ?eText ?fText
         WHERE {
             ?quant 	rdf:type si:QuantityKind ;
@@ -1790,17 +1789,17 @@ def displ_quant(request: Request, code: str | None = None, lang: str | None = 'e
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                 SELECT DISTINCT ?Q_Label ?U_Label ?Symbol ?Code
                 WHERE {
-                        {?Unit a si:SIBaseUnit}   
+                        {?Unit a si:SIBaseUnit}
                         UNION
                         {?Unit a si:SISpecialNamedUnit}
                         ?Quantity a si:QuantityKind ;
                                     skos:altLabel ?Code ;
                                     skos:prefLabel ?Q_Label ;
-                                    si:hasUnit ?Unit.	
+                                    si:hasUnit ?Unit.
                         ?Unit si:hasSymbol ?Symbol ;
                                 skos:prefLabel ?U_Label.
                         FILTER (langmatches(lang(?Q_Label),'""" + lang + """')) .
-                        FILTER (langmatches(lang(?U_Label),'""" + lang + """')) . 
+                        FILTER (langmatches(lang(?U_Label),'""" + lang + """')) .
                     }"""
     if code is not None:
         knows_query = knows_query[:-1] + """FILTER (?Code='""" + code + """')}"""
@@ -1852,8 +1851,8 @@ def dbpedia_page(request: Request, word: str):
             {?s (skos:prefLabel | skos:hiddenLabel | skos:altLabel) ?word .
                 ?s ?p ?o .
                 VALUES ?word {'""" + word + """'@en '""" + word + """'@fr '""" + word + """'^^xsd:string}
-            }       
-        }       
+            }
+        }
     """
     qres = g.query(knows_query)
     responses: List[dict] = []
