@@ -6,7 +6,7 @@ from si_ref_point.settings import SIURL
 from datetime import date
 
 ResBod_ns = SIURL + "bodies#"
-
+bodies_list = ['cgpm', 'cipm', 'cctf']
 
 class SiElements:
     def __init__(self, namespace: str = SIURL + "SI#", prefix: str = "si"):
@@ -17,9 +17,9 @@ class SiElements:
         self.namespace_decisions = SIURL + "SI/decisions/"
         self.namespace_quantities = SIURL + "quantities/"
         self.namespace_constants = SIURL + "constants/"
-        self.namespace_cgpm = SIURL + "bodies/CGPM#"
-        self.namespace_cgpm = SIURL + "bodies/CIPM#"
-        self.namespace_cgpm = SIURL + "bodies/CCTF#"
+        self.namespace_bodies =  {}
+        for body in bodies_list:
+            self.namespace_bodies[body] = SIURL + "bodies/" + body.upper() + "#"
 
         self.g.bind(prefix, self.namespace)
         self.g.bind("units", self.namespace_units)
@@ -27,9 +27,8 @@ class SiElements:
         self.g.bind("quantities", self.namespace_quantities)
         self.g.bind("constants", self.namespace_constants)
         self.g.bind("decisions", self.namespace_decisions)
-        self.g.bind("cgpm", self.namespace_cgpm)
-        self.g.bind("cipm", self.namespace_cgpm)
-        self.g.bind("cctf", self.namespace_cgpm)
+        for body in bodies_list:
+            self.g.bind(body, self.namespace_bodies[body])
         self.g.bind('rb', ResBod_ns)
 
         self.BASE_PATH = Path(__file__).resolve().parent.parent
@@ -345,6 +344,13 @@ class SiElements:
         self.g.add((self.isTargetOf, RDFS.label,
                     Literal("est la décision de", lang="fr")))
 
+        self.correspondingResolution = self.set_uri("correspondingResolution")
+        self.g.add((
+            self.correspondingResolution, RDF.type, OWL.DatatypeProperty))
+        self.g.add((self.correspondingResolution, RDFS.label,
+                    Literal("has corresponding resolution", lang="en")))
+        self.g.add((self.correspondingResolution, RDFS.label,
+                    Literal("a pour résolution correspondante", lang="fr")))
         # for Constants
 
         # hasValue
@@ -787,7 +793,19 @@ class SiElements:
 
     def set_cgpm_uri(self, name: str) -> URIRef:
         """ Utility method """
-        return URIRef(self.namespace_cgpm + name)
+        return URIRef(self.namespace_bodies['cgpm'] + name)
+
+    def set_resolution_uri(self, name:str) -> URIRef:
+        """ Utility method, generalizes set_cgpm_uri """
+        try:
+            bd, resId = name.split(':')
+        except IndexError:
+            print("Error parsing a resolution URI : %s" % name)
+            return None
+        for body in bodies_list:
+            if body == bd:
+                return URIRef(self.namespace_bodies[body] + resId)
+
 
 
 def main():

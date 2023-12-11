@@ -70,7 +70,8 @@ def main():
         # add link between decision and resolution (retrieved from one of
         # cgpm.ttl, cipm.ttl or cctf.ttl) using the ‘correspondingResolution’
         # object property
-        # [TODO]
+        g.add((decision, PDF.correspondingResolution,
+               PDF.set_resolution_uri(dec['ID-resolution'])))
         if 'crossReferences' in dec:
             for xref in dec['crossReferences']:
                 # add link between decision and the cross-referenced decision
