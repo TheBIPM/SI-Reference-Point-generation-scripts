@@ -630,7 +630,6 @@ class SiElements:
         self.hasDefiningEquation_oneOf_col = Collection(
             self.g, self.hasDefiningEquation_oneOf_subnode,
             self.hasDefiningEquation_oneOf_list)
-
         self.hasDefiningEquation = self.set_uri("hasDefiningEquation")
         self.g.add((self.hasDefiningEquation, RDF.type, OWL.DatatypeProperty))
         self.g.add((self.hasDefiningEquation, RDFS.label,
