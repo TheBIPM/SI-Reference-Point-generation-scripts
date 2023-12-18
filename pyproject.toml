@@ -37,6 +37,6 @@ repository = "https://github.com/TheBIPM/SI-Reference-Point-2023"
 
 [project.scripts]
 generate_turtle_files = "si_ref_point.main:main"
-launch_si_api = "si_ref_point.test_api.launch_api:main"
+launch_si_test_api = "si_ref_point.test_api.launch_api:main"
 
 

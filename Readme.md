@@ -62,5 +62,6 @@ Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, 
 
 
 ### Testing
-Contains Python code that can be run under uvicorn to offer an API
+
+The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
 
