@@ -211,25 +211,25 @@ class SiElements:
 
         self.SIDecisionScope = self.set_uri("SIDecisionScope")
         self.g.add((self.SIDecision, RDF.type, OWL.Class))
-        self.g.add((self.SIDecision, RDFS.label,
+        self.g.add((self.SIDecisionScope, RDFS.label,
                     Literal("SI Decision scope", lang="en")))
-        self.g.add((self.SIDecision, RDFS.label,
+        self.g.add((self.SIDecisionScope, RDFS.label,
                     Literal("Champ de la décision SI", lang="fr")))
-        self.g.add((self.SIDecision, RDFS.comment,
+        self.g.add((self.SIDecisionScope, RDFS.comment,
                     Literal("The class for SI decisions scopes.", lang="en")))
-        self.g.add((self.SIDecision, RDFS.comment,
+        self.g.add((self.SIDecisionScope, RDFS.comment,
                     Literal("La classe pour les champs de décisions SI.",
                             lang="fr")))
 
         self.SIDecisionTarget = self.set_uri("SIDecisionTarget")
-        self.g.add((self.SIDecision, RDF.type, OWL.Class))
-        self.g.add((self.SIDecision, RDFS.label,
+        self.g.add((self.SIDecisionTarget, RDF.type, OWL.Class))
+        self.g.add((self.SIDecisionTarget, RDFS.label,
                     Literal("SI Decision target", lang="en")))
-        self.g.add((self.SIDecision, RDFS.label,
+        self.g.add((self.SIDecisionTarget, RDFS.label,
                     Literal("Cible d'une décision SI", lang="fr")))
-        self.g.add((self.SIDecision, RDFS.comment,
+        self.g.add((self.SIDecisionTarget, RDFS.comment,
                     Literal("The class for SI decisions target.", lang="en")))
-        self.g.add((self.SIDecision, RDFS.comment,
+        self.g.add((self.SIDecisionTarget, RDFS.comment,
                     Literal("La classe pour les cibles de décisions SI.",
                             lang="fr")))
 
