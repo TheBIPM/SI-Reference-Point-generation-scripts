@@ -90,7 +90,10 @@ def main():
             raise SystemExit
         now = datetime.datetime.now()
         timetag = now.strftime('%Y%m%dT%H%M%S')
-        githash = __version__.split('+')[1].split('.')[0]
+        try:
+            githash = __version__.split('+')[1].split('.')[0]
+        except IndexError:
+            githash = __version__
         zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')
         with ZipFile(zipname, 'w') as zf:
