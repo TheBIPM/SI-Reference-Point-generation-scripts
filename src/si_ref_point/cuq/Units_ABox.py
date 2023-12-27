@@ -184,7 +184,6 @@ def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
 
 
 def main():
-    # import CUQ TBox
     PDF = SiElements()
     g = Graph()
 

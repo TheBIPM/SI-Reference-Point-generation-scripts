@@ -143,23 +143,34 @@ si:hasUnitTypeAsString a owl:DatatypeProperty ;
 
 si:hasTarget a owl:DatatypeProperty ;
     rdfs:label "has target"@en,
-        "a pour cible"@fr.
+        "a pour cible"@fr ;
+    rdfs:domain si:SIDecisionScope ;
+    rdfs:range si:SIDecisionTarget ;
+    owl:inverseOf si:isTargetOf .
 
 si:isTargetOf a owl:DatatypeProperty ;
     rdfs:label "is target of"@en,
-        "est la cible de"@fr,
+        "est la cible de"@fr ;
+    rdfs:domain si:DecisionTarget ;
+    rdfs:range si:SIDecisionScope .
 
 si:hasDecision a owl:DatatypeProperty ;
     rdfs:label "has decision"@en,
-        "a pour décision"@fr .
+        "a pour décision"@fr ;
+    rdfs:domain si:SIDecisionTarget ;
+    rdfs:range si:SIDecision ;
+    owl:inverseOf si:isDecisionOf .
 
 si:isDecisionOf a owl:DatatypeProperty ;
     rdfs:label "is decision of"@en,
-        "est la décision de"@fr .
+        "est la décision de"@fr ;
+    rdfs:domain si:SIDecision ;
+    rdfs:range si:SIDecisionTarget .
 
 si:correspondingResolution a owl:DatatypeProperty ;
     rdfs:label "has corresponding resolution"@en,
-        "a pour résolution correspondante"@fr .
+        "a pour résolution correspondante"@fr ;
+    rdfs:domain si:SIDecision .
 
 ## for Constants
 
