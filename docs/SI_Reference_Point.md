@@ -2,7 +2,7 @@
 
 ## Scope
 
-The [SI Reference Point](https://si-digital-framework.org/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users, with a more detailed description of the Application Programming Interface (API) given in Annex 1, and some examples of SPARQL queries provided in Annex 2 for illustrative purposes.
+The [SI Reference Point](http://62.161.69.201:8080/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users, with a more detailed description of the Application Programming Interface (API) given in Annex 1, and some examples of SPARQL queries provided in Annex 2 for illustrative purposes.
 
 The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
@@ -42,8 +42,32 @@ The SI Reference Point relies on the following closely related components of the
   
 Table. List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
 
+| Table | Title | Encoded in|
+| :----- | :----- | :---- |
+| 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
+| 2 | SI base units | SI/units |
+| 3 |  Base quantities and dimensions  used in the SI | quantities |
+| 4 |  The 22 SI units with special names and symbols | SI/units |
+| 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
+| 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
+| 7 |  SI prefixes | SI/prefixes|
+| 8 |  Non-SI units accepted for use with the SI units | SI/units |
+| <nobr>Annex 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
-Further development of the list of kinds of quantity is required to extend the list (g) to cover all the quantities included in the BIPM key comparison database (KCDB). To increase interoperability, authoritative external digital references for the listed quantities(such as from the e-ILV [4] or the IUPAC Gold Book [5]) should also be built in. (Currently this has been done for only a few examples.) Identification of appropriate external identifiers will have to be carried out by subject experts, so these tasks will be carried out in collaboration with the CIPM’s Consultative Committees.
+
+## Data model
+
+The information contained in the nine editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
+
+[si-digital-framework.org/SI](http://62.161.69.201:8080/SI)
+
+
+
+## Next steps
+
+This beta version of the SI Reference Point is open for comment.
+
+The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). To increase interoperability, authoritative external digital references for the listed quantities (such as from the ILV [4] or the IUPAC Gold Book [5]) should be built in. (Currently this has been done for only a few examples.) As the identification of appropriate external identifiers will have to be carried out by subject experts, these tasks will be carried out in collaboration with the CIPM’s Consultative Committees.
 
 The current structure also allows for a possible future extension of the “constants” graph to provide the machine reference for a wider set of constants (for example, a machine-readable version of the “NIST Reference on Fundamental Physical Constants” [6]).
 
