@@ -135,8 +135,16 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 * Frédéric Meynadier (BIPM)
 
 
+## Annex 1:	List of Classes and Predicates
 
-
+The Python script MakeVocabulary.py produces a full list of classes contained in the knowledge graphs
+* SI/units.ttl
+* SI/prefixes.ttl
+* SI/decisions.ttl
+* constants.ttl
+* quantities.ttl
+ 
+The list is TAB separated and sorted by Class.
 
 ## Annex 2: API calls
 
