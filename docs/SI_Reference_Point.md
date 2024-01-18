@@ -30,12 +30,15 @@ A tool is provided to allow for machine-encoding and interpretation of prefixed 
 
 The SI Reference Point relies on the following closely related components of the SI Digital Framework:
 
-4. Constants
+4. **Constants**
     * Initially the 7 defining constants of the SI (Table 1 of [2])
-5.	Quantities
+5.	**Quantities**
     * SI base quantities (Table 3 of [2])
     * Other example quantities (Tables 5 and 6 of [2])
-    * Some other quantities in the BIPM key comparison database (KCDB))
+    * Other quantities in the BIPM key comparison database (KCDB))
+
+The SI/decisions information is presented in a stand-alone file as in the SI Brochure, but interfaces with another component of the SI Digital Framework:
+
 6. Responsible bodies
     * CGPM, CIPM, etc.
 
@@ -87,8 +90,30 @@ The data model (classes and predicates) for prefixes:
 
 
 
+## Browsing the knowledge graphs
+
+### General
+
+The set of knowledge graphs are presented in the form of TTL files, which can be browsed by different means as outlined below. As they are interlinked, the five TTL files should be available together for parsing by the chosen application. The information can then be displayed and exploited according to the services offered by the application.
+
+Following standard practice, the TTL files are divided between “T-boxes” (specifying the data model at the “SI” level, for example) and “A-boxes” (specifying the data entries at the “units”, “prefixes” and “decisions” levels).
 
 
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/00292ef7-f8dc-4a9b-b20e-2c0f5fed141a)
+
+
+### Application Programming Interface (API)
+
+The web interface at https://si-digital-framework.org/SI is designed to simplify access to the knowledge graphs for a human reader. Underpinning the web pages are a set of pre-programmed calls to the TTL files, such as (expressed as words rather than data requests) “list all the SI units”, “list all the SI prefixes”, “what is the current definition of the metre”, etc.
+
+The same pre-programmed calls underpinning the web interface are also available through a [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui).
+
+The pre-programmed calls (pre-defined SPARQL queries of the TTL files) can be triggered either by a web page request or through a Command Line Interface (CLI). The server will return the responses as specified in the header information of the query. For example: 
+* -H ‘accept:application/json’	will return JSON code
+* -H ‘accept:application/xml’	will return XML code
+* -H ‘accept:application/octet-stream’	will return the response without change of format (i.e. in TTL)
+
+For more details about the functionalities of the API, please refer to the documentation available from the Swagger interface. 
  
 
 ## Next steps
