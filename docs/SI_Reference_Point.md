@@ -8,8 +8,9 @@ The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
 *	Section 3 shows the data model used to encode the information.
 *	Section 4 briefly indicates how the information can be browsed.
-*	Annex 1 lists the pre-programmed (API) calls
-*	Annex 2 gives further details about the SPARQL endpoint.
+*	Annex 1 lists the Classes and Predicates in the data model
+*	Annex 2 lists the pre-programmed (API) calls
+*	Annex 2 gives further details about using the SPARQL endpoint.
 
 For a broader overview of the SI Digital Framework please see document BIPM-DIG-G01.
 
@@ -110,7 +111,14 @@ The pre-programmed calls (pre-defined SPARQL queries of the TTL files) can be tr
 * `-H ‘accept:application/octet-stream’`	will return the response without change of format (i.e. in TTL)
 
 For more details about the functionalities of the API, please refer to the documentation available from the Swagger interface. 
- 
+
+### SPARQL endpoint
+
+The TTL files can also be interrogated directly either using the SPARQL interface provided or via a human-friendly tool such as GraphDB. A guide to the latter is given in Annex 3.
+
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
+
+
 
 ## Next steps
 
@@ -155,4 +163,16 @@ Select the service `SI REFERENCR POINT` from the drop-down menu at the top right
 
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/c1d4a392-aaf0-4da7-8916-2c597ceb3d88)
+
+## Annex 3: SPARQL interface - GraphDB
+Various software packages exist. In the following we describe as an example visualization of the SI and related files through the GraphDB software [6].
+
+•	Download the (free) GraphDB Desktop software [6] and install it on your computer.
+•	Create a new repository, e.g. MMDD - SI Digital Framework
+•	Download the TTL files from the SI Reference Point and upload them into GraphDB. Ensure the “Autocomplete” function is selected and import the files to the following locations:
+o	SI/units
+o	SI/prefixes
+o	SI/decisions
+o	constants
+o	quantities
 
