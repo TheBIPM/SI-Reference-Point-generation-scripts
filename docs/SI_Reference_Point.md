@@ -114,7 +114,7 @@ For more details about the functionalities of the API, please refer to the docum
 
 ### SPARQL endpoint
 
-The TTL files can also be interrogated directly either using the SPARQL interface provided or via a human-friendly tool such as GraphDB. A guide to the latter is given in Annex 3.
+The TTL files can also be interrogated directly either using the [SPARQL interface](http://62.161.69.201:8080/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. A brief guide to the latter is given in Annex 3.
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
 
@@ -129,18 +129,6 @@ The list of kinds of quantity will gradually be extended to cover all the quanti
 To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
 
 
-### Acknowlegements
-
-This project was undertaken as part of the BIPM's Work Programme in Digital Transformation, with contributions from seconding NMIs.
-
-Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following people, listed alphabetically, who all made invaluable contributions:
-
-* Amin Ben Abdallah
-* Stuart Chalk (UNF)
-* Gregor Dudle (METAS, now OST)
-* Maximilian Gruber (PTB)
-* Jean-Laurent Hippolyte (NPL)
-* Frédéric Meynadier (BIPM)
 
 
 ## Annex 1:	List of Classes and Predicates
@@ -176,3 +164,16 @@ o	SI/decisions
 o	constants
 o	quantities
 
+
+### Acknowlegements
+
+This project was undertaken as part of the BIPM's Work Programme in Digital Transformation, with contributions from seconding NMIs.
+
+Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following people, listed alphabetically, who all made invaluable contributions:
+
+* Amin Ben Abdallah
+* Stuart Chalk (UNF)
+* Gregor Dudle (METAS, now OST)
+* Maximilian Gruber (PTB)
+* Jean-Laurent Hippolyte (NPL)
+* Frédéric Meynadier (BIPM)
