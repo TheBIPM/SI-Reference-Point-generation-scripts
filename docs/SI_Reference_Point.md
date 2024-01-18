@@ -59,9 +59,37 @@ Table. List of tables in the SI Brochure [2] and corresponding information in th
 
 The information contained in the nine editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
 
-[si-digital-framework.org/SI](http://62.161.69.201:8080/SI)
+<p class="text-center">
+[si-digital-framework.org/SI](http://62.161.69.201:8080/SI) 
+</p>
 
 
+Figure 1 and Figure 2 show the data models developed for this purpose. Figure 1 shows the part covering measurement units.
+
+```mermaid
+classDiagram
+    MeasurementUnit <|-- SIBaseUnit
+    MeasurementUnit <|-- SISpecialNamedUnit
+    MeasurementUnit <|-- CompoundUnit
+    CompoundUnit <|-- PrefixedUnit
+    CompoundUnit <|-- UnitProduct
+    CompoundUnit <|-- UnitPower
+    class PrefixedUnit{
+      +hasNonPrefixedUnit
+      +hasPrefix
+    }
+```
+
+The data model (classes and predicates) for prefixes:
+
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/0713ac62-74e2-4ccb-bf5f-dd0b8c4a2e43)
+
+
+
+
+
+
+Figure 2 the part covering the responsible bodies (letter e). The two models are connected through the classes Definition and Outcome. 
 
 ## Next steps
 
@@ -79,20 +107,3 @@ The current structure also allows for a possible future extension of the “cons
 
 
 
-
-## Introduction
-
-```mermaid
-classDiagram
-    MeasurementUnit <|-- SIBaseUnit
-    MeasurementUnit <|-- SISpecialNamedUnit
-    MeasurementUnit <|-- CompoundUnit
-    CompoundUnit <|-- PrefixedUnit
-    CompoundUnit <|-- UnitProduct
-    CompoundUnit <|-- UnitMultiple
-    CompoundUnit <|-- UnitPower
-    class PrefixedUnit{
-      +hasNonPrefixedUnit
-      +hasPrefix
-    }
-```
