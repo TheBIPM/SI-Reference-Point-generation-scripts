@@ -105,9 +105,9 @@ The web interface at https://si-digital-framework.org/SI is designed to simplify
 The same pre-programmed calls underpinning the web interface are also available through a [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui).
 
 The pre-programmed calls (pre-defined SPARQL queries of the TTL files) can be triggered either by a web page request or through a Command Line Interface (CLI). The server will return the responses as specified in the header information of the query. For example: 
-* -H ‘accept:application/json’	will return JSON code
-* -H ‘accept:application/xml’	will return XML code
-* -H ‘accept:application/octet-stream’	will return the response without change of format (i.e. in TTL)
+* `-H ‘accept:application/json’`	will return JSON code
+* `-H ‘accept:application/xml’`	will return XML code
+* `-H ‘accept:application/octet-stream’`	will return the response without change of format (i.e. in TTL)
 
 For more details about the functionalities of the API, please refer to the documentation available from the Swagger interface. 
  
@@ -133,4 +133,18 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 * Maximilian Gruber (PTB)
 * Jean-Laurent Hippolyte (NPL)
 * Frédéric Meynadier (BIPM)
+
+
+
+
+
+## Annex 2: API calls
+
+The pre-programmed (API) calls are documented in the Swagger interface at
+[https://si-digital-framework.org/api-docs/swagger-ui](https://si-digital-framework.org/api-docs/swagger-ui)
+
+Select the service `SI REFERENCR POINT` from the drop-down menu at the top right of the screen.
+
+
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/c1d4a392-aaf0-4da7-8916-2c597ceb3d88)
 
