@@ -89,21 +89,27 @@ The data model (classes and predicates) for prefixes:
 
 
 
-Figure 2 the part covering the responsible bodies (letter e). The two models are connected through the classes Definition and Outcome. 
+ 
 
 ## Next steps
 
-This beta version of the SI Reference Point is open for comment.
+This beta version of the SI Reference Point is open for comment, but it is hoped that the PIDs given here for the units defined in the SI can now be inserted into existing systems for representing units (such as QUDT, UnitsML, etc.), and used in other services under development. 
 
-The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). To increase interoperability, authoritative external digital references for the listed quantities (such as from the ILV [4] or the IUPAC Gold Book [5]) should be built in. (Currently this has been done for only a few examples.) As the identification of appropriate external identifiers will have to be carried out by subject experts, these tasks will be carried out in collaboration with the CIPM’s Consultative Committees.
+The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). 
 
-The current structure also allows for a possible future extension of the “constants” graph to provide the machine reference for a wider set of constants (for example, a machine-readable version of the “NIST Reference on Fundamental Physical Constants” [6]).
-
-
+To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
 
 
+### Acknowlegements
 
+This project was undertaken as part of the BIPM's Work Programme in Digital Transformation, with contributions from seconding NMIs.
 
+Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following people, listed alphabetically, who all made invaluable contributions:
 
-
+* Amin Ben Abdallah
+* Stuart Chalk (UNF)
+* Gregor Dudle (METAS, now OST)
+* Maximilian Gruber (PTB)
+* Jean-Laurent Hippolyte (NPL)
+* Frédéric Meynadier (BIPM)
 
