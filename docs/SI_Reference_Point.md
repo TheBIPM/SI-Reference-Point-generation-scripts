@@ -16,14 +16,14 @@ For a broader overview of the SI Digital Framework please see document BIPM-DIG-
 ## Information contained in the SI Reference Point
 
 The SI Reference Point comprises three main pillars (TTL files):
-1. SI/units:
+1. **SI/units:**
     * SI base units (Table 2 of [2])
     * SI derived units with special names (Table 4 of [2])
     * Non-SI units allowed for use with the SI (Table 8 of [2])
     * Compound units (the examples given in Tables 5 and 6 of [2] plus additional examples from the BIPM key comparison database (KCDB))
-1. SI/prefixes:
+1. **SI/prefixes:**
     * SI prefixes (Table 7 of [2])
-1. SI/decisions:
+1. **SI/decisions:**
     * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
   
 A tool is provided to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
