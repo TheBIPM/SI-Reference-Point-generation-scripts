@@ -15,7 +15,7 @@ For a broader overview of the SI Digital Framework please see document BIPM-DIG-
 
 ## Information contained in the SI Reference Point
 
-The SI Reference Point comprises three main pillars (TTL files):
+The SI Reference Point is based on five main pillars, or knowledge graphs:
 1. **SI/units:**
     * SI base units (Table 2 of [2])
     * SI derived units with special names (Table 4 of [2])
@@ -25,25 +25,21 @@ The SI Reference Point comprises three main pillars (TTL files):
     * SI prefixes (Table 7 of [2])
 1. **SI/decisions:**
     * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
-  
-A tool is provided to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
-
-The SI Reference Point relies on the following closely related components of the SI Digital Framework:
-
-4. **Constants**
+1. **Constants**
     * Initially the 7 defining constants of the SI (Table 1 of [2])
-5.	**Quantities**
+1.	**Quantities**
     * SI base quantities (Table 3 of [2])
     * Other example quantities (Tables 5 and 6 of [2])
     * Other quantities in the BIPM key comparison database (KCDB))
-
-The SI/decisions information is presented in a stand-alone file as in the SI Brochure, but interfaces with another component of the SI Digital Framework:
+  
+The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework:
 
 6. Responsible bodies
     * CGPM, CIPM, etc.
 
+A tool is provided to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
   
-Table. List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
+**Table 1.** List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
 
 | Table | Title | Encoded in|
 | :----- | :----- | :---- |
