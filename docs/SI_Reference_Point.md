@@ -1,6 +1,6 @@
 # The SI Reference Point
 
-## Scope
+## 1. Scope
 
 The [SI Reference Point](http://62.161.69.201:8080/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users, with a more detailed description of the Application Programming Interface (API) given in Annex 1, and some examples of SPARQL queries provided in Annex 2 for illustrative purposes.
 
@@ -8,32 +8,31 @@ The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
 *	Section 3 shows the data model used to encode the information.
 *	Section 4 briefly indicates how the information can be browsed.
+*	Section 5 summarizes the next steps.
 *	Annex 1 lists the Classes and Predicates in the data model
-*	Annex 2 lists the pre-programmed (API) calls
-*	Annex 2 gives further details about using the SPARQL endpoint.
 
 For a broader overview of the SI Digital Framework please see document BIPM-DIG-G01.
 
-## Information contained in the SI Reference Point
+## 2. Information contained in the SI Reference Point
 
 The SI Reference Point is based on five main pillars, or knowledge graphs:
-1. **SI/units:**
+1. **[SI/units](http://172.16.124.201:8080/SI/units)**
     * SI base units (Table 2 of [2])
     * SI derived units with special names (Table 4 of [2])
     * Non-SI units allowed for use with the SI (Table 8 of [2])
     * Compound units (the examples given in Tables 5 and 6 of [2] plus additional examples from the BIPM key comparison database (KCDB))
-1. **SI/prefixes:**
+1. **[SI/prefixes](http://172.16.124.201:8080/SI/prefixes)**
     * SI prefixes (Table 7 of [2])
-1. **SI/decisions:**
+1. **[SI/decisions](http://172.16.124.201:8080/SI/decisions)**
     * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
-1. **Constants**
+1. **[Constants](http://172.16.124.201:8080/constants)**
     * Initially the 7 defining constants of the SI (Table 1 of [2])
-1.	**Quantities**
+1.	**[Quantities](http://172.16.124.201:8080/quantities)**
     * SI base quantities (Table 3 of [2])
     * Other example quantities (Tables 5 and 6 of [2])
     * Other quantities in the BIPM key comparison database (KCDB))
   
-The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework:
+The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development:
 
 6. Responsible bodies
     * CGPM, CIPM, etc.
@@ -55,13 +54,11 @@ A tool is provided to allow for machine-encoding and interpretation of prefixed 
 | <nobr>Annex 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
 
-## Data model
+## 3. Data model
 
 The information contained in the nine editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
 
-<p class="text-center">
 [si-digital-framework.org/SI](http://62.161.69.201:8080/SI) 
-</p>
 
 
 Figure 1 and Figure 2 show the data models developed for this purpose. Figure 1 shows the part covering measurement units.
@@ -86,8 +83,7 @@ The data model (classes and predicates) for prefixes:
 
 
 
-
-## Browsing the knowledge graphs
+## 4. Browsing the knowledge graphs
 
 ### General
 
@@ -101,68 +97,48 @@ Following standard practice, the TTL files are divided between “T-boxes” (sp
 
 ### Application Programming Interface (API)
 
-The web interface at https://si-digital-framework.org/SI is designed to simplify access to the knowledge graphs for a human reader. Underpinning the web pages are a set of pre-programmed calls to the TTL files, such as (expressed as words rather than data requests) “list all the SI units”, “list all the SI prefixes”, “what is the current definition of the metre”, etc.
+The web interface at https://si-digital-framework.org/SI is designed to simplify access to the knowledge graphs for a human reader. Underpinning the web pages are a set of pre-programmed calls to the TTL files, such as (expressed as words rather than data requests) “list all the SI units”, “list all the SI prefixes”, “what is the current definition of the metre”, etc. 
 
-The same pre-programmed calls underpinning the web interface are also available through a [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui).
+The same pre-programmed queries (API calls) are documented in the Swagger interface at
+[https://si-digital-framework.org/api-docs/swagger-ui](https://si-digital-framework.org/api-docs/swagger-ui)
 
-The pre-programmed calls (pre-defined SPARQL queries of the TTL files) can be triggered either by a web page request or through a Command Line Interface (CLI). The server will return the responses as specified in the header information of the query. For example: 
+Select the service `SI REFERENCE POINT` from the drop-down menu at the top right of the screen.
+
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/c1d4a392-aaf0-4da7-8916-2c597ceb3d88)
+
+The responses will be given according to the header information, which can be modified manually from a Command Line Interface if desired. For example: 
 * `-H ‘accept:application/json’`	will return JSON code
 * `-H ‘accept:application/xml’`	will return XML code
 * `-H ‘accept:application/octet-stream’`	will return the response without change of format (i.e. in TTL)
-
-For more details about the functionalities of the API, please refer to the documentation available from the Swagger interface. 
+ 
 
 ### SPARQL endpoint
 
-The TTL files can also be interrogated directly either using the [SPARQL interface](http://62.161.69.201:8080/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. A brief guide to the latter is given in Annex 3.
+The TTL files can also be interrogated directly either using the [SPARQL interface](http://62.161.69.201:8080/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. 
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
 
+* Download the (free) GraphDB Desktop software [6] and install it on your computer.
+* Create a new repository, e.g. MMDD-SI Ref
+* Download the TTL files from the SI Reference Point and upload them into GraphDB. Ensure the “Autocomplete” function is selected and import the files to the following locations:
+    * SI/units
+    * SI/prefixes
+    * SI/decisions
+    * constants
+    * quantities
+
+GraphDB provides a visual graph interface.
+
+The Classes and Predicates are listed in Annex 1.
 
 
-## Next steps
+## 5. Next steps
 
 This beta version of the SI Reference Point is open for comment, but it is hoped that the PIDs given here for the units defined in the SI can now be inserted into existing systems for representing units (such as QUDT, UnitsML, etc.), and used in other services under development. 
 
 The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). 
 
 To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
-
-
-
-
-## Annex 1:	List of Classes and Predicates
-
-The Python script MakeVocabulary.py produces a full list of classes contained in the knowledge graphs
-* SI/units.ttl
-* SI/prefixes.ttl
-* SI/decisions.ttl
-* constants.ttl
-* quantities.ttl
- 
-The list is TAB separated and sorted by Class.
-
-## Annex 2: API calls
-
-The pre-programmed (API) calls are documented in the Swagger interface at
-[https://si-digital-framework.org/api-docs/swagger-ui](https://si-digital-framework.org/api-docs/swagger-ui)
-
-Select the service `SI REFERENCR POINT` from the drop-down menu at the top right of the screen.
-
-
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/c1d4a392-aaf0-4da7-8916-2c597ceb3d88)
-
-## Annex 3: SPARQL interface - GraphDB
-Various software packages exist. In the following we describe as an example visualization of the SI and related files through the GraphDB software [6].
-
-•	Download the (free) GraphDB Desktop software [6] and install it on your computer.
-•	Create a new repository, e.g. MMDD - SI Digital Framework
-•	Download the TTL files from the SI Reference Point and upload them into GraphDB. Ensure the “Autocomplete” function is selected and import the files to the following locations:
-o	SI/units
-o	SI/prefixes
-o	SI/decisions
-o	constants
-o	quantities
 
 
 ### Acknowlegements
@@ -177,3 +153,17 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 * Maximilian Gruber (PTB)
 * Jean-Laurent Hippolyte (NPL)
 * Frédéric Meynadier (BIPM)
+
+
+## Annex 1:	List of Classes and Predicates
+
+The Python script MakeVocabulary.py produces a full list of classes contained in the knowledge graphs
+* SI/units.ttl
+* SI/prefixes.ttl
+* SI/decisions.ttl
+* constants.ttl
+* quantities.ttl
+ 
+The list is TAB separated and sorted by Class.
+
+
