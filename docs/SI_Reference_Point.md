@@ -81,6 +81,85 @@ The data model (classes and predicates) for prefixes:
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/0713ac62-74e2-4ccb-bf5f-dd0b8c4a2e43)
 
+Diagrams copied from FM (issue 32):
+
+```mermaid
+classDiagram
+	`si:MeasurementUnit`<|--`si:SIBaseUnit`
+	`si:MeasurementUnit`<|--`si:SISpecialNamedUnit`
+	`si:MeasurementUnit`<|--`si:nonSIUnit`
+	`si:MeasurementUnit`<|--`si:CompoundUnit`
+	`si:QuantityKind`<|--`si:CompoundQuantityKind`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindProduct`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindPower`
+	`si:CompoundUnit`<|--`si:UnitMultiple`
+	`si:CompoundUnit`<|--`si:UnitProduct`
+	`si:CompoundUnit`<|--`si:UnitPower`
+	`si:CompoundUnit`<|--`si:PrefixedUnit`
+	class `si:Constant`{
+		+si:hasValue
+		+si:hasValueAsString
+		+si:hasUpdatedDate
+		+si:hasUnitAsString
+	}
+	class `si:MeasurementUnit`{
+		+si:isUnitOfQtyKind
+	}
+	class `si:SIBaseUnit`{
+		+si:hasDefinition
+	}
+	class `si:SISpecialNamedUnit`{
+	}
+	class `si:nonSIUnit`{
+		+si:hasConversionFactor
+		+si:hasConversionUnit
+	}
+	class `si:Definition`{
+		+si:hasDefiningText
+		+si:hasDefinitionNote
+		+si:hasDefiningConstant
+		+si:hasNextDefinition
+		+si:hasPreviousDefinition
+		+si:hasStartValidity
+		+si:hasEndValidity
+		+si:hasStatus
+	}
+	class `si:DefinitionNote`{
+		+si:hasNoteIndex
+		+si:hasNoteText
+	}
+	class `si:SIPrefix`{
+		+si:hasScalingFactor
+	}
+	class `si:SIDecision`{
+		+si:isDecisionOf
+		+si:correspondingResolution
+	}
+	class `si:SIDecisionTarget`{
+		+si:hasDecision
+	}
+	class `si:QuantityKind`{
+	}
+	class `si:CompoundQuantityKind`{
+	}
+	class `si:QuantityKindProduct`{
+	}
+	class `si:QuantityKindPower`{
+	}
+	class `si:CompoundUnit`{
+	}
+	class `si:UnitMultiple`{
+	}
+	class `si:UnitProduct`{
+	}
+	class `si:UnitPower`{
+	}
+	class `si:PrefixedUnit`{
+		+si:hasPrefix
+		+si:hasNonPrefixedUnit
+	}
+```
+
 
 
 ## 4. Browsing the knowledge graphs
