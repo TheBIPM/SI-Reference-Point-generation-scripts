@@ -1,8 +1,10 @@
-from rdflib import Graph, OWL, RDFS
+from rdflib import Graph, OWL, RDFS, URIRef
 
 import os
 import sys
 
+
+domainIncludes = URIRef('schema:domainIncludes')
 g = Graph()
 for ttl in ['CUQ_core_concepts.ttl', 'CUQ_extended_concepts.ttl']:
     g.parse(os.path.join('..', '..', 'src', 'si_ref_point', 'cuq_data', ttl))
@@ -17,13 +19,13 @@ for s, p, o in g.triples((None, None, OWL.ObjectProperty)):
     properties.append(g.qname(s))
 
 classes_attributes = []
-for s, p, o in g.triples((None, RDFS.domain, None)):
-    try:
-        classes_attributes.append({'class': g.qname(o),
-                                   'attr': g.qname(s)})
-    except ValueError:
-        print("can't parse range for {} or {}".format(s, o))
-
+for pred in [RDFS.domain, domainIncludes]:
+    for s, p, o in g.triples((None, pred, None)):
+        try:
+            classes_attributes.append({'class': g.qname(o),
+                                       'attr': g.qname(s)})
+        except ValueError:
+            print("can't parse range for {} or {}".format(s, o))
 inheritances = []
 for s, p, o in g.triples((None, RDFS.subClassOf, None)):
     try:
