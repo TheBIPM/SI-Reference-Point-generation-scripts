@@ -160,6 +160,13 @@ classDiagram
 	}
 ```
 
+Figure from Amin 19/01:
+
+![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/6871aef1-279d-4f91-a51c-4e8b317d3af8)
+
+
+ 
+
 
 
 ## 4. Browsing the knowledge graphs
@@ -224,7 +231,7 @@ To increase interoperability, authoritative external digital references for the 
 
 This project was undertaken as part of the BIPM's Work Programme in Digital Transformation, with contributions from seconding NMIs.
 
-Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following people, listed alphabetically, who all made invaluable contributions:
+Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following colleagues (listed alphabetically), who all made invaluable contributions:
 
 * Amin Ben Abdallah
 * Stuart Chalk (UNF)
