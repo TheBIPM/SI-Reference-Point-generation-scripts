@@ -11,6 +11,7 @@ import yaml
 import os
 import re
 import si_ref_point.cuq.symbols_format as sf
+import logging
 
 
 def parse_fragments(fragments, syntax):
@@ -82,10 +83,15 @@ def transform_to_graph(expression, PDF, graph, symbols):
                 expr_node = PDF.set_unit_uri(unit_name)
         else:
             # look by uri
+            found_uri = False
             for code, values in symbols.items():
                 if ('uri' in values.keys() and
                     'units:{}'.format(expression) == values['uri']):
                     expr_node = PDF.set_unit_uri(expression)
+                    found_uri = True
+            if not found_uri:
+                logging.error(
+                    'no URI found found for expression: {}'.format(expression))
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
