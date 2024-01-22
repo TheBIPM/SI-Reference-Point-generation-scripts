@@ -249,6 +249,7 @@ ceus:
   text:
   html: ''
   json: ''
+  uri: units:degreeCelsius
 circ:
   name_en: Degree
   name_fr: ''
@@ -386,6 +387,7 @@ fars:
   text:
   html: ''
   json: ''
+  uri: units:farad
 fpwd:
   name_en: Freezing point of water definition
   name_fr: ''
@@ -434,6 +436,7 @@ grys:
   text:
   html: ''
   json: ''
+  uri: units:gray
 hens:
   name_en: Henry unit symbol
   name_fr: ''
@@ -442,6 +445,7 @@ hens:
   text:
   html: ''
   json: ''
+  uri: units:henry
 htzs:
   name_en: Hertz unit symbol
   name_fr: ''
@@ -523,6 +527,7 @@ kats:
   text:
   html: ''
   json: ''
+  uri: units:katal
 kels:
   name_en: Kelvin unit symbol
   name_fr: ''
@@ -836,6 +841,7 @@ pass:
   text:
   html: ''
   json: ''
+  uri: units:pascal
 pksi:
   name_en: Planck constant in SI unit symbol
   name_fr: ''
