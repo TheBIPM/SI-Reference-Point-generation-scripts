@@ -80,6 +80,12 @@ def transform_to_graph(expression, PDF, graph, symbols):
                 unit_short_uri = symbols[expression]["uri"]
                 unit_name = unit_short_uri.split(":")[1]
                 expr_node = PDF.set_unit_uri(unit_name)
+        else:
+            # look by uri
+            for code, values in symbols.items():
+                if ('uri' in values.keys() and
+                    'units:{}'.format(expression) == values['uri']):
+                    expr_node = PDF.set_unit_uri(expression)
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
@@ -134,7 +140,6 @@ def transform_to_graph(expression, PDF, graph, symbols):
         )
 
     return graph, expr_node
-
 
 def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
     # define syntax style
