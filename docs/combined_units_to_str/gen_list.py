@@ -1,6 +1,7 @@
 from rdflib import Graph, RDF, URIRef, BNode
 
 import os
+import logging
 
 
 path_to_api = '/home/fmeynadier/tests/si_ref_point/API'
@@ -55,14 +56,50 @@ def unitnode_to_str(nodeID) -> str:
                                       fullURI("si:hasNumericExponent"),
                                       None)):
                 numericExponent = int(o)
+                break
             for s, p, o in g.triples((nodeID,
                                       fullURI("si:hasUnitBase"),
                                       None)):
                 unitBase = unitnode_to_str(o)
+                break
             if numericExponent == 1:
                 return "{}".format(unitBase)
             else:
                 return "{}^{}".format(unitBase, numericExponent)
+        elif nodeType == "si:UnitMultiple":
+            """ Unit multiple has a Unit term and a numeric factor
+            """
+            numericFactor = 1
+            unitTerm = ""
+            for s, p, o in g.triples((nodeID,
+                                      fullURI("si:hasNumericFactor"),
+                                      None)):
+                numericFactor = str(o)
+                break
+            for s, p, o in g.triples((nodeID,
+                                      fullURI("si:hasunitTerm"),
+                                      None)):
+                unitTerm = unitnode_to_str(o)
+                break
+                return "{} x {}".format(numericFactor, unitTerm)
+        elif nodeType == "si:PrefixedUnit":
+            """ Prefixed unit has a prefix and a non prefixed unit
+            """
+            prefix = ""
+            nonPrefixedUnit = ""
+            for s, p, o in g.triples((nodeID,
+                                      fullURI("si:hasPrefix"),
+                                      None)):
+                prefix = str(o)
+                break
+            for s, p, o in g.triples((nodeID,
+                                      fullURI("si:hasNonPrefixedUnit"),
+                                      None)):
+                nonPrefixedUnit = unitnode_to_str(o)
+                break
+                return "{}{}".format(prefix, nonPrefixedUnit)
+        else:
+            logging.error("Unable to parse node {}".format(nodeID))
 
 
 
