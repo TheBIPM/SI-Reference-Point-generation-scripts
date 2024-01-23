@@ -1,5 +1,5 @@
 import argparse
-from rdflib import Graph
+from rdflib import Graph, BNode, RDF
 import os
 
 
@@ -71,23 +71,49 @@ def main(APIPATH):
             p_res = g.query(predicate_query)
             print(len(p_res))
 
-            output_file.write('## ' +
-                              subject['class'].n3(g.namespace_manager) + "\n")
+            output_file.write('## ' + g.qname(subject['class']) + "\n\n")
+            output_file.write(subject['label'] + "\n\n")
+            output_file.write(
+                '|  Predicate | Domain | Range | Comment |\n'
+                '|------------|--------|-------|---------|\n')
             for verb in p_res:
-                output_file.write("\t"+verb['Predicate'].n3(g.namespace_manager)+"\t")
+                output_file.write("| ")
+                output_file.write(verb['Predicate'].n3(g.namespace_manager))
+                output_file.write(" | ")
                 if verb['Domain'] is not None:
-                    output_file.write(verb['Domain'].n3(g.namespace_manager)+"\t")
+                    if isinstance(verb['Domain'], BNode):
+                        items = parse_multi(g, verb['Domain'])
+                        output_file.write(", ".join(items))
+                    else:
+                        output_file.write(g.qname(verb['Domain']))
                 else:
-                    output_file.write("\t")
+                    output_file.write(" ")
+                output_file.write(" | ")
                 if verb['Range'] is not None:
-                    output_file.write(verb['Range'].n3(g.namespace_manager)+"\t")
+                    output_file.write(verb['Range'].n3(g.namespace_manager))
+                output_file.write(" | ")
                 if verb['Comment'] is not None:
-                    output_file.write(verb['Comment']+"\t")
-                if verb['Comment_wo'] is not None:
-                    output_file.write(verb['Comment_wo']+"\t\n")
-                else:
-                    output_file.write("\n")
+                    output_file.write(verb['Comment'])
+                output_file.write(" |\n")
             output_file.write("\n")
+
+def parse_multi(g, nodeID):
+    for s, p, o in g.triples((nodeID, None, None)):
+        if "owl#oneOf" in str(p):
+            next_node = o
+            items = []
+            next_node_string = ""
+            while next_node_string != "rdf:nil":
+                for s2, p2, o2 in g.triples((next_node, RDF.first, None)):
+                    items.append(g.qname(o2))
+                for s2, p2, o2 in g.triples((next_node, RDF.rest, None)):
+                    next_node = o2
+                try:
+                    # Does not work with a BNode
+                    next_node_string = str(g.qname(next_node))
+                except ValueError:
+                    pass
+    return items
 
 
 if __name__=="__main__":
