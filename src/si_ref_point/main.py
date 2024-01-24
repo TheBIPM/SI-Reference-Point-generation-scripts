@@ -40,8 +40,9 @@ def get_parser():
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
-        default="./API",
-        help="Output directory for API")
+        default=os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                             "..", "..", "build")),
+        help="Output directory for TTL output")
     return parser
 
 
@@ -80,6 +81,7 @@ def main():
         graph.serialize(format='ttl',
                         destination=os.path.join(args.output_dir,
                                                  label + '.ttl'))
+    logging.info(f"TTL files wrote in {args.output_dir}")
 
     # compress into archive
     if args.zipfile:
