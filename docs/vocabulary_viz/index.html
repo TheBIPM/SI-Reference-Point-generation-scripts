@@ -1,0 +1,4980 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Ontospy > http://si-digital-framework.org/SI#</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+  <style type="text/css" media="screen">
+
+
+  body {
+	  margin-left: 6em;
+	  margin-right: 12em;
+	  text-align: justify;
+    padding: 2em 1em 2em 70px;
+    margin: 0;
+    font-family: sans-serif;
+    color: black;
+    background: white;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  :link { color: #00C; background: transparent }
+  :visited { color: #00C; background: transparent }
+  a:active { color: #C00; background: transparent }
+
+  a:link img, a:visited img { border-style: none } /* no border on img links */
+
+  a:hover {color: white; background: #00C; }
+  a.backlink:hover {color: white; background: grey; }
+  a.greylink:hover {color: white; background: grey; }
+
+  .margintop {
+  	 margin-top: 40px;
+  }
+
+
+  dt, dd { margin-top: 10px; margin-bottom: 0 } /* opera 3.50 */
+  dt { font-weight: bold }
+
+
+  h1, h2, h3, h4, h5, h6 { text-align: left }
+  /* background should be transparent, but WebTV has a bug */
+  h1, h2, h3, h4, h5 { color: #005A9C; background: white }
+  h1.title { font: 200% sans-serif }
+  h1 { font: 170% sans-serif }
+  h2 { font: 140% sans-serif }
+  h3 { font: 120% sans-serif }
+  h4 { font: bold 100% sans-serif }
+  h5 { font: italic 100% sans-serif }
+  h6 { font: small-caps 100% sans-serif }
+
+  .hide { display: none }
+
+
+  pre { margin-left: 2em }
+
+  pre, code { font-family: monospace } /* navigator 4 requires this */
+
+
+  .implementation {
+  	background: aliceblue;
+	padding: 10px;
+	margin-top: 5px;
+  }
+
+  fieldset {
+	  margin-top: 20px;
+	  padding: 13px;
+      text-align: left;
+  }
+
+  legend {
+	  text-transform: uppercase;
+  }
+
+  .entity-div {
+	  margin: 55px 10px 30px 10px;
+  }
+
+  .entity-section {
+	  margin-bottom: 0px;
+  }
+
+
+  a.backlink {
+	  font-size: 80%;
+	  color: grey;
+  }
+
+  a.greylink {
+	  color: grey;
+  }
+
+
+   .implementation_title {
+
+       font-weight: bold;
+       font-size: 100%;
+   }
+
+.section-desc {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+        .tree-container {
+            width: 3000em;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+		.tree {margin: 10px 0px 30px -20px; padding: 0; display: inline-block;}
+
+		.tree ul {
+			padding-top: 20px; position: relative;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		.tree li {
+			float: left; text-align: center;
+			list-style-type: none;
+			position: relative;
+			padding: 20px 5px 0 5px;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		/*We will use ::before and ::after to draw the connectors*/
+
+		.tree li::before, .tree li::after{
+			content: '';
+			position: absolute; top: 0; right: 50%;
+			border-top: 1px solid #ccc;
+			width: 50%; height: 20px;
+		}
+		.tree li::after{
+			right: auto; left: 50%;
+			border-left: 1px solid #ccc;
+		}
+
+		/*We need to remove left-right connectors from elements without
+		any siblings*/
+		.tree li:only-child::after, .tree li:only-child::before {
+			display: none;
+		}
+
+		/*Remove space from the top of single children*/
+		.tree li:only-child{ padding-top: 0;}
+
+		/*Remove left connector from first child and
+		right connector from last child*/
+		.tree li:first-child::before, .tree li:last-child::after{
+			border: 0 none;
+		}
+		/*Adding back the vertical connector to the last nodes*/
+		.tree li:last-child::before{
+			border-right: 1px solid #ccc;
+			border-radius: 0 5px 0 0;
+			-webkit-border-radius: 0 5px 0 0;
+			-moz-border-radius: 0 5px 0 0;
+		}
+		.tree li:first-child::after{
+			border-radius: 5px 0 0 0;
+			-webkit-border-radius: 5px 0 0 0;
+			-moz-border-radius: 5px 0 0 0;
+		}
+
+		/*Time to add downward connectors from parents*/
+		.tree ul ul::before{
+			content: '';
+			position: absolute; top: 0; left: 50%;
+			border-left: 1px solid #ccc;
+			width: 0; height: 20px;
+		}
+
+		.tree li a{
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: #666;
+			font-family: arial, verdana, tahoma;
+			font-size: 11px;
+			display: inline-block;
+
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		/*Time for some hover effects*/
+		/*We will apply the hover effect the the lineage of the element also*/
+		.tree li a:hover, .tree li a:hover+ul li a {
+			background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+		}
+		/*Connector styles on hover*/
+		.tree li a:hover+ul li::after,
+		.tree li a:hover+ul li::before,
+		.tree li a:hover+ul::before,
+		.tree li a:hover+ul ul::before{
+			border-color:  #94a0b4;
+		}
+
+		/*Thats all. I hope you enjoyed it.
+		Thanks :)*/
+
+
+  </style>
+
+
+</head>
+
+
+<body>
+
+	
+	
+		
+			<h1 class="title"><a href="" target="_blank">http://si-digital-framework.org/SI#</a></h1>
+			<h3><p>Ontology, part of the SI reference point, providing base concepts and their relations.</p></h3>
+		
+
+	
+		
+		
+
+
+	<p><small>Ontology documentation automatically generated by <a class="greylink" href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> on Wed, 24 Jan 2024 14:41:16</small></p>
+
+
+
+	
+
+
+	<hr class="margintop">
+
+	<h1><a name="toc">&nbsp;</a>Table of Content</h1>
+
+	<ul>
+		<li><a href="#ontologies">Ontologies</a></li>
+		<li><a href="#a-z">A-Z of Terms</a></li>
+		<li><a href="#classes">Classes</a></li>
+		<li><a href="#objproperties">Object Properties</a></li>
+		<li><a href="#dataproperties">Datatype properties</a></li>
+		
+		
+		
+	</ul>
+
+
+
+	
+
+	
+
+	<hr class="margintop">
+
+	<h1><a name="ontologies"></a>Ontologies</h1>
+
+		
+
+
+			<fieldset> <legend><h3><a href="http://si-digital-framework.org/SI#" target="_blank">http://si-digital-framework.org/SI#</a></h3></legend>
+
+			<h4 style="margin-top: -20px;"><p>Ontology, part of the SI reference point, providing base concepts and their relations.</p></h4>
+
+			
+			
+				
+					<dt>dcterms:created</dt>
+				  
+			
+			<dd><p>2023-12-22</p></dd>
+			
+			
+				</dl>
+					<dt>dcterms:created</dt>
+				  
+			
+			<dd><p>2024-01-24</p></dd>
+			
+			
+				</dl>
+					<dt>rdf:type</dt>
+				  
+			
+			<dd><p>http://www.w3.org/2002/07/owl#Ontology</p></dd>
+			
+			
+				</dl>
+					<dt>rdfs:comment</dt>
+				  
+			
+			<dd><p>Ontology, part of the SI reference point, providing base concepts and their relations.</p></dd>
+			
+			
+				</dl>
+					<dt>skos:prefLabel</dt>
+				  
+			
+			<dd><p>SI Reference Point - Base Ontology</p></dd>
+			
+
+			</fieldset>
+
+		
+
+	
+
+
+
+	
+
+	<hr class="margintop">
+	<h1><a  name="a-z">&nbsp;</a>A-Z of terms</h1>
+
+	<div id="azterms">
+
+	This is a complete alphabetical A-Z index of all terms, by main logical type.
+
+	
+		<fieldset> <legend>Classes (22)</legend>
+			<span><a href="#rb:Resolution">rb:Resolution</a></span>
+			|
+			<span><a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a></span>
+			|
+			<span><a href="#si:CompoundUnit">si:CompoundUnit</a></span>
+			|
+			<span><a href="#si:Constant">si:Constant</a></span>
+			|
+			<span><a href="#si:DecisionTarget">si:DecisionTarget</a></span>
+			|
+			<span><a href="#si:Definition">si:Definition</a></span>
+			|
+			<span><a href="#si:DefinitionNote">si:DefinitionNote</a></span>
+			|
+			<span><a href="#si:MeasurementUnit">si:MeasurementUnit</a></span>
+			|
+			<span><a href="#si:PrefixedUnit">si:PrefixedUnit</a></span>
+			|
+			<span><a href="#si:QuantityKind">si:QuantityKind</a></span>
+			|
+			<span><a href="#si:QuantityKindPower">si:QuantityKindPower</a></span>
+			|
+			<span><a href="#si:QuantityKindProduct">si:QuantityKindProduct</a></span>
+			|
+			<span><a href="#si:SIBaseUnit">si:SIBaseUnit</a></span>
+			|
+			<span><a href="#si:SIDecision">si:SIDecision</a></span>
+			|
+			<span><a href="#si:SIDecisionScope">si:SIDecisionScope</a></span>
+			|
+			<span><a href="#si:SIDecisionTarget">si:SIDecisionTarget</a></span>
+			|
+			<span><a href="#si:SIPrefix">si:SIPrefix</a></span>
+			|
+			<span><a href="#si:SISpecialNamedUnit">si:SISpecialNamedUnit</a></span>
+			|
+			<span><a href="#si:UnitMultiple">si:UnitMultiple</a></span>
+			|
+			<span><a href="#si:UnitPower">si:UnitPower</a></span>
+			|
+			<span><a href="#si:UnitProduct">si:UnitProduct</a></span>
+			|
+			<span><a href="#si:nonSIUnit">si:nonSIUnit</a></span>
+			
+			
+		</fieldset>
+	
+
+	
+
+	<fieldset> <legend>Object Properties (23)</legend>
+		&nbsp;<a href="#si:hasBase">si:hasBase</a>
+		|  <a href="#si:hasConversionUnit">si:hasConversionUnit</a>
+		|  <a href="#si:hasDatatype">si:hasDatatype</a>
+		|  <a href="#si:hasDefiningConstant">si:hasDefiningConstant</a>
+		|  <a href="#si:hasDefiningResolution">si:hasDefiningResolution</a>
+		|  <a href="#si:hasDefinition">si:hasDefinition</a>
+		|  <a href="#si:hasDefinitionNote">si:hasDefinitionNote</a>
+		|  <a href="#si:hasFactor">si:hasFactor</a>
+		|  <a href="#si:hasLeftUnitFactor">si:hasLeftUnitFactor</a>
+		|  <a href="#si:hasNextDefinition">si:hasNextDefinition</a>
+		|  <a href="#si:hasNonPrefixedUnit">si:hasNonPrefixedUnit</a>
+		|  <a href="#si:hasPrefix">si:hasPrefix</a>
+		|  <a href="#si:hasPreviousDefinition">si:hasPreviousDefinition</a>
+		|  <a href="#si:hasQuantityBase">si:hasQuantityBase</a>
+		|  <a href="#si:hasQuantityFactor">si:hasQuantityFactor</a>
+		|  <a href="#si:hasRightUnitFactor">si:hasRightUnitFactor</a>
+		|  <a href="#si:hasUnit">si:hasUnit</a>
+		|  <a href="#si:hasUnitBase">si:hasUnitBase</a>
+		|  <a href="#si:hasUnitFactor">si:hasUnitFactor</a>
+		|  <a href="#si:inBaseSIUnits">si:inBaseSIUnits</a>
+		|  <a href="#si:inOtherSIUnits">si:inOtherSIUnits</a>
+		|  <a href="#si:isDefiningResolutionOf">si:isDefiningResolutionOf</a>
+		|  <a href="#si:isUnitOfQtyKind">si:isUnitOfQtyKind</a>
+		  
+	</fieldset>
+
+	
+
+	
+	<fieldset> <legend>Datatype Properties (22)</legend>
+		&nbsp;<a href="#si:correspondingResolution">si:correspondingResolution</a>
+		|  <a href="#si:hasConversionFactor">si:hasConversionFactor</a>
+		|  <a href="#si:hasDecision">si:hasDecision</a>
+		|  <a href="#si:hasDefiningEquation">si:hasDefiningEquation</a>
+		|  <a href="#si:hasDefiningText">si:hasDefiningText</a>
+		|  <a href="#si:hasEndValidity">si:hasEndValidity</a>
+		|  <a href="#si:hasNoteIndex">si:hasNoteIndex</a>
+		|  <a href="#si:hasNoteText">si:hasNoteText</a>
+		|  <a href="#si:hasNumericExponent">si:hasNumericExponent</a>
+		|  <a href="#si:hasNumericFactor">si:hasNumericFactor</a>
+		|  <a href="#si:hasScalingFactor">si:hasScalingFactor</a>
+		|  <a href="#si:hasStartValidity">si:hasStartValidity</a>
+		|  <a href="#si:hasStatus">si:hasStatus</a>
+		|  <a href="#si:hasSymbol">si:hasSymbol</a>
+		|  <a href="#si:hasTarget">si:hasTarget</a>
+		|  <a href="#si:hasUnitAsString">si:hasUnitAsString</a>
+		|  <a href="#si:hasUnitTypeAsString">si:hasUnitTypeAsString</a>
+		|  <a href="#si:hasUpdatedDate">si:hasUpdatedDate</a>
+		|  <a href="#si:hasValue">si:hasValue</a>
+		|  <a href="#si:hasValueAsString">si:hasValueAsString</a>
+		|  <a href="#si:isDecisionOf">si:isDecisionOf</a>
+		|  <a href="#si:isTargetOf">si:isTargetOf</a>
+		  
+	</fieldset>
+	
+
+	
+
+	
+
+	
+
+	</div>
+
+
+
+	
+
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop" ><a name="classes">&nbsp;</a>Classes</h1>
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="rb:Resolution" href="#rb:Resolution">rb:Resolution</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">rb:Resolution</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> rb:Resolution is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:isDefiningResolutionOf">si:isDefiningResolutionOf</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasDefiningResolution">si:hasDefiningResolution</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:CompoundQuantityKind" href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:QuantityKind">si:QuantityKind</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:CompoundQuantityKind</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#si:QuantityKindPower">si:QuantityKindPower</a></li><li><a href="#si:QuantityKindProduct">si:QuantityKindProduct</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:QuantityKind">si:QuantityKind</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:CompoundQuantityKind a owl:Class ;<br>
+    rdfs:label &#34;compound quantitykind&#34; ;<br>
+    rdfs:subClassOf si:QuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:CompoundUnit" href="#si:CompoundUnit">si:CompoundUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:MeasurementUnit">si:MeasurementUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:CompoundUnit</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#si:PrefixedUnit">si:PrefixedUnit</a></li><li><a href="#si:UnitMultiple">si:UnitMultiple</a></li><li><a href="#si:UnitPower">si:UnitPower</a></li><li><a href="#si:UnitProduct">si:UnitProduct</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:CompoundUnit a owl:Class ;<br>
+    rdfs:label &#34;compound unit&#34; ;<br>
+    rdfs:subClassOf si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:Constant" href="#si:Constant">si:Constant</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:Constant</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:Constant is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Class for the seven defining constants of the SI.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasUnitAsString">si:hasUnitAsString</a> | <a href="#si:hasUpdatedDate">si:hasUpdatedDate</a> | <a href="#si:hasValue">si:hasValue</a> | <a href="#si:hasValueAsString">si:hasValueAsString</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasDefiningConstant">si:hasDefiningConstant</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:Constant a owl:Class ;<br>
+    rdfs:label &#34;defining constant&#34;@en,<br>
+        &#34;définir la constante&#34;@fr ;<br>
+    rdfs:comment &#34;Class for the seven defining constants of the SI.&#34;@en,<br>
+        &#34;La classe pour les sept constantes définissant le SI.&#34;@fr ;<br>
+    owl:disjointWith si:QuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:DecisionTarget" href="#si:DecisionTarget">si:DecisionTarget</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:DecisionTarget</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:DecisionTarget is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:isTargetOf">si:isTargetOf</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:Definition" href="#si:Definition">si:Definition</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:Definition</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:Definition is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for definitions of an SI base unit.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasDefiningText">si:hasDefiningText</a> | <a href="#si:hasEndValidity">si:hasEndValidity</a> | <a href="#si:hasStartValidity">si:hasStartValidity</a> | <a href="#si:hasStatus">si:hasStatus</a> | <a href="#si:hasDefiningConstant">si:hasDefiningConstant</a> | <a href="#si:hasDefinitionNote">si:hasDefinitionNote</a> | <a href="#si:hasNextDefinition">si:hasNextDefinition</a> | <a href="#si:hasPreviousDefinition">si:hasPreviousDefinition</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasDefinition">si:hasDefinition</a> | <a href="#si:hasNextDefinition">si:hasNextDefinition</a> | <a href="#si:hasPreviousDefinition">si:hasPreviousDefinition</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:Definition a owl:Class ;<br>
+    rdfs:label &#34;definition of a base unit&#34;@en,<br>
+        &#34;définition d&#39;une unité de base&#34;@fr ;<br>
+    rdfs:comment &#34;The class for definitions of an SI base unit.&#34;@en,<br>
+        &#34;La classe pour les notes sur les définitions des unités SI.&#34;@fr ;<br>
+    rdfs:subClassOf [ a owl:Restriction ;<br>
+            owl:minCardinality &#34;1&#34;^^xsd:int ;<br>
+            owl:onProperty si:hasStartValidity ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:DefinitionNote" href="#si:DefinitionNote">si:DefinitionNote</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:DefinitionNote</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:DefinitionNote is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for notes related SI unit definitions.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasNoteIndex">si:hasNoteIndex</a> | <a href="#si:hasNoteText">si:hasNoteText</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasDefinitionNote">si:hasDefinitionNote</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:DefinitionNote a owl:Class ;<br>
+    rdfs:label &#34;unit definition note&#34;@en,<br>
+        &#34;note de définition d&#39;unité&#34;@fr ;<br>
+    rdfs:comment &#34;The class for notes related SI unit definitions.&#34;@en,<br>
+        &#34;La classe pour les définitions d&#39;unités SI liées aux notes.&#34;@fr .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:MeasurementUnit" href="#si:MeasurementUnit">si:MeasurementUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:MeasurementUnit</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#si:CompoundUnit">si:CompoundUnit</a></li><li><a href="#si:SIBaseUnit">si:SIBaseUnit</a></li><li><a href="#si:SISpecialNamedUnit">si:SISpecialNamedUnit</a></li><li><a href="#si:nonSIUnit">si:nonSIUnit</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Class for all measurement units.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:isUnitOfQtyKind">si:isUnitOfQtyKind</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasConversionUnit">si:hasConversionUnit</a> | <a href="#si:hasUnit">si:hasUnit</a> | <a href="#si:inBaseSIUnits">si:inBaseSIUnits</a> | <a href="#si:inOtherSIUnits">si:inOtherSIUnits</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:MeasurementUnit a owl:Class ;<br>
+    rdfs:label &#34;measurement unit&#34;@en,<br>
+        &#34;unité de mesure&#34;@fr ;<br>
+    rdfs:comment &#34;Class for all measurement units.&#34;@en,<br>
+        &#34;La classe pour toutes les unités de mesure.&#34;@fr ;<br>
+    rdfs:isDefinedBy &#34;VIM3 1.9&#34; ;<br>
+    owl:disjointWith si:Constant,<br>
+        si:QuantityKind,<br>
+        si:SIPrefix .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:PrefixedUnit" href="#si:PrefixedUnit">si:PrefixedUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundUnit">si:CompoundUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:PrefixedUnit</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:PrefixedUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundUnit">si:CompoundUnit</a> | <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasNonPrefixedUnit">si:hasNonPrefixedUnit</a> | <a href="#si:hasPrefix">si:hasPrefix</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:PrefixedUnit a owl:Class ;<br>
+    rdfs:label &#34;prefixed unit&#34; ;<br>
+    rdfs:subClassOf si:CompoundUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:QuantityKind" href="#si:QuantityKind">si:QuantityKind</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:QuantityKind</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Class for the quantity kinds.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:isUnitOfQtyKind">si:isUnitOfQtyKind</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:QuantityKind a owl:Class ;<br>
+    rdfs:label &#34;kind of quantity&#34;@en,<br>
+        &#34;nature de grandeur&#34;@fr ;<br>
+    rdfs:comment &#34;Class for the quantity kinds.&#34;@en,<br>
+        &#34;La classe pour les types de quantité.&#34;@fr ;<br>
+    rdfs:isDefinedBy &#34;VIM3 1.2&#34;^^xsd:string .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:QuantityKindPower" href="#si:QuantityKindPower">si:QuantityKindPower</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:QuantityKindPower</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:QuantityKindPower is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a> | <a href="#si:QuantityKind">si:QuantityKind</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:QuantityKindPower a owl:Class ;<br>
+    rdfs:label &#34;quantitykind power&#34; ;<br>
+    rdfs:subClassOf si:CompoundQuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:QuantityKindProduct" href="#si:QuantityKindProduct">si:QuantityKindProduct</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:QuantityKindProduct</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:QuantityKindProduct is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundQuantityKind">si:CompoundQuantityKind</a> | <a href="#si:QuantityKind">si:QuantityKind</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:QuantityKindProduct a owl:Class ;<br>
+    rdfs:label &#34;quantitykind product&#34; ;<br>
+    rdfs:subClassOf si:CompoundQuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SIBaseUnit" href="#si:SIBaseUnit">si:SIBaseUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:MeasurementUnit">si:MeasurementUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:SIBaseUnit</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SIBaseUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Class of SI base units. Several definitions can be attached to this class to represent definitions of the BaseUnit throughout time.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasDefinition">si:hasDefinition</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:SIBaseUnit a owl:Class ;<br>
+    rdfs:label &#34;base unit&#34;@en,<br>
+        &#34;unité de base&#34;@fr ;<br>
+    rdfs:comment &#34;Class of SI base units. Several definitions can be attached to this class to represent definitions of the BaseUnit throughout time.&#34;@en,<br>
+        &#34;La classe des unités de base SI. Plusieurs définitions peuvent être attachées à cette classe pour représenter les définitions de l&#39;unité de base en question à travers les temps.&#34;@fr ;<br>
+    rdfs:isDefinedBy &#34;VIM3 1.10&#34; ;<br>
+    rdfs:subClassOf si:MeasurementUnit ;<br>
+    owl:disjointWith si:SISpecialNamedUnit,<br>
+        si:nonSIUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SIDecision" href="#si:SIDecision">si:SIDecision</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:SIDecision</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SIDecision is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for SI decisions.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:correspondingResolution">si:correspondingResolution</a> | <a href="#si:isDecisionOf">si:isDecisionOf</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasDecision">si:hasDecision</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:SIDecision a owl:Class ;<br>
+    rdfs:label &#34;SI Decision&#34;@en,<br>
+        &#34;Décision SI&#34;@fr ;<br>
+    rdfs:comment &#34;The class for SI decisions.&#34;@en,<br>
+        &#34;La classe pour les décisions SI.&#34;@fr .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SIDecisionScope" href="#si:SIDecisionScope">si:SIDecisionScope</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:SIDecisionScope</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SIDecisionScope is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for SI decisions scopes.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasTarget">si:hasTarget</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:isTargetOf">si:isTargetOf</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:SIDecisionScope rdfs:label &#34;SI Decision scope&#34;@en,<br>
+        &#34;Champ de la décision SI&#34;@fr ;<br>
+    rdfs:comment &#34;The class for SI decisions scopes.&#34;@en,<br>
+        &#34;La classe pour les champs de décisions SI.&#34;@fr .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SIDecisionTarget" href="#si:SIDecisionTarget">si:SIDecisionTarget</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:SIDecisionTarget</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SIDecisionTarget is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for SI decisions target.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasDecision">si:hasDecision</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasTarget">si:hasTarget</a> | <a href="#si:isDecisionOf">si:isDecisionOf</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:SIDecisionTarget a owl:Class ;<br>
+    rdfs:label &#34;SI Decision target&#34;@en,<br>
+        &#34;Cible d&#39;une décision SI&#34;@fr ;<br>
+    rdfs:comment &#34;The class for SI decisions target.&#34;@en,<br>
+        &#34;La classe pour les cibles de décisions SI.&#34;@fr .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SIPrefix" href="#si:SIPrefix">si:SIPrefix</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">si:SIPrefix</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SIPrefix is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The class for SI Prefixes.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasScalingFactor">si:hasScalingFactor</a>  
+                    </p>
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#si:hasPrefix">si:hasPrefix</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:SIPrefix a owl:Class ;<br>
+    rdfs:label &#34;SI prefix&#34;@en,<br>
+        &#34;préfixe SI&#34;@fr ;<br>
+    rdfs:comment &#34;The class for SI Prefixes.&#34;@en,<br>
+        &#34;La classe pour les préfixes SI.&#34;@fr ;<br>
+    rdfs:subClassOf [ a owl:Restriction ;<br>
+            owl:minCardinality &#34;1&#34;^^xsd:int ;<br>
+            owl:onProperty si:hasScalingFactor ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:SISpecialNamedUnit" href="#si:SISpecialNamedUnit">si:SISpecialNamedUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:MeasurementUnit">si:MeasurementUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:SISpecialNamedUnit</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:SISpecialNamedUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Class for the units of the SI that are not base units but have a special name.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:SISpecialNamedUnit a owl:Class ;<br>
+    rdfs:label &#34;SI unit with special name&#34;@en,<br>
+        &#34;unité SI avec nom spécial&#34;@fr ;<br>
+    rdfs:comment &#34;Class for the units of the SI that are not base units but have a special name.&#34;@en,<br>
+        &#34;La classe des unités du SI qui ne sont pas des unités de base mais qui ont un nom spécial.&#34;@fr ;<br>
+    rdfs:subClassOf si:MeasurementUnit ;<br>
+    owl:disjointWith si:nonSIUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:UnitMultiple" href="#si:UnitMultiple">si:UnitMultiple</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundUnit">si:CompoundUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:UnitMultiple</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:UnitMultiple is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundUnit">si:CompoundUnit</a> | <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:UnitMultiple a owl:Class ;<br>
+    rdfs:label &#34;unit product&#34; ;<br>
+    rdfs:subClassOf si:CompoundUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:UnitPower" href="#si:UnitPower">si:UnitPower</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundUnit">si:CompoundUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:UnitPower</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:UnitPower is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundUnit">si:CompoundUnit</a> | <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:UnitPower a owl:Class ;<br>
+    rdfs:label &#34;unit power&#34; ;<br>
+    rdfs:subClassOf si:CompoundUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:UnitProduct" href="#si:UnitProduct">si:UnitProduct</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:CompoundUnit">si:CompoundUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:UnitProduct</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:UnitProduct is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:CompoundUnit">si:CompoundUnit</a> | <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:UnitProduct a owl:Class ;<br>
+    rdfs:label &#34;unit product&#34; ;<br>
+    rdfs:subClassOf si:CompoundUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name="si:nonSIUnit" href="#si:nonSIUnit">si:nonSIUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#si:MeasurementUnit">si:MeasurementUnit</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">si:nonSIUnit</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:nonSIUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Non-SI units that are accepted for use with the SI</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#si:hasConversionFactor">si:hasConversionFactor</a> | <a href="#si:hasConversionUnit">si:hasConversionUnit</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:nonSIUnit a owl:Class ;<br>
+    rdfs:label &#34;non SI unit&#34;@en,<br>
+        &#34;unité en dehors du SI&#34;@fr ;<br>
+    rdfs:comment &#34;Non-SI units that are accepted for use with the SI&#34;@en,<br>
+        &#34;Unités en dehors du SI dont l’usage est accepté avec le SI&#34;@fr ;<br>
+    rdfs:subClassOf si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+	
+
+
+
+	
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop"><a name="objproperties">&nbsp;</a>Object Properties</h1>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasBase" href="#si:hasBase">si:hasBase</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Base ^ NumericExponent</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#si:hasQuantityBase">si:hasQuantityBase</a> | <a href="#si:hasUnitBase">si:hasUnitBase</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasBase a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has base&#34; ;<br>
+    rdfs:comment &#34;Base ^ NumericExponent&#34; .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasConversionUnit" href="#si:hasConversionUnit">si:hasConversionUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasConversionUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>SI unit to which the non SI unit can be converted</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:nonSIUnit">si:nonSIUnit</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasConversionUnit a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has conversion unit&#34;@en,<br>
+        &#34;a une unité de conversion&#34;@fr ;<br>
+    rdfs:comment &#34;SI unit to which the non SI unit can be converted&#34;@en,<br>
+        &#34;Unité SI dans laquelle l&#39;unité non SI peut être convertie&#34;@fr ;<br>
+    rdfs:domain si:nonSIUnit ;<br>
+    rdfs:range si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasDatatype" href="#si:hasDatatype">si:hasDatatype</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDatatype is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#n647c6236a2834267b10c16d7e317454fb1">n647c6236a2834267b10c16d7e317454fb1</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDatatype a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has datatype&#34;@en,<br>
+        &#34;a un type de données&#34;@fr ;<br>
+    rdfs:domain [ owl:oneOf ( si:Constant si:SIPrefix ) ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasDefiningConstant" href="#si:hasDefiningConstant">si:hasDefiningConstant</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefiningConstant is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a definition to its defining constant.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:Constant">si:Constant</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefiningConstant a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has defining constant&#34;@en,<br>
+        &#34;a une constante de définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a definition to its defining constant.&#34;@en,<br>
+        &#34;Associer une définition à sa constante de définition.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range si:Constant .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasDefiningResolution" href="#si:hasDefiningResolution">si:hasDefiningResolution</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefiningResolution is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition to the resolution by which it was adopted.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#n647c6236a2834267b10c16d7e317454fb15">n647c6236a2834267b10c16d7e317454fb15</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rb:Resolution">rb:Resolution</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rb: &lt;http://si-digital-framework.org/bodies#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefiningResolution a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has defining resolution&#34;@en,<br>
+        &#34;a une résolution déterminante&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition to the resolution by which it was adopted.&#34;@en,<br>
+        &#34;Associer une définition SI à la résolution par laquelle elle a été adoptée.&#34;@fr ;<br>
+    rdfs:domain [ owl:oneOf ( si:Definition si:Constant ) ] ;<br>
+    rdfs:range rb:Resolution .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasDefinition" href="#si:hasDefinition">si:hasDefinition</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefinition is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI base unit to its definition.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIBaseUnit">si:SIBaseUnit</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefinition a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has definition&#34;@en,<br>
+        &#34;a une définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI base unit to its definition.&#34;@en,<br>
+        &#34;Associer une unité de base SI à sa définition.&#34;@fr ;<br>
+    rdfs:domain si:SIBaseUnit ;<br>
+    rdfs:range si:Definition .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasDefinitionNote" href="#si:hasDefinitionNote">si:hasDefinitionNote</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefinitionNote is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition to a definition note.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:DefinitionNote">si:DefinitionNote</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefinitionNote a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has definition note&#34;@en,<br>
+        &#34;a une note de définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition to a definition note.&#34;@en,<br>
+        &#34;Associer une définition SI à une note de définition.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range si:DefinitionNote .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasFactor" href="#si:hasFactor">si:hasFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#si:hasNumericFactor">si:hasNumericFactor</a> | <a href="#si:hasQuantityFactor">si:hasQuantityFactor</a> | <a href="#si:hasUnitFactor">si:hasUnitFactor</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasFactor a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has factor&#34; .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasLeftUnitFactor" href="#si:hasLeftUnitFactor">si:hasLeftUnitFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasLeftUnitFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>preserve order of multiplication</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:hasUnitFactor">si:hasUnitFactor</a> | <a href="#si:hasFactor">si:hasFactor</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasLeftUnitFactor a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has left unit factor&#34; ;<br>
+    rdfs:comment &#34;preserve order of multiplication&#34; ;<br>
+    rdfs:subPropertyOf si:hasUnitFactor .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasNextDefinition" href="#si:hasNextDefinition">si:hasNextDefinition</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNextDefinition is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition version to the next version.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNextDefinition a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has next definition&#34;@en,<br>
+        &#34;a la prochaine définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition version to the next version.&#34;@en,<br>
+        &#34;Associer une version de définition SI à la version suivante.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range si:Definition ;<br>
+    owl:inverseOf si:hasPreviousDefinition .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasNonPrefixedUnit" href="#si:hasNonPrefixedUnit">si:hasNonPrefixedUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNonPrefixedUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>&lt;Prefix&gt; and &lt;NonPrefixedUnit&gt; form a &lt;PrefixedUnit&gt;</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:PrefixedUnit">si:PrefixedUnit</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix schema: &lt;https://schema.org/&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNonPrefixedUnit a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has non prefixed unit&#34; ;<br>
+    rdfs:comment &#34;&lt;Prefix&gt; and &lt;NonPrefixedUnit&gt; form a &lt;PrefixedUnit&gt;&#34; ;<br>
+    rdfs:domain si:PrefixedUnit ;<br>
+    schema:rangeIncludes si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasPrefix" href="#si:hasPrefix">si:hasPrefix</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasPrefix is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>&lt;Prefix&gt; and &lt;NonPrefixedUnit&gt; form a &lt;PrefixedUnit&gt;</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:PrefixedUnit">si:PrefixedUnit</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:SIPrefix">si:SIPrefix</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasPrefix a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has prefix&#34; ;<br>
+    rdfs:comment &#34;&lt;Prefix&gt; and &lt;NonPrefixedUnit&gt; form a &lt;PrefixedUnit&gt;&#34; ;<br>
+    rdfs:domain si:PrefixedUnit ;<br>
+    rdfs:range si:SIPrefix .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasPreviousDefinition" href="#si:hasPreviousDefinition">si:hasPreviousDefinition</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasPreviousDefinition is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition version to the previous version.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasPreviousDefinition a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has previous definition&#34;@en,<br>
+        &#34;a la définition précédente&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition version to the previous version.&#34;@en,<br>
+        &#34;Associer une version de définition SI à la version précédente.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range si:Definition ;<br>
+    owl:inverseOf si:hasNextDefinition .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasQuantityBase" href="#si:hasQuantityBase">si:hasQuantityBase</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasQuantityBase is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>QuantityBase ^ NumericExponent</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:hasBase">si:hasBase</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasQuantityBase a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has quantity base&#34; ;<br>
+    rdfs:comment &#34;QuantityBase ^ NumericExponent&#34; ;<br>
+    rdfs:subPropertyOf si:hasBase .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasQuantityFactor" href="#si:hasQuantityFactor">si:hasQuantityFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasQuantityFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:hasFactor">si:hasFactor</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix schema: &lt;https://schema.org/&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasQuantityFactor a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has quantity factor&#34; ;<br>
+    rdfs:subPropertyOf si:hasFactor ;<br>
+    schema:domainIncludes si:QuantityKind ;<br>
+    schema:rangeIncludes si:QuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasRightUnitFactor" href="#si:hasRightUnitFactor">si:hasRightUnitFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasRightUnitFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>preserve order of multiplication</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#si:hasUnitFactor">si:hasUnitFactor</a> | <a href="#si:hasFactor">si:hasFactor</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasRightUnitFactor a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has right unit factor&#34; ;<br>
+    rdfs:comment &#34;preserve order of multiplication&#34; ;<br>
+    rdfs:subPropertyOf si:hasUnitFactor .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasUnit" href="#si:hasUnit">si:hasUnit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasUnit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a measurement unit to an object.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasUnit a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has unit&#34;@en,<br>
+        &#34;a l&#39;unité&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a measurement unit to an object.&#34;@en,<br>
+        &#34;Associer une unité de mesure à un objet.&#34;@fr ;<br>
+    rdfs:range si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasUnitBase" href="#si:hasUnitBase">si:hasUnitBase</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasUnitBase is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>UnitBase ^ NumericExponent</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:hasBase">si:hasBase</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasUnitBase a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has unit base&#34; ;<br>
+    rdfs:comment &#34;UnitBase ^ NumericExponent&#34; ;<br>
+    rdfs:subPropertyOf si:hasBase .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:hasUnitFactor" href="#si:hasUnitFactor">si:hasUnitFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:hasFactor">si:hasFactor</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#si:hasLeftUnitFactor">si:hasLeftUnitFactor</a> | <a href="#si:hasRightUnitFactor">si:hasRightUnitFactor</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix schema: &lt;https://schema.org/&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasUnitFactor a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has unit factor&#34; ;<br>
+    rdfs:subPropertyOf si:hasFactor ;<br>
+    schema:domainIncludes si:MeasurementUnit ;<br>
+    schema:rangeIncludes si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:inBaseSIUnits" href="#si:inBaseSIUnits">si:inBaseSIUnits</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:inBaseSIUnits is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:inBaseSIUnits a owl:ObjectProperty ;<br>
+    rdfs:label &#34;can be expressed in base SI units as&#34;@en,<br>
+        &#34;peut être exprimé en unités SI de base sous la forme&#34;@fr ;<br>
+    rdfs:range si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:inOtherSIUnits" href="#si:inOtherSIUnits">si:inOtherSIUnits</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:inOtherSIUnits is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:inOtherSIUnits a owl:ObjectProperty ;<br>
+    rdfs:label &#34;can be expressed in other SI units as&#34;@en,<br>
+        &#34;peut être exprimé dans d’autres unités SI sous la forme&#34;@fr ;<br>
+    rdfs:range si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:isDefiningResolutionOf" href="#si:isDefiningResolutionOf">si:isDefiningResolutionOf</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:isDefiningResolutionOf is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a resolution to the SI definition it defined.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#rb:Resolution">rb:Resolution</a> | <a href="#n647c6236a2834267b10c16d7e317454fb12">n647c6236a2834267b10c16d7e317454fb12</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rb: &lt;http://si-digital-framework.org/bodies#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:isDefiningResolutionOf a owl:ObjectProperty ;<br>
+    rdfs:label &#34;is defining resolution of&#34;@en,<br>
+        &#34;définit la résolution de&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a resolution to the SI definition it defined.&#34;@en,<br>
+        &#34;Associer une résolution à la définition SI qu&#39;elle a définie.&#34;@fr ;<br>
+    rdfs:domain rb:Resolution ;<br>
+    rdfs:range [ owl:oneOf ( si:Definition si:Constant ) ] ;<br>
+    owl:inverseOf si:hasDefiningResolution .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name="si:isUnitOfQtyKind" href="#si:isUnitOfQtyKind">si:isUnitOfQtyKind</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:isUnitOfQtyKind is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a measurement unit to its quantity kind.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:MeasurementUnit">si:MeasurementUnit</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:QuantityKind">si:QuantityKind</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:isUnitOfQtyKind a owl:ObjectProperty ;<br>
+    rdfs:label &#34;is unit of quantity kind&#34;@en,<br>
+        &#34;est une unité de quantité&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a measurement unit to its quantity kind.&#34;@en,<br>
+        &#34;Associer une unité de mesure à son type de quantité.&#34;@fr ;<br>
+    rdfs:domain si:MeasurementUnit ;<br>
+    rdfs:range si:QuantityKind .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop"><a name="dataproperties">&nbsp;</a>Datatype Properties</h1>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:correspondingResolution" href="#si:correspondingResolution">si:correspondingResolution</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:correspondingResolution is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIDecision">si:SIDecision</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:correspondingResolution a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has corresponding resolution&#34;@en,<br>
+        &#34;a pour résolution correspondante&#34;@fr ;<br>
+    rdfs:domain si:SIDecision .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasConversionFactor" href="#si:hasConversionFactor">si:hasConversionFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasConversionFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:nonSIUnit">si:nonSIUnit</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasConversionFactor a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has a conversion factor&#34;@en,<br>
+        &#34;a un facteur de conversion&#34;@fr ;<br>
+    rdfs:comment &#34;The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)&#34;@en,<br>
+        &#34;Le facteur de conversion entre l&#39;unité non SI et l&#39;unité dans le SI (nombre d&#39;unité de contenu dans l&#39;unité non-SI)&#34;@fr ;<br>
+    rdfs:domain si:nonSIUnit ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasDecision" href="#si:hasDecision">si:hasDecision</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDecision is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIDecisionTarget">si:SIDecisionTarget</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:SIDecision">si:SIDecision</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDecision a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has decision&#34;@en,<br>
+        &#34;a pour décision&#34;@fr ;<br>
+    rdfs:domain si:SIDecisionTarget ;<br>
+    rdfs:range si:SIDecision ;<br>
+    owl:inverseOf si:isDecisionOf .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasDefiningEquation" href="#si:hasDefiningEquation">si:hasDefiningEquation</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefiningEquation is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a SI definition to its defining equation.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#n647c6236a2834267b10c16d7e317454fb4">n647c6236a2834267b10c16d7e317454fb4</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefiningEquation a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has defining equation&#34;@en,<br>
+        &#34;a une équation de définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a SI definition to its defining equation.&#34;@en,<br>
+        &#34;Associer une définition SI à son équation de définition.&#34;@fr ;<br>
+    rdfs:domain [ owl:oneOf ( si:Definition si:Constant ) ] ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasDefiningText" href="#si:hasDefiningText">si:hasDefiningText</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasDefiningText is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition to the defining text.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasDefiningText a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has defining text&#34;@en,<br>
+        &#34;a un texte de définition&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition to the defining text.&#34;@en,<br>
+        &#34;Associer une définition SI au texte de définition.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasEndValidity" href="#si:hasEndValidity">si:hasEndValidity</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasEndValidity is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition to its ending validity date.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:date">xsd:date</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasEndValidity a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has end validity&#34;@en,<br>
+        &#34;a fin de validité&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition to its ending validity date.&#34;@en,<br>
+        &#34;Associer une définition SI à sa date de fin de validité.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range xsd:date .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasNoteIndex" href="#si:hasNoteIndex">si:hasNoteIndex</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNoteIndex is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The text of a definition note.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:DefinitionNote">si:DefinitionNote</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNoteIndex a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has note index&#34;@en,<br>
+        &#34;a un texte de note&#34;@fr ;<br>
+    rdfs:comment &#34;The text of a definition note.&#34;@en,<br>
+        &#34;Le texte d&#39;une note de définition.&#34;@fr ;<br>
+    rdfs:domain si:DefinitionNote ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasNoteText" href="#si:hasNoteText">si:hasNoteText</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNoteText is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>The order index of a definition note.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:DefinitionNote">si:DefinitionNote</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNoteText a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has note text&#34;@en,<br>
+        &#34;a un index de notes&#34;@fr ;<br>
+    rdfs:comment &#34;The order index of a definition note.&#34;@en,<br>
+        &#34;Index d&#39;ordre d&#39;une note de définition.&#34;@fr ;<br>
+    rdfs:domain si:DefinitionNote ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasNumericExponent" href="#si:hasNumericExponent">si:hasNumericExponent</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNumericExponent is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>UnitBase ^ NumericExponent</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNumericExponent a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has numeric exponent&#34; ;<br>
+    rdfs:comment &#34;UnitBase ^ NumericExponent&#34; .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasNumericFactor" href="#si:hasNumericFactor">si:hasNumericFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasNumericFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#si:hasFactor">si:hasFactor</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix schema: &lt;https://schema.org/&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasNumericFactor a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has numeric factor&#34; ;<br>
+    rdfs:subPropertyOf si:hasFactor ;<br>
+    schema:domainIncludes si:MeasurementUnit .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasScalingFactor" href="#si:hasScalingFactor">si:hasScalingFactor</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasScalingFactor is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI prefix to its scaling factor.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIPrefix">si:SIPrefix</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasScalingFactor a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has scaling factor&#34;@en,<br>
+        &#34;a un facteur d&#39;échelle&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI prefix to its scaling factor.&#34;@en,<br>
+        &#34;Associer un préfixe SI à son facteur d&#39;échelle.&#34;@fr ;<br>
+    rdfs:domain si:SIPrefix ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasStartValidity" href="#si:hasStartValidity">si:hasStartValidity</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasStartValidity is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking an SI definition to its starting validity date.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:date">xsd:date</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasStartValidity a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has start validity&#34;@en,<br>
+        &#34;a une validité de départ&#34;@fr ;<br>
+    rdfs:comment &#34;Linking an SI definition to its starting validity date.&#34;@en,<br>
+        &#34;Associer une définition SI à sa date de début de validité.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range xsd:date .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasStatus" href="#si:hasStatus">si:hasStatus</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasStatus is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a SI definition to its status.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Definition">si:Definition</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasStatus a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has status&#34;@en,<br>
+        &#34;a l&#39;état&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a SI definition to its status.&#34;@en,<br>
+        &#34;Associer une définition SI à son état.&#34;@fr ;<br>
+    rdfs:domain si:Definition ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasSymbol" href="#si:hasSymbol">si:hasSymbol</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasSymbol is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>Linking a measurement unit or prefix to a symbol.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:string">xsd:string</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasSymbol a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has symbol&#34;@en,<br>
+        &#34;a un symbole&#34;@fr ;<br>
+    rdfs:comment &#34;Linking a measurement unit or prefix to a symbol.&#34;@en,<br>
+        &#34;Associer une unité de mesure ou un préfixe à un symbole.&#34;@fr ;<br>
+    rdfs:range xsd:string .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasTarget" href="#si:hasTarget">si:hasTarget</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasTarget is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIDecisionScope">si:SIDecisionScope</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:SIDecisionTarget">si:SIDecisionTarget</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasTarget a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has target&#34;@en,<br>
+        &#34;a pour cible&#34;@fr ;<br>
+    rdfs:domain si:SIDecisionScope ;<br>
+    rdfs:range si:SIDecisionTarget ;<br>
+    owl:inverseOf si:isTargetOf .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasUnitAsString" href="#si:hasUnitAsString">si:hasUnitAsString</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasUnitAsString is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Constant">si:Constant</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:string">xsd:string</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasUnitAsString a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has unit as a string&#34;@en,<br>
+        &#34;a l&#39;unité comme chaîne&#34;@fr ;<br>
+    rdfs:domain si:Constant ;<br>
+    rdfs:range xsd:string .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasUnitTypeAsString" href="#si:hasUnitTypeAsString">si:hasUnitTypeAsString</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasUnitTypeAsString is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#n647c6236a2834267b10c16d7e317454fb7">n647c6236a2834267b10c16d7e317454fb7</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasUnitTypeAsString a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;unit type as a string&#34;@en,<br>
+        &#34;type d&#39;unité sous forme de chaîne&#34;@fr ;<br>
+    rdfs:domain [ owl:oneOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasUpdatedDate" href="#si:hasUpdatedDate">si:hasUpdatedDate</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasUpdatedDate is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Constant">si:Constant</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:date">xsd:date</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasUpdatedDate a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has updated date&#34;@en,<br>
+        &#34;a mis à jour la date&#34;@fr ;<br>
+    rdfs:domain si:Constant ;<br>
+    rdfs:range xsd:date .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasValue" href="#si:hasValue">si:hasValue</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasValue is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Constant">si:Constant</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#rdfs:Literal">rdfs:Literal</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:hasValue a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has value&#34;@en,<br>
+        &#34;a de la valeur&#34;@fr ;<br>
+    rdfs:domain si:Constant ;<br>
+    rdfs:range rdfs:Literal .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:hasValueAsString" href="#si:hasValueAsString">si:hasValueAsString</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:hasValueAsString is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:Constant">si:Constant</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#xsd:string">xsd:string</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .<br>
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</p>
+
+<p>si:hasValueAsString a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has value as a string&#34;@en,<br>
+        &#34;a une valeur sous forme de chaîne&#34;@fr ;<br>
+    rdfs:domain si:Constant ;<br>
+    rdfs:range xsd:string .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:isDecisionOf" href="#si:isDecisionOf">si:isDecisionOf</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:isDecisionOf is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:SIDecision">si:SIDecision</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:SIDecisionTarget">si:SIDecisionTarget</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:isDecisionOf a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;is decision of&#34;@en,<br>
+        &#34;est la décision de&#34;@fr ;<br>
+    rdfs:domain si:SIDecision ;<br>
+    rdfs:range si:SIDecisionTarget .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name="si:isTargetOf" href="#si:isTargetOf">si:isTargetOf</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> si:isTargetOf is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#si:DecisionTarget">si:DecisionTarget</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#si:SIDecisionScope">si:SIDecisionScope</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .<br>
+@prefix si: &lt;http://si-digital-framework.org/SI#&gt; .</p>
+
+<p>si:isTargetOf a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;is target of&#34;@en,<br>
+        &#34;est la cible de&#34;@fr ;<br>
+    rdfs:domain si:DecisionTarget ;<br>
+    rdfs:range si:SIDecisionScope .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+	<hr>
+	<small>Ontology documentation automatically generated by <a class="greylink"  href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> v2.1.1 on Wed, 24 Jan 2024 14:41:16</small>
+
+
+</body>
+</html>
