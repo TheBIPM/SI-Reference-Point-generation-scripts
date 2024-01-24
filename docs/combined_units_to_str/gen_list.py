@@ -4,12 +4,21 @@ import os
 import logging
 
 
-path_to_api = '/home/fmeynadier/tests/si_ref_point/API'
+default_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                            "..", "..", "build"))
 
 g = Graph()
-g.parse(os.path.join(path_to_api, 'quantities.ttl'))
-g.parse(os.path.join(path_to_api, 'units.ttl'))
+for ttl_file in ['quantities.ttl', 'units.ttl']:
+    file_path = os.path.join(default_path, ttl_file)
+    if not os.path.exists(file_path):
+        logging.error(
+            "{} does not exist, did you run generate_turtle_file ?".format(
+                file_path))
+        raise SystemExit
+    g.parse(file_path)
+
 fullURI = g.namespace_manager.expand_curie
+
 
 def unitnode_to_str(nodeID) -> str:
     """ Recursively  generate unit representation strings

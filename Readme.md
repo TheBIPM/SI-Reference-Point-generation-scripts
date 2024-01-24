@@ -32,7 +32,7 @@ The `-z` option generates a zip file.
 
 For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to ./API. So if you execute the command in another folder than the package's root, make sure to indicate the right path here (or move the ttl files in `path/to/SI-Reference-Point-2023/API` after execution).
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/build`. 
 
 `-h / --help` provides a list of available options.
 
@@ -49,7 +49,7 @@ The TBox (classes and properties) is common to all parts, the ABoxes (allowing t
 Each ABox gets the relevant information from one or more YAML file(s). The location of the input and output files is defined in settings.py
 
 ### cuq\_data
-The YAML files containing all the input data. Initially generated from the Excel spreadsheets.
+The YAML files containing all the input data, + turtle files for the SI ontology TBox (core + extended concepts).
 
 ### resbod
 Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
