@@ -10,7 +10,6 @@ import os
 
 
 def main():
-    # import CUQ TBox
     PDF = SiElements()
     g = Graph()
 
@@ -50,11 +49,11 @@ def main():
             g.add((element, PDF.hasScalingFactor,
                 Literal(scalingFactor, datatype=XSD[xsd_type], normalize=False)))
             g.add((element, PDF.hasDatatype, XSD[xsd_type]))
-            
+
             if symbol:
                 g.add((element, PDF.hasSymbol,
                    Literal(symbol, datatype=XSD.string)))
-                
+
             if defres:
                 g.add((element, PDF.hasDefiningResolution,
                      URIRef(PDF.set_cgpm_uri(defres))))

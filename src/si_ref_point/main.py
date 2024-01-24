@@ -3,7 +3,7 @@
 
 import argparse
 import logging
-import si_ref_point.cuq.CUQ_TBox_Extension as CUQ_TBox_Extension
+import si_ref_point.cuq.CUQ_TBox as CUQ_TBox
 import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
 import si_ref_point.cuq.Constants_ABox as Constants_ABox
@@ -40,8 +40,9 @@ def get_parser():
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
-        default="./API",
-        help="Output directory for API")
+        default=os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                             "..", "..", "build")),
+        help="Output directory for TTL output")
     return parser
 
 
@@ -53,8 +54,7 @@ def main():
         logging.basicConfig(level=logging.INFO)
 
     file_generator = {
-        #'si': CUQ_TBox.main,
-        'si': CUQ_TBox_Extension.main,
+        'si': CUQ_TBox.main,
         'quantities': Quantities_ABox.main,
         'units': Units_ABox.main,
         'constants': Constants_ABox.main,
@@ -81,6 +81,7 @@ def main():
         graph.serialize(format='ttl',
                         destination=os.path.join(args.output_dir,
                                                  label + '.ttl'))
+    logging.info(f"TTL files wrote in {args.output_dir}")
 
     # compress into archive
     if args.zipfile:
@@ -90,7 +91,10 @@ def main():
             raise SystemExit
         now = datetime.datetime.now()
         timetag = now.strftime('%Y%m%dT%H%M%S')
-        githash = __version__.split('+')[1].split('.')[0]
+        try:
+            githash = __version__.split('+')[1].split('.')[0]
+        except IndexError:
+            githash = __version__
         zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')
         with ZipFile(zipname, 'w') as zf:

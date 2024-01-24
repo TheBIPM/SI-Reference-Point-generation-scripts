@@ -11,6 +11,7 @@ import yaml
 import os
 import re
 import si_ref_point.cuq.symbols_format as sf
+import logging
 
 
 def parse_fragments(fragments, syntax):
@@ -26,7 +27,8 @@ def parse_fragments(fragments, syntax):
             if not_last_fragment:
                 # check if next fragment indicates exponentiation
                 if re.fullmatch(syntax["exponent"], fragments[i + 1]):
-                    exp_number = re.findall(syntax["exp_number"], fragments[i + 1])[0]
+                    exp_number = re.findall(syntax["exp_number"],
+                                            fragments[i + 1])[0]
                     expression["mult"].append({"exp": [var_name, exp_number]})
                 else:
                     expression["mult"].append(var_name)
@@ -36,7 +38,7 @@ def parse_fragments(fragments, syntax):
         if re.fullmatch(syntax["division"], frag):
             if not_last_fragment:
                 # represent division as exponentiation
-                div_expr = parse_fragments(fragments[i + 1 :], syntax)
+                div_expr = parse_fragments(fragments[i + 1:], syntax)
                 expression["mult"].append({"exp": [div_expr, "-1"]})
                 break
 
@@ -45,6 +47,25 @@ def parse_fragments(fragments, syntax):
         expression = expression["mult"][0]
 
     return expression
+
+
+def nest_mult(expr):
+    """Transform
+    {'mult': [A, B, C, D...]'}
+    into
+    {'mult: [A, {'mult': [B, C, D...]}}
+    (to be used recusively)
+    """
+    # Check number of terms
+    if len(expr['mult']) == 1:
+        return expr
+    left_term = expr['mult'][0]
+    right_term = expr['mult'][1:]
+    if len(right_term) == 1:
+        return {'mult': [left_term, right_term[0]]}
+    else:
+        return {'mult': [left_term,
+                         nest_mult({'mult': right_term})]}
 
 
 def transform_to_graph(expression, PDF, graph, symbols):
@@ -60,19 +81,44 @@ def transform_to_graph(expression, PDF, graph, symbols):
                 unit_short_uri = symbols[expression]["uri"]
                 unit_name = unit_short_uri.split(":")[1]
                 expr_node = PDF.set_unit_uri(unit_name)
+        else:
+            # look by uri
+            found_uri = False
+            for code, values in symbols.items():
+                if ('uri' in values.keys() and
+                    'units:{}'.format(expression) == values['uri']):
+                    expr_node = PDF.set_unit_uri(expression)
+                    found_uri = True
+            if not found_uri:
+                logging.error(
+                    'no URI found found for expression: {}'.format(expression))
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
+            if len(expression["mult"]) == 1:
+                # This is not really a product...
+                graph, expr_node = transform_to_graph(
+                    expression["mult"][0], PDF, graph, symbols)
+                return graph, expr_node
+
+            # Rearrange products into binary tree (i.e. nested "mult" with
+            # only 2 terms, to keep track of order terms)
+            expression = nest_mult(expression)
+
             # set type of expression node
             graph.add((expr_node, RDF.type, PDF.set_uri("UnitProduct")))
 
             # shortnames
-            hasFactor = PDF.set_uri("hasUnitFactor")
+            hasLTerm = PDF.set_uri("hasLeftUnitTerm")
+            hasRTerm = PDF.set_uri("hasRightUnitTerm")
 
             # insert factors
-            for factor in expression["mult"]:
-                graph, node = transform_to_graph(factor, PDF, graph, symbols)
-                graph.add((expr_node, hasFactor, node))
+            graph, node = transform_to_graph(expression["mult"][0],
+                                             PDF, graph, symbols)
+            graph.add((expr_node, hasLTerm, node))
+            graph, node = transform_to_graph(expression["mult"][1],
+                                             PDF, graph, symbols)
+            graph.add((expr_node, hasRTerm, node))
 
         elif "exp" in expression.keys():
             # set type of expression node
@@ -83,7 +129,8 @@ def transform_to_graph(expression, PDF, graph, symbols):
             hasExponent = PDF.set_uri("hasNumericExponent")
 
             # insert base and exponent
-            graph, node = transform_to_graph(expression["exp"][0], PDF, graph, symbols)
+            graph, node = transform_to_graph(expression["exp"][0],
+                                             PDF, graph, symbols)
             exponent = Literal(expression["exp"][1])
             graph.add((expr_node, hasBase, node))
             graph.add((expr_node, hasExponent, exponent))
@@ -99,7 +146,6 @@ def transform_to_graph(expression, PDF, graph, symbols):
         )
 
     return graph, expr_node
-
 
 def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
     # define syntax style
@@ -149,7 +195,6 @@ def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
 
 
 def main():
-    # import CUQ TBox
     PDF = SiElements()
     g = Graph()
 

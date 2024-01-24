@@ -21,6 +21,7 @@ dependencies = [
     "Jinja2",
     "PyYAML",
     "uvicorn",
+    "ontospy",
     "owlready2",
     "owlrl",
     "fastapi",

@@ -74,16 +74,16 @@ si:hasNonPrefixedUnit a owl:ObjectProperty ;
     rdfs:domain si:PrefixedUnit ;
     schema:rangeIncludes si:MeasurementUnit . # to generic?
 
-## for log-units
-si:hasNumericBase a owl:DatatypeProperty ;
-    rdfs:domain si:LogarithmicUnit ;
-    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>); X is the actual quantity value" ;
-    rdfs:label "has log base" .
-
-si:hasRatioDenominator a owl:ObjectProperty ;
-    rdfs:domain si:LogarithmicUnit ;
-    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>)" ;
-    rdfs:label "has ratio denominator" .
+## for log-units (it is quantities, not units that are logarithmic)
+#si:hasNumericBase a owl:DatatypeProperty ;
+#    rdfs:domain si:LogarithmicUnit ;
+#    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>); X is the actual quantity value" ;
+#    rdfs:label "has log base" .
+#
+#si:hasRatioDenominator a owl:ObjectProperty ;
+#    rdfs:domain si:LogarithmicUnit ;
+#    rdfs:comment "log_<NumericBase>(X / <RatioDenominator>)" ;
+#    rdfs:label "has ratio denominator" .
 
 # compound quantities
 
@@ -122,9 +122,9 @@ si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit" ;
     rdfs:subClassOf si:CompoundUnit .
 
-si:LogarithmicUnit a owl:Class ;
-    rdfs:label "unit power" ;
-    rdfs:subClassOf si:MeasurementUnit .
+#si:LogarithmicUnit a owl:Class ;
+#    rdfs:label "unit power" ;
+#    rdfs:subClassOf si:MeasurementUnit .
 
 ##########################
 ## IDEAS FOR FUTURE USE ##

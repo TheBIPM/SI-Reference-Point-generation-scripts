@@ -8,8 +8,8 @@ import os
 
 
 def main():
-    g = Graph()
     PDF = SiElements()
+    g = Graph()
 
     # copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():

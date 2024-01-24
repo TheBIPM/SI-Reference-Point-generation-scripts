@@ -4,15 +4,22 @@
 
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
 from si_ref_point.cuq.CUQ_TBox import SiElements
+from si_ref_point.cuq.Units_ABox import transform_to_graph
 from datetime import date
 from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
 
 
+
 def main():
     PDF = SiElements()
     g = Graph()
+
+    # Needed to use the "transform_to_graph" function
+    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
+              encoding="utf8") as fp:
+        symbols = yaml.safe_load(fp)
 
     # copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
@@ -42,5 +49,13 @@ def main():
         g.add((element, SKOS.altLabel, Literal(qty['identifier'],
                                                datatype=XSD.string)))
         if 'Unit' in qty and qty['Unit'] is not None:
-            g.add((element, PDF.hasUnit, PDF.set_unit_uri(qty['Unit'])))
+            if isinstance(qty['Unit'], list):
+                # Transform into dict
+                cmpnd_unit = {"mult": []}
+                for item in qty['Unit']:
+                    cmpnd_unit['mult'].append({"exp": [item[0], item[1]]})
+                g, cmpnd_node = transform_to_graph(cmpnd_unit, PDF, g, symbols)
+                g.add((element, PDF.hasUnit, cmpnd_node))
+            else:
+                g.add((element, PDF.hasUnit, PDF.set_unit_uri(qty['Unit'])))
     return g

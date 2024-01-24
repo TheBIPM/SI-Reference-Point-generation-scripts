@@ -337,3 +337,34 @@
   Unit:
   - [katal, 1]
   - [metre, -3]
+- identifier: EMIR
+  quantity-en: "emission rate"
+  quantity-fr: "taux d'émission"
+  Unit:
+  - [second, -1]
+- identifier: FLUE
+  quantity-en: "fluence"
+  quantity-fr: "fluence"
+  Unit:
+  - [metre, -2]
+- identifier: FLUR
+  quantity-en: "fluence rate"
+  quantity-fr: "débit de fluence"
+  Unit:
+  - [metre, -2]
+  - [second, -1]
+- identifier: PLTS
+  quantity-en: 'PLTS-2000 temperature (K)'
+  quantity-fr: 'température EPBT-2000 (K)'
+  Unit:
+  - [kelvin, 1]
+- identifier: ITSK
+  quantity-en: "ITS-90 temperature (K)"
+  quantity-fr: "température EIT-90 T_90 (K)"
+  Unit:
+  - [kelvin, 1]
+- identifier: ITSC
+  quantity-en: 'ITS-90 temperature (°C)'
+  quantity-fr: 'Température EIT-90 t_90 (°C)'
+  Unit:
+  - [degreeCelsius, 1]
