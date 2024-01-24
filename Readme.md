@@ -32,6 +32,8 @@ The `-z` option generates a zip file.
 
 For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
 
+`--gen_ontology_viz` updates the markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit changes if you want the up-to-date version to be displayed on github.
+
 Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/build`. 
 
 `-h / --help` provides a list of available options.
