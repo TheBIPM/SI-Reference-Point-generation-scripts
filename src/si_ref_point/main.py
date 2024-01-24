@@ -32,11 +32,14 @@ def get_parser():
         '-d', '--debug', action='store_true',
         help='debug')
     parser.add_argument(
+        '--gen_ontology_viz', action='store_true',
+        help="Generate ontology markdown using the ontospy pachage")
+    parser.add_argument(
         '--version', action='version',
         version='%(prog)s' + __version__)
     parser.add_argument(
         '--only', type=str,
-        help='Generate on ttl with names containing this string')
+        help='Generate only ttl with names containing this string')
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
@@ -102,3 +105,18 @@ def main():
                 ttl_file = label + ".ttl"
                 zf.write(os.path.join(args.output_dir, ttl_file),
                          arcname=ttl_file)
+
+    # Generate ontology documentation markdown files
+    if args.gen_ontology_viz:
+        import ontospy
+        from ontospy.gendocs.viz.viz_markdown import MarkdownViz
+        doc_path = os.path.abspath(os.path.join(
+            os.path.dirname(__file__), "..", "..", "docs", "vocabulary_viz"))
+
+        if not os.path.exists(doc_path):
+            os.makedirs(doc_path)
+        g = ontospy.Ontospy(os.path.join(args.output_dir, 'si.ttl'))
+        v = MarkdownViz(g)
+        v.build(output_path=doc_path)
+        logging.info(
+            f"Markdown files for vocabulary output in {doc_path}")
