@@ -12,35 +12,35 @@
 # properties
 
 ## for products + multiples
-si:hasFactor a owl:ObjectProperty ;
-    rdfs:label "has factor" .
+si:hasTerm a owl:ObjectProperty ;
+    rdfs:label "has a term" .
 
-si:hasUnitFactor a owl:ObjectProperty ;
-    rdfs:subPropertyOf si:hasFactor ;
-    rdfs:label "has unit factor" ;
+si:hasUnitTerm a owl:ObjectProperty ;
+    rdfs:subPropertyOf si:hasTerm ;
+    rdfs:label "has unit term" ;
     schema:domainIncludes si:MeasurementUnit ;
     schema:rangeIncludes si:MeasurementUnit .
 
 si:hasQuantityFactor a owl:ObjectProperty ;
-    rdfs:subPropertyOf si:hasFactor ;
-    rdfs:label "has quantity factor" ;
+    rdfs:subPropertyOf si:hasTerm ;
+    rdfs:label "has quantity term" ;
     schema:domainIncludes si:QuantityKind ;
     schema:rangeIncludes si:QuantityKind .
 
 si:hasNumericFactor a owl:DatatypeProperty ;
-    rdfs:subPropertyOf si:hasFactor ;
+    rdfs:subPropertyOf si:hasTerm ;
     schema:domainIncludes si:MeasurementUnit ;
     rdfs:label "has numeric factor" .
 
-si:hasLeftUnitFactor a owl:ObjectProperty ;
-    rdfs:label "has left unit factor" ;
+si:hasLeftUnitTerm a owl:ObjectProperty ;
+    rdfs:label "has left unit term" ;
     rdfs:comment "preserve order of multiplication" ;
-    rdfs:subPropertyOf si:hasUnitFactor .
+    rdfs:subPropertyOf si:hasUnitTerm .
 
-si:hasRightUnitFactor a owl:ObjectProperty ;
-    rdfs:label "has right unit factor" ;
+si:hasRightUnitTerm a owl:ObjectProperty ;
+    rdfs:label "has right unit term" ;
     rdfs:comment "preserve order of multiplication" ;
-    rdfs:subPropertyOf si:hasUnitFactor .
+    rdfs:subPropertyOf si:hasUnitTerm .
 
 ## for powers
 si:hasBase a owl:ObjectProperty ;

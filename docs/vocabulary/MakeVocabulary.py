@@ -21,13 +21,13 @@ def main(APIPATH):
     class_query = """
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-            SELECT DISTINCT ?Class ?Label
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT DISTINCT ?Class ?Label ?Superclass
             WHERE
             {
-                {?Class a skos:Concept }
-                UNION
-                {?Class rdfs:subClassOf ?empty}
-                ?Class rdfs:label ?Label
+                ?Class a owl:Class .
+                OPTIONAL { ?Class rdfs:subClassOf ?Superclass } .
+                OPTIONAL { ?Class rdfs:label ?Label } .
                 FILTER(langmatches(lang(?Label),'en'))
             }
             ORDER BY ?Class
@@ -36,14 +36,23 @@ def main(APIPATH):
     # run SPARQL query for units
     c_res = g.query(class_query)
 
+    diagram = {}
+
     class_list = []
     for element in c_res:
         teil = {
             'class': element['Class'],
-            'label': element['Label']
+            'label': element['Label'],
         }
+        # Markdown output
         class_list.append(teil)
-
+        # Diagram output
+        try:
+            sc = g.qname(element['Superclass'])
+        except (ValueError, TypeError):
+            sc = "owl:Class"
+        diagram[g.qname(element['Class'])] = {'superclass': sc,
+                                              'predicates': []}
 
     with open('vocabulary.md', 'w') as output_file:
         for subject in class_list:
@@ -80,12 +89,23 @@ def main(APIPATH):
                 output_file.write("| ")
                 output_file.write(verb['Predicate'].n3(g.namespace_manager))
                 output_file.write(" | ")
+                pr = g.qname(verb['Predicate'])
                 if verb['Domain'] is not None:
                     if isinstance(verb['Domain'], BNode):
                         items = parse_multi(g, verb['Domain'])
                         output_file.write(", ".join(items))
+                        # diagram output
+                        for dm in items:
+                            if pr not in diagram[dm]['predicates']:
+                                diagram[dm]['predicates'].append(pr)
                     else:
                         output_file.write(g.qname(verb['Domain']))
+                        dm = g.qname(verb['Domain'])
+                        if dm not in diagram:
+                            diagram[dm] = {'superclass': "foo",
+                                           'predicates':[]}
+                        if pr not in diagram[dm]['predicates']:
+                            diagram[dm]['predicates'].append(pr)
                 else:
                     output_file.write(" ")
                 output_file.write(" | ")
@@ -96,6 +116,19 @@ def main(APIPATH):
                     output_file.write(verb['Comment'])
                 output_file.write(" |\n")
             output_file.write("\n")
+
+    # Write diagram (mermaid code)
+    with open('class_diagram.md', 'w') as out:
+        out.write("classDiagram\n")
+        for cl, vals in diagram.items():
+            out.write("\t`{}`<|--`{}`\n".format(vals['superclass'],
+                                                cl))
+        for cl, vals in diagram.items():
+            out.write("\tclass `{}`{{\n".format(cl))
+            for pr in vals["predicates"]:
+                out.write("\t\t+{}\n".format(pr))
+            out.write("\t}\n")
+
 
 def parse_multi(g, nodeID):
     for s, p, o in g.triples((nodeID, None, None)):
@@ -119,8 +152,10 @@ def parse_multi(g, nodeID):
 if __name__=="__main__":
     parser = argparse.ArgumentParser(
         description="Generate SI ref point vocabulary")
-    parser.add_argument("path_to_ttl", default=".",
-                        help="Directory where TTLs are stored"
-                       )
+    parser.add_argument(
+        "--path_to_ttl",
+        default=os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "..", "TTL")),
+        help="Directory where TTLs are stored")
     args = parser.parse_args()
     main(args.path_to_ttl)

@@ -5,7 +5,7 @@ import logging
 
 
 default_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                            "..", "..", "build"))
+                                            "..", "..", "TTL"))
 
 g = Graph()
 for ttl_file in ['quantities.ttl', 'units.ttl']:

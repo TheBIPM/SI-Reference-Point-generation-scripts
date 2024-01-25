@@ -44,7 +44,7 @@ def get_parser():
         '-o', '--output_dir',
         type=str,
         default=os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                             "..", "..", "build")),
+                                             "..", "..", "TTL")),
         help="Output directory for TTL output")
     return parser
 
