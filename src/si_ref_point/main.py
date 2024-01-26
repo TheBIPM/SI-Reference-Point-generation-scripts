@@ -91,7 +91,7 @@ def main():
     if args.generate_RDF:
         output['si'].serialize(
             format='xml',
-            destination=os.path.join(args.output_dir, label + '.xml'))
+            destination=os.path.join(args.output_dir, 'si.xml'))
 
     # compress into archive
     if args.zipfile:
