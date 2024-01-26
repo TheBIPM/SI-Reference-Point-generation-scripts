@@ -24,7 +24,7 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 * dcterms:created
 
 
-    * 2024-01-24
+    * 2024-01-26
 
 
 * rdf:type
@@ -53,15 +53,15 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 
 * Ontologies: **1**
 
-* Triples: **402**
+* Triples: **442**
 
-* Classes: **22**
+* Classes: **24**
 
-* Properties: **45**
+* Properties: **47**
 
 * Annotation Properties: **0**
 
-* Object Properties: **23**
+* Object Properties: **25**
 
 * Datatype Properties: **22**
 
@@ -120,7 +120,7 @@ Prefix   | URI      |
 ## Entities  
 
 
-#### Classes (22)
+#### Classes (24)
 
 
 - [rb:Resolution](class-rbresolution.md "Open")
@@ -146,6 +146,10 @@ Prefix   | URI      |
 - [si:QuantityKindPower](class-siquantitykindpower.md "Open")
 
 - [si:QuantityKindProduct](class-siquantitykindproduct.md "Open")
+
+- [si:QuantityPower](class-siquantitypower.md "Open")
+
+- [si:QuantityProduct](class-siquantityproduct.md "Open")
 
 - [si:SIBaseUnit](class-sisibaseunit.md "Open")
 
@@ -175,7 +179,7 @@ Prefix   | URI      |
 
 
 
-#### Object Properties (23)
+#### Object Properties (25)
 
 
 - [si:hasBase](prop-sihasbase.md "Open")
@@ -192,9 +196,9 @@ Prefix   | URI      |
 
 - [si:hasDefinitionNote](prop-sihasdefinitionnote.md "Open")
 
-- [si:hasFactor](prop-sihasfactor.md "Open")
+- [si:hasLeftQuantityTerm](prop-sihasleftquantityterm.md "Open")
 
-- [si:hasLeftUnitFactor](prop-sihasleftunitfactor.md "Open")
+- [si:hasLeftUnitTerm](prop-sihasleftunitterm.md "Open")
 
 - [si:hasNextDefinition](prop-sihasnextdefinition.md "Open")
 
@@ -206,15 +210,19 @@ Prefix   | URI      |
 
 - [si:hasQuantityBase](prop-sihasquantitybase.md "Open")
 
-- [si:hasQuantityFactor](prop-sihasquantityfactor.md "Open")
+- [si:hasQuantityTerm](prop-sihasquantityterm.md "Open")
 
-- [si:hasRightUnitFactor](prop-sihasrightunitfactor.md "Open")
+- [si:hasRightQuantityTerm](prop-sihasrightquantityterm.md "Open")
+
+- [si:hasRightUnitTerm](prop-sihasrightunitterm.md "Open")
+
+- [si:hasTerm](prop-sihasterm.md "Open")
 
 - [si:hasUnit](prop-sihasunit.md "Open")
 
 - [si:hasUnitBase](prop-sihasunitbase.md "Open")
 
-- [si:hasUnitFactor](prop-sihasunitfactor.md "Open")
+- [si:hasUnitTerm](prop-sihasunitterm.md "Open")
 
 - [si:inBaseSIUnits](prop-siinbasesiunits.md "Open")
 
@@ -293,4 +301,4 @@ Prefix   | URI      |
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

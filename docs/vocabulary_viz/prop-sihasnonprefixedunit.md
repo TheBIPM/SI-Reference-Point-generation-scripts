@@ -40,20 +40,20 @@ owl:Thing
 
 
 [si:PrefixedUnit](class-siprefixedunit.md)
-=&gt;&nbsp;_si:hasNonPrefixedUnit_&nbsp;=&gt;&nbsp;owl:Thing
+=&gt;&nbsp;_si:hasNonPrefixedUnit_&nbsp;=&gt;&nbsp;[si:MeasurementUnit](class-simeasurementunit.md)
 
 #### Implementation
 ```rdf
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
 @prefix si: <http://si-digital-framework.org/SI#> .
 
 si:hasNonPrefixedUnit a owl:ObjectProperty ;
-    rdfs:label "has non prefixed unit" ;
+    rdfs:label "has non prefixed unit"@en,
+        "a pour unité sans préfixe"@fr ;
     rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
     rdfs:domain si:PrefixedUnit ;
-    schema:rangeIncludes si:MeasurementUnit .
+    rdfs:range si:MeasurementUnit .
 
 
 ```
@@ -68,4 +68,4 @@ si:hasNonPrefixedUnit a owl:ObjectProperty ;
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

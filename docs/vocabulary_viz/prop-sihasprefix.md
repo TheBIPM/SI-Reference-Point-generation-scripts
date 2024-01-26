@@ -49,7 +49,8 @@ owl:Thing
 @prefix si: <http://si-digital-framework.org/SI#> .
 
 si:hasPrefix a owl:ObjectProperty ;
-    rdfs:label "has prefix" ;
+    rdfs:label "has prefix"@en,
+        "a pour préfixe"@fr ;
     rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
     rdfs:domain si:PrefixedUnit ;
     rdfs:range si:SIPrefix .
@@ -67,4 +68,4 @@ si:hasPrefix a owl:ObjectProperty ;
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

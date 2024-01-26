@@ -90,6 +90,10 @@ def main(APIPATH):
                 output_file.write(verb['Predicate'].n3(g.namespace_manager))
                 output_file.write(" | ")
                 pr = g.qname(verb['Predicate'])
+                if verb['Range'] is not None:
+                    rng = g.qname(verb['Range'])
+                else:
+                    rng = None
                 if verb['Domain'] is not None:
                     if isinstance(verb['Domain'], BNode):
                         items = parse_multi(g, verb['Domain'])
@@ -97,15 +101,19 @@ def main(APIPATH):
                         # diagram output
                         for dm in items:
                             if pr not in diagram[dm]['predicates']:
-                                diagram[dm]['predicates'].append(pr)
+                                diagram[dm]['predicates'].append({
+                                    'label': pr,
+                                    'range': rng})
                     else:
                         output_file.write(g.qname(verb['Domain']))
                         dm = g.qname(verb['Domain'])
                         if dm not in diagram:
                             diagram[dm] = {'superclass': "foo",
-                                           'predicates':[]}
+                                           'predicates': []}
                         if pr not in diagram[dm]['predicates']:
-                            diagram[dm]['predicates'].append(pr)
+                            diagram[dm]['predicates'].append({
+                                'label': pr,
+                                'range': rng})
                 else:
                     output_file.write(" ")
                 output_file.write(" | ")
@@ -121,13 +129,25 @@ def main(APIPATH):
     with open('class_diagram.md', 'w') as out:
         out.write("classDiagram\n")
         for cl, vals in diagram.items():
-            out.write("\t`{}`<|--`{}`\n".format(vals['superclass'],
+            if vals['superclass'] != "owl:Class":
+                out.write("\t`{}`<|--`{}`\n".format(vals['superclass'],
                                                 cl))
         for cl, vals in diagram.items():
+            already_shown = []
             out.write("\tclass `{}`{{\n".format(cl))
             for pr in vals["predicates"]:
-                out.write("\t\t+{}\n".format(pr))
+                if pr['label'] in already_shown:
+                    continue
+                out.write("\t\t+{}\n".format(pr['label']))
+                already_shown.append(pr['label'])
             out.write("\t}\n")
+
+        for cl, vals in diagram.items():
+            already_drawn = []
+            for pr in vals["predicates"]:
+                if pr['range'] and pr['range'] not in already_drawn:
+                    out.write("\t`{}` --o `{}`\n".format(cl, pr['range']))
+                    already_drawn.append(pr['range'])
 
 
 def parse_multi(g, nodeID):

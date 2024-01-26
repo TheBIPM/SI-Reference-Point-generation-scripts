@@ -41,6 +41,9 @@ def get_parser():
         '--only', type=str,
         help='Generate only ttl with names containing this string')
     parser.add_argument(
+        '--generate_RDF', action='store_true',
+        help='Generate (single) RDF output')
+    parser.add_argument(
         '-o', '--output_dir',
         type=str,
         default=os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -85,6 +88,10 @@ def main():
                         destination=os.path.join(args.output_dir,
                                                  label + '.ttl'))
     logging.info(f"TTL files wrote in {args.output_dir}")
+    if args.generate_RDF:
+        output['si'].serialize(
+            format='xml',
+            destination=os.path.join(args.output_dir, label + '.xml'))
 
     # compress into archive
     if args.zipfile:

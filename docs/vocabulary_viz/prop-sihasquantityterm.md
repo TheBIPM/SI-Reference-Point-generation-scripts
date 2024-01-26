@@ -9,7 +9,7 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 
 
 
-## Property si:hasNumericFactor
+## Property si:hasQuantityTerm
 
 
 #### Tree
@@ -17,17 +17,21 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 
 * [si:hasTerm](prop-sihasterm.md)
 
-    * si:hasNumericFactor
+    * si:hasQuantityTerm
+
+
+        * [si:hasLeftQuantityTerm](prop-sihasleftquantityterm.md)
+
+        * [si:hasRightQuantityTerm](prop-sihasrightquantityterm.md)
+        
 
 
 
 
-
-*NOTE* this is a leaf node.
 
 
 #### URI
-http://si-digital-framework.org/SI#hasNumericFactor
+http://si-digital-framework.org/SI#hasQuantityTerm
 
 #### Description
 
@@ -41,10 +45,7 @@ http://si-digital-framework.org/SI#hasNumericFactor
 
 
 #### Usage
-
-
-[si:MeasurementUnit](class-simeasurementunit.md)
-=&gt;&nbsp;_si:hasNumericFactor_&nbsp;=&gt;&nbsp;owl:Thing
+owl:Thing=&gt;&nbsp;_si:hasQuantityTerm_&nbsp;=&gt;&nbsp;owl:Thing
 
 #### Implementation
 ```rdf
@@ -52,10 +53,9 @@ http://si-digital-framework.org/SI#hasNumericFactor
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix si: <http://si-digital-framework.org/SI#> .
 
-si:hasNumericFactor a owl:DatatypeProperty ;
-    rdfs:label "has numeric factor"@en,
-        "a pour facteur ce nombre"@fr ;
-    rdfs:domain si:MeasurementUnit ;
+si:hasQuantityTerm a owl:ObjectProperty ;
+    rdfs:label "has quantity term"@en,
+        "a pour terme cette quantité"@fr ;
     rdfs:subPropertyOf si:hasTerm .
 
 

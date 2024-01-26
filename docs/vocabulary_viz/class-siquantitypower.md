@@ -9,28 +9,26 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
     
 
 
-## Class si:QuantityKind
+## Class si:QuantityPower
 
 
 #### Tree
 
 * owl:Thing
-    * si:QuantityKind
-
-
-        * [si:CompoundQuantityKind](class-sicompoundquantitykind.md) 
-        
+    * si:QuantityPower
 
 
 
 
+
+*NOTE* this is a leaf node.
 
 
 #### URI
-http://si-digital-framework.org/SI#QuantityKind
+http://si-digital-framework.org/SI#QuantityPower
 
 #### Description
-<p>Class for the quantity kinds.</p>
+
 
 
 
@@ -44,30 +42,19 @@ owl:Thing
 
 #### Implementation
 ```rdf
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix si: <http://si-digital-framework.org/SI#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-si:QuantityKind a owl:Class ;
-    rdfs:label "kind of quantity"@en,
-        "nature de grandeur"@fr ;
-    rdfs:comment "Class for the quantity kinds."@en,
-        "La classe pour les types de quantité."@fr ;
-    rdfs:isDefinedBy "VIM3 1.2"^^xsd:string .
-
-
+None
 ```
 
 
 
 
-#### Instances of si:QuantityKind can have the following properties:
+#### Instances of si:QuantityPower can have the following properties:
 
-##### From [si:QuantityKind](class-siquantitykind.md):
+##### From [si:QuantityPower](class-siquantitypower.md):
 
 | Property | Description | Expected Type |
 |----------|-------------|---------------|
+| [si:hasQuantityBase](prop-sihasquantitybase.md) | QuantityBase ^ NumericExponent |[si:MeasurementUnit](class-simeasurementunit.md)|
 
 
 ##### From [owl:Thing](class-owlthing.md):

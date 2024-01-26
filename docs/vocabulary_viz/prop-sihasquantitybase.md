@@ -41,7 +41,10 @@ http://si-digital-framework.org/SI#hasQuantityBase
 
 
 #### Usage
-owl:Thing=&gt;&nbsp;_si:hasQuantityBase_&nbsp;=&gt;&nbsp;owl:Thing
+
+
+[si:QuantityPower](class-siquantitypower.md)
+=&gt;&nbsp;_si:hasQuantityBase_&nbsp;=&gt;&nbsp;[si:MeasurementUnit](class-simeasurementunit.md)
 
 #### Implementation
 ```rdf
@@ -50,8 +53,11 @@ owl:Thing=&gt;&nbsp;_si:hasQuantityBase_&nbsp;=&gt;&nbsp;owl:Thing
 @prefix si: <http://si-digital-framework.org/SI#> .
 
 si:hasQuantityBase a owl:ObjectProperty ;
-    rdfs:label "has quantity base" ;
+    rdfs:label "has quantity base"@en,
+        "a pour base cette quantité"@fr ;
     rdfs:comment "QuantityBase ^ NumericExponent" ;
+    rdfs:domain si:QuantityPower ;
+    rdfs:range si:MeasurementUnit ;
     rdfs:subPropertyOf si:hasBase .
 
 
@@ -67,4 +73,4 @@ si:hasQuantityBase a owl:ObjectProperty ;
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

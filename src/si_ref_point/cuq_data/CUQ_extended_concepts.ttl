@@ -13,66 +13,101 @@
 
 ## for products + multiples
 si:hasTerm a owl:ObjectProperty ;
-    rdfs:label "has a term" .
+    rdfs:label "has a term"@en,
+        "a pour terme"@fr .
 
 si:hasUnitTerm a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    rdfs:label "has unit term" ;
-    schema:domainIncludes si:MeasurementUnit ;
-    schema:rangeIncludes si:MeasurementUnit .
+    rdfs:label "has unit term"@en,
+        "a cette unité pour terme"@fr .
 
-si:hasQuantityFactor a owl:ObjectProperty ;
+si:hasQuantityTerm a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    rdfs:label "has quantity term" ;
-    schema:domainIncludes si:QuantityKind ;
-    schema:rangeIncludes si:QuantityKind .
+    rdfs:label "has quantity term"@en,
+        "a pour terme cette quantité"@fr .
 
 si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    schema:domainIncludes si:MeasurementUnit ;
-    rdfs:label "has numeric factor" .
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:label "has numeric factor"@en,
+        "a pour facteur ce nombre"@fr .
 
 si:hasLeftUnitTerm a owl:ObjectProperty ;
-    rdfs:label "has left unit term" ;
+    rdfs:label "has left unit term"@en,
+        "a pour terme de gauche cette unité"@fr ;
     rdfs:comment "preserve order of multiplication" ;
-    rdfs:subPropertyOf si:hasUnitTerm .
+    rdfs:subPropertyOf si:hasUnitTerm ;
+    rdfs:domain si:UnitProduct ;
+    rdfs:range si:MeasurementUnit .
 
 si:hasRightUnitTerm a owl:ObjectProperty ;
-    rdfs:label "has right unit term" ;
+    rdfs:label "has right unit term"@en,
+        "a pour terme de droite cette unité"@fr ;
     rdfs:comment "preserve order of multiplication" ;
-    rdfs:subPropertyOf si:hasUnitTerm .
+    rdfs:subPropertyOf si:hasUnitTerm ;
+    rdfs:domain si:UnitProduct ;
+    rdfs:range si:MeasurementUnit .
+
+si:hasLeftQuantityTerm a owl:ObjectProperty ;
+    rdfs:label "has left quantity term"@en,
+        "a pour terme de gauche cette quantité"@fr ;
+    rdfs:comment "preserve order of multiplication" ;
+    rdfs:subPropertyOf si:hasQuantityTerm ;
+    rdfs:domain si:QuantityProduct ;
+    rdfs:range si:QuantityKind .
+
+si:hasRightQuantityTerm a owl:ObjectProperty ;
+    rdfs:label "has right quantity term"@en,
+        "a pour terme de droite cette quantité"@fr ;
+    rdfs:comment "preserve order of multiplication" ;
+    rdfs:subPropertyOf si:hasQuantityTerm ;
+    rdfs:domain si:QuantityProduct ;
+    rdfs:range si:QuantityKind .
 
 ## for powers
 si:hasBase a owl:ObjectProperty ;
-    rdfs:label "has base" ;
+    rdfs:label "has base"@en,
+        "a pour base"@fr ;
     rdfs:comment "Base ^ NumericExponent" .
 
 si:hasUnitBase a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasBase ;
-    rdfs:label "has unit base" ;
-    rdfs:comment "UnitBase ^ NumericExponent" .
+    rdfs:label "has unit base"@en,
+        "a pour base cette unité"@fr ;
+    rdfs:comment "UnitBase ^ NumericExponent" ;
+    rdfs:domain si:UnitPower;
+    rdfs:range si:MeasurementUnit .
 
 si:hasNumericExponent a owl:DatatypeProperty ;
-    rdfs:label "has numeric exponent" ;
-    rdfs:comment "UnitBase ^ NumericExponent" .
+    rdfs:label "has numeric exponent"@en,
+        "a pour exposant ce nombre"@fr ;
+    rdfs:comment "UnitBase ^ NumericExponent" ;
+    rdfs:domain si:UnitPower;
+    rdfs:range xsd:int .
 
 si:hasQuantityBase a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasBase ;
-    rdfs:label "has quantity base" ;
-    rdfs:comment "QuantityBase ^ NumericExponent" .
+    rdfs:label "has quantity base"@en,
+        "a pour base cette quantité"@fr ;
+    rdfs:comment "QuantityBase ^ NumericExponent" ;
+    rdfs:domain si:QuantityPower;
+    rdfs:range si:MeasurementUnit .
+
 
 ## for prefixunits
 si:hasPrefix a owl:ObjectProperty ;
-    rdfs:label "has prefix" ;
+    rdfs:label "has prefix"@en,
+        "a pour préfixe"@fr ;
     rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
     rdfs:domain si:PrefixedUnit ;
     rdfs:range si:SIPrefix .
 
 si:hasNonPrefixedUnit a owl:ObjectProperty ;
-    rdfs:label "has non prefixed unit" ;
+    rdfs:label "has non prefixed unit"@en,
+        "a pour unité sans préfixe"@fr ;
     rdfs:comment "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>" ;
     rdfs:domain si:PrefixedUnit ;
-    schema:rangeIncludes si:MeasurementUnit . # to generic?
+    rdfs:range si:MeasurementUnit . # too generic?
 
 ## for log-units (it is quantities, not units that are logarithmic)
 #si:hasNumericBase a owl:DatatypeProperty ;
@@ -88,38 +123,46 @@ si:hasNonPrefixedUnit a owl:ObjectProperty ;
 # compound quantities
 
 si:CompoundQuantityKind a owl:Class ;  # DerivedQuantity?
-    rdfs:label "compound quantitykind" ; 
+    rdfs:label "compound quantitykind"@en,
+        "quantité composée"@fr ; 
     rdfs:subClassOf si:QuantityKind .
 
 si:QuantityKindProduct a owl:Class ;
-    rdfs:label "quantitykind product" ;
+    rdfs:label "quantitykind product"@en,
+        "produit de quantités"@fr ;
     rdfs:subClassOf si:CompoundQuantityKind .
 
 si:QuantityKindPower a owl:Class ;
-    rdfs:label "quantitykind power" ;
+    rdfs:label "quantitykind power"@en,
+        "quantité élevée à la puissance"@fr ;
     rdfs:subClassOf si:CompoundQuantityKind .
 
 
 # compound units
 
 si:CompoundUnit a owl:Class ;
-    rdfs:label "compound unit" ;  
+    rdfs:label "compound unit"@en,
+        "unité composée"@fr ;  
     rdfs:subClassOf si:MeasurementUnit .
 
 si:UnitMultiple a owl:Class ;
-    rdfs:label "unit product" ;
+    rdfs:label "unit multiple"@en,
+        "multiple d'unité"@fr ;
     rdfs:subClassOf si:CompoundUnit .
 
 si:UnitProduct a owl:Class ;
-    rdfs:label "unit product" ;
+    rdfs:label "unit product"@en,
+        "produit d'unités"@fr ;
     rdfs:subClassOf si:CompoundUnit .
 
 si:UnitPower a owl:Class ;
-    rdfs:label "unit power" ;
+    rdfs:label "unit power"@en,
+        "unité élevée à la puissance"@fr ;
     rdfs:subClassOf si:CompoundUnit .
 
 si:PrefixedUnit a owl:Class ;
-    rdfs:label "prefixed unit" ;
+    rdfs:label "prefixed unit"@en,
+        "unité précédée d'un préfixe"@fr ;
     rdfs:subClassOf si:CompoundUnit .
 
 #si:LogarithmicUnit a owl:Class ;

@@ -39,7 +39,7 @@ owl:Thing
 #### Usage
 
 
-[n1afbb236418147a99e1b3b73bd60bacdb4](entity-n1afbb236418147a99e1b3b73bd60bacdb4.md)
+[n0fe14176d0b84ad0ae63b0a583714332b4](entity-n0fe14176d0b84ad0ae63b0a583714332b4.md)
 =&gt;&nbsp;_si:hasDefiningEquation_&nbsp;=&gt;&nbsp;[rdfs:Literal](class-rdfsliteral.md)
 
 #### Implementation
@@ -70,4 +70,4 @@ si:hasDefiningEquation a owl:DatatypeProperty ;
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

@@ -9,23 +9,29 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 
 
 
-## Property si:hasUpdatedDate
+## Property si:hasTerm
 
 
 #### Tree
 
 * rdf:Property
-    * si:hasUpdatedDate
+    * si:hasTerm
+
+
+        * [si:hasNumericFactor](prop-sihasnumericfactor.md)
+
+        * [si:hasQuantityTerm](prop-sihasquantityterm.md)
+
+        * [si:hasUnitTerm](prop-sihasunitterm.md)
+        
 
 
 
 
-
-*NOTE* this is a leaf node.
 
 
 #### URI
-http://si-digital-framework.org/SI#hasUpdatedDate
+http://si-digital-framework.org/SI#hasTerm
 
 #### Description
 
@@ -37,23 +43,17 @@ owl:Thing
 
 
 #### Usage
-
-
-[si:Constant](class-siconstant.md)
-=&gt;&nbsp;_si:hasUpdatedDate_&nbsp;=&gt;&nbsp;[xsd:date](class-xsddate.md)
+owl:Thing=&gt;&nbsp;_si:hasTerm_&nbsp;=&gt;&nbsp;owl:Thing
 
 #### Implementation
 ```rdf
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix si: <http://si-digital-framework.org/SI#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-si:hasUpdatedDate a owl:DatatypeProperty ;
-    rdfs:label "has updated date"@en,
-        "a mis à jour la date"@fr ;
-    rdfs:domain si:Constant ;
-    rdfs:range xsd:date .
+si:hasTerm a owl:ObjectProperty ;
+    rdfs:label "has a term"@en,
+        "a pour terme"@fr .
 
 
 ```

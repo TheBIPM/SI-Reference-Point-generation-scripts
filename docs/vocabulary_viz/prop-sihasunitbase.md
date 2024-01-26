@@ -41,7 +41,10 @@ http://si-digital-framework.org/SI#hasUnitBase
 
 
 #### Usage
-owl:Thing=&gt;&nbsp;_si:hasUnitBase_&nbsp;=&gt;&nbsp;owl:Thing
+
+
+[si:UnitPower](class-siunitpower.md)
+=&gt;&nbsp;_si:hasUnitBase_&nbsp;=&gt;&nbsp;[si:MeasurementUnit](class-simeasurementunit.md)
 
 #### Implementation
 ```rdf
@@ -50,8 +53,11 @@ owl:Thing=&gt;&nbsp;_si:hasUnitBase_&nbsp;=&gt;&nbsp;owl:Thing
 @prefix si: <http://si-digital-framework.org/SI#> .
 
 si:hasUnitBase a owl:ObjectProperty ;
-    rdfs:label "has unit base" ;
+    rdfs:label "has unit base"@en,
+        "a pour base cette unité"@fr ;
     rdfs:comment "UnitBase ^ NumericExponent" ;
+    rdfs:domain si:UnitPower ;
+    rdfs:range si:MeasurementUnit ;
     rdfs:subPropertyOf si:hasBase .
 
 
@@ -67,4 +73,4 @@ si:hasUnitBase a owl:ObjectProperty ;
 
 ---
 
-_Documentation automatically generated on Wed, 24 Jan 2024 16:24:45 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
