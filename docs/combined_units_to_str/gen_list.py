@@ -113,16 +113,19 @@ def unitnode_to_str(nodeID) -> str:
 
 
 is_qty = """
-SELECT DISTINCT ?qty ?unit
+SELECT DISTINCT ?qty ?unit ?prefLabelEn
 WHERE {?qty si:hasUnit ?unit .
+       ?qty skos:prefLabel ?prefLabelEn .
+       FILTER(langmatches(lang(?prefLabelEn),'en'))
 }"""
 
 qres = g.query(is_qty)
 
 qty_list = []
 for row in qres:
-    qty, unit = row
-    print(g.qname(qty), unitnode_to_str(unit))
+    qty, unit, label = row
+    print("{0:4s} | {1:20s} | {2:}".format(
+        g.qname(qty).split(":")[1], unitnode_to_str(unit), label))
 
 
 
