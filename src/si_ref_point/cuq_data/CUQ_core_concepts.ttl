@@ -131,6 +131,8 @@ si:hasUnit a owl:ObjectProperty ;
         "a l'unité"@fr ;
     rdfs:comment "Linking a measurement unit to an object."@en,
         "Associer une unité de mesure à un objet."@fr ;
+    rdfs:hasUnit [ a owl:Class ;
+        owl:unionOf (si:Constant si:QuantityKind ) ];
     rdfs:range si:MeasurementUnit .
 
 si:hasUnitTypeAsString a owl:DatatypeProperty ;
@@ -196,12 +198,6 @@ si:hasUpdatedDate a owl:DatatypeProperty ;
         "a mis à jour la date"@fr ;
     rdfs:domain si:Constant ;
     rdfs:range xsd:date .
-
-si:hasUnitAsString a owl:DatatypeProperty ;
-    rdfs:label "has unit as a string"@en,
-        "a l'unité comme chaîne"@fr ;
-    rdfs:domain si:Constant ;
-    rdfs:range xsd:string .
 
 ## for Units
 

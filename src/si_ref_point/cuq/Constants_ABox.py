@@ -3,6 +3,7 @@ from si_ref_point.cuq.CUQ_TBox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from datetime import date
 from si_ref_point.settings import CUQ_FILES_FOLDER
+from si_ref_point.cuq.Units_ABox import transform_to_graph
 import yaml
 import os
 
@@ -26,18 +27,34 @@ def main():
     g.add((URIRef(PDF.namespace_constants), DCTERMS.created,
            Literal(str(date.today()), datatype=XSD.date)))
 
-    # worksheet containing the basic information
+    # yaml containing the basic information
     with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'),
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
+
+    # Needed to use the "transform_to_graph" function
+    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
+              encoding="utf8") as fp:
+        symbols = yaml.safe_load(fp)
 
     for cst in cst_list:
         element = PDF.set_constant_uri(cst['id'])
         g.add((element, RDF.type, PDF.Constant))
         g.add((element, PDF.hasValueAsString,
                Literal(cst['value_str'], datatype=XSD.string)))
-        g.add((element, PDF.hasUnitAsString,
-               Literal(cst['unit_str'], datatype=XSD.string)))
+        # Deprecated in favor of "combined units" style
+        # g.add((element, PDF.hasUnitAsString,
+        #       Literal(cst['unit_str'], datatype=XSD.string)))
+        if 'unit' in cst and cst['unit'] is not None:
+            if isinstance(cst['unit'], list):
+                # Transform into dict
+                cmpnd_unit = {"mult": []}
+                for item in cst['unit']:
+                    cmpnd_unit['mult'].append({"exp": [item[0], item[1]]})
+                g, cmpnd_node = transform_to_graph(cmpnd_unit, PDF, g, symbols)
+                g.add((element, PDF.hasUnit, cmpnd_node))
+            else:
+                g.add((element, PDF.hasUnit, PDF.set_unit_uri(cst['unit'])))
         g.add((element, PDF.hasValue,
                Literal(cst['value'], datatype=XSD[cst['xsd_type']], normalize=False)))
         g.add((element, PDF.hasDatatype, XSD[cst['xsd_type']]))
