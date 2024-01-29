@@ -583,14 +583,14 @@ def main():
                 )
             )
             unit_multiple = BNode()
-            hasUnitFactor = PDF.set_uri("hasUnitFactor")
+            hasUnitTerm = PDF.set_uri("hasUnitTerm")
             hasNumericFactor = PDF.set_uri("hasNumericFactor")
             conversion_factor = Literal(nsi["ConversionFactor"])
             g, conversion_unit = insert_unit_expr(
                 g, nsi["ConversionUnit"], PDF, syntax_type="inBaseSIUnits"
             )
             g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
-            g.add((unit_multiple, hasUnitFactor, conversion_unit))
+            g.add((unit_multiple, hasUnitTerm, conversion_unit))
             g.add((unit_multiple, hasNumericFactor, conversion_factor))
             g.add((element, PDF.inOtherSIUnits, unit_multiple))
 
