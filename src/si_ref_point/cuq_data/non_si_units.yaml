@@ -75,3 +75,18 @@
   UnitOfQtyKind: ENGY
   ConversionFactor: 1.602176634e-19
   ConversionUnit: '{@jles@}'
+- URI: neper
+  prefLabel_fr: néper
+  prefLabel_en: neper
+  Symbol: Np
+  UnitOfQtyKind: RLGN
+- URI: bel
+  prefLabel_fr: bel
+  prefLabel_en: bel
+  Symbol: B
+  UnitOfQtyKind: RLGB
+- URI: decibel
+  prefLabel_fr: décibel
+  prefLabel_en: decibel
+  Symbol: dB
+  UnitOfQtyKind: RLGD
