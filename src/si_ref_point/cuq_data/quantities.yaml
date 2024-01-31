@@ -368,10 +368,6 @@
   quantity-fr: 'Température EIT-90 t_90 (°C)'
   Unit:
   - [degreeCelsius, 1]
-- identifier: RLGD
-  quantity-en: 'ratio logarithm (dB)'
-  quantity-fr: "logarithme d'un rapport (dB)"
-  Unit: decibel
 - identifier: RLGB
   quantity-en: 'ratio logarithm (B)'
   quantity-fr: "logarithme d'un rapport (B)"

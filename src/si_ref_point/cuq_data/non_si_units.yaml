@@ -85,8 +85,3 @@
   prefLabel_en: bel
   Symbol: B
   UnitOfQtyKind: RLGB
-- URI: decibel
-  prefLabel_fr: décibel
-  prefLabel_en: decibel
-  Symbol: dB
-  UnitOfQtyKind: RLGD
