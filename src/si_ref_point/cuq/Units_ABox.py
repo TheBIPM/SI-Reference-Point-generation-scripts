@@ -439,6 +439,16 @@ def main():
                         Literal(bdef["Status"], datatype=XSD.string),
                     )
                 )
+            # Only used for kilogrami base defs, with no AuthorizedPrefixes
+            if "PrefixRestriction" in bdef:
+                g.add(
+                    (
+                        element,
+                        PDF.prefixRestriction,
+                        Literal(bdef['PrefixRestriction'],
+                                datatype=XSD.boolean),
+                    )
+                )
 
             # notes
             # get all the notes for a definition
@@ -575,6 +585,35 @@ def main():
                     Literal(sf.formattxt(nsi["Symbol"], "latex"), datatype=XSD.string),
                 )
             )
+            if "AltSymbol" in nsi:
+                g.add(
+                    (
+                        element,
+                        PDF.hasAltSymbol,
+                        Literal(sf.formattxt(nsi["AltSymbol"], "latex"),
+                                datatype=XSD.string),
+                    )
+                )
+
+            if "PrefixRestriction" in nsi:
+                g.add(
+                    (
+                        element,
+                        PDF.prefixRestriction,
+                        Literal(nsi['PrefixRestriction'],
+                                datatype=XSD.boolean),
+                    )
+                )
+
+            if "AuthorizedPrefixes" in nsi:
+                for prfx in nsi["AuthorizedPrefixes"]:
+                    g.add(
+                        (
+                            element,
+                            PDF.hasAuthorizedPrefix,
+                            PDF.set_prefix_uri(prfx)
+                        )
+                    )
             g.add(
                 (
                     element,

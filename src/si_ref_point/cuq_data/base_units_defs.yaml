@@ -120,6 +120,7 @@
   hasDefiningConstant:
   UnitOfQtyKind: MASS
   Status: superseded
+  PrefixRestriction: true
 - URI: kilogram2018
   prefLabel_fr: kilogramme2018
   prefLabel_en: kilogram2018
@@ -138,6 +139,7 @@
   hasDefiningConstant: PlanckConstant
   UnitOfQtyKind: MASS
   Status: current
+  PrefixRestriction: true
 - URI: metre1889
   prefLabel_fr: mètre1889
   prefLabel_en: metre1889

@@ -119,10 +119,17 @@ si:QuantityKind a owl:Class ;
 
 si:hasSymbol a owl:DatatypeProperty ;
     rdfs:label "has symbol"@en,
-        "a un symbole"@fr ;
+        "a pour symbole"@fr ;
     rdfs:comment "Linking a measurement unit or prefix to a symbol."@en,
         "Associer une unité de mesure ou un préfixe à un symbole."@fr ;
     rdfs:range xsd:string .
+
+#si:hasAltSymbol a owl:DatatypeProperty ;
+#    rdfs:label "has alternate symbol"@en,
+#        "a pour symbole alternatif"@fr ;
+#    rdfs:comment "Linking a measurement unit or prefix to an alternate symbol."@en,
+#        "Associer une unité de mesure ou un préfixe à un symbole alternatif."@fr ;
+#    rdfs:range xsd:string .
 
 ## for Measurement Units
 
@@ -131,15 +138,32 @@ si:hasUnit a owl:ObjectProperty ;
         "a l'unité"@fr ;
     rdfs:comment "Linking a measurement unit to an object."@en,
         "Associer une unité de mesure à un objet."@fr ;
-    rdfs:hasUnit [ a owl:Class ;
-        owl:unionOf (si:Constant si:QuantityKind ) ];
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf ( si:Constant si:QuantityKind ) ];
     rdfs:range si:MeasurementUnit .
 
 si:hasUnitTypeAsString a owl:DatatypeProperty ;
     rdfs:label "unit type as a string"@en,
         "type d'unité sous forme de chaîne"@fr ;
-    rdfs:domain [ owl:oneOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
+    rdfs:domain [ a owl:Class ; 
+        owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
     rdfs:range rdfs:Literal .
+
+si:prefixRestriction a owl:DataTypeProperty ; 
+    rdfs:label "Limitation of the possible prefixes"@en,
+        "Limitation des préfixes possibles"@fr ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
+    rdfs:range xsd:Boolean .
+
+si:hasAuthorizedPrefix a owl:ObjectProperty ;
+    rdfs:label "has authorized prefix"@en,
+        "peut avoir pour préfixe"@fr ;
+    rdfs:comment "Links to an authorized prefix in case the list is restricted"@en,
+        "Associer à un préfixe authorisé, dans le cas où ils ne le sont pas tous"@fr ;
+    rdfs:domain [ a owl:Class;
+        owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
+    rdfs:range si:Prefix .
 
 ## for Decision
 
