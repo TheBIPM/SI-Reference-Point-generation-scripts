@@ -216,7 +216,7 @@ As an example, to browse the files visually using GraphDB:
 
 GraphDB provides a visual graph interface.
 
-The Classes and Predicates are listed in Annex 1.
+A full list of the Classes and Predicates is available in a separate Vocabulary file (see Annex 1).
 
 
 ## 5. Next steps
@@ -244,15 +244,15 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 
 ## Annex 1:	List of Classes and Predicates
 
-A complete list of classes and predicates contained in the knowledge graphs
+For a complete list of classes and predicates contained in the knowledge graphs
 * SI/units.ttl
 * SI/prefixes.ttl
 * SI/decisions.ttl
 * constants.ttl
 * quantities.ttl
 
-is available from the github site at:
+please refer to the following file on the GitHub site at:
 
-(https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md)[https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md]
+[https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md](https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md)
 
 
