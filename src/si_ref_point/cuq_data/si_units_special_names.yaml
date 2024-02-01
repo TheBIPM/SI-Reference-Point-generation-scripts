@@ -29,6 +29,7 @@
   inBaseSIUnits: '{@kels@}'
   hasDefiningEquation: 1\;{@ceus@} = \left(\frac{@bolv@}{@bols@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}
   temp: K
+  PrefixRestriction: true
 - URI: farad
   prefLabel_fr: farad
   prefLabel_en: farad

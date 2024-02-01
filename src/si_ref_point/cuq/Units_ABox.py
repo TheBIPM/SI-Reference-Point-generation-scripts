@@ -439,7 +439,7 @@ def main():
                         Literal(bdef["Status"], datatype=XSD.string),
                     )
                 )
-            # Only used for kilogrami base defs, with no AuthorizedPrefixes
+            # Only used for kilogram in base defs, with no AuthorizedPrefixes
             if "PrefixRestriction" in bdef:
                 g.add(
                     (
@@ -550,6 +550,17 @@ def main():
                         ),
                     )
                 )
+            # Only used for degreeCelsius in sisp, with no AuthorizedPrefixes
+            if "PrefixRestriction" in sisp:
+                g.add(
+                    (
+                        element,
+                        PDF.prefixRestriction,
+                        Literal(sisp['PrefixRestriction'],
+                                datatype=XSD.boolean),
+                    )
+                )
+
 
     # 6) non SI units
     with open(os.path.join(CUQ_FILES_FOLDER, "non_si_units.yaml")) as fp:
