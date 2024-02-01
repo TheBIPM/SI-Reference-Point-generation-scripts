@@ -204,8 +204,9 @@ The TTL files can also be interrogated directly either using the [SPARQL interfa
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
 
-* Download the (free) GraphDB Desktop software [6] and install it on your computer.
-* Create a new repository, e.g. MMDD-SI Ref
+As an example, to browse the files visually using GraphDB:
+* Download the (free) (GraphDB Desktop software)[https://www.ontotext.com/products/graphdb/] and install it on your computer.
+* Create a new repository, e.g. SI-MMDD
 * Download the TTL files from the SI Reference Point and upload them into GraphDB. Ensure the “Autocomplete” function is selected and import the files to the following locations:
     * SI/units
     * SI/prefixes
@@ -243,13 +244,15 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 
 ## Annex 1:	List of Classes and Predicates
 
-The Python script MakeVocabulary.py produces a full list of classes contained in the knowledge graphs
+A complete list of classes and predicates contained in the knowledge graphs
 * SI/units.ttl
 * SI/prefixes.ttl
 * SI/decisions.ttl
 * constants.ttl
 * quantities.ttl
- 
-The list is TAB separated and sorted by Class.
+
+is available from the github site at:
+
+(https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md)[https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md]
 
 
