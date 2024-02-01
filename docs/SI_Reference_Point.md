@@ -51,7 +51,7 @@ A tool is provided to allow for machine-encoding and interpretation of prefixed 
 | 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
 | 7 |  SI prefixes | SI/prefixes|
 | 8 |  Non-SI units accepted for use with the SI units | SI/units |
-| <nobr>Annex 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
+| <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
 
 ## 3. Data model
