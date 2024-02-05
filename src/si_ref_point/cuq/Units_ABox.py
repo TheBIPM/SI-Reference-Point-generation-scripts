@@ -439,16 +439,17 @@ def main():
                         Literal(bdef["Status"], datatype=XSD.string),
                     )
                 )
-            # Only used for kilogram in base defs, with no AuthorizedPrefixes
-            if "PrefixRestriction" in bdef:
-                g.add(
-                    (
-                        element,
-                        PDF.prefixRestriction,
-                        Literal(bdef['PrefixRestriction'],
-                                datatype=XSD.boolean),
-                    )
+            # Only used for kilogram in base defs
+            if "PrefixRestriction" not in bdef:
+                bdef['PrefixRestriction'] = False
+            g.add(
+                (
+                    element,
+                    PDF.prefixRestriction,
+                    Literal(bdef['PrefixRestriction'],
+                            datatype=XSD.boolean),
                 )
+            )
 
             # notes
             # get all the notes for a definition
@@ -550,16 +551,17 @@ def main():
                         ),
                     )
                 )
-            # Only used for degreeCelsius in sisp, with no AuthorizedPrefixes
-            if "PrefixRestriction" in sisp:
-                g.add(
-                    (
-                        element,
-                        PDF.prefixRestriction,
-                        Literal(sisp['PrefixRestriction'],
-                                datatype=XSD.boolean),
-                    )
+            # Only used for degreeCelsius in sisp
+            if "PrefixRestriction" not in sisp:
+                sisp['PrefixRestriction'] = False
+            g.add(
+                (
+                    element,
+                    PDF.prefixRestriction,
+                    Literal(sisp['PrefixRestriction'],
+                            datatype=XSD.boolean),
                 )
+            )
 
 
     # 6) non SI units
@@ -606,25 +608,17 @@ def main():
                     )
                 )
 
-            if "PrefixRestriction" in nsi:
-                g.add(
-                    (
-                        element,
-                        PDF.prefixRestriction,
-                        Literal(nsi['PrefixRestriction'],
-                                datatype=XSD.boolean),
-                    )
+            if "PrefixRestriction" not in nsi:
+                nsi['PrefixRestriction'] = False
+            g.add(
+                (
+                    element,
+                    PDF.prefixRestriction,
+                    Literal(nsi['PrefixRestriction'],
+                            datatype=XSD.boolean),
+                )
                 )
 
-            if "AuthorizedPrefixes" in nsi:
-                for prfx in nsi["AuthorizedPrefixes"]:
-                    g.add(
-                        (
-                            element,
-                            PDF.hasAuthorizedPrefix,
-                            PDF.set_prefix_uri(prfx)
-                        )
-                    )
             g.add(
                 (
                     element,
