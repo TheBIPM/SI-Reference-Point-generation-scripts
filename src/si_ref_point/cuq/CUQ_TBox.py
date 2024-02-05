@@ -63,7 +63,6 @@ class SiElements:
         self.hasAltSymbol = self.set_uri("hasAltSymbol")
         self.hasUnit = self.set_uri("hasUnit")
         self.prefixRestriction = self.set_uri("prefixRestriction")
-        self.hasAuthorizedPrefix = self.set_uri("hasAuthorizedPrefix")
         self.hasUnitTypeAsString_oneOf_node = BNode()
         self.hasUnitTypeAsString_oneOf_subnode = BNode()
         self.hasUnitTypeAsString_oneOf_list = [

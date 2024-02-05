@@ -54,7 +54,6 @@
   ConversionFactor: 4.84813681109536e-06
   ConversionUnit: '{@rads@}'
   PrefixRestriction: true
-  AuthorizedPrefixes: ['milli', 'micro', 'pico']
 - URI: litre
   prefLabel_fr: litre
   prefLabel_en: litre
@@ -97,8 +96,7 @@
   prefLabel_en: bel
   Symbol: B
   UnitOfQtyKind: RLGB
-  PrefixRestriction: true
-  AuthorizedPrefixes: ['deci']
+  PrefixRestriction: false
 - URI: hectare
   prefLabel_fr: hectare
   prefLabel_en: hectare

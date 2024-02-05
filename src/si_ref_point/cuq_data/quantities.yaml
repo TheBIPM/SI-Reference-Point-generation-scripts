@@ -88,7 +88,7 @@
   Unit: henry
 - identifier: TEMC
   quantity-en: Celsius temperature
-  quantity-fr: Température Celsius
+  quantity-fr: température Celsius
   Unit: degreeCelsius
 - identifier: LUFL
   quantity-en: luminous flux
@@ -355,17 +355,17 @@
   - [second, -1]
 - identifier: PLTS
   quantity-en: 'PLTS-2000 temperature (K)'
-  quantity-fr: 'température EPBT-2000 (K)'
+  quantity-fr: 'température PLTS-2000 (K)'
   Unit:
   - [kelvin, 1]
 - identifier: ITSK
   quantity-en: "ITS-90 temperature (K)"
-  quantity-fr: "température EIT-90 T_90 (K)"
+  quantity-fr: "température ITS-90 (K)"
   Unit:
   - [kelvin, 1]
 - identifier: ITSC
-  quantity-en: 'ITS-90 temperature (°C)'
-  quantity-fr: 'Température EIT-90 t_90 (°C)'
+  quantity-en: 'ITS-90 temperature (℃)'
+  quantity-fr: 'température ITS-90 (℃)'
   Unit:
   - [degreeCelsius, 1]
 - identifier: RLGB

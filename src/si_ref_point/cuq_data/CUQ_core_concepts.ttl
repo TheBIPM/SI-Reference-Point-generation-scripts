@@ -156,15 +156,6 @@ si:prefixRestriction a owl:DataTypeProperty ;
         owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
     rdfs:range xsd:Boolean .
 
-si:hasAuthorizedPrefix a owl:ObjectProperty ;
-    rdfs:label "has authorized prefix"@en,
-        "peut avoir pour préfixe"@fr ;
-    rdfs:comment "Links to an authorized prefix in case the list is restricted"@en,
-        "Associer à un préfixe authorisé, dans le cas où ils ne le sont pas tous"@fr ;
-    rdfs:domain [ a owl:Class;
-        owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
-    rdfs:range si:Prefix .
-
 ## for Decision
 
 si:hasTarget a owl:DatatypeProperty ;
