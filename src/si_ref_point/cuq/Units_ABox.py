@@ -528,7 +528,7 @@ def main():
                 )
                 g.add((element, PDF.inOtherSIUnits, node))
                 tmp = sf.formattxt(sisp["inOtherSIUnits"], "latex", add_delim=False)
-                g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
+                # g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
 
             if sisp["inBaseSIUnits"]:
                 g, node = insert_unit_expr(
@@ -536,7 +536,7 @@ def main():
                 )
                 g.add((element, PDF.inBaseSIUnits, node))
                 tmp = sf.formattxt(sisp["inBaseSIUnits"], "latex", add_delim=False)
-                g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
+                # g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
 
             if sisp["hasDefiningEquation"]:
                 g.add(
