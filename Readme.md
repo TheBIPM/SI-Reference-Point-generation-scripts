@@ -34,7 +34,7 @@ For debugging purposes, you can choose to generate only one ttl by providing its
 
 `--gen_ontology_viz` updates the markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit changes if you want the up-to-date version to be displayed on github.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/build`. 
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/TTL`. 
 
 `-h / --help` provides a list of available options.
 
@@ -67,3 +67,126 @@ Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, 
 
 The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
 
+
+## Current class diagram
+
+```mermaid
+classDiagram
+	`si:QuantityKind`<|--`si:CompoundQuantityKind`
+	`si:MeasurementUnit`<|--`si:CompoundUnit`
+	`si:CompoundUnit`<|--`si:PrefixedUnit`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindPower`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindProduct`
+	`si:MeasurementUnit`<|--`si:SIBaseUnit`
+	`si:MeasurementUnit`<|--`si:SISpecialNamedUnit`
+	`si:CompoundUnit`<|--`si:UnitMultiple`
+	`si:CompoundUnit`<|--`si:UnitPower`
+	`si:CompoundUnit`<|--`si:UnitProduct`
+	`si:MeasurementUnit`<|--`si:nonSIUnit`
+	class `si:CompoundQuantityKind`{
+	}
+	class `si:CompoundUnit`{
+	}
+	class `si:Constant`{
+		+si:hasDatatype
+		+si:hasDefiningResolution
+		+si:hasUnit
+		+si:hasUpdatedDate
+		+si:hasValue
+		+si:hasValueAsString
+		+si:hasDefiningEquation
+	}
+	class `si:Definition`{
+		+si:hasDefiningResolution
+		+si:hasDefiningConstant
+		+si:hasDefiningEquation
+		+si:hasDefiningText
+		+si:hasDefinitionNote
+		+si:hasEndValidity
+		+si:hasNextDefinition
+		+si:hasPreviousDefinition
+		+si:hasStartValidity
+		+si:hasStatus
+	}
+	class `si:DefinitionNote`{
+		+si:hasNoteIndex
+		+si:hasNoteText
+	}
+	class `si:MeasurementUnit`{
+		+si:prefixRestriction
+		+si:isUnitOfQtyKind
+		+si:hasUnitTypeAsString
+		+si:hasNumericFactor
+	}
+	class `si:PrefixedUnit`{
+		+si:hasNonPrefixedUnit
+		+si:hasPrefix
+	}
+	class `si:QuantityKind`{
+		+si:hasUnit
+	}
+	class `si:QuantityKindPower`{
+	}
+	class `si:QuantityKindProduct`{
+	}
+	class `si:SIBaseUnit`{
+		+si:prefixRestriction
+		+si:hasDefinition
+		+si:hasUnitTypeAsString
+	}
+	class `si:SIDecision`{
+	}
+	class `si:SIDecisionTarget`{
+	}
+	class `si:SIPrefix`{
+		+si:hasDatatype
+		+si:hasScalingFactor
+	}
+	class `si:SISpecialNamedUnit`{
+		+si:prefixRestriction
+		+si:hasUnitTypeAsString
+	}
+	class `si:UnitMultiple`{
+	}
+	class `si:UnitPower`{
+		+si:hasNumericExponent
+		+si:hasUnitBase
+	}
+	class `si:UnitProduct`{
+		+si:hasLeftUnitTerm
+		+si:hasRightUnitTerm
+	}
+	class `si:nonSIUnit`{
+		+si:prefixRestriction
+		+si:hasUnitTypeAsString
+	}
+	`si:Constant` --o `rb:Resolution`
+	`si:Constant` --o `si:MeasurementUnit`
+	`si:Constant` --o `xsd:date`
+	`si:Constant` --o `rdfs:Literal`
+	`si:Constant` --o `xsd:string`
+	`si:Definition` --o `rb:Resolution`
+	`si:Definition` --o `si:Constant`
+	`si:Definition` --o `rdfs:Literal`
+	`si:Definition` --o `si:DefinitionNote`
+	`si:Definition` --o `xsd:date`
+	`si:Definition` --o `si:Definition`
+	`si:DefinitionNote` --o `rdfs:Literal`
+	`si:MeasurementUnit` --o `xsd:Boolean`
+	`si:MeasurementUnit` --o `si:QuantityKind`
+	`si:MeasurementUnit` --o `rdfs:Literal`
+	`si:PrefixedUnit` --o `si:MeasurementUnit`
+	`si:PrefixedUnit` --o `si:SIPrefix`
+	`si:QuantityKind` --o `si:MeasurementUnit`
+	`si:SIBaseUnit` --o `xsd:Boolean`
+	`si:SIBaseUnit` --o `si:Definition`
+	`si:SIBaseUnit` --o `rdfs:Literal`
+	`si:SIPrefix` --o `rdfs:Literal`
+	`si:SISpecialNamedUnit` --o `xsd:Boolean`
+	`si:SISpecialNamedUnit` --o `rdfs:Literal`
+	`si:UnitPower` --o `xsd:int`
+	`si:UnitPower` --o `si:MeasurementUnit`
+	`si:UnitProduct` --o `si:MeasurementUnit`
+	`si:nonSIUnit` --o `xsd:Boolean`
+	`si:nonSIUnit` --o `rdfs:Literal`
+```
