@@ -3,6 +3,7 @@
 
 import argparse
 import logging
+import hashlib
 import si_ref_point.cuq.CUQ_TBox as CUQ_TBox
 import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
 import si_ref_point.cuq.Units_ABox as Units_ABox
@@ -17,6 +18,7 @@ from si_ref_point import __version__
 import os
 import datetime
 from zipfile import ZipFile
+import subprocess
 
 
 def get_parser():
@@ -84,9 +86,16 @@ def main():
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
     for label, graph in output.items():
-        graph.serialize(format='ttl',
-                        destination=os.path.join(args.output_dir,
-                                                 label + '.ttl'))
+        filedest = os.path.join(args.output_dir,label + '.ttl')
+        graph.serialize(format='ttl', destination=filedest)
+        # generate hash for file and write it alongside
+        h = hashlib.new('sha256')
+        with open(filedest) as fp:
+            h.update(fp.read().encode())
+        hashstr = h.hexdigest()
+        hashdest = os.path.join(args.output_dir,label + '.sha256')
+        with open(hashdest, 'w') as fp:
+            fp.write(hashstr)
     logging.info(f"TTL files wrote in {args.output_dir}")
     if args.generate_RDF:
         output['si'].serialize(
@@ -102,8 +111,8 @@ def main():
         now = datetime.datetime.now()
         timetag = now.strftime('%Y%m%dT%H%M%S')
         try:
-            githash = __version__.split('+')[1].split('.')[0]
-        except IndexError:
+            githash = subprocess.check_output(["git", "describe"]).strip().decode()
+        except:  # noqa
             githash = __version__
         zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')
@@ -112,6 +121,9 @@ def main():
                 ttl_file = label + ".ttl"
                 zf.write(os.path.join(args.output_dir, ttl_file),
                          arcname=ttl_file)
+                hash_file = label + ".sha256"
+                zf.write(os.path.join(args.output_dir, hash_file),
+                         arcname=hash_file)
 
     # Generate ontology documentation markdown files
     if args.gen_ontology_viz:
