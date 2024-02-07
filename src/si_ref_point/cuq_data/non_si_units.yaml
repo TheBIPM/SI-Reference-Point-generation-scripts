@@ -4,7 +4,7 @@
   Symbol: min
   UnitOfQtyKind: TIME
   ConversionFactor: 60
-  ConversionUnit: '{@secs@}'
+  ConversionUnit: second
   PrefixRestriction: true
 - URI: hour
   prefLabel_fr: heure
@@ -12,7 +12,7 @@
   Symbol: h
   UnitOfQtyKind: TIME
   ConversionFactor: 3600
-  ConversionUnit: '{@secs@}'
+  ConversionUnit: second
   PrefixRestriction: true
 - URI: day
   prefLabel_fr: jour
@@ -20,7 +20,7 @@
   Symbol: d
   UnitOfQtyKind: TIME
   ConversionFactor: 86400
-  ConversionUnit: '{@secs@}'
+  ConversionUnit: second
   PrefixRestriction: true
 - URI: astronomicalunit
   prefLabel_fr: unité astronomique
@@ -28,7 +28,7 @@
   Symbol: au
   UnitOfQtyKind: LENG
   ConversionFactor: 149597870700
-  ConversionUnit: '{@mtrs@}'
+  ConversionUnit: metre
   PrefixRestriction: true
 - URI: degree
   prefLabel_fr: degré
@@ -36,7 +36,7 @@
   Symbol: '@circ@'
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.0174532925199433
-  ConversionUnit: '{@rads@}'
+  ConversionUnit: radian
   PrefixRestriction: true
 - URI: arcminute
   prefLabel_fr: arcminute
@@ -44,7 +44,7 @@
   Symbol: ′
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.000290888208665722
-  ConversionUnit: '{@rads@}'
+  ConversionUnit: radian
   PrefixRestriction: true
 - URI: arcsecond
   prefLabel_fr: arcseconde
@@ -52,7 +52,7 @@
   Symbol: ″
   UnitOfQtyKind: ANGP
   ConversionFactor: 4.84813681109536e-06
-  ConversionUnit: '{@rads@}'
+  ConversionUnit: radian
   PrefixRestriction: true
 - URI: litre
   prefLabel_fr: litre
@@ -61,7 +61,8 @@
   AltSymbol: l
   UnitOfQtyKind: VOLU
   ConversionFactor: 0.001
-  ConversionUnit: '{@mtrs@}^3'
+  ConversionUnit:
+    - [metre, -3]
   PrefixRestriction: true
 - URI: tonne
   prefLabel_fr: tonne
@@ -69,7 +70,7 @@
   Symbol: t
   UnitOfQtyKind: MASS
   ConversionFactor: 1000
-  ConversionUnit: '{@kgms@}'
+  ConversionUnit: kilogram
   PrefixRestriction: true
 - URI: dalton
   prefLabel_fr: dalton
@@ -77,14 +78,14 @@
   Symbol: Da
   UnitOfQtyKind: MASS
   ConversionFactor: 1.6605390666e-27
-  ConversionUnit: '{@kgms@}'
+  ConversionUnit: kilogram
 - URI: electronvolt
   prefLabel_fr: électronvolt
   prefLabel_en: electronvolt
   Symbol: eV
   UnitOfQtyKind: ENGY
   ConversionFactor: 1.602176634e-19
-  ConversionUnit: '{@jles@}'
+  ConversionUnit: joule
 - URI: neper
   prefLabel_fr: néper
   prefLabel_en: neper
@@ -103,5 +104,6 @@
   Symbol: ha
   UnitOfQtyKind: AREA
   ConversionFactor: 10000
-  ConversionUnit: '{@mtrs@}^2'
+  ConversionUnit:
+    - [metre, 2]
   PrefixRestriction: true

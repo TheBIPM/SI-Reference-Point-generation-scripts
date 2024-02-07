@@ -4,31 +4,28 @@
   Symbol: Bq
   hasDefiningResolution: CGPM15-Res8
   UnitOfQtyKind: ARRN
-  inOtherSIUnits:
-  inBaseSIUnits: '{@secs@}^{-1}'
+  inBaseSIUnits:
+    - [second, -1]
   hasDefiningEquation: 1\;{@becs@} = \frac{@hfcv@}{@hfcs@}
-  temp: s^-1
 - URI: coulomb
   prefLabel_fr: coulomb
   prefLabel_en: coulomb
   Symbol: C
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: ELCH
-  inOtherSIUnits:
-  inBaseSIUnits: '{@amps@}\;{@secs@}'
+  inBaseSIUnits:
+    - [ampere, 1]
+    - [second, 1]
   hasDefiningEquation: 1\;{@cous@} = \left(\frac{@hfcv@ \times @elms@}{@elmv@ \times
     @hfcs@}\right) {@secs@}^{-1}
-  temp: A s
 - URI: degreeCelsius
   prefLabel_fr: degré Celsius
   prefLabel_en: degree Celsius
   Symbol: ℃
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: TEMC
-  inOtherSIUnits:
-  inBaseSIUnits: '{@kels@}'
+  inBaseSIUnits: kelvin
   hasDefiningEquation: 1\;{@ceus@} = \left(\frac{@bolv@}{@bols@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}
-  temp: K
   PrefixRestriction: true
 - URI: farad
   prefLabel_fr: farad
@@ -36,121 +33,154 @@
   Symbol: F
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: ELCA
-  inOtherSIUnits: '@cous@/@vlts@'
-  inBaseSIUnits: '{@kgms@}^{-1}\;{@mtrs@}^{-2}\;{@secs@}^4\;{@amps@}^2'
+  inOtherSIUnits:
+    - [coulomb, 1]
+    - [volt, -1]
+  inBaseSIUnits: 
+    - [kilogram, -1]
+    - [metre, -2]
+    - [second, 4]
+    - [ampere, 2]
   hasDefiningEquation: 1\;{@fars@} = \left(\frac{{@plkv@} \times ({@solv@})^2 \times
     {@hfcs@}^4 \times {@elms@}^2} {({@hfcv@})^4 \times ({@elmv@})^2 \times {@plks@}
     \times {@sols@}^2]\right) {@mtrs@}^2\;{@secs@}
-  temp: kg^-1 m^-2 s^4 A^2
 - URI: gray
   prefLabel_fr: gray
   prefLabel_en: gray
   Symbol: Gy
   hasDefiningResolution: CGPM15-Res9
   UnitOfQtyKind: ABDO
-  inOtherSIUnits: '@jles@/@kgms@'
-  inBaseSIUnits: '{@mtrs@}^2\;{@secs@}^{-2}'
+  inOtherSIUnits:
+    - [joule, 1]
+    - [kilogram, -1]
+  inBaseSIUnits:
+    - [metre, 2]
+    - [second, -2]
   hasDefiningEquation: 1\;{@grys@} = \left(\frac{{@sols@}^2 \times {@hfcs@}^2}{({@solv@})^2
     \times ({@hfcv@})^2}\right) {@secs@}^2
-  temp: m^2 s^-2
 - URI: henry
   prefLabel_fr: henry
   prefLabel_en: henry
   Symbol: H
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: ELIN
-  inOtherSIUnits: '@webs@/@amps@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}\;{@amps@}^{-2}'
+  inOtherSIUnits:
+    - [weber, 1]
+    - [ampere, -1]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -2]
+    - [ampere, -2]
   hasDefiningEquation: 1\;{@hens@} = \left(\frac{({@elmv@})^2 \times {@plks@} \times
     {@sols@}^2 \times {@hfcs@}^2}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^2
     \times {@elms@}^2}\right) {@mtrs@}^{-2}\;{@secs@}^5
-  temp: kg m^2 s^-2 A^-2
 - URI: hertz
   prefLabel_fr: hertz
   prefLabel_en: hertz
   Symbol: Hz
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: FREQ
-  inOtherSIUnits:
-  inBaseSIUnits: '{@secs@}^{-1}'
+  inBaseSIUnits: 
+    - [second, -1]
   hasDefiningEquation: 1\;{@htzs@} = \frac{@hfcv@}{@hfcs@}
-  temp: s^-1
 - URI: joule
   prefLabel_fr: joule
   prefLabel_en: joule
   Symbol: J
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ENGY
-  inOtherSIUnits: '@news@\;@mtrs@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}'
+  inOtherSIUnits:
+    - [newton, 1]
+    - [metre, 1]
+  inBaseSIUnits: 
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -2]
   hasDefiningEquation: 1\;{@jles@} = \left(\frac{{@plks@} \times {@sols@}^2 \times
     {@hfcs@}^2}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^2}\right) {@mtrs@}^{-2}\;{@secs@}^3
-  temp: kg m^2 s^-2
 - URI: katal
   prefLabel_fr: katal
   prefLabel_en: katal
   Symbol: kat
   hasDefiningResolution: CGPM21-Res12
   UnitOfQtyKind: CATA
-  inOtherSIUnits:
-  inBaseSIUnits: '{@mols@}\;{@secs@}^{-1}'
+  inBaseSIUnits:
+    - [mole, 1]
+    - [second, -1]
   hasDefiningEquation: 1\;{@kats@} = \frac{@avov@ \times @hfcs@}{@hfcv@ \times @avos@}
-  temp: mol s^-1
 - URI: lumen
   prefLabel_fr: lumen
   prefLabel_en: lumen
   Symbol: lm
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: LUFL
-  inOtherSIUnits: '@cans@\;@strs@'
-  inBaseSIUnits: '{@cans@}\;{@strs@}'
+  inOtherSIUnits:
+    - [candela, 1]
+    - [steradian, 1]
+  inBaseSIUnits:
+    - [candela, 1]
+    - [steradian, 1]
   hasDefiningEquation: 1\;{@lums@} = \left(\frac{@lecs@}{@lecv@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}
-  temp: cd sr
 - URI: lux
   prefLabel_fr: lux
   prefLabel_en: lux
   Symbol: lx
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ILLU
-  inOtherSIUnits: '@lums@/@mtrs@^2'
-  inBaseSIUnits: '{@cans@}\;{@strs@}\;{@mtrs@}^{-2}'
+  inOtherSIUnits:
+    - [lumen, 1]
+    - [metre, -2]
+  inBaseSIUnits:
+    - [candela, 1]
+    - [steradian, 1]
+    - [metre, -2]
   hasDefiningEquation: 1\;{@luxs@} = \left(\frac{({@solv@)}^2 \times @lecs@}{@lecv@
     \times {@sols@}^2}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-5}
-  temp: cd sr m^-2
 - URI: newton
   prefLabel_fr: newton
   prefLabel_en: newton
   Symbol: N
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: FORC
-  inOtherSIUnits:
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}\;{@secs@}^{-2}'
+  inBaseSIUnits: 
+    - [kilogram, 1]
+    - [metre, 1]
+    - [second, -2]
   hasDefiningEquation: 1\;{@news@} = \left(\frac{{@plks@} \times @sols@ \times {@hfcs@}^2}{{@plkv@}
     \times @solv@ \times ({@hfcv@})^2}\right) {@mtrs@}^{-2}\;{@secs@}^2
-  temp: kg m s^-2
 - URI: ohm
   prefLabel_fr: ohm
   prefLabel_en: ohm
   Symbol: Ω
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: ELRE
-  inOtherSIUnits: '@vlts@/@amps@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}\;{@amps@}^{-2}'
+  inOtherSIUnits:
+    - [volt, 1]
+    - [ampere, -1]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -3]
+    - [ampere, -2]
   hasDefiningEquation: 1\;{@ohms@} = \left(\frac{({@elmv@})^2 \times {@plks@} \times
     {@sols@}^2 \times {@hfcs@}^3}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^3
     \times {@elms@}^2}\right) {@mtrs@}^{-2}\;{@secs@}^5
-  temp: kg m^2 s^-3 A^-2
 - URI: pascal
   prefLabel_fr: pascal
   prefLabel_en: pascal
   Symbol: Pa
   hasDefiningResolution: CGPM14-Decl
   UnitOfQtyKind: PRES
-  inOtherSIUnits: '@news@/@mtrs@^2'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^{-1}\;{@secs@}^{-2}'
+  inOtherSIUnits:
+    - [newton, 1]
+    - [metre, -2]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, -1]
+    - [second, -2]
   hasDefiningEquation: 1\;{@pass@} = \left(\frac{{@plks@} \times @solv@ \times {@hfcs@}^2}{{@plkv@}
     \times @sols@ \times ({@hfcv@})^2}\right) {@mtrs@}^{-2}
-  temp: kg m^-1 s^-2
 - URI: radian
   prefLabel_fr: radian
   prefLabel_en: radian
@@ -158,85 +188,112 @@
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ANGP
   inOtherSIUnits:
-  inBaseSIUnits: '{@mtrs@}/{@mtrs@}'
+  inBaseSIUnits:
+    - [metre, 1]
+    - [metre, -1]
   hasDefiningEquation:
-  temp:
 - URI: siemens
   prefLabel_fr: siemens
   prefLabel_en: siemens
   Symbol: S
   hasDefiningResolution: CGPM14-Decl
   UnitOfQtyKind: ELCO
-  inOtherSIUnits: '@amps@/@vlts@'
-  inBaseSIUnits: '{@kgms@}^{-1}\;{@mtrs@}^{-2}\;{@secs@}^3\;{@amps@}^2'
+  inOtherSIUnits:
+    - [ampere, 1]
+    - [volt, 1]
+  inBaseSIUnits:
+    - [kilogram, -1]
+    - [metre, -2]
+    - [second, 3]
+    - [ampere, 2]
   hasDefiningEquation: 1\;{@sies@} = \left(\frac{{@plkv@} \times ({@solv@})^2 \times
     {@hfcs@}^3 \times {@elms@}^2} {({@hfcv@})^3 \times ({@elmv@})^2 \times {@plks@}
     \times {@sols@}^2]\right) {@mtrs@}^2\;{@secs@}
-  temp: kg^-1 m^-2 s^3 A^2
 - URI: sievert
   prefLabel_fr: sievert
   prefLabel_en: sievert
   Symbol: Sv
   hasDefiningResolution: CGPM16-Res5
   UnitOfQtyKind: DOEQ
-  inOtherSIUnits: '@jles@/@kgms@'
-  inBaseSIUnits: '{@mtrs@}^2\;{@secs@}^{-2}'
+  inOtherSIUnits:
+    - [joule, 1]
+    - [kilogram, -1]
+  inBaseSIUnits:
+    - [metre, 2]
+    - [second, -2]
   hasDefiningEquation: 1\;{@sevs@} = \left(\frac{{@sols@}^2 \times {@hfcs@}^2}{({@solv@})^2
     \times ({@hfcv@})^2}\right) {@secs@}^2
-  temp: m^2 s^-2
 - URI: steradian
   prefLabel_fr: stéradian
   prefLabel_en: steradian
   Symbol: sr
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ANGS
-  inOtherSIUnits:
-  inBaseSIUnits: '{@mtrs@}^2/{@mtrs@}^2'
+  inBaseSIUnits:
+    - [metre, 2]
+    - [metre, -2]
   hasDefiningEquation:
-  temp:
 - URI: tesla
   prefLabel_fr: tesla
   prefLabel_en: tesla
   Symbol: T
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: MGFD
-  inOtherSIUnits: '@webs@/@mtrs@^2'
-  inBaseSIUnits: '{@mtrs@}^2\;{@secs@}^{-2}\;{@amps@}^{-1}'
+  inOtherSIUnits:
+    - [weber, 1]
+    - [metre, -2]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [second, -2]
+    - [ampere, -1]
   hasDefiningEquation: 1\;{@tess@} = \left(\frac{@elmv@ \times {@plks@}  \times {@hfcs@}^2}{{@plkv@}  \times
     ({@hfcv@})^2 \times @elms@}\right) {@mtrs@}^{-2}\;{@secs@}^2
-  temp: kg s^-2 A^-1
 - URI: volt
   prefLabel_fr: volt
   prefLabel_en: volt
   Symbol: V
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ELPD
-  inOtherSIUnits: '@wats@/@amps@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}\;{@amps@}^{-1}'
+  inOtherSIUnits:
+    - [watt, 1]
+    - [ampere, -1]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -3]
+    - [ampere, -1]
   hasDefiningEquation: 1\;{@vlts@} = \left(\frac{@elmv@ \times {@plks@} \times {@sols@}^2
     \times {@hfcs@}^3}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^3 \times @elms@}\right)
     {@mtrs@}^{-2}\;{@secs@}^4
-  temp: kg m^2 s^-3 A^-1
 - URI: watt
   prefLabel_fr: watt
   prefLabel_en: watt
   Symbol: W
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: POWR
-  inOtherSIUnits: '@jles@/@secs@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}'
+  inOtherSIUnits:
+    - [joule, 1]
+    - [second, -1]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -3]  
   hasDefiningEquation: 1\;{@wats@} = \left(\frac{{@plks@} \times {@sols@}^2 \times
     {@hfcs@}^3}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^3}\right) {@mtrs@}^{-2}\;{@secs@}^3
-  temp: kg m^2 s^-3
 - URI: weber
   prefLabel_fr: weber
   prefLabel_en: weber
   Symbol: Wb
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: MGFL
-  inOtherSIUnits: '@vlts@\;@secs@'
-  inBaseSIUnits: '{@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}\;{@amps@}^{-1}'
+  inOtherSIUnits:
+    - [volt, 1]
+    - [second, 1]
+  inBaseSIUnits:
+    - [kilogram, 1]
+    - [metre, 2]
+    - [second, -2]
+    - [ampere, -1]
   hasDefiningEquation: 1\;{@webs@} = \left(\frac{@elmv@ \times {@plks@} \times {@sols@}^2
     \times {@hfcs@}^2}{{@plkv@} \times ({@solv@})^2 \times ({@hfcv@})^2 \times @elms@}\right)
     {@mtrs@}^{-2}\;{@secs@}^4
-  temp: kg m^2 s^-2 A^-1

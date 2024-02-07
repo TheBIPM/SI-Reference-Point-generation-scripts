@@ -547,17 +547,11 @@ def main():
             )
 
             if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
-                #g, node = insert_unit_expr(
-                #    g, sisp["inOtherSIUnits"], PDF, "inOtherSIUnits"
-                #)
                 g, node = transform_to_graph(sisp["inOtherSIUnits"],
                                              PDF, g, symbols)
                 g.add((element, PDF.inOtherSIUnits, node))
 
             if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
-                #g, node = insert_unit_expr(
-                #    g, sisp["inBaseSIUnits"], PDF, "inBaseSIUnits"
-                #)
                 g, node = transform_to_graph(sisp["inBaseSIUnits"],
                                              PDF, g, symbols)
                 g.add((element, PDF.inBaseSIUnits, node))
@@ -655,9 +649,8 @@ def main():
                 hasUnitTerm = PDF.set_uri("hasUnitTerm")
                 hasNumericFactor = PDF.set_uri("hasNumericFactor")
                 conversion_factor = Literal(nsi["ConversionFactor"])
-                g, conversion_unit = insert_unit_expr(
-                    g, nsi["ConversionUnit"], PDF, syntax_type="inBaseSIUnits"
-                )
+                g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
+                                                        PDF, g, symbols)
                 g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
                 g.add((unit_multiple, hasUnitTerm, conversion_unit))
                 g.add((unit_multiple, hasNumericFactor, conversion_factor))
