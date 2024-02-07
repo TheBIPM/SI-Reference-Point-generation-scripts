@@ -134,19 +134,25 @@ def transform_to_graph(expression, PDF, graph, symbols):
             graph.add((expr_node, hasRTerm, node))
 
         elif "exp" in expression.keys():
-            # set type of expression node
-            graph.add((expr_node, RDF.type, PDF.set_uri("UnitPower")))
+            if expression["exp"][1] == 1:
+                # This is not really a unitPower
+                graph, expr_node = transform_to_graph(
+                    expression["exp"][0], PDF, graph, symbols)
+                return graph, expr_node
+            else:
+                # set type of expression node
+                graph.add((expr_node, RDF.type, PDF.set_uri("UnitPower")))
 
-            # shortnames
-            hasBase = PDF.set_uri("hasUnitBase")
-            hasExponent = PDF.set_uri("hasNumericExponent")
+                # shortnames
+                hasBase = PDF.set_uri("hasUnitBase")
+                hasExponent = PDF.set_uri("hasNumericExponent")
 
-            # insert base and exponent
-            graph, node = transform_to_graph(expression["exp"][0],
-                                             PDF, graph, symbols)
-            exponent = Literal(expression["exp"][1])
-            graph.add((expr_node, hasBase, node))
-            graph.add((expr_node, hasExponent, exponent))
+                # insert base and exponent
+                graph, node = transform_to_graph(expression["exp"][0],
+                                                 PDF, graph, symbols)
+                exponent = Literal(expression["exp"][1])
+                graph.add((expr_node, hasBase, node))
+                graph.add((expr_node, hasExponent, exponent))
 
         else:
             raise ValueError(
@@ -214,6 +220,11 @@ def main():
     # copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
         g.bind(key, val)
+
+    # load symbols
+    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
+              encoding="utf8") as fp:
+        symbols = yaml.safe_load(fp)
 
     # Annotations to the ontology (name, Version number)
     g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
@@ -535,21 +546,21 @@ def main():
                 )
             )
 
-            if sisp["inOtherSIUnits"]:
-                g, node = insert_unit_expr(
-                    g, sisp["inOtherSIUnits"], PDF, "inOtherSIUnits"
-                )
+            if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
+                #g, node = insert_unit_expr(
+                #    g, sisp["inOtherSIUnits"], PDF, "inOtherSIUnits"
+                #)
+                g, node = transform_to_graph(sisp["inOtherSIUnits"],
+                                             PDF, g, symbols)
                 g.add((element, PDF.inOtherSIUnits, node))
-                tmp = sf.formattxt(sisp["inOtherSIUnits"], "latex", add_delim=False)
-                # g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
 
-            if sisp["inBaseSIUnits"]:
-                g, node = insert_unit_expr(
-                    g, sisp["inBaseSIUnits"], PDF, "inBaseSIUnits"
-                )
+            if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
+                #g, node = insert_unit_expr(
+                #    g, sisp["inBaseSIUnits"], PDF, "inBaseSIUnits"
+                #)
+                g, node = transform_to_graph(sisp["inBaseSIUnits"],
+                                             PDF, g, symbols)
                 g.add((element, PDF.inBaseSIUnits, node))
-                tmp = sf.formattxt(sisp["inBaseSIUnits"], "latex", add_delim=False)
-                # g.add((node, RDFS.comment, Literal(tmp, datatype=XSD.string)))
 
             if sisp["hasDefiningEquation"]:
                 g.add(
