@@ -69,6 +69,17 @@ def nest_mult(expr):
 
 
 def transform_to_graph(expression, PDF, graph, symbols):
+    """ Tranform any "unit expression" into a graph
+
+    Accepts dicts, strings, lists
+    """
+
+    if isinstance(expression, list):
+        # turn into a dict
+        tmp_expr = {"mult": []}
+        for item in expression:
+            tmp_expr['mult'].append({"exp": [item[0], item[1]]})
+        expression = tmp_expr
     expr_node = BNode()
 
     if isinstance(expression, str):
@@ -90,7 +101,9 @@ def transform_to_graph(expression, PDF, graph, symbols):
                     expr_node = PDF.set_unit_uri(expression)
                     found_uri = True
             if not found_uri:
-                logging.error(
+                # Trust input but issue a warning
+                expr_node = PDF.set_unit_uri(expression)
+                logging.warning(
                     'no URI found found for expression: {}'.format(expression))
 
     elif isinstance(expression, dict):

@@ -61,8 +61,8 @@ def main():
 
     file_generator = {
         'si': CUQ_TBox.main,
-        'quantities': Quantities_ABox.main,
         'units': Units_ABox.main,
+        'quantities': Quantities_ABox.main,
         'constants': Constants_ABox.main,
         'prefixes': Prefixes_ABox.main,
         'decisions': Decisions_ABox.main,
