@@ -63,22 +63,6 @@ aoss:
   text:
   html: ''
   json: ''
-arcm:
-  name_en: arcminute
-  name_fr: ''
-  type: symbol
-  latex: ^{\prime}
-  text:
-  html: ''
-  json: ''
-arcs:
-  name_en: arcsecond
-  name_fr: ''
-  type: symbol
-  latex: ^{\prime \prime}
-  text:
-  html: ''
-  json: ''
 avos:
   name_en: Avogadro constant symbol
   name_fr: ''

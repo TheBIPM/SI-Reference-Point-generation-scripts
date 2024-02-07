@@ -41,7 +41,7 @@
 - URI: arcminute
   prefLabel_fr: arcminute
   prefLabel_en: arcminute
-  Symbol: '@arcm@'
+  Symbol: ′
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.000290888208665722
   ConversionUnit: '{@rads@}'
@@ -49,7 +49,7 @@
 - URI: arcsecond
   prefLabel_fr: arcseconde
   prefLabel_en: arcsecond
-  Symbol: '@arcs@'
+  Symbol: ″
   UnitOfQtyKind: ANGP
   ConversionFactor: 4.84813681109536e-06
   ConversionUnit: '{@rads@}'
