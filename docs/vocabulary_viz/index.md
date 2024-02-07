@@ -24,7 +24,7 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 * dcterms:created
 
 
-    * 2024-01-26
+    * 2024-02-07
 
 
 * rdf:type
@@ -53,17 +53,17 @@ _Vocabulary: [http://si-digital-framework.org/SI#](index.md)_
 
 * Ontologies: **1**
 
-* Triples: **442**
+* Triples: **460**
 
 * Classes: **24**
 
-* Properties: **47**
+* Properties: **46**
 
 * Annotation Properties: **0**
 
 * Object Properties: **25**
 
-* Datatype Properties: **22**
+* Datatype Properties: **21**
 
 * Skos Concepts: **0**
 
@@ -237,7 +237,7 @@ Prefix   | URI      |
 
 
 
-#### Datatype Properties (22)
+#### Datatype Properties (21)
 
 
 - [si:correspondingResolution](prop-sicorrespondingresolution.md "Open")
@@ -270,8 +270,6 @@ Prefix   | URI      |
 
 - [si:hasTarget](prop-sihastarget.md "Open")
 
-- [si:hasUnitAsString](prop-sihasunitasstring.md "Open")
-
 - [si:hasUnitTypeAsString](prop-sihasunittypeasstring.md "Open")
 
 - [si:hasUpdatedDate](prop-sihasupdateddate.md "Open")
@@ -301,4 +299,4 @@ Prefix   | URI      |
 
 ---
 
-_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Wed, 07 Feb 2024 16:02:36 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

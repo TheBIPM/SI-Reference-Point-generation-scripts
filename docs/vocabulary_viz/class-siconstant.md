@@ -65,7 +65,6 @@ si:Constant a owl:Class ;
 
 | Property | Description | Expected Type |
 |----------|-------------|---------------|
-| [si:hasUnitAsString](prop-sihasunitasstring.md) |  |[xsd:string](class-xsdstring.md)|
 | [si:hasUpdatedDate](prop-sihasupdateddate.md) |  |[xsd:date](class-xsddate.md)|
 | [si:hasValue](prop-sihasvalue.md) |  |[rdfs:Literal](class-rdfsliteral.md)|
 | [si:hasValueAsString](prop-sihasvalueasstring.md) |  |[xsd:string](class-xsdstring.md)|
@@ -79,7 +78,6 @@ si:Constant a owl:Class ;
 | [si:hasQuantityTerm](prop-sihasquantityterm.md) |  |*owl:Thing*|
 | [si:hasSymbol](prop-sihassymbol.md) | Linking a measurement unit or prefix to a symbol. |[xsd:string](class-xsdstring.md)|
 | [si:hasTerm](prop-sihasterm.md) |  |*owl:Thing*|
-| [si:hasUnit](prop-sihasunit.md) | Linking a measurement unit to an object. |[si:MeasurementUnit](class-simeasurementunit.md)|
 | [si:hasUnitTerm](prop-sihasunitterm.md) |  |*owl:Thing*|
 | [si:inBaseSIUnits](prop-siinbasesiunits.md) |  |[si:MeasurementUnit](class-simeasurementunit.md)|
 | [si:inOtherSIUnits](prop-siinothersiunits.md) |  |[si:MeasurementUnit](class-simeasurementunit.md)|
@@ -96,4 +94,4 @@ si:Constant a owl:Class ;
 
 ---
 
-_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Wed, 07 Feb 2024 16:02:36 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

@@ -39,7 +39,7 @@ owl:Thing
 #### Usage
 
 
-[n0fe14176d0b84ad0ae63b0a583714332b15](entity-n0fe14176d0b84ad0ae63b0a583714332b15.md)
+[na38f2c0b404d4008bcfb1c25887fbc6bb23](entity-na38f2c0b404d4008bcfb1c25887fbc6bb23.md)
 =&gt;&nbsp;_si:hasDefiningResolution_&nbsp;=&gt;&nbsp;[rb:Resolution](class-rbresolution.md)
 
 #### Implementation
@@ -71,4 +71,4 @@ si:hasDefiningResolution a owl:ObjectProperty ;
 
 ---
 
-_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Wed, 07 Feb 2024 16:02:36 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

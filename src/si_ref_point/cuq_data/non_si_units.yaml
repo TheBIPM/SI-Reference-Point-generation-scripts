@@ -33,7 +33,7 @@
 - URI: degree
   prefLabel_fr: degré
   prefLabel_en: degree
-  Symbol: '@circ@'
+  Symbol: °
   UnitOfQtyKind: ANGP
   ConversionFactor: 0.0174532925199433
   ConversionUnit: radian

@@ -48,7 +48,7 @@ owl:Thing=&gt;&nbsp;_si:hasSymbol_&nbsp;=&gt;&nbsp;[xsd:string](class-xsdstring.
 
 si:hasSymbol a owl:DatatypeProperty ;
     rdfs:label "has symbol"@en,
-        "a un symbole"@fr ;
+        "a pour symbole"@fr ;
     rdfs:comment "Linking a measurement unit or prefix to a symbol."@en,
         "Associer une unité de mesure ou un préfixe à un symbole."@fr ;
     rdfs:range xsd:string .
@@ -66,4 +66,4 @@ si:hasSymbol a owl:DatatypeProperty ;
 
 ---
 
-_Documentation automatically generated on Fri, 26 Jan 2024 15:50:19 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_
+_Documentation automatically generated on Wed, 07 Feb 2024 16:02:36 with [Ontospy](http://lambdamusic.github.io/Ontospy/ "Open") (v2.1.1)_

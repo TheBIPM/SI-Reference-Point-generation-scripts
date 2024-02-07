@@ -152,9 +152,9 @@ def main(APIPATH):
 
 def parse_multi(g, nodeID):
     for s, p, o in g.triples((nodeID, None, None)):
-        if "owl#oneOf" in str(p):
+        items = []
+        if "owl#oneOf" in str(p) or "owl#unionOf" in str(p):
             next_node = o
-            items = []
             next_node_string = ""
             while next_node_string != "rdf:nil":
                 for s2, p2, o2 in g.triples((next_node, RDF.first, None)):
