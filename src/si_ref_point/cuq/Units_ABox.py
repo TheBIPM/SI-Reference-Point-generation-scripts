@@ -166,52 +166,6 @@ def transform_to_graph(expression, PDF, graph, symbols):
 
     return graph, expr_node
 
-def insert_unit_expr(g, txt_expression, PDF, syntax_type="inOtherSIUnits"):
-    # define syntax style
-    if syntax_type == "inOtherSIUnits":
-        sx = {
-            "division": "/",
-            "times": "\\;",
-            "exponent": r"\^[-0-9]+",
-            "exp_number": r"\^([-0-9]+)",
-            "variable": "@[a-z]+@",
-            "var_name": "@([a-z]+)@",
-        }
-
-    elif syntax_type == "inBaseSIUnits":
-        # TODO: untested
-        sx = {
-            "division": "/",  # not used
-            "times": "\\;",
-            "exponent": r"\^[\{]?[-0-9]+[\}]?",
-            "exp_number": r"\^[\{]?([-0-9]+)[\}]?",
-            "variable": r"\{@[a-z]+@\}",
-            "var_name": r"\{@([a-z]+)@\}",
-        }
-
-    else:
-        ValueError(f"Unknown syntax type '{syntax_type}'.")
-
-    # parse txt into fragments
-    expression_atoms = re.compile(
-        f'({sx["variable"]}|{sx["division"]}|{sx["times"]}|{sx["exponent"]})'
-    )
-    fragments = re.findall(expression_atoms, txt_expression)
-
-    # extract factors / division / exponents from fragments
-    expression = parse_fragments(fragments, syntax=sx)
-
-    # transform into RDF triples via lookup from symbols
-    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"), encoding="utf8") as fp:
-        symbols = yaml.safe_load(fp)
-    g, node = transform_to_graph(expression, PDF, graph=g, symbols=symbols)
-
-    # print(txt_expression)
-    # print(expression)
-    # print("=" * 30)
-
-    return g, node
-
 
 def main():
     PDF = SiElements()
