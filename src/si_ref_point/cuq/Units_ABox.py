@@ -6,11 +6,10 @@ from rdflib import URIRef, BNode, Graph, Literal
 from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
 from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
+import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
-import si_ref_point.cuq.symbols_format as sf
-import logging
 
 
 def nest_mult(expr):
@@ -32,10 +31,28 @@ def nest_mult(expr):
                          nest_mult({'mult': right_term})]}
 
 
-def transform_to_graph(expression, PDF, graph, symbols):
+def transform_to_graph(expression, PDF, graph):
     """ Tranform any "unit expression" into a graph
 
-    Accepts dicts, strings, lists
+    Accepts dicts, strings, lists.
+
+    Returns : rdflib.Graph, rdflib.Bnode
+
+    For representing m/s, for example
+
+    Dicts will be expected to be like
+    {"mult": [{"exp": ["metre", 1]}, {"exp": ["second", -1]}]
+
+    Lists will be expected to be like :
+    [["metre", 1], ["second", -1]
+    (this allows more compact notation in source YAML files
+
+    Strings will be considered to represent a single unit, and turned into an
+    URI.
+
+
+    This function calls itself in order to walk the tree of nested UnitProduct
+    and UnitPower objects.
     """
 
     if isinstance(expression, list):
@@ -47,35 +64,14 @@ def transform_to_graph(expression, PDF, graph, symbols):
     expr_node = BNode()
 
     if isinstance(expression, str):
-        # default
-        expr_node = Literal(expression)
-
-        # check if lookup possible
-        if expression in symbols.keys():
-            if "uri" in symbols[expression]:
-                unit_short_uri = symbols[expression]["uri"]
-                unit_name = unit_short_uri.split(":")[1]
-                expr_node = PDF.set_unit_uri(unit_name)
-        else:
-            # look by uri
-            found_uri = False
-            for code, values in symbols.items():
-                if ('uri' in values.keys() and
-                    'units:{}'.format(expression) == values['uri']):
-                    expr_node = PDF.set_unit_uri(expression)
-                    found_uri = True
-            if not found_uri:
-                # Trust input but issue a warning
-                expr_node = PDF.set_unit_uri(expression)
-                logging.warning(
-                    'no URI found found for expression: {}'.format(expression))
+        expr_node = PDF.set_unit_uri(expression)
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
             if len(expression["mult"]) == 1:
                 # This is not really a product...
                 graph, expr_node = transform_to_graph(
-                    expression["mult"][0], PDF, graph, symbols)
+                    expression["mult"][0], PDF, graph)
                 return graph, expr_node
 
             # Rearrange products into binary tree (i.e. nested "mult" with
@@ -91,17 +87,17 @@ def transform_to_graph(expression, PDF, graph, symbols):
 
             # insert factors
             graph, node = transform_to_graph(expression["mult"][0],
-                                             PDF, graph, symbols)
+                                             PDF, graph)
             graph.add((expr_node, hasLTerm, node))
             graph, node = transform_to_graph(expression["mult"][1],
-                                             PDF, graph, symbols)
+                                             PDF, graph)
             graph.add((expr_node, hasRTerm, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] == 1:
                 # This is not really a unitPower
                 graph, expr_node = transform_to_graph(
-                    expression["exp"][0], PDF, graph, symbols)
+                    expression["exp"][0], PDF, graph)
                 return graph, expr_node
             else:
                 # set type of expression node
@@ -113,7 +109,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
 
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
-                                                 PDF, graph, symbols)
+                                                 PDF, graph)
                 exponent = Literal(expression["exp"][1], datatype=XSD.short)
                 graph.add((expr_node, hasBase, node))
                 graph.add((expr_node, hasExponent, exponent))
@@ -125,7 +121,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
 
     else:
         raise ValueError(
-            f"Expecting either a string or dict. Got '{type(expression)}'."
+            f"Expecting either a string, a list or dict. Got '{type(expression)}'."
         )
 
     return graph, expr_node
@@ -138,11 +134,6 @@ def main():
     # copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
         g.bind(key, val)
-
-    # load symbols
-    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
-              encoding="utf8") as fp:
-        symbols = yaml.safe_load(fp)
 
     # Annotations to the ontology (name, Version number)
     g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
@@ -466,12 +457,12 @@ def main():
 
             if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
                 g, node = transform_to_graph(sisp["inOtherSIUnits"],
-                                             PDF, g, symbols)
+                                             PDF, g)
                 g.add((element, PDF.inOtherSIUnits, node))
 
             if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
                 g, node = transform_to_graph(sisp["inBaseSIUnits"],
-                                             PDF, g, symbols)
+                                             PDF, g)
                 g.add((element, PDF.inBaseSIUnits, node))
 
             if sisp["hasDefiningEquation"]:
@@ -568,7 +559,7 @@ def main():
                 hasNumericFactor = PDF.set_uri("hasNumericFactor")
                 conversion_factor = Literal(nsi["ConversionFactor"])
                 g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
-                                                        PDF, g, symbols)
+                                                        PDF, g)
                 g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
                 g.add((unit_multiple, hasUnitTerm, conversion_unit))
                 g.add((unit_multiple, hasNumericFactor, conversion_factor))

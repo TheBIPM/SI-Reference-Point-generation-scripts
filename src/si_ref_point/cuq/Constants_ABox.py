@@ -32,11 +32,6 @@ def main():
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
 
-    # Needed to use the "transform_to_graph" function
-    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
-              encoding="utf8") as fp:
-        symbols = yaml.safe_load(fp)
-
     for cst in cst_list:
         element = PDF.set_constant_uri(cst['id'])
         g.add((element, RDF.type, PDF.Constant))
@@ -51,7 +46,7 @@ def main():
                 cmpnd_unit = {"mult": []}
                 for item in cst['unit']:
                     cmpnd_unit['mult'].append({"exp": [item[0], item[1]]})
-                g, cmpnd_node = transform_to_graph(cmpnd_unit, PDF, g, symbols)
+                g, cmpnd_node = transform_to_graph(cmpnd_unit, PDF, g)
                 g.add((element, PDF.hasUnit, cmpnd_node))
             else:
                 g.add((element, PDF.hasUnit, PDF.set_unit_uri(cst['unit'])))

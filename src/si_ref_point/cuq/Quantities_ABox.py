@@ -16,11 +16,6 @@ def main():
     PDF = SiElements()
     g = Graph()
 
-    # Needed to use the "transform_to_graph" function
-    with open(os.path.join(CUQ_FILES_FOLDER, "symbols.yaml"),
-              encoding="utf8") as fp:
-        symbols = yaml.safe_load(fp)
-
     # copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
         g.bind(key, val)
@@ -49,6 +44,6 @@ def main():
         g.add((element, SKOS.altLabel, Literal(qty['identifier'],
                                                datatype=XSD.string)))
         if 'Unit' in qty and qty['Unit'] is not None:
-            g, cmpnd_node = transform_to_graph(qty['Unit'], PDF, g, symbols)
+            g, cmpnd_node = transform_to_graph(qty['Unit'], PDF, g)
             g.add((element, PDF.hasUnit, cmpnd_node))
     return g
