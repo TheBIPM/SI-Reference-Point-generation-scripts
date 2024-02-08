@@ -150,7 +150,7 @@ def transform_to_graph(expression, PDF, graph, symbols):
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
                                                  PDF, graph, symbols)
-                exponent = Literal(expression["exp"][1])
+                exponent = Literal(expression["exp"][1], datatype=XSD.short)
                 graph.add((expr_node, hasBase, node))
                 graph.add((expr_node, hasExponent, exponent))
 

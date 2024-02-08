@@ -83,7 +83,7 @@ si:hasNumericExponent a owl:DatatypeProperty ;
         "a pour exposant ce nombre"@fr ;
     rdfs:comment "UnitBase ^ NumericExponent" ;
     rdfs:domain si:UnitPower;
-    rdfs:range xsd:int .
+    rdfs:range xsd:short .
 
 si:hasQuantityBase a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasBase ;
