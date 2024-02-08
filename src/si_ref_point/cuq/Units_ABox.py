@@ -322,7 +322,9 @@ def main():
                         element,
                         PDF.hasDefiningText,
                         Literal(
-                            sf.formattxt(bdef["hasDefiningText_fr"], "latex"), lang="fr"
+                            sf.formattxt(bdef["hasDefiningText_fr"],
+                                         "latex",
+                                         add_delim=True), lang="fr"
                         ),
                     )
                 )
@@ -332,7 +334,9 @@ def main():
                         element,
                         PDF.hasDefiningText,
                         Literal(
-                            sf.formattxt(bdef["hasDefiningText_en"], "latex"), lang="en"
+                            sf.formattxt(bdef["hasDefiningText_en"],
+                                         "latex",
+                                         add_delim=True), lang="en"
                         ),
                     )
                 )
@@ -398,14 +402,16 @@ def main():
                         (
                             notenode,
                             PDF.hasNoteText,
-                            Literal(sf.formattxt(note["note_en"], "latex"), lang="en"),
+                            Literal(sf.formattxt(note["note_en"], "latex",
+                                                 add_delim=True), lang="en"),
                         )
                     )
                     g.add(
                         (
                             notenode,
                             PDF.hasNoteText,
-                            Literal(sf.formattxt(note["note_fr"], "latex"), lang="fr"),
+                            Literal(sf.formattxt(note["note_fr"], "latex",
+                                                 add_delim=True), lang="fr"),
                         )
                     )
 
@@ -437,7 +443,7 @@ def main():
                 (
                     element,
                     PDF.hasSymbol,
-                    Literal(sf.formattxt(sisp["Symbol"], "latex"), datatype=XSD.string),
+                    Literal(sisp["Symbol"], datatype=XSD.string),
                 )
             )
             g.add(
@@ -522,7 +528,7 @@ def main():
                 (
                     element,
                     PDF.hasSymbol,
-                    Literal(sf.formattxt(nsi["Symbol"], "latex"), datatype=XSD.string),
+                    Literal(nsi["Symbol"], datatype=XSD.string),
                 )
             )
             if "AltSymbol" in nsi:
@@ -530,8 +536,7 @@ def main():
                     (
                         element,
                         PDF.hasAltSymbol,
-                        Literal(sf.formattxt(nsi["AltSymbol"], "latex"),
-                                datatype=XSD.string),
+                        Literal(nsi["AltSymbol"], datatype=XSD.string),
                     )
                 )
 

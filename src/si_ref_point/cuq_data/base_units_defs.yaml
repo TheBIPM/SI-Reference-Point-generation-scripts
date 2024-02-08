@@ -1,7 +1,7 @@
 - URI: ampere1948
   prefLabel_fr: ampère1948
   prefLabel_en: ampere1948
-  hasStartValidity: '1948-05-20'
+  hasStartValidity: '1948-01-01'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: L’ampère est l’intensité d’un courant constant qui, maintenu
     dans deux conducteurs parallèles, rectilignes, de longueur infinie, de section
@@ -38,7 +38,7 @@
 - URI: candela1979
   prefLabel_fr: candela1979
   prefLabel_en: candela1979
-  hasStartValidity: '1979-05-20'
+  hasStartValidity: '1979-10-11'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: La candela est l’intensité lumineuse, dans une direction donnée,
     d’une source qui émet un rayonnement monochromatique de fréquence @morv@ hertz
@@ -76,7 +76,7 @@
 - URI: kelvin1967
   prefLabel_fr: kelvin1967
   prefLabel_en: kelvin1967
-  hasStartValidity: '1967-05-20'
+  hasStartValidity: '1967-10-13'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: Le kelvin, unité de température thermodynamique, est la fraction
     @celi@ de la température thermodynamique du point triple de l'eau.
@@ -144,7 +144,7 @@
   prefLabel_fr: mètre1889
   prefLabel_en: metre1889
   hasStartValidity: '1889-05-20'
-  hasEndValidity: '1927-05-19'
+  hasEndValidity: '1927-09-29'
   hasDefiningText_fr: La CGPM sanctionne le Prototype du mètre choisi par le Comité
     international. Ce prototype représentera désormais, à la température de la glace
     fondante, l'unité métrique de longueur.
@@ -159,8 +159,8 @@
 - URI: metre1927
   prefLabel_fr: mètre1927
   prefLabel_en: metre1927
-  hasStartValidity: '1927-05-20'
-  hasEndValidity: '1960-05-19'
+  hasStartValidity: '1927-09-30'
+  hasEndValidity: '1960-10-13'
   hasDefiningText_fr: L'unité de longueur est le mètre, défini par la distance, à
     @zdeg@, des axes des deux traits médians tracés sur la barre de platine iridié
     déposée au Bureau international des poids et mesures, et déclarée Prototype du
@@ -183,8 +183,8 @@
 - URI: metre1960
   prefLabel_fr: mètre1960
   prefLabel_en: metre1960
-  hasStartValidity: '1960-05-20'
-  hasEndValidity: '1983-05-19'
+  hasStartValidity: '1960-10-14'
+  hasEndValidity: '1983-10-16'
   hasDefiningText_fr: Le mètre est la longueur égale à @mvwv@ longueurs d'onde dans
     le vide de la radiation correspondant à la transition entre les niveaux @porb@
     et @dorb@ de l'atome de krypton 86.
@@ -199,7 +199,7 @@
 - URI: metre1983
   prefLabel_fr: mètre1983
   prefLabel_en: metre1983
-  hasStartValidity: '1983-05-20'
+  hasStartValidity: '1983-10-17'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: Le mètre est la longueur du trajet parcouru dans le vide par
     la lumière pendant une durée de @soli@ de seconde.
@@ -232,7 +232,7 @@
 - URI: mole1971
   prefLabel_fr: mole1971
   prefLabel_en: mole1971
-  hasStartValidity: '1971-05-20'
+  hasStartValidity: '1971-10-04'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: 1. La mole est la quantité de matière d’un système contenant
     autant d’entités élémentaires qu’il y a d’atomes dans 0,012 kilogramme de carbone
@@ -276,8 +276,8 @@
 - URI: second1960
   prefLabel_fr: seconde1960
   prefLabel_en: second1960
-  hasStartValidity: '1960-05-20'
-  hasEndValidity: '1967-05-19'
+  hasStartValidity: '1960-10-18'
+  hasEndValidity: '1967-10-12'
   hasDefiningText_fr: La seconde est la fraction @secf@ de l'année tropique pour 1900
     janvier 0 à 12 heures de temps des éphémérides.
   hasDefiningText_en: The second is the fraction @secf@ of the tropical year for 1900
@@ -290,7 +290,7 @@
 - URI: second1967
   prefLabel_fr: seconde1967
   prefLabel_en: second1967
-  hasStartValidity: '1967-05-20'
+  hasStartValidity: '1967-10-13'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: La seconde est la durée de @hfcv@ périodes de la radiation correspondant
     à la transition entre les deux niveaux hyperfins de l’état fondamental de l’atome

@@ -45,4 +45,8 @@ def formattxt(txt, fmt='latex', add_delim=True):
         if add_delim:
             replacement = delim[fmt][0] + replacement + delim[fmt][1]
         txt = txt.replace(f"@{symcode}@", replacement)
+        # merge possible \[$ ... $\]
+        txt = txt.replace("\\[$", "\\[")
+        txt = txt.replace("$\\]", "\\]")
+
     return txt
