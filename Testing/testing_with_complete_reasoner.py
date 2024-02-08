@@ -10,16 +10,16 @@ do_OWLRL_completion = True  # rule based semantics reasoner
 do_OWLDL_completion = (
     not do_OWLRL_completion  # direct semantics reasoner, HermiT/Pellet is used
 )
-do_OWLDL_with_Pellet = True 
+do_OWLDL_with_Pellet = True
 
 knowledge_bases = {
     #"test": {"path": "testing.ttl", "format": "ttl"},
-    "si_base": {"path": "build/si.ttl", "format": "ttl"},
-    "units": {"path": "build/units.ttl", "format": "ttl"},
-    "quantities": {"path": "build/quantities.ttl", "format": "ttl"},
-    "prefixes": {"path": "build/prefixes.ttl", "format": "ttl"},
-    "constants": {"path": "build/constants.ttl", "format": "ttl"},
-    "examples": {"path": "examples.ttl", "format": "ttl"},
+    "si_base": {"path": "../TTL/si.ttl", "format": "ttl"},
+    "units": {"path": "../TTL/units.ttl", "format": "ttl"},
+    "quantities": {"path": "../TTL/quantities.ttl", "format": "ttl"},
+    "prefixes": {"path": "../TTL/prefixes.ttl", "format": "ttl"},
+    "constants": {"path": "../TTL/constants.ttl", "format": "ttl"},
+    "examples": {"path": "./examples.ttl", "format": "ttl"},
 }
 
 
@@ -37,7 +37,7 @@ if do_RDFS_completion:
     # remove injected rdfs:Resource types (otherwise Pellet reasoner throws warnings)
     for s, p, o in g_rdf.triples((None, RDF.type, RDFS.Resource)):
         g_rdf.remove((s, p, o))
-    
+
     # remove injected rdf:Property (otherwise HermiT reasoner throws error)
     for s, p, o in g_rdf.triples((None, RDF.type, RDF.Property)):
         g_rdf.remove((s, p, o))
