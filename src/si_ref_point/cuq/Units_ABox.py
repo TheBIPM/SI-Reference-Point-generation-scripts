@@ -9,44 +9,8 @@ from datetime import date
 from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
-import re
 import si_ref_point.cuq.symbols_format as sf
 import logging
-
-
-def parse_fragments(fragments, syntax):
-    expression = {"mult": []}
-
-    for i, frag in enumerate(fragments):
-        not_last_fragment = i < len(fragments) - 1
-
-        if re.fullmatch(syntax["variable"], frag):
-            # get variable name
-            var_name = re.findall(syntax["var_name"], frag)[0]
-
-            if not_last_fragment:
-                # check if next fragment indicates exponentiation
-                if re.fullmatch(syntax["exponent"], fragments[i + 1]):
-                    exp_number = re.findall(syntax["exp_number"],
-                                            fragments[i + 1])[0]
-                    expression["mult"].append({"exp": [var_name, exp_number]})
-                else:
-                    expression["mult"].append(var_name)
-            else:
-                expression["mult"].append(var_name)
-
-        if re.fullmatch(syntax["division"], frag):
-            if not_last_fragment:
-                # represent division as exponentiation
-                div_expr = parse_fragments(fragments[i + 1:], syntax)
-                expression["mult"].append({"exp": [div_expr, "-1"]})
-                break
-
-    # reduce expression, if only one factor
-    if len(expression["mult"]) == 1:
-        expression = expression["mult"][0]
-
-    return expression
 
 
 def nest_mult(expr):
