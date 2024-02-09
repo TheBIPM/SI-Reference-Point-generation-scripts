@@ -179,6 +179,7 @@ classDiagram
 	`si:UnitProduct` --o `si:MeasurementUnit`
 	`si:nonSIUnit` --o `xsd:Boolean`
 	`si:nonSIUnit` --o `rdfs:Literal`
+ }
 ```
 
 
