@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-The [SI Reference Point](http://62.161.69.201:8080/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more detailed description of the Application Programming Interface (API) and underlying knowledge graph files is provided on our GitHub site (see Annex 1).
+The [SI Reference Point](http://si-digital-framework.org/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more detailed description of the Application Programming Interface (API) and underlying knowledge graph files is provided on our GitHub site (see Annex 1).
 
 The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
@@ -14,18 +14,18 @@ The present document is structured as follows:
 ## 2. Information contained in the SI Reference Point
 
 The SI Reference Point is based on five main pillars, or knowledge graphs:
-1. **[SI/units](http://172.16.124.201:8080/SI/units)**
+1. **[SI/units](http://si-digital-framework.org/SI/units)**
     * SI base units (Table 2 of [2])
     * SI derived units with special names (Table 4 of [2])
     * Non-SI units allowed for use with the SI (Table 8 of [2])
     * Compound units (the examples given in Tables 5 and 6 of [2] plus additional examples from the BIPM key comparison database (KCDB))
-1. **[SI/prefixes](http://172.16.124.201:8080/SI/prefixes)**
+1. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
     * SI prefixes (Table 7 of [2])
-1. **[SI/decisions](http://172.16.124.201:8080/SI/decisions)**
+1. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
     * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
-1. **[Constants](http://172.16.124.201:8080/constants)**
+1. **[Constants](http://si-digital-framework.org/constants)**
     * Initially the 7 defining constants of the SI (Table 1 of [2])
-1.	**[Quantities](http://172.16.124.201:8080/quantities)**
+1.	**[Quantities](http://si-digital-framework,org/quantities)**
     * SI base quantities (Table 3 of [2])
     * Other example quantities (Tables 5 and 6 of [2])
     * Other quantities in the BIPM key comparison database (KCDB))
@@ -56,10 +56,9 @@ A tool is provided to allow for machine-encoding and interpretation of prefixed 
 
 The information contained in the nine editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
 
-[si-digital-framework.org/SI](http://62.161.69.201:8080/SI) 
+[si-digital-framework.org/SI](http://si-digital-framework.org/SI) 
 
-
-Figure 1 below shows the data models developed for this purpose. For a full list of the classes and predicates please refer to the GitHub site (see Annex 1).
+The figure below shows the data model developed for this purpose. For a full list of the classes and predicates please refer to the GitHub site (see Annex 1).
 
 '''mermaid
 classDiagram
@@ -189,7 +188,7 @@ classDiagram
 
 The set of knowledge graphs are presented in the form of TTL files, which can be browsed by different means as outlined below. As they are interlinked, the five TTL files should be available together for parsing by the chosen application. The information can then be displayed and exploited according to the services offered by the application.
 
-Following standard practice, the TTL files are divided between “T-boxes” (specifying the data model at the “SI” level, for example) and “A-boxes” (specifying the data entries at the “units”, “prefixes” and “decisions” levels).
+Following standard practice, the TTL files are divided between a “T-box”, specifying the data model at the “SI” level, and “A-boxes”, specifying the data entries at the “units”, “prefixes” and “decisions” levels.
 
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/00292ef7-f8dc-4a9b-b20e-2c0f5fed141a)
@@ -214,7 +213,7 @@ The responses will be given according to the header information, which can be mo
 
 ### SPARQL endpoint
 
-The TTL files can also be interrogated directly either using the [SPARQL interface](http://62.161.69.201:8080/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. 
+The TTL files can also be interrogated directly either using the [SPARQL endpoint](http://si-digital-framework.org/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. 
 
 ![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
 
@@ -229,11 +228,7 @@ PREFIX decisions: <http://si-digital-framework.org/SI/decisions/>
 PREFIX constants: <http://si-digital-framework.org/constants/>
 PREFIX quantities: <http://si-digital-framework.org/quantities/>
 
-
-GraphDB provides a visual graph interface.
-
-A full list of the Classes and Predicates is available in a separate Vocabulary file (see Annex 1).
-
+GraphDB provides a visual graph interface to the SPARQL endpoint.
 
 ## 5. Next steps
 
