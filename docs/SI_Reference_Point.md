@@ -59,112 +59,128 @@ The information contained in the nine editions of the SI Brochure has been encod
 [si-digital-framework.org/SI](http://62.161.69.201:8080/SI) 
 
 
-Figure 1 and Figure 2 show the data models developed for this purpose. Figure 1 shows the part covering measurement units.
+Figure 1 below shows the data models developed for this purpose. For a full list of the classes and predicates please refer to the GitHub site (see Annex 1).
 
-```mermaid
+'''mermaid
 classDiagram
-    MeasurementUnit <|-- SIBaseUnit
-    MeasurementUnit <|-- SISpecialNamedUnit
-    MeasurementUnit <|-- CompoundUnit
-    CompoundUnit <|-- PrefixedUnit
-    CompoundUnit <|-- UnitProduct
-    CompoundUnit <|-- UnitPower
-    class PrefixedUnit{
-      +hasNonPrefixedUnit
-      +hasPrefix
-    }
-```
-
-The data model (classes and predicates) for prefixes:
-
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/0713ac62-74e2-4ccb-bf5f-dd0b8c4a2e43)
-
-Diagrams copied from FM (issue 32):
-
-```mermaid
-classDiagram
+	`si:QuantityKind`<|--`si:CompoundQuantityKind`
+	`si:MeasurementUnit`<|--`si:CompoundUnit`
+	`si:CompoundUnit`<|--`si:PrefixedUnit`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindPower`
+	`si:CompoundQuantityKind`<|--`si:QuantityKindProduct`
 	`si:MeasurementUnit`<|--`si:SIBaseUnit`
 	`si:MeasurementUnit`<|--`si:SISpecialNamedUnit`
-	`si:MeasurementUnit`<|--`si:nonSIUnit`
-	`si:MeasurementUnit`<|--`si:CompoundUnit`
-	`si:QuantityKind`<|--`si:CompoundQuantityKind`
-	`si:CompoundQuantityKind`<|--`si:QuantityKindProduct`
-	`si:CompoundQuantityKind`<|--`si:QuantityKindPower`
 	`si:CompoundUnit`<|--`si:UnitMultiple`
-	`si:CompoundUnit`<|--`si:UnitProduct`
 	`si:CompoundUnit`<|--`si:UnitPower`
-	`si:CompoundUnit`<|--`si:PrefixedUnit`
+	`si:CompoundUnit`<|--`si:UnitProduct`
+	`si:MeasurementUnit`<|--`si:nonSIUnit`
+	class `si:CompoundQuantityKind`{
+	}
+	class `si:CompoundUnit`{
+	}
 	class `si:Constant`{
+		+si:hasDatatype
+		+si:hasDefiningResolution
+		+si:hasUnit
+		+si:hasUpdatedDate
 		+si:hasValue
 		+si:hasValueAsString
-		+si:hasUpdatedDate
-		+si:hasUnitAsString
-	}
-	class `si:MeasurementUnit`{
-		+si:isUnitOfQtyKind
-	}
-	class `si:SIBaseUnit`{
-		+si:hasDefinition
-	}
-	class `si:SISpecialNamedUnit`{
-	}
-	class `si:nonSIUnit`{
-		+si:hasConversionFactor
-		+si:hasConversionUnit
+		+si:hasDefiningEquation
 	}
 	class `si:Definition`{
+		+si:hasDefiningResolution
+		+si:hasDefiningConstant
+		+si:hasDefiningEquation
 		+si:hasDefiningText
 		+si:hasDefinitionNote
-		+si:hasDefiningConstant
+		+si:hasEndValidity
 		+si:hasNextDefinition
 		+si:hasPreviousDefinition
 		+si:hasStartValidity
-		+si:hasEndValidity
 		+si:hasStatus
 	}
 	class `si:DefinitionNote`{
 		+si:hasNoteIndex
 		+si:hasNoteText
 	}
-	class `si:SIPrefix`{
-		+si:hasScalingFactor
+	class `si:MeasurementUnit`{
+		+si:prefixRestriction
+		+si:isUnitOfQtyKind
+		+si:hasUnitTypeAsString
+		+si:hasNumericFactor
 	}
-	class `si:SIDecision`{
-		+si:isDecisionOf
-		+si:correspondingResolution
-	}
-	class `si:SIDecisionTarget`{
-		+si:hasDecision
+	class `si:PrefixedUnit`{
+		+si:hasNonPrefixedUnit
+		+si:hasPrefix
 	}
 	class `si:QuantityKind`{
-	}
-	class `si:CompoundQuantityKind`{
-	}
-	class `si:QuantityKindProduct`{
+		+si:hasUnit
 	}
 	class `si:QuantityKindPower`{
 	}
-	class `si:CompoundUnit`{
+	class `si:QuantityKindProduct`{
+	}
+	class `si:SIBaseUnit`{
+		+si:prefixRestriction
+		+si:hasDefinition
+		+si:hasUnitTypeAsString
+	}
+	class `si:SIDecision`{
+	}
+	class `si:SIDecisionTarget`{
+	}
+	class `si:SIPrefix`{
+		+si:hasDatatype
+		+si:hasScalingFactor
+	}
+	class `si:SISpecialNamedUnit`{
+		+si:prefixRestriction
+		+si:hasUnitTypeAsString
 	}
 	class `si:UnitMultiple`{
 	}
-	class `si:UnitProduct`{
-	}
 	class `si:UnitPower`{
+		+si:hasNumericExponent
+		+si:hasUnitBase
 	}
-	class `si:PrefixedUnit`{
-		+si:hasPrefix
-		+si:hasNonPrefixedUnit
+	class `si:UnitProduct`{
+		+si:hasLeftUnitTerm
+		+si:hasRightUnitTerm
 	}
+	class `si:nonSIUnit`{
+		+si:prefixRestriction
+		+si:hasUnitTypeAsString
+	}
+	`si:Constant` --o `rb:Resolution`
+	`si:Constant` --o `si:MeasurementUnit`
+	`si:Constant` --o `xsd:date`
+	`si:Constant` --o `rdfs:Literal`
+	`si:Constant` --o `xsd:string`
+	`si:Definition` --o `rb:Resolution`
+	`si:Definition` --o `si:Constant`
+	`si:Definition` --o `rdfs:Literal`
+	`si:Definition` --o `si:DefinitionNote`
+	`si:Definition` --o `xsd:date`
+	`si:Definition` --o `si:Definition`
+	`si:DefinitionNote` --o `rdfs:Literal`
+	`si:MeasurementUnit` --o `xsd:Boolean`
+	`si:MeasurementUnit` --o `si:QuantityKind`
+	`si:MeasurementUnit` --o `rdfs:Literal`
+	`si:PrefixedUnit` --o `si:MeasurementUnit`
+	`si:PrefixedUnit` --o `si:SIPrefix`
+	`si:QuantityKind` --o `si:MeasurementUnit`
+	`si:SIBaseUnit` --o `xsd:Boolean`
+	`si:SIBaseUnit` --o `si:Definition`
+	`si:SIBaseUnit` --o `rdfs:Literal`
+	`si:SIPrefix` --o `rdfs:Literal`
+	`si:SISpecialNamedUnit` --o `xsd:Boolean`
+	`si:SISpecialNamedUnit` --o `rdfs:Literal`
+	`si:UnitPower` --o `xsd:int`
+	`si:UnitPower` --o `si:MeasurementUnit`
+	`si:UnitProduct` --o `si:MeasurementUnit`
+	`si:nonSIUnit` --o `xsd:Boolean`
+	`si:nonSIUnit` --o `rdfs:Literal`
 ```
-
-Figure from Amin 19/01:
-
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/6871aef1-279d-4f91-a51c-4e8b317d3af8)
-
-
- 
-
 
 
 ## 4. Browsing the knowledge graphs
@@ -204,13 +220,15 @@ The TTL files can also be interrogated directly either using the [SPARQL interfa
 
 As an example, to browse the files visually using GraphDB:
 * Download the (free) (GraphDB Desktop software)[https://www.ontotext.com/products/graphdb/] and install it on your computer.
-* Create a new repository, e.g. SI-MMDD
-* Download the TTL files from the SI Reference Point and upload them into GraphDB. Ensure the “Autocomplete” function is selected and import the files to the following locations:
-    * SI/units
-    * SI/prefixes
-    * SI/decisions
-    * constants
-    * quantities
+* Create a new repository, e.g. SI-MMDD, based on:
+
+PREFIX si: <http://si-digital-framework.org/SI#>   
+PREFIX units: <http://si-digital-framework.org/SI/units/>
+PREFIX prefixes: <http://si-digital-framework.org/SI/prefixes/>
+PREFIX decisions: <http://si-digital-framework.org/SI/decisions/>
+PREFIX constants: <http://si-digital-framework.org/constants/>
+PREFIX quantities: <http://si-digital-framework.org/quantities/>
+
 
 GraphDB provides a visual graph interface.
 
