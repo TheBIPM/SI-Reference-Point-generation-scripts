@@ -12,7 +12,7 @@
     two straight parallel conductors of infinite length, of negligible circular cross-section,
     and placed 1 metre apart in vacuum, would produce between these conductors a force
     equal to @afev@ newton per metre of length.
-  hasDefiningResolution: CGPM9-Res2
+  hasDefiningResolution: cgpm:CGPM9-Res2
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: ELCU
@@ -30,11 +30,35 @@
     It is defined by taking the fixed numerical value of the elementary charge, @elms@,
     to be @elmv@ when expressed in the unit @cous@, which is equal to @amss@, where
     the second is defined in terms of @hfcs@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@amps@} = \left(\frac{@elms@}{@elmv@}\right) {@secs@}^{-1}
   hasDefiningConstant: ElementaryCharge
   UnitOfQtyKind: ELCU
   Status: current
+- URI: candela1948
+  prefLabel_fr: candela1948
+  prefLabel_en: candela1948
+  hasStartValidity: '1948-01-01'
+  hasEndValidity: '1967-10-12'
+  hasDefiningText_fr: La grandeur de la bougie nouvelle est telle que la brillance du radiateur intégral à la température de solidification du platine soit de 60 bougies nouvelles par centimètre carré.
+  hasDefiningText_en: The value of the new candle is such that the brightness of the full radiator at the temperature of solidification of platinum is 60 new candles per square centimetre.
+  hasDefiningResolution: cipm:CIPM41-Res1
+  hasDefiningEquation:
+  hasDefiningConstant: LuminousEfficacy
+  UnitOfQtyKind: LUIN
+  Status: superseded
+- URI: candela1967
+  prefLabel_fr: candela1967
+  prefLabel_en: candela1967
+  hasStartValidity: '1967-10-13'
+  hasEndValidity: '1979-10-10'
+  hasDefiningText_fr: La candela est l'intensité lumineuse, dans la direction perpendiculaire, d'une surface de $1/600\,000$ mètre carré d'un corps noir à la température de congélation du platine sous la pression de $101\,325$ newtons par mètre carré.
+  hasDefiningText_en: The candela is the luminous intensity, in the perpendicular direction, of a surface of $1/600\,000$ square metre of a black body at the temperature of freezing platinum under a pressure of $101\,325$ newtons per square metre.
+  hasDefiningResolution: cgpm:CGPM13-Res5
+  hasDefiningEquation:
+  hasDefiningConstant: LuminousEfficacy
+  UnitOfQtyKind: LUIN
+  Status: superseded
 - URI: candela1979
   prefLabel_fr: candela1979
   prefLabel_en: candela1979
@@ -44,9 +68,9 @@
     d’une source qui émet un rayonnement monochromatique de fréquence @morv@ hertz
     et dont l’intensité énergétique dans cette direction est @radi@ watt par stéradian.
   hasDefiningText_en: The candela is the luminous intensity, in a given direction,
-    of a source that emits monochromatic radiation of frequency \(540 \times 10^{12}\)
+    of a source that emits monochromatic radiation of frequency @morv@ 
     hertz and that has a radiant intensity in that direction of @radi@ watt per steradian.
-  hasDefiningResolution: CGPM16-Res3
+  hasDefiningResolution: cgpm:CGPM16-Res3
   hasDefiningEquation:
   hasDefiningConstant: LuminousEfficacy
   UnitOfQtyKind: LUIN
@@ -68,7 +92,7 @@
     @radv@ when expressed in the unit @lpws@, which is equal to @csws@, or @csks@,
     where the kilogram, metre and second are defined in terms of @plks@, @sols@ and
     @hfcs@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@cans@} = \left(\frac{@lecs@}{@lecv@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-3}\;{@strs@}^{-1}
   hasDefiningConstant: LuminousEfficacy
   UnitOfQtyKind: LUIN
@@ -82,7 +106,7 @@
     @celi@ de la température thermodynamique du point triple de l'eau.
   hasDefiningText_en: The kelvin, unit of thermodynamic temperature, is the fraction
     @celi@ of the thermodynamic temperature of the triple point of water.
-  hasDefiningResolution: CGPM13-Res4
+  hasDefiningResolution: cgpm:CGPM13-Res4
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: TEMT
@@ -101,7 +125,7 @@
     It is defined by taking the fixed numerical value of the Boltzmann constant, @bols@,
     to be @bolv@ when expressed in the unit @jpks@, which is equal to @kgss@, where
     the kilogram, metre and second are defined in terms of @plks@, @sols@ and @hfcs@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@kels@} = \left(\frac{@bolv@}{@bols@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}
   hasDefiningConstant: BoltzmannConstant
   UnitOfQtyKind: TEMT
@@ -115,7 +139,7 @@
     du prototype international du kilogramme.
   hasDefiningText_en: The kilogram is the unit of mass; it is equal to the mass of
     the international prototype of the kilogram.
-  hasDefiningResolution: CGPM3-Res2
+  hasDefiningResolution: cgpm:CGPM3-Res2
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: MASS
@@ -134,7 +158,7 @@
     by taking the fixed numerical value of the Planck constant, @plks@, to be @plkv@
     when expressed in the unit @plku@, which is equal to @kmis@, where the metre and
     the second are defined in terms of @sols@ and @hfcs@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@kgms@} = \left(\frac{@plks@}{@plkv@}\right) {@mtrs@}^{-2}\;{@secs@}
   hasDefiningConstant: PlanckConstant
   UnitOfQtyKind: MASS
@@ -151,7 +175,7 @@
   hasDefiningText_en: The CGPM sanctions the Prototype of the metre chosen by the
     CIPM. This prototype, at the temperature of melting ice, shall henceforth represent
     the metric unit of length.
-  hasDefiningResolution: CGPM1-Res1
+  hasDefiningResolution: cgpm:CGPM1-Res1
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: LENG
@@ -175,7 +199,7 @@
     subject to standard atmospheric pressure and supported on two cylinders of at
     least one centimetre diameter, symmetrically placed in the same horizontal plane
     at a distance of @mpvu@ from each other.
-  hasDefiningResolution: CGPM7-Res1
+  hasDefiningResolution: cgpm:CGPM7-Res1
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: LENG
@@ -191,7 +215,7 @@
   hasDefiningText_en: The metre is the length equal to @mvwv@ wavelengths in vacuum
     of the radiation corresponding to the transition between the levels @porb@ and
     @dorb@ of the krypton 86 atom.
-  hasDefiningResolution: CGPM11-Res6
+  hasDefiningResolution: cgpm:CGPM11-Res6
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: LENG
@@ -205,7 +229,7 @@
     la lumière pendant une durée de @soli@ de seconde.
   hasDefiningText_en: The metre is the length of the path travelled by light in vacuum
     during a time interval of @soli@ of a second.
-  hasDefiningResolution: CGPM17-Res1
+  hasDefiningResolution: cgpm:CGPM17-Res1
   hasDefiningEquation:
   hasDefiningConstant: SpeedOfLight
   UnitOfQtyKind: LENG
@@ -223,7 +247,7 @@
     by taking the fixed numerical value of the speed of light in vacuum, @sols@, to
     be @solv@ when expressed in the unit @solu@, where the second is defined in terms
     of the caesium frequency @hfcs@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@mtrs@} = \left(\frac{@sols@}{@solv@}\right) {@secs@} =
     \frac{@hfcv@}{@solv@} \frac{@sols@}{@hfcs@} \approx @hslv@ \frac{@sols@}{@hfcs@}
   hasDefiningConstant: SpeedOfLight
@@ -244,7 +268,7 @@
     its symbol is “mol”. 2. When the mole is used, the elementary entities must be
     specified and may be atoms, molecules, ions, electrons, other particles, or specified
     groups of such particles.
-  hasDefiningResolution: CGPM14-Res3
+  hasDefiningResolution: cgpm:CGPM14-Res3
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: AMSU
@@ -268,7 +292,7 @@
     a system is a measure of the number of specified elementary entities. An elementary
     entity may be an atom, a molecule, an ion, an electron, any other particle or
     specified group of particles.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@mols@} = \left(\frac{@avov@}{@avos@}\right)
   hasDefiningConstant: AvogadroConstant
   UnitOfQtyKind: AMSU
@@ -282,7 +306,7 @@
     janvier 0 à 12 heures de temps des éphémérides.
   hasDefiningText_en: The second is the fraction @secf@ of the tropical year for 1900
     January 0 at 12 hours ephemeris time.
-  hasDefiningResolution: CGPM11-Res9
+  hasDefiningResolution: cgpm:CGPM11-Res9
   hasDefiningEquation:
   hasDefiningConstant:
   UnitOfQtyKind: TIME
@@ -298,7 +322,7 @@
   hasDefiningText_en: The second is the duration of @hfcv@ periods of the radiation
     corresponding to the transition between the two hyperfine levels of the ground
     state of the caesium 133 atom.
-  hasDefiningResolution: CGPM13-Res1
+  hasDefiningResolution: cgpm:CGPM13-Res1
   hasDefiningEquation:
   hasDefiningConstant: HyperfineTransitionFrequencyOfCs-133
   UnitOfQtyKind: TIME
@@ -317,7 +341,7 @@
     by taking the fixed numerical value of the caesium frequency, @hfcs@, the unperturbed
     ground-state hyperfine transition frequency of the caesium 133 atom, to be @hfcv@
     when expressed in the unit @hfcu@, which is equal to @seci@.
-  hasDefiningResolution: CGPM26-Res1
+  hasDefiningResolution: cgpm:CGPM26-Res1
   hasDefiningEquation: 1\;{@htzs@} = \frac{@hfcs@}{@hfcv@} \quad {\rm{or}} \quad 1\;{@secs@}
     = \frac{@hfcv@}{@hfcs@}
   hasDefiningConstant: HyperfineTransitionFrequencyOfCs-133

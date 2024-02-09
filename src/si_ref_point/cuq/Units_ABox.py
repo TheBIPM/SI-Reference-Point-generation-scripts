@@ -340,13 +340,10 @@ def main():
                         ),
                     )
                 )
-            g.add(
-                (
-                    element,
-                    PDF.hasDefiningResolution,
-                    URIRef(PDF.set_cgpm_uri(bdef["hasDefiningResolution"])),
-                )
-            )
+            g.add((element,
+                   PDF.hasDefiningResolution,
+                   PDF.set_resolution_uri(bdef["hasDefiningResolution"])))
+
             if bdef["hasDefiningEquation"] is not None:
                 g.add(
                     (

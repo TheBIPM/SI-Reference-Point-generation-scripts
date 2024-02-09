@@ -12,6 +12,8 @@
   isUnitOfQtyKind: LUIN
   hasSymbol: cd
   definitions:
+  - candela1948
+  - candela1967
   - candela1979
   - candela2018
 - URI: kelvin
