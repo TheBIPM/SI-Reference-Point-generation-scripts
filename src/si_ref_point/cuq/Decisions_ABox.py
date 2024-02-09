@@ -9,6 +9,8 @@ from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
 
+def cap1(instr):
+    return instr[0].upper() + instr[1:]
 
 def main():
     PDF = SiElements()
@@ -40,18 +42,18 @@ def main():
         g.add((scope, RDF.type, PDF.SIDecisionScope))
         # add labels to scope (capitalize the first character)
         g.add((scope, RDFS.label,
-               Literal(dec['scopeEN'].capitalize(), lang="en")))
+               Literal(cap1(dec['scopeEN']), lang="en")))
         g.add((scope, RDFS.label,
-               Literal(dec['scopeFR'].capitalize(), lang="fr")))
+               Literal(cap1(dec['scopeFR']), lang="fr")))
         # create instance of target if necessary using target code as local
         # name
         target = PDF.set_decision_uri(dec['targetCode'])
         g.add((target, RDF.type, PDF.SIDecisionTarget))
         # add labels to target
         g.add((target, RDFS.label,
-               Literal(dec['targetEN'].capitalize(), lang="en")))
+               Literal(cap1(dec['targetEN']), lang="en")))
         g.add((target, RDFS.label,
-               Literal(dec['targetFR'].capitalize(), lang="fr")))
+               Literal(cap1(dec['targetFR']), lang="fr")))
         # add links between target and scope
         g.add((scope, PDF.hasTarget, target))
         g.add((target, PDF.isTargetOf, scope))
@@ -61,9 +63,9 @@ def main():
         g.add((decision, RDF.type, PDF.SIDecision))
         # add labels to decision
         g.add((decision, RDFS.label,
-               Literal(dec['decisionEN'].capitalize(), lang="en")))
+               Literal(cap1(dec['decisionEN']), lang="en")))
         g.add((decision, RDFS.label,
-               Literal(dec['decisionFR'].capitalize(), lang="fr")))
+               Literal(cap1(dec['decisionFR']), lang="fr")))
         # add links between decision and target
         g.add((target, PDF.hasDecision, decision))
         g.add((decision, PDF.isDecisionOf, target))
