@@ -248,7 +248,7 @@
   ID-resolution: "cgpm:CGPM10-Res6"
 - decisionCode: "SI-A-2.1.4"
   decisionEN: "redefinition of the metre in terms of krypton-86 radiation"
-  decisionFR: "redéfinition du mètre au moyen de la radiation du krypton-86"
+  decisionFR: "redéfinition du mètre au moyen de la radiation du krypton 86"
   targetCode: "SI-A-2.1"
   targetEN: "Length"
   targetFR: "Longueur"
@@ -330,7 +330,7 @@
   decisionEN: "declaration on distinguishing mass and weight, and on the conventional\
     \ value of <i>g</i><sub>n</sub>"
   decisionFR: "déclaration au sujet de la différence entre masse et poids, et valeur\
-    \ conventionnelle de <i>g</i><sub>n</sub>"
+    \ conventionnelle de g"
   targetCode: "SI-A-2.2"
   targetEN: "Mass"
   targetFR: "Masse"
@@ -545,7 +545,7 @@
   decisionEN: "declaration of the caesium-133 hyperfine transition to be the recommended\
     \ standard"
   decisionFR: "déclaration selon laquelle l’étalon à employer est la transition hyperfine\
-    \ du césium-133"
+    \ du césium 133"
   targetCode: "SI-A-2.3"
   targetEN: "Time"
   targetFR: "Temps"
@@ -616,7 +616,7 @@
   decisionEN: "definition of coherent electrical units in the metre-kilogram-second\
     \ (MKS) system of units (to enter into force on 1 January 1948)"
   decisionFR: "définition des unités électriques cohérentes dans le système d’unité\
-    s MKS (mètre-kilogramme-seconde) (mise en oeuvre le 1er janvier 1948)"
+    s MKS (mètre-kilogramme-seconde) (mise en œuvre le 1er janvier 1948)"
   targetCode: "SI-A-2.4"
   targetEN: "Electrical units"
   targetFR: "Unités électriques"
@@ -627,7 +627,7 @@
   ID-resolution: "cipm:CIPM41-Res2"
 - decisionCode: "SI-A-2.4.10"
   decisionEN: "revision of the SI (to enter into force on 20 May 2019)"
-  decisionFR: "révision du SI (mise en oeuvre le 20 mai 2019)"
+  decisionFR: "révision du SI (mise en œuvre le 20 mai 2019)"
   targetCode: "SI-A-2.4"
   targetEN: "Electrical units"
   targetFR: "Unités électriques"
@@ -674,7 +674,7 @@
   decisionEN: "definition of the conventional value of the Josephson constant (to\
     \ enter into force on 1 January 1990)"
   decisionFR: "définition de la valeur conventionnelle de la constante de Josephson\
-    \ (mise en oeuvre le 1er janvier 1990)"
+    \ (mise en œuvre le 1er janvier 1990)"
   targetCode: "SI-A-2.4"
   targetEN: "Electrical units"
   targetFR: "Unités électriques"
@@ -687,7 +687,7 @@
   decisionEN: "definition of the conventional value of the von Klitzing constant (to\
     \ enter into force on 1 January 1990)"
   decisionFR: "définition de la valeur conventionnelle de la constante de von Klitzing\
-    \ (mise en oeuvre le 1er janvier 1990)"
+    \ (mise en œuvre le 1er janvier 1990)"
   targetCode: "SI-A-2.4"
   targetEN: "Electrical units"
   targetFR: "Unités électriques"
@@ -769,7 +769,7 @@
   ID-resolution: "cgpm:CGPM25-Res1"
 - decisionCode: "SI-A-2.5.12"
   decisionEN: "revision of the SI (to enter into force on 20 May 2019)"
-  decisionFR: "révision du SI (mise en oeuvre le 20 mai 2019)"
+  decisionFR: "révision du SI (mise en œuvre le 20 mai 2019)"
   targetCode: "SI-A-2.5"
   targetEN: "Thermodynamic temperature"
   targetFR: "Température thermodynamique"
@@ -872,7 +872,7 @@
 - decisionCode: "SI-A-2.6.1"
   decisionEN: "definition of the mole, symbol mol, as a seventh base unit, and rules\
     \ for its use"
-  decisionFR: "définition de la mole, symbole mol, comme 7e unité de base, et règles\
+  decisionFR: "définition de la mole, symbole mol, comme 7ᵉ unité de base, et règles\
     \ d’utilisation"
   targetCode: "SI-A-2.6"
   targetEN: "Amount of substance"
@@ -928,7 +928,7 @@
   ID-resolution: "cgpm:CGPM25-Res1"
 - decisionCode: "SI-A-2.6.6"
   decisionEN: "revision of the SI (to enter into force on 20 May 2019)"
-  decisionFR: "révision du SI (mise en oeuvre le 20 mai 2019)"
+  decisionFR: "révision du SI (mise en œuvre le 20 mai 2019)"
   targetCode: "SI-A-2.6"
   targetEN: "Amount of substance"
   targetFR: "Quantité de matière"
@@ -941,7 +941,7 @@
   decisionEN: "definition of photometric units: new candle and new lumen (to enter\
     \ into force on 1 January 1948)"
   decisionFR: "définition des unités photométriques, bougie nouvelle et lumen nouveau\
-    \ (mise en oeuvre le 1er janvier 1948)"
+    \ (mise en œuvre le 1er janvier 1948)"
   targetCode: "SI-A-2.7"
   targetEN: "Luminous intensity"
   targetFR: "Intensité lumineuse"
@@ -996,7 +996,7 @@
   ID-resolution: "cgpm:CGPM24-Res10"
 - decisionCode: "SI-A-2.7.6"
   decisionEN: "revision of the SI (to enter into force on 20 May 2019)"
-  decisionFR: "révision du SI (mise en oeuvre le 20 mai 2019)"
+  decisionFR: "révision du SI (mise en œuvre le 20 mai 2019)"
   targetCode: "SI-A-2.7"
   targetEN: "Luminous intensity"
   targetFR: "Intensité lumineuse"
