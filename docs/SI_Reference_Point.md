@@ -221,12 +221,13 @@ As an example, to browse the files visually using GraphDB:
 * Download the (free) (GraphDB Desktop software)[https://www.ontotext.com/products/graphdb/] and install it on your computer.
 * Create a new repository, e.g. SI-MMDD, based on:
 
-PREFIX si: <http://si-digital-framework.org/SI#>   
-PREFIX units: <http://si-digital-framework.org/SI/units/>
-PREFIX prefixes: <http://si-digital-framework.org/SI/prefixes/>
-PREFIX decisions: <http://si-digital-framework.org/SI/decisions/>
-PREFIX constants: <http://si-digital-framework.org/constants/>
-PREFIX quantities: <http://si-digital-framework.org/quantities/>
+** PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+** PREFIX si: <http://si-digital-framework.org/SI#>   
+** PREFIX units: <http://si-digital-framework.org/SI/units/>
+** PREFIX prefixes: <http://si-digital-framework.org/SI/prefixes/>
+** PREFIX decisions: <http://si-digital-framework.org/SI/decisions/>
+** PREFIX constants: <http://si-digital-framework.org/constants/>
+** PREFIX quantities: <http://si-digital-framework.org/quantities/>
 
 GraphDB provides a visual graph interface to the SPARQL endpoint.
 
@@ -255,7 +256,7 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 
 ## Annex 1:	List of Classes and Predicates
 
-For a complete list of classes and predicates contained in the knowledge graphs
+For a complete list of Classes and Predicates contained in the knowledge graphs
 * SI/units.ttl
 * SI/prefixes.ttl
 * SI/decisions.ttl
