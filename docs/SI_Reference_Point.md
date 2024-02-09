@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-The [SI Reference Point](http://62.161.69.201:8080/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users, with a more detailed description of the Application Programming Interface (API) given in Annex 1, and some examples of SPARQL queries provided in Annex 2 for illustrative purposes.
+The [SI Reference Point](http://62.161.69.201:8080/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more detailed description of the Application Programming Interface (API) and underlying knowledge graph files is provided on our GitHub site (see Annex 1).
 
 The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
@@ -10,8 +10,6 @@ The present document is structured as follows:
 *	Section 4 briefly indicates how the information can be browsed.
 *	Section 5 summarizes the next steps.
 *	Annex 1 lists the Classes and Predicates in the data model
-
-For a broader overview of the SI Digital Framework please see document BIPM-DIG-G01.
 
 ## 2. Information contained in the SI Reference Point
 
