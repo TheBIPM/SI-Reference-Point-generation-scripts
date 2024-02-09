@@ -60,7 +60,7 @@ The information contained in the nine editions of the SI Brochure has been encod
 
 The figure below shows the data model developed for this purpose. For a full list of the classes and predicates please refer to the GitHub site (see Annex 1).
 
-'''mermaid
+```mermaid
 classDiagram
 	`si:QuantityKind`<|--`si:CompoundQuantityKind`
 	`si:MeasurementUnit`<|--`si:CompoundUnit`
@@ -179,7 +179,6 @@ classDiagram
 	`si:UnitProduct` --o `si:MeasurementUnit`
 	`si:nonSIUnit` --o `xsd:Boolean`
 	`si:nonSIUnit` --o `rdfs:Literal`
- }
 ```
 
 
