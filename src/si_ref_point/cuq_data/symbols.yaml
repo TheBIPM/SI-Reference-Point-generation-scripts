@@ -148,7 +148,7 @@ cana:
   name_fr: ''
   type: equation
   latex: 1\;@cans@ = \frac{1}{(@plkv@)\:(@hfcv@)^{2}\:@radv@} (@hfcs@)^{2}\:@plks@\:@mors@
-    \approx 2.614\:830 \times 10^{10} (@hfcs@)^{2}\:@plks@\:@mors@
+    \approx 2.614\:8305 \times 10^{10} (@hfcs@)^{2}\:@plks@\:@mors@
   text:
   html: ''
   json: ''
@@ -1212,7 +1212,7 @@ wpss:
   name_en: Watt per steradian symbol
   name_fr: ''
   type: symbol
-  latex: \rm{W sr}^{-1}
+  latex: \rm{W}\ \rm{sr}^{-1}
   text:
   html: ''
   json: ''
