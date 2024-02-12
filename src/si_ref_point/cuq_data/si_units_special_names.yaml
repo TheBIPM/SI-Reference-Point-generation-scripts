@@ -200,7 +200,7 @@
   UnitOfQtyKind: ELCO
   inOtherSIUnits:
     - [ampere, 1]
-    - [volt, 1]
+    - [volt, -1]
   inBaseSIUnits:
     - [kilogram, -1]
     - [metre, -2]
