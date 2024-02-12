@@ -4,6 +4,7 @@
   Symbol: min
   UnitOfQtyKind: TIME
   ConversionFactor: 60
+  ConversionFactorAsString: "60"
   ConversionUnit: second
   PrefixRestriction: true
 - URI: hour
@@ -12,6 +13,7 @@
   Symbol: h
   UnitOfQtyKind: TIME
   ConversionFactor: 3600
+  ConversionFactorAsString: "3600"
   ConversionUnit: second
   PrefixRestriction: true
 - URI: day
@@ -20,6 +22,7 @@
   Symbol: d
   UnitOfQtyKind: TIME
   ConversionFactor: 86400
+  ConversionFactorAsString: "86\\,400"
   ConversionUnit: second
   PrefixRestriction: true
 - URI: astronomicalunit
@@ -28,6 +31,7 @@
   Symbol: au
   UnitOfQtyKind: LENG
   ConversionFactor: 149597870700
+  ConversionFactorAsString: "149\\,597\\,870\\,700"
   ConversionUnit: metre
   PrefixRestriction: true
 - URI: degree
@@ -35,8 +39,8 @@
   prefLabel_en: degree
   Symbol: °
   UnitOfQtyKind: ANGP
-  # ConversionFactor: 0.0174532925199433
-  ConversionFactor: (π / 180)
+  ConversionFactor: 0.0174532925199433
+  ConversionFactorAsString: "(π / 180)"
   ConversionUnit: radian
   PrefixRestriction: true
 - URI: arcminute
@@ -44,8 +48,8 @@
   prefLabel_en: arcminute
   Symbol: ′
   UnitOfQtyKind: ANGP
-  # ConversionFactor: 0.000290888208665722
-  ConversionFactor: (π / 10800)
+  ConversionFactor: 0.000290888208665722
+  ConversionFactorAsString: "(π / 10800)"
   ConversionUnit: radian
   PrefixRestriction: true
 - URI: arcsecond
@@ -53,8 +57,8 @@
   prefLabel_en: arcsecond
   Symbol: ″
   UnitOfQtyKind: ANGP
-  # ConversionFactor: 4.84813681109536e-06
-  ConversionFactor: (π / 648000)
+  ConversionFactor: 4.84813681109536e-06
+  ConversionFactorAsString: "(π / 648000)"
   ConversionUnit: radian
   PrefixRestriction: true
 - URI: litre
@@ -64,6 +68,7 @@
   AltSymbol: l
   UnitOfQtyKind: VOLU
   ConversionFactor: 0.001
+  ConversionFactorAsString: "0.001"
   ConversionUnit:
     - [metre, -3]
   PrefixRestriction: true
@@ -73,6 +78,7 @@
   Symbol: t
   UnitOfQtyKind: MASS
   ConversionFactor: 1000
+  ConversionFactorAsString: "1000"
   ConversionUnit: kilogram
   PrefixRestriction: true
 - URI: dalton
@@ -80,7 +86,8 @@
   prefLabel_en: dalton
   Symbol: Da
   UnitOfQtyKind: MASS
-  ConversionFactor: 1.6605390666e-27
+  ConversionFactor: 1.66053906660e-27
+  ConversionFactorAsString: "1.660\\,539\\,066\\,60(50) \\times 10^{-27}"
   ConversionUnit: kilogram
 - URI: electronvolt
   prefLabel_fr: électronvolt
@@ -88,6 +95,7 @@
   Symbol: eV
   UnitOfQtyKind: ENGY
   ConversionFactor: 1.602176634e-19
+  ConversionFactorAsString: "1.602\\,176\\,634 \\times 10^{-19}"
   ConversionUnit: joule
 - URI: neper
   prefLabel_fr: néper
@@ -107,6 +115,7 @@
   Symbol: ha
   UnitOfQtyKind: AREA
   ConversionFactor: 10000
+  ConversionFactorAsString: "10^{4}"
   ConversionUnit:
     - [metre, 2]
   PrefixRestriction: true

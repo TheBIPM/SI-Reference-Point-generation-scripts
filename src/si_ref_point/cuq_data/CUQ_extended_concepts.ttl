@@ -32,6 +32,13 @@ si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:label "has numeric factor"@en,
         "a pour facteur ce nombre"@fr .
 
+si:hasNumericFactorAsString a owl:DatatypeProperty ;
+    rdfs:subPropertyOf si:hasTerm ;
+    rdfs:domain si:MeasurementUnit ;
+    rdfs:label "has numeric factor represented by this string"@en,
+        "a pour facteur le nombre correspondant à cette chaine"@fr ;
+    rdfs:range xsd:string .
+
 si:hasLeftUnitTerm a owl:ObjectProperty ;
     rdfs:label "has left unit term"@en,
         "a pour terme de gauche cette unité"@fr ;

@@ -10,6 +10,7 @@ import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CUQ_FILES_FOLDER
 import yaml
 import os
+import logging
 
 
 def nest_mult(expr):
@@ -559,12 +560,27 @@ def main():
                 unit_multiple = BNode()
                 hasUnitTerm = PDF.set_uri("hasUnitTerm")
                 hasNumericFactor = PDF.set_uri("hasNumericFactor")
-                conversion_factor = Literal(nsi["ConversionFactor"])
+                hasNumericFactorAsString = PDF.set_uri("hasNumericFactorAsString")
+                if isinstance(nsi["ConversionFactor"], int):
+                    convFactorType = XSD.int
+                elif isinstance(nsi["ConversionFactor"], float):
+                    convFactorType = XSD.float
+                else:
+                    logging.error('Error : unknown ConversionFactor type :'
+                                  '{}'.format(nsi["ConversionFactor"]))
+                    convFactorType = None
+                conversion_factor = Literal(nsi["ConversionFactor"],
+                                           datatype=convFactorType)
+                conversion_factor_as_string = Literal(
+                    nsi["ConversionFactorAsString"],
+                    datatype=XSD.string)
                 g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
                                                         PDF, g)
                 g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
                 g.add((unit_multiple, hasUnitTerm, conversion_unit))
                 g.add((unit_multiple, hasNumericFactor, conversion_factor))
+                g.add((unit_multiple, hasNumericFactorAsString,
+                       conversion_factor_as_string))
                 g.add((element, PDF.inOtherSIUnits, unit_multiple))
 
     return g
