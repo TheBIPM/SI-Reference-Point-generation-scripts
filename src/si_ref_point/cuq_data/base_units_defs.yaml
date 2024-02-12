@@ -103,9 +103,9 @@
   hasStartValidity: '1967-10-13'
   hasEndValidity: '2019-05-19'
   hasDefiningText_fr: Le kelvin, unité de température thermodynamique, est la fraction
-    @celi@ de la température thermodynamique du point triple de l'eau.
+    $1/273.16$ de la température thermodynamique du point triple de l'eau.
   hasDefiningText_en: The kelvin, unit of thermodynamic temperature, is the fraction
-    @celi@ of the thermodynamic temperature of the triple point of water.
+    $1/273.16$ of the thermodynamic temperature of the triple point of water.
   hasDefiningResolution: cgpm:CGPM13-Res4
   hasDefiningEquation:
   hasDefiningConstant:

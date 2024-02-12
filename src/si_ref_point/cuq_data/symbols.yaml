@@ -213,7 +213,7 @@ celo:
   name_en: Celsius to Kelvin offset (English)
   name_fr: ''
   type: symbol
-  latex: '273.16'
+  latex: '273.15'
   text:
   html: ''
   json: ''

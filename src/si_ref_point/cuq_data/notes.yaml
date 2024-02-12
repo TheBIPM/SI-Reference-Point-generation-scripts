@@ -193,17 +193,17 @@
   uri: kelvin2018
   index: 3
   note_en: The previous definition of the kelvin set the temperature of the triple
-    point of water, @wtps@, to be exactly @wtvu@. Due to the fact that the present
+    point of water, @wtps@, to be exactly $273.16$ @kels@. Due to the fact that the present
     definition of the kelvin fixes the numerical value of @bols@ instead of @wtps@,
     the latter must now be determined experimentally. At the time of adopting the
-    present definition @wtps@ was equal to @wtvu@ with a relative standard uncertainty
+    present definition @wtps@ was equal to $273.16$ @kels@ with a relative standard uncertainty
     of @wtpu@ based on measurements of @bols@ made prior to the redefinition.
   note_fr: "La précédente définition du kelvin établissait la température du point
-    triple de l’eau @wtps@ comme étant exactement égale à @wtvu@. Étant donné que
-    l’actuelle définition du kelvin\nfixe la valeur numérique de @bols@ et non plus
+    triple de l’eau @wtps@ comme étant exactement égale à $273.16$  @kels@. Étant donné que
+    l’actuelle définition du kelvin fixe la valeur numérique de @bols@ et non plus
     celle de @wtps@, cette dernière doit désormais être déterminée de façon expérimentale.
     Au moment de l’adoption de l’actuelle définition du kelvin, @wtps@ était égale
-    à @wtvu@ avec une incertitude-type relative de @wtpu@ déterminée à partir des
+    à $273.16$ @kels@ avec une incertitude-type relative de @wtpu@ déterminée à partir des
     mesures de @bols@ réalisées avant la redéfinition.."
 - dbid: 20
   uri: kelvin2018
@@ -211,20 +211,20 @@
   note_en: As a result of the way temperature scales used to be defined, it remains
     common practice to express a thermodynamic temperature, symbol @tmps@, in terms
     of its difference from the reference temperature @fpwd@, close to the ice point.
-    This difference is called the Celsius temperature, symbol @cels@ which is defined
+    This difference is called the Celsius temperature, symbol @cels@, which is defined
     by the quantity equation \[@celd@\].
   note_fr: "En raison de la manière dont les échelles de température étaient habituellement
     définies, il est resté d’usage courant d’exprimer la température thermodynamique,
     symbole @tmps@, en fonction de sa différence par rapport à la température de référence
     @fpwd@ proche du point de congélation de l’eau. Cette différence de température
     est appelée température Celsius, symbole @cels@ ; elle est définie par l’équation
-    aux grandeurs :\n\\[@celd@\\]."
+    aux grandeurs :\\[@celd@\\]."
 - dbid: 21
   uri: kelvin2018
   index: 5
   note_en: The unit of Celsius temperature is the degree Celsius, symbol @ceus@, which
     is by definition equal in magnitude to the unit kelvin. A difference or interval
-    of temperature may be expressed in kelvin or in degrees Celsius, the numerical
+    of temperature may be expressed in kelvins or in degrees Celsius, the numerical
     value of the temperature difference being the same in either case. However, the
     numerical value of a Celsius temperature expressed in degrees Celsius is related
     to the numerical value of the thermodynamic temperature expressed in kelvin by
