@@ -172,19 +172,19 @@
   index: 4
   note_en: It also follows that since the vacuum electric permittivity @veps@ (also
     known as the electric constant), the characteristic impedance of vacuum @vcis@,
-    and the admittance of vacuum @vads@ are equal to @vepd@, @vcid@, and @vadd@,  the
+    and the admittance of vacuum @vads@ are equal to @vepd@, @vcid@, and @vadd@, respectively the
     values of @veps@, @vcis@ and @vads@ must now also be determined experimentally,
-    and are affected by the same relative standard uncertainty as @vmps@ since @elms@
+    and are affected by the same relative standard uncertainty as @vmps@ since @sols@
     is exactly known. The product @vemp@ and quotient @vcmq@ remain exact.  At the
     time of adopting the present definition of the ampere, @vmps@ was equal to @vmvu@
-    with a relative uncertainty of @vmpu@.
+    with a relative standard uncertainty of @vmpu@.
   updated: 2023-02-21 15:59:14
   note_fr: Ainsi, comme la permittivité diélectrique du vide @veps@ (également connue
     sous le nom de constante électrique), l’impédance du vide caractéristique @vcis@
     et l’admittance du vide @vads@ sont égales à @vepd@, @vcid@, et @vadd@ respectivement,
     les valeurs de @veps@, @vcis@ et @vads@ doivent désormais être déterminées de
     façon expérimentale et ont la même incertitude-type relative que @vmps@ puisque
-    la valeur de @elms@ est connue avec exactitude. Le produit @vemp@ et le quotient
+    la valeur de @sols@ est connue avec exactitude. Le produit @vemp@ et le quotient
     @vcmq@ restent exacts. Au moment de l’adoption de l’actuelle définition de l’ampère,
     @vmps@ était égale à @vmvu@ avec une incertitude-type relative de @vmpu@.
 - dbid: 17
