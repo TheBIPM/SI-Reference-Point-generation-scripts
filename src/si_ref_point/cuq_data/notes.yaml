@@ -125,10 +125,10 @@
   index: 1
   note_en: 'This definition implies the exact relation @elmd@. Inverting this relation
     gives an exact expression for the unit ampere in terms of the defining constants
-    @elms@ and @hfcs@: \[@ampd@\] which is equal to \[@ampa@\].'
+    @elms@ and @hfcs@: $$@ampd@$$ which is equal to $$@ampa@$$.'
   note_fr: 'Cette définition implique la relation exacte @elmd@. En inversant cette
-    relation, l’ampère est exprimé en fonction des constante @elms@ et @hfcs@ : \[@ampd@\]
-    relation identique à  \[@ampa@\].'
+    relation, l’ampère est exprimé en fonction des constante @elms@ et @hfcs@ : $$@ampd@$$
+    relation identique à  $$@ampa@$$.'
 - dbid: 14
   uri: ampere2018
   index: 2
@@ -338,12 +338,12 @@
   index: 1
   note_en: 'This definition implies the exact relation @morr@ for monochromatic radiation
     of frequency @morf@. Inverting this relation gives an exact expression for the
-    candela in terms of the defining constants @mors@, @plks@ and @hfcs@: \[@cand@\]
-    which is equal to \[@cana@\].'
+    candela in terms of the defining constants @mors@, @plks@ and @hfcs@: $$@cand@$$
+    which is equal to $$@cana@$$.'
   note_fr: 'Cette définition implique la relation exacte @morr@ pour le rayonnement
     monochromatique de fréquence @morf@. En inversant cette relation, la candela est
-    exprimée en fonction des constantes @mors@, @plks@ et @hfcs@ : \[@cand@\] relation
-    identique à  \[@cana@\].'
+    exprimée en fonction des constantes @mors@, @plks@ et @hfcs@ : $$@cand@$$ relation
+    identique à  $$@cana@$$.'
 - dbid: 31
   uri: candela2018
   index: 2
