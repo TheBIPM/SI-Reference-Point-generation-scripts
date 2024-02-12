@@ -103,7 +103,7 @@
   quantity-fr: activité d'un radionucléide
   Unit: becquerel
 - identifier: ABDO
-  quantity-en: absorbed dose
+  quantity-en: absorbed dose, kerma
   quantity-fr: dose absorbée, kerma
   Unit: gray
 - identifier: DOEQ
