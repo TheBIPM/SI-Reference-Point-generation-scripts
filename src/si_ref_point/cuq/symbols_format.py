@@ -11,7 +11,7 @@ with open(os.path.join(CUQ_FILES_FOLDER, 'symbols.yaml'), encoding="utf8") as fp
     symbols = yaml.safe_load(fp)
 
 
-def formattxt(txt, fmt='latex', add_delim=True):
+def formattxt(txt, fmt='latex', add_delim=True, decimal_sep="."):
     """
     formats a text string with symbols replaced in any of the following formats
     html, latex, json, text
@@ -24,6 +24,12 @@ def formattxt(txt, fmt='latex', add_delim=True):
         return txt
     if txt is None or txt == "" or '@' not in txt:
         return txt
+    # Change decimal separator to coma if needed (french style)
+    if decimal_sep != ".":
+        matches = re.findall(r"\d\.\d", txt)
+        for decsep in matches:
+            txt = txt.replace(decsep, decsep[0] + decimal_sep + decsep[1])
+
     matches = re.findall(r"@(.*?)@", txt)
     for symcode in matches:
         if fmt == 'latex' and symbols[symcode]['type'] == 'symbol':
