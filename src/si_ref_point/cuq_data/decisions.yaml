@@ -452,8 +452,8 @@
   crossReferences: []
   ID-resolution: "cgpm:CGPM23-Res9"
 - decisionCode: "SI-A-2.3.12"
-  decisionEN: "updates to the list of standard frequencies"
-  decisionFR: "mises à jour de la liste des fréquences étalons"
+  decisionEN: "updates to the list of standard frequencies [98th CIPM]"
+  decisionFR: "mises à jour de la liste des fréquences étalons [98ème CIPM]"
   targetCode: "SI-A-2.3"
   targetEN: "Time"
   targetFR: "Temps"
@@ -474,8 +474,8 @@
   crossReferences: []
   ID-resolution: "cgpm:CGPM23-Res12"
 - decisionCode: "SI-A-2.3.15"
-  decisionEN: "updates to the list of standard frequencies"
-  decisionFR: "mises à jour de la liste des fréquences étalons"
+  decisionEN: "updates to the list of standard frequencies [102nd CIPM]"
+  decisionFR: "mises à jour de la liste des fréquences étalons [102ème CIPM]"
   targetCode: "SI-A-2.3"
   targetEN: "Time"
   targetFR: "Temps"
@@ -485,8 +485,8 @@
   crossReferences: []
   ID-resolution: "cipm:CIPM102-1-Rec1"
 - decisionCode: "SI-A-2.3.16"
-  decisionEN: "updates to the list of standard frequencies"
-  decisionFR: "mises à jour de la liste des fréquences étalons"
+  decisionEN: "updates to the list of standard frequencies [104th CIPM]"
+  decisionFR: "mises à jour de la liste des fréquences étalons [104 CIPM]"
   targetCode: "SI-A-2.3"
   targetEN: "Time"
   targetFR: "Temps"
@@ -704,7 +704,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.4.9"
   decisionEN: "future revision of the SI"
   decisionFR: "révision à venir du SI"
@@ -742,7 +742,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.5.11"
   decisionEN: "future revision of the SI"
   decisionFR: "révision à venir du SI"
@@ -890,7 +890,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM23-Res1"
+  ID-resolution: "cgpm:CGPM23-Res12"
 - decisionCode: "SI-A-2.6.4"
   decisionEN: "possible future revision of the SI"
   decisionFR: "éventuelle révision à venir du SI"
@@ -901,7 +901,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.6.5"
   decisionEN: "future revision of the SI"
   decisionFR: "révision à venir du SI"
@@ -980,7 +980,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.7.6"
   decisionEN: "revision of the SI (to enter into force on 20 May 2019)"
   decisionFR: "révision du SI (mise en œuvre le 20 mai 2019)"
@@ -1290,7 +1290,7 @@
   ID-resolution: "cipm:CIPM50-Rec1961"
 - decisionCode: "SI-A-4.5.4"
   decisionEN: "abrogation of the former definition of the litre; recommendation that\
-    \ litre mahy be used as a special name for the cubic decimetre"
+    \ litre may be used as a special name for the cubic decimetre"
   decisionFR: "abrogation de la précédente définition du litre et recommandation d’\
     utiliser le litre comme nom spécial donné au décimètre cube"
   targetCode: "SI-A-4.5"
