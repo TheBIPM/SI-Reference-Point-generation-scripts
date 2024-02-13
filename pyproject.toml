@@ -1,10 +1,11 @@
 [build-system]
-requires = ["setuptools>=64", "setuptools-scm>=8"]
+requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 
 [project]
 name = "si_ref_point"
+version = "1.0b"
 description = "SI reference point generation scripts and source data"
 authors = [
     {name = "Stuart Chalk", email =  "n00002621@unf.edu"},
@@ -28,9 +29,7 @@ dependencies = [
     "pydantic>=1.10,<2.0",
     "pyshacl"
 ]
-dynamic = ["version"]
 
-[tool.setuptools_scm]
 
 [project.urls]
 repository = "https://github.com/TheBIPM/SI-Reference-Point-2023"
