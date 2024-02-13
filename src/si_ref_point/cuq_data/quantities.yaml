@@ -347,12 +347,13 @@
   quantity-fr: "fluence"
   Unit:
   - [metre, -2]
-- identifier: FLUR
-  quantity-en: "fluence rate"
-  quantity-fr: "débit de fluence"
-  Unit:
-  - [metre, -2]
-  - [second, -1]
+# Removed on request from MS
+#- identifier: FLUR
+#  quantity-en: "fluence rate"
+#  quantity-fr: "débit de fluence"
+#  Unit:
+#  - [metre, -2]
+#  - [second, -1]
 - identifier: PLTS
   quantity-en: 'PLTS-2000 temperature (K)'
   quantity-fr: 'température PLTS-2000 (K)'

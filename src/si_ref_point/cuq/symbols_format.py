@@ -24,12 +24,14 @@ def formattxt(txt, fmt='latex', add_delim=True):
         return txt
     if txt is None or txt == "" or '@' not in txt:
         return txt
-    delim = {'latex': ['$', '$'],
-             'html': ['', ''],
-             'json': ['', ''],
-             'text': ['', '']}
     matches = re.findall(r"@(.*?)@", txt)
     for symcode in matches:
+        if fmt == 'latex' and symbols[symcode]['type'] == 'symbol':
+            delim = ['$', '$']
+        elif fmt == 'latex' and symbols[symcode]['type'] == 'equation':
+            delim = ['$$', '$$']
+        else:
+            delim = ['', '']
         depth = 0
         replacement = symbols[symcode][fmt]
         while '@' in replacement:
@@ -43,10 +45,7 @@ def formattxt(txt, fmt='latex', add_delim=True):
                                                   symbols[inner_symcode][fmt])
             depth += 1
         if add_delim:
-            replacement = delim[fmt][0] + replacement + delim[fmt][1]
+            replacement = delim[0] + replacement + delim[1]
         txt = txt.replace(f"@{symcode}@", replacement)
-        # merge possible \[$ ... $\]
-        txt = txt.replace("\\[$", "\\[")
-        txt = txt.replace("$\\]", "\\]")
 
     return txt

@@ -3,9 +3,9 @@
   index: 1
   note_en: 'This definition implies the exact relation @hfcx@. Inverting this relation
     gives an expression for the unit second in terms of the defining constant @hfcs@:
-    \[@secd@\]'
+    @secd@'
   note_fr: 'Cette définition implique la relation exacte @hfcx@. En inversant cette
-    relation, la seconde est exprimée en fonction de la constante @hfcs@ : \[@secd@\]'
+    relation, la seconde est exprimée en fonction de la constante @hfcs@ : @secd@'
 - dbid: 2
   uri: second2018
   index: 2
@@ -72,10 +72,10 @@
   index: 1
   note_en: 'This definition implies the exact relation @plkx@. Inverting this relation
     gives an exact expression for the kilogram in terms of the three defining constants
-    @plks@, @hfcs@ and @sols@: \[@kgmd@\] which is equal to \[@kgod@\].'
+    @plks@, @hfcs@ and @sols@: @kgmd@ which is equal to @kgod@.'
   note_fr: 'Cette définition implique la relation exacte @plkx@. En inversant cette
     relation, le kilogramme est exprimé en fonction des trois constantes @plks@, @hfcs@
-    et @sols@ : \[@kgmd@\] relation identique à \[@kgod@\]. '
+    et @sols@ : @kgmd@ relation identique à @kgod@. '
 - dbid: 9
   uri: kilogram2018
   index: 2
@@ -125,10 +125,10 @@
   index: 1
   note_en: 'This definition implies the exact relation @elmd@. Inverting this relation
     gives an exact expression for the unit ampere in terms of the defining constants
-    @elms@ and @hfcs@: $$@ampd@$$ which is equal to $$@ampa@$$.'
+    @elms@ and @hfcs@: @ampd@ which is equal to @ampa@.'
   note_fr: 'Cette définition implique la relation exacte @elmd@. En inversant cette
-    relation, l’ampère est exprimé en fonction des constante @elms@ et @hfcs@ : $$@ampd@$$
-    relation identique à  $$@ampa@$$.'
+    relation, l’ampère est exprimé en fonction des constante @elms@ et @hfcs@ : @ampd@
+    relation identique à  @ampa@.'
 - dbid: 14
   uri: ampere2018
   index: 2
@@ -176,10 +176,10 @@
   index: 1
   note_en: 'This definition implies the exact relation @bolx@. Inverting this relation
     gives an exact expression for the kelvin in terms of the defining constants @bols@,
-    @plks@ and @hfcs@: \[@tmpd@\] which is equal to \[@tmpa@\].'
+    @plks@ and @hfcs@: @tmpd@ which is equal to @tmpa@.'
   note_fr: 'Cette définition implique la relation exacte @bolx@. En inversant cette
     relation, le kelvin est exprimé en fonction des constantes @bols@, @plks@ et @hfcs@
-    : \[@tmpd@\] relation identique à \[@tmpa@\].'
+    : @tmpd@ relation identique à @tmpa@.'
 - dbid: 18
   uri: kelvin2018
   index: 2
@@ -212,13 +212,13 @@
     common practice to express a thermodynamic temperature, symbol @tmps@, in terms
     of its difference from the reference temperature @fpwd@, close to the ice point.
     This difference is called the Celsius temperature, symbol @cels@, which is defined
-    by the quantity equation \[@celd@\].
+    by the quantity equation @celd@.
   note_fr: "En raison de la manière dont les échelles de température étaient habituellement
     définies, il est resté d’usage courant d’exprimer la température thermodynamique,
     symbole @tmps@, en fonction de sa différence par rapport à la température de référence
     @fpwd@ proche du point de congélation de l’eau. Cette différence de température
     est appelée température Celsius, symbole @cels@ ; elle est définie par l’équation
-    aux grandeurs :\\[@celd@\\]."
+    aux grandeurs : @celd@."
 - dbid: 21
   uri: kelvin2018
   index: 5
@@ -228,14 +228,14 @@
     value of the temperature difference being the same in either case. However, the
     numerical value of a Celsius temperature expressed in degrees Celsius is related
     to the numerical value of the thermodynamic temperature expressed in kelvin by
-    the relation \[@c2kd@\].
+    the relation @c2kd@.
   note_fr: "L’unité de température Celsius est le degré Celsius, symbole @ceus@, qui
     par définition est égal en amplitude à l’unité « kelvin ». Une différence ou un
     intervalle de température peut s’exprimer aussi bien en kelvins qu’en degrés Celsius,
     la valeur numérique de la différence de température étant la même dans les deux
     cas. La valeur numérique de la température Celsius exprimée en degrés Celsius
     est liée à la valeur numérique de la température thermodynamique exprimée en kelvins
-    par la relation :\n\\[@c2kd@\\]."
+    par la relation : @c2kd@."
 - dbid: 22
   uri: kelvin2018
   index: 6
@@ -262,10 +262,10 @@
   index: 1
   note_en: 'This definition implies the exact relation @avox@. Inverting this relation
     gives an exact expression for the mole in terms of the defining constant @avos@:
-    \[@mold@\].'
+    @mold@.'
   note_fr: 'Cette définition implique la relation exacte  @avox@. En inversant cette
     relation, on obtient l’expression exacte de la mole en fonction de la constante
-    @avos@ : \[@mold@\].'
+    @avos@ : @mold@.'
 - dbid: 25
   uri: mole2018
   index: 2
@@ -291,22 +291,22 @@
   uri: mole2018
   index: 4
   note_en: The molar mass of any atom or molecule X may still be obtained from its
-    relative atomic mass from the equation \[@mmxd@\] and the molar mass of any atom
+    relative atomic mass from the equation @mmxd@ and the molar mass of any atom
     or molecule X is also related to the mass of the elementary entity @eces@ by the
-    relation \[@mmed@\].
+    relation @mmed@.
   note_fr: 'La masse molaire d’un atome ou d’une molécule X peut toujours être obtenue
-    à partir de sa masse atomique relative à l’aide de l’équation : \[@mmxd@\]  et
+    à partir de sa masse atomique relative à l’aide de l’équation : @mmxd@  et
     la masse molaire d’un atome ou d’une molécule X est également reliée à la masse
-    d’une entité élémentaire m(X) par la relation : @eces@ by the relation \[@mmed@\].'
+    d’une entité élémentaire m(X) par la relation : @eces@ by the relation @mmed@.'
 - dbid: 28
   uri: mole2018
   index: 5
   note_en: In these equations @mcos@ is the molar mass constant, equal to @mcov@ and
     @uams@ is the unified atomic mass constant, equal to @uamv@. They are related
-    to the Avogadro constant through the relation \[@mmav@\].
+    to the Avogadro constant through the relation @mmav@.
   note_fr: 'Dans ces équations, @mcos@ est la constante de masse molaire, égale à
     @mcov@ et @uams@ est la constante de masse atomique unifiée, égale à @uamv@. Elles
-    sont liées à la constante d’Avogadro par la relation : \[@mmav@\].'
+    sont liées à la constante d’Avogadro par la relation : @mmav@.'
 - dbid: 29
   uri: mole2018
   index: 6
@@ -338,12 +338,12 @@
   index: 1
   note_en: 'This definition implies the exact relation @morr@ for monochromatic radiation
     of frequency @morf@. Inverting this relation gives an exact expression for the
-    candela in terms of the defining constants @mors@, @plks@ and @hfcs@: $$@cand@$$
-    which is equal to $$@cana@$$.'
+    candela in terms of the defining constants @mors@, @plks@ and @hfcs@: @cand@
+    which is equal to @cana@.'
   note_fr: 'Cette définition implique la relation exacte @morr@ pour le rayonnement
     monochromatique de fréquence @morf@. En inversant cette relation, la candela est
-    exprimée en fonction des constantes @mors@, @plks@ et @hfcs@ : $$@cand@$$ relation
-    identique à  $$@cana@$$.'
+    exprimée en fonction des constantes @mors@, @plks@ et @hfcs@ : @cand@ relation
+    identique à  @cana@.'
 - dbid: 31
   uri: candela2018
   index: 2
