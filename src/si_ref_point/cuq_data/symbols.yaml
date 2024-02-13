@@ -2,7 +2,7 @@
   name_en: ITS-90 Celsius symbol
   name_fr: ''
   type: symbol
-  latex: t_{90}
+  latex: {t_{90}}
   text:
   html: ''
   json: ''
@@ -10,7 +10,7 @@
   name_en: ITS-90 Kelvin symbol
   name_fr: ''
   type: symbol
-  latex: T_{90}
+  latex: {T_{90}}
   text:
   html: ''
   json: ''
@@ -59,7 +59,7 @@ aoss:
   name_en: Amount of substance quantity symbol
   name_fr: ''
   type: symbol
-  latex: n
+  latex: {n}
   text:
   html: ''
   json: ''
@@ -67,7 +67,7 @@ avos:
   name_en: Avogadro constant symbol
   name_fr: ''
   type: symbol
-  latex: N_{\rm{A}}
+  latex: {N_{\rm{A}}}
   text:
   html: ''
   json: ''
@@ -99,7 +99,7 @@ bols:
   name_en: Boltzmann constant symbol
   name_fr: ''
   type: symbol
-  latex: k
+  latex: {k}
   text:
   html: ''
   json: ''
@@ -319,7 +319,7 @@ eces:
   name_en: Elementry chemical entity symbol
   name_fr: ''
   type: symbol
-  latex: m(\rm{X})
+  latex: {m(\rm{X})}
   text:
   html: ''
   json: ''
@@ -343,7 +343,7 @@ elms:
   name_en: Elementary charge constant symbol
   name_fr: ''
   type: symbol
-  latex: e
+  latex: {e}
   text: e
   html: ''
   json: ''
@@ -359,7 +359,7 @@ emms:
   name_en: Entity molar mass symbol
   name_fr: ''
   type: symbol
-  latex: M(\rm{X})
+  latex: {M(\rm{X})}
   text:
   html: ''
   json: ''
@@ -384,7 +384,7 @@ fpws:
   name_en: Freezing point of water symbol
   name_fr: ''
   type: symbol
-  latex: T_{0}
+  latex: {T_{0}}
   text:
   html: ''
   json: ''
@@ -443,7 +443,7 @@ hfcs:
   name_fr: ''
   type: symbol
   latex: \Delta\nu_{\rm{Cs}}
-  text: ΔνCs
+  text: {ΔνCs}
   html: ''
   json: ''
 hfcu:
@@ -533,7 +533,7 @@ kgmp:
   name_en: Kilogram prototype symbol
   name_fr: ''
   type: symbol
-  latex: m(\mathcal{K})
+  latex: {m(\mathcal{K})}
   text: m(𝒦)
   html: ''
   json: ''
@@ -600,7 +600,7 @@ lecs:
   name_en: luminous efficacy constant symbol
   name_fr: ''
   type: symbol
-  latex: K_{\rm{cd}}
+  latex: {K_{\rm{cd}}}
   text:
   html: ''
   json: ''
@@ -641,7 +641,7 @@ mcos:
   name_en: Molar mass constant symbol
   name_fr: ''
   type: symbol
-  latex: M_{\rm{u}}
+  latex: {M_{\rm{u}}}
   text:
   html: ''
   json: ''
@@ -665,7 +665,7 @@ mmcs:
   name_en: Molar mass of carbon symbol
   name_fr: ''
   type: symbol
-  latex: M(^{12}\rm{C})
+  latex: {M(^{12}\rm{C})}
   text:
   html: ''
   json: ''
@@ -746,7 +746,7 @@ mors:
   name_en: Mono. radiation 540 THz symbol
   name_fr: ''
   type: symbol
-  latex: K_{@cans@}
+  latex: {K_{@cans@}}
   text:
   html: ''
   json: ''
@@ -919,7 +919,7 @@ rams:
   name_en: Relative atomic mass symbol
   name_fr: ''
   type: symbol
-  latex: A_{\rm{r}}(\rm{X})
+  latex: {A_{\rm{r}}(\rm{X})}
   text:
   html: ''
   json: ''
@@ -1098,7 +1098,7 @@ vads:
   name_en: Vacuum admittance symbol
   name_fr: ''
   type: symbol
-  latex: Y_{0}
+  latex: {Y_{0}}
   text:
   html: ''
   json: ''
@@ -1114,7 +1114,7 @@ vcis:
   name_en: Vacuum char. imped. symbol
   name_fr: ''
   type: symbol
-  latex: Z_{0}
+  latex: {Z_{0}}
   text:
   html: ''
   json: ''
@@ -1229,7 +1229,7 @@ wtps:
   name_en: Water triple point symbol
   name_fr: ''
   type: symbol
-  latex: T_{\rm{TPW}}
+  latex: {T_{\rm{TPW}}}
   text:
   html: ''
   json: ''
