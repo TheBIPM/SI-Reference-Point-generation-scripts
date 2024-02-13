@@ -62,7 +62,7 @@
   ID-resolution: "cipm:CIPM46-Res3"
 - decisionCode: "SI-A-1.0.4"
   decisionEN: "confirms the name and the abbreviation \"SI\"; names prefixes from\
-    \ tera to pico; establishes the supplementary units rad and sr lists some derived\
+    \ tera to pico; establishes the supplementary units rad and sr; lists some derived\
     \ units"
   decisionFR: "confirmation du nom et de l’abréviation SI ; noms des préfixes téra\
     \ à pico ; établissement des unités supplémentaires rad et sr : établissement\
@@ -100,7 +100,7 @@
   crossReferences: []
   ID-resolution: "cipm:CIPM90-Decl2001"
 - decisionCode: "SI-A-1.0.7"
-  decisionEN: "possible redefinition of certain base unifs of the SI"
+  decisionEN: "possible redefinition of certain base units of the SI"
   decisionFR: "éventuelle redéfinition de certaines unités de base du SI"
   targetCode: "SI-A-1.0"
   targetEN: "Establishment of the SI"
@@ -120,7 +120,7 @@
   scopeEN: "Decisions relating to the establishment of the SI "
   scopeFR: "Décisions concernant l’établissement du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-1.0.9"
   decisionEN: "future revision of the SI"
   decisionFR: "révision à venir du SI "
