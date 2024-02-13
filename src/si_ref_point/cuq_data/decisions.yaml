@@ -1063,7 +1063,7 @@
   ID-resolution: "cgpm:CGPM16-Res5"
 - decisionCode: "SI-A-3.1.7"
   decisionEN: "clarification of the relationship between absorbed dose (SI unit gray)\
-    \ and dose eauivalent (SI unit sievert)"
+    \ and dose equivalent (SI unit sievert)"
   decisionFR: "clarification de la relation entre la dose absorbée (unité SI gray)\
     \ et l’équivalent de dose (unité SI sievert)"
   targetCode: "SI-A-3.1"
