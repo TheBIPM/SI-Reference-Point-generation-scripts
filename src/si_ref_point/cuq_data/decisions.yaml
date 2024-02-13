@@ -144,8 +144,8 @@
   crossReferences: []
   ID-resolution: "cgpm:CGPM1-Res1"
 - decisionCode: "SI-A-2.1.10"
-  decisionEN: "revision of the list of recommended radiations"
-  decisionFR: "révision de la liste des radiations recommandées"
+  decisionEN: "revision of the list of recommended radiations [96th CIPM]"
+  decisionFR: "révision de la liste des radiations recommandées [96ème CIPM]"
   targetCode: "SI-A-2.1"
   targetEN: "Length"
   targetFR: "Longueur"
@@ -188,7 +188,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.1.14"
   decisionEN: "revision of the mise en pratique of the definition of the metre and\
     \ development of new optical frequency standards"
@@ -294,8 +294,8 @@
   crossReferences: []
   ID-resolution: "cipm:CIPM91-Rec1"
 - decisionCode: "SI-A-2.1.8"
-  decisionEN: "revision of the list of recommended radiations"
-  decisionFR: "révision de la liste des radiations recommandées"
+  decisionEN: "revision of the list of recommended radiations [92nd CIPM]"
+  decisionFR: "révision de la liste des radiations recommandées [92ème CIPM]"
   targetCode: "SI-A-2.1"
   targetEN: "Length"
   targetFR: "Longueur"
@@ -305,8 +305,8 @@
   crossReferences: []
   ID-resolution: "cipm:CIPM92-Rec1"
 - decisionCode: "SI-A-2.1.9"
-  decisionEN: "revision of the list of recommended radiations"
-  decisionFR: "révision de la liste des radiations recommandées"
+  decisionEN: "revision of the list of recommended radiationsi [94th CIPM]"
+  decisionFR: "révision de la liste des radiations recommandées [94ème CIPM]"
   targetCode: "SI-A-2.1"
   targetEN: "Length"
   targetFR: "Longueur"
@@ -328,9 +328,9 @@
   ID-resolution: "cgpm:CGPM1-Res1"
 - decisionCode: "SI-A-2.2.2"
   decisionEN: "declaration on distinguishing mass and weight, and on the conventional\
-    \ value of <i>g</i><sub>n</sub>"
+    \ value of gₙ"
   decisionFR: "déclaration au sujet de la différence entre masse et poids, et valeur\
-    \ conventionnelle de g"
+    \ conventionnelle de gₙ"
   targetCode: "SI-A-2.2"
   targetEN: "Mass"
   targetFR: "Masse"
@@ -338,7 +338,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM3-Res2"
+  ID-resolution: "cgpm:CGPM3-Decl2"
 - decisionCode: "SI-A-2.2.3"
   decisionEN: "adoption of the kilogram as a base unit"
   decisionFR: "adoption du kilogramme comme unité de base"
@@ -393,7 +393,7 @@
   scopeEN: "Decisions relating to the base units of the SI"
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
+  ID-resolution: "cgpm:CGPM24-Res1"
 - decisionCode: "SI-A-2.2.8"
   decisionEN: "on the future revision of the SI"
   decisionFR: "révision à venir du SI"
@@ -473,19 +473,6 @@
   scopeFR: "Décisions concernant les unités de base du SI"
   crossReferences: []
   ID-resolution: "cgpm:CGPM23-Res12"
-- decisionCode: "SI-A-2.3.14"
-  decisionEN: "revision of the mise en pratique of the definition of the metre and\
-    \ development of new optical frequency standards"
-  decisionFR: "révision de la mise en pratique de la définition du mètre et mise au\
-    \ point de nouveaux étalons optiques de fréquence"
-  targetCode: "SI-A-2.3"
-  targetEN: "Time"
-  targetFR: "Temps"
-  scopeCode: "SI-A-2"
-  scopeEN: "Decisions relating to the base units of the SI"
-  scopeFR: "Décisions concernant les unités de base du SI"
-  crossReferences: []
-  ID-resolution: "cgpm:CGPM24-Res10"
 - decisionCode: "SI-A-2.3.15"
   decisionEN: "updates to the list of standard frequencies"
   decisionFR: "mises à jour de la liste des fréquences étalons"
