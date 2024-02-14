@@ -107,7 +107,7 @@ bolu:
   name_en: Boltzmann constant unit
   name_fr: ''
   type: symbol
-  latex: '{@kgms@} \: {@mtrs@^}{2}\:{@secs@}^{-2}'
+  latex: '{@kgms@} \: {@mtrs@}^{2}\:{@secs@}^{-2}'
   text:
   html: ''
   json: ''
