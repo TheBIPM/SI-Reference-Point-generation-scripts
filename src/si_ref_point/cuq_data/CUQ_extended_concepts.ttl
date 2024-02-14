@@ -60,7 +60,7 @@ si:hasLeftQuantityTerm a owl:ObjectProperty ;
         "a pour terme de gauche cette quantité"@fr ;
     rdfs:comment "preserve order of multiplication" ;
     rdfs:subPropertyOf si:hasQuantityTerm ;
-    rdfs:domain si:QuantityProduct ;
+    rdfs:domain si:QuantityKindProduct ;
     rdfs:range si:QuantityKind .
 
 si:hasRightQuantityTerm a owl:ObjectProperty ;
@@ -68,7 +68,7 @@ si:hasRightQuantityTerm a owl:ObjectProperty ;
         "a pour terme de droite cette quantité"@fr ;
     rdfs:comment "preserve order of multiplication" ;
     rdfs:subPropertyOf si:hasQuantityTerm ;
-    rdfs:domain si:QuantityProduct ;
+    rdfs:domain si:QuantityKindProduct ;
     rdfs:range si:QuantityKind .
 
 ## for powers
@@ -97,7 +97,7 @@ si:hasQuantityBase a owl:ObjectProperty ;
     rdfs:label "has quantity base"@en,
         "a pour base cette quantité"@fr ;
     rdfs:comment "QuantityBase ^ NumericExponent" ;
-    rdfs:domain si:QuantityPower;
+    rdfs:domain si:QuantityKindPower;
     rdfs:range si:MeasurementUnit .
 
 
