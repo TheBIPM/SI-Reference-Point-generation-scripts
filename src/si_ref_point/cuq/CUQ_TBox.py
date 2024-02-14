@@ -1,3 +1,7 @@
+"""
+CUQ TBox
+"""
+
 import os
 from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.collection import Collection
@@ -9,6 +13,7 @@ from datetime import date
 ResBod_ns = SIURL + "bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
 
+
 class SiElements:
     def __init__(self, namespace: str = SIURL + "SI#", prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
@@ -18,7 +23,7 @@ class SiElements:
         self.namespace_decisions = SIURL + "SI/decisions/"
         self.namespace_quantities = SIURL + "quantities/"
         self.namespace_constants = SIURL + "constants/"
-        self.namespace_bodies =  {}
+        self.namespace_bodies = {}
         for body in bodies_list:
             self.namespace_bodies[body] = SIURL + "bodies/" + body.upper() + "#"
 
@@ -138,16 +143,17 @@ class SiElements:
         """ Utility method """
         return URIRef(self.namespace_bodies['cgpm'] + name)
 
-    def set_resolution_uri(self, name:str) -> URIRef:
+    def set_resolution_uri(self, name: str) -> URIRef:
         """ Utility method, generalizes set_cgpm_uri """
         try:
             bd, resId = name.split(':')
         except IndexError:
             print("Error parsing a resolution URI : %s" % name)
-            return None
+            return URIRef('/')  # is this the correct default?
         for body in bodies_list:
             if body == bd:
                 return URIRef(self.namespace_bodies[body] + resId)
+
 
 def main():
     si_base_onto = SiElements()

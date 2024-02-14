@@ -1,6 +1,8 @@
-""" symbols_format
+"""
+symbols_format
 manage string substitution for symbols
 """
+
 import os
 import re
 import yaml
