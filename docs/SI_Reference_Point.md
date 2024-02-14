@@ -191,7 +191,7 @@ The set of knowledge graphs are presented in the form of TTL files, which can be
 Following standard practice, the TTL files are divided between a “T-box”, specifying the data model at the “SI” level, and “A-boxes”, specifying the data entries at the “units”, “prefixes” and “decisions” levels.
 
 
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/00292ef7-f8dc-4a9b-b20e-2c0f5fed141a)
+![image](./fig/global_SI_reference_point_schema.png)
 
 
 ### Application Programming Interface (API)
@@ -203,7 +203,7 @@ The same pre-programmed queries (API calls) are documented in the Swagger interf
 
 Select the service `SI REFERENCE POINT` from the drop-down menu at the top right of the screen.
 
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/c1d4a392-aaf0-4da7-8916-2c597ceb3d88)
+![image](./fig/API_panel.png)
 
 The responses will be given according to the header information, which can be modified manually from a Command Line Interface if desired. For example: 
 * `-H ‘accept:application/json’`	will return JSON code
@@ -215,7 +215,7 @@ The responses will be given according to the header information, which can be mo
 
 The TTL files can also be interrogated directly either using the [SPARQL endpoint](http://si-digital-framework.org/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. 
 
-![image](https://github.com/TheBIPM/SI-Reference-Point-2023/assets/105931640/db59e808-d34d-4fb6-9ee0-6bcdcc236bb4)
+![image](./fig/graphdb_example.png)
 
 As an example, to browse the files visually using GraphDB:
 * Download the (free) (GraphDB Desktop software)[https://www.ontotext.com/products/graphdb/] and install it on your computer.
@@ -256,15 +256,13 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 
 ## Annex 1:	List of Classes and Predicates
 
-For a complete list of Classes and Predicates contained in the knowledge graphs
+A complete list of Classes and Predicates contained in the knowledge graphs 
 * SI/units.ttl
 * SI/prefixes.ttl
 * SI/decisions.ttl
 * constants.ttl
 * quantities.ttl
 
-please refer to the following file on the GitHub site at:
-
-[https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md](https://github.com/TheBIPM/SI-Reference-Point-2023/blob/main/docs/vocabulary_viz/index.md)
+will soon be available.
 
 
