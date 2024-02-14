@@ -118,257 +118,257 @@
   quantity-en: area
   quantity-fr: superficie
   Unit:
-  - [metre, 2]
+  - [metre, "2" ]
 - identifier: VOLU
   quantity-en: volume
   quantity-fr: volume
   Unit:
-  - [metre, 3]
+  - [metre, "3"]
 - identifier: VELO
   quantity-en: velocity
   quantity-fr: vitesse
   Unit:
-  - [metre, 1]
-  - [second, -1]
+  - [metre, "1"]
+  - [second, "-1"]
 - identifier: ACCE
   quantity-en: acceleration
   quantity-fr: accélération
   Unit:
-  - [metre, 1]
-  - [second, -2]
+  - [metre, "1"]
+  - [second, "-2"]
 - identifier: WANU
   quantity-en: wavenumber
   quantity-fr: nombre d'ondes
   Unit:
-  - [metre, -1]
+  - [metre, "-1"]
 - identifier: DENS
   quantity-en: density
   quantity-fr: masse volumique
   Unit:
-  - [kilogram, 1]
-  - [metre, -3]
+  - [kilogram, "1"]
+  - [metre, "-3"]
 - identifier: SUDE
   quantity-en: surface density
   quantity-fr: masse surfacique
   Unit:
-  - [kilogram, 1]
-  - [metre, -2]
+  - [kilogram, "1"]
+  - [metre, "-2"]
 - identifier: SPVO
   quantity-en: specific volume
   quantity-fr: volume massique
   Unit:
-  - [metre, 3]
-  - [kilogram, -1]
+  - [metre, "3"]
+  - [kilogram, "-1"]
 - identifier: CUDE
   quantity-en: current density
   quantity-fr: densité de courant
   Unit:
-  - [ampere, 1]
-  - [metre, -2]
+  - [ampere, "1"]
+  - [metre, "-2"]
 - identifier: MAFD
   quantity-en: magnetic field strength
   quantity-fr: champ magnétique
   Unit:
-  - [ampere, 1]
-  - [metre, -1]
+  - [ampere, "1"]
+  - [metre, "-1"]
 - identifier: AMSC
   quantity-en: 'amount of substance concentration '
   quantity-fr: concentration de quantité de matière
   Unit:
-  - [mole, 1]
-  - [metre, -3]
+  - [mole, "1"]
+  - [metre, "-3"]
 - identifier: MACO
   quantity-en: mass concentration
   quantity-fr: concentration massique
   Unit:
-  - [kilogram, 1]
-  - [metre, -3]
+  - [kilogram, "1"]
+  - [metre, "-3"]
 - identifier: LUMA
   quantity-en: luminance
   quantity-fr: luminance lumineuse
   Unit:
-  - [candela, 1]
-  - [metre, -2]
+  - [candela, "1"]
+  - [metre, "-2"]
 - identifier: DYVI
   quantity-en: dynamic viscosity
   quantity-fr: 'viscosité dynamique '
   Unit:
-  - [pascal, 1]
-  - [second, 1]
+  - [pascal, "1"]
+  - [second, "1"]
 - identifier: TORQ
   quantity-en: moment of force
   quantity-fr: 'moment d’une force '
   Unit:
-  - [newton, 1]
-  - [metre, 1]
+  - [newton, "1"]
+  - [metre, "1"]
 - identifier: SUTE
   quantity-en: surface tension
   quantity-fr: 'tension superficielle '
   Unit:
-  - [newton, 1]
-  - [metre, -1]
+  - [newton, "1"]
+  - [metre, "-1"]
 - identifier: VELA
   quantity-en: angular velocity
   quantity-fr: 'vitesse angulaire '
   Unit:
-  - [radian, 1]
-  - [second, -1]
+  - [radian, "1"]
+  - [second, "-1"]
 - identifier: ACCA
   quantity-en: angular acceleration
   quantity-fr: 'accelération angulaire '
   Unit:
-  - [radian, 1]
-  - [second, -2]
+  - [radian, "1"]
+  - [second, "-2"]
 - identifier: HEFD
   quantity-en: heat flux density
   quantity-fr: 'flux thermique surfacique '
   Unit:
-  - [watt, 1]
-  - [metre, -2]
+  - [watt, "1"]
+  - [metre, "-2"]
 - identifier: HECA
   quantity-en: heat capacity
   quantity-fr: 'capacité thermique '
   Unit:
-  - [joule, 1]
-  - [kelvin, -1] 
+  - [joule, "1"]
+  - [kelvin, "-1"] 
 - identifier: SHEC
   quantity-en: specific heat capacity
   quantity-fr: 'capacité thermique massique '
   Unit:
-  - [joule, 1]
-  - [kelvin, -1]
-  - [kilogram, -1]
+  - [joule, "1"]
+  - [kelvin, "-1"]
+  - [kilogram, "-1"]
 - identifier: SENG
   quantity-en: specific energy
   quantity-fr: 'énergie massique '
   Unit:
-  - [joule, 1]
-  - [kilogram, -1]
+  - [joule, "1"]
+  - [kilogram, "-1"]
 - identifier: TCON
   quantity-en: thermal conductivity
   quantity-fr: 'conductivité thermique '
   Unit:
-  - [watt, 1]
-  - [metre, -1]
-  - [kelvin, -1]
+  - [watt, "1"]
+  - [metre, "-1"]
+  - [kelvin, "-1"]
 - identifier: ENGD
   quantity-en: energy density
   quantity-fr: énergie volumique
   Unit:
-  - [joule, 1]
-  - [metre, -3]
+  - [joule, "1"]
+  - [metre, "-3"]
 - identifier: ELFS
   quantity-en: electric field strength
   quantity-fr: champ électrique
   Unit:
-  - [volt, 1]
-  - [metre, -1]
+  - [volt, "1"]
+  - [metre, "-1"]
 - identifier: ELCD
   quantity-en: electric charge density
   quantity-fr: 'charge électrique volumique '
   Unit:
-  - [coulomb, 1]
-  - [metre, -3]
+  - [coulomb, "1"]
+  - [metre, "-3"]
 - identifier: SUCD
   quantity-en: surface charge density
   quantity-fr: 'charge électrique surfacique '
   Unit:
-  - [coulomb, 1]
-  - [metre, -2]
+  - [coulomb, "1"]
+  - [metre, "-2"]
 - identifier: ELFD
   quantity-en: electric flux density
   quantity-fr: 'induction électrique '
   Unit:
-  - [coulomb, 1]
-  - [metre, -2]
+  - [coulomb, "1"]
+  - [metre, "-2"]
 - identifier: PRMI
   quantity-en: permittivity
   quantity-fr: permittivité
   Unit:
-  - [farad, 1]
-  - [metre, -1]
+  - [farad, "1"]
+  - [metre, "-1"]
 - identifier: PRME
   quantity-en: permeability
   quantity-fr: perméabilitté
   Unit:
-  - [henry, 1]
-  - [metre, -1]
+  - [henry, "1"]
+  - [metre, "-1"]
 - identifier: MOEG
   quantity-en: molar energy
   quantity-fr: 'énergie molaire '
   Unit:
-  - [joule, 1]
-  - [mole, -1]
+  - [joule, "1"]
+  - [mole, "-1"]
 - identifier: MOEN
   quantity-en: molar entropy
   quantity-fr: entropie molaire
   Unit:
-  - [joule, 1]
-  - [kelvin, -1]
-  - [mole, -1]
+  - [joule, "1"]
+  - [kelvin, "-1"]
+  - [mole, "-1"]
 - identifier: XPOS
   quantity-en: exposure
   quantity-fr: 'exposition (rayons x et γ) '
   Unit:
-  - [coulomb, 1]
-  - [kilogram, -1]
+  - [coulomb, "1"]
+  - [kilogram, "-1"]
 - identifier: ABDR
   quantity-en: absorbed dose rate
   quantity-fr: 'débit de dose absorbée '
   Unit:
-  - [gray, 1]
-  - [second, -1]
+  - [gray, "1"]
+  - [second, "-1"]
 - identifier: RAIN
   quantity-en: radiant intensity
   quantity-fr: 'intensité énergétique '
   Unit:
-  - [watt, 1]
-  - [steradian, -1]
+  - [watt, "1"]
+  - [steradian, "-1"]
 - identifier: RADI
   quantity-en: radiance
   quantity-fr: 'luminance énergétique '
   Unit:
-  - [watt, 1]
-  - [steradian, -1]
-  - [metre, -2]
+  - [watt, "1"]
+  - [steradian, "-1"]
+  - [metre, "-2"]
 - identifier: CTAC
   quantity-en: catalytic activity concentration
   quantity-fr: 'concentration de l’activité catalytique '
   Unit:
-  - [katal, 1]
-  - [metre, -3]
+  - [katal, "1"]
+  - [metre, "-3"]
 - identifier: EMIR
   quantity-en: "emission rate"
   quantity-fr: "taux d'émission"
   Unit:
-  - [second, -1]
+  - [second, "-1"]
 - identifier: FLUE
   quantity-en: "fluence"
   quantity-fr: "fluence"
   Unit:
-  - [metre, -2]
+  - [metre, "-2"]
 # Removed on request from MS
 #- identifier: FLUR
 #  quantity-en: "fluence rate"
 #  quantity-fr: "débit de fluence"
 #  Unit:
-#  - [metre, -2]
-#  - [second, -1]
+#  - [metre, "-2"]
+#  - [second, "-1"]
 - identifier: PLTS
   quantity-en: 'PLTS-2000 temperature (K)'
   quantity-fr: 'température PLTS-2000 (K)'
   Unit:
-  - [kelvin, 1]
+  - [kelvin, "1"]
 - identifier: ITSK
   quantity-en: "ITS-90 temperature (K)"
   quantity-fr: "température ITS-90 (K)"
   Unit:
-  - [kelvin, 1]
+  - [kelvin, "1"]
 - identifier: ITSC
   quantity-en: 'ITS-90 temperature (℃)'
   quantity-fr: 'température ITS-90 (℃)'
   Unit:
-  - [degreeCelsius, 1]
+  - [degreeCelsius, "1"]
 - identifier: RLGB
   quantity-en: 'ratio logarithm (B)'
   quantity-fr: "logarithme d'un rapport (B)"

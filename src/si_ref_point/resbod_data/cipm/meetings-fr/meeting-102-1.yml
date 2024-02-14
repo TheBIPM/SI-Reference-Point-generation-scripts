@@ -14,7 +14,7 @@ resolutions:
   subject: CIPM
   type: recommendation
   title: Mises à jour de la liste des fréquences étalons
-  identifier: 1
+  identifier: '1'
   url: https://doi.org/10.59161/CIPM2013REC1F
   reference: https://www.bipm.org/documents/20126/17315032/CIPM102.pdf.zip/8d064d5c-26db-4d5c-42a3-115a7b002f8e
   reference_name: Comptes rendus du 102e CIPM (2013), 2014

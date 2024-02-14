@@ -18,8 +18,8 @@
   value_str: 299 792 458
   value: 299792458
   unit:
-    - [metre, 1]
-    - [second, -1]
+    - [metre, "1"]
+    - [second, "-1"]
   symbol: '@sols@'
   updateddate: '1975-06-03'
   hasDefiningResolution: CGPM15-Res2
@@ -32,8 +32,8 @@
   value_str: 6.626 070 15 x 10⁻³⁴
   value: 6.62607015e-34
   unit:
-    - [joule, 1]
-    - [second, 1]
+    - [joule, "1"]
+    - [second, "1"]
   symbol: '@plks@'
   updateddate: '2019-05-20'
   hasDefiningResolution: CGPM26-Res1
@@ -58,8 +58,8 @@
   value_str: 1.380 649 x 10⁻²³
   value: 1.380649e-23
   unit:
-    - [joule, 1]
-    - [kelvin, -1]
+    - [joule, "1"]
+    - [kelvin, "-1"]
   symbol: '@bols@'
   updateddate: '2019-05-20'
   hasDefiningResolution: CGPM26-Res1
@@ -72,7 +72,7 @@
   value_str: 6.022 140 76 x 10²³
   value: 6.02214076e+23
   unit:
-    - [mole, -1]
+    - [mole, "-1"]
   symbol: '@avos@'
   updateddate: '2019-05-20'
   hasDefiningResolution: CGPM26-Res1
@@ -85,8 +85,8 @@
   value_str: '683'
   value: 683
   unit:
-    - [lumen, 1]
-    - [watt, -1]
+    - [lumen, "1"]
+    - [watt, "-1"]
   symbol: '@lecs@'
   updateddate: '1979-10-11'
   hasDefiningResolution: CGPM16-Res3

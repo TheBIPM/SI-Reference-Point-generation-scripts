@@ -70,7 +70,7 @@
   ConversionFactor: 0.001
   ConversionFactorAsString: "0.001"
   ConversionUnit:
-    - [metre, -3]
+    - [metre, "-3"]
   PrefixRestriction: true
 - URI: tonne
   prefLabel_fr: tonne
@@ -117,5 +117,5 @@
   ConversionFactor: 10000
   ConversionFactorAsString: "10^{4}"
   ConversionUnit:
-    - [metre, 2]
+    - [metre, "2"]
   PrefixRestriction: true
