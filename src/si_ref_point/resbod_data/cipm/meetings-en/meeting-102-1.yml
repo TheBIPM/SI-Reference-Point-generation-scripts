@@ -38,7 +38,7 @@ resolutions:
       *recommends* the following changes to the list of “Recommended values of standard frequencies for applications including the practical realization of the metre and secondary representations of the second”:
 
       * that the following transition frequency be added to the list:
-      ** the unperturbed optical transition 6s^2^ ^1^S~0~ - 6s 6p ^3^P~0~ of the ^199^ Hg neutral atom with a frequency of stem:[1 128 575 290 808 162 'Hz"] and an estimated relative standard uncertainty of 1.7  × stem:[10^(-14)];
+      ** the unperturbed optical transition 6s^2^ ^1^S~0~ - 6s 6p ^3^P~0~ of the ^199^ Hg neutral atom with a frequency of stem:[1 128 575 290 808 162 "Hz"] and an estimated relative standard uncertainty of 1.7  × stem:[10^(-14)];
 
       * that the following transition frequencies be updated in the list:
       ** the unperturbed optical transition 4s ^2^S~1/2~ - 3d ^2^D~5/2~ of the ^stem:[40^(Ca)]+^ ion with a frequency of 411 stem:[042 129 776 395 "Hz"] and an estimated relative standard uncertainty of 1.5  × stem:[10^(-14)];
