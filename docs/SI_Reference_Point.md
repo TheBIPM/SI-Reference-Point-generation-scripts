@@ -2,7 +2,11 @@
 
 ## 1. Scope
 
-The [SI Reference Point](http://si-digital-framework.org/SI) is a set of tools making the information of the SI Brochures available in machine-readable form, designed to provide an authoritative digital reference for the [International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more detailed description of the Application Programming Interface (API) and underlying knowledge graph files is provided on our GitHub site (see Annex 1).
+The [SI Reference Point](http://si-digital-framework.org/SI) is a set of tools making the information of the SI 
+Brochures available in machine-readable form, designed to provide an authoritative digital reference for the 
+[International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more 
+detailed description of the Application Programming Interface (API) and underlying knowledge graph files is 
+provided on our GitHub site (see Annex 1).
 
 The present document is structured as follows:
 *	Section 2 shows the information covered by the SI Reference Point.
