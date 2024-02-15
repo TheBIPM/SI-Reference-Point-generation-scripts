@@ -25,6 +25,8 @@ Install as a python package
 
 Python >= 3.11 required, for other requirements see pyproject.toml.
 
+[Specific instructions for pycharm](./docs/install_in_pycharm.md)
+
 ## Usage
 After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files in a subfolder.
 
