@@ -110,7 +110,6 @@ classDiagram
 		+si:prefixRestriction
 		+si:isUnitOfQtyKind
 		+si:hasUnitTypeAsString
-		+si:hasNumericFactor
 	}
 	class `si:PrefixedUnit`{
 		+si:hasNonPrefixedUnit
@@ -141,6 +140,9 @@ classDiagram
 		+si:hasUnitTypeAsString
 	}
 	class `si:UnitMultiple`{
+		+si:hasNumericFactor
+		+si:hasNumericFactorAsString
+		+si:hasUnitTerm
 	}
 	class `si:UnitPower`{
 		+si:hasNumericExponent
@@ -166,25 +168,25 @@ classDiagram
 	`si:Definition` --o `xsd:date`
 	`si:Definition` --o `si:Definition`
 	`si:DefinitionNote` --o `rdfs:Literal`
-	`si:MeasurementUnit` --o `xsd:Boolean`
+	`si:MeasurementUnit` --o `xsd:boolean`
 	`si:MeasurementUnit` --o `si:QuantityKind`
 	`si:MeasurementUnit` --o `rdfs:Literal`
 	`si:PrefixedUnit` --o `si:MeasurementUnit`
 	`si:PrefixedUnit` --o `si:SIPrefix`
 	`si:QuantityKind` --o `si:MeasurementUnit`
-	`si:SIBaseUnit` --o `xsd:Boolean`
+	`si:SIBaseUnit` --o `xsd:boolean`
 	`si:SIBaseUnit` --o `si:Definition`
 	`si:SIBaseUnit` --o `rdfs:Literal`
 	`si:SIPrefix` --o `rdfs:Literal`
-	`si:SISpecialNamedUnit` --o `xsd:Boolean`
+	`si:SISpecialNamedUnit` --o `xsd:boolean`
 	`si:SISpecialNamedUnit` --o `rdfs:Literal`
-	`si:UnitPower` --o `xsd:int`
+	`si:UnitMultiple` --o `xsd:string`
+	`si:UnitPower` --o `xsd:short`
 	`si:UnitPower` --o `si:MeasurementUnit`
 	`si:UnitProduct` --o `si:MeasurementUnit`
-	`si:nonSIUnit` --o `xsd:Boolean`
+	`si:nonSIUnit` --o `xsd:boolean`
 	`si:nonSIUnit` --o `rdfs:Literal`
 ```
-
 
 ## 4. Browsing the knowledge graphs
 

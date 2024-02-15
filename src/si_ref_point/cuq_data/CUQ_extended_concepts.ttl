@@ -18,6 +18,7 @@ si:hasTerm a owl:ObjectProperty ;
 
 si:hasUnitTerm a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasTerm ;
+    rdfs:domain si:UnitMultiple ;
     rdfs:label "has unit term"@en,
         "a cette unité pour terme"@fr .
 
@@ -28,13 +29,13 @@ si:hasQuantityTerm a owl:ObjectProperty ;
 
 si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    rdfs:domain si:MeasurementUnit ;
+    rdfs:domain si:UnitMultiple ;
     rdfs:label "has numeric factor"@en,
         "a pour facteur ce nombre"@fr .
 
 si:hasNumericFactorAsString a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    rdfs:domain si:MeasurementUnit ;
+    rdfs:domain si:UnitMultiple ;
     rdfs:label "has numeric factor represented by this string"@en,
         "a pour facteur le nombre correspondant à cette chaine"@fr ;
     rdfs:range xsd:string .

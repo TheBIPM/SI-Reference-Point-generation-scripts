@@ -187,6 +187,7 @@ si:isDecisionOf a owl:DatatypeProperty ;
 si:correspondingResolution a owl:DatatypeProperty ;
     rdfs:label "has corresponding resolution"@en,
         "a pour résolution correspondante"@fr ;
+    rdfs:range rb:Resolution ;
     rdfs:domain si:SIDecision .
 
 ## for Constants
