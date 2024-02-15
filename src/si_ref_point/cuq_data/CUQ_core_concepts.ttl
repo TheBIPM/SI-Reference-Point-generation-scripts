@@ -149,12 +149,12 @@ si:hasUnitTypeAsString a owl:DatatypeProperty ;
         owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
     rdfs:range rdfs:Literal .
 
-si:prefixRestriction a owl:DataTypeProperty ; 
+si:prefixRestriction a owl:DatatypeProperty ;
     rdfs:label "Limitation of the possible prefixes"@en,
         "Limitation des préfixes possibles"@fr ;
     rdfs:domain [ a owl:Class ;
         owl:unionOf ( si:SIBaseUnit si:SISpecialNamedUnit si:nonSIUnit si:MeasurementUnit ) ] ;
-    rdfs:range xsd:Boolean .
+    rdfs:range xsd:boolean .
 
 ## for Decision
 
@@ -168,7 +168,7 @@ si:hasTarget a owl:DatatypeProperty ;
 si:isTargetOf a owl:DatatypeProperty ;
     rdfs:label "is target of"@en,
         "est la cible de"@fr ;
-    rdfs:domain si:DecisionTarget ;
+    rdfs:domain si:SIDecisionTarget ;
     rdfs:range si:SIDecisionScope .
 
 si:hasDecision a owl:DatatypeProperty ;

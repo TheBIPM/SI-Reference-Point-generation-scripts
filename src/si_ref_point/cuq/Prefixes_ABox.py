@@ -1,5 +1,7 @@
-#
-# Prefixes ABox
+"""
+Prefixes ABox
+"""
+
 
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
 from si_ref_point.cuq.CUQ_TBox import SiElements
