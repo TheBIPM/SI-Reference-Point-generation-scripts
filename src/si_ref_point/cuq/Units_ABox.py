@@ -95,7 +95,7 @@ def transform_to_graph(expression, PDF, graph):
             graph.add((expr_node, hasRTerm, node))
 
         elif "exp" in expression.keys():
-            if expression["exp"][1] == 1:
+            if expression["exp"][1] in [1, "1"]:
                 # This is not really a unitPower
                 graph, expr_node = transform_to_graph(
                     expression["exp"][0], PDF, graph)
