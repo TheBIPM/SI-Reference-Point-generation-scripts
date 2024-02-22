@@ -103,9 +103,19 @@
   quantity-fr: activité d'un radionucléide
   Unit: becquerel
 - identifier: ABDO
-  quantity-en: absorbed dose, kerma
-  quantity-fr: dose absorbée, kerma
+  quantity-en: absorbed dose
+  quantity-fr: dose absorbée
   Unit: gray
+- identifier: KRMA
+  quantity-en: kerma
+  quantity-fr: kerma
+  Unit: gray
+- identifier: KRMR
+  quantity-en: kerma rate
+  quantity-fr: kerma rate
+  Unit:
+  - [gray, "1"]
+  - [second, "-1"]
 - identifier: DOEQ
   quantity-en: dose equivalent
   quantity-fr: équivalent de dose
@@ -118,7 +128,7 @@
   quantity-en: area
   quantity-fr: superficie
   Unit:
-  - [metre, "2" ]
+  - [metre, "2"]
 - identifier: VOLU
   quantity-en: volume
   quantity-fr: volume
@@ -189,6 +199,12 @@
   Unit:
   - [candela, "1"]
   - [metre, "-2"]
+- identifier: KIVI
+  quantity-en: 'kinematic viscosity'
+  quantity-fr: 'viscosité cinématique '
+  Unit:
+  - [pascal, "1"]
+  - [second, "1"]
 - identifier: DYVI
   quantity-en: dynamic viscosity
   quantity-fr: 'viscosité dynamique '
@@ -230,7 +246,7 @@
   quantity-fr: 'capacité thermique '
   Unit:
   - [joule, "1"]
-  - [kelvin, "-1"] 
+  - [kelvin, "-1"]
 - identifier: SHEC
   quantity-en: specific heat capacity
   quantity-fr: 'capacité thermique massique '
@@ -347,13 +363,12 @@
   quantity-fr: "fluence"
   Unit:
   - [metre, "-2"]
-# Removed on request from MS
-#- identifier: FLUR
-#  quantity-en: "fluence rate"
-#  quantity-fr: "débit de fluence"
-#  Unit:
-#  - [metre, "-2"]
-#  - [second, "-1"]
+- identifier: FLUR
+  quantity-en: "fluence rate"
+  quantity-fr: "débit de fluence"
+  Unit:
+  - [metre, "-2"]
+  - [second, "-1"]
 - identifier: PLTS
   quantity-en: 'PLTS-2000 temperature (K)'
   quantity-fr: 'température PLTS-2000 (K)'
@@ -377,3 +392,7 @@
   quantity-en: 'ratio logarithm (Np)'
   quantity-fr: "logarithme d'un rapport (Np)"
   Unit: neper
+- identifier: PHAS
+  quantity-en: 'phase'
+  quantity-fr: 'phase'
+  Unit: radian
