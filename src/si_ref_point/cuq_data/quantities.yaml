@@ -203,8 +203,8 @@
   quantity-en: 'kinematic viscosity'
   quantity-fr: 'viscosité cinématique '
   Unit:
-  - [pascal, "1"]
-  - [second, "1"]
+  - [metre, "2"]
+  - [second, "-1"]
 - identifier: DYVI
   quantity-en: dynamic viscosity
   quantity-fr: 'viscosité dynamique '
