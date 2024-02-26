@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-The [SI Reference Point](https://si-digital-reference.org/SI/) is a digital reference in support of the [International System of Units (SI)](https://www.bipm.org/en/measurement-units/). It is aimed at anyone wishing to express their measurement data in a [FAIR](https://www.go-fair.org/fair-principles/) manner.
+The [SI Reference Point](https://si-digital-framework.org/SI/) is a digital reference in support of the [International System of Units (SI)](https://www.bipm.org/en/measurement-units/). It is aimed at anyone wishing to express their measurement data in a [FAIR](https://www.go-fair.org/fair-principles/) manner.
 
 The SI Reference Point contains
 * the values of (and PIDs for) the constants defining the SI
