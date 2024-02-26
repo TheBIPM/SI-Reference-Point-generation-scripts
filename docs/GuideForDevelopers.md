@@ -105,7 +105,7 @@ will return information in French relating to the SI unit "kilogram" as at (and 
 
 <em>`SI/prefixes/{name}` - returns information about a particular SI prefix</em>
 
-where {name} is the English name of the prefix
+where `{name}` is the English name of the prefix
 
 <i>Optional parameters:</i> 
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
