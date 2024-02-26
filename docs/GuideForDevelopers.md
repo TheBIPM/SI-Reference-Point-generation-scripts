@@ -27,12 +27,12 @@ The SI Reference Point provides:
 An introductory overview of the service for users is given [HERE](https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
 
 
-## 2. Brief background information on the SI
+## 2. Introduction to the SI
 
 The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set of "SI prefixes". In brief:
 
 * an SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond (ns) = 10<sup>-9</sup> s. 
-* compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m⋅s-2) for acceleration.   
+* compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m⋅s<sup>-2</sup>) for acceleration.   
 * each kind of quantity has one corresponding SI unit (though it might be possible to express that unit in different ways).
 * a derived SI unit can correspond to more than one derived quantity.
 
