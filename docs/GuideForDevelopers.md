@@ -24,7 +24,7 @@ The SI Reference Point provides:
 * a SPARQL endpoint
 * a tool to generate the PID of any compound unit
 
-An introductory overview of the service for users is given [HERE[(https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
+An introductory overview of the service for users is given [HERE](https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
 
 
 ## 2. Brief background information on the SI
