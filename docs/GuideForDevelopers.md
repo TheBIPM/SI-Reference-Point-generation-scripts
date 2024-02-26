@@ -2,18 +2,7 @@
 
 ## 1. Scope
 
-The SI Reference Point is a digital reference in support of the International System of Units (SI). It is aimed at anyone wishing to express their measurement data in a FAIR manner.
-
-The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set of "SI prefixes". In brief:
-
-* An SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond (ns) = 10-9 s. 
-* Compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m s-2) for acceleration.   
-* Each kind of quantity has one corresponding SI unit (though it might be possible to express that unit in a number of ways).
-* A derived SI unit can correspond to more than one derived quantity.
-
-All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
-
-Full details are provided in the SI Brochure published by the BIPM and currently in its 9th edition. Since its creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the previous definition, but usually there will be some practical advantage such as an improved means to "realize" the unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
+The [SI Reference Point](https://si-digital-reference.org/SI/) is a digital reference in support of the [International System of Units (SI)](https://www.bipm.org/en/measurement-units/). It is aimed at anyone wishing to express their measurement data in a [FAIR](https://www.go-fair.org/fair-principles/) manner.
 
 The SI Reference Point contains
 * the values of (and PIDs for) the constants defining the SI
@@ -30,23 +19,35 @@ The information in the SI Reference Point is provided in a knowledge graph seria
 * constants.ttl
 * quantities.ttl
 
-
 The SI Reference Point provides:
 * an Application Programming Interface (API) providing JSON, JSON-LD, XML or HTML outputs
 * a SPARQL endpoint
 * a tool to generate the PID of any compound unit
 
-
 An introductory overview of the service for users is given [HERE[(https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
 
 
-## 2. Getting started 
+## 2. Brief background information on the SI
 
-The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface. They can be used to retrieve information about a unit, a prefix or a constant as follows.
+The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set of "SI prefixes". In brief:
+
+* an SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond (ns) = 10<sup>-9</sup> s. 
+* compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m⋅s-2) for acceleration.   
+* each kind of quantity has one corresponding SI unit (though it might be possible to express that unit in different ways).
+* a derived SI unit can correspond to more than one derived quantity.
+
+All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
+
+Full details are provided in the [SI Brochure](https://www.bipm.org/en/publications/si-brochure) published by the BIPM and currently in its 9th edition. Since its creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the previous definition, but usually there will be some practical advantage such as an improved means to "realize" the unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
+
+
+## 3. Getting started 
+
+The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity.
 
 ### Authentication and Authorization
 
-The API of the beta-version of the SI Reference Point is openly available at [https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) under the Creative Commons Attribution 3.0 Intergovernmental Organization license ([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). 
+The API of the beta-version of the SI Reference Point is openly available at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT under the Creative Commons Attribution 3.0 Intergovernmental Organization license ([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). 
 
 Currently no pre-registration is required, but please note that during the beta-testing phase the API calls provided may be subject to revision. During this phase (at least until the end of 2024), two weeks' notice will be given, via the website and the GitHub site, to announce upcoming changes. The changes will be logged on the GitHub site.
 
@@ -56,7 +57,7 @@ A rate limit of XXXX is in place.
 
 ### API calls
 
-The API queries can be triggered through its [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI). The same API calls underpin the web interface.
+The API queries can be triggered through the [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI). The same API calls underpin the web interface.
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
 
@@ -66,10 +67,12 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 * curl  --header "Accept: application/html;
 * curl  --header "Accept: application/octet-stream
 
-The names of the calls indicated below should be appended to the base URL si-digital-framework.org/. Thus the call "SI/units", for example, listed below represents https://si-digital-framework.org/SI/units.
+The names of the calls indicated below should be appended to the base URL si-digital-framework.org/. Thus the call "SI/units", for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 
-**** SI/units - returns information about all the units
+**** `SI/units` - returns information about all the units
+
+The units included are the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 Optional parameters: 
 > `lang=fr` (to return French information) or `lang=en` (for English: default setting)
@@ -78,29 +81,27 @@ For example
 
 ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"```
 
-**** SI/units/{name} - returns information about a particular unit
+**** `SI/units/{name}` - returns information about a particular unit
 
-'{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius) 
+'{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name, please refer to the output of `SI/units`.
 
 Optional parameters: 
-> `lang=fr` (to return French information) or lang=en (the default setting: English)
+> `lang=fr` (to return French information) or `lang=en` (the default setting: English)
 > `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
 
 For example
 
 ```curl -X GET "https://www.si-digital-framework.org/SI/units/kilogram?lang=fr&date=2007-11-21"```
 
-will return information in French relating to the SI unit "kilogram" up to 21 November 2007.
+will return information in French relating to the SI unit "kilogram" as at (and up until) 21 November 2007.
 
-
-**** SI/prefixes - returns information about all the SI prefixes
-
+**** `SI/prefixes` - returns information about all the SI prefixes
 
 Optional parameters
-> lang=fr (to return French information) or lang=en (for English: default setting)
+> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
-**** SI/prefixes/{parameter} - returns information about a particular SI prefix
+**** `SI/prefixes/{name}` - returns information about a particular SI prefix
 
 Optional parameters: 
 > lang=fr (to return French information) or lang=en (for English: default setting)
