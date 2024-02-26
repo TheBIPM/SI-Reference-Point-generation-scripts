@@ -70,7 +70,7 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 
-<em>`SI/units` - returns information about all the units</em>
+**`SI/units` - returns information about all the units**
 
 The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
@@ -81,7 +81,8 @@ For example
 
 ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"```
 
-<em>`SI/units/{name}` - returns information about a particular unit</em>
+
+**`SI/units/{name}` - returns information about a particular unit**
 
 where '{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
 
@@ -95,9 +96,10 @@ For example
 
 will return information in French relating to the SI unit "kilogram" as at (and up until) 21 November 2007.
 
-<em>`SI/prefixes` - returns information about all the SI prefixes</em>
 
-Optional parameters
+**`SI/prefixes` - returns information about all the SI prefixes**
+
+<i>Optional parameters</i>
 > `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
@@ -113,7 +115,7 @@ For example,
 `curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"`
 
 
-<em>constants - returns information about all the included constants</em>
+**constants - returns information about all the included constants**
 
 (This knowledge base is currently restricted to the constants defining the SI.)
 
@@ -127,7 +129,7 @@ For example,
 will return (in JSON format) information in English about all the defining constants
 
 
-<em>constants/{parameter} - returns information about the particular constant specified by {parameter}</em>
+**constants/{parameter} - returns information about the particular constant specified by {parameter}**
 
 {parameter} is the ID of the constant as listed by `constants` 
 
