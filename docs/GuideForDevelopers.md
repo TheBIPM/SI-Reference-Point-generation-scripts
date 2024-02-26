@@ -10,7 +10,7 @@ The SI Reference Point contains
 * the list of non-SI units allowed for use with the SI
 * examples of physical and chemical quantities, along with their corresponding SI units
 
-The information in the SI Reference Point is provided in a knowledge graph serialized in a set of six Turtle (TTL) files:
+The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) files:
 
 * SI.ttl
 * SI/units.ttl
@@ -67,7 +67,7 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 * curl  --header "Accept: application/html;
 * curl  --header "Accept: application/octet-stream
 
-The names of the calls indicated below should be appended to the base URL si-digital-framework.org/. Thus the call "SI/units", for example, listed below represents `https://si-digital-framework.org/SI/units`.
+The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 
 **** `SI/units` - returns information about all the units
@@ -83,7 +83,7 @@ For example
 
 **** `SI/units/{name}` - returns information about a particular unit
 
-'{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name, please refer to the output of `SI/units`.
+where '{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
 
 Optional parameters: 
 > `lang=fr` (to return French information) or `lang=en` (the default setting: English)
@@ -111,8 +111,6 @@ Optional parameters:
 For example, 
 
 curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"
-
-
 
 
 **** constants - returns information about all the included constants
