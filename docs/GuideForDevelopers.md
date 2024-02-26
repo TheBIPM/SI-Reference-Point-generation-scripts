@@ -61,18 +61,18 @@ The API queries can be triggered through the [Swagger interface](https://si-digi
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
 
-* curl  --header "Accept: application/json
-* curl  --header "Accept: application/ld+json
-* curl  --header "Accept: application/xml;
-* curl  --header "Accept: application/html;
-* curl  --header "Accept: application/octet-stream
+* `curl  --header "Accept: application/json`
+* `curl  --header "Accept: application/ld+json`
+* `curl  --header "Accept: application/xml`
+* `curl  --header "Accept: application/html`
+* `curl  --header "Accept: application/octet-stream`
 
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 
 <em>`SI/units` - returns information about all the units</em>
 
-The units included are the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 <i>Optional parameters:</i>
 > `lang=fr` (to return French information) or `lang=en` (for English: default setting)
