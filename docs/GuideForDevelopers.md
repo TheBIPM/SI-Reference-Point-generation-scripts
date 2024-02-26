@@ -75,7 +75,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 <i>Optional parameters:</i>
-> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 For example
 
@@ -87,8 +87,8 @@ For example
 where '{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
 
 <i>Optional parameters:</i>
-> `lang=fr` (to return French information) or `lang=en` (the default setting: English)
-> `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
+* `lang=fr` (to return French information) or `lang=en` (the default setting: English)
+* `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
 
 For example
 
@@ -100,27 +100,27 @@ will return information in French relating to the SI unit "kilogram" as at (and 
 **`SI/prefixes` - returns information about all the SI prefixes**
 
 <i>Optional parameters</i>
-> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
 <em>`SI/prefixes/{name}` - returns information about a particular SI prefix</em>
 
-<i>Optional parameters:</i> 
-> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+where {name} is the English name of the prefix
 
-{name} is the English name of the prefix
+<i>Optional parameters:</i> 
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 For example, 
 
 `curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"`
 
 
-**constants - returns information about all the included constants**
+**constants - returns information about the defining constants**
 
-(This knowledge base is currently restricted to the constants defining the SI.)
+(Note: This knowledge base is currently restricted to the constants defining the SI.)
 
 <i>Optional parameters:</i>
-> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 For example,
 
@@ -135,14 +135,16 @@ will return (in JSON format) information in English about all the defining const
 
 The constants are named using the English name in CamelCase (camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the output of `constants`.
 
-Optional parameters: 
-> `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+<i>Optional parameters:</i>
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 For example,
 
 ```curl -X GET "https://si-digital-framework.org/constants/PlanckConstant?lang=en" -H "accept: application/json"```
 
-will return (in JSON format) information in English about all the constants
+will return (in JSON format) information in English about the Planck constant.
+
+
 
 
 
