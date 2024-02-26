@@ -70,21 +70,20 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 
-  **3.2.1 `SI/units` - returns information about all the units**
+  **3.2.1 `SI/units`**
 
-  The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+  This query returns a list of all the units The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
   <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-  For example
-
+  For example:
   ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"```
 
 
-  **3.2.2 `SI/units/{name}` - returns information about a particular unit**
-
-where '{name}' is the English name of the unit, with any spaces removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
+  **3.2.2 `SI/units/{name}`**
+  
+  This query returns information about a particular unit specified by `{name}`, where `{name}` is the English name of the unit, after any spaces have been removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
 
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
@@ -97,14 +96,17 @@ For example
 will return information in French relating to the SI unit "kilogram" as at (and up until) 21 November 2007.
 
 
-  **3.2.3 `SI/prefixes` - returns information about all the SI prefixes**
-
+  **3.2.3 `SI/prefixes`**
+  
+  This query returns a list of all the SI prefixes.
+  
   <i>Optional parameters</i>
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
-  **3.2.4 `SI/prefixes/{name}` - returns information about a particular SI prefix**
-  where `{name}` is the English name of the prefix
+  **3.2.4 `SI/prefixes/{name}`**
+  
+  This query returns information about a particular SI prefix spcified by `{name}`, where `{name}` is the English name of the prefix.
  
   <i>Optional parameters:</i> 
     * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
@@ -114,9 +116,9 @@ will return information in French relating to the SI unit "kilogram" as at (and 
   `curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"`
 
 
-  **3.2.5 `constants` - returns information about the defining constants**
+  **3.2.5 `constants`**
 
-  (Note: This knowledge base is currently restricted to the constants defining the SI.)
+   This query returns information about the defining constants. (Note: The knowledge base is currently restricted to the seven constants defining the SI.)
 
   <i>Optional parameters:</i>
     * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
@@ -128,9 +130,9 @@ will return information in French relating to the SI unit "kilogram" as at (and 
   will return (in JSON format) information in English about all the defining constants
 
 
-  **3.2.6 `constants/{parameter}` - returns information about the particular constant specified by {parameter}**
+  **3.2.6 `constants/{parameter}`**
 
-{parameter} is the ID of the constant as listed by `constants` 
+This query returns information about the particular constant specified by {parameter}, where {parameter} is the ID of the constant as listed by `constants`. 
 
 The constants are named using the English name in CamelCase (camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the output of `constants`.
 
