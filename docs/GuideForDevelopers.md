@@ -83,7 +83,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 
   **3.2.2 `SI/units/{name}`**
   
-  This query returns information about a particular unit specified by `{name}`, where `{name}` is the English name of the unit, after any spaces have been removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
+  This query returns information about the particular unit specified by `{name}`, where `{name}` is the English name of the unit, after any spaces have been removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
 
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
@@ -106,7 +106,7 @@ will return information in French relating to the SI unit "kilogram" as at (and 
 
   **3.2.4 `SI/prefixes/{name}`**
   
-  This query returns information about a particular SI prefix spcified by `{name}`, where `{name}` is the English name of the prefix.
+  This query returns information about the particular SI prefix spcified by `{name}`, where `{name}` is the English name of the prefix.
  
   <i>Optional parameters:</i> 
     * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
