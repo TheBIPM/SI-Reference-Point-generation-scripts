@@ -124,12 +124,12 @@ si:hasSymbol a owl:DatatypeProperty ;
         "Associer une unité de mesure ou un préfixe à un symbole."@fr ;
     rdfs:range xsd:string .
 
-#si:hasAltSymbol a owl:DatatypeProperty ;
-#    rdfs:label "has alternate symbol"@en,
-#        "a pour symbole alternatif"@fr ;
-#    rdfs:comment "Linking a measurement unit or prefix to an alternate symbol."@en,
-#        "Associer une unité de mesure ou un préfixe à un symbole alternatif."@fr ;
-#    rdfs:range xsd:string .
+si:hasAltSymbol a owl:DatatypeProperty ;
+    rdfs:label "has alternate symbol"@en,
+        "a pour symbole alternatif"@fr ;
+    rdfs:comment "Linking a measurement unit or prefix to an alternate symbol."@en,
+        "Associer une unité de mesure ou un préfixe à un symbole alternatif."@fr ;
+    rdfs:range xsd:string .
 
 ## for Measurement Units
 
