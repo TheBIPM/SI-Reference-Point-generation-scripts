@@ -51,6 +51,12 @@ def get_parser():
         default=os.path.abspath(os.path.join(os.path.dirname(__file__),
                                              "..", "..", "TTL")),
         help="Output directory for TTL output")
+    parser.add_argument(
+        '--jsonld_output_dir',
+        type=str,
+        default=os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                             "..", "..", "JSON-LD")),
+        help="Output directory for JSON-LD output")
     return parser
 
 
@@ -82,20 +88,30 @@ def main():
         output[label] = generator()
         logging.info("..done")
 
-    # Serialize all graphs in their respective turtle files
-    if not os.path.exists(args.output_dir):
-        os.makedirs(args.output_dir)
-    for label, graph in output.items():
-        filedest = os.path.join(args.output_dir,label + '.ttl')
-        graph.serialize(format='ttl', destination=filedest)
-        # generate hash for file and write it alongside
-        h = hashlib.new('sha256')
-        with open(filedest) as fp:
-            h.update(fp.read().encode())
-        hashstr = h.hexdigest()
-        hashdest = os.path.join(args.output_dir,label + '.sha256')
-        with open(hashdest, 'w') as fp:
-            fp.write(hashstr)
+    serializations = [{"fmt": "ttl",
+                       "dir": args.output_dir,
+                       "ext": "ttl"},
+                      {"fmt": "json-ld",
+                       "dir": args.jsonld_output_dir,
+                       "ext": "jsonld"}]
+
+    # Serialize all graphs in their respective output files
+    for srl in serializations:
+        if not os.path.exists(srl['dir']):
+            os.makedirs(srl['dir'])
+        for label, graph in output.items():
+            filedest = os.path.join(srl['dir'],label + '.' + srl['ext'])
+            graph.serialize(format=srl['fmt'], destination=filedest)
+
+            # generate hash for file and write it alongside
+            h = hashlib.new('sha256')
+            with open(filedest) as fp:
+                h.update(fp.read().encode())
+            hashstr = h.hexdigest()
+            hashdest = os.path.join(srl['dir'], label + '.sha256')
+            with open(hashdest, 'w') as fp:
+                fp.write(hashstr)
+
     logging.info(f"TTL files wrote in {args.output_dir}")
     if args.generate_RDF:
         output['si'].serialize(
@@ -114,16 +130,20 @@ def main():
             githash = subprocess.check_output(["git", "describe"]).strip().decode()
         except:  # noqa
             githash = __version__
-        zipname = '{}-si-app-turtle-{}.zip'.format(timetag, githash)
-        logging.info(f'generating {zipname}')
-        with ZipFile(zipname, 'w') as zf:
-            for label, generator in file_generator.items():
-                ttl_file = label + ".ttl"
-                zf.write(os.path.join(args.output_dir, ttl_file),
-                         arcname=ttl_file)
-                hash_file = label + ".sha256"
-                zf.write(os.path.join(args.output_dir, hash_file),
-                         arcname=hash_file)
+
+        for srl in serializations:
+            zipname = '{}-si-app-{}-{}.zip'.format(timetag,
+                                                   srl['ext'],
+                                                   githash)
+            logging.info(f'generating {zipname}')
+            with ZipFile(zipname, 'w') as zf:
+                for label, generator in file_generator.items():
+                    srl_file = label + "." + srl['ext']
+                    zf.write(os.path.join(srl['dir'], srl_file),
+                             arcname=srl_file)
+                    hash_file = label + ".sha256"
+                    zf.write(os.path.join(srl['dir'], hash_file),
+                             arcname=hash_file)
 
     # Generate ontology documentation markdown files
     if args.gen_ontology_viz:
