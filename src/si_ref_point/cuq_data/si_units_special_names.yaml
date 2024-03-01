@@ -16,8 +16,7 @@
   inBaseSIUnits:
     - [ampere, "1"]
     - [second, "1"]
-  hasDefiningEquation: 1\;{@cous@} = \left(\frac{@hfcv@ \times @elms@}{@elmv@ \times
-    @hfcs@}\right) {@secs@}^{-1}
+  hasDefiningEquation: 1\;{@cous@} = \frac{@elms@}{@elmv@}
 - URI: degreeCelsius
   prefLabel_fr: degré Celsius
   prefLabel_en: degree Celsius
@@ -36,7 +35,7 @@
   inOtherSIUnits:
     - [coulomb, "1"]
     - [volt, "-1"]
-  inBaseSIUnits: 
+  inBaseSIUnits:
     - [kilogram, "-1"]
     - [metre, "-2"]
     - [second, "4"]
