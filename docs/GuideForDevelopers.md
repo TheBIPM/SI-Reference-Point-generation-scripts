@@ -78,8 +78,8 @@ The names of the calls indicated below should be appended to the base URL `si-di
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
   For example:
-  ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"```
-
+  ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"``` (linux/MacOS)
+  ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -Headers "{accept='application/json'}``` (Windows)
 
   **3.2.2 `SI/units/{name}`**
   
