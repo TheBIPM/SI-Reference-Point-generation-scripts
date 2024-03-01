@@ -345,6 +345,8 @@ def main():
                    PDF.hasDefiningResolution,
                    PDF.set_resolution_uri(bdef["hasDefiningResolution"])))
 
+            # Mute defining equations for non-base units (not checked yet)
+            """
             if bdef["hasDefiningEquation"] is not None:
                 g.add(
                     (
@@ -358,6 +360,7 @@ def main():
                         ),
                     )
                 )
+            """
             if bdef["hasDefiningConstant"] is not None:
                 g.add(
                     (
@@ -469,6 +472,8 @@ def main():
                                              PDF, g)
                 g.add((element, PDF.inBaseSIUnits, node))
 
+            # Mute defining equations for non-base units (not checked yet)
+            """
             if sisp["hasDefiningEquation"]:
                 g.add(
                     (
@@ -482,6 +487,7 @@ def main():
                         ),
                     )
                 )
+            """
             # Only used for degreeCelsius in sisp
             if "PrefixRestriction" not in sisp:
                 sisp['PrefixRestriction'] = False
