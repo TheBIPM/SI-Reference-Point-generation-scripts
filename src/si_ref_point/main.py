@@ -26,7 +26,7 @@ def get_parser():
     autogenerate doc too
     """
     parser = argparse.ArgumentParser(
-        description="Generate SI reference point TTL files")
+        description="Generate SI reference point serialized files")
     parser.add_argument(
         '-z', '--zipfile', action='store_true',
         help="Generate zip file")
@@ -131,19 +131,17 @@ def main():
         except:  # noqa
             githash = __version__
 
-        for srl in serializations:
-            zipname = '{}-si-app-{}-{}.zip'.format(timetag,
-                                                   srl['ext'],
-                                                   githash)
-            logging.info(f'generating {zipname}')
-            with ZipFile(zipname, 'w') as zf:
+        zipname = '{}-si-app-{}.zip'.format(timetag, githash)
+        logging.info(f'generating {zipname}')
+        with ZipFile(zipname, 'w') as zf:
+            for srl in serializations:
                 for label, generator in file_generator.items():
                     srl_file = label + "." + srl['ext']
                     zf.write(os.path.join(srl['dir'], srl_file),
-                             arcname=srl_file)
+                             arcname=os.path.join(srl['fmt'].upper(), srl_file))
                     hash_file = label + ".sha256"
                     zf.write(os.path.join(srl['dir'], hash_file),
-                             arcname=hash_file)
+                             arcname=os.path.join(srl['fmt'].upper(), hash_file))
 
     # Generate ontology documentation markdown files
     if args.gen_ontology_viz:
