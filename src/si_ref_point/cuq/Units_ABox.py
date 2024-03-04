@@ -345,8 +345,6 @@ def main():
                    PDF.hasDefiningResolution,
                    PDF.set_resolution_uri(bdef["hasDefiningResolution"])))
 
-            # Mute defining equations for non-base units (not checked yet)
-            """
             if bdef["hasDefiningEquation"] is not None:
                 g.add(
                     (
@@ -360,7 +358,6 @@ def main():
                         ),
                     )
                 )
-            """
             if bdef["hasDefiningConstant"] is not None:
                 g.add(
                     (
