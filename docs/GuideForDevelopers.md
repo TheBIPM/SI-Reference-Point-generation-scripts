@@ -10,7 +10,7 @@ The SI Reference Point contains
 * the list of non-SI units allowed for use with the SI
 * examples of physical and chemical quantities, along with their corresponding SI units
 
-The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) files:
+The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) or JSON-LD files:
 
 * SI.ttl
 * SI/units.ttl
@@ -39,6 +39,22 @@ The SI is an internationally agreed, practical system of units of measurement, c
 All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
 
 Full details are provided in the [SI Brochure](https://www.bipm.org/en/publications/si-brochure) published by the BIPM and currently in its 9th edition. Since its creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the previous definition, but usually there will be some practical advantage such as an improved means to "realize" the unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
+The following table shows how the information from the SI Brochure is distributed amon the TTL (or JSON-LD) files.
+
+
+**Table 1.** List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
+
+| Table | Title | Encoded in|
+| :----- | :----- | :---- |
+| 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
+| 2 | SI base units | SI/units |
+| 3 |  Base quantities and dimensions  used in the SI | quantities |
+| 4 |  The 22 SI units with special names and symbols | SI/units |
+| 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
+| 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
+| 7 |  SI prefixes | SI/prefixes|
+| 8 |  Non-SI units accepted for use with the SI units | SI/units |
+| <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
 
 ## 3. Getting started 
