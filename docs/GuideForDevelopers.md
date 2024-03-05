@@ -117,7 +117,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
-###Examples###
+### Examples
 
 **`SI/units`** 
 
@@ -183,9 +183,9 @@ will return (in JSON format) information in English about the Planck constant. {
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
-## 3.3 Parser and compound units**
+## 3.3 Parser and compound units
 
-## 4. Error messages##
+## 4. Error messages
 
-## 5. HTTP/HTTPS##
+## 5. HTTP/HTTPS
 
