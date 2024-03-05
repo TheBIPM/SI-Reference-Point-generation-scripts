@@ -87,15 +87,15 @@ The names of the calls indicated below should be appended to the base URL `si-di
 
 | Query | Essential parameter | Action | Optional parameter | Effect | 
 | :----- | :----- | :---- | :---- | :---- |
-| `GET SI/units` | | returns list of units | | default language is English |
-| | | | lang=en | text in English |
-| | | | lang=fr | text in French |
-| `GET SI/units/{name}` | {name} of unit | information about unit {name} | | default language is English |
-| | | | lang=en | text in English |
-| | | | lang=fr | text in French |
-| `GET SI/prefixes` | | returns list of SI prefixes | | default language is English |
-| | | | lang=en | text in English |
-| | | | lang=fr | text in French |
+| `GET SI/units` |returns list of units | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `GET SI/units/{name}` | information about specified unit {name} | {name} of unit | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `GET SI/prefixes` | returns list of SI prefixes | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
 
   **3.2.1 `SI/units`**
 
