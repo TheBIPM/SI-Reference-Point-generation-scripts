@@ -39,7 +39,7 @@ The SI is an internationally agreed, practical system of units of measurement, c
 All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
 
 Full details are provided in the [SI Brochure](https://www.bipm.org/en/publications/si-brochure) published by the BIPM and currently in its 9th edition. Since its creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the previous definition, but usually there will be some practical advantage such as an improved means to "realize" the unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
-The following table shows how the information from the SI Brochure is distributed amon the TTL (or JSON-LD) files.
+The following table shows how the information from the SI Brochure is distributed among the TTL (or JSON-LD) files.
 
 
 **Table 1.** List of tables in the SI Brochure and corresponding information in the SI Reference Point
@@ -117,7 +117,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
-### Examples
+#### Examples
 
 **`SI/units`** 
 
