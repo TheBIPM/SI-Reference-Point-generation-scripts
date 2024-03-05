@@ -42,7 +42,7 @@ Full details are provided in the [SI Brochure](https://www.bipm.org/en/publicati
 The following table shows how the information from the SI Brochure is distributed amon the TTL (or JSON-LD) files.
 
 
-**Table 1.** List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
+**Table 1.** List of tables in the SI Brochure and corresponding information in the SI Reference Point
 
 | Table | Title | Encoded in|
 | :----- | :----- | :---- |
@@ -77,21 +77,36 @@ The API queries can be triggered through the [Swagger interface](https://si-digi
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
 
-* `curl  --header "Accept: application/json`
-* `curl  --header "Accept: application/ld+json`
-* `curl  --header "Accept: application/xml`
-* `curl  --header "Accept: application/html`
-* `curl  --header "Accept: application/octet-stream`
+* `curl -H "accept: application/json"`
+* `curl  -H "accept: application/ld+json"`
+* `curl -H "accept: application/xml"`
+* `curl -H "accept: application/htm"l`
+* `curl -H "accept: application/octet-stream"`
 
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
+| Query | Essential parameter | Action | Optional parameter | Effect | 
+| :----- | :----- | :---- | :---- | :---- |
+| `GET SI/units` | | returns list of units | | default language is English |
+| | | | lang=en | text in English |
+| | | | lang=fr | text in French |
+| `GET SI/units/{name}` | {name} of unit | information about unit {name} | | default language is English |
+| | | | lang=en | text in English |
+| | | | lang=fr | text in French |
+| `GET SI/prefixes` | | returns list of SI prefixes | | default language is English |
+| | | | lang=en | text in English |
+| | | | lang=fr | text in French |
 
   **3.2.1 `SI/units`**
 
-  This query returns a list of all the units The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+This query returns a list of all the units The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
-  <i>Optional parameters:</i>
-  * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+<i>Optional parameters:</i>
+  * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
+  * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
+
+
+If no language is specified, the default language is returned: English
 
   For example:
   ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"``` (linux/MacOS)
