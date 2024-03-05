@@ -63,7 +63,11 @@ The Application Programming Interface provides a set of predefined SPARQL querie
 
 ### 3.1 Authentication and Authorization
 
-The API of the beta-version of the SI Reference Point is openly available at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT under the Creative Commons Attribution 3.0 Intergovernmental Organization license ([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). 
+The API of the beta-version of the SI Reference Point is openly available at 
+
+<center>https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT</center>
+
+under the Creative Commons Attribution 3.0 Intergovernmental Organization license ([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). 
 
 Currently no pre-registration is required, but please note that during the beta-testing phase the API calls provided may be subject to revision. During this phase (at least until the end of 2024), two weeks' notice will be given, via the website and the GitHub site, to announce upcoming changes. The changes will be logged on the GitHub site.
 
