@@ -85,7 +85,7 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
-| GET Query | Action | Essential parameter | Optional parameter | Effect | 
+| GET Query | Action | Mandatory parameters | Optional parameters | Effect | 
 | :----- | :----- | :---- | :---- | :---- |
 | `SI/units` | returns complete list of units | | | default language is English |
 | | | | `lang=en` | text in English |
@@ -115,83 +115,72 @@ The names of the calls indicated below should be appended to the base URL `si-di
 
 **Examples**
 
-***`SI/units`*** 
+**`SI/units`** 
 
-* ```curl -X GET "https://www.si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
-* ```curl -X GET "https://www.si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (Windows)
-* ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` (on linux/MacOS)
+* ```curl -X GET "https://si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
+* ```curl -X GET "https://si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` 
+* ```curl -X GET "https://si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (on Windows)
 
-returns a complete list of the units: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+will return a complete list of the units: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 <i>Optional parameters:</i>
-  * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
+  * `lang=fr` (to return French texts) or `lang=en` (the default setting: English)
 
-If no language is specified, the default language is returned: English
-
-***`SI/units/{name}`*** 
-{name} of unit is the English name (written without spaces)
+**`SI/units/{name}`** 
 
 * ```curl -X GET "https://www.si-digital-framework.org/SI/units/degreeCelsius"```
 * ```curl -X GET "https://www.si-digital-framework.org/SI/units/kilogram?lang=fr&date=2007-11-21"```
 
 will return respectively information about the degree Celsius and information in French relating to the unit "kilogram" as at (and up until) 21 November 2007.
 
+The mandatory parameter {name} is the English name of the unit (written without spaces).
+
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
   * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
 
-
-***`SI/prefixes`***
+**`SI/prefixes`**
   
-* ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes" -H "accept: application/xml"```
+* ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes?lang=fr" -H "accept: application/xml"```
 
-will return in XML format information about all the SI prefixes.
+will return (in XML format and French text) information about all the SI prefixes.
 
   <i>Optional parameters</i>
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-  ***`SI/prefixes/{name}`***
+ **`SI/prefixes/{name}`**
 
 *  ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"```
-  
-  This query returns information about the particular SI prefix spcified by `{name}`, where `{name}` is the English name of the prefix.
- 
+
+will return (in JSON format and French text) information about the SI prefix "mega" (méga).
+
+The mandatory parameter {name} is the English name of the prefix.
+   
   <i>Optional parameters:</i> 
     * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-  For example, 
 
-  `curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"`
+  **`constants`**
 
+* ```curl -X GET "https://si-digital-framework.org/constants?lang=en" -H "accept: application/json"```
 
-  **3.2.5 `constants`**
-
-   This query returns information about the defining constants. (Note: The knowledge base is currently restricted to the seven constants defining the SI.)
+will returns information about the defining constants. (Note: The knowledge base is currently restricted to the seven constants defining the SI.)
 
   <i>Optional parameters:</i>
     * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-  For example,
+  **`constants/{parameter}`**
 
-  ```curl -X GET "https://si-digital-framework.org/constants?lang=en" -H "accept: application/json"```
+```curl -X GET "https://si-digital-framework.org/constants/PlanckConstant?lang=en" -H "accept: application/json"```
 
-  will return (in JSON format) information in English about all the defining constants
-
-
-  **3.2.6 `constants/{parameter}`**
-
-This query returns information about the particular constant specified by {parameter}, where {parameter} is the ID of the constant as listed by `constants`. 
-
-The constants are named using the English name in CamelCase (camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the output of `constants`.
+will return (in JSON format) information in English about the Planck constant. {parameter} is the ID of the constant as listed by `constants`. It is a shortened version of the Ennglish name (written without spaces and in CamelCase (camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the output of `constants`.
 
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-For example,
 
-```curl -X GET "https://si-digital-framework.org/constants/PlanckConstant?lang=en" -H "accept: application/json"```
+**Error messages**
 
-will return (in JSON format) information in English about the Planck constant.
 
 
 
