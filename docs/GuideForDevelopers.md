@@ -85,15 +85,16 @@ The header information can be adjusted as follows to return data in JSON, JSON-L
 
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
-| Query | Essential parameter | Action | Optional parameter | Effect | 
+| GET Query | Action | Essential parameter | Optional parameter | Effect | 
 | :----- | :----- | :---- | :---- | :---- |
-| `GET SI/units` |returns list of units | | | default language is English |
+| `SI/units` | returns list of units | | | default language is English; default date is date of query |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `GET SI/units/{name}` | information about specified unit {name} | {name} of unit | | default language is English |
+| `SI/units/{name}` | information about specified unit {name} | {name} of unit | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `GET SI/prefixes` | returns list of SI prefixes | | | default language is English |
+| | | | `date=YYYY-MM-DD` | information at specified date |
+| `SI/prefixes` | returns list of SI prefixes | | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
