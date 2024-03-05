@@ -27,7 +27,7 @@ The SI Reference Point provides:
 An introductory overview of the service for users is given [HERE](https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
 
 
-## 2. Introduction to the SI
+## 1. Introduction to the SI
 
 The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set of "SI prefixes". In brief:
 
@@ -57,11 +57,11 @@ The following table shows how the information from the SI Brochure is distribute
 | <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
 
-## 3. Getting started 
+## 1. Getting started 
 
 The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity. They also underpin the web interface.
 
-### 3.1 Authentication and Authorization
+### 1.1 Authentication and Authorization
 
 The API of the beta-version of the SI Reference Point is openly available at 
 
@@ -75,7 +75,7 @@ Once the official version is released, registration of users will be encouraged 
 
 A rate limit of XXXX is in place.
 
-### 3.2 API calls
+### 1.1 API calls
 
 The API queries can be triggered through the [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI).
 
@@ -117,7 +117,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
-**Examples**
+###Examples###
 
 **`SI/units`** 
 
@@ -183,10 +183,9 @@ will return (in JSON format) information in English about the Planck constant. {
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
-**Compound units**
+** Compound units**
 
-**Error messages**
+## 1.1 Error messages##
 
-**HTTP/HTTPS**
-
+## 1.1 HTTP/HTTPS##
 
