@@ -59,7 +59,7 @@ The following table shows how the information from the SI Brochure is distribute
 
 ## 3. Getting started 
 
-The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity.
+The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity. They also underpin the web interface.
 
 ### 3.1 Authentication and Authorization
 
@@ -73,60 +73,72 @@ A rate limit of XXXX is in place.
 
 ### 3.2 API calls
 
-The API queries can be triggered through the [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI). The same API calls underpin the web interface.
+The API queries can be triggered through the [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI).
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
 
 * `curl -H "accept: application/json"`
 * `curl  -H "accept: application/ld+json"`
 * `curl -H "accept: application/xml"`
-* `curl -H "accept: application/htm"l`
+* `curl -H "accept: application/html"`
 * `curl -H "accept: application/octet-stream"`
 
 The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
 | GET Query | Action | Essential parameter | Optional parameter | Effect | 
 | :----- | :----- | :---- | :---- | :---- |
-| `SI/units` | returns list of units | | | default language is English; default date is date of query |
+| `SI/units` | returns complete list of units | | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `SI/units/{name}` | information about specified unit {name} | {name} of unit | | default language is English |
+| `SI/units/{name}` | information about specified unit `{name}` | `{name}` of unit | | default language is English; default date is date of query |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 | | | | `date=YYYY-MM-DD` | information at specified date |
-| `SI/prefixes` | returns list of SI prefixes | | | default language is English |
+| `SI/prefixes` | returns list of SI prefixes | | | default language is English; default date is date of query |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `SI/prefixes/{name}` | information about specified prefix `{name}` | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `constants` | returns list of defining constants | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `constants/{name}` | information about specified constant `{name}` | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `quantities` | returns list of kinds of quantity currently included in the system | | | default language is English |
+| | | | `lang=en` | text in English |
+| | | | `lang=fr` | text in French |
+| `quantities/{code}` | information about specified quantity `{code}` | | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
-  **3.2.1 `SI/units`**
+  **Examples**
 
-This query returns a list of all the units The units included are: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+1.
+ ```curl -X GET "https://www.si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
+ ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` (on linux/MacOS)
+ ```curl -X GET "https://www.si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (Windows)
+
+returns a list of all the units included: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
   * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
-
 
 If no language is specified, the default language is returned: English
 
-  For example:
-  ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -H "accept: application/json"``` (linux/MacOS)
-  ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=en" -Headers "{accept='application/json'}``` (Windows)
 
-  **3.2.2 `SI/units/{name}`**
-  
-  This query returns information about the particular unit specified by `{name}`, where `{name}` is the English name of the unit, after any spaces have been removed (e.g. degreeCelsius for degree Celsius). For confirmation of the name to use, please refer to the output of `SI/units`.
-
-<i>Optional parameters:</i>
-  * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
-  * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
-
-For example
+1. 
+{name} of unit is the English name (written without spaces)
 
 ```curl -X GET "https://www.si-digital-framework.org/SI/units/kilogram?lang=fr&date=2007-11-21"```
 
-will return information in French relating to the SI unit "kilogram" as at (and up until) 21 November 2007.
+will return information in French relating to the unit "kilogram" as at (and up until) 21 November 2007.
 
+```curl -X GET "https://www.si-digital-framework.org/SI/units/degreeCelsius"```
+
+will return information (in the default language, English) about the degree Celsius.
 
   **3.2.3 `SI/prefixes`**
   
