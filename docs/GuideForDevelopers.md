@@ -97,58 +97,62 @@ The names of the calls indicated below should be appended to the base URL `si-di
 | `SI/prefixes` | returns list of SI prefixes | | | default language is English; default date is date of query |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `SI/prefixes/{name}` | information about specified prefix `{name}` | | | default language is English |
+| `SI/prefixes/{name}` | information about specified prefix `{name}` | `{name}` of prefix | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 | `constants` | returns list of defining constants | | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `constants/{name}` | information about specified constant `{name}` | | | default language is English |
+| `constants/{name}` | information about specified constant `{name}` | `{name}` (shortened) name of constant as returned by the previous call | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 | `quantities` | returns list of kinds of quantity currently included in the system | | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
-| `quantities/{code}` | information about specified quantity `{code}` | | | default language is English |
+| `quantities/{code}` | information about specified quantity `{code}` | {code} is the four-letter code for the quantity as returned by the previous call | | default language is English |
 | | | | `lang=en` | text in English |
 | | | | `lang=fr` | text in French |
 
-  **Examples**
+**Examples**
 
-1.
- ```curl -X GET "https://www.si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
- ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` (on linux/MacOS)
- ```curl -X GET "https://www.si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (Windows)
+***`SI/units`*** 
 
-returns a list of all the units included: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+* ```curl -X GET "https://www.si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
+* ```curl -X GET "https://www.si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (Windows)
+* ```curl -X GET "https://www.si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` (on linux/MacOS)
+
+returns a complete list of the units: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
+
+<i>Optional parameters:</i>
+  * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
+
+If no language is specified, the default language is returned: English
+
+***`SI/units/{name}`*** 
+{name} of unit is the English name (written without spaces)
+
+* ```curl -X GET "https://www.si-digital-framework.org/SI/units/degreeCelsius"```
+* ```curl -X GET "https://www.si-digital-framework.org/SI/units/kilogram?lang=fr&date=2007-11-21"```
+
+will return respectively information about the degree Celsius and information in French relating to the unit "kilogram" as at (and up until) 21 November 2007.
 
 <i>Optional parameters:</i>
   * `lang=fr` (to return French information) or `lang=en` (the default setting: English)
   * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
 
-If no language is specified, the default language is returned: English
 
-
-1. 
-{name} of unit is the English name (written without spaces)
-
-```curl -X GET "https://www.si-digital-framework.org/SI/units/kilogram?lang=fr&date=2007-11-21"```
-
-will return information in French relating to the unit "kilogram" as at (and up until) 21 November 2007.
-
-```curl -X GET "https://www.si-digital-framework.org/SI/units/degreeCelsius"```
-
-will return information (in the default language, English) about the degree Celsius.
-
-  **3.2.3 `SI/prefixes`**
+***`SI/prefixes`***
   
-  This query returns a list of all the SI prefixes.
-  
+* ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes" -H "accept: application/xml"```
+
+will return in XML format information about all the SI prefixes.
+
   <i>Optional parameters</i>
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
+  ***`SI/prefixes/{name}`***
 
-  **3.2.4 `SI/prefixes/{name}`**
+*  ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"```
   
   This query returns information about the particular SI prefix spcified by `{name}`, where `{name}` is the English name of the prefix.
  
