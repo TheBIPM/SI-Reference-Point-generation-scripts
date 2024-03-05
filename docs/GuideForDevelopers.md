@@ -183,10 +183,10 @@ will return (in JSON format) information in English about the Planck constant. {
   * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
+**Compound units**
+
 **Error messages**
 
-
-
-
+**HTTP/HTTPS**
 
 
