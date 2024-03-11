@@ -48,7 +48,7 @@
   prefLabel_en: gray
   Symbol: Gy
   hasDefiningResolution: CGPM15-Res9
-  UnitOfQtyKind: ABDO
+  UnitOfQtyKind: [ABDO, GRAY]
   inOtherSIUnits:
     - [joule, "1"]
     - [kilogram, "-1"]

@@ -199,13 +199,21 @@ def main():
                         Literal("Unité SI de base", lang="fr"),
                     )
                 )
-                g.add(
-                    (
-                        element,
-                        PDF.isUnitOfQtyKind,
-                        PDF.set_quantity_uri(dc["isUnitOfQtyKind"]),
+                # UnitOfQtyKind can be list or single item
+                qty_kind_list = []
+                if isinstance(dc["isUnitOfQtyKind"], list):
+                    qty_kind_list = dc["isUnitOfQtyKind"]
+                else:
+                    qty_kind_list = [dc["isUnitOfQtyKind"]]
+
+                for qty_kind in qty_kind_list:
+                    g.add(
+                        (
+                            element,
+                            PDF.isUnitOfQtyKind,
+                            PDF.set_quantity_uri(qty_kind),
+                        )
                     )
-                )
                 g.add(
                     (
                         element,
@@ -444,13 +452,21 @@ def main():
                     Literal(sisp["Symbol"], datatype=XSD.string),
                 )
             )
-            g.add(
-                (
-                    element,
-                    PDF.isUnitOfQtyKind,
-                    PDF.set_quantity_uri(sisp["UnitOfQtyKind"]),
+            # UnitOfQtyKind can be list or single item
+            qty_kind_list = []
+            if isinstance(sisp["UnitOfQtyKind"], list):
+                qty_kind_list = sisp["UnitOfQtyKind"]
+            else:
+                qty_kind_list = [sisp["UnitOfQtyKind"]]
+
+            for qty_kind in qty_kind_list:
+                g.add(
+                    (
+                        element,
+                        PDF.isUnitOfQtyKind,
+                        PDF.set_quantity_uri(qty_kind),
+                    )
                 )
-            )
             g.add(
                 (
                     element,
@@ -552,13 +568,21 @@ def main():
                 )
                 )
 
-            g.add(
-                (
-                    element,
-                    PDF.isUnitOfQtyKind,
-                    PDF.set_quantity_uri(nsi["UnitOfQtyKind"]),
+            # UnitOfQtyKind can be list or single item
+            qty_kind_list = []
+            if isinstance(nsi["UnitOfQtyKind"], list):
+                qty_kind_list = nsi["UnitOfQtyKind"]
+            else:
+                qty_kind_list = [nsi["UnitOfQtyKind"]]
+
+            for qty_kind in qty_kind_list:
+                g.add(
+                    (
+                        element,
+                        PDF.isUnitOfQtyKind,
+                        PDF.set_quantity_uri(qty_kind),
+                    )
                 )
-            )
             if "ConversionFactor" in nsi:
                 unit_multiple = BNode()
                 hasUnitTerm = PDF.set_uri("hasUnitTerm")
