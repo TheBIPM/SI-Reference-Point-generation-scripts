@@ -2,7 +2,7 @@ import os
 import pathlib
 package_dir = pathlib.Path(__file__).parent.resolve()
 
-SIURL = "http://si-digital-framework.org/"
+SIURL = "https://si-digital-framework.org/"
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
 
