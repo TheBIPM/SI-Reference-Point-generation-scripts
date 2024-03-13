@@ -25,7 +25,7 @@ si:hasUnitTerm a owl:ObjectProperty ;
 si:hasQuantityTerm a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasTerm ;
     rdfs:label "has quantity term"@en,
-        "a pour terme cette quantité"@fr .
+        "a pour terme cette grandeur"@fr .
 
 si:hasNumericFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf si:hasTerm ;
@@ -58,7 +58,7 @@ si:hasRightUnitTerm a owl:ObjectProperty ;
 
 si:hasLeftQuantityTerm a owl:ObjectProperty ;
     rdfs:label "has left quantity term"@en,
-        "a pour terme de gauche cette quantité"@fr ;
+        "a pour terme de gauche cette grandeur"@fr ;
     rdfs:comment "preserve order of multiplication" ;
     rdfs:subPropertyOf si:hasQuantityTerm ;
     rdfs:domain si:QuantityKindProduct ;
@@ -66,7 +66,7 @@ si:hasLeftQuantityTerm a owl:ObjectProperty ;
 
 si:hasRightQuantityTerm a owl:ObjectProperty ;
     rdfs:label "has right quantity term"@en,
-        "a pour terme de droite cette quantité"@fr ;
+        "a pour terme de droite cette grandeur"@fr ;
     rdfs:comment "preserve order of multiplication" ;
     rdfs:subPropertyOf si:hasQuantityTerm ;
     rdfs:domain si:QuantityKindProduct ;
@@ -96,7 +96,7 @@ si:hasNumericExponent a owl:DatatypeProperty ;
 si:hasQuantityBase a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasBase ;
     rdfs:label "has quantity base"@en,
-        "a pour base cette quantité"@fr ;
+        "a pour base cette grandeur"@fr ;
     rdfs:comment "QuantityBase ^ NumericExponent" ;
     rdfs:domain si:QuantityKindPower;
     rdfs:range si:MeasurementUnit .
@@ -132,17 +132,17 @@ si:hasNonPrefixedUnit a owl:ObjectProperty ;
 
 si:CompoundQuantityKind a owl:Class ;  # DerivedQuantity?
     rdfs:label "compound quantitykind"@en,
-        "quantité composée"@fr ; 
+        "grandeur composée"@fr ; 
     rdfs:subClassOf si:QuantityKind .
 
 si:QuantityKindProduct a owl:Class ;
     rdfs:label "quantitykind product"@en,
-        "produit de quantités"@fr ;
+        "produit de grandeurs"@fr ;
     rdfs:subClassOf si:CompoundQuantityKind .
 
 si:QuantityKindPower a owl:Class ;
     rdfs:label "quantitykind power"@en,
-        "quantité élevée à la puissance"@fr ;
+        "grandeur élevée à la puissance"@fr ;
     rdfs:subClassOf si:CompoundQuantityKind .
 
 

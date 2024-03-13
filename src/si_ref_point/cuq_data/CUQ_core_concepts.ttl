@@ -15,7 +15,7 @@ si: a owl:Ontology ;
 
 si:Constant a owl:Class ;
     rdfs:label "defining constant"@en,
-        "définir la constante"@fr ;
+        "constante définissant le SI"@fr ;
     rdfs:comment "Class for the seven defining constants of the SI."@en,
         "La classe pour les sept constantes définissant le SI."@fr ;
     owl:disjointWith si:QuantityKind .
@@ -110,7 +110,7 @@ si:QuantityKind a owl:Class ;
     rdfs:label "kind of quantity"@en,
         "nature de grandeur"@fr ;
     rdfs:comment "Class for the quantity kinds."@en,
-        "La classe pour les types de quantité."@fr ;
+        "La classe pour les types de grandeur."@fr ;
     rdfs:isDefinedBy "VIM3 1.2"^^xsd:string .
 
 # Predicates
@@ -341,7 +341,7 @@ si:hasScalingFactor a owl:DatatypeProperty ;
     
 si:hasDefiningResolution a owl:ObjectProperty ;
     rdfs:label "has defining resolution"@en,
-        "a une résolution déterminante"@fr ;
+        "a résolution de définition"@fr ;
     rdfs:comment "Linking an SI definition to the resolution by which it was adopted."@en,
         "Associer une définition SI à la résolution par laquelle elle a été adoptée."@fr ;
     rdfs:domain [ owl:oneOf ( si:Definition si:Constant ) ] ;
@@ -358,9 +358,9 @@ si:isDefiningResolutionOf a owl:ObjectProperty ;
 
 si:isUnitOfQtyKind a owl:ObjectProperty ;
     rdfs:label "is unit of quantity kind"@en,
-        "est une unité de quantité"@fr ;
+        "est une unité de grandeur"@fr ;
     rdfs:comment "Linking a measurement unit to its quantity kind."@en,
-        "Associer une unité de mesure à son type de quantité."@fr ;
+        "Associer une unité de mesure à son type de grandeur."@fr ;
     rdfs:domain si:MeasurementUnit ;
     rdfs:range si:QuantityKind .
 
