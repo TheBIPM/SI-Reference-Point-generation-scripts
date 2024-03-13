@@ -5,8 +5,8 @@
 
 @prefix si: <https://si-digital-framework.org/SI#> .
 @prefix units: <https://si-digital-framework.org/SI/units/> .
-@prefix quantities: <http://si-digital-framework.org/quantities/> .
-@prefix prefixes: <http://si-digital-framework.org/SI/prefixes/> .
+@prefix quantities: <https://si-digital-framework.org/quantities/> .
+@prefix prefixes: <https://si-digital-framework.org/SI/prefixes/> .
 
 
 # properties
