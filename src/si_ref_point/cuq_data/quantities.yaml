@@ -396,3 +396,7 @@
   quantity-en: 'phase'
   quantity-fr: 'phase'
   Unit: radian
+- identifier: REFI
+  quantity-en: 'refractive index'
+  quantity-fr: 'indice de réfraction'
+  Unit: null
