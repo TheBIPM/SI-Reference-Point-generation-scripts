@@ -311,7 +311,7 @@
   - [metre, "-1"]
 - identifier: MOEG
   quantity-en: molar energy
-  quantity-fr: 'énergie molaire '
+  quantity-fr: 'énergie molaire'
   Unit:
   - [joule, "1"]
   - [mole, "-1"]
@@ -330,7 +330,7 @@
   - [kilogram, "-1"]
 - identifier: ABDR
   quantity-en: absorbed dose rate
-  quantity-fr: 'débit de dose absorbée '
+  quantity-fr: 'débit de dose absorbée'
   Unit:
   - [gray, "1"]
   - [second, "-1"]
@@ -342,14 +342,14 @@
   - [steradian, "-1"]
 - identifier: RADI
   quantity-en: radiance
-  quantity-fr: 'luminance énergétique '
+  quantity-fr: 'luminance énergétique'
   Unit:
   - [watt, "1"]
   - [steradian, "-1"]
   - [metre, "-2"]
 - identifier: CTAC
   quantity-en: catalytic activity concentration
-  quantity-fr: 'concentration de l’activité catalytique '
+  quantity-fr: 'concentration de l’activité catalytique'
   Unit:
   - [katal, "1"]
   - [metre, "-3"]
@@ -370,8 +370,8 @@
   - [metre, "-2"]
   - [second, "-1"]
 - identifier: PLTS
-  quantity-en: 'PLTS-2000 temperature (K)'
-  quantity-fr: 'température PLTS-2000 (K)'
+  quantity-en: 'PLTS-2000 temperature'
+  quantity-fr: 'température PLTS-2000'
   Unit:
   - [kelvin, "1"]
 - identifier: ITSK
@@ -400,3 +400,48 @@
   quantity-en: 'refractive index'
   quantity-fr: 'indice de réfraction'
   Unit: null
+- identifier: HDIS
+  quantity-en: 'harmonic distortion'
+  quantity-fr: 'distorsion harmonique'
+  Unit: null  
+- identifier: TAND
+  quantity-en: 'dielectric loss tangent'
+  quantity-fr: 'facteur de dissipation'
+  Unit: null
+- identifier: QFAC
+  quantity-en: 'quality factor'
+  quantity-fr: 'facteur de qualité'
+  Unit: null
+- identifier: PERM
+  quantity-en: 'permittivity'
+  quantity-fr: 'permittivité'
+  Unit: 
+  - [farad, "1"]
+  - [metre, "-1"]  
+- identifier: RELP
+  quantity-en: 'relative permittivity'
+  quantity-fr: 'permittivité relative'
+  Unit: null 
+- identifier: PMBY
+  quantity-en: 'magnetic permeability'
+  quantity-fr: 'perméabilité magnétique'
+  Unit: 
+  - [henry, "1"]
+  - [metre, "-1"]
+- identifier: REPE
+  quantity-en: 'relative permeability'
+  quantity-fr: 'perméabilité relative'
+  Unit: null 
+- identifier: MGSU
+  quantity-en: 'magnetic susceptibility'
+  quantity-fr: 'susceptibilité magnétique'
+  Unit: null
+- identifier: MGPO
+  quantity-en: 'magnetic polarization'
+  quantity-fr: 'polarisation magnétique'
+  Unit: null   
+- identifier: SHLD
+  quantity-en: 'shielding factor'
+  quantity-fr: 'taux de blindage'
+  Unit:
+  - [decibel, "1"]
