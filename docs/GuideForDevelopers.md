@@ -170,8 +170,8 @@ The mandatory parameter {name} is the English name of the prefix.
 
 will returns information about the defining constants. (Note: The knowledge base is currently restricted to the seven constants defining the SI.)
 
-  <i>Optional parameters:</i>
-    * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+<i>Optional parameters:</i>
+  * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
   **`constants/{parameter}`**
 
