@@ -71,7 +71,6 @@
   ConversionFactorAsString: "0.001"
   ConversionUnit:
     - [metre, "-3"]
-  PrefixRestriction: true
 - URI: tonne
   prefLabel_fr: tonne
   prefLabel_en: tonne
