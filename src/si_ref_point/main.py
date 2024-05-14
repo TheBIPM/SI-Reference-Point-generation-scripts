@@ -105,7 +105,7 @@ def main():
 
             # generate hash for file and write it alongside
             h = hashlib.new('sha256')
-            with open(filedest) as fp:
+            with open(filedest, encoding="UTF8") as fp:
                 h.update(fp.read().encode())
             hashstr = h.hexdigest()
             hashdest = os.path.join(srl['dir'], label + '.sha256')
