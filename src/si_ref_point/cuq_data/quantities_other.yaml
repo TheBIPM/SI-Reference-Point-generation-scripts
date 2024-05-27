@@ -96,3 +96,7 @@
   quantity-fr: 'taux de blindage'
   Unit:
     - [decibel, "1"]
+- identifier: ANIS
+  quantity-en: 'anisotropy'
+  quantity-fr: 'anisotropie'
+  Unit: null
