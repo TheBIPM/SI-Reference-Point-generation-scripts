@@ -1,3 +1,5 @@
+---
+# Quantities named in table 2 and 3:
 - identifier: TIME
   quantity-en: time
   quantity-fr: temps
@@ -26,6 +28,32 @@
   quantity-en: luminous intensity
   quantity-fr: intensité lumineuse
   Unit: candela
+
+# Quantities named in table 1:
+- identifier: FREQ
+  quantity-en: frequency
+  quantity-fr: fréquence
+  Unit: hertz
+- identifier: VELO
+  quantity-en: velocity
+  quantity-fr: vitesse
+  Unit:
+    - [metre, "1"]
+    - [second, "-1"]
+# PROPOSITION
+- identifier: ACTI
+  quantity-en: action
+  quantity-fr: action
+  Unit:
+    - [joule, "1"]
+    - [second, "1"]
+- identifier: ELCH
+  quantity-en: electric charge
+  quantity-fr: charge électrique
+  Unit: coulomb
+
+
+# Quantities named in table 4:
 - identifier: ANGP
   quantity-en: plane angle
   quantity-fr: angle plan
@@ -34,30 +62,40 @@
   quantity-en: solid angle
   quantity-fr: angle solide
   Unit: steradian
-- identifier: FREQ
-  quantity-en: frequency
-  quantity-fr: fréquence
-  Unit: hertz
+# frequency already defined
 - identifier: FORC
   quantity-en: force
   quantity-fr: force
   Unit: newton
 - identifier: PRES
   quantity-en: pressure
-  quantity-fr: pression, contrainte
+  quantity-fr: pression
+  Unit: pascal
+- identifier: STRE
+  quantity-en: constraint
+  quantity-fr: stress
   Unit: pascal
 - identifier: ENGY
   quantity-en: energy
   quantity-fr: énergie
   Unit: joule
+- identifier: WORK
+  quantity-en: work
+  quantity-fr: travail
+  Unit: joule
+- identifier: HEQT
+  quantity-en: heat quantity
+  quantity-fr: quantité de chaleur
+  Unit: joule
 - identifier: POWR
   quantity-en: power
   quantity-fr: puissance, flux énergétique
   Unit: watt
-- identifier: ELCH
-  quantity-en: electric charge
-  quantity-fr: charge électrique
-  Unit: coulomb
+- identifier: RAFL
+  quantity-en: radiant flux
+  quantity-fr: flux énergétique
+  Unit: watt
+# Electric charge already defined
 - identifier: ELPD
   quantity-en: electric potential difference
   quantity-fr: différence de potentiel électrique
@@ -110,12 +148,6 @@
   quantity-en: kerma
   quantity-fr: kerma
   Unit: gray
-- identifier: KRMR
-  quantity-en: kerma rate
-  quantity-fr: kerma rate
-  Unit:
-  - [gray, "1"]
-  - [second, "-1"]
 - identifier: DOEQ
   quantity-en: dose equivalent
   quantity-fr: équivalent de dose
@@ -124,266 +156,268 @@
   quantity-en: catalytic activity
   quantity-fr: activité catalytique
   Unit: katal
+
+# Quantities named in table 5 :
 - identifier: AREA
   quantity-en: area
   quantity-fr: superficie
   Unit:
-  - [metre, "2"]
+    - [metre, "2"]
 - identifier: VOLU
   quantity-en: volume
   quantity-fr: volume
   Unit:
-  - [metre, "3"]
-- identifier: VELO
-  quantity-en: velocity
-  quantity-fr: vitesse
-  Unit:
-  - [metre, "1"]
-  - [second, "-1"]
+    - [metre, "3"]
 - identifier: ACCE
   quantity-en: acceleration
   quantity-fr: accélération
   Unit:
-  - [metre, "1"]
-  - [second, "-2"]
+    - [metre, "1"]
+    - [second, "-2"]
 - identifier: WANU
   quantity-en: wavenumber
   quantity-fr: nombre d'ondes
   Unit:
-  - [metre, "-1"]
+    - [metre, "-1"]
 - identifier: DENS
   quantity-en: density
   quantity-fr: masse volumique
   Unit:
-  - [kilogram, "1"]
-  - [metre, "-3"]
+    - [kilogram, "1"]
+    - [metre, "-3"]
 - identifier: SUDE
   quantity-en: surface density
   quantity-fr: masse surfacique
   Unit:
-  - [kilogram, "1"]
-  - [metre, "-2"]
+    - [kilogram, "1"]
+    - [metre, "-2"]
 - identifier: SPVO
   quantity-en: specific volume
   quantity-fr: volume massique
   Unit:
-  - [metre, "3"]
-  - [kilogram, "-1"]
+    - [metre, "3"]
+    - [kilogram, "-1"]
 - identifier: CUDE
   quantity-en: current density
   quantity-fr: densité de courant
   Unit:
-  - [ampere, "1"]
-  - [metre, "-2"]
+    - [ampere, "1"]
+    - [metre, "-2"]
 - identifier: MAFD
   quantity-en: magnetic field strength
   quantity-fr: champ magnétique
   Unit:
-  - [ampere, "1"]
-  - [metre, "-1"]
+    - [ampere, "1"]
+    - [metre, "-1"]
 - identifier: AMSC
   quantity-en: 'amount of substance concentration '
   quantity-fr: concentration de quantité de matière
   Unit:
-  - [mole, "1"]
-  - [metre, "-3"]
+    - [mole, "1"]
+    - [metre, "-3"]
 - identifier: MACO
   quantity-en: mass concentration
   quantity-fr: concentration massique
   Unit:
-  - [kilogram, "1"]
-  - [metre, "-3"]
+    - [kilogram, "1"]
+    - [metre, "-3"]
 - identifier: LUMA
   quantity-en: luminance
   quantity-fr: luminance lumineuse
   Unit:
-  - [candela, "1"]
-  - [metre, "-2"]
+    - [candela, "1"]
+    - [metre, "-2"]
+
+# Quantity named in table 6 :
 - identifier: KIVI
-  quantity-en: 'kinematic viscosity'
-  quantity-fr: 'viscosité cinématique '
+  quantity-en: kinematic viscosity
+  quantity-fr: viscosité cinématique
   Unit:
-  - [metre, "2"]
-  - [second, "-1"]
-- identifier: DYVI
-  quantity-en: dynamic viscosity
-  quantity-fr: 'viscosité dynamique '
-  Unit:
-  - [pascal, "1"]
-  - [second, "1"]
+    - [metre, "2"]
+    - [second, "-1"]
 - identifier: TORQ
   quantity-en: moment of force
-  quantity-fr: 'moment d’une force '
+  quantity-fr: 'moment d’une force'
   Unit:
-  - [newton, "1"]
-  - [metre, "1"]
+    - [newton, "1"]
+    - [metre, "1"]
 - identifier: SUTE
   quantity-en: surface tension
-  quantity-fr: 'tension superficielle '
+  quantity-fr: tension superficielle
   Unit:
-  - [newton, "1"]
-  - [metre, "-1"]
+    - [newton, "1"]
+    - [metre, "-1"]
 - identifier: VELA
   quantity-en: angular velocity
-  quantity-fr: 'vitesse angulaire '
+  quantity-fr: vitesse angulaire
   Unit:
-  - [radian, "1"]
-  - [second, "-1"]
+    - [radian, "1"]
+    - [second, "-1"]
+- identifier: ANGF
+  quantity-en: angular frequency
+  quantity-fr: fréquence angulaire
+  Unit:
+    - [radian, "1"]
+    - [second, "-1"]
 - identifier: ACCA
   quantity-en: angular acceleration
-  quantity-fr: 'accelération angulaire '
+  quantity-fr: accelération angulaire
   Unit:
-  - [radian, "1"]
-  - [second, "-2"]
+    - [radian, "1"]
+    - [second, "-2"]
 - identifier: HEFD
   quantity-en: heat flux density
-  quantity-fr: 'flux thermique surfacique '
+  quantity-fr: flux thermique surfacique
   Unit:
-  - [watt, "1"]
-  - [metre, "-2"]
+    - [watt, "1"]
+    - [metre, "-2"]
+- identifier: IRRA
+  quantity-en: irradiance
+  quantity-fr: éclairement énergétique
+  Unit:
+    - [watt, "1"]
+    - [metre, "-2"]
 - identifier: HECA
   quantity-en: heat capacity
-  quantity-fr: 'capacité thermique '
+  quantity-fr: capacité thermique
   Unit:
-  - [joule, "1"]
-  - [kelvin, "-1"]
+    - [joule, "1"]
+    - [kelvin, "-1"]
+- identifier: ENTR
+  quantity-en: entropy
+  quantity-fr: entropie
+  Unit:
+    - [joule, "1"]
+    - [kelvin, "-1"]
 - identifier: SHEC
   quantity-en: specific heat capacity
-  quantity-fr: 'capacité thermique massique '
+  quantity-fr: capacité thermique massique
   Unit:
-  - [joule, "1"]
-  - [kelvin, "-1"]
-  - [kilogram, "-1"]
+    - [joule, "1"]
+    - [kelvin, "-1"]
+    - [kilogram, "-1"]
+- identifier: SENT
+  quantity-en: specific entropy
+  quantity-fr: entropie massique
+  Unit:
+    - [joule, "1"]
+    - [kelvin, "-1"]
+    - [kilogram, "-1"]
 - identifier: SENG
   quantity-en: specific energy
-  quantity-fr: 'énergie massique '
+  quantity-fr: énergie massique
   Unit:
-  - [joule, "1"]
-  - [kilogram, "-1"]
+    - [joule, "1"]
+    - [kilogram, "-1"]
 - identifier: TCON
   quantity-en: thermal conductivity
-  quantity-fr: 'conductivité thermique '
+  quantity-fr: conductivité thermique
   Unit:
-  - [watt, "1"]
-  - [metre, "-1"]
-  - [kelvin, "-1"]
+    - [watt, "1"]
+    - [metre, "-1"]
+    - [kelvin, "-1"]
 - identifier: ENGD
   quantity-en: energy density
-  quantity-fr: énergie volumique
+  quantity-fr: énergie volumique
   Unit:
-  - [joule, "1"]
-  - [metre, "-3"]
+    - [joule, "1"]
+    - [metre, "-3"]
 - identifier: ELFS
   quantity-en: electric field strength
-  quantity-fr: champ électrique
+  quantity-fr: champ électrique
   Unit:
-  - [volt, "1"]
-  - [metre, "-1"]
+    - [volt, "1"]
+    - [metre, "-1"]
 - identifier: ELCD
   quantity-en: electric charge density
-  quantity-fr: 'charge électrique volumique '
+  quantity-fr: charge électrique volumique
   Unit:
-  - [coulomb, "1"]
-  - [metre, "-3"]
+    - [coulomb, "1"]
+    - [metre, "-3"]
 - identifier: SUCD
   quantity-en: surface charge density
-  quantity-fr: 'charge électrique surfacique '
+  quantity-fr: charge électrique surfacique
   Unit:
-  - [coulomb, "1"]
-  - [metre, "-2"]
+    - [coulomb, "1"]
+    - [metre, "-2"]
 - identifier: ELFD
   quantity-en: electric flux density
-  quantity-fr: 'induction électrique '
+  quantity-fr: induction électrique
   Unit:
-  - [coulomb, "1"]
-  - [metre, "-2"]
+    - [coulomb, "1"]
+    - [metre, "-2"]
+- identifier: ELDS
+  quantity-en: electric displacement
+  quantity-fr: déplacement électrique
+  Unit:
+    - [coulomb, "1"]
+    - [metre, "-2"]
 - identifier: PRMI
   quantity-en: permittivity
   quantity-fr: permittivité
   Unit:
-  - [farad, "1"]
-  - [metre, "-1"]
+    - [farad, "1"]
+    - [metre, "-1"]
 - identifier: PRME
   quantity-en: permeability
   quantity-fr: perméabilitté
   Unit:
-  - [henry, "1"]
-  - [metre, "-1"]
+    - [henry, "1"]
+    - [metre, "-1"]
 - identifier: MOEG
   quantity-en: molar energy
   quantity-fr: 'énergie molaire'
   Unit:
-  - [joule, "1"]
-  - [mole, "-1"]
+    - [joule, "1"]
+    - [mole, "-1"]
 - identifier: MOEN
   quantity-en: molar entropy
   quantity-fr: entropie molaire
   Unit:
-  - [joule, "1"]
-  - [kelvin, "-1"]
-  - [mole, "-1"]
-- identifier: XPOS
-  quantity-en: exposure
-  quantity-fr: 'exposition (rayons x et γ) '
+    - [joule, "1"]
+    - [kelvin, "-1"]
+    - [mole, "-1"]
+- identifier: MOHC
+  quantity-en: molar heat capacity
+  quantity-fr: capacité thermique molaire
   Unit:
-  - [coulomb, "1"]
-  - [kilogram, "-1"]
+    - [joule, "1"]
+    - [kelvin, "-1"]
+    - [mole, "-1"]
+- identifier: XPOS
+  quantity-en: exposure (x and γ rays)
+  quantity-fr: exposition (rayons x et γ)
+  Unit:
+    - [coulomb, "1"]
+    - [kilogram, "-1"]
 - identifier: ABDR
   quantity-en: absorbed dose rate
-  quantity-fr: 'débit de dose absorbée'
+  quantity-fr: débit de dose absorbée
   Unit:
-  - [gray, "1"]
-  - [second, "-1"]
+    - [gray, "1"]
+    - [second, "-1"]
 - identifier: RAIN
   quantity-en: radiant intensity
-  quantity-fr: 'intensité énergétique '
+  quantity-fr: intensité énergétique
   Unit:
-  - [watt, "1"]
-  - [steradian, "-1"]
+    - [watt, "1"]
+    - [steradian, "-1"]
 - identifier: RADI
   quantity-en: radiance
-  quantity-fr: 'luminance énergétique'
+  quantity-fr: luminance énergétique
   Unit:
-  - [watt, "1"]
-  - [steradian, "-1"]
-  - [metre, "-2"]
+    - [watt, "1"]
+    - [steradian, "-1"]
+    - [metre, "-2"]
 - identifier: CTAC
   quantity-en: catalytic activity concentration
   quantity-fr: 'concentration de l’activité catalytique'
   Unit:
-  - [katal, "1"]
-  - [metre, "-3"]
-- identifier: EMIR
-  quantity-en: "emission rate"
-  quantity-fr: "taux d'émission"
-  Unit:
-  - [second, "-1"]
-- identifier: FLUE
-  quantity-en: "fluence"
-  quantity-fr: "fluence"
-  Unit:
-  - [metre, "-2"]
-- identifier: FLUR
-  quantity-en: "fluence rate"
-  quantity-fr: "débit de fluence"
-  Unit:
-  - [metre, "-2"]
-  - [second, "-1"]
-- identifier: PLTS
-  quantity-en: 'PLTS-2000 temperature'
-  quantity-fr: 'température PLTS-2000'
-  Unit:
-  - [kelvin, "1"]
-- identifier: ITSK
-  quantity-en: "ITS-90 temperature (K)"
-  quantity-fr: "température ITS-90 (K)"
-  Unit:
-  - [kelvin, "1"]
-- identifier: ITSC
-  quantity-en: 'ITS-90 temperature (℃)'
-  quantity-fr: 'température ITS-90 (℃)'
-  Unit:
-  - [degreeCelsius, "1"]
+    - [katal, "1"]
+    - [metre, "-3"]
+
+
+# Logarithmic quantities named in table 8 :
 - identifier: RLGB
   quantity-en: 'ratio logarithm (B)'
   quantity-fr: "logarithme d'un rapport (B)"
@@ -392,56 +426,3 @@
   quantity-en: 'ratio logarithm (Np)'
   quantity-fr: "logarithme d'un rapport (Np)"
   Unit: neper
-- identifier: PHAS
-  quantity-en: 'phase'
-  quantity-fr: 'phase'
-  Unit: radian
-- identifier: REFI
-  quantity-en: 'refractive index'
-  quantity-fr: 'indice de réfraction'
-  Unit: null
-- identifier: HDIS
-  quantity-en: 'harmonic distortion'
-  quantity-fr: 'distorsion harmonique'
-  Unit: null  
-- identifier: TAND
-  quantity-en: 'dielectric loss tangent'
-  quantity-fr: 'facteur de dissipation'
-  Unit: null
-- identifier: QFAC
-  quantity-en: 'quality factor'
-  quantity-fr: 'facteur de qualité'
-  Unit: null
-- identifier: PERM
-  quantity-en: 'permittivity'
-  quantity-fr: 'permittivité'
-  Unit: 
-  - [farad, "1"]
-  - [metre, "-1"]  
-- identifier: RELP
-  quantity-en: 'relative permittivity'
-  quantity-fr: 'permittivité relative'
-  Unit: null 
-- identifier: PMBY
-  quantity-en: 'magnetic permeability'
-  quantity-fr: 'perméabilité magnétique'
-  Unit: 
-  - [henry, "1"]
-  - [metre, "-1"]
-- identifier: REPE
-  quantity-en: 'relative permeability'
-  quantity-fr: 'perméabilité relative'
-  Unit: null 
-- identifier: MGSU
-  quantity-en: 'magnetic susceptibility'
-  quantity-fr: 'susceptibilité magnétique'
-  Unit: null
-- identifier: MGPO
-  quantity-en: 'magnetic polarization'
-  quantity-fr: 'polarisation magnétique'
-  Unit: null   
-- identifier: SHLD
-  quantity-en: 'shielding factor'
-  quantity-fr: 'taux de blindage'
-  Unit:
-  - [decibel, "1"]
