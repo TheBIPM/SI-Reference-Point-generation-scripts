@@ -100,3 +100,147 @@
   quantity-en: 'anisotropy'
   quantity-fr: 'anisotropie'
   Unit: null
+- identifier: OPTP
+  quantity-en: 'optical power'
+  quantity-fr: 'puissance optique'
+  Unit: 
+    - [watt, "1"]
+- identifier: OPTR
+  quantity-en: 'transmittance'
+  quantity-fr: 'transmittance'
+  Unit: null
+- identifier: EMIT
+  quantity-en: 'emittance'
+  quantity-fr: 'émittance'
+  Unit: null
+- identifier: LUFA
+  quantity-en: 'luminance factor'
+  quantity-fr: 'facteur de luminance'
+  Unit: null  
+- identifier: RADF
+  quantity-en: 'radiance factor'
+  quantity-fr: 'facteur de luminance énergétique'
+  Unit: null 
+- identifier: OPAB
+  quantity-en: 'optical absorbance'
+  quantity-fr: 'absorbance optique'
+  Unit: null  
+- identifier: EMIS
+  quantity-en: 'emissivity'
+  quantity-fr: 'émissivité'
+  Unit: null  
+- identifier: OPRE
+  quantity-en: 'optical reflectance'
+  quantity-fr: 'réflectance optique'
+  Unit: null   
+- identifier: BDRF
+  quantity-en: 'bidirectional reflectance distribution function'
+  quantity-fr: 'distribution de réflectance bidirectionnelle'
+  Unit:
+    - [steradian, "-1"]   
+- identifier: CCTE
+  quantity-en: 'colour temperature'
+  quantity-fr: 'température de couleur'
+  Unit:
+    - [kelvin, "1"]
+- identifier: EMCO
+  quantity-en: 'emitted colour'
+  quantity-fr: 'couleur émise'
+  Unit: null
+- identifier: SUCO
+  quantity-en: 'surface colour'
+  quantity-fr: 'couleur de surface'
+  Unit: null
+- identifier: TRCO
+  quantity-en: 'transmitted colour'
+  quantity-fr: 'couleur transmise'
+  Unit: null
+- identifier: CORA
+  quantity-en: 'colour rendering'
+  quantity-fr: 'rendu de couleur'
+  Unit: null
+- identifier: LUCO
+  quantity-en: 'luminance coefficient'
+  quantity-fr: 'coefficient de luminance'
+  Unit: null
+    - [steradian, "-1"]
+- identifier: MTTE
+  quantity-en: 'distribution temperature'
+  quantity-fr: 'température de distribution'
+  Unit: 
+    - [kelvin, "1"]
+- identifier: WHIT
+  quantity-en: 'whiteness'
+  quantity-fr: 'blancheur'
+  Unit: null
+- identifier: ILRS
+  quantity-en: 'illuminance responsivity'
+  quantity-fr: 'responsivité à l'éclairement lumineux'
+  Unit:
+    - [lux, "-1"]   
+- identifier: LURS
+  quantity-en: 'luminance responsivity'
+  quantity-fr: 'responsivité à la luminance'
+  Unit:
+    - [candela, "-1"]
+    - [metre, "2"] 
+- identifier: PORS
+  quantity-en: 'optical power responsivity'
+  quantity-fr: 'responsivité à la puissance optique'
+  Unit:
+    - [watt, "-1"]
+- identifier: RARS
+  quantity-en: 'radiance responsivity'
+  quantity-fr: 'responsivité à la puissance optique'
+  Unit:
+    - [watt, "-1"]
+    - [steradian, "1"]
+    - [metre, "2"]
+- identifier: HEFU
+  quantity-en: 'heat of fusion'
+  quantity-fr: 'énergie de fusion'
+  Unit:
+    - [joule, "1"]
+    - [kilogram, "-1"] 
+- identifier: TDIF
+  quantity-en: 'thermal diffusivity'
+  quantity-fr: 'diffusivité thermique'
+  Unit:
+    - [metre, "2"]
+    - [second, "-1"] 
+- identifier: TEXL
+  quantity-en: 'thermal expansion coefficient (linear)'
+  quantity-fr: 'coefficient d'expansion thermique (linéaire)'
+  Unit:
+    - [metre, "1"]
+    - [metre, "-1"]
+    - [kelvin, "-1"]
+- identifier: TEXA
+  quantity-en: 'thermal expansion coefficient (areal)'
+  quantity-fr: 'coefficient d'expansion thermique (superficie)'
+  Unit:
+    - [metre, "2"]
+    - [metre, "-2"]    
+    - [kelvin, "-1"]    
+- identifier: TEXV
+  quantity-en: 'thermal expansion coefficient (volumetric)'
+  quantity-fr: 'coefficient d'expansion thermique (volume)'
+  Unit:
+    - [metre, "3"]
+    - [metre, "-3"]    
+    - [kelvin, "-1"]  
+- identifier: DEWP
+  quantity-en: 'dew/frost point'
+  quantity-fr: 'point de rosée/givre'
+  Unit:
+    - [kelvin, "1"]
+- identifier: CALV
+  quantity-en: 'calorific value'
+  quantity-fr: 'valeur calorifique'
+  Unit:
+    - [joule, "1"]
+    - [kilogram, "-1"]    
+- identifier: RHUM
+  quantity-en: 'relative humidity'
+  quantity-fr: 'humidité relative'
+  Unit: null  
