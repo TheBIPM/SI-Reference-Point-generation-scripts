@@ -175,23 +175,23 @@
   Unit: null
 - identifier: ILRS
   quantity-en: 'illuminance responsivity'
-  quantity-fr: 'responsivité à l éclairement lumineux'
+  quantity-fr: 'sensibilité à l\'éclairement lumineux'
   Unit:
     - [lux, "-1"]   
 - identifier: LURS
   quantity-en: 'luminance responsivity'
-  quantity-fr: 'responsivité à la luminance'
+  quantity-fr: 'sensibilité à la luminance lumineuse'
   Unit:
     - [candela, "-1"]
     - [metre, "2"] 
 - identifier: PORS
   quantity-en: 'optical power responsivity'
-  quantity-fr: 'responsivité à la puissance optique'
+  quantity-fr: 'sensibilité à la puissance optique'
   Unit:
     - [watt, "-1"]
 - identifier: RARS
   quantity-en: 'radiance responsivity'
-  quantity-fr: 'responsivité à la puissance optique'
+  quantity-fr: 'sensibilité à la luminance énergétique'
   Unit:
     - [watt, "-1"]
     - [steradian, "1"]
@@ -244,3 +244,15 @@
   quantity-en: 'relative humidity'
   quantity-fr: 'humidité relative'
   Unit: null  
+- identifier: LXRS
+  quantity-en: 'luminous exposure reponsivity'
+  quantity-fr: 'sensibilité à l\'exposition lumineuse'
+  Unit: 
+    - [lux, "-1"]
+    - [second, "-1"]  
+- identifier: LUXP
+  quantity-en: 'luminous exposure'
+  quantity-fr: 'l\'exposition lumineuse'
+  Unit:
+    - [lux, "1"]
+    - [second, "1"]     
