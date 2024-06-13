@@ -175,7 +175,7 @@
   Unit: null
 - identifier: ILRS
   quantity-en: 'illuminance responsivity'
-  quantity-fr: 'sensibilité à l\'éclairement lumineux'
+  quantity-fr: 'sensibilité à l''éclairement lumineux'
   Unit:
     - [lux, "-1"]   
 - identifier: LURS
@@ -210,21 +210,21 @@
     - [second, "-1"] 
 - identifier: TEXL
   quantity-en: 'thermal expansion coefficient (linear)'
-  quantity-fr: 'coefficient d expansion thermique (linéaire)'
+  quantity-fr: 'coefficient d''expansion thermique (linéaire)'
   Unit:
     - [metre, "1"]
     - [metre, "-1"]
     - [kelvin, "-1"]
 - identifier: TEXA
   quantity-en: 'thermal expansion coefficient (areal)'
-  quantity-fr: 'coefficient d expansion thermique (superficie)'
+  quantity-fr: 'coefficient d''expansion thermique (superficie)'
   Unit:
     - [metre, "2"]
     - [metre, "-2"]    
     - [kelvin, "-1"]    
 - identifier: TEXV
   quantity-en: 'thermal expansion coefficient (volumetric)'
-  quantity-fr: 'coefficient d expansion thermique (volume)'
+  quantity-fr: 'coefficient d''expansion thermique (volume)'
   Unit:
     - [metre, "3"]
     - [metre, "-3"]    
@@ -246,13 +246,13 @@
   Unit: null  
 - identifier: LXRS
   quantity-en: 'luminous exposure reponsivity'
-  quantity-fr: 'sensibilité à l\'exposition lumineuse'
+  quantity-fr: 'sensibilité à l''exposition lumineuse'
   Unit: 
     - [lux, "-1"]
     - [second, "-1"]  
 - identifier: LUXP
   quantity-en: 'luminous exposure'
-  quantity-fr: 'l\'exposition lumineuse'
+  quantity-fr: 'l''exposition lumineuse'
   Unit:
     - [lux, "1"]
     - [second, "1"]     
