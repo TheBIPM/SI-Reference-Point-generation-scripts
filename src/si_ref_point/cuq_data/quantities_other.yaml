@@ -134,12 +134,7 @@
 - identifier: OPRE
   quantity-en: 'spectral reflectance'
   quantity-fr: 'réflectance spectrale'
-  Unit: null   
-- identifier: BDRF
-  quantity-en: 'bidirectional reflectance distribution function'
-  quantity-fr: 'distribution de réflectance bidirectionnelle'
-  Unit:
-    - [steradian, "-1"]   
+  Unit: null    
 - identifier: CCTE
   quantity-en: 'colour temperature'
   quantity-fr: 'température de couleur'
