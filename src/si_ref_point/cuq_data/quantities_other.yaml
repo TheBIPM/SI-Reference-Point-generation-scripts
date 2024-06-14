@@ -109,7 +109,7 @@
   quantity-en: 'spectral transmittance'
   quantity-fr: 'transmittance spectrale'
   Unit: null
-- identifier: EMIT
+- identifier: OPEM
   quantity-en: 'spectral emittance'
   quantity-fr: 'émittance spectrale'
   Unit:
