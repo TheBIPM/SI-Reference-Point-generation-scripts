@@ -106,13 +106,15 @@
   Unit: 
     - [watt, "1"]
 - identifier: OPTR
-  quantity-en: 'transmittance'
-  quantity-fr: 'transmittance'
+  quantity-en: 'spectral transmittance'
+  quantity-fr: 'transmittance spectrale'
   Unit: null
 - identifier: EMIT
-  quantity-en: 'emittance'
-  quantity-fr: 'émittance'
-  Unit: null
+  quantity-en: 'spectral emittance'
+  quantity-fr: 'émittance spectrale'
+  Unit:
+    - [watt, "1"]
+    - [metre, "-2"]   
 - identifier: LUFA
   quantity-en: 'luminance factor'
   quantity-fr: 'facteur de luminance'
@@ -122,16 +124,16 @@
   quantity-fr: 'facteur de luminance énergétique'
   Unit: null 
 - identifier: OPAB
-  quantity-en: 'optical absorbance'
-  quantity-fr: 'absorbance optique'
+  quantity-en: 'spectral absorbance'
+  quantity-fr: 'absorbance spectrale'
   Unit: null  
 - identifier: EMIS
   quantity-en: 'emissivity'
   quantity-fr: 'émissivité'
   Unit: null  
 - identifier: OPRE
-  quantity-en: 'optical reflectance'
-  quantity-fr: 'réflectance optique'
+  quantity-en: 'spectral reflectance'
+  quantity-fr: 'réflectance spectrale'
   Unit: null   
 - identifier: BDRF
   quantity-en: 'bidirectional reflectance distribution function'
@@ -256,3 +258,28 @@
   Unit:
     - [lux, "1"]
     - [second, "1"]     
+- identifier: IRRS
+  quantity-en: 'irradiance responsivity'
+  quantity-fr: 'sensibilité à l''éclairement énergetique'
+  Unit:
+    - [watt, "-1"]
+    - [metre, "2"]  
+- identifier: BRDF
+  quantity-en: 'bidirectional reflectance distribution function'
+  quantity-fr: 'fonction de répartition bidirectionnelle du facteur de réflexion'
+  Unit:
+    - [steradian, "-1"]
+- identifier: XPRS
+  quantity-en: 'radiant exposure responsivity'
+  quantity-fr: 'sensibilité à l''exposition énergetique'
+  Unit:
+    - [joule, "-1"]
+    - [metre, "2"]  
+- identifier: OPAB
+  quantity-en: 'spectral absorbance'
+  quantity-fr: 'absorbance spectrale'
+  Unit: null 
+- identifier: OPEN
+  quantity-en: 'spectral absorbance'
+  quantity-fr: 'absorbance spectrale'
+  Unit: null  
