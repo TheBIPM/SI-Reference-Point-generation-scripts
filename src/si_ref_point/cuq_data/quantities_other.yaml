@@ -279,7 +279,4 @@
   quantity-en: 'spectral absorbance'
   quantity-fr: 'absorbance spectrale'
   Unit: null 
-- identifier: OPEN
-  quantity-en: 'spectral absorbance'
-  quantity-fr: 'absorbance spectrale'
-  Unit: null  
+
