@@ -230,7 +230,7 @@
   quantity-en: 'dew/frost point'
   quantity-fr: 'point de rosée/givre'
   Unit:
-    - [kelvin, "1"]
+    - [degreeCelsius, "1"]
 - identifier: CALV
   quantity-en: 'calorific value'
   quantity-fr: 'valeur calorifique'
