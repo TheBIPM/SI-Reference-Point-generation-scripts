@@ -23,37 +23,37 @@ The SI Reference Point is based on five main pillars, or knowledge graphs:
     * SI derived units with special names (Table 4 of [2])
     * Non-SI units allowed for use with the SI (Table 8 of [2])
     * Compound units (the examples given in Tables 5 and 6 of [2] plus additional examples from the BIPM key comparison database (KCDB))
-1. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
+2. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
     * SI prefixes (Table 7 of [2])
-1. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
+3. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
     * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
-1. **[Constants](http://si-digital-framework.org/constants)**
-    * Initially the 7 defining constants of the SI (Table 1 of [2])
-1.	**[Quantities](http://si-digital-framework,org/quantities)**
+4. **[Constants](http://si-digital-framework.org/constants)**
+    * Initially the seven defining constants of the SI (Table 1 of [2])
+5.	**[Quantities](http://si-digital-framework,org/quantities)**
     * SI base quantities (Table 3 of [2])
     * Other example quantities (Tables 5 and 6 of [2])
     * Other quantities in the BIPM key comparison database (KCDB))
   
-The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development:
+   The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development:
 
-6. Responsible bodies
+6. **Responsible bodies**
     * CGPM, CIPM, etc.
 
 A tool is provided to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
   
 **Table 1.** List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
 
-| Table | Title | Encoded in|
-| :----- | :----- | :---- |
-| 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
-| 2 | SI base units | SI/units |
-| 3 |  Base quantities and dimensions  used in the SI | quantities |
-| 4 |  The 22 SI units with special names and symbols | SI/units |
-| 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
-| 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
-| 7 |  SI prefixes | SI/prefixes|
-| 8 |  Non-SI units accepted for use with the SI units | SI/units |
-| <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
+| Table               | Title                                                                                                                         | Encoded in   |
+|:--------------------|:------------------------------------------------------------------------------------------------------------------------------|:-------------|
+| 1                   | The seven defining constants of the SI and the seven corresponding units they define                                          | constants    |
+| 2                   | SI base units                                                                                                                 | SI/units     |
+| 3                   | Base quantities and dimensions  used in the SI                                                                                | quantities   |
+| 4                   | The 22 SI units with special names and symbols                                                                                | SI/units     |
+| 5                   | Examples of coherent derived units in the SI expressed in terms of base units                                                 | SI/units     |
+| 6                   | Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units     |
+| 7                   | SI prefixes                                                                                                                   | SI/prefixes  |
+| 8                   | Non-SI units accepted for use with the SI units                                                                               | SI/units     |
+| <nobr>App. 1</nobr> | Decisions of the CGPM and the CIPM                                                                                            | SI/decisions |
 
 
 ## 3. Data model
@@ -195,7 +195,7 @@ The set of knowledge graphs are presented in the form of TTL files, which can be
 Following standard practice, the TTL files are divided between a “T-box”, specifying the data model at the “SI” level, and “A-boxes”, specifying the data entries at the “units”, “prefixes” and “decisions” levels.
 
 
-![image](./fig/global_SI_reference_point_schema.png)
+![image](fig/global_SI_reference_point_schema.png)
 
 
 ### Application Programming Interface (API)
@@ -207,7 +207,7 @@ The same pre-programmed queries (API calls) are documented in the Swagger interf
 
 Select the service `SI REFERENCE POINT` from the drop-down menu at the top right of the screen.
 
-![image](./fig/API_panel.png)
+![image](fig/API_panel.png)
 
 The responses will be given according to the header information, which can be modified manually from a Command Line Interface if desired. For example: 
 * `-H ‘accept:application/json’`	will return JSON code
@@ -219,7 +219,7 @@ The responses will be given according to the header information, which can be mo
 
 The TTL files can also be interrogated directly either using the [SPARQL endpoint](http://si-digital-framework.org/SI/query?lang=en) provided or via a human-friendly tool such as GraphDB. 
 
-![image](./fig/graphdb_example.png)
+![image](fig/graphdb_example.png)
 
 As an example, to browse the files visually using GraphDB:
 * Download the (free) (GraphDB Desktop software)[https://www.ontotext.com/products/graphdb/] and install it on your computer.
@@ -241,7 +241,7 @@ This beta version of the SI Reference Point is open for comment, but it is hoped
 
 The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). 
 
-To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
+To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently, this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
 
 
 ### Acknowlegements
