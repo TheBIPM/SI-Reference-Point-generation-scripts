@@ -73,12 +73,6 @@
   quantity-en: 'relative permittivity'
   quantity-fr: 'permittivité relative'
   Unit: null
-- identifier: PMBY
-  quantity-en: 'magnetic permeability'
-  quantity-fr: 'perméabilité magnétique'
-  Unit:
-    - [henry, "1"]
-    - [metre, "-1"]
 - identifier: REPE
   quantity-en: 'relative permeability'
   quantity-fr: 'perméabilité relative'
