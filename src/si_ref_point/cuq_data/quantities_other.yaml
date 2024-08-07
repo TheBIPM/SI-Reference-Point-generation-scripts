@@ -44,8 +44,8 @@
   Unit:
     - [degreeCelsius, "1"]
 - identifier: PHAS
-  quantity-en: 'phase'
-  quantity-fr: 'phase'
+  quantity-en: 'phase angle'
+  quantity-fr: 'angle de phase'
   Unit: radian
 - identifier: REFI
   quantity-en: 'refractive index'
