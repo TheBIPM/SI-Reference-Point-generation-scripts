@@ -274,3 +274,39 @@
   Unit:
     - [metre, "2"]
     - [second, "-2"] 
+- identifier: DISP
+  quantity-en: 'dispersion'
+  quantity-fr: 'dispersion'
+  Unit:
+    - [second, "1"]    
+- identifier: CHRO
+  quantity-en: 'chromatic dispersion'
+  quantity-fr: 'dispersion chromatique'
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"] 
+    - [metre, "-1"]  
+- identifier: LOSS
+  quantity-en: 'optical fibre attenuation'
+  quantity-fr: 'attenuation (dans une fibre optique)'
+  Unit:
+    - [decibel, "1"]
+    - [metre, "-1"]    
+- identifier: DGRD
+  quantity-en: 'differential group delay'
+  quantity-fr: 'délai de groupe différentiel'
+  Unit:
+    - [second, "1"]
+- identifier: ENCL
+  quantity-en: 'encircled flux'
+  quantity-fr: 'flux encerclé'
+  Unit: null 
+- identifier: DSDE
+  quantity-en: 'distance scale deviation'
+  quantity-fr: 'écart de l''échelle de distance'
+  Unit: null 
+- identifier: SINE
+  quantity-en: 'sine (of an angle)'
+  quantity-fr: 'sinus (d''un angle)'
+  Unit: null   
+       
