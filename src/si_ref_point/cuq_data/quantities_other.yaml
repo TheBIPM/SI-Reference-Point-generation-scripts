@@ -291,9 +291,5 @@
 - identifier: SINE
   quantity-en: 'sine (of an angle)'
   quantity-fr: 'sinus (d''un angle)'
-  Unit: null 
-- identifier: PMDP
-  quantity-en: 'polarization mode dispersion'
-  quantity-fr: 'dispersion du mode de polarisation'
-  Unit: null     
-       
+  Unit: null    
+     
