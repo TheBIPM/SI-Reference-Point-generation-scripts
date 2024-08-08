@@ -264,10 +264,6 @@
   Unit:
     - [joule, "-1"]
     - [metre, "2"]  
-- identifier: OPAB
-  quantity-en: 'spectral absorbance'
-  quantity-fr: 'absorbance spectrale'
-  Unit: null 
 - identifier: VICO
   quantity-en: 'viscometer constant'
   quantity-fr: 'constante du viscosimètre'
