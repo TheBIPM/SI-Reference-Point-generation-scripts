@@ -1,0 +1,4406 @@
+[
+  {
+    "@id": "https://si-digital-framework.org/quantities/WANU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "WANU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "wavenumber"
+      },
+      {
+        "@language": "fr",
+        "@value": "nombre d'ondes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nca05bf57f9f64cec8cb840f56baead70"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nca05bf57f9f64cec8cb840f56baead70",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/POWR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "POWR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "power"
+      },
+      {
+        "@language": "fr",
+        "@value": "puissance, flux énergétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MGSU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MGSU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic susceptibility"
+      },
+      {
+        "@language": "fr",
+        "@value": "susceptibilité magnétique"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SUCD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SUCD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "surface charge density"
+      },
+      {
+        "@language": "fr",
+        "@value": "charge électrique surfacique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N9857aed005f143fb807a4842a20b8df6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9857aed005f143fb807a4842a20b8df6",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nc3f9c9948e8945fa96cc4b072faaf176"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc3f9c9948e8945fa96cc4b072faaf176",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/FORC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "FORC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "force"
+      },
+      {
+        "@language": "fr",
+        "@value": "force"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/newton"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MAFD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MAFD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic field strength"
+      },
+      {
+        "@language": "fr",
+        "@value": "champ magnétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nc5e4fad463534aaa8a7be10b7a4dbf0f"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc5e4fad463534aaa8a7be10b7a4dbf0f",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/ampere"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N4d901b72c12142278ccdedbc05dfd7af"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4d901b72c12142278ccdedbc05dfd7af",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/AMSU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "AMSU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "amount of substance"
+      },
+      {
+        "@language": "fr",
+        "@value": "quantité de matière"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PMBY",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PMBY"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic permeability"
+      },
+      {
+        "@language": "fr",
+        "@value": "perméabilité magnétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N07c1fcf2833a4e6ba777cf9f692d36ea"
+      }
+    ]
+  },
+  {
+    "@id": "_:N07c1fcf2833a4e6ba777cf9f692d36ea",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/henry"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nffdc045e120c417baf7104b883f1fb31"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nffdc045e120c417baf7104b883f1fb31",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/STRE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "STRE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "constraint"
+      },
+      {
+        "@language": "fr",
+        "@value": "stress"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/pascal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ACCE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ACCE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "acceleration"
+      },
+      {
+        "@language": "fr",
+        "@value": "accélération"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nac1c7c439a9e45329a0254a833f876e8"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nac1c7c439a9e45329a0254a833f876e8",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Ne8e030fb9acf4c1da32469ba96af323e"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne8e030fb9acf4c1da32469ba96af323e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PLTS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PLTS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "PLTS-2000 temperature"
+      },
+      {
+        "@language": "fr",
+        "@value": "température PLTS-2000"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELCH",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELCH"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric charge"
+      },
+      {
+        "@language": "fr",
+        "@value": "charge électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELCA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELCA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "capacitance"
+      },
+      {
+        "@language": "fr",
+        "@value": "capacité électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/farad"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/FREQ",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "FREQ"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "frequency"
+      },
+      {
+        "@language": "fr",
+        "@value": "fréquence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/hertz"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/AREA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "AREA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "area"
+      },
+      {
+        "@language": "fr",
+        "@value": "superficie"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N8442fe1e7b02450b836cde7407b4b5e5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8442fe1e7b02450b836cde7407b4b5e5",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/REFI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "REFI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "refractive index"
+      },
+      {
+        "@language": "fr",
+        "@value": "indice de réfraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ACTI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ACTI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "action"
+      },
+      {
+        "@language": "fr",
+        "@value": "action"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N9db1bb2d4da34b7bb1d0e244a1fe552e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9db1bb2d4da34b7bb1d0e244a1fe552e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-08-05"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Ontology, part of the SI reference point, covering quantities"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "SI Reference Point - Quantities"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/HDIS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "HDIS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "harmonic distortion"
+      },
+      {
+        "@language": "fr",
+        "@value": "distorsion harmonique"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/DOEQ",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "DOEQ"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "dose equivalent"
+      },
+      {
+        "@language": "fr",
+        "@value": "équivalent de dose"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/sievert"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MOEN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MOEN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "molar entropy"
+      },
+      {
+        "@language": "fr",
+        "@value": "entropie molaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N7a290b09decf4ddaa50b14b22bbe641c"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7a290b09decf4ddaa50b14b22bbe641c",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N19ec1e048cfe4790bf62ca48d94142d6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N19ec1e048cfe4790bf62ca48d94142d6",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N495949efcda348cea8e58c20d1088e14"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N1b3deb61d17941c5b9b3f60fd730001d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N495949efcda348cea8e58c20d1088e14",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1b3deb61d17941c5b9b3f60fd730001d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/REPE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "REPE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "relative permeability"
+      },
+      {
+        "@language": "fr",
+        "@value": "perméabilité relative"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PRMI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PRMI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "permittivity"
+      },
+      {
+        "@language": "fr",
+        "@value": "permittivité"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nf171150d49914950a57896bf253130f7"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf171150d49914950a57896bf253130f7",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/farad"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N4559ec800da44dd1b778287ed2191459"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4559ec800da44dd1b778287ed2191459",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SHEC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SHEC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specific heat capacity"
+      },
+      {
+        "@language": "fr",
+        "@value": "capacité thermique massique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N862cd6009f3448cca51472e1c6fadbb4"
+      }
+    ]
+  },
+  {
+    "@id": "_:N862cd6009f3448cca51472e1c6fadbb4",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N784478bfa55a41ac9c8a3c34b00697a9"
+      }
+    ]
+  },
+  {
+    "@id": "_:N784478bfa55a41ac9c8a3c34b00697a9",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N3a872fba533d4954acd9c3ba1b5a9deb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N835b9699dff24d119843e80a096be78a"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3a872fba533d4954acd9c3ba1b5a9deb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N835b9699dff24d119843e80a096be78a",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MOHC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MOHC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "molar heat capacity"
+      },
+      {
+        "@language": "fr",
+        "@value": "capacité thermique molaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N86049cd1cd624a39ae9eba59ea7f355d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N86049cd1cd624a39ae9eba59ea7f355d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N3e73165998924db18493c60e7187f665"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3e73165998924db18493c60e7187f665",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:Nd2be3889cbee45c090cbce5a62287d64"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N946e39faac1f4bd8884817e2e1bf0576"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd2be3889cbee45c090cbce5a62287d64",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N946e39faac1f4bd8884817e2e1bf0576",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TORQ",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TORQ"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "moment of force"
+      },
+      {
+        "@language": "fr",
+        "@value": "moment d’une force"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N0012aa1966bb432e84a97b9da6d99f62"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0012aa1966bb432e84a97b9da6d99f62",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/newton"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ABDO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ABDO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "absorbed dose"
+      },
+      {
+        "@language": "fr",
+        "@value": "dose absorbée"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/gray"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PHAS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PHAS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "phase"
+      },
+      {
+        "@language": "fr",
+        "@value": "phase"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/radian"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELCU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELCU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric current"
+      },
+      {
+        "@language": "fr",
+        "@value": "courant électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/ampere"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ILLU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ILLU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "illuminance"
+      },
+      {
+        "@language": "fr",
+        "@value": "éclairement lumineux"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/lux"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/FLUR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "FLUR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "fluence rate"
+      },
+      {
+        "@language": "fr",
+        "@value": "débit de fluence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N389a8961d9a249b083c5a1b74b58daa4"
+      }
+    ]
+  },
+  {
+    "@id": "_:N389a8961d9a249b083c5a1b74b58daa4",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N16940de49ce2440291ed5dfa1849b5a6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nbe1c2ef926e04a0f9b52ab288752ca74"
+      }
+    ]
+  },
+  {
+    "@id": "_:N16940de49ce2440291ed5dfa1849b5a6",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbe1c2ef926e04a0f9b52ab288752ca74",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/VELO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "VELO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "velocity"
+      },
+      {
+        "@language": "fr",
+        "@value": "vitesse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nc8c6f66f4d24405294ef19a087d41f76"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc8c6f66f4d24405294ef19a087d41f76",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N6c83927038594de997e5502e620d0f7e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6c83927038594de997e5502e620d0f7e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/HEQT",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "HEQT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "heat quantity"
+      },
+      {
+        "@language": "fr",
+        "@value": "quantité de chaleur"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ENGD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ENGD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "energy density"
+      },
+      {
+        "@language": "fr",
+        "@value": "énergie volumique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nf21f8ea07a274ae3b7f22f8bd6cd9c65"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf21f8ea07a274ae3b7f22f8bd6cd9c65",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N39cc73bfa50b4dcda73294e6323070ff"
+      }
+    ]
+  },
+  {
+    "@id": "_:N39cc73bfa50b4dcda73294e6323070ff",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/KRMR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "KRMR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "kerma rate"
+      },
+      {
+        "@language": "fr",
+        "@value": "kerma rate"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N9361fb28c36f427da1b7dedd2248f850"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9361fb28c36f427da1b7dedd2248f850",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/gray"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N93f013a34c6d42afb09c4c608813482b"
+      }
+    ]
+  },
+  {
+    "@id": "_:N93f013a34c6d42afb09c4c608813482b",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/LENG",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "LENG"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "length"
+      },
+      {
+        "@language": "fr",
+        "@value": "longueur"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ARRN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ARRN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "activity referred to a radionuclide"
+      },
+      {
+        "@language": "fr",
+        "@value": "activité d'un radionucléide"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/becquerel"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELIN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELIN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "inductance"
+      },
+      {
+        "@language": "fr",
+        "@value": "inductance"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/henry"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELFS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELFS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric field strength"
+      },
+      {
+        "@language": "fr",
+        "@value": "champ électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N252c7efc74fb4534891ea97bf9e526d1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N252c7efc74fb4534891ea97bf9e526d1",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/volt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N5cd90599f6a24436ad52d218038fc1ba"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5cd90599f6a24436ad52d218038fc1ba",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/HECA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "HECA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "heat capacity"
+      },
+      {
+        "@language": "fr",
+        "@value": "capacité thermique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N52adf1a433034684833f420b6191100e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N52adf1a433034684833f420b6191100e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N096b94ce70df4c9286b18b4c3f9f384e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N096b94ce70df4c9286b18b4c3f9f384e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SUTE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SUTE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "surface tension"
+      },
+      {
+        "@language": "fr",
+        "@value": "tension superficielle"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N48296107f35b45969b97324695896d99"
+      }
+    ]
+  },
+  {
+    "@id": "_:N48296107f35b45969b97324695896d99",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/newton"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Na3c9786997624e5f8c08c58bac948a91"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na3c9786997624e5f8c08c58bac948a91",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELDS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELDS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric displacement"
+      },
+      {
+        "@language": "fr",
+        "@value": "déplacement électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N937d559df0974411b4310684eaf567bc"
+      }
+    ]
+  },
+  {
+    "@id": "_:N937d559df0974411b4310684eaf567bc",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nf782ecd3031949ed832b8748fc5c0109"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf782ecd3031949ed832b8748fc5c0109",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/WORK",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "WORK"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "work"
+      },
+      {
+        "@language": "fr",
+        "@value": "travail"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PRES",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PRES"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "pressure"
+      },
+      {
+        "@language": "fr",
+        "@value": "pression"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/pascal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PRME",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PRME"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "permeability"
+      },
+      {
+        "@language": "fr",
+        "@value": "perméabilitté"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N30fbd066390041b780b43fd82d067518"
+      }
+    ]
+  },
+  {
+    "@id": "_:N30fbd066390041b780b43fd82d067518",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/henry"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N29123f8e7ae4448d9ef26a2e4ebaa14e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N29123f8e7ae4448d9ef26a2e4ebaa14e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TIME",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TIME"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "time"
+      },
+      {
+        "@language": "fr",
+        "@value": "temps"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELRE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELRE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric resistance"
+      },
+      {
+        "@language": "fr",
+        "@value": "résistance électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/ohm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/LUMA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "LUMA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "luminance"
+      },
+      {
+        "@language": "fr",
+        "@value": "luminance lumineuse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N497a9d6976bf48faa59d5f03532d6846"
+      }
+    ]
+  },
+  {
+    "@id": "_:N497a9d6976bf48faa59d5f03532d6846",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/candela"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N85defc252e464e7f96fb6159585a89c8"
+      }
+    ]
+  },
+  {
+    "@id": "_:N85defc252e464e7f96fb6159585a89c8",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/QFAC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "QFAC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "quality factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "facteur de qualité"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/KRMA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "KRMA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "kerma"
+      },
+      {
+        "@language": "fr",
+        "@value": "kerma"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/gray"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/LUFL",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "LUFL"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "luminous flux"
+      },
+      {
+        "@language": "fr",
+        "@value": "flux lumineux"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/lumen"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SENG",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SENG"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specific energy"
+      },
+      {
+        "@language": "fr",
+        "@value": "énergie massique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N7e6edf63fb9e4f7fb82ae68c4e17bfae"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7e6edf63fb9e4f7fb82ae68c4e17bfae",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Ncb0798c64d1a444c9484917247daf28a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncb0798c64d1a444c9484917247daf28a",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/FLUE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "FLUE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "fluence"
+      },
+      {
+        "@language": "fr",
+        "@value": "fluence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N8d951e9328764d0d9724e9b54cda29f8"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8d951e9328764d0d9724e9b54cda29f8",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TEMC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TEMC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Celsius temperature"
+      },
+      {
+        "@language": "fr",
+        "@value": "température Celsius"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/degreeCelsius"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MACO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MACO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "mass concentration"
+      },
+      {
+        "@language": "fr",
+        "@value": "concentration massique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N651cbeace1b64f0b8446e75619765cd1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N651cbeace1b64f0b8446e75619765cd1",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N85620608a3e348ad91df4cb24812bd2e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N85620608a3e348ad91df4cb24812bd2e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/EMIR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "EMIR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "emission rate"
+      },
+      {
+        "@language": "fr",
+        "@value": "taux d'émission"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N6f247375d97a48698b6ed21144208d11"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6f247375d97a48698b6ed21144208d11",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SPVO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SPVO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specific volume"
+      },
+      {
+        "@language": "fr",
+        "@value": "volume massique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N2868b06180e64cc3ba306f4abd0da3b5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2868b06180e64cc3ba306f4abd0da3b5",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:Nad3023770ed94406b944e1533a71d4bf"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Naa9d42fd84384e948a713029000f5a35"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nad3023770ed94406b944e1533a71d4bf",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naa9d42fd84384e948a713029000f5a35",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/CUDE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "CUDE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "current density"
+      },
+      {
+        "@language": "fr",
+        "@value": "densité de courant"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nfc3e4affa1aa4a0394ca90d81067a35a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfc3e4affa1aa4a0394ca90d81067a35a",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/ampere"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nc6ff4df332b04762a3c853c29488dacc"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc6ff4df332b04762a3c853c29488dacc",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELCO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELCO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric conductance"
+      },
+      {
+        "@language": "fr",
+        "@value": "conductance électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/siemens"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SHLD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SHLD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "shielding factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "taux de blindage"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/decibel"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RADI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RADI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "radiance"
+      },
+      {
+        "@language": "fr",
+        "@value": "luminance énergétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nbe8e75b3a537417fb750633b5e932382"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbe8e75b3a537417fb750633b5e932382",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N71a554b6130749b485f675b1e2404c24"
+      }
+    ]
+  },
+  {
+    "@id": "_:N71a554b6130749b485f675b1e2404c24",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N1e5eb572b799418ea29944b5c95a0f02"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Ne578c1ffeaa54e0a92446cd9ebdccd1c"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1e5eb572b799418ea29944b5c95a0f02",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/steradian"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne578c1ffeaa54e0a92446cd9ebdccd1c",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/XPOS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "XPOS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "exposure (x and γ rays)"
+      },
+      {
+        "@language": "fr",
+        "@value": "exposition (rayons x et γ)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N36276e34895143dcb849d8c3a59b1705"
+      }
+    ]
+  },
+  {
+    "@id": "_:N36276e34895143dcb849d8c3a59b1705",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nc5ad35d799c34ba8839c52bf6e41801c"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc5ad35d799c34ba8839c52bf6e41801c",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MASS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MASS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "mass"
+      },
+      {
+        "@language": "fr",
+        "@value": "masse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/PERM",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "PERM"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "permittivity"
+      },
+      {
+        "@language": "fr",
+        "@value": "permittivité"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Na2974b1898e945f9955dd7d7033d1391"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na2974b1898e945f9955dd7d7033d1391",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/farad"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N61c9290e201546748c040f7d9fdb1b3f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N61c9290e201546748c040f7d9fdb1b3f",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MGPO",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MGPO"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic polarization"
+      },
+      {
+        "@language": "fr",
+        "@value": "polarisation magnétique"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/CATA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "CATA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "catalytic activity"
+      },
+      {
+        "@language": "fr",
+        "@value": "activité catalytique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/katal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/CTAC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "CTAC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "catalytic activity concentration"
+      },
+      {
+        "@language": "fr",
+        "@value": "concentration de l’activité catalytique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N3f5df32f011b4fca86592a2d89e02a43"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3f5df32f011b4fca86592a2d89e02a43",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/katal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nc4c3a4a98a884c6c91624618084dc41e"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc4c3a4a98a884c6c91624618084dc41e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RAFL",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RAFL"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "radiant flux"
+      },
+      {
+        "@language": "fr",
+        "@value": "flux énergétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ANGP",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ANGP"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "plane angle"
+      },
+      {
+        "@language": "fr",
+        "@value": "angle plan"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/radian"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ENTR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ENTR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "entropy"
+      },
+      {
+        "@language": "fr",
+        "@value": "entropie"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Ndfe49b24f1264413a168be9a553a47d4"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndfe49b24f1264413a168be9a553a47d4",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N91215ecb84df41869ff292559775bfbf"
+      }
+    ]
+  },
+  {
+    "@id": "_:N91215ecb84df41869ff292559775bfbf",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ANIS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ANIS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "anisotropy"
+      },
+      {
+        "@language": "fr",
+        "@value": "anisotropie"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/AMSC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "AMSC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "amount of substance concentration "
+      },
+      {
+        "@language": "fr",
+        "@value": "concentration de quantité de matière"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N5ff08e311abd46ab858f63d8744a637b"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5ff08e311abd46ab858f63d8744a637b",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N36c17822f4314d32a55824b1174e0e9d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N36c17822f4314d32a55824b1174e0e9d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SUDE",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SUDE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "surface density"
+      },
+      {
+        "@language": "fr",
+        "@value": "masse surfacique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nf97f829fccba437c91545359bb4d1a5d"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf97f829fccba437c91545359bb4d1a5d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N0da29b0942104ea3b3b2edd1c06fb40f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0da29b0942104ea3b3b2edd1c06fb40f",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RLGN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RLGN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ratio logarithm (Np)"
+      },
+      {
+        "@language": "fr",
+        "@value": "logarithme d'un rapport (Np)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/neper"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELFD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELFD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric flux density"
+      },
+      {
+        "@language": "fr",
+        "@value": "induction électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nf5f1153008c64679a3f5e5ea6d9390cb"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf5f1153008c64679a3f5e5ea6d9390cb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nd07e222212ad413587ca3779e5daebbb"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd07e222212ad413587ca3779e5daebbb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/IRRA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "IRRA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "irradiance"
+      },
+      {
+        "@language": "fr",
+        "@value": "éclairement énergétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N69fb6f91e07a47fd9d25bcc2104aae8e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N69fb6f91e07a47fd9d25bcc2104aae8e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N3c1630c7e8824112b0cb83f7fb75fa13"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3c1630c7e8824112b0cb83f7fb75fa13",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ENGY",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ENGY"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "energy"
+      },
+      {
+        "@language": "fr",
+        "@value": "énergie"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/VELA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "VELA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "angular velocity"
+      },
+      {
+        "@language": "fr",
+        "@value": "vitesse angulaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N0d4d481552d84ea484fbff30743495fb"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0d4d481552d84ea484fbff30743495fb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/radian"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N4983c83f636b49b18edcb209b155b58d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4983c83f636b49b18edcb209b155b58d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TCON",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TCON"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "thermal conductivity"
+      },
+      {
+        "@language": "fr",
+        "@value": "conductivité thermique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Ndbb1ee65e1a74e5d914c570ee7227881"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndbb1ee65e1a74e5d914c570ee7227881",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N272ea504fe884a1a8bf0fefc0df110f6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N272ea504fe884a1a8bf0fefc0df110f6",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N9e16cc4c613a4d6ca12e44512af3638d"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nf7dadf1ccbfc403783cdc93e60af3749"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9e16cc4c613a4d6ca12e44512af3638d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf7dadf1ccbfc403783cdc93e60af3749",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ABDR",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ABDR"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "absorbed dose rate"
+      },
+      {
+        "@language": "fr",
+        "@value": "débit de dose absorbée"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N2cde47ee8cf14d3997d019ba38d6e60d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2cde47ee8cf14d3997d019ba38d6e60d",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/gray"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nb08dd9e1c9994a3bb1be36bac3984919"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb08dd9e1c9994a3bb1be36bac3984919",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/SENT",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "SENT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specific entropy"
+      },
+      {
+        "@language": "fr",
+        "@value": "entropie massique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N05884bb7feaa421a92d2312f297a2fc3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N05884bb7feaa421a92d2312f297a2fc3",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N60792ec9d9cb4bb3ac0b0d7822bfe7b8"
+      }
+    ]
+  },
+  {
+    "@id": "_:N60792ec9d9cb4bb3ac0b0d7822bfe7b8",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:Ncfe0af4c1443438aacefc517f2fda602"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N4a0da6d958254190a597c252c4919b5a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncfe0af4c1443438aacefc517f2fda602",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4a0da6d958254190a597c252c4919b5a",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ACCA",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ACCA"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "angular acceleration"
+      },
+      {
+        "@language": "fr",
+        "@value": "accelération angulaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N487a9889b5014697a517efc61b1371c3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N487a9889b5014697a517efc61b1371c3",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/radian"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N7bacea81dc39425d8260d0348afc63a3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7bacea81dc39425d8260d0348afc63a3",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELPD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELPD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric potential difference"
+      },
+      {
+        "@language": "fr",
+        "@value": "différence de potentiel électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/volt"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MOEG",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MOEG"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "molar energy"
+      },
+      {
+        "@language": "fr",
+        "@value": "énergie molaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Neb368a5e2be640c2b07e61f97dbfcfd0"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neb368a5e2be640c2b07e61f97dbfcfd0",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N9aa216854a30483db7867d764decc9bb"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9aa216854a30483db7867d764decc9bb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/HEFD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "HEFD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "heat flux density"
+      },
+      {
+        "@language": "fr",
+        "@value": "flux thermique surfacique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Ndf69c7ffe33a4218a90ae17cc4459a4f"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndf69c7ffe33a4218a90ae17cc4459a4f",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Naa249fe084c24fcbb61b1dbe41244e27"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naa249fe084c24fcbb61b1dbe41244e27",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/DENS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "DENS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "density"
+      },
+      {
+        "@language": "fr",
+        "@value": "masse volumique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Ndbe65f87d6f54b58b1372d2bd573aa3a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndbe65f87d6f54b58b1372d2bd573aa3a",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kilogram"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Ndfc17598bc14420b9fd036aa2c49b572"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndfc17598bc14420b9fd036aa2c49b572",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RAIN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RAIN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "radiant intensity"
+      },
+      {
+        "@language": "fr",
+        "@value": "intensité énergétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nd2edec02b8a54b57a40d2167628a9283"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd2edec02b8a54b57a40d2167628a9283",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N32f441dc11ca41549f821e691ec0c9eb"
+      }
+    ]
+  },
+  {
+    "@id": "_:N32f441dc11ca41549f821e691ec0c9eb",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/steradian"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/KIVI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "KIVI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "kinematic viscosity"
+      },
+      {
+        "@language": "fr",
+        "@value": "viscosité cinématique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N72df2768111c48fa80416d48c74e065e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N72df2768111c48fa80416d48c74e065e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "_:N112a43a721f74719b5ec1ca4ae8405e4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N051c9031bdd54f33b41feba47673d7bd"
+      }
+    ]
+  },
+  {
+    "@id": "_:N112a43a721f74719b5ec1ca4ae8405e4",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "_:N051c9031bdd54f33b41feba47673d7bd",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MGFL",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MGFL"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic flux"
+      },
+      {
+        "@language": "fr",
+        "@value": "flux d'induction magnétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/weber"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ITSK",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ITSK"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ITS-90 temperature (K)"
+      },
+      {
+        "@language": "fr",
+        "@value": "température ITS-90 (K)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/VOLU",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "VOLU"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "volume"
+      },
+      {
+        "@language": "fr",
+        "@value": "volume"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N361a558cea5241d5be075541e5edc44e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N361a558cea5241d5be075541e5edc44e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TEMT",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TEMT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "thermodynamic temperature"
+      },
+      {
+        "@language": "fr",
+        "@value": "température thermodynamique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RLGB",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RLGB"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ratio logarithm (B)"
+      },
+      {
+        "@language": "fr",
+        "@value": "logarithme d'un rapport (B)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/bel"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ELCD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ELCD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "electric charge density"
+      },
+      {
+        "@language": "fr",
+        "@value": "charge électrique volumique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N9db9c8d3c1824604945ee926ad93f424"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9db9c8d3c1824604945ee926ad93f424",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N30b10de62881415296945a182ef988d9"
+      }
+    ]
+  },
+  {
+    "@id": "_:N30b10de62881415296945a182ef988d9",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/DYVI",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "DYVI"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "dynamic viscosity"
+      },
+      {
+        "@language": "fr",
+        "@value": "viscosité dynamique "
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nfcf0c61bfbbd423d90fddf5afb6ba311"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfcf0c61bfbbd423d90fddf5afb6ba311",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/pascal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/MGFD",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "MGFD"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "magnetic flux density"
+      },
+      {
+        "@language": "fr",
+        "@value": "induction magnétique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/tesla"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ITSC",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ITSC"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ITS-90 temperature (℃)"
+      },
+      {
+        "@language": "fr",
+        "@value": "température ITS-90 (℃)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/degreeCelsius"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/LUIN",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "LUIN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "luminous intensity"
+      },
+      {
+        "@language": "fr",
+        "@value": "intensité lumineuse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/candela"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/RELP",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "RELP"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "relative permittivity"
+      },
+      {
+        "@language": "fr",
+        "@value": "permittivité relative"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ANGS",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ANGS"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "solid angle"
+      },
+      {
+        "@language": "fr",
+        "@value": "angle solide"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/steradian"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/TAND",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "TAND"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "dielectric loss tangent"
+      },
+      {
+        "@language": "fr",
+        "@value": "facteur de dissipation"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/quantities/ANGF",
+    "@type": [
+      "https://si-digital-framework.org/SI#QuantityKind"
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "ANGF"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "angular frequency"
+      },
+      {
+        "@language": "fr",
+        "@value": "fréquence angulaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N1f89b09875124ec9bd2d19b599d49a84"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1f89b09875124ec9bd2d19b599d49a84",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/radian"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N094ec02e2941423f947e34985b34073f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N094ec02e2941423f947e34985b34073f",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  }
+]
