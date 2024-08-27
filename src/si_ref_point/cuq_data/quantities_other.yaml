@@ -83,7 +83,7 @@
   quantity-en: 'shielding factor'
   quantity-fr: 'taux de blindage'
   Unit:
-    - [decibel, "1"]
+    - [bel, "1"]
 - identifier: ANIS
   quantity-en: 'anisotropy'
   quantity-fr: 'anisotropie'
@@ -268,7 +268,7 @@
   quantity-en: 'optical fibre attenuation'
   quantity-fr: 'attenuation (dans une fibre optique)'
   Unit:
-    - [decibel, "1"]
+    - [bel, "1"]
     - [metre, "-1"]    
 - identifier: ENCL
   quantity-en: 'encircled flux'
