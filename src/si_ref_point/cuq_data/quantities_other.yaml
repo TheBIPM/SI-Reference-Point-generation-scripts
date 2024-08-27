@@ -63,12 +63,6 @@
   quantity-en: 'quality factor'
   quantity-fr: 'facteur de qualité'
   Unit: null
-- identifier: PERM
-  quantity-en: 'permittivity'
-  quantity-fr: 'permittivité'
-  Unit:
-    - [farad, "1"]
-    - [metre, "-1"]
 - identifier: RELP
   quantity-en: 'relative permittivity'
   quantity-fr: 'permittivité relative'
