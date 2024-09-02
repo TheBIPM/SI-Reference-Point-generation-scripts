@@ -94,15 +94,13 @@
   Unit: 
     - [watt, "1"]
 - identifier: OPTR
-  quantity-en: 'spectral transmittance'
-  quantity-fr: 'transmittance spectrale'
+  quantity-en: 'transmittance'
+  quantity-fr: 'transmittance'
   Unit: null
 - identifier: OPEM
-  quantity-en: 'spectral emittance'
-  quantity-fr: 'émittance spectrale'
-  Unit:
-    - [watt, "1"]
-    - [metre, "-2"]   
+  quantity-en: 'emittance'
+  quantity-fr: 'émittance'
+  Unit: null 
 - identifier: LUFA
   quantity-en: 'luminance factor'
   quantity-fr: 'facteur de luminance'
@@ -112,20 +110,20 @@
   quantity-fr: 'facteur de luminance énergétique'
   Unit: null 
 - identifier: OPAB
-  quantity-en: 'spectral absorbance'
-  quantity-fr: 'absorbance spectrale'
+  quantity-en: 'absorbance'
+  quantity-fr: 'absorbance'
   Unit: null  
 - identifier: EMIS
   quantity-en: 'emissivity'
   quantity-fr: 'émissivité'
   Unit: null  
 - identifier: OPRE
-  quantity-en: 'spectral reflectance'
-  quantity-fr: 'réflectance spectrale'
+  quantity-en: 'reflectance'
+  quantity-fr: 'réflectance'
   Unit: null    
 - identifier: CCTE
-  quantity-en: 'colour temperature'
-  quantity-fr: 'température de couleur'
+  quantity-en: 'correlated colour temperature'
+  quantity-fr: 'température de couleur proximale'
   Unit:
     - [kelvin, "1"]
 - identifier: EMCO
@@ -199,21 +197,7 @@
   Unit:
     - [metre, "1"]
     - [metre, "-1"]
-    - [kelvin, "-1"]
-- identifier: TEXA
-  quantity-en: 'thermal expansion coefficient (areal)'
-  quantity-fr: 'coefficient d''expansion thermique (superficie)'
-  Unit:
-    - [metre, "2"]
-    - [metre, "-2"]    
-    - [kelvin, "-1"]    
-- identifier: TEXV
-  quantity-en: 'thermal expansion coefficient (volumetric)'
-  quantity-fr: 'coefficient d''expansion thermique (volume)'
-  Unit:
-    - [metre, "3"]
-    - [metre, "-3"]    
-    - [kelvin, "-1"]  
+    - [kelvin, "-1"] 
 - identifier: DEWP
   quantity-en: 'dew/frost point'
   quantity-fr: 'point de rosée/givre'
@@ -282,4 +266,9 @@
   quantity-en: 'sine (of an angle)'
   quantity-fr: 'sinus (d''un angle)'
   Unit: null    
-     
+- identifier: EXIT
+  quantity-en: 'radiant exitance'
+  quantity-fr: 'exitance énergétique'
+  Unit:     
+    - [watt, "1"]
+    - [metre, "-2"]  
