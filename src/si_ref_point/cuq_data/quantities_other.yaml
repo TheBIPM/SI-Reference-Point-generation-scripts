@@ -237,3 +237,9 @@
   quantity-en: 'numerical aperture'
   quantity-fr: 'ouverture numérique'
   Unit: null
+- identifier: REXP
+  quantity-en: 'radiant exposure'
+  quantity-fr: 'exposition énergetique'
+  Unit:
+    - [joule, "1"]
+    - [metre, "2"]
