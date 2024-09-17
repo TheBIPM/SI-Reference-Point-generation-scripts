@@ -89,8 +89,8 @@
   quantity-fr: 'anisotropie'
   Unit: null
 - identifier: OPTP
-  quantity-en: 'optical power'
-  quantity-fr: 'puissance optique'
+  quantity-en: 'radiant power'
+  quantity-fr: 'puissance rayonnante'
   Unit: 
     - [watt, "1"]
 - identifier: OPTR
@@ -126,22 +126,6 @@
   quantity-fr: 'température de couleur proximale'
   Unit:
     - [kelvin, "1"]
-- identifier: EMCO
-  quantity-en: 'emitted colour'
-  quantity-fr: 'couleur émise'
-  Unit: null
-- identifier: SUCO
-  quantity-en: 'surface colour'
-  quantity-fr: 'couleur de surface'
-  Unit: null
-- identifier: TRCO
-  quantity-en: 'transmitted colour'
-  quantity-fr: 'couleur transmise'
-  Unit: null
-- identifier: CORA
-  quantity-en: 'colour rendering'
-  quantity-fr: 'rendu de couleur'
-  Unit: null
 - identifier: LUCO
   quantity-en: 'luminance coefficient'
   quantity-fr: 'coefficient de luminance'
@@ -156,29 +140,6 @@
   quantity-en: 'whiteness'
   quantity-fr: 'blancheur'
   Unit: null
-- identifier: ILRS
-  quantity-en: 'illuminance responsivity'
-  quantity-fr: 'sensibilité à l''éclairement lumineux'
-  Unit:
-    - [lux, "-1"]   
-- identifier: LURS
-  quantity-en: 'luminance responsivity'
-  quantity-fr: 'sensibilité à la luminance lumineuse'
-  Unit:
-    - [candela, "-1"]
-    - [metre, "2"] 
-- identifier: PORS
-  quantity-en: 'optical power responsivity'
-  quantity-fr: 'sensibilité à la puissance optique'
-  Unit:
-    - [watt, "-1"]
-- identifier: RARS
-  quantity-en: 'radiance responsivity'
-  quantity-fr: 'sensibilité à la luminance énergétique'
-  Unit:
-    - [watt, "-1"]
-    - [steradian, "1"]
-    - [metre, "2"]
 - identifier: HEFU
   quantity-en: 'heat of fusion'
   quantity-fr: 'énergie de fusion'
@@ -224,24 +185,12 @@
   quantity-fr: 'l''exposition lumineuse'
   Unit:
     - [lux, "1"]
-    - [second, "1"]     
-- identifier: IRRS
-  quantity-en: 'irradiance responsivity'
-  quantity-fr: 'sensibilité à l''éclairement énergetique'
-  Unit:
-    - [watt, "-1"]
-    - [metre, "2"]  
+    - [second, "1"]      
 - identifier: BRDF
   quantity-en: 'bidirectional reflectance distribution function'
   quantity-fr: 'fonction de répartition bidirectionnelle du facteur de réflexion'
   Unit:
-    - [steradian, "-1"]
-- identifier: XPRS
-  quantity-en: 'radiant exposure responsivity'
-  quantity-fr: 'sensibilité à l''exposition énergetique'
-  Unit:
-    - [joule, "-1"]
-    - [metre, "2"]  
+    - [steradian, "-1"] 
 - identifier: VICO
   quantity-en: 'viscometer constant'
   quantity-fr: 'constante du viscosimètre'
@@ -262,13 +211,29 @@
   quantity-en: 'distance scale deviation'
   quantity-fr: 'écart de l''échelle de distance'
   Unit: null 
-- identifier: SINE
-  quantity-en: 'sine (of an angle)'
-  quantity-fr: 'sinus (d''un angle)'
+- identifier: DISL
+  quantity-en: 'dispersion slope'
+  quantity-fr: 'pente de dispersion'
   Unit: null    
 - identifier: EXIT
   quantity-en: 'radiant exitance'
   quantity-fr: 'exitance énergétique'
   Unit:     
     - [watt, "1"]
-    - [metre, "-2"]  
+    - [metre, "-2"]
+- identifier: REXI
+  quantity-en: 'relative radiant exitance'
+  quantity-fr: 'exitance énergétique relative'
+  Unit: null
+- identifier: OPRF
+  quantity-en: 'reflectance factor'
+  quantity-fr: 'facteur de réflectance'
+  Unit: null
+- identifier: GLOS
+  quantity-en: 'gloss'
+  quantity-fr: 'brillance'
+  Unit: null
+- identifier: NUMA
+  quantity-en: 'numerical aperture'
+  quantity-fr: 'ouverture numérique'
+  Unit: null
