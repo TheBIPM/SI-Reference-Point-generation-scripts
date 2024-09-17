@@ -2,51 +2,48 @@
 
 ## 1. Scope
 
-The [SI Reference Point](http://si-digital-framework.org/SI) is a set of tools making the information of the SI 
-Brochures available in machine-readable form, designed to provide an authoritative digital reference for the 
-[International System of Units (SI)](https://www.bipm.org/measurement-units/). The present document provides a general overview for users. A more 
-detailed description of the Application Programming Interface (API) and underlying knowledge graph files is 
-provided on our GitHub site (see Annex 1).
+The [SI Reference Point](http://si-digital-framework.org/SI) is a part of the SI Digital Framework, an effort undertaken by the [Bureau International des Poids et Mesures](https://bipm.org) to digitalize metrology. The [SI Reference Point](http://si-digital-framework.org/SI) offers a suite of tools that render the information from the SI Brochures available in a machine-readable format and is thus at the very heart of the SI Digital Framework. It is designed to serve as the authoritative digital reference for the
+[International System of Units (SI)](https://www.bipm.org/measurement-units/). 
+
+The present document provides a general overview of the SI Reference Point for unsers who wish to utilize the information published by the BIPM. A more detailed description for advanced used cases, inclusing information for a local installation of the package, a description of the Application Programming Interface (API), and the underlying knowledge graph files is available separately. 
 
 The present document is structured as follows:
-*	Section 2 shows the information covered by the SI Reference Point.
+*	Section 2 details the information covered by the SI Reference Point.
 *	Section 3 shows the data model used to encode the information.
-*	Section 4 briefly indicates how the information can be browsed.
-*	Section 5 summarizes the next steps.
-*	Annex 1 lists the Classes and Predicates in the data model
+*	Section 4 indicates how the information can be browsed.
+*	Annex 1 lists the Classes and Predicates in the data model.
 
 ## 2. Information contained in the SI Reference Point
 
+#### Published information
 The SI Reference Point is based on five main pillars, or knowledge graphs:
 1. **[SI/units](http://si-digital-framework.org/SI/units)**
-    * SI base units (Table 2 of [2])
-    * SI derived units with special names (Table 4 of [2])
-    * Non-SI units allowed for use with the SI (Table 8 of [2])
-    * Compound units (the examples given in Tables 5 and 6 of [2] plus additional examples from the BIPM key comparison database (KCDB))
+    * SI base units (Table 2 of [1])
+    * SI derived units with special names (Table 4 of [1])
+    * Non-SI units allowed for use with the SI (Table 8 of [1])
+    * Compound units (the examples given in Tables 5 and 6 of [1] plus additional examples from the BIPM key comparison database (KCDB) [2])
 1. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
-    * SI prefixes (Table 7 of [2])
-1. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
-    * Decisions relating to the SI, taken by the CGPM and CIPM  (Appendix 1 of [2])
+    * SI prefixes (Table 7 of [1])
 1. **[Constants](http://si-digital-framework.org/constants)**
-    * Initially the 7 defining constants of the SI (Table 1 of [2])
+    * Initially the 7 defining constants of the SI (Table 1 of [1])
 1.	**[Quantities](http://si-digital-framework,org/quantities)**
-    * SI base quantities (Table 3 of [2])
-    * Other example quantities (Tables 5 and 6 of [2])
+    * SI base quantities (Table 3 of [1])
+    * Other example quantities (Tables 5 and 6 of [1])
     * Other quantities in the BIPM key comparison database (KCDB))
+1. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
+    * Decisions relating to the SI, taken by the [General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm) and the [International Committee for Weights and Measures (CIPM)](https://www.bipm.org/en/committees/ci/cipm)  (Appendix 1 of [1])
   
-The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development:
+##### Remarks
+- The current version of the SI Reference Point covers exclusively the 7 defining constants of the SI. For a comprehensive list of constants and their recommended values, consult [3]
+- The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development, covering responsible bodies within the BIPM the (e.g [General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm) or the [International Committee for Weights and Measures (CIPM)](https://www.bipm.org/en/committees/ci/cipm) ).
 
-6. Responsible bodies
-    * CGPM, CIPM, etc.
-
-A tool is provided to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
   
-**Table 1.** List of tables in the SI Brochure [2] and corresponding information in the SI Reference Point
+**Table 1.** List of tables in the SI Brochure [1] and corresponding information in the SI Reference Point
 
 | Table | Title | Encoded in|
 | :----- | :----- | :---- |
 | 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
-| 2 | SI base units | SI/units |
+| 2 |  SI base units | SI/units |
 | 3 |  Base quantities and dimensions  used in the SI | quantities |
 | 4 |  The 22 SI units with special names and symbols | SI/units |
 | 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
@@ -56,9 +53,14 @@ A tool is provided to allow for machine-encoding and interpretation of prefixed 
 | <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
 
 
+#### Tools
+The SI Reference Point provides also a tool to allow for machine-encoding and interpretation of prefixed and other combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
+
+--> !! USAGE !! <---
+
 ## 3. Data model
 
-The information contained in the nine editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
+The information contained in the ninth editions of the SI Brochure has been encoded semantically and made publicly available on the internet at:
 
 [si-digital-framework.org/SI](http://si-digital-framework.org/SI) 
 
@@ -237,13 +239,11 @@ As an example, to browse the files visually using GraphDB:
 
 GraphDB also provides an interface for visual exploration of the knowledge graphs.
 
-## 5. Next steps
 
-This beta version of the SI Reference Point is open for comment, but it is hoped that the PIDs given here for the units defined in the SI can now be inserted into existing systems for representing units (such as QUDT, UnitsML, etc.), and used in other services under development. 
-
-The list of kinds of quantity will gradually be extended to cover all the quantities included in the BIPM key comparison database (KCDB). 
-
-To increase interoperability, authoritative external digital references for the listed quantities should be built in (such as from the the [e-ILV](https://cie.co.at/e-ilv), the [IEV](https://electropedia.org/), and the [IUPAC Gold Book](https://goldbook.iupac.org/). Currently this has been done for just a few of the quantities, as examples. The ongoing task to identify appropriate external references for the quantities will be carried out in collaboration with the subject experts in the CIPM’s Consultative Committees.
+## References
+[1] Le système international d'unité (SI), 9e édition, V2.01 (2022), ISBN ISBN 978-92-822-2272-0
+[2] https://www.bipm.org/kcdb/
+[3] https://pml.nist.gov/cuu/Constants/
 
 
 ### Acknowlegements
