@@ -243,3 +243,7 @@
   Unit:
     - [joule, "1"]
     - [metre, "2"]
+- identifier: LERA
+  quantity-en: 'length ratio'
+  quantity-fr: 'rapport de longueur'
+  Unit: null
