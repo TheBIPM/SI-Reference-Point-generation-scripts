@@ -132,17 +132,24 @@ def main():
     PDF = SiElements()
     g = Graph()
 
-    # copy over all namespaces from PDF.g to g
+    # 1) copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
         g.bind(key, val)
 
-    # Annotations to the ontology (name, Version number)
+    # 2) add annotations to the ontology (name, creation date, comment)
     g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
     g.add(
         (
             URIRef(PDF.namespace_units),
             SKOS.prefLabel,
             Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string),
+        )
+    )
+    g.add(
+        (
+            URIRef(PDF.namespace_units),
+            DCTERMS.created,
+            Literal(str(date.today()), datatype=XSD.date),
         )
     )
     g.add(
@@ -158,15 +165,8 @@ def main():
             ),
         )
     )
-    g.add(
-        (
-            URIRef(PDF.namespace_units),
-            DCTERMS.created,
-            Literal(str(date.today()), datatype=XSD.date),
-        )
-    )
 
-    # open YAML files with information
+    # 3) open YAML files with information
     with open(os.path.join(CUQ_FILES_FOLDER, "def_collectors.yaml")) as fp:
         def_collectors = yaml.safe_load(fp)
 

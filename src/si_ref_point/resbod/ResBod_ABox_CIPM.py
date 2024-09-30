@@ -1,3 +1,6 @@
+"""
+CIPM ABox
+"""
 from si_ref_point.settings import CIPM_FILES_FOLDER
 from si_ref_point.resbod.utils import MeetingsFileExtractor
 

@@ -14,6 +14,7 @@ import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
+from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
 from si_ref_point import __version__
 import os
 import datetime
@@ -48,14 +49,12 @@ def get_parser():
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
-        default=os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                             "..", "..", "TTL")),
+        default=TTL_FILES_FOLDER,
         help="Output directory for TTL output")
     parser.add_argument(
         '--jsonld_output_dir',
         type=str,
-        default=os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                             "..", "..", "JSON-LD")),
+        default=JSONLD_FILES_FOLDER,
         help="Output directory for JSON-LD output")
     return parser
 

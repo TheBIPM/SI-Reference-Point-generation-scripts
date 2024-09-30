@@ -6,39 +6,38 @@ import os
 from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from pathlib import Path
-from si_ref_point.settings import CUQ_FILES_FOLDER, SIURL
+from si_ref_point.settings import CUQ_FILES_FOLDER, SIDFWBASE
 from datetime import date
 
-ResBod_ns = SIURL + "bodies#"
+res_bod_ns = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
 
 
 class SiElements:
-    def __init__(self, namespace: str = SIURL + "SI#", prefix: str = "si"):
+    def __init__(self, namespace: str = SIDFWBASE + "/SI#", prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
         self.namespace = namespace
-        self.namespace_units = SIURL + "SI/units/"
-        self.namespace_prefixes = SIURL + "SI/prefixes/"
-        self.namespace_decisions = SIURL + "SI/decisions/"
-        self.namespace_quantities = SIURL + "quantities/"
-        self.namespace_constants = SIURL + "constants/"
+        self.namespace_units = SIDFWBASE + "/SI/units/"
+        self.namespace_prefixes = SIDFWBASE + "/SI/prefixes/"
+        self.namespace_decisions = SIDFWBASE + "/SI/decisions/"
+        self.namespace_quantities = SIDFWBASE + "/quantities/"
+        self.namespace_constants = SIDFWBASE + "/constants/"
         self.namespace_bodies = {}
         for body in bodies_list:
-            self.namespace_bodies[body] = SIURL + "bodies/" + body.upper() + "#"
+            self.namespace_bodies[body] = SIDFWBASE + "/bodies/" + body.upper() + "#"
 
         self.g.bind(prefix, self.namespace)
         self.g.bind("units", self.namespace_units)
         self.g.bind("prefixes", self.namespace_prefixes)
         self.g.bind("quantities", self.namespace_quantities)
         self.g.bind("constants", self.namespace_constants)
+        
         self.g.bind("decisions", self.namespace_decisions)
         for body in bodies_list:
             self.g.bind(body, self.namespace_bodies[body])
-        self.g.bind('rb', ResBod_ns)
+        self.g.bind('rb', res_bod_ns)
 
-        self.BASE_PATH = Path(__file__).resolve().parent.parent
-        self.ResBod_ns = ResBod_ns
+        self.res_bod_ns = res_bod_ns
 
         # Load graph from ttl files
         for ttl_file in ['CUQ_core_concepts.ttl',

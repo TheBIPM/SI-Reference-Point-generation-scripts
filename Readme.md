@@ -28,7 +28,12 @@ Python >= 3.11 required, for other requirements see pyproject.toml.
 [Specific instructions for pycharm](./docs/install_in_pycharm.md)
 
 ## Usage
-After installation, a `generate_turtle_files` command should be available and will create all `.ttl` files in a subfolder.
+After installation, two commands are available
+*  `generate_turtle_files`
+* `launch_si_test_api`
+
+### `generate_turtle_files`
+This command will create all `.ttl` files in a subfolder.
 
 The `-z` option generates a zip file.
 
@@ -36,9 +41,12 @@ For debugging purposes, you can choose to generate only one ttl by providing its
 
 `--gen_ontology_viz` updates the markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit changes if you want the up-to-date version to be displayed on github.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/TTL`. 
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/../../TTL`. 
 
 `-h / --help` provides a list of available options.
+
+### `launch_si_test_api`
+This command will launch a local web-service for testing purposes.
 
 
 ## Short description of the `src/si_ref_point/` sub directories

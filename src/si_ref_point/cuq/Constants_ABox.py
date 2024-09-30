@@ -1,5 +1,5 @@
 """
-Units ABox
+Constants ABox
 """
 
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
@@ -16,22 +16,41 @@ def main():
     PDF = SiElements()
     g = Graph()
 
-    # copy over all namespaces from PDF.g to g
+    # 1) copy over all namespaces from PDF.g to g
     for key, val in PDF.g.namespaces():
         g.bind(key, val)
 
-    # Annotations to the ontology (name, creation date, comment)
+    # 2) Annotations to the ontology (name, creation date, comment)
     g.add((URIRef(PDF.namespace_constants), RDF.type, OWL.Ontology))
-    g.add((URIRef(PDF.namespace_constants), SKOS.prefLabel,
-           Literal("SI Reference Point - Constants", datatype=XSD.string)))
-    g.add((URIRef(PDF.namespace_constants), RDFS.comment,
-           Literal(("Ontology, part of the SI reference point, covering the "
+ 
+    g.add(
+        (
+            URIRef(PDF.namespace_constants), 
+            SKOS.prefLabel,
+            Literal("SI Reference Point - Constants", datatype=XSD.string)
+       )
+       )
+    
+    g.add(
+        (
+            URIRef(PDF.namespace_constants),
+            DCTERMS.created,
+            Literal(str(date.today()), datatype=XSD.date)
+       )
+       )
+    
+    g.add(
+        (
+            URIRef(PDF.namespace_constants),
+            RDFS.comment,
+            Literal(("Ontology, part of the SI reference point, covering the "
                     "seven underpinning constants of the SI"),
-                   datatype=XSD.string)))
-    g.add((URIRef(PDF.namespace_constants), DCTERMS.created,
-           Literal(str(date.today()), datatype=XSD.date)))
+                   datatype=XSD.string)
+       )
+       )
+    
 
-    # yaml containing the basic information
+    # 3) open yaml with information
     with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'),
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)

@@ -1,26 +1,29 @@
+"""
+ResBod TBox
+"""
 from datetime import date
 
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
-from si_ref_point.settings import SIURL, SKOSURL
+from si_ref_point.settings import SIDFWBASE, SKOSURL
 
 
-ResBod_ns = SIURL + "bodies#"
 
+resbod_ns = SIDFWBASE + "/bodies#"
 
 class ResBod:
-    def __init__(self, namespace: str = ResBod_ns, prefix: str = 'rb'):
+    def __init__(self, namespace: str = resbod_ns, prefix: str = 'rb'):
         self.namespace = namespace
         self._g = Graph()  # a triple store as the main data structure
         self._g.bind(prefix, namespace)
         self._g.bind("skos", SKOSURL)
 
-        self._g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
-        self._g.add((URIRef(ResBod_ns), SKOS.prefLabel,
+        self._g.add((URIRef(resbod_ns), RDF.type, OWL.Ontology))
+        self._g.add((URIRef(resbod_ns), SKOS.prefLabel,
                      Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
-        self._g.add((URIRef(ResBod_ns), RDFS.comment,
+        self._g.add((URIRef(resbod_ns), RDFS.comment,
                      Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their "
                              "resolutions, decisions, etc", datatype=XSD.string)))
-        self._g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+        self._g.add((URIRef(resbod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
         self.ResBod = self.set_uri('ResBod')
         self._g.add((self.ResBod, RDF.type, SKOS.Concept))

@@ -10,20 +10,20 @@
             <h1>Grandeurs</h1>
             {% for quant in quants %}
                 <h2>{{quant.fText}}</h2>
-                {% set url_address = "/si-unit/" + quant.usym ~'?lang=' ~language %}
+                {% set url_address = "/SI/units/" + quant.usym ~'?lang=' ~language %}
                 <p>
                     Le type de grandeur {{quant.fText}} (code: {{quant.code}}) a l'unité
-                    <a href="{{url_address}}">{{quant.fText}}</a> (symbole {{quant.usym}}).
+                    <a href="{{url_address}}">{{quant.ulabel}}</a> (symbole {{quant.usym}}).
                 </p>
             {% endfor %}
         {% else %}
             <h1>Quantities</h1>
             {% for quant in quants %}
                 <h2>{{quant.eText}}</h2>
-                {% set url_address = "/si-unit/" + quant.usym ~'?lang=' ~language %}
+                {% set url_address = "/SI/units/" + quant.usym ~'?lang=' ~language %}
                 <p>
                     The kind of quantity {{quant.eText}} (code: {{quant.code}}) has the
-                    unit <a href="{{url_address}}">{{quant.eText}}</a> (symbol {{quant.usym}}).
+                    unit <a href="{{url_address}}">{{quant.ulabel}}</a> (symbol {{quant.usym}}).
                 </p>
             {% endfor %}
         {% endif %}
