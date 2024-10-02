@@ -2,7 +2,7 @@ name: Compile package and test it
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "enable_ci_pipeline" ]
   pull_request:
     branches: [ "main" ]
   workflow_call:
