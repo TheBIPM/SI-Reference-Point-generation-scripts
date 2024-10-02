@@ -1,0 +1,22 @@
+name: Create release
+
+on: 
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+
+  create_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare_env
+      - uses: ./.github/actions/build
+      - uses: ./.github/actions/test
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*si-app*.zip"
+          #bodyFile: "TTL/release_note.md"

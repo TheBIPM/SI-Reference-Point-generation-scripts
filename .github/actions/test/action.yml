@@ -1,0 +1,10 @@
+name: test action
+description: run test against compiled package
+
+runs:
+  using: composite
+  steps:
+    - name: Test output files in typical scenarios
+      shell: bash
+      run: |
+        python test/run_test.py
