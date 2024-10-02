@@ -21,6 +21,8 @@ Testing/API/units.ttl
 Testing/API/decisions.ttl
 Testing/Vocabulary/Vocabulary.txt
 *.zip
+TTL/
+JSON-LD/
 
 # cache files
 __pycache__
