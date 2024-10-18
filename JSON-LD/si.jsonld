@@ -1,0 +1,2318 @@
+[
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericExponent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "UnitBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric exponent"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour exposant ce nombre"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#short"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningEquation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a SI definition to its defining equation."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à son équation de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b19"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining equation"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une équation de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b19",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasConversionFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Le facteur de conversion entre l'unité non SI et l'unité dans le SI (nombre d'unité de contenu dans l'unité non-SI)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has a conversion factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un facteur de conversion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningConstant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a definition to its defining constant."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition à sa constante de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une constante de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasQuantityBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "QuantityBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has quantity base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasBase"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitMultiple",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit multiple"
+      },
+      {
+        "@language": "fr",
+        "@value": "multiple d'unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isDecisionOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is decision of"
+      },
+      {
+        "@language": "fr",
+        "@value": "est la décision de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDecision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has decision"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour décision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#isDecisionOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericFactorAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric factor represented by this string"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour facteur le nombre correspondant à cette chaine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasLeftUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has left unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de gauche cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasUnitTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasSymbol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit or prefix to a symbol."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure ou un préfixe à un symbole."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has symbol"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour symbole"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasValueAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has value as a string"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une valeur sous forme de chaîne"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningText",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to the defining text."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI au texte de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining text"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un texte de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIBaseUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class of SI base units. Several definitions can be attached to this class to represent definitions of the BaseUnit throughout time."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe des unités de base SI. Plusieurs définitions peuvent être attachées à cette classe pour représenter les définitions de l'unité de base en question à travers les temps."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@value": "VIM3 1.10"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité de base"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#DefinitionNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for notes related SI unit definitions."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les définitions d'unités SI liées aux notes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit definition note"
+      },
+      {
+        "@language": "fr",
+        "@value": "note de définition d'unité"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKindProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quantitykind product"
+      },
+      {
+        "@language": "fr",
+        "@value": "produit de grandeurs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningResolution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to the resolution by which it was adopted."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à la résolution par laquelle elle a été adoptée."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b22"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining resolution"
+      },
+      {
+        "@language": "fr",
+        "@value": "a résolution de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b22",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNoteText",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The order index of a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Index d'ordre d'une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has note text"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un index de notes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasTarget",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionScope"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has target"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour cible"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#isTargetOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit to an object."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure à un objet."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a l'unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#QuantityKind"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasRightUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has right unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de droite cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasUnitTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#inOtherSIUnits",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "can be expressed in other SI units as"
+      },
+      {
+        "@language": "fr",
+        "@value": "peut être exprimé dans d’autres unités SI sous la forme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasConversionUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "SI unit to which the non SI unit can be converted"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unité SI dans laquelle l'unité non SI peut être convertie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has conversion unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une unité de conversion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the quantity kinds."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les types de grandeur."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@value": "VIM3 1.2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "kind of quantity"
+      },
+      {
+        "@language": "fr",
+        "@value": "nature de grandeur"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit product"
+      },
+      {
+        "@language": "fr",
+        "@value": "produit d'unités"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNonPrefixedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#PrefixedUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has non prefixed unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour unité sans préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecisionTarget",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions target."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les cibles de décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision target"
+      },
+      {
+        "@language": "fr",
+        "@value": "Cible d'une décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUpdatedDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has updated date"
+      },
+      {
+        "@language": "fr",
+        "@value": "a mis à jour la date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasStartValidity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to its starting validity date."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à sa date de début de validité."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has start validity"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une validité de départ"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Base ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "UnitBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasBase"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI base unit to its definition."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de base SI à sa définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#inBaseSIUnits",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "can be expressed in base SI units as"
+      },
+      {
+        "@language": "fr",
+        "@value": "peut être exprimé en unités SI de base sous la forme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefinitionNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has definition note"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une note de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isUnitOfQtyKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit to its quantity kind."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure à son type de grandeur."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is unit of quantity kind"
+      },
+      {
+        "@language": "fr",
+        "@value": "est une unité de grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has a term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKindPower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quantitykind power"
+      },
+      {
+        "@language": "fr",
+        "@value": "grandeur élevée à la puissance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#MeasurementUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for all measurement units."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour toutes les unités de mesure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@value": "VIM3 1.9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "measurement unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité de mesure"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNoteIndex",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The text of a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Le texte d'une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has note index"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un texte de note"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasRightQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has right quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de droite cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasQuantityTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitTypeAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit type as a string"
+      },
+      {
+        "@language": "fr",
+        "@value": "type d'unité sous forme de chaîne"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#correspondingResolution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has corresponding resolution"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour résolution correspondante"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#nonSIUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Non-SI units that are accepted for use with the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités en dehors du SI dont l’usage est accepté avec le SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "non SI unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité en dehors du SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#Constant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the seven defining constants of the SI."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les sept constantes définissant le SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defining constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "constante définissant le SI"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasLeftQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has left quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de gauche cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasQuantityTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has value"
+      },
+      {
+        "@language": "fr",
+        "@value": "a de la valeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isTargetOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is target of"
+      },
+      {
+        "@language": "fr",
+        "@value": "est la cible de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionScope"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isDefiningResolutionOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a resolution to the SI definition it defined."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une résolution à la définition SI qu'elle a définie."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is defining resolution of"
+      },
+      {
+        "@language": "fr",
+        "@value": "définit la résolution de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b25"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasDefiningResolution"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b25",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#PrefixedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "prefixed unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité précédée d'un préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#CompoundUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "compound unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité composée"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasPrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#PrefixedUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has prefix"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a cette unité pour terme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNextDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition version to the next version."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une version de définition SI à la version suivante."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has next definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a la prochaine définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasPreviousDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#prefixRestriction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b11"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Limitation of the possible prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Limitation des préfixes possibles"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasEndValidity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to its ending validity date."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à sa date de fin de validité."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has end validity"
+      },
+      {
+        "@language": "fr",
+        "@value": "a fin de validité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitPower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit power"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité élevée à la puissance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour facteur ce nombre"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasPreviousDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition version to the previous version."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une version de définition SI à la version précédente."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has previous definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a la définition précédente"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasNextDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecisionScope",
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions scopes."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les champs de décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision scope"
+      },
+      {
+        "@language": "fr",
+        "@value": "Champ de la décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc5752f327d2344888d6a982b86b435f1",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2023-12-22"
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-05-14"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Ontology, part of the SI reference point, providing base concepts and their relations."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "SI Reference Point - Base Ontology"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "compound quantitykind"
+      },
+      {
+        "@language": "fr",
+        "@value": "grandeur composée"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a SI definition to its status."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à son état."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has status"
+      },
+      {
+        "@language": "fr",
+        "@value": "a l'état"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasAltSymbol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit or prefix to an alternate symbol."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure ou un préfixe à un symbole alternatif."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has alternate symbol"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour symbole alternatif"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIPrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI Prefixes."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les préfixes SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI prefix"
+      },
+      {
+        "@language": "fr",
+        "@value": "préfixe SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#int",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasScalingFactor"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDatatype",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b16"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has datatype"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un type de données"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b16",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SIPrefix"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N2ebf6e500e0648b8b8fbe642b0186af2",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIPrefix"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the units of the SI that are not base units but have a special name."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe des unités du SI qui ne sont pas des unités de base mais qui ont un nom spécial."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI unit with special name"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité SI avec nom spécial"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasScalingFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI prefix to its scaling factor."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer un préfixe SI à son facteur d'échelle."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has scaling factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un facteur d'échelle"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#Definition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for definitions of an SI base unit."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les notes sur les définitions des unités SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "definition of a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "définition d'une unité de base"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:nbe60494657fd42fd822fcc2525348790b1"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbe60494657fd42fd822fcc2525348790b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#int",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasStartValidity"
+      }
+    ]
+  }
+]

@@ -44,8 +44,8 @@
   Unit:
     - [degreeCelsius, "1"]
 - identifier: PHAS
-  quantity-en: 'phase'
-  quantity-fr: 'phase'
+  quantity-en: 'phase angle'
+  quantity-fr: 'angle de phase'
   Unit: radian
 - identifier: REFI
   quantity-en: 'refractive index'
@@ -63,22 +63,10 @@
   quantity-en: 'quality factor'
   quantity-fr: 'facteur de qualité'
   Unit: null
-- identifier: PERM
-  quantity-en: 'permittivity'
-  quantity-fr: 'permittivité'
-  Unit:
-    - [farad, "1"]
-    - [metre, "-1"]
 - identifier: RELP
   quantity-en: 'relative permittivity'
   quantity-fr: 'permittivité relative'
   Unit: null
-- identifier: PMBY
-  quantity-en: 'magnetic permeability'
-  quantity-fr: 'perméabilité magnétique'
-  Unit:
-    - [henry, "1"]
-    - [metre, "-1"]
 - identifier: REPE
   quantity-en: 'relative permeability'
   quantity-fr: 'perméabilité relative'
@@ -95,8 +83,167 @@
   quantity-en: 'shielding factor'
   quantity-fr: 'taux de blindage'
   Unit:
-    - [decibel, "1"]
+    - [bel, "1"]
 - identifier: ANIS
   quantity-en: 'anisotropy'
   quantity-fr: 'anisotropie'
+  Unit: null
+- identifier: OPTP
+  quantity-en: 'radiant power'
+  quantity-fr: 'puissance rayonnante'
+  Unit: 
+    - [watt, "1"]
+- identifier: OPTR
+  quantity-en: 'transmittance'
+  quantity-fr: 'transmittance'
+  Unit: null
+- identifier: OPEM
+  quantity-en: 'emittance'
+  quantity-fr: 'émittance'
+  Unit: null 
+- identifier: LUFA
+  quantity-en: 'luminance factor'
+  quantity-fr: 'facteur de luminance'
+  Unit: null  
+- identifier: RADF
+  quantity-en: 'radiance factor'
+  quantity-fr: 'facteur de luminance énergétique'
+  Unit: null 
+- identifier: OPAB
+  quantity-en: 'absorbance'
+  quantity-fr: 'absorbance'
+  Unit: null  
+- identifier: EMIS
+  quantity-en: 'emissivity'
+  quantity-fr: 'émissivité'
+  Unit: null  
+- identifier: OPRE
+  quantity-en: 'reflectance'
+  quantity-fr: 'réflectance'
+  Unit: null    
+- identifier: CCTE
+  quantity-en: 'correlated colour temperature'
+  quantity-fr: 'température de couleur proximale'
+  Unit:
+    - [kelvin, "1"]
+- identifier: LUCO
+  quantity-en: 'luminance coefficient'
+  quantity-fr: 'coefficient de luminance'
+  Unit: 
+    - [steradian, "-1"]
+- identifier: MTTE
+  quantity-en: 'distribution temperature'
+  quantity-fr: 'température de distribution'
+  Unit: 
+    - [kelvin, "1"]
+- identifier: WHIT
+  quantity-en: 'whiteness'
+  quantity-fr: 'blancheur'
+  Unit: null
+- identifier: HEFU
+  quantity-en: 'heat of fusion'
+  quantity-fr: 'énergie de fusion'
+  Unit:
+    - [joule, "1"]
+    - [kilogram, "-1"] 
+- identifier: TDIF
+  quantity-en: 'thermal diffusivity'
+  quantity-fr: 'diffusivité thermique'
+  Unit:
+    - [metre, "2"]
+    - [second, "-1"] 
+- identifier: TEXL
+  quantity-en: 'thermal expansion coefficient (linear)'
+  quantity-fr: 'coefficient d''expansion thermique (linéaire)'
+  Unit:
+    - [metre, "1"]
+    - [metre, "-1"]
+    - [kelvin, "-1"] 
+- identifier: DEWP
+  quantity-en: 'dew/frost point'
+  quantity-fr: 'point de rosée/givre'
+  Unit:
+    - [degreeCelsius, "1"]
+- identifier: CALV
+  quantity-en: 'calorific value'
+  quantity-fr: 'valeur calorifique'
+  Unit:
+    - [joule, "1"]
+    - [kilogram, "-1"]    
+- identifier: RHUM
+  quantity-en: 'relative humidity'
+  quantity-fr: 'humidité relative'
+  Unit: null  
+- identifier: LXRS
+  quantity-en: 'luminous exposure reponsivity'
+  quantity-fr: 'sensibilité à l''exposition lumineuse'
+  Unit: 
+    - [lux, "-1"]
+    - [second, "-1"]  
+- identifier: LUXP
+  quantity-en: 'luminous exposure'
+  quantity-fr: 'l''exposition lumineuse'
+  Unit:
+    - [lux, "1"]
+    - [second, "1"]      
+- identifier: BRDF
+  quantity-en: 'bidirectional reflectance distribution function'
+  quantity-fr: 'fonction de répartition bidirectionnelle du facteur de réflexion'
+  Unit:
+    - [steradian, "-1"] 
+- identifier: VICO
+  quantity-en: 'viscometer constant'
+  quantity-fr: 'constante du viscosimètre'
+  Unit:
+    - [metre, "2"]
+    - [second, "-2"]  
+- identifier: LOSS
+  quantity-en: 'optical fibre attenuation'
+  quantity-fr: 'attenuation (dans une fibre optique)'
+  Unit:
+    - [bel, "1"]
+    - [metre, "-1"]    
+- identifier: ENCL
+  quantity-en: 'encircled flux'
+  quantity-fr: 'flux encerclé'
+  Unit: null 
+- identifier: DSDE
+  quantity-en: 'distance scale deviation'
+  quantity-fr: 'écart de l''échelle de distance'
+  Unit: null 
+- identifier: DISL
+  quantity-en: 'dispersion slope'
+  quantity-fr: 'pente de dispersion'
+  Unit: null    
+- identifier: EXIT
+  quantity-en: 'radiant exitance'
+  quantity-fr: 'exitance énergétique'
+  Unit:     
+    - [watt, "1"]
+    - [metre, "-2"]
+- identifier: REXI
+  quantity-en: 'relative radiant exitance'
+  quantity-fr: 'exitance énergétique relative'
+  Unit: null
+- identifier: OPRF
+  quantity-en: 'reflectance factor'
+  quantity-fr: 'facteur de réflectance'
+  Unit: null
+- identifier: GLOS
+  quantity-en: 'gloss'
+  quantity-fr: 'brillance'
+  Unit: null
+- identifier: NUMA
+  quantity-en: 'numerical aperture'
+  quantity-fr: 'ouverture numérique'
+  Unit: null
+- identifier: REXP
+  quantity-en: 'radiant exposure'
+  quantity-fr: 'exposition énergetique'
+  Unit:
+    - [joule, "1"]
+    - [metre, "2"]
+- identifier: LERA
+  quantity-en: 'length ratio'
+  quantity-fr: 'rapport de longueur'
   Unit: null

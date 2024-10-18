@@ -1,0 +1,932 @@
+[
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-05-14"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Ontology, part of the SI Reference Point, covering prefixes for the SI measurement units."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@value": "SI Reference Point - Prefixes"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/atto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "atto"
+      },
+      {
+        "@language": "en",
+        "@value": "atto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-18"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "a"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/kilo",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "kilo"
+      },
+      {
+        "@language": "en",
+        "@value": "kilo"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 1000
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "k"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/ronna",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "ronna"
+      },
+      {
+        "@language": "en",
+        "@value": "ronna"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e+27"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "R"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/ronto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "ronto"
+      },
+      {
+        "@language": "en",
+        "@value": "ronto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-27"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "r"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/exa",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "exa"
+      },
+      {
+        "@language": "en",
+        "@value": "exa"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e+18"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "E"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/giga",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "giga"
+      },
+      {
+        "@language": "en",
+        "@value": "giga"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 1000000000
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "G"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/yocto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "yocto"
+      },
+      {
+        "@language": "en",
+        "@value": "yocto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-24"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "y"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/deca",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "dÃ©ca"
+      },
+      {
+        "@language": "en",
+        "@value": "deca"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 10
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "da"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/zepto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "zepto"
+      },
+      {
+        "@language": "en",
+        "@value": "zepto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-21"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "z"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/quetta",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "quetta"
+      },
+      {
+        "@language": "en",
+        "@value": "quetta"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e+30"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "Q"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/centi",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "centi"
+      },
+      {
+        "@language": "en",
+        "@value": "centi"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "0.01"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "c"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/milli",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "milli"
+      },
+      {
+        "@language": "en",
+        "@value": "milli"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "0.001"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "m"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/hecto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "hecto"
+      },
+      {
+        "@language": "en",
+        "@value": "hecto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 100
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "h"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/nano",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "nano"
+      },
+      {
+        "@language": "en",
+        "@value": "nano"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-09"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "n"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/femto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "femto"
+      },
+      {
+        "@language": "en",
+        "@value": "femto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-15"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "f"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/none",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "aucun"
+      },
+      {
+        "@language": "en",
+        "@value": "none"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/mega",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "mÃ©ga"
+      },
+      {
+        "@language": "en",
+        "@value": "mega"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 1000000
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "M"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/quecto",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "quecto"
+      },
+      {
+        "@language": "en",
+        "@value": "quecto"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-30"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "q"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/yotta",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "yotta"
+      },
+      {
+        "@language": "en",
+        "@value": "yotta"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e+24"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "Y"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/peta",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "pÃ©ta"
+      },
+      {
+        "@language": "en",
+        "@value": "peta"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 1000000000000000
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "P"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/zetta",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "zetta"
+      },
+      {
+        "@language": "en",
+        "@value": "zetta"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e+21"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "Z"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/micro",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "micro"
+      },
+      {
+        "@language": "en",
+        "@value": "micro"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-06"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "Âµ"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/tera",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "tÃ©ra"
+      },
+      {
+        "@language": "en",
+        "@value": "tera"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@value": 1000000000000
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "T"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/pico",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "pico"
+      },
+      {
+        "@language": "en",
+        "@value": "pico"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1e-12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "p"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/prefixes/deci",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIPrefix"
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "fr",
+        "@value": "dÃ©ci"
+      },
+      {
+        "@language": "en",
+        "@value": "deci"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasScalingFactor": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "0.1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@value": "d"
+      }
+    ]
+  }
+]
