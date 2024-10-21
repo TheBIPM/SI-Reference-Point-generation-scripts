@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ language }}">
+<html lang="{{ lang }}">
 <head>
     <title>Units</title>
 </head>
@@ -8,14 +8,14 @@
     {% block main %}
     <h1>SI Units</h1>
     {% for unit in units %}
-    <h2>{{unit.Label}}</h2>
-    <p>
-        {% if language == 'fr' %}
-            <a href="{{ unit.C_Link }}">{{unit.Label}}</a> est l'unité de la grandeur <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> et a le symbol {{unit.Symbol}}.
-        {% else %}
-            <a href="{{ unit.C_Link }}">{{unit.Label}}</a> is the unit of the quantity kind <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> and has the symbol {{unit.Symbol}}.
+       <h2>{{unit.Label}}</h2>
+       <p>
+        {% if lang == 'en' %}
+            <a href="{{ unit.U_Link }}">{{unit.Label}}</a> is the unit of the quantity kind <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> and has the symbol {{unit.Symbol}}.
+        {% elif lang == 'fr' %}
+             <a href="{{ unit.U_Link }}?lang=fr">{{unit.Label}}</a> est l'unité de la grandeur <a href={{unit.Q_Link}}>{{unit.Q_Label}}</a> et a le symbol {{unit.Symbol}}.
         {% endif %}
-    </p>
+       </p>
     {% endfor %}
 {% endblock %}
 </body>

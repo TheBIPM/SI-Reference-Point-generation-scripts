@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="{{ lang }}">
 <head>
     <title>Defining Constants</title>
 </head>
@@ -8,10 +8,11 @@
     {% block main %}
     <h1>Defining Constants</h1>
     {% for con in cons %}
+        {% set cst_url_address = con.cst ~'?lang=' ~lang %}   
         {% if lang == 'en' %}
-            <h2><a href="/constant/{{con.eText}}">{{con.eText}}</a></h2>
+            <h2><a href="{{cst_url_address}}">{{con.eText}}</a></h2>
         {% elif lang == 'fr' %}
-            <h2><a href="/constant/{{con.fText}}">{{con.fText}}</a></h2>
+            <h2><a href="{{cst_url_address}}">{{con.fText}}</a></h2>
         {%  endif %}
     {% endfor %}
 {% endblock %}

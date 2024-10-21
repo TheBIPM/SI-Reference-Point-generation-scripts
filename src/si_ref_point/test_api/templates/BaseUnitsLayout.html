@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ language }}">
+<html lang="{{ lang }}">
 <head>
     <title>Base Units</title>
 </head>
@@ -9,7 +9,7 @@
     <div>
         <h1>SI Base Units</h1>
         {% for unit in units %}
-            {% set url_address = '../si-baseunit/' ~ unit.Symbol ~'?lang=' ~language %}   
+            {% set url_address = '../si-baseunit/' ~ unit.Symbol ~'?lang=' ~lang %}   
             <h2><a href="{{url_address}}"> {{unit.Label}}</a></h2>
             <p><i>Definition: </i>{{unit.Definition}}</p>
             

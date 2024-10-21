@@ -1,3 +1,4 @@
+""" Module providing a webservice that runs on the local computer """
 #############################################################################
 #
 # api_main
@@ -17,14 +18,14 @@
 #
 from typing import List
 from pathlib import Path
+from datetime import date, datetime
+import os
 from rdflib import Graph
 
 from fastapi import FastAPI, APIRouter, HTTPException, Request  # , Header, Query
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
-from datetime import date, datetime
-import os
 from si_ref_point.settings import TTL_FILES_FOLDER,JSONLD_FILES_FOLDER,SIDFWBASE
 
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -51,18 +52,19 @@ g.parse(os.path.join(TTL_FILES_FOLDER, 'cgpm.ttl'))
 # owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(g)
 
 # list of the possible parameters of the API call
+param_list_cgpms = ["lang"]
 param_list_base_unit_grps = ["lang"]
 param_list_base_units = ["lang", "datestr"]
 param_list_named_units = ["lang"]
 param_list_named_unit = ["lang"]
-param_list_prefixes = ["sym", "factor"]
+param_list_prefixes = ["lang"]
 param_list_quantities = ["lang"]
 param_list_constants = ["name", "lang"]
 param_list_lang = ['en', 'fr']
 
 # produce dictionaries of symbol:units / symobol:prefix_name / symbol:prefix_scaling
 # unit_list_dict
-units_query = """
+UNITS_QUERY = """
             PREFIX si: <"""+SIDFWBASE+"""/SI#>
             SELECT ?Unit ?Symbol
             WHERE
@@ -78,14 +80,14 @@ units_query = """
 
 
 # run SPARQL query for units
-unitlist = g.query(units_query)
+unitlist = g.query(UNITS_QUERY)
 unit_list_dict = dict()
 
 for unit in unitlist:
     unit_list_dict[str(unit['Symbol'])] = unit['Unit']
 
 # prefix_list_dict / scaling_list_dict
-fixquery = """
+FIX_QUERY = """
             PREFIX si: <"""+SIDFWBASE+"""/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Prefix ?PrefixLabel ?Symbol ?ScalingFactor
@@ -99,7 +101,7 @@ fixquery = """
             """
 
 # run SPARQL query for prefixes
-fixlist = g.query(fixquery)
+fixlist = g.query(FIX_QUERY)
 prefix_list_dict = dict()
 scaling_list_dict = dict()
 
@@ -109,21 +111,22 @@ for f in fixlist:
 
 # define the endpoint urls for the different sections of data
 # base URL were the API should be reached
-baseurl = "http://localhost:5000"
-siurl = baseurl + '/SI'
-quantsurl = baseurl + '/quantities/'
-unitsurl = baseurl + '/SI/units/'
-consurl = baseurl + '/constants'
-fixesurl = baseurl + '/SI/prefixes/'
-xsdurl = 'http://www.w3.org/2001/XMLSchema#'
+BASEURL = "http://localhost:5000"
+SIURL = BASEURL + '/SI'
+QUANTSURL = BASEURL + '/quantities/'
+UNITSURL = BASEURL + '/SI/units/'
+CONSURL = BASEURL + '/constants'
+FIXESURL = BASEURL + '/SI/prefixes/'
+XSDURL = 'http://www.w3.org/2001/XMLSchema#'
 
 
 # ----------------------------------------------------------------------------------------
 # function definitions
 
 
-# get the name of a unit based on the symbol
 def get_unit_name(sym: str, lang: str | None = 'en'):
+    """ get the name of a unit based on the symbol"""
+
     unit_query = """
             PREFIX si: <"""+SIDFWBASE+"""/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -146,8 +149,9 @@ def get_unit_name(sym: str, lang: str | None = 'en'):
         return element['Label']
 
 
-# get the name of a prefix base on a symbol
 def get_prefix_name(sym: str):
+    """ get the name of a prefix based on a symbol """
+
     prefix_query = """
             PREFIX si: <"""+SIDFWBASE+"""/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -165,24 +169,26 @@ def get_prefix_name(sym: str):
         return element['Label']
 
 
-# get the URI of a unit based on the symbol
+
 def get_unit_uri(symbol: str):
+    """ get the URI of a unit based on the symbol """
     return unit_list_dict[symbol]
 
 
-# get the URI of a prefix based on the symbol
 def get_prefix_uri(symbol: str):
+    """ get the URI of a prefix based on the symbol """
     return prefix_list_dict[symbol]
 
 
-# get the scaling factor of a prefix with symbol
 def get_scalingfactor(symbol: str) -> float:
+    """ get the scaling factor of a prefix with symbol """
     return scaling_list_dict[symbol]
 
 
 # ----------------------------------------------------------------------------------------
 # parser of prefixed unit
 def prefixedunit(unit_element: str):
+    """parses a prefixed unit"""
     dictionary = {}
 
     if unit_element[-1:].isnumeric():
@@ -212,43 +218,46 @@ def prefixedunit(unit_element: str):
 
             # case "g" with a prefix ≠ k
             else:
-                if unit_str[0] in prefix_list_dict.keys():
+#                if unit_str[0] in prefix_list_dict.keys():
+                if unit_str[0] in prefix_list_dict:
+
                     dictionary['prefix_symbol'] = unit_str[0]
                     dictionary['unit_URI'] = get_unit_uri("kg")
                     dictionary['unit_symbol'] = "g"
                     dictionary['unit_name'] = "gram"
-                    dictionary['unit_url'] = baseurl + "/SI/units/kg"
+                    dictionary['unit_url'] = BASEURL + "/SI/units/kg"
                     dictionary['prefix_URI'] = get_prefix_uri(unit_str[0])
                     dictionary['prefix_name'] = str(get_prefix_name(unit_str[0]))
-                    dictionary['prefix_url'] = baseurl + "/SI/prefixes/" + dictionary['prefix_name']
+                    dictionary['prefix_url'] = BASEURL + "/SI/prefixes/" + dictionary['prefix_name']
                     dictionary['scaling'] = str((float(get_scalingfactor(unit_str[0])) / 1000) ** abs(unit_pwr))
                     dictionary['relation'] = "1 " + unit_str + expo + " = " + dictionary['scaling'] + " kg" + expo
 
                 else:
                     raise HTTPException(
                         status_code=404,
-                        detail=f"No information available. Make sure the prefixes and units are correct")
+                        detail="No information available. Make sure the prefixes and units are correct")
     else:
         # last character not g
-        if unit_str in unit_list_dict.keys():
+#        if unit_str in unit_list_dict.keys():
+        if unit_str in unit_list_dict:
             dictionary['unit_symbol'] = unit_str
             dictionary['unit_URI'] = get_unit_uri(unit_str)
             dictionary['unit_name'] = get_unit_name(unit_str)
-            dictionary['unit_url'] = baseurl + "/SI/units/" + dictionary['unit_name']
+            dictionary['unit_url'] = BASEURL + "/SI/units/" + dictionary['unit_name']
             dictionary['scaling'] = 1
 
         else:
             remains = unit_str[1:]
 
-            if (unit_str[0] in prefix_list_dict.keys()) and (remains in unit_list_dict.keys()):
+            if (unit_str[0] in prefix_list_dict) and (remains in unit_list_dict):
                 dictionary['prefix_symbol'] = unit_str[0]
                 dictionary['prefix_URI'] = get_prefix_uri(unit_str[0])
                 dictionary['prefix_name'] = str(get_prefix_name(unit_str[0]))
-                dictionary['prefix_url'] = baseurl + "/SI/prefixes/" + dictionary['prefix_name']
+                dictionary['prefix_url'] = BASEURL + "/SI/prefixes/" + dictionary['prefix_name']
                 dictionary['unit_symbol'] = remains
                 dictionary['unit_name'] = get_unit_name(remains)
                 dictionary['unit_URI'] = get_unit_uri(remains)
-                dictionary['unit_url'] = baseurl + "/SI/units/" + dictionary['unit_name']
+                dictionary['unit_url'] = BASEURL + "/SI/units/" + dictionary['unit_name']
                 dictionary['scaling'] = str(float(get_scalingfactor(unit_str[0])) ** abs(unit_pwr))
                 dictionary['relation'] = "1 " + unit_str + expo + " = " + dictionary['scaling'] + " " + dictionary[
                     'unit_symbol'] + expo
@@ -256,7 +265,7 @@ def prefixedunit(unit_element: str):
             else:
                 raise HTTPException(
                     status_code=404,
-                    detail=f"No information available. Make sure the prefixes and units are correct")
+                    detail="No information available. Make sure the prefixes and units are correct")
 
     return dictionary
 
@@ -268,6 +277,8 @@ def prefixedunit(unit_element: str):
 # ----------------------------------------------------------------------------------------
 @app.get("/")
 def landing_page(request: Request):
+    """ return landing page """
+
     return TEMPLATES.TemplateResponse(
         "ParentLayout.html",
         {"request": request})
@@ -276,6 +287,22 @@ def landing_page(request: Request):
 # ----------------------------------------------------------------------------------------
 @app.get("/cgpm")
 def displ_cgpms(request: Request, lang: str | None = 'en'):
+    """ endpoint to get the full list of CGPM conferences """
+
+    # check params
+    for param in request.query_params:
+        if param not in param_list_cgpms:
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
+            for allowed_para in param_list_cgpms:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(
+                status_code=404, detail=error_msg)
+        # check language
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language unknown {lang}")
+
     knows_query = """
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX si: <"""+SIDFWBASE+"""/SI#>
@@ -303,14 +330,14 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
         responses.append({
             'Title': element['CGPM_title'],
             'Year': year,
-            'Link': baseurl + "/bodies/cgpm/" + element['Identifier'],
+            'Link': BASEURL + "/bodies/cgpm/" + element['Identifier'],
             "Lang": lang
         }
         )
 
     if not responses:
         raise HTTPException(
-            status_code=404, detail=f"No conference found.")
+            status_code=404, detail="No conference found.")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -318,26 +345,38 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
     else:
         return TEMPLATES.TemplateResponse(
             "ConfsLayout.html",
-            {"request": request, "Conferences": responses, "language": lang}
+            {"request": request, "Conferences": responses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
 @app.get("/cgpm/{confid}")
 def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = 'en'):
+    """ endpoint to get a specific CGPM conference """
 
-    years = [1889, 1901, 1927, 1933, 1948, 1954, 1960, 1964, 1967, 1971, 1975,
-             1979, 1983, 1987, 1991, 1995, 1999, 2003, 2007, 2011, 2014, 2018, 2022]
-    nums = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-    if confid in years:
-        fstr = "FILTER (YEAR(?Conf_date)=" + str(confid) + ")."
-    elif confid in nums:
+    # check params
+    for param in request.query_params:
+        if param not in param_list_cgpms:
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
+            for allowed_para in param_list_cgpms:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(
+                status_code=404, detail=error_msg)
+        # check language
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language unknown {lang}")
+
+    if confid > 1888 :
+        fstr = "FILTER (YEAR(?Event_date)=" + str(confid) + ")."
+    elif confid < 1000 :
         fstr = "FILTER (?Identifier=" + str(confid) + ")."
     elif confid is not None:
         return RedirectResponse("/CGPM")
     else:
         raise HTTPException(
-            status_code=404, detail=f"Should be list of conferences...")
+            status_code=404, detail="Should be list of conferences...")
         # fstr = ""
 
     knows_query = """
@@ -401,7 +440,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 
     if not responses:
         raise HTTPException(
-            status_code=404, detail=f"No conference found.")
+            status_code=404, detail="No conference found.")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -409,7 +448,7 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
     else:
         return TEMPLATES.TemplateResponse(
             "ConfLayout.html",
-            {"request": request, "Conferences": responses, "language": lang}
+            {"request": request, "Conferences": responses, "lang": lang}
         )
 
 
@@ -433,14 +472,14 @@ def displ_constants(request: Request, lang: str | None = 'en'):
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
 
-    # SPARQL query to get  information about all defining constants
+    # SPARQL query to get information about all defining constants
     constants_query = """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
         PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
         PREFIX si: <"""+SIDFWBASE+"""/SI#>
 
-        SELECT ?cst ?eText ?fText   ?symbol  ?updateDate ?valueStr  
+        SELECT ?cst ?eText ?fText ?symbol  ?updateDate ?valueStr  
         WHERE { 
         ?cst  a si:Constant ;
                 skos:prefLabel ?eText ;
@@ -460,7 +499,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     # check for data
     if not consset:
         raise HTTPException(
-            status_code=404, detail=f"No constants data found.")
+            status_code=404, detail="No constants data found.")
 
     # generate output
     accept = request.headers.get("Accept")
@@ -469,20 +508,20 @@ def displ_constants(request: Request, lang: str | None = 'en'):
     elif accept == 'application/ld+json':
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
-               {"si": siurl,
-                "constants": consurl,
-                'xsd': xsdurl},
-               {"@base": consurl}]
-        jld = {"@context": ctx, "@id": consurl, "@type": "si:Constant"}
+               {"si": SIURL,
+                "constants": CONSURL,
+                'xsd': XSDURL},
+               {"@base": CONSURL}]
+        jld = {"@context": ctx, "@id": CONSURL, "@type": "si:Constant"}
         cons = []
         for constant in consset:
-            name = constant['constant'].replace(consurl, 'constants:')
+            name = constant['constant'].replace(CONSURL, 'constants:')
             con = {"@id": name, "@type": "si:Constant"}
             con.update({"name_en": constant['eText']})
             con.update({"name_fr": constant['fText']})
             con.update({"symbol": constant['sym']})
             # needed to correctly display numeric value
-            dtype = constant['dtype'].replace(xsdurl, 'xsd:')
+            dtype = constant['dtype'].replace(XSDURL, 'xsd:')
             if dtype == 'xsd:integer':
                 con.update({'value': int(constant['nval'])})
             elif dtype == 'xsd:float':
@@ -492,7 +531,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             con.update({"unit": constant['ustr']})
             con.update({'defining_resolution_en': constant['eDOI']})
             con.update({'defining_resolution_fr': constant['fDOI']})
-            unt = constant['unit'].replace(siurl, 'si:')
+            unt = constant['unit'].replace(SIURL, 'si:')
             con.update({'defines': unt})
             cons.append(con)
         jld.update({"constants": cons})
@@ -507,6 +546,9 @@ def displ_constants(request: Request, lang: str | None = 'en'):
 # ----------------------------------------------------------------------------------------
 @app.get("/constants/{name}/")
 def displ_constant(request: Request, name: str | None = None, lang: str | None = 'en'):
+    """ endpoint to get a specific defining constant """
+
+    # check params
     for param in request.query_params:
         if param not in param_list_constants:
             error_msg = "Parameter " + param + " unknown. Allowed parameter: "
@@ -515,6 +557,8 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -574,7 +618,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
 
     if not response:
         raise HTTPException(
-            status_code=404, detail=f"No Constant found.")
+            status_code=404, detail="No Constant found.")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -607,207 +651,17 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
     else:
         return TEMPLATES.TemplateResponse(
             "ConstantLayout.html",
-            {"request": request, "constant": response}
-        )
-
-
-
-# ----------------------------------------------------------------------------------------
-@app.get("/unit/{unitname}")
-def displ_baseunitdefinition(request: Request, unitname: str | None = None, lang: str | None = 'en'):
-    # endpoint to get a particular SI allowed unit "
-
-    # check that parameters are allowed
-    for param in request.query_params:
-        if param not in param_list_base_unit_grps:
-            error_msg = "Parameter " + param + " unknown. Allowed parameters: "
-            for allowed_para in param_list_base_units:
-                error_msg += allowed_para + ", "
-            error_msg = error_msg[:-2]
-            raise HTTPException(status_code=404, detail=error_msg)
-
-    # check that language is allowed
-    if lang not in param_list_lang:
-        raise HTTPException(
-            status_code=404, detail=f"Requested language not available {lang}")
-
-    # these are the names of the units in the ttl file, language specific not needed here
-    allowed = ['ampere', 'metre', 'kilogram', 'second', 'mole', 'candela', 'kelvin', 'arcminute', 'arcsecond', 'dalton',
-               'astronomicalunit', 'becquerel', 'bel', 'day', 'decibel', 'degree', 'electronvolt', 'hour', 'litre',
-               'minute', 'tonne', 'coulomb', 'degreeCelsius', 'farad', 'gray', 'henry', 'hertz', 'joule', 'katal',
-               'lumen', 'lux', 'newton', 'ohm', 'pascal', 'radian', 'siemens', 'sievert', 'steradian', 'tesla', 'volt',
-               'watt', 'weber', 'neper']
-
-    # check that the unitname string is an allowed value
-    if unitname not in allowed:
-        raise HTTPException(
-            status_code=404, detail=f"No acceptable SI unit with name '{unitname}'.")
-
-    # SPARQL query to get the general information about a unit of measurement
-    unit_query = """
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX units: <"""+SIDFWBASE+"""/SI/units#>
-
-        SELECT ?Unit ?sym ?quant ?defns ?eLabel ?fLabel ?unitType
-        WHERE {
-            ?Unit	rdf:type ?unitType ;
-                    si:isUnitOfQtyKind ?quant ;
-                    skos:prefLabel ?eLabel ;
-                    skos:prefLabel ?fLabel ;
-                    si:hasSymbol ?sym .
-            FILTER (lang(?eLabel) = "en").
-            FILTER (lang(?fLabel) = "fr") .
-            FILTER (?unitType IN (si:SIBaseUnit, si:nonSIUnit, si:SISpecialNamedUnit)) .
-            FILTER (?Unit=units:""" + unitname + """) .
-        }
-    """
-
-    # check for data
-    unitset = g.query(unit_query)
-
-    # get the data for the specified unit
-    unitdata = {}
-    for row in unitset:
-        if str(row['eLabel']) == unitname:
-            unitdata = row
-
-    # organize data
-    uniturl = SIDFWBASE + '/SI/units#' + unitname
-
-    # SPARQL query to get definitions
-    defns_query = """
-            PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-            PREFIX units: <"""+SIDFWBASE+"""/SI/units#>
-
-            SELECT ?UnitDefn ?res ?status ?vfrom ?vtill ?next ?prev ?notes
-                    ?eLabel ?fLabel ?const ?eqn ?eDOI ?fDOI ?eText ?fText
-            WHERE {
-                units:""" + unitname + """ si:hasDefinition ?UnitDefn .
-                ?UnitDefn	rdf:type si:Definition ;
-                            si:hasStatus ?status ;
-                            si:hasStartValidity ?vfrom ;
-                            si:hasDefiningResolution ?res ;
-                            si:hasDefiningText ?eText ;
-                            si:hasDefiningText ?fText ;
-                            skos:prefLabel ?eLabel ;
-                            skos:prefLabel ?fLabel .
-                ?res    rb:hasDOI ?eDOI ;
-                        rb:hasDOI ?fDOI .
-                OPTIONAL {?UnitDefn si:hasEndValidity ?vtill .}
-                OPTIONAL {?UnitDefn si:hasNextDefinition ?next .}
-                OPTIONAL {?UnitDefn si:hasPreviousDefinition ?prev .}
-                OPTIONAL {?UnitDefn si:hasDefiningConstant ?const .}
-                OPTIONAL {?UnitDefn si:hasDefiningEquation ?eqn .}
-                FILTER (lang(?eLabel) = "en")
-                FILTER (lang(?eText) = "en")
-                FILTER (lang(?eDOI) = "en")
-                FILTER (lang(?fLabel) = "fr")
-                FILTER (lang(?fText) = "fr")
-                FILTER (lang(?fDOI) = "fr")
-        }
-        """
-
-    # output
-    accept = request.headers.get("Accept")
-    if not accept or accept == "application/json":
-        return {'unit': unitdata}
-    elif accept == 'application/ld+json':
-        resp = unitdata
-        # create context
-        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
-               {"si": siurl,
-                "units": unitsurl,
-                "quantities": quantsurl,
-                "constants": consurl},
-               {"@base": uniturl}]
-        # # populate graph
-        utype = resp['unitType'].replace(siurl, 'si:'),
-        gph = {"@context": ctx, "@id": uniturl, "@type": utype}
-        gph.update({"name_en": resp['eLabel']})
-        gph.update({"name_fr": resp['fLabel']})
-        gph.update({"symbol": resp['sym']})
-        quant = resp['quant'].replace(quantsurl, 'quantities:')
-        gph.update({"quantity": quant})
-
-        # add definitions
-        defns = g.query(defns_query)
-        defs = []
-        for defn in defns:
-            dfn = {}
-            defnname = defn['UnitDefn'].replace(siurl, 'si:')
-            dfn.update({'@id': defnname, '@type': 'si:Definition'})
-            dfn.update({'status': defn['status']})
-            dfn.update({'label_en': defn['eLabel']})
-            dfn.update({'label_fr': defn['fLabel']})
-            dfn.update({"definition_en": defn['eText']})
-            dfn.update({"definition_fr": defn['fText']})
-            dfn.update({'defining_resolution_en': defn['eDOI']})
-            dfn.update({'defining_resolution_fr': defn['fDOI']})
-            dfn.update({'valid_from': defn['vfrom']})
-            if defn['vtill']:
-                dfn.update({'valid_till': defn['vtill']})
-            if defn['const']:
-                const = defn['const'].replace(consurl, 'constants:')
-                dfn.update({'defining_constant': const})
-            if defn['eqn']:
-                dfn.update({'defining_equation': defn['eqn'].replace("\\\\", "\\")})
-            if defn['next']:
-                nxt = defn['next'].replace(siurl, 'si:'),
-                dfn.update({'next_definition': nxt})
-            if defn['prev']:
-                prev = defn['prev'].replace(siurl, 'si:'),
-                dfn.update({'previous_definition': prev})
-
-            # search for and add notes
-            defnname = defn['UnitDefn'].replace(siurl, '')
-            notes_query = """
-                PREFIX si: <"""+SIDFWBASE+"""/SI#>
-
-                SELECT ?note ?index ?eText ?fText
-                WHERE {
-                    si:""" + defnname + """	si:hasDefinitionNote ?note .
-                    ?note 			        si:hasNoteIndex ?index ;
-                                            si:hasNoteText ?eText ;
-                                            si:hasNoteText ?fText ;
-                    FILTER (lang(?eText) = "en")
-                    FILTER (lang(?fText) = "fr")
-                }
-            """
-
-            # add notes
-            notes = g.query(notes_query)
-            ntes = []
-            for note in notes:
-                nte = {}
-                notename = note['note'].replace(siurl, 'si:')
-                nte.update({'@id': notename, '@type': 'si:DefinitionNote'})
-                nte.update({'noteindex': note['index']})
-                nte.update({'notetext_en': note['eText']})
-                nte.update({'notetext_fr': note['fText']})
-                ntes.append(nte)
-            dfn.update({'notes': ntes})
-
-            defs.append(dfn)
-        gph.update({'definitions': defs})
-
-        return gph
-    else:
-        return TEMPLATES.TemplateResponse(
-            "BaseUnitLayout.html",
-            {"request": request, "units": unitdata, "language": lang}
+            {"request": request, "constant": response, "lang":lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
-@app.get("/si-baseunits/{baseunitid}")
-def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, lang: str | None = 'en',
-                             datestr: str | None = str(date.today())):
-    # 20230710_datamodel_event_ok
+@app.get("/si-baseunits/")
+def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: str | None = 'en',
+                               datestr: str | None = str(date.today())):
+    """ endpoint to get the full list of SI base units """
+
+    # check params
     for param in request.query_params:
         if param not in param_list_base_units:
             error_msg = "Parameter " + param + " unknown. Allowed parameters: "
@@ -816,6 +670,117 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
             error_msg = error_msg[:-2]
             raise HTTPException(status_code=404, detail=error_msg)
 
+    # check language
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language not available {lang}")
+
+    knows_query = """
+                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                    PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+
+                    SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution ?NoteText
+                        ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
+                    WHERE
+                    {
+                        VALUES ?datum {'""" + datestr + """'^^xsd:date} .
+                        ?SIBaseUnit a si:SIBaseUnit ;
+                            si:hasSymbol ?Symbol ;
+                            skos:prefLabel ?Label .
+                        FILTER (langmatches(lang(?Label),'""" + lang + """')) .
+
+                        ?SIBaseUnit si:hasDefinition ?Definition .
+                        ?Definition si:hasDefiningText ?DefiningText .
+                        FILTER (langmatches(lang(?DefiningText),'""" + lang + """')) .
+
+                        OPTIONAL {
+                            ?SIBaseUnit si:hasDefinitionNote ?Note .
+                            ?Note si:hasNoteIndex ?NoteIndex .
+                            ?Note si:hasNoteText ?NoteText .
+                            FILTER (?NoteIndex = 1) .
+                        }
+
+                        OPTIONAL {?SIBaseUnit si:isUnitOfQtyKind ?QtyKind .}
+                        OPTIONAL {?QtyKind skos:prefLabel ?Q_Label ;
+                                           skos:altLabel ?Q_Code .
+                                FILTER (langmatches(lang(?Q_Label),'""" + lang + """'))}.
+
+                        OPTIONAL {?Definition si:hasDefiningConstant ?Constant .
+                                  ?Constant skos:prefLabel ?Cst_Label ;
+                                            skos:hiddenLabel ?Cst_Hidden .
+                                  FILTER (langmatches(lang(?Cst_Label),'""" + lang + """'))} .
+
+                        ?Definition si:hasStartValidity ?StartValidity .
+                        OPTIONAL {?Definition si:hasEndValidity ?EndValidity} .
+                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) ||
+                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))).
+
+                        ?Definition si:hasDefiningResolution ?DefiningResolution .
+                        ?Conf rb:hasOutcome ?DefiningResolution ;
+                              rb:hasEventNr ?ConfNr .
+                        ?DefiningResolution rb:hasOutcomeNr ?ResNr ;
+                                            rb:hasDOI ?Res_DOI .
+                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """'))
+
+                        OPTIONAL {?Definition si:hasDefiningEquation ?Equation} .}"""
+    if sym is not None:
+        knows_query = knows_query[:-1] + """FILTER (?Symbol='""" + sym + """') .}"""
+
+    qres = g.query(knows_query)
+    responses: List[dict] = []
+
+    for element in qres:
+        responses.append(
+            {
+                'Label': element['Label'],
+                'Symbol': element['Symbol'],
+                'StartValidity': element['StartValidity'],
+                'EndValidit?y': element['EndValidity'],
+                'Definition': element['DefiningText'],
+                'Q_Label': element['Q_Label'],
+                'Q_Link': BASEURL + "/quantity/" + element['Q_Code'],
+                'DefiningResolution': "CGPM" + str(element['ConfNr']) + "-Res" + str(element['ResNr']),
+                'Res_Link': element['Res_DOI'],
+                'Equation': element['Equation'],
+                'Note': element['NoteText'],
+                'Cst_Label': element['Cst_Label'],
+                'Cst_Link': None if element['Cst_Hidden'] is None else BASEURL + "/constant/" + element['Cst_Hidden']
+            }
+        )
+
+    if not responses:
+        raise HTTPException(
+            status_code=404, detail=f"No Base Unit with Symbol {sym}.")
+
+    accept = request.headers.get("Accept")
+    if not accept or accept == "application/json":
+        return {'units': responses}
+
+    else:
+        return TEMPLATES.TemplateResponse(
+            "BaseUnitsLayout.html",
+            {"request": request, "units": responses, "lang": lang}
+        )
+
+
+# ----------------------------------------------------------------------------------------
+@app.get("/si-baseunits/{baseunitid}")
+def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, lang: str | None = 'en',
+                             datestr: str | None = str(date.today())):
+    """ endpoint to get a specific SI base unit """
+
+    # check params
+    for param in request.query_params:
+        if param not in param_list_base_units:
+            error_msg = "Parameter " + param + " unknown. Allowed parameters: "
+            for allowed_para in param_list_base_units:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language not available {lang}")
@@ -887,12 +852,12 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
                 'EndValidity': element['EndValidity'],
                 'Definition': element['DefiningText'],
                 'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantity/" + element['Q_Code'],
+                'Q_Link': BASEURL + "/quantity/" + element['Q_Code'],
                 'DefiningResolution': "CGPM" + str(element['ConfNr']) + "-Res" + str(element['ResNr']),
                 'Res_Link': element['Res_DOI'],
                 'Equation': element['Equation'],
                 'Cst_Label': element['Cst_Label'],
-                'Cst_Link': None if element['Cst_Hidden'] is None else baseurl + "/constant/" + element['Cst_Hidden']
+                'Cst_Link': None if element['Cst_Hidden'] is None else BASEURL + "/constant/" + element['Cst_Hidden']
             }
         )
 
@@ -980,121 +945,16 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
     else:
         return TEMPLATES.TemplateResponse(
             "BaseUnitLayout.html",
-            {"request": request, "units": responses, "notes": nresponses, "language": lang}
+            {"request": request, "units": responses, "notes": nresponses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
-@app.get("/si-baseunits/")
-def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: str | None = 'en',
-                               datestr: str | None = str(date.today())):
-    # 20230710_datamodel_event_ok
-    for param in request.query_params:
-        if param not in param_list_base_units:
-            error_msg = "Parameter " + param + " unknown. Allowed parameters: "
-            for allowed_para in param_list_base_units:
-                error_msg += allowed_para + ", "
-            error_msg = error_msg[:-2]
-            raise HTTPException(status_code=404, detail=error_msg)
-
-    if lang not in param_list_lang:
-        raise HTTPException(
-            status_code=404, detail=f"Requested language not available {lang}")
-
-    knows_query = """
-                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
-                    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
-
-                    SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution ?NoteText
-                        ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
-                    WHERE
-                    {
-                        VALUES ?datum {'""" + datestr + """'^^xsd:date} .
-                        ?SIBaseUnit a si:SIBaseUnit ;
-                            si:hasSymbol ?Symbol ;
-                            skos:prefLabel ?Label .
-                        FILTER (langmatches(lang(?Label),'""" + lang + """')) .
-
-                        ?SIBaseUnit si:hasDefinition ?Definition .
-                        ?Definition si:hasDefiningText ?DefiningText .
-                        FILTER (langmatches(lang(?DefiningText),'""" + lang + """')) .
-
-                        OPTIONAL {
-                            ?SIBaseUnit si:hasDefinitionNote ?Note .
-                            ?Note si:hasNoteIndex ?NoteIndex .
-                            ?Note si:hasNoteText ?NoteText .
-                            FILTER (?NoteIndex = 1) .
-                        }
-
-                        OPTIONAL {?SIBaseUnit si:isUnitOfQtyKind ?QtyKind .}
-                        OPTIONAL {?QtyKind skos:prefLabel ?Q_Label ;
-                                           skos:altLabel ?Q_Code .
-                                FILTER (langmatches(lang(?Q_Label),'""" + lang + """'))}.
-
-                        OPTIONAL {?Definition si:hasDefiningConstant ?Constant .
-                                  ?Constant skos:prefLabel ?Cst_Label ;
-                                            skos:hiddenLabel ?Cst_Hidden .
-                                  FILTER (langmatches(lang(?Cst_Label),'""" + lang + """'))} .
-
-                        ?Definition si:hasStartValidity ?StartValidity .
-                        OPTIONAL {?Definition si:hasEndValidity ?EndValidity} .
-                        FILTER (((?StartValidity <= ?datum) && !BOUND(?EndValidity)) ||
-                                ((?StartValidity <= ?datum) && (?EndValidity >= ?datum))).
-
-                        ?Definition si:hasDefiningResolution ?DefiningResolution .
-                        ?Conf rb:hasOutcome ?DefiningResolution ;
-                              rb:hasEventNr ?ConfNr .
-                        ?DefiningResolution rb:hasOutcomeNr ?ResNr ;
-                                            rb:hasDOI ?Res_DOI .
-                        FILTER (langmatches(lang(?Res_DOI),'""" + lang + """'))
-
-                        OPTIONAL {?Definition si:hasDefiningEquation ?Equation} .}"""
-    if sym is not None:
-        knows_query = knows_query[:-1] + """FILTER (?Symbol='""" + sym + """') .}"""
-
-    qres = g.query(knows_query)
-    responses: List[dict] = []
-
-    for element in qres:
-        responses.append(
-            {
-                'Label': element['Label'],
-                'Symbol': element['Symbol'],
-                'StartValidity': element['StartValidity'],
-                'EndValidit?y': element['EndValidity'],
-                'Definition': element['DefiningText'],
-                'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantity/" + element['Q_Code'],
-                'DefiningResolution': "CGPM" + str(element['ConfNr']) + "-Res" + str(element['ResNr']),
-                'Res_Link': element['Res_DOI'],
-                'Equation': element['Equation'],
-                'Note': element['NoteText'],
-                'Cst_Label': element['Cst_Label'],
-                'Cst_Link': None if element['Cst_Hidden'] is None else baseurl + "/constant/" + element['Cst_Hidden']
-            }
-        )
-
-    if not responses:
-        raise HTTPException(
-            status_code=404, detail=f"No Base Unit with Symbol {sym}.")
-
-    accept = request.headers.get("Accept")
-    if not accept or accept == "application/json":
-        return {'units': responses}
-
-    else:
-        return TEMPLATES.TemplateResponse(
-            "BaseUnitsLayout.html",
-            {"request": request, "units": responses, "language": lang}
-        )
-
-
-# ----------------------------------------------------------------------------------------
-# displays ALL SI units, i.e. SI Units with special names AND SI Base Units
 @app.get("/SI/units/")
 def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en'):
+    """ endpoint to get the full list of SI units with special name"""
+
+     # check params
     for param in request.query_params:
         if param not in param_list_named_units:
             error_msg = "Parameter " + param + " unknown. Allowed parameter(s): "
@@ -1103,6 +963,8 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -1135,9 +997,9 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
                 'Symbol': element['Symbol'],
                 'Label': element['Label'],
                 'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantities/" + element['Q_Code'],
-                'N_Link': baseurl + "/page/" + element['Label'],
-                'C_Link': baseurl + "/SI/units/" + element['Label']
+                'Q_Link': QUANTSURL + element['Q_Code'],
+                'N_Link': BASEURL + "/page/" + element['Label'],
+                'U_Link': UNITSURL + element['Symbol']
             }
         )
 
@@ -1151,14 +1013,16 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
     else:
         return TEMPLATES.TemplateResponse(
             "NamedUnitsLayout.html",
-            {"request": request, "units": responses, "language": lang}
+            {"request": request, "units": responses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
-# selects from ALL SI units, i.e. SI Units with special names AND SI Base Units
 @app.get("/SI/units/{sym}")
 def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'):
+    """ endpoint to get a specific SI units with special name"""
+
+     # check params
     for param in request.query_params:
         if param not in param_list_named_unit:
             error_msg = "Parameter " + param + " unknown. Allowed parameter(s): "
@@ -1167,6 +1031,8 @@ def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -1202,8 +1068,8 @@ def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'
                 'Symbol': element['Symbol'],
                 'Label': element['Label'],
                 'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantities/" + element['Q_Code'],
-                'N_Link': baseurl + "/page/" + element['Label']
+                'Q_Link': BASEURL + "/quantities/" + element['Q_Code'],
+                'N_Link': BASEURL + "/page/" + element['Label']
             }
         )
 
@@ -1217,21 +1083,123 @@ def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'
     else:
         return TEMPLATES.TemplateResponse(
             "NamedUnitLayout.html",
-            {"request": request, "units": responses, "language": lang}
+            {"request": request, "units": responses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
-@app.get("/SI/prefixes/{sym}")
-def displ_prefix(request: Request, sym: str | None = None):
+@app.get("/SI/prefixes/")
+def displ_prefixes(request: Request, lang: str | None = 'en'):
+    """ endpoint to get the full list of SI prefixes """
+
+     # check params
     for param in request.query_params:
         if param not in param_list_prefixes:
-            error_msg = "Parameter " + param + " unkonwn. Allowed parameter: "
+            error_msg = "Parameter " + param + " unknown. Allowed parameter(s): "
             for allowed_para in param_list_prefixes:
                 error_msg += allowed_para + ", "
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+
+    # check language
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language unknown {lang}")
+
+
+    fixes_query = """
+        PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        SELECT ?fix ?factor ?type ?sym ?res ?eDOI ?fDOI ?eText ?fText
+        WHERE {
+            ?fix 	rdf:type si:SIPrefix ;
+                    si:hasScalingFactor ?factor ;
+                    si:hasDatatype ?type ;
+                    si:hasSymbol ?sym ;
+                    si:hasDefiningResolution ?res ;
+                    skos:prefLabel ?eText ;
+                    skos:prefLabel ?fText .
+            ?res	rb:hasDOI ?eDOI ;
+                    rb:hasDOI ?fDOI .
+            FILTER (lang(?eDOI) = "en")
+            FILTER (lang(?fDOI) = "fr")
+            FILTER (lang(?eText) = "en")
+            FILTER (lang(?fText) = "fr")
+        }
+        ORDER BY DESC(?factor)
+    """
+
+    # run SPARQL query
+    fixset = g.query(fixes_query)
+
+    # check for data
+    if not fixset:
+        raise HTTPException(
+            status_code=404, detail="SPARQL query not working?.")
+
+    # generate output
+    accept = request.headers.get("Accept")
+    if not accept or accept == "application/json":
+        return {'prefixes': fixset.bindings}
+    elif accept == 'application/ld+json':
+        # create context
+        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
+               {"si": SIURL,
+                "prefixes": FIXESURL,
+                "xsd": XSDURL},
+               {"@base": FIXESURL}]
+        jld = {"@context": ctx, "@id": FIXESURL, "@type": "si:Prefix"}
+        fixes = []
+        for prefix in fixset:
+            name = prefix['fix'].replace(FIXESURL, 'prefixes:')
+            fix = {"@id": name, "@type": "si:Prefix"}
+            fix.update({"name_en": prefix['eText']})
+            fix.update({"name_fr": prefix['fText']})
+            fix.update({'symbol': prefix['sym']})
+            # needed to correctly display factor as numeric value in JSON
+            factor = float(prefix['factor'])
+            if 1 < factor < 1E+18:
+                fix.update({'factor': int(factor)})
+            else:
+                fix.update({'factor': factor})
+            dtype = prefix['type'].replace(XSDURL, 'xsd:')
+            fix.update({'datatype': dtype})
+            fix.update({'resolution_en': prefix['eDOI']})
+            fix.update({'resolution_fr': prefix['fDOI']})
+            fixes.append(fix)
+        jld.update({"prefixes": fixes})
+        return jld
+    else:
+        return TEMPLATES.TemplateResponse(
+            "PrefixesLayout.html",
+            {"request": request, "prefixes": fixset, "lang": lang}
+        )
+
+
+# ----------------------------------------------------------------------------------------
+@app.get("/SI/prefixes/{sym}")
+def displ_prefix(request: Request, sym: str | None = None, lang: str | None = 'en'):
+    """ endpoint to get a specific prefix"""
+
+     # check params
+    for param in request.query_params:
+        if param not in param_list_prefixes:
+            error_msg = "Parameter " + param + " unknown. Allowed parameter(s): "
+            for allowed_para in param_list_prefixes:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(
+                status_code=404, detail=error_msg)
+
+    # check language
+    if lang not in param_list_lang:
+        raise HTTPException(
+            status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
         PREFIX si: <"""+SIDFWBASE+"""/SI#>
@@ -1271,99 +1239,21 @@ def displ_prefix(request: Request, sym: str | None = None):
     else:
         return TEMPLATES.TemplateResponse(
             "PrefixesLayout.html",
-            {"request": request, "prefixes": responses}
+            {"request": request, "prefixes": responses, "lang": lang}
         )
-
-
-# ----------------------------------------------------------------------------------------
-@app.get("/SI/prefixes/")
-def displ_prefixes(request: Request):
-    """ endpoint to get the full list of SI prefixes """
-
-    # SPARQL query to get all the information about all defining constants
-    fixes_query = """
-        PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
-        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-        SELECT ?fix ?factor ?type ?sym ?res ?eDOI ?fDOI ?eText ?fText
-        WHERE {
-            ?fix 	rdf:type si:SIPrefix ;
-                    si:hasScalingFactor ?factor ;
-                    si:hasDatatype ?type ;
-                    si:hasSymbol ?sym ;
-                    si:hasDefiningResolution ?res ;
-                    skos:prefLabel ?eText ;
-                    skos:prefLabel ?fText .
-            ?res	rb:hasDOI ?eDOI ;
-                    rb:hasDOI ?fDOI .
-            FILTER (lang(?eDOI) = "en")
-            FILTER (lang(?fDOI) = "fr")
-            FILTER (lang(?eText) = "en")
-            FILTER (lang(?fText) = "fr")
-        }
-        ORDER BY DESC(?factor)
-    """
-
-    # run SPARQL query
-    fixset = g.query(fixes_query)
-
-    # check for data
-    if not fixset:
-        raise HTTPException(
-            status_code=404, detail=f"SPARQL query not working?.")
-
-    # generate output
-    accept = request.headers.get("Accept")
-    if not accept or accept == "application/json":
-        return {'prefixes': fixset.bindings}
-    elif accept == 'application/ld+json':
-        # create context
-        ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
-               {"si": siurl,
-                "prefixes": fixesurl,
-                "xsd": xsdurl},
-               {"@base": fixesurl}]
-        jld = {"@context": ctx, "@id": fixesurl, "@type": "si:Prefix"}
-        fixes = []
-        for prefix in fixset:
-            name = prefix['fix'].replace(fixesurl, 'prefixes:')
-            fix = {"@id": name, "@type": "si:Prefix"}
-            fix.update({"name_en": prefix['eText']})
-            fix.update({"name_fr": prefix['fText']})
-            fix.update({'symbol': prefix['sym']})
-            # needed to correctly display factor as numeric value in JSON
-            factor = float(prefix['factor'])
-            if 1 < factor < 1E+18:
-                fix.update({'factor': int(factor)})
-            else:
-                fix.update({'factor': factor})
-            dtype = prefix['type'].replace(xsdurl, 'xsd:')
-            fix.update({'datatype': dtype})
-            fix.update({'resolution_en': prefix['eDOI']})
-            fix.update({'resolution_fr': prefix['fDOI']})
-            fixes.append(fix)
-        jld.update({"prefixes": fixes})
-        return jld
-    else:
-        return TEMPLATES.TemplateResponse(
-            "PrefixesLayout.html",
-            {"request": request, "prefixes": fixset}
-        )
-
 
 # ----------------------------------------------------------------------------------------
 @app.get("/si/{combined}")
-def displ_comb_unit(request: Request, combined: str):
+def displ_comb_unit(request: Request, combined: str, lang: str | None = 'en'):
+    """ displays explanations on a combined unit"""
+
     c_unit = combined.split(".")
     responses = []
     titel = ""
     for element in c_unit:
         answer = prefixedunit(element)
         prefunitdict = dict()
-        for label in answer.keys():
+        for label in answer:
             prefunitdict[label] = answer[label]
         responses.append(prefunitdict)
         if element[-1:].isnumeric():
@@ -1375,7 +1265,7 @@ def displ_comb_unit(request: Request, combined: str):
     if not responses:
         raise HTTPException(
             status_code=404,
-            detail=f"No information available. Make sure the prefixes and units are correct")
+            detail="No information available. Make sure the prefixes and units are correct")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -1384,13 +1274,16 @@ def displ_comb_unit(request: Request, combined: str):
     else:
         return TEMPLATES.TemplateResponse(
             "siLayout.html",
-            {"request": request, "units": responses, "title": titel}
+            {"request": request, "units": responses, "title": titel, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
 @app.get("/non-si-units/")
 def displ_nonsiunits(request: Request, lang: str | None = 'en'):
+    """ displays a list of non-si-units"""
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -1424,15 +1317,15 @@ def displ_nonsiunits(request: Request, lang: str | None = 'en'):
                 'Factor': element['Factor'],
                 'SIUnitSymbol': element['SIUnitSymbol'],
                 'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantities/" + element['Q_Code'],
-                'U_Link': baseurl + "/non-si-unit/" + element['Label']
+                'Q_Link': BASEURL + "/quantities/" + element['Q_Code'],
+                'U_Link': BASEURL + "/non-si-unit/" + element['Label']
             }
         )
 
     if not responses:
         raise HTTPException(
             status_code=404,
-            detail=f"No non-SI unit found")
+            detail="No non-SI unit found")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -1441,13 +1334,16 @@ def displ_nonsiunits(request: Request, lang: str | None = 'en'):
     else:
         return TEMPLATES.TemplateResponse(
             "NonSILayout.html",
-            {"request": request, "units": responses}
+            {"request": request, "units": responses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
 @app.get("/non-si-unit/{identifier}")
 def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
+    """displays a specific non-si-unit"""
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -1482,14 +1378,14 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
                 'SIUnitSymbol': element['SIUnitSymbol'],
                 'Label': element['Label'],
                 'Q_Label': element['Q_Label'],
-                'Q_Link': baseurl + "/quantity/" + element['Q_Code'],
+                'Q_Link': BASEURL + "/quantity/" + element['Q_Code'],
             }
         )
 
     if not responses:
         raise HTTPException(
             status_code=404,
-            detail=f"No non-SI unit found")
+            detail="No non-SI unit found")
 
     accept = request.headers.get("Accept")
     if not accept or accept == "application/json":
@@ -1498,7 +1394,7 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
     else:
         return TEMPLATES.TemplateResponse(
             "NonSILayout.html",
-            {"request": request, "units": responses}
+            {"request": request, "units": responses, "lang": lang}
         )
 
 
@@ -1507,7 +1403,17 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
 def displ_quants(request: Request, lang: str | None = 'en'):
     """ generate a list of the quantities referenced in the SI brochure"""
 
-    # check the language is allowed
+    # check params
+    for param in request.query_params:
+        if param not in param_list_quantities:
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
+            for allowed_para in param_list_quantities:
+                error_msg += allowed_para + ", "
+            error_msg = error_msg[:-2]
+            raise HTTPException(
+                status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
@@ -1551,22 +1457,22 @@ def displ_quants(request: Request, lang: str | None = 'en'):
         # preprocess units as some quantities have more than one
         units = {}
         for q in quantset:
-            if q['code'] not in units.keys():
+            if q['code'] not in units:
                 units.update({q['code']: []})
-            u = q['unit'].replace(unitsurl, "units:")
+            u = q['unit'].replace(UNITSURL, "units:")
             units[q['code']].append(u)
         # create context
         ctx = ["https://stuchalk.github.io/scidata/contexts/si.jsonld",
                {"si": "http://si-digital-framework.org/SI#",
-                'units': unitsurl},
-               {"@base": quantsurl}]
-        jld = {"@context": ctx, "@id": quantsurl, "@type": "si:QuantityKind"}
+                'units': UNITSURL},
+               {"@base": QUANTSURL}]
+        jld = {"@context": ctx, "@id": QUANTSURL, "@type": "si:QuantityKind"}
         quants = []
         for quant in quantset:
             # check if this is the quantity with the first unit in units[quant.code], if not ignore
-            u = quant['unit'].replace(unitsurl, "units:")
+            u = quant['unit'].replace(UNITSURL, "units:")
             if u == units[quant['code']][0]:
-                name = quant['quant'].replace(quantsurl, "quantities:")
+                name = quant['quant'].replace(QUANTSURL, "quantities:")
                 qty = {"@id": name, "@type": "si:QuantityKind"}
                 qty.update({"name_en": quant['eText']})
                 qty.update({"name_fr": quant['fText']})
@@ -1579,24 +1485,30 @@ def displ_quants(request: Request, lang: str | None = 'en'):
 
         return TEMPLATES.TemplateResponse(
             "QtyLayout.html",
-            {"request": request, "quants": quantset, "language": lang}
+            {"request": request, "quants": quantset, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
 @app.get("/quantities/{code}")
 def displ_quant(request: Request, code: str | None = None, lang: str | None = 'en'):
+    """ display a specif quantity referenced in the SI brochure"""
+
+    # check params
     for param in request.query_params:
         if param not in param_list_quantities:
-            error_msg = "Parameter " + param + " unkonwn. Allowed parameter: "
+            error_msg = "Parameter " + param + " unknown. Allowed parameter: "
             for allowed_para in param_list_quantities:
                 error_msg += allowed_para + ", "
             error_msg = error_msg[:-2]
             raise HTTPException(
                 status_code=404, detail=error_msg)
+
+    # check language
     if lang not in param_list_lang:
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
+
 
     # the SPARQL query below could be written without UNION and rely on inferences
     # (owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(g))
@@ -1651,14 +1563,14 @@ def displ_quant(request: Request, code: str | None = None, lang: str | None = 'e
     else:
         return TEMPLATES.TemplateResponse(
             "QtyLayout.html",
-            {"request": request, "quants": responses, "language": lang}
+            {"request": request, "quants": responses, "lang": lang}
         )
 
 
 # ----------------------------------------------------------------------------------------
 @app.get("/page/{word}")
 def dbpedia_page(request: Request, word: str):
-    # CHECKED DATAMODEL 20230512
+    """displays a dbpedia-like page"""
     knows_query = """
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX si: <"""+SIDFWBASE+"""/SI#>

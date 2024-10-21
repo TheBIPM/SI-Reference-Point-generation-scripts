@@ -4,12 +4,12 @@
 import argparse
 import logging
 import hashlib
-import si_ref_point.cuq.CUQ_TBox as CUQ_TBox
-import si_ref_point.cuq.Quantities_ABox as Quantities_ABox
-import si_ref_point.cuq.Units_ABox as Units_ABox
-import si_ref_point.cuq.Constants_ABox as Constants_ABox
-import si_ref_point.cuq.Prefixes_ABox as Prefixes_ABox
-import si_ref_point.cuq.Decisions_ABox as Decisions_ABox
+import si_ref_point.cuq.cuq_tbox as cuq_tbox
+import si_ref_point.cuq.quantities_abox as quantities_abox
+import si_ref_point.cuq.units_abox as units_abox
+import si_ref_point.cuq.constants_abox as constants_abox
+import si_ref_point.cuq.prefixes_abox as prefixes_abox
+import si_ref_point.cuq.decisions_abox as decisions_abox
 import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
 import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
@@ -67,12 +67,12 @@ def main():
         logging.basicConfig(level=logging.INFO)
 
     file_generator = {
-        'si': CUQ_TBox.main,
-        'units': Units_ABox.main,
-        'quantities': Quantities_ABox.main,
-        'constants': Constants_ABox.main,
-        'prefixes': Prefixes_ABox.main,
-        'decisions': Decisions_ABox.main,
+        'si': cuq_tbox.main,
+        'units': units_abox.main,
+        'quantities': quantities_abox.main,
+        'constants': constants_abox.main,
+        'prefixes': prefixes_abox.main,
+        'decisions': decisions_abox.main,
         'bodies': ResBod_TBox.main,
         'cgpm': ResBod_ABox_CGPM.main,
         'cipm': ResBod_ABox_CIPM.main,
