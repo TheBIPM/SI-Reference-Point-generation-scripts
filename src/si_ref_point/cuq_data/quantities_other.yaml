@@ -198,11 +198,10 @@
     - [metre, "2"]
     - [second, "-2"]  
 - identifier: LOSS
-  quantity-en: 'optical fibre attenuation'
+  quantity-en: 'loss (attenuation)'
   quantity-fr: 'attenuation (dans une fibre optique)'
   Unit:
-    - [bel, "1"]
-    - [metre, "-1"]    
+    - [bel, "1"]  
 - identifier: ENCL
   quantity-en: 'encircled flux'
   quantity-fr: 'flux encerclé'
@@ -247,3 +246,8 @@
   quantity-en: 'length ratio'
   quantity-fr: 'rapport de longueur'
   Unit: null
+- identifier: POWM
+  quantity-en: 'power level relative to 1 mW'
+  quantity-fr: 'niveau de puissance rélatif à 1 mW'
+  Unit:
+    - [bel, "1"]
