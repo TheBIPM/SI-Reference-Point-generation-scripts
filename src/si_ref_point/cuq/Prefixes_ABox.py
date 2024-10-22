@@ -36,9 +36,11 @@ def main():
         pref_label_en = prfx['prefLabel_en']
         pref_label_fr = prfx['prefLabel_fr']
         scaling_factor = prfx['ScalingFactor']
+        exponent = prfx['Exponent']
         symbol = prfx['hasSymbol']
         defres = prfx['hasDefiningResolution']
         xsd_type = prfx['xsd_type']
+
 
         if uri_text is not None:
             element = si_graph.set_prefix_uri(uri_text)
@@ -48,6 +50,7 @@ def main():
             si_graph.g.add((element, si_graph.has_scaling_factor,
                 Literal(scaling_factor, datatype=XSD[xsd_type], normalize=False)))
             si_graph.g.add((element, si_graph.has_datatype, XSD[xsd_type]))
+            si_graph.g.add((element, si_graph.has_exponent, Literal(exponent,datatype=XSD['integer'])))
 
             if symbol:
                 si_graph.g.add((element, si_graph.has_symbol,

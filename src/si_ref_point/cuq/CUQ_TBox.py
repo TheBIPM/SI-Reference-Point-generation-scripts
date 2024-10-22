@@ -41,15 +41,6 @@ class SiElements:
         #   ... and the shortcut
         self.g.bind('rb', RES_BOD_NS)
 
-
-        # self.g.bind("units", self.namespace_units)
-        # self.g.bind("prefixes", self.namespace_prefixes)
-        # self.g.bind("quantities", self.namespace_quantities)
-        # self.g.bind("constants", self.namespace_constants)
-        # self.g.bind("decisions", self.namespace_decisions)
-
-        #self.res_bod_ns = RES_BOD_NS                        # wo wird das gebraucht?
-
         # Load graph from ttl files
         for ttl_file in ['CUQ_core_concepts.ttl',
                          'CUQ_extended_concepts.ttl']:
@@ -121,6 +112,7 @@ class SiElements:
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
+        self.has_exponent = self.set_uri("hasExponent")
 
     def uri(self, name: str) -> URIRef:
         """Utility method """
