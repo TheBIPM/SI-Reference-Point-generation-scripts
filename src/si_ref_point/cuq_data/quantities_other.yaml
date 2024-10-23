@@ -199,7 +199,7 @@
     - [second, "-2"]  
 - identifier: LOSS
   quantity-en: 'loss (attenuation)'
-  quantity-fr: 'attenuation (dans une fibre optique)'
+  quantity-fr: 'attenuation'
   Unit:
     - [bel, "1"]  
 - identifier: ENCL
@@ -251,3 +251,10 @@
   quantity-fr: 'niveau de puissance rélatif à 1 mW'
   Unit:
     - [bel, "1"]
+- identifier: DISP
+  quantity-en: '(chromatic) dispersion'
+  quantity-fr: 'dispersion (chromatique)'
+  Unit: 
+    - [second, "1"]
+    - [metre, "-1"]
+    - [metre, "-1"]
