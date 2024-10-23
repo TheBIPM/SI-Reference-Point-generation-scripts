@@ -72,7 +72,7 @@
   quantity-fr: pression
   Unit: pascal
 - identifier: STRE
-  quantity-en: constraint
+  quantity-en: stress
   quantity-fr: stress
   Unit: pascal
 - identifier: ENGY
@@ -84,7 +84,7 @@
   quantity-fr: travail
   Unit: joule
 - identifier: HEQT
-  quantity-en: heat quantity
+  quantity-en: amount of heat
   quantity-fr: quantité de chaleur
   Unit: joule
 - identifier: POWR
