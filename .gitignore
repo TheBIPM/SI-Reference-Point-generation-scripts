@@ -9,16 +9,8 @@ Testing/API/templates/.DS_Store
 ServiceCategories
 
 # output files that are produced (TTL and vocabulary)
-Testing/API/bodies.ttl
-Testing/API/cgpm.ttl
-Testing/API/cipm.ttl
-Testing/API/cctf.ttl
-Testing/API/si.ttl
-Testing/API/constants.ttl
-Testing/API/quantities.ttl
-Testing/API/prefixes.ttl
-Testing/API/units.ttl
-Testing/API/decisions.ttl
+TTL/*
+JSON-LD/*
 Testing/Vocabulary/Vocabulary.txt
 *.zip
 
