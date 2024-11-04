@@ -213,7 +213,9 @@
 - identifier: DISL
   quantity-en: 'dispersion slope'
   quantity-fr: 'pente de dispersion'
-  Unit: null    
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"]   
 - identifier: EXIT
   quantity-en: 'radiant exitance'
   quantity-fr: 'exitance énergétique'
