@@ -83,16 +83,16 @@ def transform_to_graph(expression, si_graph, graph):
             graph.add((expr_node, RDF.type, si_graph.set_uri("UnitProduct")))
 
             # shortnames
-            hasLTerm = si_graph.set_uri("hasLeftUnitTerm")
-            hasRTerm = si_graph.set_uri("hasRightUnitTerm")
+            has_l_term = si_graph.set_uri("hasLeftUnitTerm")
+            has_r_term = si_graph.set_uri("hasRightUnitTerm")
 
             # insert factors
             graph, node = transform_to_graph(expression["mult"][0],
                                              si_graph, graph)
-            graph.add((expr_node, hasLTerm, node))
+            graph.add((expr_node, has_l_term, node))
             graph, node = transform_to_graph(expression["mult"][1],
                                              si_graph, graph)
-            graph.add((expr_node, hasRTerm, node))
+            graph.add((expr_node, has_r_term, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] in [1, "1"]:
@@ -105,15 +105,15 @@ def transform_to_graph(expression, si_graph, graph):
                 graph.add((expr_node, RDF.type, si_graph.set_uri("UnitPower")))
 
                 # shortnames
-                hasBase = si_graph.set_uri("hasUnitBase")
-                hasExponent = si_graph.set_uri("hasNumericExponent")
+                has_base = si_graph.set_uri("hasUnitBase")
+                has_exponent = si_graph.set_uri("hasNumericExponent")
 
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
                                                  si_graph, graph)
                 exponent = Literal(expression["exp"][1], datatype=XSD.short)
-                graph.add((expr_node, hasBase, node))
-                graph.add((expr_node, hasExponent, exponent))
+                graph.add((expr_node, has_base, node))
+                graph.add((expr_node, has_exponent, exponent))
 
         else:
             raise ValueError(
@@ -242,7 +242,13 @@ def main():
                     except IndexError:
                         next_def = None
                     if curr_def is not None:
-                        si_graph.g.add((element, si_graph.has_definition, si_graph.set_uri(curr_def)))
+                        si_graph.g.add(
+                                (
+                                    element,
+                                    si_graph.has_definition,
+                                    si_graph.set_uri(curr_def)
+                                )
+                            )
                         if next_def is not None:
                             si_graph.g.add(
                                 (
@@ -486,22 +492,6 @@ def main():
                                              si_graph, si_graph.g)
                 si_graph.g.add((element, si_graph.in_base_si_units, node))
 
-            # Mute defining equations for non-base units (not checked yet)
-            """
-            if sisp["hasDefiningEquation"]:
-                g.add(
-                    (
-                        element,
-                        si_graph.hasDefiningEquation,
-                        Literal(
-                            sf.formattxt(
-                                sisp["hasDefiningEquation"], "latex", add_delim=False
-                            ),
-                            datatype=XSD.string,
-                        ),
-                    )
-                )
-            """
             # Only used for degreeCelsius in sisp
             if "PrefixRestriction" not in sisp:
                 sisp['PrefixRestriction'] = False
@@ -586,27 +576,28 @@ def main():
                 )
             if "ConversionFactor" in nsi:
                 unit_multiple = BNode()
-                hasUnitTerm = si_graph.set_uri("hasUnitTerm")
-                hasNumericFactor = si_graph.set_uri("hasNumericFactor")
-                hasNumericFactorAsString = si_graph.set_uri("hasNumericFactorAsString")
+                has_unit_term = si_graph.set_uri("hasUnitTerm")
+                has_numeric_factor = si_graph.set_uri("hasNumericFactor")
+                has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
                 if isinstance(nsi["ConversionFactor"], int):
-                    convFactorType = XSD.int
+                    conv_factor_type = XSD.int
                 elif isinstance(nsi["ConversionFactor"], float):
-                    convFactorType = XSD.float
+                    conv_factor_type = XSD.float
                 else:
-                    logging.error('Error : unknown ConversionFactor type : %s ', nsi["ConversionFactor"])
-                    convFactorType = None
+                    logging.error('Error : unknown ConversionFactor type : %s ',
+                                  nsi["ConversionFactor"])
+                    conv_factor_type = None
                 conversion_factor = Literal(nsi["ConversionFactor"],
-                                           datatype=convFactorType)
+                                           datatype=conv_factor_type)
                 conversion_factor_as_string = Literal(
                     nsi["ConversionFactorAsString"],
                     datatype=XSD.string)
                 si_graph.g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
                                                         si_graph, si_graph.g)
                 si_graph.g.add((unit_multiple, RDF.type, si_graph.set_uri("UnitMultiple")))
-                si_graph.g.add((unit_multiple, hasUnitTerm, conversion_unit))
-                si_graph.g.add((unit_multiple, hasNumericFactor, conversion_factor))
-                si_graph.g.add((unit_multiple, hasNumericFactorAsString,
+                si_graph.g.add((unit_multiple, has_unit_term, conversion_unit))
+                si_graph.g.add((unit_multiple, has_numeric_factor, conversion_factor))
+                si_graph.g.add((unit_multiple, has_numeric_factor_as_string,
                        conversion_factor_as_string))
                 si_graph.g.add((element, si_graph.in_other_si_units, unit_multiple))
 
