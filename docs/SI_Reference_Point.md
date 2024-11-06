@@ -136,6 +136,7 @@ classDiagram
 	class `si:SIPrefix`{
 		+si:hasDatatype
 		+si:hasScalingFactor
+		+si:hasExponent
 	}
 	class `si:SISpecialNamedUnit`{
 		+si:prefixRestriction
@@ -241,7 +242,7 @@ GraphDB also provides an interface for visual exploration of the knowledge graph
 
 
 ## References
-[1] Le système international d'unité (SI), 9e édition, V2.01 (2022), ISBN ISBN 978-92-822-2272-0
+[1] Le système international d'unité (SI), 9e édition, V2.01 (2022), ISBN 978-92-822-2272-0
 [2] https://www.bipm.org/kcdb/
 [3] https://pml.nist.gov/cuu/Constants/
 
@@ -260,7 +261,7 @@ Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the foll
 * Frédéric Meynadier (BIPM)
 
 
-## Annex 1:	List of Classes and Predicates
+## Annex 1:	List of Namespaces, Classes and Predicates
 
 A complete list of Classes and Predicates contained in the knowledge graphs 
 * SI/units.ttl
@@ -271,4 +272,31 @@ A complete list of Classes and Predicates contained in the knowledge graphs
 
 will soon be available.
 
+### Namespaces
+#### ~bodies
+* https://si-digital-framework.org/bodies#
+* https://si-digital-framework.org/bodies/CGPM#
+* https://si-digital-framwework.org/bodies/CIPM#
+* https://si-digital-framework.org/bodies/AUV#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCEM#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCL#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCM#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCPR#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCT#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCTF#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCQM#		(not yet implemented)
+* https://si-digital-framework.org/bodies/CCU#		(not yet implemented)
+#### ~constants
+* https://si-digital-framework.org/constants#
+#### ~kcdb
+* https://si-digital-framework.org/kcdb-sc#
+* https://si-digital-framework.org/kcdb-cmc#
+#### ~quantities
+* https://si-digital-framework.org/quantities#
+#### ~SI
+* https://si-digital-framework.org/SI#
+* https://si-digital-framework.org/SI/decisions#
+* https://si-digital-framework.org/SI/prefixes#
+* https://si-digital-framework.org/SI/units#
 
+### Classes and Predicates

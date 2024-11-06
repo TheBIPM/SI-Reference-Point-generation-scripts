@@ -50,7 +50,13 @@ def main():
             si_graph.g.add((element, si_graph.has_scaling_factor,
                 Literal(scaling_factor, datatype=XSD[xsd_type], normalize=False)))
             si_graph.g.add((element, si_graph.has_datatype, XSD[xsd_type]))
-            si_graph.g.add((element, si_graph.has_exponent, Literal(exponent,datatype=XSD['integer'])))
+            si_graph.g.add(
+                (
+                    element,
+                    si_graph.has_exponent,
+                    Literal(exponent,datatype=XSD['integer'])
+                )
+            )
 
             if symbol:
                 si_graph.g.add((element, si_graph.has_symbol,
