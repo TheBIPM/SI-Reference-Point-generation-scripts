@@ -1,10 +1,11 @@
 import rdflib
-import glob
+from pathlib import Path
 
 def test_syntax():
     error_status = False
 
-    ttl_file_names = glob.glob("TTL/*.ttl")
+    this_dir = Path(__file__).parent
+    ttl_file_names = (this_dir.parent / "TTL" ).glob("*.ttl")
 
     try:
         g = rdflib.Graph()
@@ -14,7 +15,7 @@ def test_syntax():
 
     except SyntaxError:
         error_status = True
-    
+
     return g, error_status
 
 def test_semantics(g):
@@ -36,7 +37,7 @@ def main():
     semantic_error = test_semantics(g)
     if semantic_error:
         raise ValueError("A requirement regarding the content of the output files is not met.")
-    
+
     print(syntax_error, semantic_error)
 
 if __name__ == "__main__":
