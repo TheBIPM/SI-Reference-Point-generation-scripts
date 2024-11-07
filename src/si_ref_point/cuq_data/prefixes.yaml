@@ -2,6 +2,7 @@
   prefLabel_en: quetta
   prefLabel_fr: quetta
   ScalingFactor: 1e+30
+  Exponent: +30
   hasSymbol: Q
   hasDefiningResolution: CGPM27-Res3
   xsd_type: float
@@ -10,6 +11,7 @@
   prefLabel_en: ronna
   prefLabel_fr: ronna
   ScalingFactor: 1e+27
+  Exponent: +27
   hasSymbol: R
   hasDefiningResolution: CGPM27-Res3
   xsd_type: float
@@ -18,6 +20,7 @@
   prefLabel_en: yotta
   prefLabel_fr: yotta
   ScalingFactor: 1e+24
+  Exponent: +24
   hasSymbol: Y
   hasDefiningResolution: CGPM19-Res4
   xsd_type: float
@@ -26,6 +29,7 @@
   prefLabel_en: zetta
   prefLabel_fr: zetta
   ScalingFactor: 1e+21
+  Exponent: +21
   hasSymbol: Z
   hasDefiningResolution: CGPM19-Res4
   xsd_type: float
@@ -34,6 +38,7 @@
   prefLabel_en: exa
   prefLabel_fr: exa
   ScalingFactor: 1e+18
+  Exponent: +18
   hasSymbol: E
   hasDefiningResolution: CGPM15-Res10
   xsd_type: float
@@ -42,6 +47,7 @@
   prefLabel_en: peta
   prefLabel_fr: péta
   ScalingFactor: 1000000000000000
+  Exponent: +15
   hasSymbol: P
   hasDefiningResolution: CGPM15-Res10
   xsd_type: integer
@@ -50,6 +56,7 @@
   prefLabel_en: tera
   prefLabel_fr: téra
   ScalingFactor: 1000000000000
+  Exponent: +12
   hasSymbol: T
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -58,6 +65,7 @@
   prefLabel_en: giga
   prefLabel_fr: giga
   ScalingFactor: 1000000000
+  Exponent: +9
   hasSymbol: G
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -66,6 +74,7 @@
   prefLabel_en: mega
   prefLabel_fr: méga
   ScalingFactor: 1000000
+  Exponent: +6
   hasSymbol: M
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -74,6 +83,7 @@
   prefLabel_en: kilo
   prefLabel_fr: kilo
   ScalingFactor: 1000
+  Exponent: +3
   hasSymbol: k
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -82,6 +92,7 @@
   prefLabel_en: hecto
   prefLabel_fr: hecto
   ScalingFactor: 100
+  Exponent: +2
   hasSymbol: h
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -90,6 +101,7 @@
   prefLabel_en: deca
   prefLabel_fr: déca
   ScalingFactor: 10
+  Exponent: +1
   hasSymbol: da
   hasDefiningResolution: CGPM11-Res12
   xsd_type: integer
@@ -98,6 +110,7 @@
   prefLabel_en: deci
   prefLabel_fr: déci
   ScalingFactor: 0.1
+  Exponent: -1
   hasSymbol: d
   hasDefiningResolution: CGPM11-Res12
   xsd_type: decimal
@@ -106,6 +119,7 @@
   prefLabel_en: centi
   prefLabel_fr: centi
   ScalingFactor: 0.01
+  Exponent: -2
   hasSymbol: c
   hasDefiningResolution: CGPM11-Res12
   xsd_type: decimal
@@ -114,6 +128,7 @@
   prefLabel_en: milli
   prefLabel_fr: milli
   ScalingFactor: 0.001
+  Exponent: -3
   hasSymbol: m
   hasDefiningResolution: CGPM11-Res12
   xsd_type: decimal
@@ -122,6 +137,7 @@
   prefLabel_en: micro
   prefLabel_fr: micro
   ScalingFactor: 1e-06
+  Exponent: -6
   hasSymbol: µ
   hasDefiningResolution: CGPM11-Res12
   xsd_type: float
@@ -131,6 +147,7 @@
   prefLabel_en: nano
   prefLabel_fr: nano
   ScalingFactor: 1e-09
+  Exponent: -9
   hasSymbol: n
   hasDefiningResolution: CGPM11-Res12
   xsd_type: float
@@ -139,6 +156,7 @@
   prefLabel_en: pico
   prefLabel_fr: pico
   ScalingFactor: 1e-12
+  Exponent: -12
   hasSymbol: p
   hasDefiningResolution: CGPM11-Res12
   xsd_type: float
@@ -147,6 +165,7 @@
   prefLabel_en: femto
   prefLabel_fr: femto
   ScalingFactor: 1e-15
+  Exponent: -15
   hasSymbol: f
   hasDefiningResolution: CGPM12-Res8
   xsd_type: float
@@ -155,6 +174,7 @@
   prefLabel_en: atto
   prefLabel_fr: atto
   ScalingFactor: 1e-18
+  Exponent: -18
   hasSymbol: a
   hasDefiningResolution: CGPM12-Res8
   xsd_type: float
@@ -163,6 +183,7 @@
   prefLabel_en: zepto
   prefLabel_fr: zepto
   ScalingFactor: 1e-21
+  Exponent: -21
   hasSymbol: z
   hasDefiningResolution: CGPM19-Res4
   xsd_type: float
@@ -171,6 +192,7 @@
   prefLabel_en: yocto
   prefLabel_fr: yocto
   ScalingFactor: 1e-24
+  Exponent: -24
   hasSymbol: y
   hasDefiningResolution: CGPM19-Res4
   xsd_type: float
@@ -179,6 +201,7 @@
   prefLabel_en: ronto
   prefLabel_fr: ronto
   ScalingFactor: 1e-27
+  Exponent: -27
   hasSymbol: r
   hasDefiningResolution: CGPM27-Res3
   xsd_type: float
@@ -187,6 +210,7 @@
   prefLabel_en: quecto
   prefLabel_fr: quecto
   ScalingFactor: 1e-30
+  Exponent: -30
   hasSymbol: q
   hasDefiningResolution: CGPM27-Res3
   xsd_type: float
@@ -195,6 +219,7 @@
   prefLabel_en: none
   prefLabel_fr: aucun
   ScalingFactor: 1e0
+  Exponent: 0
   hasSymbol: 
   hasDefiningResolution: 
   xsd_type: float

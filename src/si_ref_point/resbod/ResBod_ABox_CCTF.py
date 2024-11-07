@@ -1,3 +1,6 @@
+"""
+CCTF ABox
+"""
 from si_ref_point.settings import CCTF_FILES_FOLDER
 from si_ref_point.resbod.utils import MeetingsFileExtractor
 

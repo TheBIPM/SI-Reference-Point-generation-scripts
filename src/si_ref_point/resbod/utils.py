@@ -6,18 +6,18 @@ from datetime import date
 import yaml
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
-from si_ref_point.resbod.ResBod_TBox import ResBod_ns
+from si_ref_point.resbod.ResBod_TBox import RES_BOD_NS
 
-from si_ref_point.settings import SIURL
+from si_ref_point.settings import SIDFWBASE
 
-RB = Namespace(ResBod_ns)
+RB = Namespace(RES_BOD_NS)
 
 
 class MeetingsFileExtractor:
     def __init__(
         self,
-        base_url=SIURL + "bodies/",
-        resbod_acronym="CIPM",
+        base_url=SIDFWBASE + "/bodies/",
+        resbod_acronym="",                      
         meeting_files_directory="",
     ):
         self.own_acronym = resbod_acronym
@@ -28,7 +28,7 @@ class MeetingsFileExtractor:
         self.base_path_en = os.path.join(meeting_files_directory, "meetings-en/")
 
         # needed namespaces
-        self.RB = Namespace(ResBod_ns)
+        self.RB = Namespace(RES_BOD_NS)
         self.OWN_NS = Namespace(base_url + self.own_acronym + "#")
         self.OWN_node = URIRef(
             self.OWN_NS.term(self.own_acronym)
@@ -47,7 +47,8 @@ class MeetingsFileExtractor:
         self.g.bind(self.own_acronym.lower(), self.OWN_NS)
 
     def add_general_description(self):
-        # Annotations to the ontology (name, Version number)
+
+    # Annotations to the ontology (name, creation date, comment)
         self.g.add((URIRef(self.OWN_NS), RDF.type, OWL.Ontology))
         self.g.add(
             (
@@ -59,6 +60,15 @@ class MeetingsFileExtractor:
                 ),
             )
         )
+        
+        self.g.add(
+            (
+                URIRef(self.OWN_NS),
+                DCTERMS.created,
+                Literal(str(date.today()), datatype=XSD.date),
+            )
+        )
+        
         self.g.add(
             (
                 URIRef(self.OWN_NS),
@@ -68,13 +78,6 @@ class MeetingsFileExtractor:
                     f"decisions, etc of the {self.own_acronym}.",
                     datatype=XSD.string,
                 ),
-            )
-        )
-        self.g.add(
-            (
-                URIRef(self.OWN_NS),
-                DCTERMS.created,
-                Literal(str(date.today()), datatype=XSD.date),
             )
         )
 

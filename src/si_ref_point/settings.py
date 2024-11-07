@@ -2,12 +2,15 @@ import os
 import pathlib
 package_dir = pathlib.Path(__file__).parent.resolve()
 
-SIURL = "https://si-digital-framework.org/"
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
+SIDFWBASE = "https://si-digital-framework.org"      # Base URL for the SI Digital Framework
+                                                    # from this URL, sub-URLs are defined
+                                                    # - (SIDFWBASE)/SI#
+                                                    # - (SIDFWBASE)/constants#
+                                                    # - (SIDFWBASE)/bodies#
+                                                    
 
-# Base URL of the API
-BASE_URL = "http://localhost:8000/"
 
 # Locations of input and output files
 
@@ -19,5 +22,7 @@ CCTF_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cctf")
 # Folder for XLS-files for constants, units, quantities
 CUQ_FILES_FOLDER = os.path.join(package_dir, "cuq_data")
 
-# Folder for API
-APIPATH = "./API/"
+# Default Folder for output files
+TTL_FILES_FOLDER = os.path.join(package_dir, "..", "..","TTL")
+JSONLD_FILES_FOLDER = os.path.join(package_dir,"..","..","JSON-LD")
+

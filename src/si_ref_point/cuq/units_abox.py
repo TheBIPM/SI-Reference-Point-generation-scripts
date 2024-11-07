@@ -2,15 +2,15 @@
 Units ABox
 """
 
-from rdflib import URIRef, BNode, Graph, Literal
-from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
-from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
-import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CUQ_FILES_FOLDER
-import yaml
 import os
 import logging
+import yaml
+from rdflib import URIRef, BNode, Literal
+from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
+from si_ref_point.cuq.cuq_tbox import SiElements
+import si_ref_point.cuq.symbols_format as sf
+from si_ref_point.settings import CUQ_FILES_FOLDER
 
 
 def nest_mult(expr):
@@ -32,7 +32,7 @@ def nest_mult(expr):
                          nest_mult({'mult': right_term})]}
 
 
-def transform_to_graph(expression, PDF, graph):
+def transform_to_graph(expression, si_graph, graph):
     """ Tranform any "unit expression" into a graph
 
     Accepts dicts, strings, lists.
@@ -65,14 +65,14 @@ def transform_to_graph(expression, PDF, graph):
     expr_node = BNode()
 
     if isinstance(expression, str):
-        expr_node = PDF.set_unit_uri(expression)
+        expr_node = si_graph.set_unit_uri(expression)
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
             if len(expression["mult"]) == 1:
                 # This is not really a product...
                 graph, expr_node = transform_to_graph(
-                    expression["mult"][0], PDF, graph)
+                    expression["mult"][0], si_graph, graph)
                 return graph, expr_node
 
             # Rearrange products into binary tree (i.e. nested "mult" with
@@ -80,40 +80,40 @@ def transform_to_graph(expression, PDF, graph):
             expression = nest_mult(expression)
 
             # set type of expression node
-            graph.add((expr_node, RDF.type, PDF.set_uri("UnitProduct")))
+            graph.add((expr_node, RDF.type, si_graph.set_uri("UnitProduct")))
 
             # shortnames
-            hasLTerm = PDF.set_uri("hasLeftUnitTerm")
-            hasRTerm = PDF.set_uri("hasRightUnitTerm")
+            has_l_term = si_graph.set_uri("hasLeftUnitTerm")
+            has_r_term = si_graph.set_uri("hasRightUnitTerm")
 
             # insert factors
             graph, node = transform_to_graph(expression["mult"][0],
-                                             PDF, graph)
-            graph.add((expr_node, hasLTerm, node))
+                                             si_graph, graph)
+            graph.add((expr_node, has_l_term, node))
             graph, node = transform_to_graph(expression["mult"][1],
-                                             PDF, graph)
-            graph.add((expr_node, hasRTerm, node))
+                                             si_graph, graph)
+            graph.add((expr_node, has_r_term, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] in [1, "1"]:
                 # This is not really a unitPower
                 graph, expr_node = transform_to_graph(
-                    expression["exp"][0], PDF, graph)
+                    expression["exp"][0], si_graph, graph)
                 return graph, expr_node
             else:
                 # set type of expression node
-                graph.add((expr_node, RDF.type, PDF.set_uri("UnitPower")))
+                graph.add((expr_node, RDF.type, si_graph.set_uri("UnitPower")))
 
                 # shortnames
-                hasBase = PDF.set_uri("hasUnitBase")
-                hasExponent = PDF.set_uri("hasNumericExponent")
+                has_base = si_graph.set_uri("hasUnitBase")
+                has_exponent = si_graph.set_uri("hasNumericExponent")
 
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
-                                                 PDF, graph)
+                                                 si_graph, graph)
                 exponent = Literal(expression["exp"][1], datatype=XSD.short)
-                graph.add((expr_node, hasBase, node))
-                graph.add((expr_node, hasExponent, exponent))
+                graph.add((expr_node, has_base, node))
+                graph.add((expr_node, has_exponent, exponent))
 
         else:
             raise ValueError(
@@ -129,25 +129,28 @@ def transform_to_graph(expression, PDF, graph):
 
 
 def main():
-    PDF = SiElements()
-    g = Graph()
+    """main of Units A-box"""
+    si_graph = SiElements()
 
-    # copy over all namespaces from PDF.g to g
-    for key, val in PDF.g.namespaces():
-        g.bind(key, val)
-
-    # Annotations to the ontology (name, Version number)
-    g.add((URIRef(PDF.namespace_units), RDF.type, OWL.Ontology))
-    g.add(
+    # 1) add annotations to the ontology (name, creation date, comment)
+    si_graph.g.add((URIRef(si_graph.namespace_units), RDF.type, OWL.Ontology))
+    si_graph.g.add(
         (
-            URIRef(PDF.namespace_units),
+            URIRef(si_graph.namespace_units),
             SKOS.prefLabel,
             Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string),
         )
     )
-    g.add(
+    si_graph.g.add(
         (
-            URIRef(PDF.namespace_units),
+            URIRef(si_graph.namespace_units),
+            DCTERMS.created,
+            Literal(str(date.today()), datatype=XSD.date),
+        )
+    )
+    si_graph.g.add(
+        (
+            URIRef(si_graph.namespace_units),
             RDFS.comment,
             Literal(
                 (
@@ -158,44 +161,37 @@ def main():
             ),
         )
     )
-    g.add(
-        (
-            URIRef(PDF.namespace_units),
-            DCTERMS.created,
-            Literal(str(date.today()), datatype=XSD.date),
-        )
-    )
 
-    # open YAML files with information
-    with open(os.path.join(CUQ_FILES_FOLDER, "def_collectors.yaml")) as fp:
+    # 2) open YAML files with information
+    with open(os.path.join(CUQ_FILES_FOLDER, "def_collectors.yaml"), encoding='utf-8') as fp:
         def_collectors = yaml.safe_load(fp)
 
-    # 4) Base unit definitions
-    # 4.1) Define the BaseUnit (to which one can subsequently attach several
+    # 3) Base unit definitions
+    # 3.1) Define the BaseUnit (to which one can subsequently attach several
     # definitions)
     for dc in def_collectors:
         if dc["URI"] is not None:
-            element = PDF.set_unit_uri(dc["URI"])
+            element = si_graph.set_unit_uri(dc["URI"])
 
             if dc["URI"] != "gram":
-                g.add((element, RDF.type, PDF.SIBaseUnit))
-                g.add(
+                si_graph.g.add((element, RDF.type, si_graph.si_base_unit))
+                si_graph.g.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
-                g.add(
+                si_graph.g.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasUnitTypeAsString,
+                        si_graph.has_unit_type_as_string,
                         Literal("SI base unit", lang="en"),
                     )
                 )
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasUnitTypeAsString,
+                        si_graph.has_unit_type_as_string,
                         Literal("Unité SI de base", lang="fr"),
                     )
                 )
@@ -207,35 +203,35 @@ def main():
                     qty_kind_list = [dc["isUnitOfQtyKind"]]
 
                 for qty_kind in qty_kind_list:
-                    g.add(
+                    si_graph.g.add(
                         (
                             element,
-                            PDF.isUnitOfQtyKind,
-                            PDF.set_quantity_uri(qty_kind),
+                            si_graph.is_unit_of_qty_kind,
+                            si_graph.set_quantity_uri(qty_kind),
                         )
                     )
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasSymbol,
+                        si_graph.has_symbol,
                         Literal(dc["hasSymbol"], datatype=XSD.string),
                     )
                 )
                 if "hasPrefix" in dc.keys():
-                    g.add((element, RDF.type, PDF.set_uri("PrefixedUnit")))
-                    g.add(
+                    si_graph.g.add((element, RDF.type, si_graph.set_uri("PrefixedUnit")))
+                    si_graph.g.add(
                         (
                             element,
-                            PDF.set_uri("hasPrefix"),
-                            PDF.set_prefix_uri(dc["hasPrefix"]),
+                            si_graph.set_uri("hasPrefix"),
+                            si_graph.set_prefix_uri(dc["hasPrefix"]),
                         )
                     )
                 if "hasNonPrefixedUnit" in dc.keys():
-                    g.add(
+                    si_graph.g.add(
                         (
                             element,
-                            PDF.set_uri("hasNonPrefixedUnit"),
-                            PDF.set_unit_uri(dc["hasNonPrefixedUnit"]),
+                            si_graph.set_uri("hasNonPrefixedUnit"),
+                            si_graph.set_unit_uri(dc["hasNonPrefixedUnit"]),
                         )
                     )
 
@@ -246,13 +242,19 @@ def main():
                     except IndexError:
                         next_def = None
                     if curr_def is not None:
-                        g.add((element, PDF.hasDefinition, PDF.set_uri(curr_def)))
-                        if next_def is not None:
-                            g.add(
+                        si_graph.g.add(
                                 (
-                                    PDF.set_uri(curr_def),
-                                    PDF.hasNextDefinition,
-                                    PDF.set_uri(next_def),
+                                    element,
+                                    si_graph.has_definition,
+                                    si_graph.set_uri(curr_def)
+                                )
+                            )
+                        if next_def is not None:
+                            si_graph.g.add(
+                                (
+                                    si_graph.set_uri(curr_def),
+                                    si_graph.has_next_definition,
+                                    si_graph.set_uri(next_def),
                                 )
                             )
 
@@ -262,37 +264,37 @@ def main():
                         prev_def = None
                     if curr_def is not None:
                         if prev_def is not None:
-                            g.add(
+                            si_graph.g.add(
                                 (
-                                    PDF.set_uri(curr_def),
-                                    PDF.hasPreviousDefinition,
-                                    PDF.set_uri(prev_def),
+                                    si_graph.set_uri(curr_def),
+                                    si_graph.has_previous_definition,
+                                    si_graph.set_uri(prev_def),
                                 )
                             )
             else:  # gram
-                g.add((element, RDF.type, PDF.MeasurementUnit))
-                g.add(
+                si_graph.g.add((element, RDF.type, si_graph.measurement_unit))
+                si_graph.g.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
-                g.add(
+                si_graph.g.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.isUnitOfQtyKind,
-                        PDF.set_quantity_uri(dc["isUnitOfQtyKind"]),
+                        si_graph.is_unit_of_qty_kind,
+                        si_graph.set_quantity_uri(dc["isUnitOfQtyKind"]),
                     )
                 )
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasSymbol,
+                        si_graph.has_symbol,
                         Literal(dc["hasSymbol"], datatype=XSD.string),
                     )
                 )
 
-    # 4.2 Declare all definitions
+    # 3.2 Declare all definitions
     # uri_text values are a concatenation of the lowercase unit name and the
     # year of the definition, e.g., ampere2018
 
@@ -306,30 +308,30 @@ def main():
     for bdef in basedefs:
         # add data
         if bdef["URI"] is not None:
-            element = PDF.set_uri(bdef["URI"])
-            g.add((element, RDF.type, PDF.Definition))
-            g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
-            g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
-            g.add(
+            element = si_graph.set_uri(bdef["URI"])
+            si_graph.g.add((element, RDF.type, si_graph.definition))
+            si_graph.g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
+            si_graph.g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasStartValidity,
+                    si_graph.has_start_validity,
                     Literal(bdef["hasStartValidity"], datatype=XSD.date),
                 )
             )
             if bdef["hasEndValidity"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasEndValidity,
+                        si_graph.has_end_validity,
                         Literal(bdef["hasEndValidity"], datatype=XSD.date),
                     )
                 )
             if bdef["hasDefiningText_fr"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasDefiningText,
+                        si_graph.has_defining_text,
                         Literal(
                             sf.formattxt(bdef["hasDefiningText_fr"],
                                          "latex",
@@ -338,10 +340,10 @@ def main():
                     )
                 )
             if bdef["hasDefiningText_en"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasDefiningText,
+                        si_graph.has_defining_text,
                         Literal(
                             sf.formattxt(bdef["hasDefiningText_en"],
                                          "latex",
@@ -349,15 +351,15 @@ def main():
                         ),
                     )
                 )
-            g.add((element,
-                   PDF.hasDefiningResolution,
-                   PDF.set_resolution_uri(bdef["hasDefiningResolution"])))
+            si_graph.g.add((element,
+                   si_graph.has_defining_resolution,
+                   si_graph.set_resolution_uri(bdef["hasDefiningResolution"])))
 
             if bdef["hasDefiningEquation"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasDefiningEquation,
+                        si_graph.has_defining_equation,
                         Literal(
                             sf.formattxt(
                                 bdef["hasDefiningEquation"], "latex", add_delim=False
@@ -367,28 +369,28 @@ def main():
                     )
                 )
             if bdef["hasDefiningConstant"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasDefiningConstant,
-                        PDF.set_constant_uri(bdef["hasDefiningConstant"]),
+                        si_graph.has_defining_constant,
+                        si_graph.set_constant_uri(bdef["hasDefiningConstant"]),
                     )
                 )
             if bdef["Status"] is not None:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasStatus,
+                        si_graph.has_status,
                         Literal(bdef["Status"], datatype=XSD.string),
                     )
                 )
             # Only used for kilogram in base defs
             if "PrefixRestriction" not in bdef:
                 bdef['PrefixRestriction'] = False
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.prefixRestriction,
+                    si_graph.prefix_restriction,
                     Literal(bdef['PrefixRestriction'],
                             datatype=XSD.boolean),
                 )
@@ -398,57 +400,61 @@ def main():
             # get all the notes for a definition
             for note in notes:
                 if note["uri"] == bdef["URI"]:
-                    notenode = PDF.set_uri(
-                        "{}note{}".format(bdef["URI"], note["index"])
-                    )
-                    g.add((element, PDF.hasDefinitionNote, notenode))
-                    g.add((notenode, RDF.type, PDF.DefinitionNote))
-                    g.add((notenode, PDF.hasNoteIndex, Literal(note["index"])))
-                    g.add(
+                    # notenode = si_graph.set_uri(
+                    #     "{}note{}".format(bdef["URI"], note["index"])
+                    # )
+                    notenode = si_graph.set_uri(
+                        f"""{bdef['URI']}note{note['index']}"""
+                        )
+
+                    si_graph.g.add((element, si_graph.has_definition_note, notenode))
+                    si_graph.g.add((notenode, RDF.type, si_graph.definition_note))
+                    si_graph.g.add((notenode, si_graph.has_note_index, Literal(note["index"])))
+                    si_graph.g.add(
                         (
                             notenode,
-                            PDF.hasNoteText,
+                            si_graph.has_note_text,
                             Literal(sf.formattxt(note["note_en"], "latex",
                                                  add_delim=True), lang="en"),
                         )
                     )
-                    g.add(
+                    si_graph.g.add(
                         (
                             notenode,
-                            PDF.hasNoteText,
+                            si_graph.has_note_text,
                             Literal(sf.formattxt(note["note_fr"], "latex",
                                                  add_delim=True), lang="fr"),
                         )
                     )
 
-    # 5 SI Units Special Names
-    with open(os.path.join(CUQ_FILES_FOLDER, "si_units_special_names.yaml")) as fp:
+    # 4 SI Units Special Names
+    with open(os.path.join(CUQ_FILES_FOLDER, "si_units_special_names.yaml"),encoding='utf-8') as fp:
         si_spec_list = yaml.safe_load(fp)
 
     for sisp in si_spec_list:
         if sisp["URI"] is not None:
-            element = PDF.set_unit_uri(sisp["URI"])
-            g.add((element, RDF.type, PDF.SISpecialNamedUnit))
-            g.add(
+            element = si_graph.set_unit_uri(sisp["URI"])
+            si_graph.g.add((element, RDF.type, si_graph.si_special_named_unit))
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasUnitTypeAsString,
+                    si_graph.has_unit_type_as_string,
                     Literal("Named SI derived unit", lang="en"),
                 )
             )
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasUnitTypeAsString,
+                    si_graph.has_unit_type_as_string,
                     Literal("Unité SI dérivée ayant un nom spécial", lang="fr"),
                 )
             )
-            g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_fr"], lang="fr")))
-            g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_en"], lang="en")))
-            g.add(
+            si_graph.g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_fr"], lang="fr")))
+            si_graph.g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_en"], lang="en")))
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasSymbol,
+                    si_graph.has_symbol,
                     Literal(sisp["Symbol"], datatype=XSD.string),
                 )
             )
@@ -460,109 +466,94 @@ def main():
                 qty_kind_list = [sisp["UnitOfQtyKind"]]
 
             for qty_kind in qty_kind_list:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.isUnitOfQtyKind,
-                        PDF.set_quantity_uri(qty_kind),
+                        si_graph.is_unit_of_qty_kind,
+                        si_graph.set_quantity_uri(qty_kind),
                     )
                 )
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasDefiningResolution,
-                    URIRef(PDF.set_cgpm_uri(sisp["hasDefiningResolution"])),
+                    si_graph.has_defining_resolution,
+                    URIRef(si_graph.set_cgpm_uri(sisp["hasDefiningResolution"])),
                 )
             )
 
             if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
-                g, node = transform_to_graph(sisp["inOtherSIUnits"],
-                                             PDF, g)
-                g.add((element, PDF.inOtherSIUnits, node))
+                si_graph.g, node = transform_to_graph(sisp["inOtherSIUnits"],
+                                             si_graph, si_graph.g)
+                si_graph.g.add((element, si_graph.in_other_si_units, node))
+
 
             if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
-                g, node = transform_to_graph(sisp["inBaseSIUnits"],
-                                             PDF, g)
-                g.add((element, PDF.inBaseSIUnits, node))
+                si_graph.g, node = transform_to_graph(sisp["inBaseSIUnits"],
+                                             si_graph, si_graph.g)
+                si_graph.g.add((element, si_graph.in_base_si_units, node))
 
-            # Mute defining equations for non-base units (not checked yet)
-            """
-            if sisp["hasDefiningEquation"]:
-                g.add(
-                    (
-                        element,
-                        PDF.hasDefiningEquation,
-                        Literal(
-                            sf.formattxt(
-                                sisp["hasDefiningEquation"], "latex", add_delim=False
-                            ),
-                            datatype=XSD.string,
-                        ),
-                    )
-                )
-            """
             # Only used for degreeCelsius in sisp
             if "PrefixRestriction" not in sisp:
                 sisp['PrefixRestriction'] = False
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.prefixRestriction,
+                    si_graph.prefix_restriction,
                     Literal(sisp['PrefixRestriction'],
                             datatype=XSD.boolean),
                 )
             )
 
 
-    # 6) non SI units
-    with open(os.path.join(CUQ_FILES_FOLDER, "non_si_units.yaml")) as fp:
+    # 5) non SI units
+    with open(os.path.join(CUQ_FILES_FOLDER, "non_si_units.yaml"),encoding='utf-8') as fp:
         non_si_list = yaml.safe_load(fp)
 
     for nsi in non_si_list:
         if nsi["URI"] is not None:
-            element = PDF.set_unit_uri(nsi["URI"])
-            g.add((element, RDF.type, PDF.nonSIUnit))
-            g.add(
+            element = si_graph.set_unit_uri(nsi["URI"])
+            si_graph.g.add((element, RDF.type, si_graph.non_si_unit))
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasUnitTypeAsString,
+                    si_graph.has_unit_type_as_string,
                     Literal("Non-SI unit accepted for use with the SI", lang="en"),
                 )
             )
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasUnitTypeAsString,
+                    si_graph.has_unit_type_as_string,
                     Literal(
-                        "Unité en dehors du SI " "dont l'usage est accepté avec le SI",
+                        "Unité en dehors du SI dont l'usage est accepté avec le SI",
                         lang="fr",
                     ),
                 )
             )
-            g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
-            g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
-            g.add(
+            si_graph.g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
+            si_graph.g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
+            si_graph.g.add(
                 (
                     element,
-                    PDF.hasSymbol,
+                    si_graph.has_symbol,
                     Literal(nsi["Symbol"], datatype=XSD.string),
                 )
             )
             if "AltSymbol" in nsi:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.hasAltSymbol,
+                        si_graph.has_alt_symbol,
                         Literal(nsi["AltSymbol"], datatype=XSD.string),
                     )
                 )
 
             if "PrefixRestriction" not in nsi:
                 nsi['PrefixRestriction'] = False
-            g.add(
+            si_graph.g.add(
                 (
                     element,
-                    PDF.prefixRestriction,
+                    si_graph.prefix_restriction,
                     Literal(nsi['PrefixRestriction'],
                             datatype=XSD.boolean),
                 )
@@ -576,41 +567,41 @@ def main():
                 qty_kind_list = [nsi["UnitOfQtyKind"]]
 
             for qty_kind in qty_kind_list:
-                g.add(
+                si_graph.g.add(
                     (
                         element,
-                        PDF.isUnitOfQtyKind,
-                        PDF.set_quantity_uri(qty_kind),
+                        si_graph.is_unit_of_qty_kind,
+                        si_graph.set_quantity_uri(qty_kind),
                     )
                 )
             if "ConversionFactor" in nsi:
                 unit_multiple = BNode()
-                hasUnitTerm = PDF.set_uri("hasUnitTerm")
-                hasNumericFactor = PDF.set_uri("hasNumericFactor")
-                hasNumericFactorAsString = PDF.set_uri("hasNumericFactorAsString")
+                has_unit_term = si_graph.set_uri("hasUnitTerm")
+                has_numeric_factor = si_graph.set_uri("hasNumericFactor")
+                has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
                 if isinstance(nsi["ConversionFactor"], int):
-                    convFactorType = XSD.int
+                    conv_factor_type = XSD.int
                 elif isinstance(nsi["ConversionFactor"], float):
-                    convFactorType = XSD.float
+                    conv_factor_type = XSD.float
                 else:
-                    logging.error('Error : unknown ConversionFactor type :'
-                                  '{}'.format(nsi["ConversionFactor"]))
-                    convFactorType = None
+                    logging.error('Error : unknown ConversionFactor type : %s ',
+                                  nsi["ConversionFactor"])
+                    conv_factor_type = None
                 conversion_factor = Literal(nsi["ConversionFactor"],
-                                           datatype=convFactorType)
+                                           datatype=conv_factor_type)
                 conversion_factor_as_string = Literal(
                     nsi["ConversionFactorAsString"],
                     datatype=XSD.string)
-                g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
-                                                        PDF, g)
-                g.add((unit_multiple, RDF.type, PDF.set_uri("UnitMultiple")))
-                g.add((unit_multiple, hasUnitTerm, conversion_unit))
-                g.add((unit_multiple, hasNumericFactor, conversion_factor))
-                g.add((unit_multiple, hasNumericFactorAsString,
+                si_graph.g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
+                                                        si_graph, si_graph.g)
+                si_graph.g.add((unit_multiple, RDF.type, si_graph.set_uri("UnitMultiple")))
+                si_graph.g.add((unit_multiple, has_unit_term, conversion_unit))
+                si_graph.g.add((unit_multiple, has_numeric_factor, conversion_factor))
+                si_graph.g.add((unit_multiple, has_numeric_factor_as_string,
                        conversion_factor_as_string))
-                g.add((element, PDF.inOtherSIUnits, unit_multiple))
+                si_graph.g.add((element, si_graph.in_other_si_units, unit_multiple))
 
-    return g
+    return si_graph.g
 
 
 if __name__ == "__main__":

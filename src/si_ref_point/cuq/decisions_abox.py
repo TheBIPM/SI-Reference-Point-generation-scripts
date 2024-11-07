@@ -4,33 +4,30 @@ Decisions ABox
 
 
 
-from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
-from si_ref_point.cuq.CUQ_TBox import SiElements
 from datetime import date
-from si_ref_point.settings import CUQ_FILES_FOLDER
-import yaml
 import os
+from rdflib import RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
+import yaml
+from si_ref_point.cuq.cuq_tbox import SiElements
+from si_ref_point.settings import CUQ_FILES_FOLDER
 
 def cap1(instr):
+    """Utility method"""
     return instr[0].upper() + instr[1:]
 
 def main():
-    PDF = SiElements()
-    g = Graph()
-
-    # copy over all namespaces from PDF.g to g
-    for key, val in PDF.g.namespaces():
-        g.bind(key, val)
+    """main of Decision A-box"""
+    si_graph = SiElements()
 
     # Annotations to the ontology (name, Version number)
-    g.add((URIRef(PDF.namespace_decisions), RDF.type, OWL.Ontology))
-    g.add((URIRef(PDF.namespace_decisions), SKOS.prefLabel,
+    si_graph.g.add((URIRef(si_graph.namespace_decisions), RDF.type, OWL.Ontology))
+    si_graph.g.add((URIRef(si_graph.namespace_decisions), SKOS.prefLabel,
            Literal("SI Reference Point - Decisions", datatype=XSD.string)))
-    g.add((URIRef(PDF.namespace_decisions), RDFS.comment,
+    si_graph.g.add((URIRef(si_graph.namespace_decisions), RDFS.comment,
            Literal("Ontology, part of the SI reference point, "
                    "covering decisions",
                    datatype=XSD.string)))
-    g.add((URIRef(PDF.namespace_decisions), DCTERMS.created,
+    si_graph.g.add((URIRef(si_graph.namespace_decisions), DCTERMS.created,
            Literal(str(date.today()), datatype=XSD.date)))
 
     # crawl through the items of the YAML file
@@ -40,47 +37,45 @@ def main():
     for dec in dec_list:
         # create an instance of scope if necessary, using the scope code as
         # local name [TODO] : is it really only doing it if necessary ?
-        scope = PDF.set_decision_uri(dec['scopeCode'])
-        g.add((scope, RDF.type, PDF.SIDecisionScope))
+        scope = si_graph.set_decision_uri(dec['scopeCode'])
+        si_graph.g.add((scope, RDF.type, si_graph.si_decision_scope))
         # add labels to scope (capitalize the first character)
-        g.add((scope, RDFS.label,
+        si_graph.g.add((scope, RDFS.label,
                Literal(cap1(dec['scopeEN']), lang="en")))
-        g.add((scope, RDFS.label,
+        si_graph.g.add((scope, RDFS.label,
                Literal(cap1(dec['scopeFR']), lang="fr")))
         # create instance of target if necessary using target code as local
         # name
-        target = PDF.set_decision_uri(dec['targetCode'])
-        g.add((target, RDF.type, PDF.SIDecisionTarget))
+        target = si_graph.set_decision_uri(dec['targetCode'])
+        si_graph.g.add((target, RDF.type, si_graph.si_decision_target))
         # add labels to target
-        g.add((target, RDFS.label,
+        si_graph.g.add((target, RDFS.label,
                Literal(cap1(dec['targetEN']), lang="en")))
-        g.add((target, RDFS.label,
+        si_graph.g.add((target, RDFS.label,
                Literal(cap1(dec['targetFR']), lang="fr")))
         # add links between target and scope
-        g.add((scope, PDF.hasTarget, target))
-        g.add((target, PDF.isTargetOf, scope))
+        si_graph.g.add((scope, si_graph.has_target, target))
+        si_graph.g.add((target, si_graph.is_target_of, scope))
         # create instance of decision if necessary using decision code as local
         # name
-        decision = PDF.set_decision_uri(dec['decisionCode'])
-        g.add((decision, RDF.type, PDF.SIDecision))
+        decision = si_graph.set_decision_uri(dec['decisionCode'])
+        si_graph.g.add((decision, RDF.type, si_graph.si_decision))
         # add labels to decision
-        g.add((decision, RDFS.label,
+        si_graph.g.add((decision, RDFS.label,
                Literal(cap1(dec['decisionEN']), lang="en")))
-        g.add((decision, RDFS.label,
+        si_graph.g.add((decision, RDFS.label,
                Literal(cap1(dec['decisionFR']), lang="fr")))
         # add links between decision and target
-        g.add((target, PDF.hasDecision, decision))
-        g.add((decision, PDF.isDecisionOf, target))
+        si_graph.g.add((target, si_graph.has_decision, decision))
+        si_graph.g.add((decision, si_graph.is_decision_of, target))
         # add link between decision and resolution (retrieved from one of
         # cgpm.ttl, cipm.ttl or cctf.ttl) using the ‘correspondingResolution’
         # object property
-        g.add((decision, PDF.correspondingResolution,
-               PDF.set_resolution_uri(dec['ID-resolution'])))
+        si_graph.g.add((decision, si_graph.corresponding_resolution,
+               si_graph.set_resolution_uri(dec['ID-resolution'])))
         if 'crossReferences' in dec:
             for xref in dec['crossReferences']:
                 # add link between decision and the cross-referenced decision
-                g.add((decision, SKOS.related, PDF.set_decision_uri(xref)))
+                si_graph.g.add((decision, SKOS.related, si_graph.set_decision_uri(xref)))
 
-
-
-    return g
+    return si_graph.g

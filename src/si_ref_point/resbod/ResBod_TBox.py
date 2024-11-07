@@ -1,26 +1,30 @@
+"""
+ResBod TBox
+"""
 from datetime import date
 
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
-from si_ref_point.settings import SIURL, SKOSURL
+from si_ref_point.settings import SIDFWBASE, SKOSURL
 
 
-ResBod_ns = SIURL + "bodies#"
+
+RES_BOD_NS = SIDFWBASE + "/bodies#"
 
 
 class ResBod:
-    def __init__(self, namespace: str = ResBod_ns, prefix: str = 'rb'):
+    def __init__(self, namespace: str = RES_BOD_NS, prefix: str = 'rb'):
         self.namespace = namespace
         self._g = Graph()  # a triple store as the main data structure
         self._g.bind(prefix, namespace)
         self._g.bind("skos", SKOSURL)
 
-        self._g.add((URIRef(ResBod_ns), RDF.type, OWL.Ontology))
-        self._g.add((URIRef(ResBod_ns), SKOS.prefLabel,
+        self._g.add((URIRef(RES_BOD_NS), RDF.type, OWL.Ontology))
+        self._g.add((URIRef(RES_BOD_NS), SKOS.prefLabel,
                      Literal("SI Reference Point - Responsible Bodies", datatype=XSD.string)))
-        self._g.add((URIRef(ResBod_ns), RDFS.comment,
+        self._g.add((URIRef(RES_BOD_NS), RDFS.comment,
                      Literal("Ontology, part of the SI Reference Point, covering the Responsible Bodies and their "
                              "resolutions, decisions, etc", datatype=XSD.string)))
-        self._g.add((URIRef(ResBod_ns), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
+        self._g.add((URIRef(RES_BOD_NS), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
         self.ResBod = self.set_uri('ResBod')
         self._g.add((self.ResBod, RDF.type, SKOS.Concept))
@@ -208,7 +212,7 @@ class ResBod:
         self._g.add((self.hasOutcomeTitle, RDFS.comment, Literal('Linking an outcome and its Title', lang='en')))
 
     def set_uri(self, name: str) -> URIRef:
-        # Utility method
+        """Utility method"""
         return URIRef(self.namespace + name)
 
     @property
@@ -217,5 +221,6 @@ class ResBod:
 
 
 def main():
+    """Main of ResBod T-Box"""
     resbod_TBox = ResBod()
     return resbod_TBox.g
