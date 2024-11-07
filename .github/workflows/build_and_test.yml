@@ -1,0 +1,22 @@
+name: Compile package and test it
+
+on:
+  push:
+    branches: [ "enable_ci_pipeline" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/prepare_env
+    - uses: ./.github/actions/build
+    - uses: ./.github/actions/test

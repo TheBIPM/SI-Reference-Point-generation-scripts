@@ -156,3 +156,7 @@ def main():
         v.build(output_path=doc_path)
         logging.info(
             f"Markdown files for vocabulary output in {doc_path}")
+
+
+if __name__ == "__main__":
+    main()

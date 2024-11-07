@@ -35,11 +35,13 @@ JSON-LD/prefixes.ttl
 JSON-LD/units.ttl
 JSON-LD/decisions.ttl
 *.zip
+TTL/
+JSON-LD/
 
 # cache files
 __pycache__
 Testing/API/__pycache__
-build
+/build
 src/si_ref_point.egg-info/
 
 # playground

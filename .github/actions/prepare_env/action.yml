@@ -1,0 +1,18 @@
+name: prepare env action
+description: prepare python environment
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11"
+    - name: Install dependencies
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest pip-tools
+        if [ -f pyproject.toml ]; then python -m piptools compile -o requirements.txt pyproject.toml; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install -e .
