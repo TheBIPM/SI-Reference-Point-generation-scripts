@@ -88,11 +88,6 @@
   quantity-en: 'anisotropy'
   quantity-fr: 'anisotropie'
   Unit: null
-- identifier: OPTP
-  quantity-en: 'radiant power'
-  quantity-fr: 'puissance rayonnante'
-  Unit: 
-    - [watt, "1"]
 - identifier: OPTR
   quantity-en: 'transmittance'
   quantity-fr: 'transmittance'
@@ -243,7 +238,7 @@
   quantity-fr: 'exposition énergetique'
   Unit:
     - [joule, "1"]
-    - [metre, "2"]
+    - [metre, "-2"]
 - identifier: LERA
   quantity-en: 'length ratio'
   quantity-fr: 'rapport de longueur'
