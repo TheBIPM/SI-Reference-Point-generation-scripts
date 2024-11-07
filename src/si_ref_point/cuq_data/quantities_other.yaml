@@ -198,11 +198,10 @@
     - [metre, "2"]
     - [second, "-2"]  
 - identifier: LOSS
-  quantity-en: 'optical fibre attenuation'
-  quantity-fr: 'attenuation (dans une fibre optique)'
+  quantity-en: 'loss (attenuation)'
+  quantity-fr: 'attenuation'
   Unit:
-    - [bel, "1"]
-    - [metre, "-1"]    
+    - [bel, "1"]  
 - identifier: ENCL
   quantity-en: 'encircled flux'
   quantity-fr: 'flux encerclé'
@@ -214,7 +213,9 @@
 - identifier: DISL
   quantity-en: 'dispersion slope'
   quantity-fr: 'pente de dispersion'
-  Unit: null    
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"]   
 - identifier: EXIT
   quantity-en: 'radiant exitance'
   quantity-fr: 'exitance énergétique'
@@ -247,3 +248,15 @@
   quantity-en: 'length ratio'
   quantity-fr: 'rapport de longueur'
   Unit: null
+- identifier: POWM
+  quantity-en: 'power level relative to 1 mW'
+  quantity-fr: 'niveau de puissance rélatif à 1 mW'
+  Unit:
+    - [bel, "1"]
+- identifier: DISP
+  quantity-en: '(chromatic) dispersion'
+  quantity-fr: 'dispersion (chromatique)'
+  Unit: 
+    - [second, "1"]
+    - [metre, "-1"]
+
