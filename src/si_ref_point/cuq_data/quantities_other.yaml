@@ -269,6 +269,11 @@
   quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/Pa)'
   Unit: 
     - [bel, "1"]
+    - identifier: PSNW
+    quantity-en: 'pressure sensitivity level (referenced to 1 V/µPa)'
+    quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/µPa)'
+    Unit: 
+      - [bel, "1"]    
 - identifier: SOIN
   quantity-en: 'sound intensity'
   quantity-fr: 'intensité acoustique'
