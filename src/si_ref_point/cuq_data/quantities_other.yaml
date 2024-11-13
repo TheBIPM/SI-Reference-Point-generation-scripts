@@ -312,6 +312,6 @@
   Unit: null
 - identifier: PHSS
   quantity-en: 'phase shift'
-  quantity-fr: 'décalage de phase'
+  quantity-fr: 'déphasage'
   Unit: 
     - [radian, "1"] 
