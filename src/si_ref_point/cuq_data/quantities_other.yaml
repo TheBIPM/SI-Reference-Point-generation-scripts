@@ -310,3 +310,8 @@
   quantity-en: 'normalized signal'
   quantity-fr: 'signal normalisé'
   Unit: null
+- identifier: PHSS
+  quantity-en: 'phase shift'
+  quantity-fr: 'décalage de phase'
+  Unit: 
+    - [radian, "1"] 
