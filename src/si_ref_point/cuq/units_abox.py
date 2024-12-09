@@ -6,7 +6,7 @@ from datetime import date
 import os
 import logging
 import yaml
-from rdflib import URIRef, BNode, Literal
+from rdflib import Graph, URIRef, BNode, Literal
 from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
@@ -130,7 +130,8 @@ def transform_to_graph(expression, si_graph, graph):
 
 def main():
     """main of Units A-box"""
-    si_graph = SiElements()
+    si_graph = SiElements() # get the predicates and classes that are common to all cuq files
+    units_graph = Graph()  # produce a separate graphe for the units
 
     # 1) add annotations to the ontology (name, creation date, comment)
     si_graph.g.add((URIRef(si_graph.namespace_units), RDF.type, OWL.Ontology))
@@ -159,6 +160,27 @@ def main():
                     "special names) and prefixes."
                 )
             ),
+        )
+    )
+    si_graph.g.add(
+        (
+            URIRef(si_graph.namespace_units),
+            RDF.type,
+            OWL.Ontology
+        )
+    )
+    si_graph.g.add(
+        (
+            URIRef(si_graph.namespace_units),
+            OWL.versionIRI,
+            URIRef("https://si-digital-framework.org/SI/versions/1.0")
+        )
+    )
+    si_graph.g.add(
+        (
+            URIRef(si_graph.namespace_units),
+            OWL.versionInfo,
+            Literal('Version 1.0',datatype=XSD.string)
         )
     )
 

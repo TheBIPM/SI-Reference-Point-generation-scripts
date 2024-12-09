@@ -4,7 +4,7 @@ CUQ TBox
 
 from datetime import date
 import os
-from rdflib import Graph, URIRef, Literal, BNode
+from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
 from si_ref_point.settings import CUQ_FILES_FOLDER, SIDFWBASE
@@ -47,8 +47,21 @@ class SiElements:
             self.g.parse(os.path.join(CUQ_FILES_FOLDER, ttl_file),
                          format="ttl")
         # Update creation date
-        self.g.add((URIRef(self.namespace), DCTERMS.created,
-                    Literal(str(date.today()), datatype=XSD.date)))
+        self.g.add(
+            (
+                URIRef(self.namespace),
+                DCTERMS.created,
+                Literal(str(date.today()), datatype=XSD.date)
+            )
+        )
+        self.g.add(
+            (
+                URIRef(self.namespace),
+                RDF.type,
+                OWL.Ontology,
+            )
+        )
+
 
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")

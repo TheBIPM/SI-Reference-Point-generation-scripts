@@ -6,24 +6,29 @@ Prefixes ABox
 import os
 from datetime import date
 import yaml
-from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal
+from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.settings import CUQ_FILES_FOLDER
 
 
 def main():
     """main of Prefixes A-box"""
-    si_graph = SiElements()
 
+    si_graph = SiElements() # get the predicates and classes that are common to all cuq files
+    prefix_graph = Graph()  # produce a separate graphe for the prefixes
+
+        # Define the namespaces within (base)/SI
+    prefix_graph.bind("prefixes",si_graph.namespace_prefixes)
+    prefix_graph.bind("si",si_graph.namespace)
 
     # Annotations to the ontology (name, Version number)
-    si_graph.g.add((URIRef(si_graph.namespace_prefixes), RDF.type, OWL.Ontology))
-    si_graph.g.add((URIRef(si_graph.namespace_prefixes), SKOS.prefLabel,
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), RDF.type, OWL.Ontology))
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), SKOS.prefLabel,
            Literal("SI Reference Point - Prefixes", datatype=XSD.string)))
-    si_graph.g.add((URIRef(si_graph.namespace_prefixes), RDFS.comment,
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), RDFS.comment,
            Literal("Ontology, part of the SI Reference Point, covering "
                    "prefixes for the SI measurement units.")))
-    si_graph.g.add((URIRef(si_graph.namespace_prefixes), DCTERMS.created,
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), DCTERMS.created,
            Literal(str(date.today()), datatype=XSD.date)))
 
     # 1) open YAML files with information
@@ -44,13 +49,13 @@ def main():
 
         if uri_text is not None:
             element = si_graph.set_prefix_uri(uri_text)
-            si_graph.g.add((element, RDF.type, si_graph.si_prefix))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(pref_label_fr, lang='fr')))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(pref_label_en, lang='en')))
-            si_graph.g.add((element, si_graph.has_scaling_factor,
+            prefix_graph.add((element, RDF.type, si_graph.si_prefix))
+            prefix_graph.add((element, SKOS.prefLabel, Literal(pref_label_fr, lang='fr')))
+            prefix_graph.add((element, SKOS.prefLabel, Literal(pref_label_en, lang='en')))
+            prefix_graph.add((element, si_graph.has_scaling_factor,
                 Literal(scaling_factor, datatype=XSD[xsd_type], normalize=False)))
-            si_graph.g.add((element, si_graph.has_datatype, XSD[xsd_type]))
-            si_graph.g.add(
+            prefix_graph.add((element, si_graph.has_datatype, XSD[xsd_type]))
+            prefix_graph.add(
                 (
                     element,
                     si_graph.has_exponent,
@@ -59,11 +64,11 @@ def main():
             )
 
             if symbol:
-                si_graph.g.add((element, si_graph.has_symbol,
+                prefix_graph.add((element, si_graph.has_symbol,
                    Literal(symbol, datatype=XSD.string)))
 
             if defres:
-                si_graph.g.add((element, si_graph.has_defining_resolution,
+                prefix_graph.add((element, si_graph.has_defining_resolution,
                      URIRef(si_graph.set_cgpm_uri(defres))))
 
-    return si_graph.g
+    return prefix_graph
