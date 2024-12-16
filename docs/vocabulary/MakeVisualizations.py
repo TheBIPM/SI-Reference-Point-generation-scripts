@@ -12,6 +12,7 @@ def main(APIPATH):
     g.parse(os.path.join(APIPATH, 'prefixes.ttl'))
     g.parse(os.path.join(APIPATH, 'quantities.ttl'))
     g.parse(os.path.join(APIPATH, 'constants.ttl'))
+    g.parse(os.path.join(APIPATH, 'bodies.ttl'))
     g.parse(os.path.join(APIPATH, 'cgpm.ttl'))
 
 
@@ -65,11 +66,31 @@ def main(APIPATH):
             ORDER BY ?class
             """
 
+    definition_query = """
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            PREFIX si: <https://si-digital-framework.org/SI#>
+
+            SELECT DISTINCT ?prop ?domain ?range
+            WHERE
+            {
+                ?prop (rdfs:range|rdfs:domain)/owl:oneOf?/(rdf:first|rdf:rest)* ?class .
+                OPTIONAL {?prop rdfs:domain/owl:oneOf?/(rdf:first|rdf:rest)* ?domain} .
+                OPTIONAL {?prop rdfs:range/owl:oneOf?/(rdf:first|rdf:rest)* ?range} .
+                FILTER (?class = si:Definition || ?class = si:Constant) .
+                FILTER (?range != rdf:nil && ?domain != rdf:nil) . # filter last element of list
+                FILTER (!isBlank(?domain)) . # filter blank nodes
+                FILTER (!isBlank(?range)) . 
+            }
+            ORDER BY ?class
+            """
+
     # Write diagram (mermaid code)
     with open('class_diagram_details.md', 'w') as out:
         out.write("# Diagrams\n")
 
-        # Unit-related Concepts
+        # Unit-related concepts
         out.write("## Unit-related Concepts\n")
         out.write("```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
@@ -84,7 +105,7 @@ def main(APIPATH):
             out.write(f"`{class_display}` --|> `{superclass_display}` : rdfs#colon;subClassOf\n")
         out.write("```\n")
 
-        # QuantityKind-related Concepts
+        # QuantityKind-related concepts
         out.write("## QuantityKind-related Concepts\n")
         out.write("```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
@@ -99,7 +120,7 @@ def main(APIPATH):
             out.write(f"`{class_display}` --|> `{superclass_display}` : rdfs#colon;subClassOf\n")
         out.write("```\n")
 
-        # CompoundUnit-related Concepts
+        # CompoundUnit-related concepts
         out.write("## CompoundUnit-related properties\n")
         out.write("```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
@@ -114,9 +135,29 @@ def main(APIPATH):
 
             out.write(f"`{class_display}` --|> `{range_display}` : {prop_display.replace(':', '#colon;')}\n")
         out.write("```\n")
-    
+
+        # definition-related concepts
+        out.write("## Definition-related properties\n")
+        out.write("```mermaid\n")
+        out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
+        out.write("classDiagram\ndirection LR\n")
+        res = g.query(definition_query)
+        for item in res:
+            prop, domain, range = item
+            range_display = "owl:Thing" if range is None else range.n3(g.namespace_manager)
+            domain_display = "owl:Thing" if domain is None else domain.n3(g.namespace_manager)
+            prop_display = "owl:Thing" if prop is None else prop.n3(g.namespace_manager)
+            print(domain_display, prop_display, range_display)
+
+            out.write(f"`{domain_display}` --|> `{range_display}` : {prop_display.replace(':', '#colon;')}\n")
+        out.write("```\n")
+
+
     # convert to pdfs using mermaid-cli:
     # npx mmdc -i .\class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
+
+    # best result with mermaid 10.9.1 (current version 11.4.2 not showing multiple self-references):
+    # npm install -g @mermaid-js/mermaid-cli@10.9.1
         
 
 if __name__=="__main__":
