@@ -249,6 +249,12 @@
     - [second, "1"]
     - [metre, "-1"]
     - [metre, "-1"] 
+- identifier: TDIS
+  quantity-en: 'total chromatic dispersion'
+  quantity-fr: 'dispersion chromatique totale'
+  Unit: 
+    - [second, "1"]
+    - [metre, "-1"]  
 - identifier: DISL
   quantity-en: 'chromatic dispersion slope'
   quantity-fr: 'pente de dispersion chromatique'
@@ -257,12 +263,13 @@
     - [metre, "-1"] 
     - [metre, "-1"]
     - [metre, "-1"]     
-- identifier: TDIS
-  quantity-en: 'total chromatic dispersion'
-  quantity-fr: 'dispersion chromatique totale'
-  Unit: 
+- identifier: TDDS
+  quantity-en: 'total chromatic dispersion slope'
+  quantity-fr: 'pente de dispersion chromatique totale'
+  Unit:
     - [second, "1"]
-    - [metre, "-1"]       
+    - [metre, "-1"] 
+    - [metre, "-1"]    
 - identifier: SOPL
   quantity-en: 'sound pressure level (referenced to 20 µPa)'
   quantity-fr: 'niveau de pression acoustique (référence : 20 µPa)'
