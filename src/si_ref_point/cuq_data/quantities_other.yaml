@@ -204,13 +204,7 @@
 - identifier: DSDE
   quantity-en: 'distance scale deviation'
   quantity-fr: 'écart de l''échelle de distance'
-  Unit: null 
-- identifier: DISL
-  quantity-en: 'dispersion slope'
-  quantity-fr: 'pente de dispersion'
-  Unit:
-    - [second, "1"]
-    - [metre, "-1"]   
+  Unit: null           
 - identifier: EXIT
   quantity-en: 'radiant exitance'
   quantity-fr: 'exitance énergétique'
@@ -249,11 +243,26 @@
   Unit:
     - [bel, "1"]
 - identifier: DISP
-  quantity-en: '(chromatic) dispersion'
-  quantity-fr: 'dispersion (chromatique)'
+  quantity-en: 'chromatic dispersion'
+  quantity-fr: 'dispersion chromatique'
   Unit: 
     - [second, "1"]
     - [metre, "-1"]
+    - [metre, "-1"] 
+- identifier: DISL
+  quantity-en: 'chromatic dispersion slope'
+  quantity-fr: 'pente de dispersion chromatique'
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"] 
+    - [metre, "-1"]
+    - [metre, "-1"]     
+- identifier: TDIS
+  quantity-en: 'total chromatic dispersion'
+  quantity-fr: 'dispersion chromatique totale'
+  Unit: 
+    - [second, "1"]
+    - [metre, "-1"]       
 - identifier: SOPL
   quantity-en: 'sound pressure level (referenced to 20 µPa)'
   quantity-fr: 'niveau de pression acoustique (référence : 20 µPa)'
@@ -315,3 +324,8 @@
   quantity-fr: 'déphasage'
   Unit: 
     - [radian, "1"] 
+- identifier: DGDE
+  quantity-en: 'differential group delay'
+  quantity-fr: 'retard différentiel de groupe'
+  Unit: 
+    - [second, "1"]     
