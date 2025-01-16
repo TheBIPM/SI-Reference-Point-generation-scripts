@@ -336,3 +336,11 @@
   quantity-fr: 'retard différentiel de groupe'
   Unit: 
     - [second, "1"]     
+- identifier: FSST
+  quantity-en: 'flicker severity index (short term)'
+  quantity-fr: 'indicateur de flicker à court terme'
+  Unit: null
+- identifier: FSLT
+  quantity-en: 'flicker severity index (long term)'
+  quantity-fr: 'indicateur de flicker à long terme'
+  Unit: null     
