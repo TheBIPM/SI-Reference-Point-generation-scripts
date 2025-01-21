@@ -133,23 +133,37 @@ def main():
     si_graph = SiElements() # get the predicates and classes that are common to all cuq files
     units_graph = Graph()  # produce a separate graphe for the units
 
-    # 1) add annotations to the ontology (name, creation date, comment)
-    si_graph.g.add((URIRef(si_graph.namespace_units), RDF.type, OWL.Ontology))
-    si_graph.g.add(
+    # Define the namespaces within (base)/SI
+    #   (for the moment, these bindnigs are made 'manually'.
+    #    They should be proposed as a common function [e.g. in cuq_tbox.py])
+    units_graph.bind("constants",si_graph.namespace_constants)
+    units_graph.bind("quantities",si_graph.namespace_quantities)
+    units_graph.bind("units",si_graph.namespace_units)
+    units_graph.bind("si",si_graph.namespace)
+
+    # 1) Add annotations to the ontology
+
+    units_graph.add(
+        (
+            URIRef(si_graph.namespace_units),
+            RDF.type,
+            OWL.Ontology)
+    )
+    units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             SKOS.prefLabel,
             Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string),
         )
     )
-    si_graph.g.add(
+    units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             DCTERMS.created,
             Literal(str(date.today()), datatype=XSD.date),
         )
     )
-    si_graph.g.add(
+    units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             RDFS.comment,
@@ -162,25 +176,18 @@ def main():
             ),
         )
     )
-    si_graph.g.add(
-        (
-            URIRef(si_graph.namespace_units),
-            RDF.type,
-            OWL.Ontology
-        )
-    )
-    si_graph.g.add(
+    units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             OWL.versionIRI,
-            URIRef("https://si-digital-framework.org/SI/versions/1.0")
+            URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/units.ttl")
         )
     )
-    si_graph.g.add(
+    units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             OWL.versionInfo,
-            Literal('Version 1.0',datatype=XSD.string)
+            Literal('2024-12-17',datatype=XSD.string)
         )
     )
 
@@ -196,21 +203,21 @@ def main():
             element = si_graph.set_unit_uri(dc["URI"])
 
             if dc["URI"] != "gram":
-                si_graph.g.add((element, RDF.type, si_graph.si_base_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.si_base_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_unit_type_as_string,
                         Literal("SI base unit", lang="en"),
                     )
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_unit_type_as_string,
@@ -225,14 +232,14 @@ def main():
                     qty_kind_list = [dc["isUnitOfQtyKind"]]
 
                 for qty_kind in qty_kind_list:
-                    si_graph.g.add(
+                    units_graph.add(
                         (
                             element,
                             si_graph.is_unit_of_qty_kind,
                             si_graph.set_quantity_uri(qty_kind),
                         )
                     )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_symbol,
@@ -240,8 +247,8 @@ def main():
                     )
                 )
                 if "hasPrefix" in dc.keys():
-                    si_graph.g.add((element, RDF.type, si_graph.set_uri("PrefixedUnit")))
-                    si_graph.g.add(
+                    units_graph.add((element, RDF.type, si_graph.set_uri("PrefixedUnit")))
+                    units_graph.add(
                         (
                             element,
                             si_graph.set_uri("hasPrefix"),
@@ -249,7 +256,7 @@ def main():
                         )
                     )
                 if "hasNonPrefixedUnit" in dc.keys():
-                    si_graph.g.add(
+                    units_graph.add(
                         (
                             element,
                             si_graph.set_uri("hasNonPrefixedUnit"),
@@ -264,7 +271,7 @@ def main():
                     except IndexError:
                         next_def = None
                     if curr_def is not None:
-                        si_graph.g.add(
+                        units_graph.add(
                                 (
                                     element,
                                     si_graph.has_definition,
@@ -272,7 +279,7 @@ def main():
                                 )
                             )
                         if next_def is not None:
-                            si_graph.g.add(
+                            units_graph.add(
                                 (
                                     si_graph.set_uri(curr_def),
                                     si_graph.has_next_definition,
@@ -286,7 +293,7 @@ def main():
                         prev_def = None
                     if curr_def is not None:
                         if prev_def is not None:
-                            si_graph.g.add(
+                            units_graph.add(
                                 (
                                     si_graph.set_uri(curr_def),
                                     si_graph.has_previous_definition,
@@ -294,21 +301,21 @@ def main():
                                 )
                             )
             else:  # gram
-                si_graph.g.add((element, RDF.type, si_graph.measurement_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.measurement_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.is_unit_of_qty_kind,
                         si_graph.set_quantity_uri(dc["isUnitOfQtyKind"]),
                     )
                 )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_symbol,
@@ -330,11 +337,11 @@ def main():
     for bdef in basedefs:
         # add data
         if bdef["URI"] is not None:
-            element = si_graph.set_uri(bdef["URI"])
-            si_graph.g.add((element, RDF.type, si_graph.definition))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
-            si_graph.g.add(
+            element = si_graph.set_unit_uri(bdef["URI"])
+            units_graph.add((element, RDF.type, si_graph.definition))
+            units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
+            units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
+            units_graph.add(
                 (
                     element,
                     si_graph.has_start_validity,
@@ -342,7 +349,7 @@ def main():
                 )
             )
             if bdef["hasEndValidity"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_end_validity,
@@ -350,7 +357,7 @@ def main():
                     )
                 )
             if bdef["hasDefiningText_fr"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_defining_text,
@@ -362,7 +369,7 @@ def main():
                     )
                 )
             if bdef["hasDefiningText_en"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_defining_text,
@@ -373,12 +380,12 @@ def main():
                         ),
                     )
                 )
-            si_graph.g.add((element,
+            units_graph.add((element,
                    si_graph.has_defining_resolution,
                    si_graph.set_resolution_uri(bdef["hasDefiningResolution"])))
 
             if bdef["hasDefiningEquation"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_defining_equation,
@@ -391,7 +398,7 @@ def main():
                     )
                 )
             if bdef["hasDefiningConstant"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_defining_constant,
@@ -399,7 +406,7 @@ def main():
                     )
                 )
             if bdef["Status"] is not None:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_status,
@@ -409,7 +416,7 @@ def main():
             # Only used for kilogram in base defs
             if "PrefixRestriction" not in bdef:
                 bdef['PrefixRestriction'] = False
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.prefix_restriction,
@@ -429,10 +436,10 @@ def main():
                         f"""{bdef['URI']}note{note['index']}"""
                         )
 
-                    si_graph.g.add((element, si_graph.has_definition_note, notenode))
-                    si_graph.g.add((notenode, RDF.type, si_graph.definition_note))
-                    si_graph.g.add((notenode, si_graph.has_note_index, Literal(note["index"])))
-                    si_graph.g.add(
+                    units_graph.add((element, si_graph.has_definition_note, notenode))
+                    units_graph.add((notenode, RDF.type, si_graph.definition_note))
+                    units_graph.add((notenode, si_graph.has_note_index, Literal(note["index"])))
+                    units_graph.add(
                         (
                             notenode,
                             si_graph.has_note_text,
@@ -440,7 +447,7 @@ def main():
                                                  add_delim=True), lang="en"),
                         )
                     )
-                    si_graph.g.add(
+                    units_graph.add(
                         (
                             notenode,
                             si_graph.has_note_text,
@@ -456,24 +463,24 @@ def main():
     for sisp in si_spec_list:
         if sisp["URI"] is not None:
             element = si_graph.set_unit_uri(sisp["URI"])
-            si_graph.g.add((element, RDF.type, si_graph.si_special_named_unit))
-            si_graph.g.add(
+            units_graph.add((element, RDF.type, si_graph.si_special_named_unit))
+            units_graph.add(
                 (
                     element,
                     si_graph.has_unit_type_as_string,
                     Literal("Named SI derived unit", lang="en"),
                 )
             )
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.has_unit_type_as_string,
                     Literal("Unité SI dérivée ayant un nom spécial", lang="fr"),
                 )
             )
-            si_graph.g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_fr"], lang="fr")))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_en"], lang="en")))
-            si_graph.g.add(
+            units_graph.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_fr"], lang="fr")))
+            units_graph.add((element, SKOS.prefLabel, Literal(sisp["prefLabel_en"], lang="en")))
+            units_graph.add(
                 (
                     element,
                     si_graph.has_symbol,
@@ -488,14 +495,14 @@ def main():
                 qty_kind_list = [sisp["UnitOfQtyKind"]]
 
             for qty_kind in qty_kind_list:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.is_unit_of_qty_kind,
                         si_graph.set_quantity_uri(qty_kind),
                     )
                 )
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.has_defining_resolution,
@@ -504,20 +511,20 @@ def main():
             )
 
             if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
-                si_graph.g, node = transform_to_graph(sisp["inOtherSIUnits"],
-                                             si_graph, si_graph.g)
-                si_graph.g.add((element, si_graph.in_other_si_units, node))
+                units_graph, node = transform_to_graph(sisp["inOtherSIUnits"],
+                                             si_graph, units_graph)
+                units_graph.add((element, si_graph.in_other_si_units, node))
 
 
             if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
-                si_graph.g, node = transform_to_graph(sisp["inBaseSIUnits"],
-                                             si_graph, si_graph.g)
-                si_graph.g.add((element, si_graph.in_base_si_units, node))
+                units_graph, node = transform_to_graph(sisp["inBaseSIUnits"],
+                                             si_graph, units_graph)
+                units_graph.add((element, si_graph.in_base_si_units, node))
 
             # Only used for degreeCelsius in sisp
             if "PrefixRestriction" not in sisp:
                 sisp['PrefixRestriction'] = False
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.prefix_restriction,
@@ -534,15 +541,15 @@ def main():
     for nsi in non_si_list:
         if nsi["URI"] is not None:
             element = si_graph.set_unit_uri(nsi["URI"])
-            si_graph.g.add((element, RDF.type, si_graph.non_si_unit))
-            si_graph.g.add(
+            units_graph.add((element, RDF.type, si_graph.non_si_unit))
+            units_graph.add(
                 (
                     element,
                     si_graph.has_unit_type_as_string,
                     Literal("Non-SI unit accepted for use with the SI", lang="en"),
                 )
             )
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.has_unit_type_as_string,
@@ -552,9 +559,9 @@ def main():
                     ),
                 )
             )
-            si_graph.g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
-            si_graph.g.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
-            si_graph.g.add(
+            units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
+            units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
+            units_graph.add(
                 (
                     element,
                     si_graph.has_symbol,
@@ -562,7 +569,7 @@ def main():
                 )
             )
             if "AltSymbol" in nsi:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_alt_symbol,
@@ -572,7 +579,7 @@ def main():
 
             if "PrefixRestriction" not in nsi:
                 nsi['PrefixRestriction'] = False
-            si_graph.g.add(
+            units_graph.add(
                 (
                     element,
                     si_graph.prefix_restriction,
@@ -589,7 +596,7 @@ def main():
                 qty_kind_list = [nsi["UnitOfQtyKind"]]
 
             for qty_kind in qty_kind_list:
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.is_unit_of_qty_kind,
@@ -614,16 +621,16 @@ def main():
                 conversion_factor_as_string = Literal(
                     nsi["ConversionFactorAsString"],
                     datatype=XSD.string)
-                si_graph.g, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
-                                                        si_graph, si_graph.g)
-                si_graph.g.add((unit_multiple, RDF.type, si_graph.set_uri("UnitMultiple")))
-                si_graph.g.add((unit_multiple, has_unit_term, conversion_unit))
-                si_graph.g.add((unit_multiple, has_numeric_factor, conversion_factor))
-                si_graph.g.add((unit_multiple, has_numeric_factor_as_string,
+                units_graph, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
+                                                        si_graph, units_graph)
+                units_graph.add((unit_multiple, RDF.type, si_graph.set_uri("UnitMultiple")))
+                units_graph.add((unit_multiple, has_unit_term, conversion_unit))
+                units_graph.add((unit_multiple, has_numeric_factor, conversion_factor))
+                units_graph.add((unit_multiple, has_numeric_factor_as_string,
                        conversion_factor_as_string))
-                si_graph.g.add((element, si_graph.in_other_si_units, unit_multiple))
+                units_graph.add((element, si_graph.in_other_si_units, unit_multiple))
 
-    return si_graph.g
+    return units_graph
 
 
 if __name__ == "__main__":

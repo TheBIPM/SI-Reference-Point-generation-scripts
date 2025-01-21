@@ -4,7 +4,7 @@ CUQ TBox
 
 from datetime import date
 import os
-from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode
+from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
 from si_ref_point.settings import CUQ_FILES_FOLDER, SIDFWBASE
@@ -18,21 +18,26 @@ class SiElements:
     def __init__(self, namespace: str = SIDFWBASE + "/SI#", ns_prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
 
-        # Define the namespaces within (base)/SI
+    # 1) Define namespaces, sub-namespace used by A boxes
+    #     and shortcuts
+
+        # ~/SI
         self.namespace = namespace
-        #   ... and the shortcut
         self.g.bind(ns_prefix, self.namespace)
 
+        # ~/SI/units
         self.namespace_units = SIDFWBASE + "/SI/units/"
+        # ~/SI/prefixes
         self.namespace_prefixes = SIDFWBASE + "/SI/prefixes/"
+        # ~/SI/decisions
         self.namespace_decisions = SIDFWBASE + "/SI/decisions/"
-
-        # Define the namespace within (base)/quantities
+        # ~/SI/quantities
         self.namespace_quantities = SIDFWBASE + "/quantities/"
-        # Define the namespace within (base)/constants
+        # ~/SI/constants
         self.namespace_constants = SIDFWBASE + "/constants/"
 
-       # Define the namespaces within (base)/bodies
+
+        # ~/bodies
         self.namespace_bodies_base = SIDFWBASE + "/bodies/"
         self.namespace_bodies = {}
         for body in bodies_list:
@@ -46,22 +51,46 @@ class SiElements:
                          'CUQ_extended_concepts.ttl']:
             self.g.parse(os.path.join(CUQ_FILES_FOLDER, ttl_file),
                          format="ttl")
-        # Update creation date
-        self.g.add(
-            (
-                URIRef(self.namespace),
-                DCTERMS.created,
-                Literal(str(date.today()), datatype=XSD.date)
-            )
-        )
-        self.g.add(
-            (
-                URIRef(self.namespace),
-                RDF.type,
-                OWL.Ontology,
-            )
-        )
 
+    # 2) Add annotations to the ontology
+
+        self.g.add(
+            (URIRef(self.namespace),
+             RDF.type,
+             OWL.Ontology)
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             SKOS.prefLabel,
+             Literal("SI Reference Point", datatype=XSD.string),
+            )
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             DCTERMS.created,
+             Literal(str(date.today()), datatype=XSD.date))
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             RDFS.comment,
+             Literal((
+                    "Ontology, part of the SI Reference Point, covering "
+                    "measurement units (SI base units and SI units with "
+                    "special names) and prefixes."),datatype=XSD.string))
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             OWL.versionIRI,
+             URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/si.ttl"))
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             OWL.versionInfo,
+             Literal('2024-12-17',datatype=XSD.string)
+        )
+    )
+
+    # 3) Define classes and predicates used by different A boxes
 
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")
