@@ -4,10 +4,10 @@ CUQ TBox
 
 from datetime import date
 import os
-from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS
+from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CUQ_FILES_FOLDER, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -35,7 +35,6 @@ class SiElements:
         self.namespace_quantities = SIDFWBASE + "/quantities/"
         # ~/SI/constants
         self.namespace_constants = SIDFWBASE + "/constants/"
-
 
         # ~/bodies
         self.namespace_bodies_base = SIDFWBASE + "/bodies/"
@@ -78,17 +77,32 @@ class SiElements:
                     "measurement units (SI base units and SI units with "
                     "special names) and prefixes."),datatype=XSD.string))
         )
+        version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/si.ttl"
         self.g.add(
             (URIRef(self.namespace),
              OWL.versionIRI,
-             URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/si.ttl"))
+             URIRef(version_iri_path))
         )
         self.g.add(
             (URIRef(self.namespace),
              OWL.versionInfo,
-             Literal('2024-12-17',datatype=XSD.string)
+             Literal(RELEASE_DATE,datatype=XSD.string))
         )
-    )
+        self.g.add(
+            (URIRef(self.namespace),
+             PROV.wasGeneratedBy,
+             Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+        )
+        self.g.add(
+         (URIRef(self.namespace),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             RDFS.comment,
+             Literal(CC_LICENCE_TEXT_EN,lang="en"))
+        )
 
     # 3) Define classes and predicates used by different A boxes
 

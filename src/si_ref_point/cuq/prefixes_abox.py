@@ -6,9 +6,9 @@ Prefixes ABox
 import os
 from datetime import date
 import yaml
-from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal
+from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
-from si_ref_point.settings import CUQ_FILES_FOLDER
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER,GENERATING_SW_VERSION,RELEASE_DATE, SIDFWBASE
 
 
 def main():
@@ -44,10 +44,26 @@ def main():
          Literal("Ontology, part of the SI Reference Point, covering "
                    "prefixes for the SI measurement units."))
     )
+    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/prefixes.ttl"
     prefix_graph.add(
         (URIRef(si_graph.namespace_prefixes),
          OWL.versionIRI,
-         URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/prefixes.ttl"))
+         URIRef(version_iri_path))
+    )
+    prefix_graph.add(
+        (URIRef(si_graph.namespace_prefixes),
+         PROV.wasGeneratedBy,
+         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+    )
+    prefix_graph.add(
+         (URIRef(si_graph.namespace_prefixes),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+    )
+    prefix_graph.add(
+        (URIRef(si_graph.namespace_prefixes),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
 
     # 1) open YAML files with information

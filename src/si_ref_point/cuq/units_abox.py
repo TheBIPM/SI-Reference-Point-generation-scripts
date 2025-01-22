@@ -6,11 +6,10 @@ from datetime import date
 import os
 import logging
 import yaml
-from rdflib import Graph, URIRef, BNode, Literal
-from rdflib import RDF, OWL, SKOS, XSD, RDFS, DCTERMS
+from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CUQ_FILES_FOLDER
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 
 def nest_mult(expr):
@@ -176,19 +175,35 @@ def main():
             ),
         )
     )
+    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/units.ttl"
     units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             OWL.versionIRI,
-            URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/units.ttl")
+            URIRef(version_iri_path)
         )
     )
     units_graph.add(
         (
             URIRef(si_graph.namespace_units),
             OWL.versionInfo,
-            Literal('2024-12-17',datatype=XSD.string)
+            Literal(RELEASE_DATE,datatype=XSD.string)
         )
+    )
+    units_graph.add(
+        (URIRef(si_graph.namespace_units),
+         PROV.wasGeneratedBy,
+         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+    )
+    units_graph.add(
+         (URIRef(si_graph.namespace_units),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+    )
+    units_graph.add(
+        (URIRef(si_graph.namespace_units),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
 
     # 2) open YAML files with information

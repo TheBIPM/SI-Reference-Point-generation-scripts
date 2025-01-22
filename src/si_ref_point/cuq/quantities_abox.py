@@ -5,11 +5,11 @@ Quantities ABox
 from datetime import date
 import os
 import logging
-from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD
+from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.cuq.units_abox import transform_to_graph
-from si_ref_point.settings import CUQ_FILES_FOLDER
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 
 
@@ -48,16 +48,33 @@ def main():
                    "covering quantities",
                    datatype=XSD.string))
     )
+    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/quantities.ttl"
     quantities_graph.add(
         (URIRef(si_graph.namespace_quantities),
          OWL.versionIRI,
-         URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/quantities.ttl"))
+         URIRef(version_iri_path))
     )
     quantities_graph.add(
         (URIRef(si_graph.namespace_quantities),
          OWL.versionInfo,
-         Literal('2024-12-17',datatype=XSD.string))
+         Literal(RELEASE_DATE,datatype=XSD.string))
     )
+    quantities_graph.add(
+        (URIRef(si_graph.namespace_quantities),
+         PROV.wasGeneratedBy,
+         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+    )
+    quantities_graph.add(
+         (URIRef(si_graph.namespace_quantities),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+    )
+    quantities_graph.add(
+        (URIRef(si_graph.namespace_quantities),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_EN,lang="en"))
+    )
+
     # 2) crawl through the list of YAML files
     qty_files = ['quantities_core.yaml', 'quantities_other.yaml']
     qty_code_list = []

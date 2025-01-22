@@ -4,11 +4,11 @@ constants A-Box
 
 from datetime import date
 import os
-from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal
+from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CUQ_FILES_FOLDER
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 from si_ref_point.cuq.units_abox import transform_to_graph
 
 
@@ -47,10 +47,26 @@ def main():
                     "seven underpinning constants of the SI"),
                    datatype=XSD.string))
     )
+    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/constants.ttl"
     constants_graph.add(
         (URIRef(si_graph.namespace_constants),
          OWL.versionIRI,
-         URIRef("https://si-digital-framework.org/SI/releases/2024-12-17/constants.ttl"))
+         URIRef(version_iri_path))
+    )
+    constants_graph.add(
+        (URIRef(si_graph.namespace_constants),
+         PROV.wasGeneratedBy,
+         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+    )
+    constants_graph.add(
+         (URIRef(si_graph.namespace_constants),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+    )
+    constants_graph.add(
+        (URIRef(si_graph.namespace_constants),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
 
     # 3) open yaml with information
