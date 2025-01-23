@@ -9,7 +9,7 @@ from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, P
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.cuq.units_abox import transform_to_graph
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 
 
@@ -74,7 +74,11 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
-
+    quantities_graph.add(
+        (URIRef(si_graph.namespace_quantities),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+    )
     # 2) crawl through the list of YAML files
     qty_files = ['quantities_core.yaml', 'quantities_other.yaml']
     qty_code_list = []
@@ -85,7 +89,7 @@ def main():
             qty_list = yaml.safe_load(fp)
 
             # add the individual quantities to the graph
-            for qty in qty_list:
+            for qty in qty_list["data"]:
                 if qty['identifier'] not in qty_code_list:
                     qty_code_list.append(qty['identifier'])
                 else:

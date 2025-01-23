@@ -8,7 +8,7 @@ from datetime import date
 import yaml
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER,GENERATING_SW_VERSION,RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER,GENERATING_SW_VERSION,RELEASE_DATE, SIDFWBASE
 
 
 def main():
@@ -65,13 +65,17 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
-
+    prefix_graph.add(
+        (URIRef(si_graph.namespace_prefixes),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+    )
     # 1) open YAML files with information
     with open(os.path.join(CUQ_FILES_FOLDER, 'prefixes.yaml'),encoding='utf-8') as fp:
         prefixes = yaml.safe_load(fp)
 
     # 2) Create prefixes
-    for prfx in prefixes:
+    for prfx in prefixes["data"]:
         uri_text = prfx['URI']
         pref_label_en = prfx['prefLabel_en']
         pref_label_fr = prfx['prefLabel_fr']

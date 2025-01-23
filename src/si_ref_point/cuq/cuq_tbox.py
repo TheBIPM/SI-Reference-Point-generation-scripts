@@ -7,7 +7,7 @@ import os
 from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -103,7 +103,11 @@ class SiElements:
              RDFS.comment,
              Literal(CC_LICENCE_TEXT_EN,lang="en"))
         )
-
+        self.g.add(
+            (URIRef(self.namespace),        
+             RDFS.comment,
+             Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+        )
     # 3) Define classes and predicates used by different A boxes
 
         self.constant = self.set_uri("Constant")

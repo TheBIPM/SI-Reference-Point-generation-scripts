@@ -9,7 +9,7 @@ import yaml
 from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 
 
 def nest_mult(expr):
@@ -205,7 +205,11 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
-
+    units_graph.add(
+        (URIRef(si_graph.namespace_units),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+    )
     # 2) open YAML files with information
     with open(os.path.join(CUQ_FILES_FOLDER, "def_collectors.yaml"), encoding='utf-8') as fp:
         def_collectors = yaml.safe_load(fp)
@@ -213,7 +217,7 @@ def main():
     # 3) Base unit definitions
     # 3.1) Define the BaseUnit (to which one can subsequently attach several
     # definitions)
-    for dc in def_collectors:
+    for dc in def_collectors["data"]:
         if dc["URI"] is not None:
             element = si_graph.set_unit_uri(dc["URI"])
 
@@ -348,8 +352,9 @@ def main():
         basedefs = yaml.safe_load(fp)
     with open(os.path.join(CUQ_FILES_FOLDER, "notes.yaml"), encoding="utf8") as fp:
         notes = yaml.safe_load(fp)
+    
 
-    for bdef in basedefs:
+    for bdef in basedefs["data"]:
         # add data
         if bdef["URI"] is not None:
             element = si_graph.set_unit_uri(bdef["URI"])
@@ -442,7 +447,7 @@ def main():
 
             # notes
             # get all the notes for a definition
-            for note in notes:
+            for note in notes["data"]:
                 if note["uri"] == bdef["URI"]:
                     # notenode = si_graph.set_uri(
                     #     "{}note{}".format(bdef["URI"], note["index"])
@@ -475,7 +480,7 @@ def main():
     with open(os.path.join(CUQ_FILES_FOLDER, "si_units_special_names.yaml"),encoding='utf-8') as fp:
         si_spec_list = yaml.safe_load(fp)
 
-    for sisp in si_spec_list:
+    for sisp in si_spec_list["data"]:
         if sisp["URI"] is not None:
             element = si_graph.set_unit_uri(sisp["URI"])
             units_graph.add((element, RDF.type, si_graph.si_special_named_unit))
@@ -553,7 +558,7 @@ def main():
     with open(os.path.join(CUQ_FILES_FOLDER, "non_si_units.yaml"),encoding='utf-8') as fp:
         non_si_list = yaml.safe_load(fp)
 
-    for nsi in non_si_list:
+    for nsi in non_si_list["data"]:
         if nsi["URI"] is not None:
             element = si_graph.set_unit_uri(nsi["URI"])
             units_graph.add((element, RDF.type, si_graph.non_si_unit))

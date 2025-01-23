@@ -8,7 +8,7 @@ from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, P
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 from si_ref_point.cuq.units_abox import transform_to_graph
 
 
@@ -68,13 +68,18 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_EN,lang="en"))
     )
+    constants_graph.add(
+        (URIRef(si_graph.namespace_constants),
+         RDFS.comment,
+         Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+    )
 
     # 3) open yaml with information
     with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'),
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
 
-    for cst in cst_list:
+    for cst in cst_list["data"]:
         element = si_graph.set_constant_uri(cst['id'])
         constants_graph.add((element, RDF.type, si_graph.constant))
         constants_graph.add((element, si_graph.has_value_as_string,

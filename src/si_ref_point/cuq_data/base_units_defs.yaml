@@ -1,3 +1,10 @@
+meta: 
+  file_name: "base_units_defs.yaml"
+  file_version: "1.0.0"
+  created_by: "Frédéric Meynadier"
+  created_date: "2023-01-01"
+  derived_from: "SI Brochure 9th ed, V3.01"
+data:
 - URI: ampere1948
   prefLabel_fr: ampère1948
   prefLabel_en: ampere1948
