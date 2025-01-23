@@ -4,4 +4,4 @@ try:
     __version__ = version("si_ref_point")
 except PackageNotFoundError:
     # package is not installed
-    pass
+    __version__ = "0.0.0"
