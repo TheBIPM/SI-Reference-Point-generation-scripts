@@ -4,10 +4,11 @@ CUQ TBox
 
 from datetime import date
 import os
+import yaml
 from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE, SI_BROCHURE_PID
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -31,11 +32,16 @@ class SiElements:
         self.namespace_prefixes = SIDFWBASE + "/SI/prefixes/"
         # ~/SI/decisions
         self.namespace_decisions = SIDFWBASE + "/SI/decisions/"
-        # ~/SI/quantities
+        # ~/SI/activities (in the sens of PROVENANCE)
+        self.namespace_activities = SIDFWBASE + "/SI/activities/"
+        # ~/SI/agents (in the sens of PROVENANCE)
+        self.namespace_agents = SIDFWBASE + "/SI/agents/"
+        # ~/SI/entities (in the sens of PROVENANCE)
+        self.namespace_entities = SIDFWBASE + "/SI/entities/"
+        # ~/quantities
         self.namespace_quantities = SIDFWBASE + "/quantities/"
-        # ~/SI/constants
+        # ~/constants
         self.namespace_constants = SIDFWBASE + "/constants/"
-
         # ~/bodies
         self.namespace_bodies_base = SIDFWBASE + "/bodies/"
         self.namespace_bodies = {}
@@ -45,13 +51,52 @@ class SiElements:
         #   ... and the shortcut
         self.g.bind('rb', RES_BOD_NS)
 
+        #~/entities
+        self.namespace_entities = SIDFWBASE + "/SI/entities#"
+        self.g.bind("entities",self.namespace_entities)
+
+        #~/activities
+        self.namespace_activities = SIDFWBASE + "/SI/activities#"
+        self.g.bind("activities",self.namespace_activities)
+
         # Load graph from ttl files
         for ttl_file in ['CUQ_core_concepts.ttl',
                          'CUQ_extended_concepts.ttl']:
             self.g.parse(os.path.join(CUQ_FILES_FOLDER, ttl_file),
                          format="ttl")
+            
+    # 2) Define resources for the PROVENANCE meta data used to build the ontology
+    #   2.1 Entities
 
-    # 2) Add annotations to the ontology
+        filelist = {'base_units_defs.yaml',
+                    'def_collectors.yaml',
+                    'non_si_units.yaml',
+                    'notes.yaml',
+                    'prefixes.yaml',
+                    'quantities_core.yaml',
+                    'quantities_other.yaml',
+                    'si_constants.yaml',
+                    'si_units_special_names.yaml'}
+        for filename in filelist:
+            with open(os.path.join(CUQ_FILES_FOLDER,filename), 
+              encoding="utf8") as fp:
+                filecontent = yaml.safe_load(fp)
+            identifier = filecontent['meta']['file_name']+ "_" + filecontent['meta']['file_version']
+            
+            self.g.add((self.set_entity_uri(identifier),RDF.type,PROV.entity))
+
+    #   2.2 Activities
+        activitylist = {'si_ttl_generation',
+                        'units_ttl_generation'}
+        for activity in activitylist:
+            self.g.add((self.set_activity_uri(activity),RDF.type,PROV.activity))
+    
+
+
+
+
+
+    # 3) Add annotations to the ontology
 
         self.g.add(
             (URIRef(self.namespace),
@@ -182,6 +227,14 @@ class SiElements:
         """ Utility method """
         return URIRef(self.namespace + name)
 
+    def set_activity_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_activities + name)
+    
+    def set_entity_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_entities + name)
+    
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)

@@ -8,7 +8,8 @@ from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, P
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
+    CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
 from si_ref_point.cuq.units_abox import transform_to_graph
 
 
@@ -75,7 +76,7 @@ def main():
     )
 
     # 3) open yaml with information
-    with open(os.path.join(CUQ_FILES_FOLDER,  'si_constants.yaml'),
+    with open(os.path.join(CUQ_FILES_FOLDER,'si_constants.yaml'),
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)
 
@@ -93,10 +94,14 @@ def main():
                 cmpnd_unit = {"mult": []}
                 for item in cst['unit']:
                     cmpnd_unit['mult'].append({"exp": [item[0], item[1]]})
-                constants_graph, cmpnd_node = transform_to_graph(cmpnd_unit, si_graph, constants_graph)
+                constants_graph, cmpnd_node = transform_to_graph(cmpnd_unit,
+                                                                 si_graph,
+                                                                 constants_graph)
                 constants_graph.add((element, si_graph.has_unit, cmpnd_node))
             else:
-                constants_graph.add((element, si_graph.has_unit, si_graph.set_unit_uri(cst['unit'])))
+                constants_graph.add((element,
+                                     si_graph.has_unit,
+                                     si_graph.set_unit_uri(cst['unit'])))
         constants_graph.add((element, si_graph.has_value,
                Literal(cst['value'], datatype=XSD[cst['xsd_type']], normalize=False)))
         constants_graph.add((element, si_graph.has_datatype, XSD[cst['xsd_type']]))

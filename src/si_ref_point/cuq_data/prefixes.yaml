@@ -1,6 +1,6 @@
 meta: 
-  file_name: "base_units_defs.yaml"
-  file_version: "1.0.0"
+  file_name: "prefixes_YAML"
+  file_version: "1_0_0"
   created_by: "Frédéric Meynadier"
   created_date: "2023-01-01"
   derived_from: "SI Brochure 9th ed, V3.01"

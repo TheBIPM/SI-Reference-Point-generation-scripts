@@ -1,3 +1,7 @@
+"""
+seetings.py
+Global constants etc
+"""
 import os
 import pathlib
 package_dir = pathlib.Path(__file__).parent.resolve()
@@ -9,7 +13,6 @@ SIDFWBASE = "https://si-digital-framework.org"      # Base URL for the SI Digita
                                                     # - (SIDFWBASE)/SI#
                                                     # - (SIDFWBASE)/constants#
                                                     # - (SIDFWBASE)/bodies#
-                                                    
 
 
 # Locations of input and output files
@@ -32,8 +35,12 @@ RELEASE_DATE = "2024-12-17"
 # Version of the generating software
 # (The version of the Python code generating the TTL files.
 #  not to be confused witht the version of the knowledge graph.
-#  The code can be changed without necessarily a change of the knowledge graph)
+#  The code can be changed without a change of the knowledge graph)
 GENERATING_SW_VERSION = "0.5.0"
+
+
+
+SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
 CC_LICENCE = "http://creativecommons.org/licenses/by/4.0/"
@@ -48,8 +55,8 @@ term IRIs for individual terms), provide a link to the license, and
 indicate if any changes were made. You may do so in any reasonable
 manner, but not in any way that suggests the licensor endorses you or
 your use."""
-CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous 
-licence CC BY 4.0. Vous êtes autorisés à partager (copier, distribuer et communiquer 
+CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous
+licence CC BY 4.0. Vous êtes autorisés à partager (copier, distribuer et communiquer
 le matériel par tous moyens et sous tous formats) et adapter (remixer, transformer
 et créer à partir du matériel) pour toute utilisation, y compris commerciale.
 L'Offrant ne peut retirer les autorisations concédées par la licence tant que
