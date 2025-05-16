@@ -279,6 +279,13 @@ def main():
                 si_graph.g.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
+                if "prefixRestriction" in dc:
+                    si_graph.g.add(
+                        (element,
+                         si_graph.prefix_restriction,
+                         Literal(dc["prefixRestriction"], datatype=XSD.boolean),
+                        )
+                    )
                 if "isUnitOfQtyKind" in dc:  # "one" has many unlisted quantity kinds
                     si_graph.g.add(
                         (

@@ -70,4 +70,5 @@
 - URI: one
   prefLabel(fr): un
   prefLabel(en): one
+  prefixRestriction: true
   hasSymbol: "1"
