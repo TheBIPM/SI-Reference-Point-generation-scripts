@@ -67,3 +67,7 @@
   prefLabel(en): gram
   isUnitOfQtyKind: MASS
   hasSymbol: g
+- URI: one
+  prefLabel(fr): un
+  prefLabel(en): one
+  hasSymbol: "1"
