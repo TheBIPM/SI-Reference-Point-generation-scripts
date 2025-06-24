@@ -42,14 +42,13 @@ def transform_to_graph(expression, si_graph, graph):
     For representing m/s, for example
 
     Dicts will be expected to be like
-    {"mult": [{"exp": ["metre", 1]}, {"exp": ["second", -1]}]
+    {"mult": [{"exp": ["metre", 1]}, {"exp": ["second", -1]}]}
 
     Lists will be expected to be like :
     [["metre", 1], ["second", -1]
-    (this allows more compact notation in source YAML files
+    (this allows more compact notation in source YAML files)
 
-    Strings will be considered to represent a single unit, and turned into an
-    URI.
+    Strings will be considered to represent a single unit, and turned into a URI.
 
 
     This function calls itself in order to walk the tree of nested UnitProduct
@@ -196,7 +195,6 @@ def main():
                     )
                 )
                 # UnitOfQtyKind can be list or single item
-                qty_kind_list = []
                 if isinstance(dc["isUnitOfQtyKind"], list):
                     qty_kind_list = dc["isUnitOfQtyKind"]
                 else:
@@ -467,7 +465,6 @@ def main():
                 )
             )
             # UnitOfQtyKind can be list or single item
-            qty_kind_list = []
             if isinstance(sisp["UnitOfQtyKind"], list):
                 qty_kind_list = sisp["UnitOfQtyKind"]
             else:
@@ -568,7 +565,6 @@ def main():
                 )
 
             # UnitOfQtyKind can be list or single item
-            qty_kind_list = []
             if isinstance(nsi["UnitOfQtyKind"], list):
                 qty_kind_list = nsi["UnitOfQtyKind"]
             else:
