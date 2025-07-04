@@ -18,7 +18,10 @@ si:hasTerm a owl:ObjectProperty ;
 
 si:hasUnitTerm a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasTerm ;
-    rdfs:domain si:UnitMultiple ;
+    rdfs:domain [
+        owl:oneOf ( si:UnitProduct si:UnitMultiple )
+    ];
+    rdfs:range si:MeasurementUnit ;
     rdfs:label "has unit term"@en,
         "a cette unité pour terme"@fr .
 
