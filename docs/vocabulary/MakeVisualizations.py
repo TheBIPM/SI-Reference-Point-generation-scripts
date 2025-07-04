@@ -92,7 +92,7 @@ def main(APIPATH):
 
         # Unit-related concepts
         out.write("## Unit-related Concepts\n")
-        out.write("```mermaid\n")
+        out.write("\n```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
         out.write("classDiagram\ndirection RL\n")
         res = g.query(unit_taxonomy_query)
@@ -103,11 +103,11 @@ def main(APIPATH):
             print(class_display, superclass_display)
 
             out.write(f"`{class_display}` --|> `{superclass_display}` : rdfs#colon;subClassOf\n")
-        out.write("```\n")
+        out.write("```\n\n")
 
         # QuantityKind-related concepts
         out.write("## QuantityKind-related Concepts\n")
-        out.write("```mermaid\n")
+        out.write("\n```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
         out.write("classDiagram\ndirection RL\n")
         res = g.query(qty_taxonomy_query)
@@ -118,11 +118,11 @@ def main(APIPATH):
             print(class_display, superclass_display)
 
             out.write(f"`{class_display}` --|> `{superclass_display}` : rdfs#colon;subClassOf\n")
-        out.write("```\n")
+        out.write("```\n\n")
 
         # CompoundUnit-related concepts
         out.write("## CompoundUnit-related properties\n")
-        out.write("```mermaid\n")
+        out.write("\n```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
         out.write("classDiagram\ndirection LR\n")
         res = g.query(comp_unit_query)
@@ -134,11 +134,11 @@ def main(APIPATH):
             print(class_display, superclass_display)
 
             out.write(f"`{class_display}` --|> `{range_display}` : {prop_display.replace(':', '#colon;')}\n")
-        out.write("```\n")
+        out.write("```\n\n")
 
         # definition-related concepts
         out.write("## Definition-related properties\n")
-        out.write("```mermaid\n")
+        out.write("\n```mermaid\n")
         out.write("%%{init: { 'class': {'hideEmptyMembersBox':true} } }%%\n")
         out.write("classDiagram\ndirection LR\n")
         res = g.query(definition_query)
@@ -150,11 +150,12 @@ def main(APIPATH):
             print(domain_display, prop_display, range_display)
 
             out.write(f"`{domain_display}` --|> `{range_display}` : {prop_display.replace(':', '#colon;')}\n")
-        out.write("```\n")
+        out.write("```\n\n")
 
 
-    # convert to pdfs using mermaid-cli:
+    # convert to pdfs using mermaid-cli:  (npm install mermaid-cli mmdc)
     # npx mmdc -i .\class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
+    # npx mmdc -i .\class_diagram_details.md -f -e svg -o class_diagrams_details_converted.md  #  to fix bad self-reference manually
 
     # best result with mermaid 10.9.1 (current version 11.4.2 not showing multiple self-references):
     # npm install -g @mermaid-js/mermaid-cli@10.9.1
