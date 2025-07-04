@@ -58,3 +58,5 @@ Testing/API/unit_parser.py
 
 # npm environment
 node_modules
+package-lock.json
+package.json
