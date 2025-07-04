@@ -60,7 +60,7 @@ def main(APIPATH):
             WHERE
             {
                 ?class rdfs:subClassOf si:CompoundUnit .
-                ?prop rdfs:domain ?class . 
+                ?prop rdfs:domain/owl:oneOf?/(rdf:first|rdf:rest)* ?class . 
                 OPTIONAL {?prop rdfs:range ?range}
             }
             ORDER BY ?class
