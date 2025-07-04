@@ -56,3 +56,5 @@ Testing/API/unit_parser.py
 # Pyenv
 .python-version
 
+# npm environment
+node_modules
