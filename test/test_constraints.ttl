@@ -1,0 +1,37 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix si:       <https://si-digital-framework.org/SI#> .
+@prefix prefixes: <https://si-digital-framework.org/SI/prefixes/> .
+@prefix units:    <https://si-digital-framework.org/SI/units/> .
+@prefix test:     <https://example.org/test#> .
+
+
+# base units shall be units, but no prefixed units
+test:range_of_hasBaseUnit a sh:NodeShape ;
+    sh:targetClass si:PrefixedUnit ;
+    sh:property [
+        sh:path si:hasBaseUnit ;
+        sh:maxCount 1 ;
+        sh:class si:MeasurementUnit ;
+        sh:not [
+            a sh:NodeShape;
+            sh:class si:PrefixedUnit;
+        ] ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+
+# only use base units, that are allowed with prefixes (without a prefix restriction)
+test:no_prefixRestriction a sh:NodeShape ;
+    sh:targetClass si:PrefixedUnit ;
+    sh:property [
+        sh:path ( si:hasBaseUnit si:prefixRestriction );
+        sh:maxCount 1 ;
+        sh:not [
+            a sh:NodeShape;
+            sh:hasValue true;
+        ];
+    ] .

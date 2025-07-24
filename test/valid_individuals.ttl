@@ -1,0 +1,12 @@
+@prefix si: <https://si-digital-framework.org/SI#> .
+@prefix prefixes: <https://si-digital-framework.org/SI/prefixes/> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix ex: <https://example.org/tmp#> .
+
+ex:valid_unit_1 a si:PrefixedUnit ;
+    si:hasPrefix prefixes:milli ;
+    si:hasBaseUnit units:gram .
+
+ex:valid_unit_2 a si:PrefixedUnit ;
+    si:hasPrefix prefixes:mega ;
+    si:hasBaseUnit units:second .
