@@ -34,9 +34,9 @@ RELEASE_DATE = "2024-12-17"
 
 # Version of the generating software
 # (The version of the Python code generating the TTL files.
-#  not to be confused witht the version of the knowledge graph.
+#  not to be confused with the version of the knowledge graph.
 #  The code can be changed without a change of the knowledge graph)
-GENERATING_SW_VERSION = "0.5.0"
+GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 
 
 
@@ -45,7 +45,7 @@ SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFW
 # Licences
 CC_LICENCE = "http://creativecommons.org/licenses/by/4.0/"
 CC_LICENCE_TEXT_EN = """The SI Reference Point Ontology developed by the BIPM is
-licensed under CC BY 4.0. You are free to share (copy and redistribute
+licensed under CC-BY-3.0-IGO. You are free to share (copy and redistribute
 the material in any medium or format) and adapt (remix, transform, and
 build upon the material) for any purpose, even commercially, for any
 purpose, even commercially. The licensor cannot revoke these freedoms as
@@ -56,7 +56,7 @@ indicate if any changes were made. You may do so in any reasonable
 manner, but not in any way that suggests the licensor endorses you or
 your use."""
 CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous
-licence CC BY 4.0. Vous êtes autorisés à partager (copier, distribuer et communiquer
+licence CC-BY-3.0-IGO. Vous êtes autorisés à partager (copier, distribuer et communiquer
 le matériel par tous moyens et sous tous formats) et adapter (remixer, transformer
 et créer à partir du matériel) pour toute utilisation, y compris commerciale.
 L'Offrant ne peut retirer les autorisations concédées par la licence tant que

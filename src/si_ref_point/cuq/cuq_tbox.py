@@ -3,12 +3,13 @@ CUQ TBox
 """
 
 from datetime import date
+import git
 import os
 import yaml
 from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE, SI_BROCHURE_PID
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE, SI_BROCHURE_PID
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -82,22 +83,12 @@ class SiElements:
               encoding="utf8") as fp:
                 filecontent = yaml.safe_load(fp)
             identifier = filecontent['meta']['file_name']+ "_" + filecontent['meta']['file_version']
-            
-            self.g.add((self.set_entity_uri(identifier),RDF.type,PROV.entity))
 
-    #   2.2 Activities
-        activitylist = {'si_ttl_generation',
-                        'units_ttl_generation'}
-        for activity in activitylist:
-            self.g.add((self.set_activity_uri(activity),RDF.type,PROV.activity))
-    
-
-
-
-
+            self.g.add((self.set_entity_uri(identifier),RDF.type,PROV.Entity))
 
     # 3) Add annotations to the ontology
 
+    #   3.1 General annotations (type, comments etc)
         self.g.add(
             (URIRef(self.namespace),
              RDF.type,
@@ -109,11 +100,12 @@ class SiElements:
              Literal("SI Reference Point", datatype=XSD.string),
             )
         )
-        self.g.add(
-            (URIRef(self.namespace),
-             DCTERMS.created,
-             Literal(str(date.today()), datatype=XSD.date))
-        )
+# ------> check if still needed (as there is a versioning section. See below)
+        # self.g.add(
+        #     (URIRef(self.namespace),
+        #      DCTERMS.created,
+        #      Literal(str(date.today()), datatype=XSD.date))
+        # )
         self.g.add(
             (URIRef(self.namespace),
              RDFS.comment,
@@ -122,6 +114,10 @@ class SiElements:
                     "measurement units (SI base units and SI units with "
                     "special names) and prefixes."),datatype=XSD.string))
         )
+
+    #   3.2 Versioning
+
+        # IRI
         version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/si.ttl"
         self.g.add(
             (URIRef(self.namespace),
@@ -133,11 +129,54 @@ class SiElements:
              OWL.versionInfo,
              Literal(RELEASE_DATE,datatype=XSD.string))
         )
+        # declare this code as an 'agent' (in the sense of PROVENANCE) 
+        # and define URI to a specific version by using its commit on github
+        repo = git.Repo(search_parent_directories=True)
+        sha = repo.head.object.hexsha
+        agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py"
         self.g.add(
-            (URIRef(self.namespace),
-             PROV.wasGeneratedBy,
-             Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+            (URIRef(agent_sw),
+             RDF.type,
+             PROV.Agent)
         )
+        # declare the ttl_generation as activity (in the sense of PROVENANCE)
+        # which can be linked to a start time and an agent
+        activitylist = {'si_ttl_generation'}     # list of activities, needed to produce the TTL
+        for activity in activitylist:
+            self.g.add(
+                (self.set_activity_uri(activity),
+                RDF.type,
+                PROV.Activity)
+                )
+            self.g.add(
+                (self.set_activity_uri(activity),
+                PROV.wasAssociatedWith,
+                URIRef(agent_sw))
+                )
+            self.g.add(
+                (self.set_activity_uri(activity),
+                 PROV.startedAtTime,
+                 Literal(str(date.today()), datatype=XSD.date))
+            )
+
+        entity = "si.ttl"
+        self.g.add(
+            (self.set_entity_uri(entity),
+             RDF.type,
+             PROV.Entity)
+             )
+        self.g.add(
+            (self.set_entity_uri(entity),
+             PROV.wasAttributedTo,
+             URIRef(agent_sw))
+             )
+        self.g.add(
+            (self.set_entity_uri(entity),
+             PROV.wasGeneratedBy,
+             self.set_activity_uri(activity))
+            )
+
+    #   3.3 License
         self.g.add(
          (URIRef(self.namespace),
           DCTERMS.license,
@@ -153,7 +192,7 @@ class SiElements:
              RDFS.comment,
              Literal(CC_LICENCE_TEXT_FR,lang="fr"))
         )
-    # 3) Define classes and predicates used by different A boxes
+    # 4) Define classes and predicates used by different A boxes
 
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")
@@ -219,6 +258,8 @@ class SiElements:
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
         self.has_exponent = self.set_uri("hasExponent")
 
+    # 5) Utility methods
+
     def uri(self, name: str) -> URIRef:
         """Utility method """
         return URIRef(self.namespace + name)
@@ -230,7 +271,7 @@ class SiElements:
     def set_activity_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_activities + name)
-    
+
     def set_entity_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_entities + name)
@@ -279,3 +320,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

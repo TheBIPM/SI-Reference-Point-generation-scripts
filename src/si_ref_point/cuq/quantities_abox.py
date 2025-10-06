@@ -3,13 +3,14 @@ Quantities ABox
 """
 
 from datetime import date
+import git
 import os
 import logging
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.cuq.units_abox import transform_to_graph
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE
 
 
 
@@ -36,11 +37,11 @@ def main():
          SKOS.prefLabel,
          Literal("SI Reference Point - Quantities", datatype=XSD.string))
     )
-    quantities_graph.add(
-        (URIRef(si_graph.namespace_quantities),
-         DCTERMS.created,
-         Literal(str(date.today()), datatype=XSD.date))
-    )
+    # quantities_graph.add(
+    #     (URIRef(si_graph.namespace_quantities),
+    #      DCTERMS.created,
+    #      Literal(str(date.today()), datatype=XSD.date))
+    # )
     quantities_graph.add(
         (URIRef(si_graph.namespace_quantities),
          RDFS.comment,
@@ -59,11 +60,55 @@ def main():
          OWL.versionInfo,
          Literal(RELEASE_DATE,datatype=XSD.string))
     )
+    # attribute the ttl output to a specific version of this code, identified by its commit
+        # declare this code as an 'agent' (in the sense of PROVENANCE) 
+        # and define URI to a specific version by using its commit on github
+    repo = git.Repo(search_parent_directories=True)
+    sha = repo.head.object.hexsha
+    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/quantities_abox.py"
     quantities_graph.add(
-        (URIRef(si_graph.namespace_quantities),
-         PROV.wasGeneratedBy,
-         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+        (URIRef(agent_sw),
+            RDF.type,
+            PROV.Agent)
     )
+    # declare the ttl_generation as activity (in the sense of PROVENANCE)
+    # which can be linked to a start time and an agent
+    activitylist = {'quantities_ttl_generation'}     # list of activities, needed to produce the TTL
+    for activity in activitylist:
+        quantities_graph.add(
+            (si_graph.set_activity_uri(activity),
+            RDF.type,
+            PROV.Activity)
+        )
+        quantities_graph.add(
+            (si_graph.set_activity_uri(activity),
+            PROV.wasAssociatedWith,
+            URIRef(agent_sw))
+        )
+        quantities_graph.add(
+            (si_graph.set_activity_uri(activity),
+                PROV.startedAtTime,
+                Literal(str(date.today()), datatype=XSD.date))
+        )
+
+    entity = "quantities.ttl"
+    quantities_graph.add(
+        (si_graph.set_entity_uri(entity),
+            RDF.type,
+            PROV.Entity)
+    )
+    quantities_graph.add(
+        (si_graph.set_entity_uri(entity),
+            PROV.wasAttributedTo,
+            URIRef(agent_sw))
+    )
+    quantities_graph.add(
+        (si_graph.set_entity_uri(entity),
+            PROV.wasGeneratedBy,
+            si_graph.set_activity_uri(activity))
+    )
+    
+
     quantities_graph.add(
          (URIRef(si_graph.namespace_quantities),
           DCTERMS.license,

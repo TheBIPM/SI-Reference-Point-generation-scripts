@@ -3,13 +3,14 @@ constants A-Box
 """
 
 from datetime import date
+import git
 import os
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
-    CUQ_FILES_FOLDER, GENERATING_SW_VERSION, RELEASE_DATE, SIDFWBASE
+    CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE
 from si_ref_point.cuq.units_abox import transform_to_graph
 
 
@@ -36,11 +37,11 @@ def main():
          SKOS.prefLabel,
          Literal("SI Reference Point - Constants", datatype=XSD.string))
     )
-    constants_graph.add(
-        (URIRef(si_graph.namespace_constants),
-         DCTERMS.created,
-         Literal(str(date.today()), datatype=XSD.date))
-    )
+#    constants_graph.add(
+    #     (URIRef(si_graph.namespace_constants),
+    #      DCTERMS.created,
+    #      Literal(str(date.today()), datatype=XSD.date))
+    # )
     constants_graph.add(
         (URIRef(si_graph.namespace_constants),
          RDFS.comment,
@@ -54,11 +55,61 @@ def main():
          OWL.versionIRI,
          URIRef(version_iri_path))
     )
+    # declare this code as an 'agent' (in the sense of PROVENANCE) 
+    # and define URI to a specific version by using its commit on github
+    repo = git.Repo(search_parent_directories=True)
+    sha = repo.head.object.hexsha
+    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/constants_abox.py"
+
     constants_graph.add(
-        (URIRef(si_graph.namespace_constants),
-         PROV.wasGeneratedBy,
-         Literal(GENERATING_SW_VERSION,datatype=XSD.string))
+        (URIRef(agent_sw),
+         RDF.type,
+         PROV.Agent)
     )
+
+    constants_graph.add(
+        (URIRef(agent_sw),
+         PROV.wasAttributedTo,
+         URIRef(agent_sw))
+    )
+
+    activitylist = {'constants_ttl_generation'}     # list of activities, needed to produce the TTL
+    for activity in activitylist:
+        constants_graph.add(
+            (si_graph.set_activity_uri(activity),
+            RDF.type,
+            PROV.Activity)
+    )
+        constants_graph.add(
+            (si_graph.set_activity_uri(activity),
+            PROV.wasAssociatedWith,
+            URIRef(agent_sw))
+    )
+        constants_graph.add(
+            (si_graph.set_activity_uri(activity),
+                PROV.startedAtTime,
+                Literal(str(date.today()), datatype=XSD.date))
+    )
+
+    entity = "constants.ttl"
+    constants_graph.add(
+        (si_graph.set_entity_uri(entity),
+            RDF.type,
+            PROV.Entity)
+    )
+    constants_graph.add(
+        (si_graph.set_entity_uri(entity),
+            PROV.wasAttributedTo,
+            URIRef(agent_sw))
+    )
+    constants_graph.add(
+        (si_graph.set_entity_uri(entity),
+         PROV.wasGeneratedBy,
+         si_graph.set_activity_uri(activity))
+    )
+
+
+
     constants_graph.add(
          (URIRef(si_graph.namespace_constants),
           DCTERMS.license,
