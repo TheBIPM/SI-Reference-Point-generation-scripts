@@ -28,6 +28,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from si_ref_point.settings import TTL_FILES_FOLDER,JSONLD_FILES_FOLDER,SIDFWBASE
 
+# To add a SPARQL endpoint to the FastAPI app
+from fastapi import Request
+from rdflib.plugins.sparql import prepareQuery
+
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 TEMPLATES = Jinja2Templates(directory=os.path.join(BASE_PATH, "templates"))
 
@@ -1602,3 +1606,15 @@ def dbpedia_page(request: Request, word: str):
         "DbpediaLayout.html",
         {"request": request, "title": word, "teile": responses}
     )
+
+@app.get("/sparql")
+async def sparql_endpoint(request: Request, q: str):
+    """
+    Example usage:
+    http://127.0.0.1:8000/sparql?q=SELECT+*+WHERE+%7B+%3Fs+%3Fp+%3Fo+%7D+LIMIT+10
+    """
+    results = g.query(q)
+    return [
+        {str(var): str(value) for var, value in row.asdict().items()}
+        for row in results
+    ]
