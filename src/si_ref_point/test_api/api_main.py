@@ -1667,15 +1667,54 @@ LIMIT 10"""
 
 
 # ----------------------------------------------------------------------------------------    
-# Add a SPARQL endpoint to the FastAPI app
+# SPARQL endpoint to the FastAPI app
+from fastapi.responses import JSONResponse
+from rdflib import Literal, URIRef, BNode
+
 @app.get("/sparql")
 async def sparql_endpoint(request: Request, q: str):
     """
-    Example usage:
-    http://127.0.0.1:8000/sparql?q=SELECT+*+WHERE+%7B+%3Fs+%3Fp+%3Fo+%7D+LIMIT+10
+    Returns SPARQL results in W3C-standard JSON format
     """
-    results = g.query(q)
-    return [
-        {str(var): str(value) for var, value in row.asdict().items()}
-        for row in results
-    ]
+    try:
+        results = g.query(q)
+
+        # Build 'head' section with variable names
+        head = {"vars": [str(v) for v in results.vars]}
+
+        # Build 'results' section with full type info
+        bindings = []
+        for row in results.bindings:
+            binding = {}
+            for var, term in row.items():
+                if term is None:
+                    continue
+
+                entry = {"value": str(term)}
+
+                # Determine the RDF term type
+                if isinstance(term, Literal):
+                    entry["type"] = "literal"
+                    if term.datatype:
+                        entry["datatype"] = str(term.datatype)
+                        entry["type"] = "typed-literal"
+                    if term.language:
+                        entry["xml:lang"] = term.language
+
+                elif isinstance(term, URIRef):
+                    entry["type"] = "uri"
+
+                elif isinstance(term, BNode):
+                    entry["type"] = "bnode"
+
+                else:
+                    entry["type"] = "literal"
+
+                binding[str(var)] = entry
+
+            bindings.append(binding)
+
+        return JSONResponse(content={"head": head, "results": {"bindings": bindings}})
+
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=400)
