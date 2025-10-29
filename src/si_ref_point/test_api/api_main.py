@@ -1649,15 +1649,21 @@ LIMIT 10"""
         <p>Write or modify your SPARQL query below, then click <b>Run Query</b>.</p>
         <form id="sparqlForm" onsubmit="redirectToSPARQL(); return false;">
             <textarea id="query">{example_query}</textarea><br>
+            <label>Output format:</label>
+            <select id="format">
+                <option value="json" selected>JSON</option>
+                <option value="html">HTML Table</option>
+            </select>
             <button type="submit">Run Query</button>
         </form>
 
         <script>
         function redirectToSPARQL() {{
             const query = document.getElementById('query').value;
+            const format = document.getElementById('format').value;
             if (!query.trim()) {{ alert('Please enter a query'); return; }}
             const encoded = encodeURIComponent(query);
-            const target = '/sparql?q=' + encoded;
+            const target = '/sparql?q=' + encoded + '&format=' + format;
             window.location.href = target;
         }}
         </script>
@@ -1668,53 +1674,86 @@ LIMIT 10"""
 
 # ----------------------------------------------------------------------------------------    
 # SPARQL endpoint to the FastAPI app
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 from rdflib import Literal, URIRef, BNode
 
 @app.get("/sparql")
-async def sparql_endpoint(request: Request, q: str):
+async def sparql_endpoint(request: Request, q: str, format: str = "json"):
     """
-    Returns SPARQL results in W3C-standard JSON format
+    Unified SPARQL endpoint:
+      /sparql?q=<query>&format=json   → W3C-compliant JSON results (default)
+      /sparql?q=<query>&format=html   → Human-readable HTML table
     """
     try:
         results = g.query(q)
+        vars_ = [str(v) for v in results.vars]
 
-        # Build 'head' section with variable names
-        head = {"vars": [str(v) for v in results.vars]}
-
-        # Build 'results' section with full type info
+        # Build SPARQL Results JSON "bindings"
         bindings = []
         for row in results.bindings:
             binding = {}
             for var, term in row.items():
                 if term is None:
                     continue
-
                 entry = {"value": str(term)}
 
-                # Determine the RDF term type
+                # Determine RDF term type
                 if isinstance(term, Literal):
                     entry["type"] = "literal"
                     if term.datatype:
-                        entry["datatype"] = str(term.datatype)
                         entry["type"] = "typed-literal"
+                        entry["datatype"] = str(term.datatype)
                     if term.language:
                         entry["xml:lang"] = term.language
-
                 elif isinstance(term, URIRef):
                     entry["type"] = "uri"
-
                 elif isinstance(term, BNode):
                     entry["type"] = "bnode"
-
                 else:
                     entry["type"] = "literal"
 
                 binding[str(var)] = entry
-
             bindings.append(binding)
 
-        return JSONResponse(content={"head": head, "results": {"bindings": bindings}})
+        # -------------------------
+        # JSON (W3C SPARQL Results)
+        # -------------------------
+        if format == "json":
+            return JSONResponse(
+                content={"head": {"vars": vars_}, "results": {"bindings": bindings}}
+            )
+
+        # -------------------------
+        # HTML Table representation
+        # -------------------------
+        html = [
+            "<html><head><title>SPARQL Results</title>",
+            "<style>",
+            "body{font-family:sans-serif;margin:2em;background:#f4f4f9;}",
+            "table{border-collapse:collapse;}",
+            "th,td{border:1px solid #ccc;padding:6px 10px;}",
+            "th{background:#236A81;color:white;}",
+            "tr:nth-child(even){background-color:#f9f9f9;}",
+            "a{color:#236A81;text-decoration:none;}",
+            "</style></head><body>",
+            "<h2>SPARQL Results (HTML View)</h2>",
+            "<table><thead><tr>",
+        ]
+        html += [f"<th>{v}</th>" for v in vars_]
+        html += ["</tr></thead><tbody>"]
+
+        for row in bindings:
+            html.append("<tr>")
+            for v in vars_:
+                val = row.get(v, {}).get("value", "")
+                typ = row.get(v, {}).get("type", "")
+                if typ == "uri":
+                    val = f'<a href="{val}" target="_blank">{val}</a>'
+                html.append(f"<td>{val}</td>")
+            html.append("</tr>")
+        html.append("</tbody></table></body></html>")
+
+        return HTMLResponse("".join(html))
 
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=400)
