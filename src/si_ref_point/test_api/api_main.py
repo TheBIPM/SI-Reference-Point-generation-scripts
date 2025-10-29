@@ -1607,6 +1607,67 @@ def dbpedia_page(request: Request, word: str):
         {"request": request, "title": word, "teile": responses}
     )
 
+
+# ----------------------------------------------------------------------------------------
+# SPARQL Query Assistant UI
+
+from fastapi.responses import HTMLResponse
+from urllib.parse import quote
+
+@app.get("/sparql-ui", response_class=HTMLResponse)
+async def sparql_ui():
+    example_query = """PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX si:  <https://si-digital-framework.org/SI#>
+
+SELECT ?cst ?label ?symbol ?updateDate ?valueStr ?value
+WHERE {
+  ?cst a si:Constant ;
+       skos:prefLabel ?label ;
+       si:hasValue ?value ;
+       si:hasUpdatedDate ?updateDate ;
+       si:hasValueAsString ?valueStr .
+  FILTER langMatches(lang(?label), "en")
+}
+LIMIT 10"""
+
+    return f"""
+    <html>
+    <head>
+        <title>SPARQL Query Assistant</title>
+        <style>
+            body {{ font-family: sans-serif; margin: 2em; background: #f4f4f9; }}
+            textarea {{ width: 100%; height: 280px; font-family: monospace; font-size: 14px; }}
+            button {{ padding: 8px 16px; margin-top: 10px; background-color: #236A81; color: white; border: none; border-radius: 6px; cursor: pointer; }}
+            button:hover {{ background-color: #1b5568; }}
+            h1 {{ color: #236A81; }}
+        </style>
+    </head>
+    <body>
+        <h1>SPARQL Query Assistant</h1>
+        <p>Write or modify your SPARQL query below, then click <b>Run Query</b>.</p>
+        <form id="sparqlForm" onsubmit="redirectToSPARQL(); return false;">
+            <textarea id="query">{example_query}</textarea><br>
+            <button type="submit">Run Query</button>
+        </form>
+
+        <script>
+        function redirectToSPARQL() {{
+            const query = document.getElementById('query').value;
+            if (!query.trim()) {{ alert('Please enter a query'); return; }}
+            const encoded = encodeURIComponent(query);
+            const target = '/sparql?q=' + encoded;
+            window.location.href = target;
+        }}
+        </script>
+    </body>
+    </html>
+    """
+
+
+# ----------------------------------------------------------------------------------------    
+# Add a SPARQL endpoint to the FastAPI app
 @app.get("/sparql")
 async def sparql_endpoint(request: Request, q: str):
     """
