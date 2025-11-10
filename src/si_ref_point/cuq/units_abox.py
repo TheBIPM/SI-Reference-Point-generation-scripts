@@ -10,7 +10,7 @@ import yaml
 from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 
 def nest_mult(expr):
@@ -18,7 +18,7 @@ def nest_mult(expr):
     {'mult': [A, B, C, D...]'}
     into
     {'mult: [A, {'mult': [B, C, D...]}}
-    (to be used recusively)
+    (to be used recursively)
     """
     # Check number of terms
     if len(expr['mult']) == 1:
@@ -33,7 +33,7 @@ def nest_mult(expr):
 
 
 def transform_to_graph(expression, si_graph, graph):
-    """ Tranform any "unit expression" into a graph
+    """ Transform any "unit expression" into a graph
 
     Accepts dicts, strings, lists.
 
@@ -131,10 +131,10 @@ def transform_to_graph(expression, si_graph, graph):
 def main():
     """main of Units A-box"""
     si_graph = SiElements() # get the predicates and classes that are common to all cuq files
-    units_graph = Graph()  # produce a separate graphe for the units
+    units_graph = Graph()  # produce a separate graph for the units
 
     # Define the namespaces within (base)/SI
-    #   (for the moment, these bindnigs are made 'manually'.
+    #   (for the moment, these bindings are made 'manually'.
     #    They should be proposed as a common function [e.g. in cuq_tbox.py])
     units_graph.bind("constants",si_graph.namespace_constants)
     units_graph.bind("quantities",si_graph.namespace_quantities)
@@ -176,21 +176,8 @@ def main():
             ),
         )
     )
-    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/units.ttl"
-    units_graph.add(
-        (
-            URIRef(si_graph.namespace_units),
-            OWL.versionIRI,
-            URIRef(version_iri_path)
-        )
-    )
-    units_graph.add(
-        (
-            URIRef(si_graph.namespace_units),
-            OWL.versionInfo,
-            Literal(RELEASE_DATE,datatype=XSD.string)
-        )
-    )
+
+
     # attribute the ttl output to a specific version of this code, identified by its commit
         # declare this code as an 'agent' (in the sense of PROVENANCE) 
         # and define URI to a specific version by using its commit on github

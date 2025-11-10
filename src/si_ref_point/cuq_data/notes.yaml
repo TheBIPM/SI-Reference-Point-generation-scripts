@@ -1,9 +1,9 @@
 meta: 
   file_name: "notes_YAML"
-  file_version: "1_0_0"
-  created_by: "Frédéric Meynadier"
-  created_date: "2023-01-01"
-  derived_from: "SI Brochure 9th ed, V3.01"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
 data:
 - dbid: 1
   uri: second2018

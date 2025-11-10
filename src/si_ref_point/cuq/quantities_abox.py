@@ -8,9 +8,10 @@ import os
 import logging
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 import yaml
+#from si_ref_point.cuq.cuq_tbox import SiElements   # as example if package is installed
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.cuq.units_abox import transform_to_graph
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 
 
@@ -49,17 +50,7 @@ def main():
                    "covering quantities",
                    datatype=XSD.string))
     )
-    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/quantities.ttl"
-    quantities_graph.add(
-        (URIRef(si_graph.namespace_quantities),
-         OWL.versionIRI,
-         URIRef(version_iri_path))
-    )
-    quantities_graph.add(
-        (URIRef(si_graph.namespace_quantities),
-         OWL.versionInfo,
-         Literal(RELEASE_DATE,datatype=XSD.string))
-    )
+
     # attribute the ttl output to a specific version of this code, identified by its commit
         # declare this code as an 'agent' (in the sense of PROVENANCE) 
         # and define URI to a specific version by using its commit on github

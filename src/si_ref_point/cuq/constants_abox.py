@@ -10,7 +10,7 @@ import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
-    CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE
+    CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 from si_ref_point.cuq.units_abox import transform_to_graph
 
 
@@ -49,12 +49,7 @@ def main():
                     "seven underpinning constants of the SI"),
                    datatype=XSD.string))
     )
-    version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/constants.ttl"
-    constants_graph.add(
-        (URIRef(si_graph.namespace_constants),
-         OWL.versionIRI,
-         URIRef(version_iri_path))
-    )
+
     # declare this code as an 'agent' (in the sense of PROVENANCE) 
     # and define URI to a specific version by using its commit on github
     repo = git.Repo(search_parent_directories=True)

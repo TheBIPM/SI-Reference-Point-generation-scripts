@@ -9,7 +9,7 @@ import yaml
 from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, RELEASE_DATE, SIDFWBASE, SI_BROCHURE_PID
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -33,12 +33,6 @@ class SiElements:
         self.namespace_prefixes = SIDFWBASE + "/SI/prefixes/"
         # ~/SI/decisions
         self.namespace_decisions = SIDFWBASE + "/SI/decisions/"
-        # ~/SI/activities (in the sens of PROVENANCE)
-        self.namespace_activities = SIDFWBASE + "/SI/activities/"
-        # ~/SI/agents (in the sens of PROVENANCE)
-        self.namespace_agents = SIDFWBASE + "/SI/agents/"
-        # ~/SI/entities (in the sens of PROVENANCE)
-        self.namespace_entities = SIDFWBASE + "/SI/entities/"
         # ~/quantities
         self.namespace_quantities = SIDFWBASE + "/quantities/"
         # ~/constants
@@ -52,13 +46,25 @@ class SiElements:
         #   ... and the shortcut
         self.g.bind('rb', RES_BOD_NS)
 
-        #~/entities
+# to be removed, as namespaces are declared with ...# below
+        # # ~/SI/activities (in the sens of PROVENANCE)
+        # self.namespace_activities = SIDFWBASE + "/SI/activities/"
+        # # ~/SI/agents (in the sens of PROVENANCE)
+        # self.namespace_agents = SIDFWBASE + "/SI/agents/"
+        # # ~/SI/entities (in the sens of PROVENANCE)
+        # self.namespace_entities = SIDFWBASE + "/SI/entities/"
+ 
+        #~/entities (in the sens of PROVENANCE)
         self.namespace_entities = SIDFWBASE + "/SI/entities#"
         self.g.bind("entities",self.namespace_entities)
 
-        #~/activities
+        #~/activities (in the sens of PROVENANCE)
         self.namespace_activities = SIDFWBASE + "/SI/activities#"
         self.g.bind("activities",self.namespace_activities)
+        
+        #~/agents (in the sens of PROVENANCE)
+        self.namespace_agents = SIDFWBASE + "/SI/agents#"
+        self.g.bind("agents",self.namespace_agents)
 
         # Load graph from ttl files
         for ttl_file in ['CUQ_core_concepts.ttl',
@@ -82,7 +88,7 @@ class SiElements:
             with open(os.path.join(CUQ_FILES_FOLDER,filename), 
               encoding="utf8") as fp:
                 filecontent = yaml.safe_load(fp)
-            identifier = filecontent['meta']['file_name']+ "_" + filecontent['meta']['file_version']
+            identifier = filecontent['meta']['file_name']+ "_"
 
             self.g.add((self.set_entity_uri(identifier),RDF.type,PROV.Entity))
 
@@ -117,18 +123,6 @@ class SiElements:
 
     #   3.2 Versioning
 
-        # IRI
-        version_iri_path = SIDFWBASE + "/SI/releases/"+RELEASE_DATE+"/si.ttl"
-        self.g.add(
-            (URIRef(self.namespace),
-             OWL.versionIRI,
-             URIRef(version_iri_path))
-        )
-        self.g.add(
-            (URIRef(self.namespace),
-             OWL.versionInfo,
-             Literal(RELEASE_DATE,datatype=XSD.string))
-        )
         # declare this code as an 'agent' (in the sense of PROVENANCE) 
         # and define URI to a specific version by using its commit on github
         repo = git.Repo(search_parent_directories=True)
@@ -139,8 +133,7 @@ class SiElements:
              RDF.type,
              PROV.Agent)
         )
-        # declare the ttl_generation as activity (in the sense of PROVENANCE)
-        # which can be linked to a start time and an agent
+        
         activitylist = {'si_ttl_generation'}     # list of activities, needed to produce the TTL
         for activity in activitylist:
             self.g.add(

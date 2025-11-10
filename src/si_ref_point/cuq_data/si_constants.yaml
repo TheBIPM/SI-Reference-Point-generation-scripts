@@ -1,9 +1,9 @@
 meta: 
   file_name: "si_constants_YAML"
-  file_version: "1_0_0"
-  created_by: "Frédéric Meynadier"
-  created_date: "2023-01-01"
-  derived_from: "SI Brochure 9th ed, V3.01"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
 data:
 - id: HyperfineTransitionFrequencyOfCs-133
   hidden_label: HyperfineSplitting

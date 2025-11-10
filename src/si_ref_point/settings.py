@@ -22,25 +22,20 @@ CGPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cgpm")
 CIPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cipm")
 CCTF_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cctf")
 
-# Folder for XLS-files for constants, units, quantities
+# Folder for YAML- and TTL-files produced manually
 CUQ_FILES_FOLDER = os.path.join(package_dir, "cuq_data")
 
 # Default Folder for output files
-TTL_FILES_FOLDER = os.path.join(package_dir, "..", "..","TTL")
-JSONLD_FILES_FOLDER = os.path.join(package_dir,"..","..","JSON-LD")
+#   per default, the output will be placed in the directory
+#   from which the script is launched 
+TTL_FILES_FOLDER = os.path.join(".","TTL")
+JSONLD_FILES_FOLDER = os.path.join(".","JSON-LD")
 
-# Release date
-RELEASE_DATE = "2024-12-17"
-
-# Version of the generating software
-# (The version of the Python code generating the TTL files.
-#  not to be confused with the version of the knowledge graph.
-#  The code can be changed without a change of the knowledge graph)
 GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 
 
 
-SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
+#SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
 CC_LICENCE = "http://creativecommons.org/licenses/by/4.0/"
