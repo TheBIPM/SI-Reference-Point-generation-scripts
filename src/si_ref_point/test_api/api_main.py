@@ -28,6 +28,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from si_ref_point.settings import TTL_FILES_FOLDER,JSONLD_FILES_FOLDER,SIDFWBASE
 
+# To add a SPARQL endpoint to the FastAPI app
+from fastapi import Request
+from rdflib.plugins.sparql import prepareQuery
+
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 TEMPLATES = Jinja2Templates(directory=os.path.join(BASE_PATH, "templates"))
 
@@ -1602,3 +1606,154 @@ def dbpedia_page(request: Request, word: str):
         "DbpediaLayout.html",
         {"request": request, "title": word, "teile": responses}
     )
+
+
+# ----------------------------------------------------------------------------------------
+# SPARQL Query Assistant UI
+
+from fastapi.responses import HTMLResponse
+from urllib.parse import quote
+
+@app.get("/sparql-ui", response_class=HTMLResponse)
+async def sparql_ui():
+    example_query = """PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX si:  <https://si-digital-framework.org/SI#>
+
+SELECT ?cst ?label ?symbol ?updateDate ?valueStr ?value
+WHERE {
+  ?cst a si:Constant ;
+       skos:prefLabel ?label ;
+       si:hasValue ?value ;
+       si:hasUpdatedDate ?updateDate ;
+       si:hasValueAsString ?valueStr .
+  FILTER langMatches(lang(?label), "en")
+}
+LIMIT 10"""
+
+    return f"""
+    <html>
+    <head>
+        <title>SPARQL Query Assistant</title>
+        <style>
+            body {{ font-family: sans-serif; margin: 2em; background: #f4f4f9; }}
+            textarea {{ width: 100%; height: 280px; font-family: monospace; font-size: 14px; }}
+            button {{ padding: 8px 16px; margin-top: 10px; background-color: #236A81; color: white; border: none; border-radius: 6px; cursor: pointer; }}
+            button:hover {{ background-color: #1b5568; }}
+            h1 {{ color: #236A81; }}
+        </style>
+    </head>
+    <body>
+        <h1>SPARQL Query Assistant</h1>
+        <p>Write or modify your SPARQL query below, then click <b>Run Query</b>.</p>
+        <form id="sparqlForm" onsubmit="redirectToSPARQL(); return false;">
+            <textarea id="query">{example_query}</textarea><br>
+            <label>Output format:</label>
+            <select id="format">
+                <option value="json" selected>JSON</option>
+                <option value="html">HTML Table</option>
+            </select>
+            <button type="submit">Run Query</button>
+        </form>
+
+        <script>
+        function redirectToSPARQL() {{
+            const query = document.getElementById('query').value;
+            const format = document.getElementById('format').value;
+            if (!query.trim()) {{ alert('Please enter a query'); return; }}
+            const encoded = encodeURIComponent(query);
+            const target = '/sparql?q=' + encoded + '&format=' + format;
+            window.location.href = target;
+        }}
+        </script>
+    </body>
+    </html>
+    """
+
+
+# ----------------------------------------------------------------------------------------    
+# SPARQL endpoint to the FastAPI app
+from fastapi.responses import JSONResponse, HTMLResponse
+from rdflib import Literal, URIRef, BNode
+
+@app.get("/sparql")
+async def sparql_endpoint(request: Request, q: str, format: str = "json"):
+    """
+    Unified SPARQL endpoint:
+      /sparql?q=<query>&format=json   → W3C-compliant JSON results (default)
+      /sparql?q=<query>&format=html   → Human-readable HTML table
+    """
+    try:
+        results = g.query(q)
+        vars_ = [str(v) for v in results.vars]
+
+        # Build SPARQL Results JSON "bindings"
+        bindings = []
+        for row in results.bindings:
+            binding = {}
+            for var, term in row.items():
+                if term is None:
+                    continue
+                entry = {"value": str(term)}
+
+                # Determine RDF term type
+                if isinstance(term, Literal):
+                    entry["type"] = "literal"
+                    if term.datatype:
+                        entry["type"] = "typed-literal"
+                        entry["datatype"] = str(term.datatype)
+                    if term.language:
+                        entry["xml:lang"] = term.language
+                elif isinstance(term, URIRef):
+                    entry["type"] = "uri"
+                elif isinstance(term, BNode):
+                    entry["type"] = "bnode"
+                else:
+                    entry["type"] = "literal"
+
+                binding[str(var)] = entry
+            bindings.append(binding)
+
+        # -------------------------
+        # JSON (W3C SPARQL Results)
+        # -------------------------
+        if format == "json":
+            return JSONResponse(
+                content={"head": {"vars": vars_}, "results": {"bindings": bindings}}
+            )
+
+        # -------------------------
+        # HTML Table representation
+        # -------------------------
+        html = [
+            "<html><head><title>SPARQL Results</title>",
+            "<style>",
+            "body{font-family:sans-serif;margin:2em;background:#f4f4f9;}",
+            "table{border-collapse:collapse;}",
+            "th,td{border:1px solid #ccc;padding:6px 10px;}",
+            "th{background:#236A81;color:white;}",
+            "tr:nth-child(even){background-color:#f9f9f9;}",
+            "a{color:#236A81;text-decoration:none;}",
+            "</style></head><body>",
+            "<h2>SPARQL Results (HTML View)</h2>",
+            "<table><thead><tr>",
+        ]
+        html += [f"<th>{v}</th>" for v in vars_]
+        html += ["</tr></thead><tbody>"]
+
+        for row in bindings:
+            html.append("<tr>")
+            for v in vars_:
+                val = row.get(v, {}).get("value", "")
+                typ = row.get(v, {}).get("type", "")
+                if typ == "uri":
+                    val = f'<a href="{val}" target="_blank">{val}</a>'
+                html.append(f"<td>{val}</td>")
+            html.append("</tr>")
+        html.append("</tbody></table></body></html>")
+
+        return HTMLResponse("".join(html))
+
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=400)
