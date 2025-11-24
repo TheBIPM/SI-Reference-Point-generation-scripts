@@ -5,6 +5,7 @@ Units ABox
 from datetime import date
 import git
 import os
+from time import time
 import logging
 import yaml
 from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
@@ -130,10 +131,13 @@ def transform_to_graph(expression, si_graph, graph):
 
 def main():
     """main of Units A-box"""
-    si_graph = SiElements() # get the predicates and classes that are common to all cuq files
-    units_graph = Graph()  # produce a separate graph for the units
+    # get the predicates and classes that are common to all cuq files
+    si_graph = SiElements()
+    # produce a separate graph for the units 
+    units_graph = Graph()  
 
-    # Define the namespaces within (base)/SI
+    
+    # 1) Define the namespaces within (base)/SI
     #   (for the moment, these bindings are made 'manually'.
     #    They should be proposed as a common function [e.g. in cuq_tbox.py])
     units_graph.bind("constants",si_graph.namespace_constants)
@@ -141,8 +145,9 @@ def main():
     units_graph.bind("units",si_graph.namespace_units)
     units_graph.bind("si",si_graph.namespace)
 
-    # 1) Add annotations to the ontology
+    # 2) Add annotations to the units-graph
 
+    # 2.1 General annotations (type, labels, comments etc)
     units_graph.add(
         (
             URIRef(si_graph.namespace_units),
@@ -156,13 +161,7 @@ def main():
             Literal("SI Reference Point - Units and Prefixes", datatype=XSD.string),
         )
     )
-    # units_graph.add(
-    #     (
-    #         URIRef(si_graph.namespace_units),
-    #         DCTERMS.created,
-    #         Literal(str(date.today()), datatype=XSD.date),
-    #     )
-    # )
+
     units_graph.add(
         (
             URIRef(si_graph.namespace_units),
@@ -177,10 +176,11 @@ def main():
         )
     )
 
-
-    # attribute the ttl output to a specific version of this code, identified by its commit
-        # declare this code as an 'agent' (in the sense of PROVENANCE) 
-        # and define URI to a specific version by using its commit on github
+    # 2.2 Versioning (using PROVENANCE vocabulary)
+    timestamp = str(int(time()))        # used to make activities/entities unique
+    #     2.2.1 Agent
+    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     and define URI to a specific version by using its commit on github
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
     agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/units_abox.py"
@@ -189,45 +189,78 @@ def main():
             RDF.type,
             PROV.Agent)
     )
-    # declare the ttl_generation as activity (in the sense of PROVENANCE)
-    # which can be linked to a start time and an agent
-    activitylist = {'units_ttl_generation'}     # list of activities, needed to produce the TTL
-    for activity in activitylist:
-        units_graph.add(
-            (si_graph.set_activity_uri(activity),
-            RDF.type,
-            PROV.Activity)
-        )
-        units_graph.add(
-            (si_graph.set_activity_uri(activity),
-            PROV.wasAssociatedWith,
-            URIRef(agent_sw))
-        )
-        units_graph.add(
-            (si_graph.set_activity_uri(activity),
-                PROV.startedAtTime,
-                Literal(str(date.today()), datatype=XSD.date))
-        )
+    
+    #     2.2.2 Entity
+    #     declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
+    #     The manually produced YAML files are stored on GITHUB. Their hexsha together
+    #     with the path are used as an unique identifier
+    source_list = []
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/def_collectors.yaml")
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/base_units_defs.yaml")
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/notes.yaml")
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/si_units_special_names.yaml")
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/non_si_units.yaml")
 
-    entity = "units.ttl"
+    for source in source_list:
+        units_graph.add(
+            (URIRef(source),
+                RDF.type,
+                PROV.Entity)
+        )
+        
+    #     declare the ttl output as an 'entity' (in the sense of PROVENANCE)
+    #     make the entity unique by adding the timestamp to the identifier of the output file
+    units_out_entity = "units_"+timestamp+".ttl"    
     units_graph.add(
-        (si_graph.set_entity_uri(entity),
+        (si_graph.set_entity_uri(units_out_entity),
             RDF.type,
-            PROV.Entity)
+            PROV.Entity)   
+    )    
+        
+    #     2.2.3 Activity
+    #     declare the units_ttl_generation as 'activity' (in the sense of PROVENANCE)
+    #     make the activity unique by adding the timestamp to the identifier of the activity
+    activity = 'units_ttl_generation'+timestamp + '.ttl_generation'     # list of activities, needed to produce the TTL
+    units_graph.add(
+        (si_graph.set_activity_uri(activity),
+        RDF.type,
+        PROV.Activity)
+        )
+        
+    #     2.2.4 Link activity, agent, entities
+    #     activity - agent
+    units_graph.add(
+        (si_graph.set_activity_uri(activity),
+        PROV.wasAssociatedWith,
+        URIRef(agent_sw))
     )
     units_graph.add(
-        (si_graph.set_entity_uri(entity),
+        (si_graph.set_activity_uri(activity),
+            PROV.startedAtTime,
+            Literal(str(date.today()), datatype=XSD.date))
+    )
+    #   output entity - source entities
+    for source in source_list:
+        units_graph.add(
+            (si_graph.set_entity_uri(units_out_entity),
+             PROV.wasDerivedFrom,
+             URIRef(source))
+        )
+
+    #    output entity - agent
+    units_graph.add(
+        (si_graph.set_entity_uri(units_out_entity),
             PROV.wasAttributedTo,
             URIRef(agent_sw))
     )
+    #    output entity - activity
     units_graph.add(
-        (si_graph.set_entity_uri(entity),
+        (si_graph.set_entity_uri(units_out_entity),
             PROV.wasGeneratedBy,
             si_graph.set_activity_uri(activity))
     )
 
-
-
+    # 2.3 Licence
     units_graph.add(
          (URIRef(si_graph.namespace_units),
           DCTERMS.license,
@@ -243,12 +276,15 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
-    # 2) open YAML files with information
+    
+    # 3) Build units graph
+    
+    # 3.1 open YAML file def_collector
     with open(os.path.join(CUQ_FILES_FOLDER, "def_collectors.yaml"), encoding='utf-8') as fp:
         def_collectors = yaml.safe_load(fp)
 
-    # 3) Base unit definitions
-    # 3.1) Define the BaseUnit (to which one can subsequently attach several
+    # 3.2 Base unit definitions
+    # Define the BaseUnit (to which one can subsequently attach several
     # definitions)
     for dc in def_collectors["data"]:
         if dc["URI"] is not None:
@@ -375,7 +411,7 @@ def main():
                     )
                 )
 
-    # 3.2 Declare all definitions
+    # 3.3 Declare all definitions
     # uri_text values are a concatenation of the lowercase unit name and the
     # year of the definition, e.g., ampere2018
 
@@ -509,7 +545,7 @@ def main():
                         )
                     )
 
-    # 4 SI Units Special Names
+    # 3.4 SI Units Special Names
     with open(os.path.join(CUQ_FILES_FOLDER, "si_units_special_names.yaml"),encoding='utf-8') as fp:
         si_spec_list = yaml.safe_load(fp)
 
@@ -587,7 +623,7 @@ def main():
             )
 
 
-    # 5) non SI units
+    # 3.5 non SI units
     with open(os.path.join(CUQ_FILES_FOLDER, "non_si_units.yaml"),encoding='utf-8') as fp:
         non_si_list = yaml.safe_load(fp)
 

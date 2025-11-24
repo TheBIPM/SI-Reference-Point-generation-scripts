@@ -14,14 +14,18 @@ from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEX
 def main():
     """main of Prefixes A-box"""
 
-    si_graph = SiElements()     # get the predicates and classes that are common to all cuq files
-    prefix_graph = Graph()      # produce a separate graphe for the prefixes
+    # get the predicates and classes that are common to all cuq files
+    si_graph = SiElements()
+    # produce a separate graph for the prefixes
+    prefix_graph = Graph()      
 
-    # Define the namespaces within (base)/SI
+    # 1) Define the namespaces within (base)/SI
     prefix_graph.bind("prefixes",si_graph.namespace_prefixes)
     prefix_graph.bind("si",si_graph.namespace)
 
-    # Add annotations to the ontology
+    # 2) Annotations to the prefix-graph
+    
+    # 2.1 General annotations (type, labels, comments etc)
     prefix_graph.add(
         (URIRef(si_graph.namespace_prefixes),
          RDF.type,
@@ -32,7 +36,6 @@ def main():
          SKOS.prefLabel,
          Literal("SI Reference Point - Prefixes", datatype=XSD.string))
     )
-
     prefix_graph.add(
         (URIRef(si_graph.namespace_prefixes),
          RDFS.comment,
@@ -40,8 +43,12 @@ def main():
                    "prefixes for the SI measurement units."))
     )
 
-    # declare this code as an 'agent' (in the sense of PROVENANCE) 
-    # and define URI to a specific version by using the commit reference on github
+    # 2.2 Versioning (using PROVENANCE vocabulary)
+    timestamp = str(int(time()))        # used to make activities/entities unique
+    
+    #     2.2.1 Agent
+    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     and define URI to a specific version by using the commit reference on github
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
     agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/prefixes_abox.py"
@@ -51,28 +58,40 @@ def main():
             PROV.Agent)
     )
 
-    # declare the source YAML file as 'entity' (in the sense of PROVENANCE)
-    # The manually produced YAML files are stored on GITHUB. Their hexsha together
-    # with the path are used as an unique identifier
-    
-    prefix_src_entity = GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/prefixes.yaml"
+    #     2.2.2 Entity
+    #     declare the source (YAML file) as 'entity' (in the sense of PROVENANCE)
+    #     The manually produced YAML files are stored on GITHUB. Their hexsha together
+    #     with the path are used as an unique identifier
+    source_list = []
+    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/prefixes.yaml")
+    for source in source_list:
+        prefix_graph.add(
+            (URIRef(source),
+                RDF.type,
+                PROV.Entity)
+        )
+
+    #     declare the ttl output as an 'entity' (in the sense of PROVENANCE)
+    #     make the entity unique by adding the timestamp to the identifier of the output file
+    prefix_out_entity = "prefixes_"+timestamp+".ttl"
     prefix_graph.add(
-        (URIRef(prefix_src_entity),
-         RDF.type,
-         PROV.Entity)
+        (si_graph.set_entity_uri(prefix_out_entity),
+            RDF.type,
+            PROV.Entity)
     )
         
-    # declare the prefixes_ttl_generation as activity (in the sense of PROVENANCE)
-    # make the activity unique by adding timestamp to the identifier of the activity
-    # which can be linked to a start time and an agent
-    timestamp = str(int(time()))
+    #     2.2.3 Activity    
+    #     declare the prefixes_ttl_generation as 'activity' (in the sense of PROVENANCE)
+    #     make the activity unique by adding the timestamp to the identifier of the activity
     activity = 'prefixes_'+ timestamp +'.ttl_generation'
-    
     prefix_graph.add(
         (si_graph.set_activity_uri(activity),
         RDF.type,
         PROV.Activity)
     )
+    
+    #     2.2.4 Link activity, agent, entities
+    #     activity - agent
     prefix_graph.add(
         (si_graph.set_activity_uri(activity),
         PROV.wasAssociatedWith,
@@ -83,32 +102,27 @@ def main():
             PROV.startedAtTime,
             Literal(str(date.today()), datatype=XSD.date))
     )
-    
-
-    # declare the ttl output as an entity (in the sense of PROVENANCE)
-    # which can be linked to an activity and an agent
-    prefix_out_entity = "prefixes_"+timestamp+".ttl"
-    prefix_graph.add(
-        (si_graph.set_entity_uri(prefix_out_entity),
-            RDF.type,
-            PROV.Entity)
-    )
-    prefix_graph.add(
-        (si_graph.set_entity_uri(prefix_out_entity),
-         PROV.wasDerivedFrom,
-         URIRef(prefix_src_entity))
-    )
+    #    output entity - source entities
+    for source in source_list:
+        prefix_graph.add(
+            (si_graph.set_entity_uri(prefix_out_entity),
+                PROV.wasDerivedFrom,
+                URIRef(source))
+        )
+        #    output entity - agent
     prefix_graph.add(
         (si_graph.set_entity_uri(prefix_out_entity),
             PROV.wasAttributedTo,
             URIRef(agent_sw))
     )
+    #    output entity - activity
     prefix_graph.add(
         (si_graph.set_entity_uri(prefix_out_entity),
             PROV.wasGeneratedBy,
             si_graph.set_activity_uri(activity))
     )
-
+    
+    # 2.3 Licence
     prefix_graph.add(
          (URIRef(si_graph.namespace_prefixes),
           DCTERMS.license,
@@ -124,11 +138,14 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
-    # 1) open YAML files with information
+    
+    # 3) Build prefix graph
+    
+    # 3.1 Open YAML files as source
     with open(os.path.join(CUQ_FILES_FOLDER, 'prefixes.yaml'),encoding='utf-8') as fp:
         prefixes = yaml.safe_load(fp)
 
-    # 2) Create prefixes
+    # 3.2 Fill graph with all prefix entries
     for prfx in prefixes["data"]:
         uri_text = prfx['URI']
         pref_label_en = prfx['prefLabel_en']

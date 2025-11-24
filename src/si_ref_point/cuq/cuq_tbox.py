@@ -20,13 +20,11 @@ class SiElements:
     def __init__(self, namespace: str = SIDFWBASE + "/SI#", ns_prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
 
-    # 1) Define namespaces, sub-namespace used by A boxes
-    #     and shortcuts
-
+    # 1) Define namespaces, sub-namespace and shortcuts used by A boxes
+    
         # ~/SI
         self.namespace = namespace
         self.g.bind(ns_prefix, self.namespace)
-
         # ~/SI/units
         self.namespace_units = SIDFWBASE + "/SI/units/"
         # ~/SI/prefixes
@@ -122,9 +120,9 @@ class SiElements:
         )
 
     #   3.2 Versioning
-
+    
         # declare this code as an 'agent' (in the sense of PROVENANCE) 
-        # and define URI to a specific version by using its commit on github
+        # and define the URI to a specific version by using its commit on github
         repo = git.Repo(search_parent_directories=True)
         sha = repo.head.object.hexsha
         agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py"
@@ -134,7 +132,9 @@ class SiElements:
              PROV.Agent)
         )
         
-        activitylist = {'si_ttl_generation'}     # list of activities, needed to produce the TTL
+        # list of activities, needed to produce the TTL
+        # for the moment only one activity (generation of the ttl file); can be extended later
+        activitylist = {'si_ttl_generation'}     
         for activity in activitylist:
             self.g.add(
                 (self.set_activity_uri(activity),
@@ -152,6 +152,7 @@ class SiElements:
                  Literal(str(date.today()), datatype=XSD.date))
             )
 
+        # declare the generated TTL file as an entity (in the sense of PROVENANCE)
         entity = "si.ttl"
         self.g.add(
             (self.set_entity_uri(entity),
@@ -186,7 +187,6 @@ class SiElements:
              Literal(CC_LICENCE_TEXT_FR,lang="fr"))
         )
     # 4) Define classes and predicates used by different A boxes
-
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")
         self.si_base_unit = self.set_uri("SIBaseUnit")
