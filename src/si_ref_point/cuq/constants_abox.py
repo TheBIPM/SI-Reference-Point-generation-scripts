@@ -2,8 +2,7 @@
 constants A-Box
 """
 
-from datetime import date
-from time import time
+from datetime import datetime, timezone
 import git
 import os
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
@@ -50,7 +49,9 @@ def main():
     )
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
-    timestamp = str(int(time()))                        # used to make activities/entities unique
+    timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
+    uri_timestamp = timestamp.strftime("%Y%m%m%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
+    startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
     #     2.2.1 Agent
@@ -80,7 +81,7 @@ def main():
         )
     #   declare the ttl output as an 'entity' (in the sense of PROVENANCE)
     #   make the entity unique by adding the timestamp to the identifier of the output file
-    constants_out_entity ="constants_" + timestamp + ".ttl"
+    constants_out_entity ="constants_" + uri_timestamp + ".ttl"
     constants_graph.add(
         (si_graph.set_entity_uri(constants_out_entity),
          RDF.type,
@@ -90,7 +91,7 @@ def main():
     #     2.2.3 Activity
     #     declare the constants_ttl_generation as 'activity' (in the sense of PROVENANCE)
     #     make the activity unique by adding the timestamp to the identifier of the activity
-    activity = 'constants_'+timestamp + '.ttl_generation'
+    activity = 'constants_'+uri_timestamp + '.ttl_generation'
     
     constants_graph.add(
         (si_graph.set_activity_uri(activity),
@@ -108,7 +109,8 @@ def main():
     constants_graph.add(
     (si_graph.set_activity_uri(activity),
         PROV.startedAtTime,
-        Literal(str(date.today()), datatype=XSD.date))
+        # Literal(str(date.today()), datatype=XSD.date))
+        Literal(str(startedAt_timestamp), datatype=XSD.dateTime))
     )
 
     #     output entity - source entities
