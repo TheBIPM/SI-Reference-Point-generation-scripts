@@ -3,9 +3,9 @@ Units ABox
 """
 
 from datetime import date
+from time import time
 import git
 import os
-from time import time
 import logging
 import yaml
 from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
@@ -163,33 +163,32 @@ def main():
     )
 
     units_graph.add(
-        (
-            URIRef(si_graph.namespace_units),
+        (URIRef(si_graph.namespace_units),
             RDFS.comment,
             Literal(
-                (
-                    "Ontology, part of the SI Reference Point, covering "
+                ("Ontology, part of the SI Reference Point, covering "
                     "measurement units (SI base units and SI units with "
-                    "special names) and prefixes."
-                )
-            ),
-        )
+                    "special names) and prefixes."),
+                datatype=XSD.string))
     )
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = str(int(time()))        # used to make activities/entities unique
+    repo = git.Repo(search_parent_directories=True)
+    sha = repo.head.object.hexsha
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE) 
     #     and define URI to a specific version by using its commit on github
-    repo = git.Repo(search_parent_directories=True)
-    sha = repo.head.object.hexsha
-    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/units_abox.py"
-    units_graph.add(
-        (URIRef(agent_sw),
-            RDF.type,
-            PROV.Agent)
-    )
-    
+    agents = []
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/units_abox.py")
+    for agent_sw in agents:
+        units_graph.add(
+            (URIRef(agent_sw),
+                RDF.type,
+                PROV.Agent)
+        )
+        
     #     2.2.2 Entity
     #     declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
     #     The manually produced YAML files are stored on GITHUB. Their hexsha together
@@ -220,7 +219,7 @@ def main():
     #     2.2.3 Activity
     #     declare the units_ttl_generation as 'activity' (in the sense of PROVENANCE)
     #     make the activity unique by adding the timestamp to the identifier of the activity
-    activity = 'units_ttl_generation'+timestamp + '.ttl_generation'     # list of activities, needed to produce the TTL
+    activity = 'units_'+timestamp + '.ttl_generation'     
     units_graph.add(
         (si_graph.set_activity_uri(activity),
         RDF.type,
@@ -229,11 +228,12 @@ def main():
         
     #     2.2.4 Link activity, agent, entities
     #     activity - agent
-    units_graph.add(
-        (si_graph.set_activity_uri(activity),
-        PROV.wasAssociatedWith,
-        URIRef(agent_sw))
-    )
+    for agent_sw in agents:
+        units_graph.add(
+            (si_graph.set_activity_uri(activity),
+            PROV.wasAssociatedWith,
+            URIRef(agent_sw))
+        )
     units_graph.add(
         (si_graph.set_activity_uri(activity),
             PROV.startedAtTime,
@@ -248,11 +248,12 @@ def main():
         )
 
     #    output entity - agent
-    units_graph.add(
-        (si_graph.set_entity_uri(units_out_entity),
-            PROV.wasAttributedTo,
-            URIRef(agent_sw))
-    )
+    for agent_sw in agents:
+        units_graph.add(
+            (si_graph.set_entity_uri(units_out_entity),
+                PROV.wasAttributedTo,
+                URIRef(agent_sw))
+        )
     #    output entity - activity
     units_graph.add(
         (si_graph.set_entity_uri(units_out_entity),

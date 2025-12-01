@@ -3,6 +3,7 @@ Quantities ABox
 """
 
 from datetime import date
+from time import time
 import git
 import os
 import logging
@@ -14,19 +15,21 @@ from si_ref_point.cuq.units_abox import transform_to_graph
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 
-
 def main():
     """Main of Quantities A-box"""
-    si_graph = SiElements()     # get the predicates and classes that are common to all cuq files
-    quantities_graph = Graph()  # produce a separate graphe for the units
+     # get the predicates and classes that are common to all cuq files
+    si_graph = SiElements() 
+    # produce a separate graphe for the units   
+    quantities_graph = Graph()  
 
-    # Define the namespaces within (base)/SI
+    # 1) Define the namespaces within (base)/SI
     quantities_graph.bind("quantities",si_graph.namespace_quantities)
     quantities_graph.bind("units",si_graph.namespace_units)
     quantities_graph.bind("si",si_graph.namespace)
 
-
-    # 1) Add annotations to the ontology
+    # 2) Add annotations to the quantity graph
+    
+    # 2.1 General annotations (type, labels, comments etc)
 
     quantities_graph.add(
         (URIRef(si_graph.namespace_quantities),
@@ -38,11 +41,7 @@ def main():
          SKOS.prefLabel,
          Literal("SI Reference Point - Quantities", datatype=XSD.string))
     )
-    # quantities_graph.add(
-    #     (URIRef(si_graph.namespace_quantities),
-    #      DCTERMS.created,
-    #      Literal(str(date.today()), datatype=XSD.date))
-    # )
+
     quantities_graph.add(
         (URIRef(si_graph.namespace_quantities),
          RDFS.comment,
@@ -50,56 +49,91 @@ def main():
                    "covering quantities",
                    datatype=XSD.string))
     )
-
-    # attribute the ttl output to a specific version of this code, identified by its commit
-        # declare this code as an 'agent' (in the sense of PROVENANCE) 
-        # and define URI to a specific version by using its commit on github
+    
+    # 2.2 Versioning (using PROVENANCE vocabulary)
+    timestamp = str(int(time()))
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
-    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/quantities_abox.py"
-    quantities_graph.add(
-        (URIRef(agent_sw),
-            RDF.type,
-            PROV.Agent)
-    )
-    # declare the ttl_generation as activity (in the sense of PROVENANCE)
-    # which can be linked to a start time and an agent
-    activitylist = {'quantities_ttl_generation'}     # list of activities, needed to produce the TTL
-    for activity in activitylist:
-        quantities_graph.add(
-            (si_graph.set_activity_uri(activity),
-            RDF.type,
-            PROV.Activity)
-        )
-        quantities_graph.add(
-            (si_graph.set_activity_uri(activity),
-            PROV.wasAssociatedWith,
-            URIRef(agent_sw))
-        )
-        quantities_graph.add(
-            (si_graph.set_activity_uri(activity),
-                PROV.startedAtTime,
-                Literal(str(date.today()), datatype=XSD.date))
-        )
+    #   2.2.1 Agent
+    #   declare this code as an 'agent' (in the sense of PROVENANCE)
+    #   and define UàRI to a specific version by using its commit on github
+    agents = []
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/quantities_abox.py")
 
-    entity = "quantities.ttl"
+    for agent_sw in agents:
+        quantities_graph.add(
+            (URIRef(agent_sw),
+                RDF.type,
+                PROV.Agent)
+        )
+        
+    #   2.2.2 Entity
+    #   declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
+    #   The manually produced YAML files are stored on GitHub. Their hexsha together
+    #   with the path is used to define a unique URI for each file.
+    source_files = []
+    source_files.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_core.yaml")
+    source_files.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_other.yaml")
+    for source in source_files:
+        quantities_graph.add(
+            (URIRef(source),
+             RDF.type,
+             PROV.Entity)
+        )
+    quantities_out_entity ="quantities_" + timestamp + ".ttl"
     quantities_graph.add(
-        (si_graph.set_entity_uri(entity),
-            RDF.type,
-            PROV.Entity)
+        (si_graph.set_entity_uri(quantities_out_entity),
+         RDF.type,
+         PROV.Entity)
     )
+    
+    #   2.2.3 Activity
+    #     declare the constants_ttl_generation as 'activity' (in the sense of PROVENANCE)
+    #     make the activity unique by adding the timestamp to the identifier of the activity
+    activity = 'quantities_'+timestamp + '.ttl_generation'     
+    
     quantities_graph.add(
-        (si_graph.set_entity_uri(entity),
+        (si_graph.set_activity_uri(activity),
+        RDF.type,
+        PROV.Activity)
+    )
+    
+    #   2.2.4 Relation activity, agent, entities
+    #   activity - agent
+    for agent_sw in agents:
+        quantities_graph.add(
+                (si_graph.set_activity_uri(activity),
+                PROV.wasAssociatedWith,
+                URIRef(agent_sw))
+            )
+    quantities_graph.add(
+        (si_graph.set_activity_uri(activity),
+            PROV.startedAtTime,
+            Literal(str(date.today()), datatype=XSD.date))
+    )
+    #   output entity - source entities
+    for source in source_files:
+        quantities_graph.add(
+            (si_graph.set_entity_uri(quantities_out_entity),
+                PROV.wasDerivedFrom,
+                URIRef(source))
+    )
+    #   output entity - agent
+    for agent_sw in agents:
+        quantities_graph.add(
+            (si_graph.set_entity_uri(quantities_out_entity),
             PROV.wasAttributedTo,
             URIRef(agent_sw))
     )
+    #   output entity - activity
     quantities_graph.add(
-        (si_graph.set_entity_uri(entity),
-            PROV.wasGeneratedBy,
-            si_graph.set_activity_uri(activity))
+        (si_graph.set_entity_uri(quantities_out_entity),
+         PROV.wasGeneratedBy,
+         si_graph.set_activity_uri(activity))
     )
     
-
+    # 2.3 Licence information
     quantities_graph.add(
          (URIRef(si_graph.namespace_quantities),
           DCTERMS.license,
@@ -115,11 +149,13 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
-    # 2) crawl through the list of YAML files
+    
+    # 3) Build quantity graph
+    #  crawl through the list of YAML files
     qty_files = ['quantities_core.yaml', 'quantities_other.yaml']
     qty_code_list = []
 
-    # 3) open YAML files with information
+    # open YAML files with information
     for filename in qty_files:
         with open(os.path.join(CUQ_FILES_FOLDER, filename), encoding="utf8") as fp:
             qty_list = yaml.safe_load(fp)

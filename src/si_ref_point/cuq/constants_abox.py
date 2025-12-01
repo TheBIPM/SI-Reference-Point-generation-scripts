@@ -3,6 +3,7 @@ constants A-Box
 """
 
 from datetime import date
+from time import time
 import git
 import os
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
@@ -16,17 +17,20 @@ from si_ref_point.cuq.units_abox import transform_to_graph
 
 def main():
     """ main of constants A-Box"""
-    si_graph = SiElements()     # get the predicates and classes that are common to all cuq files
-    constants_graph = Graph()   # produce a separate graphe for the units
+    # get the predicates and classes that are common to all cuq files
+    si_graph = SiElements()
+    # produce a separate graph for the constants
+    constants_graph = Graph()   
 
-    # Define the namespaces within (base)/SI
+    # 1) Define the namespaces within (base)/SI
     constants_graph.bind("constants",si_graph.namespace_constants)
     constants_graph.bind("units",si_graph.namespace_units)
     constants_graph.bind("si",si_graph.namespace)
 
 
-    # 1) Add annotations to the ontology (name, creation date, comment)
+    # 2) Add annotations to the constants-graph 
 
+    # 2.1 General annotations (type, labels, comments etc)
     constants_graph.add(
         (URIRef(si_graph.namespace_constants),
          RDF.type,
@@ -37,11 +41,6 @@ def main():
          SKOS.prefLabel,
          Literal("SI Reference Point - Constants", datatype=XSD.string))
     )
-#    constants_graph.add(
-    #     (URIRef(si_graph.namespace_constants),
-    #      DCTERMS.created,
-    #      Literal(str(date.today()), datatype=XSD.date))
-    # )
     constants_graph.add(
         (URIRef(si_graph.namespace_constants),
          RDFS.comment,
@@ -50,61 +49,90 @@ def main():
                    datatype=XSD.string))
     )
 
-    # declare this code as an 'agent' (in the sense of PROVENANCE) 
-    # and define URI to a specific version by using its commit on github
+    # 2.2 Versioning (using PROVENANCE vocabulary)
+    timestamp = str(int(time()))                        # used to make activities/entities unique
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
-    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/constants_abox.py"
+    #     2.2.1 Agent
+    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     and define URI to a specific version by using its commit on github
+    agents = []
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/constants_abox.py")
+    for agent_sw in agents:
+        constants_graph.add(
+            (URIRef(agent_sw),
+            RDF.type,
+            PROV.Agent)
+        )
 
+    #     2.2.2 Entity
+    #     declare the sources (YAML files) as 'entitiy' (in the sense of PROVENANCE)
+    #     The manually produced YAML files are stored on GitHub. Their hexsha together
+    #     with the path is used to define a unique URI for each file.
+    source_files = []
+    source_files.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/si_constants.yaml")
+    for source in source_files:
+        constants_graph.add(
+            (URIRef(source),
+             RDF.type,
+             PROV.Entity)
+        )
+    #   declare the ttl output as an 'entity' (in the sense of PROVENANCE)
+    #   make the entity unique by adding the timestamp to the identifier of the output file
+    constants_out_entity ="constants_" + timestamp + ".ttl"
     constants_graph.add(
-        (URIRef(agent_sw),
+        (si_graph.set_entity_uri(constants_out_entity),
          RDF.type,
-         PROV.Agent)
+         PROV.Entity)
+    )
+    
+    #     2.2.3 Activity
+    #     declare the constants_ttl_generation as 'activity' (in the sense of PROVENANCE)
+    #     make the activity unique by adding the timestamp to the identifier of the activity
+    activity = 'constants_'+timestamp + '.ttl_generation'
+    
+    constants_graph.add(
+        (si_graph.set_activity_uri(activity),
+        RDF.type,
+        PROV.Activity)
+        )
+    #     2.2.4 Relation activity, agent, entities
+    #     activity - agent
+    for agent_sw in agents:
+        constants_graph.add(
+                (si_graph.set_activity_uri(activity),
+                PROV.wasAssociatedWith,
+                URIRef(agent_sw))
+        )
+    constants_graph.add(
+    (si_graph.set_activity_uri(activity),
+        PROV.startedAtTime,
+        Literal(str(date.today()), datatype=XSD.date))
     )
 
-    constants_graph.add(
-        (URIRef(agent_sw),
-         PROV.wasAttributedTo,
-         URIRef(agent_sw))
-    )
-
-    activitylist = {'constants_ttl_generation'}     # list of activities, needed to produce the TTL
-    for activity in activitylist:
+    #     output entity - source entities
+    for source in source_files:
         constants_graph.add(
-            (si_graph.set_activity_uri(activity),
-            RDF.type,
-            PROV.Activity)
-    )
+            (si_graph.set_entity_uri(constants_out_entity),
+             PROV.wasDerivedFrom,
+             URIRef(source))
+        )
+    #     output entity - agent
+    for agent_sw in agents:
         constants_graph.add(
-            (si_graph.set_activity_uri(activity),
-            PROV.wasAssociatedWith,
-            URIRef(agent_sw))
-    )
-        constants_graph.add(
-            (si_graph.set_activity_uri(activity),
-                PROV.startedAtTime,
-                Literal(str(date.today()), datatype=XSD.date))
-    )
-
-    entity = "constants.ttl"
+            (si_graph.set_entity_uri(constants_out_entity),
+                PROV.wasAttributedTo,
+                URIRef(agent_sw))
+        )
+    #     output entity - activity
     constants_graph.add(
-        (si_graph.set_entity_uri(entity),
-            RDF.type,
-            PROV.Entity)
-    )
-    constants_graph.add(
-        (si_graph.set_entity_uri(entity),
-            PROV.wasAttributedTo,
-            URIRef(agent_sw))
-    )
-    constants_graph.add(
-        (si_graph.set_entity_uri(entity),
+        (si_graph.set_entity_uri(constants_out_entity),
          PROV.wasGeneratedBy,
          si_graph.set_activity_uri(activity))
     )
 
-
-
+    # 2.3 Licence information
     constants_graph.add(
          (URIRef(si_graph.namespace_constants),
           DCTERMS.license,
@@ -121,7 +149,7 @@ def main():
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
 
-    # 3) open yaml with information
+    # 3) Build constants graph
     with open(os.path.join(CUQ_FILES_FOLDER,'si_constants.yaml'),
               encoding="utf8") as fp:
         cst_list = yaml.safe_load(fp)

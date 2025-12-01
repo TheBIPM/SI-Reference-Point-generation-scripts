@@ -45,18 +45,21 @@ def main():
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = str(int(time()))        # used to make activities/entities unique
+    repo = git.Repo(search_parent_directories=True)
+    sha = repo.head.object.hexsha
     
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE) 
     #     and define URI to a specific version by using the commit reference on github
-    repo = git.Repo(search_parent_directories=True)
-    sha = repo.head.object.hexsha
-    agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/prefixes_abox.py"
-    prefix_graph.add(
-        (URIRef(agent_sw),
-            RDF.type,
-            PROV.Agent)
-    )
+    agents = []
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/prefixes_abox.py")
+    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
+    for agent in agents:
+        prefix_graph.add(
+            (URIRef(agent),
+                RDF.type,
+                PROV.Agent)
+        )
 
     #     2.2.2 Entity
     #     declare the source (YAML file) as 'entity' (in the sense of PROVENANCE)
@@ -92,11 +95,12 @@ def main():
     
     #     2.2.4 Link activity, agent, entities
     #     activity - agent
-    prefix_graph.add(
-        (si_graph.set_activity_uri(activity),
-        PROV.wasAssociatedWith,
-        URIRef(agent_sw))
-    )
+    for agent in agents:
+        prefix_graph.add(
+            (si_graph.set_activity_uri(activity),
+            PROV.wasAssociatedWith,
+            URIRef(agent))
+        )
     prefix_graph.add(
         (si_graph.set_activity_uri(activity),
             PROV.startedAtTime,
@@ -110,11 +114,12 @@ def main():
                 URIRef(source))
         )
         #    output entity - agent
-    prefix_graph.add(
-        (si_graph.set_entity_uri(prefix_out_entity),
-            PROV.wasAttributedTo,
-            URIRef(agent_sw))
-    )
+    for agent in agents:
+        prefix_graph.add(
+            (si_graph.set_entity_uri(prefix_out_entity),
+                PROV.wasAttributedTo,
+                URIRef(agent))
+        )
     #    output entity - activity
     prefix_graph.add(
         (si_graph.set_entity_uri(prefix_out_entity),
