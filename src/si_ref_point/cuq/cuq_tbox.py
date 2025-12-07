@@ -88,7 +88,7 @@ class SiElements:
 
     #   2.2 Versioning
         timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
-        uri_timestamp = timestamp.strftime("%Y%m%m%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
+        uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
         startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
         
         repo = git.Repo(search_parent_directories=True)
