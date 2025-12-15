@@ -28,7 +28,7 @@ dependencies = [
     "fastapi",
     "pydantic>=1.10,<2.0",
     "pyshacl",
-    "pip"
+    "gitpython"
 ]
 
 
