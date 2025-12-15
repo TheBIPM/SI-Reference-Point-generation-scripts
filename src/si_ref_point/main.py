@@ -17,6 +17,7 @@ import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
 from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
 #from si_ref_point import __version__
+import git
 import os
 import datetime
 from zipfile import ZipFile
@@ -127,9 +128,12 @@ def main():
         now = datetime.datetime.now()
         timetag = now.strftime('%Y%m%dT%H%M%S')
         try:
-            githash = subprocess.check_output(["git", "describe"]).strip().decode()
+            # Replaced to work in the tests
+            # githash = subprocess.check_output(["git", "describe"]).strip().decode()
+            repo = git.Repo(search_parent_directories=True)
+            githash = repo.head.object.hexsha[:8]
         except:  # noqa
-            githash = __version__
+            githash = "nohash"
 
         zipname = '{}-si-app-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')
