@@ -1,6 +1,6 @@
 # Semantic SI
 created: Jan 2023 / GD
-last modified: 2023-11-07
+last modified: 2025-10-13
 
 This package implements the SI Reference point, a part of the SI digital framework. The package allows to produce a machine readable version of the SI Brochures (knowledge graph). 
 General principle for the generation of the knowledge graphs :
@@ -41,7 +41,7 @@ For debugging purposes, you can choose to generate only one ttl by providing its
 
 `--gen_ontology_viz` updates the markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit changes if you want the up-to-date version to be displayed on github.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to `[package_dir]/../../TTL`. 
+Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to the current directory (from where the `generate_turtle_files`is executed. It creates a subfolder `./TTL`. 
 
 `-h / --help` provides a list of available options.
 

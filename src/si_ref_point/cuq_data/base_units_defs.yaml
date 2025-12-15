@@ -1,3 +1,10 @@
+meta: 
+  file_name: "base_units_defs_YAML"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"  
+data:
 - URI: ampere1948
   prefLabel_fr: ampère1948
   prefLabel_en: ampere1948

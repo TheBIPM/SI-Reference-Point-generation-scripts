@@ -1,3 +1,10 @@
+meta: 
+  file_name: "notes_YAML"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+data:
 - dbid: 1
   uri: second2018
   index: 1
