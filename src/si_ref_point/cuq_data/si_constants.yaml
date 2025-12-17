@@ -1,3 +1,10 @@
+meta: 
+  file_name: "si_constants_YAML"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+data:
 - id: HyperfineTransitionFrequencyOfCs-133
   hidden_label: HyperfineSplitting
   name_en: hyperfine transition frequency of Cs-133

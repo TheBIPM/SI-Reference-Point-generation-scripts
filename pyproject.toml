@@ -27,7 +27,8 @@ dependencies = [
     "owlrl",
     "fastapi",
     "pydantic>=1.10,<2.0",
-    "pyshacl"
+    "pyshacl",
+    "gitpython"
 ]
 
 
