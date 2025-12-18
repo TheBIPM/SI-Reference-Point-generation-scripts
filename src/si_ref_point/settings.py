@@ -38,7 +38,7 @@ GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 #SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
-CC_LICENCE = "http://creativecommons.org/licenses/by/4.0/"
+CC_LICENCE = "https://creativecommons.org/licenses/by/3.0/igo/"
 CC_LICENCE_TEXT_EN = """The SI Reference Point Ontology developed by the BIPM is
 licensed under CC-BY-3.0-IGO. You are free to share (copy and redistribute
 the material in any medium or format) and adapt (remix, transform, and
