@@ -503,22 +503,33 @@ data:
   uri: kelvin1967
   index: 1
   note_en: The 13th CGPM (1967, Resolution 3) also decided that the unit kelvin and
-    its symbol $K$ should be used to express an interval or a difference of temperature.
-  note_fr: La 13ᵉ CGPM (1967 Résolution 3) décida aussi que l'unité kelvin et son
-    symbole K sont utilisés pour exprimer un intervalle ou une différence de température.
-- dbid: 53
+    its symbol @kels@ should be used to express an interval or a difference of temperature.
+  note_fr: La 13ᵉ CGPM (1967, Résolution 3) décida aussi que l'unité kelvin et son
+    symbole @kels@ sont utilisés pour exprimer un intervalle ou une différence de température.
+- dbid: 60
   uri: kelvin1967
   index: 2
+  note_en: "The 23rd CGPM (2007, Resolution 10) noted this definition refers to water 
+    having the isotopic composition defined by the following amount-of-substance ratios:
+    @wthr@ mole of @h2is@ per mole of @h1is@, @wto1@ mole of @o3is@ per mole of @o1is@
+    and @wto2@ mole of @o2is@ per mole of @o1is@."
+  note_fr: "La 23ᵉ CGPM (2007, Résolution 10) a noté que cette définition se réfère
+    à l'eau de composition isotopique définie par les rapports de quantité de matière suivants:
+    @wthr@ mole de @h2is@ par mole de @h1is@, @wto1@ mole de @o3is@ par mole de @o1is@
+    et @wto2@ mole de @o2is@ par mole de @o1is@."
+- dbid: 53
+  uri: kelvin1967
+  index: 3
   note_en: In addition to the thermodynamic temperature (symbol $T$), expressed in
     kelvins, use is also made of Celsius temperature (symbol $t$) defined by the equation
-    where @fpws@ = 273,15 K by definition. To express celsius temperature, the unit
+    where @fpws@ = 273.15 K by definition. To express celsius temperature, the unit
     "degree Celsius" which is equal to the unit "kelvin" is used; in this case, "degree
     Celsius" is a special name used in place of "kelvin". An interval or difference
     of Celsius temperature can however, be expressed in kelvin as well as in degrees
     Celsius.
   note_fr: En dehors de la température thermodynamique (symbole $T$), exprimée en
     kelvins, on utilise aussi la température Célsius (symbole $t$) définie par l'équation
-    où @fpws@ = 273,15 K par définition. Pour exprimer la température, on utilise
+    où @fpws@ = 273.15 K par définition. Pour exprimer la température, on utilise
     l'unité « degré Célsius » qui est égale à l'unitié « kelvin » ; « degré Célsius
     » est un nom spécial employé dans ce cas au lieu de « kelvin ». Un intervalle
     ou une différence de température Célsius peuvent toutefois s'exprimer aussi bien
