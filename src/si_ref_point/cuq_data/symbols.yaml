@@ -421,22 +421,6 @@ grys:
   html: ''
   json: ''
   uri: units:gray
-h1is:
-  name_en: Hydrogen 1 isotope symbol
-  name_fr: ''
-  type: symbol
-  latex: '{^{1}\rm{H}}'
-  text:
-  html: ''
-  json: ''
-h2is:
-  name_en: Hydrogen 2 isotope symbol
-  name_fr: ''
-  type: symbol
-  latex: '{^{2}\rm{H}}'
-  text:
-  html: ''
-  json: ''
 hens:
   name_en: Henry unit symbol
   name_fr: ''
@@ -825,30 +809,6 @@ news:
   html: ''
   json: ''
   uri: units:newton
-o1is:
-  name_en: Oxygen 16 isotope symbol
-  name_fr: ''
-  type: symbol
-  latex: '{^{16}\rm{O}}'
-  text:
-  html: ''
-  json: ''
-o2is:
-  name_en: Oxygen 18 isotope symbol
-  name_fr: ''
-  type: symbol
-  latex: '{^{18}\rm{O}}'
-  text:
-  html: ''
-  json: ''
-o3is:
-  name_en: Oxygen 17 isotope symbol
-  name_fr: ''
-  type: symbol
-  latex: '{^{17}\rm{O}}'
-  text:
-  html: ''
-  json: ''
 ohms:
   name_en: Ohm unit symbol
   name_fr: ''
@@ -1265,30 +1225,6 @@ webs:
   html: ''
   json: ''
   uri: units:weber
-wthr:
-  name_en: Water triple point hydrogen isotopic amount-of-substance ratio (2H/1H)
-  name_fr: ''
-  type: symbol
-  latex: '{0.000\:155\:76}'
-  text: 0.000 155 76
-  html: ''
-  json: ''
-wto1:
-  name_en: Water triple point first oxygen isotopic amount-of-substance ratio (17O/16O)
-  name_fr: ''
-  type: symbol
-  latex: '{0.000\:379\:9}'
-  text: 0.000 379 9
-  html: ''
-  json: ''
-wto2:
-  name_en: Water triple point second oxygen isotopic amount-of-substance ratio (18O/16O)
-  name_fr: ''
-  type: symbol
-  latex: '{0.002\:005\:2}'
-  text: 0.002 005 2
-  html: ''
-  json: ''
 wtps:
   name_en: Water triple point symbol
   name_fr: ''
