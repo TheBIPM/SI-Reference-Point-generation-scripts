@@ -509,7 +509,7 @@ data:
 - dbid: 60
   uri: kelvin1967
   index: 2
-  note_en: "The 23rd CGPM (2007, Resolution 10) noted this definition refers to water 
+  note_en: "The 23rd CGPM (2007, Resolution 10) noted that this definition refers to water 
     having the isotopic composition defined by the following amount-of-substance ratios:
     @wthr@ mole of @h2is@ per mole of @h1is@, @wto1@ mole of @o3is@ per mole of @o1is@
     and @wto2@ mole of @o2is@ per mole of @o1is@."
