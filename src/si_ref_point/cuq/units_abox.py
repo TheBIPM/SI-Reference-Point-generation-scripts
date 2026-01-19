@@ -434,7 +434,7 @@ def main():
     for bdef in basedefs["data"]:
         # add data
         if bdef["URI"] is not None:
-            element = si_graph.set_unit_uri(bdef["URI"])
+            element = si_graph.set_uri(bdef["URI"])
             units_graph.add((element, RDF.type, si_graph.definition))
             units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
             units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
