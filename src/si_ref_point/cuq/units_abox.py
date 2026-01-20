@@ -292,8 +292,8 @@ def main():
             element = si_graph.set_unit_uri(dc["URI"])
 
             if dc["URI"] not in ["gram", "one"]:
-                si_graph.g.add((element, RDF.type, si_graph.si_base_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.si_base_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
                 units_graph.add(
@@ -389,29 +389,29 @@ def main():
                                 )
                             )
             else:  # gram, one
-                si_graph.g.add((element, RDF.type, si_graph.measurement_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.measurement_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
                 units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
                 if "prefixRestriction" in dc:
-                    si_graph.g.add(
+                    units_graph.add(
                         (element,
                          si_graph.prefix_restriction,
                          Literal(dc["prefixRestriction"], datatype=XSD.boolean),
                         )
                     )
                 if "isUnitOfQtyKind" in dc:  # "one" has many unlisted quantity kinds
-                    si_graph.g.add(
+                    units_graph.add(
                         (
                             element,
                             si_graph.is_unit_of_qty_kind,
                             si_graph.set_quantity_uri(dc["isUnitOfQtyKind"]),
                         )
                     )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_symbol,
