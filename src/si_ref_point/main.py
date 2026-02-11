@@ -4,6 +4,7 @@
 import argparse
 import logging
 import hashlib
+#import si_ref_point.cuq.cuq_tbox as cuq_tbox        # as example if the package is installed
 import si_ref_point.cuq.cuq_tbox as cuq_tbox
 import si_ref_point.cuq.quantities_abox as quantities_abox
 import si_ref_point.cuq.units_abox as units_abox
@@ -15,7 +16,8 @@ import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
 from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
-from si_ref_point import __version__
+#from si_ref_point import __version__
+import git
 import os
 import datetime
 from zipfile import ZipFile
@@ -37,9 +39,9 @@ def get_parser():
     parser.add_argument(
         '--gen_ontology_viz', action='store_true',
         help="Generate ontology markdown using the ontospy pachage")
-    parser.add_argument(
-        '--version', action='version',
-        version='%(prog)s' + __version__)
+    # parser.add_argument(
+    #     '--version', action='version',
+    #     version='%(prog)s' + __version__)
     parser.add_argument(
         '--only', type=str,
         help='Generate only ttl with names containing this string')
@@ -126,9 +128,12 @@ def main():
         now = datetime.datetime.now()
         timetag = now.strftime('%Y%m%dT%H%M%S')
         try:
-            githash = subprocess.check_output(["git", "describe"]).strip().decode()
+            # Replaced to work in the tests
+            # githash = subprocess.check_output(["git", "describe"]).strip().decode()
+            repo = git.Repo(search_parent_directories=True)
+            githash = repo.head.object.hexsha[:8]
         except:  # noqa
-            githash = __version__
+            githash = "nohash"
 
         zipname = '{}-si-app-{}.zip'.format(timetag, githash)
         logging.info(f'generating {zipname}')

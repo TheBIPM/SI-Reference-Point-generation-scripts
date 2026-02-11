@@ -20,7 +20,7 @@ for ttl_file in ['quantities.ttl', 'units.ttl']:
 fullURI = g.namespace_manager.expand_curie
 
 
-def unitnode_to_str(nodeID) -> str:
+def unitnode_to_str(nodeID) -> str|None:
     """ Recursively  generate unit representation strings
     Units may be compound units, i.e. nested binary trees with left and
     right terms, unit powers, multiples, etc...
@@ -32,27 +32,24 @@ def unitnode_to_str(nodeID) -> str:
         symbq = ("SELECT ?symb WHERE {" +
                  g.qname(nodeID) + " si:hasSymbol ?symb .}")
         symres = g.query(symbq)
-        for row in symres:
-            return row[0]
+        for srow in symres:
+            return srow[0]
     elif isinstance(nodeID, BNode):
         """ This is a blank node, we first have to determine its type
         """
+        nodeType = None
         for s, p, o in g.triples((nodeID, RDF.type, None)):
-            nodeType = g.qname(o)
+            nodeType = g.qname(str(o))
             break
         if nodeType == "si:UnitProduct":
             """ UnitProduct should have a left and a right term
             """
             leftTerm = ""
             rightTerm = ""
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasLeftUnitTerm"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasLeftUnitTerm"), None)):
                 leftTerm = unitnode_to_str(o)
                 break
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasRightUnitTerm"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasRightUnitTerm"), None)):
                 rightTerm = unitnode_to_str(o)
                 break
             return "{} x {}".format(leftTerm, rightTerm)
@@ -61,14 +58,10 @@ def unitnode_to_str(nodeID) -> str:
             """
             numericExponent = ""
             unitBase = ""
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasNumericExponent"),
-                                      None)):
-                numericExponent = int(o)
+            for s, p, o in g.triples((nodeID, fullURI("si:hasNumericExponent"), None)):
+                numericExponent = int(str(o))
                 break
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasUnitBase"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasUnitBase"), None)):
                 unitBase = unitnode_to_str(o)
                 break
             if numericExponent == 1:
@@ -80,36 +73,28 @@ def unitnode_to_str(nodeID) -> str:
             """
             numericFactor = 1
             unitTerm = ""
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasNumericFactor"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasNumericFactor"), None)):
                 numericFactor = str(o)
                 break
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasunitTerm"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasunitTerm"), None)):
                 unitTerm = unitnode_to_str(o)
                 break
-                return "{} x {}".format(numericFactor, unitTerm)
+            return "{} x {}".format(numericFactor, unitTerm)
         elif nodeType == "si:PrefixedUnit":
             """ Prefixed unit has a prefix and a non prefixed unit
             """
             prefix = ""
             nonPrefixedUnit = ""
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasPrefix"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasPrefix"), None)):
                 prefix = str(o)
                 break
-            for s, p, o in g.triples((nodeID,
-                                      fullURI("si:hasNonPrefixedUnit"),
-                                      None)):
+            for s, p, o in g.triples((nodeID, fullURI("si:hasNonPrefixedUnit"), None)):
                 nonPrefixedUnit = unitnode_to_str(o)
                 break
-                return "{}{}".format(prefix, nonPrefixedUnit)
+            return "{}{}".format(prefix, nonPrefixedUnit)
         else:
             logging.error("Unable to parse node {}".format(nodeID))
-
+    return None
 
 
 is_qty = """

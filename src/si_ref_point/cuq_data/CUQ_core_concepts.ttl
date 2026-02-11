@@ -8,11 +8,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-si: a owl:Ontology ;
-    dcterms:created "2023-12-22"^^xsd:date ;
-    rdfs:comment "Ontology, part of the SI reference point, providing base concepts and their relations."^^xsd:string ;
-    skos:prefLabel "SI Reference Point - Base Ontology"^^xsd:string .
-
 si:Constant a owl:Class ;
     rdfs:label "defining constant"@en,
         "constante définissant le SI"@fr ;

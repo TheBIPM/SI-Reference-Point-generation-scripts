@@ -1,3 +1,10 @@
+meta: 
+  file_name: "non_si_units_YAML"
+  wasAssociatedWith: "Frédéric Meynadier"
+  wasGeneratedBy: "manual YAML generation"
+  startedAtTime: "2023-01-01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.01"  
+data:
 - URI: minute
   prefLabel_fr: minute
   prefLabel_en: minute
