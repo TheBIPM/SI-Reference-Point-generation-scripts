@@ -705,7 +705,7 @@ def main():
                 has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
                 
                 if nsi["URI"] == "astronomicalunit":
-                    conv_factor_type = XSD.long
+                    conv_factor_type = XSD.integer
                 elif isinstance(nsi["ConversionFactor"], int):
                     conv_factor_type = XSD.int
                 elif isinstance(nsi["ConversionFactor"], float):
