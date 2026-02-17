@@ -7,7 +7,7 @@ import git
 import os
 import logging
 import yaml
-from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
+from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
@@ -703,7 +703,10 @@ def main():
                 has_unit_term = si_graph.set_uri("hasUnitTerm")
                 has_numeric_factor = si_graph.set_uri("hasNumericFactor")
                 has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
-                if isinstance(nsi["ConversionFactor"], int):
+                
+                if nsi["URI"] == "astronomicalunit":
+                    conv_factor_type = XSD.long
+                elif isinstance(nsi["ConversionFactor"], int):
                     conv_factor_type = XSD.int
                 elif isinstance(nsi["ConversionFactor"], float):
                     conv_factor_type = XSD.float
