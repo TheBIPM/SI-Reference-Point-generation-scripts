@@ -2,12 +2,14 @@
 CUQ TBox
 """
 
-from datetime import date
+from datetime import datetime, timezone
+import git
 import os
-from rdflib import Graph, URIRef, Literal, BNode
+import yaml
+from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CUQ_FILES_FOLDER, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -18,23 +20,26 @@ class SiElements:
     def __init__(self, namespace: str = SIDFWBASE + "/SI#", ns_prefix: str = "si"):
         self.g = Graph()  # a triple store as the main data structure
 
-        # Define the namespaces within (base)/SI
+    # 1) Define namespaces, sub-namespace and shortcuts used by A boxes
+    
+        # ~/SI
         self.namespace = namespace
-        #   ... and the shortcut
         self.g.bind(ns_prefix, self.namespace)
-
+        # ~/SI/units
         self.namespace_units = SIDFWBASE + "/SI/units/"
+        # ~/SI/prefixes
         self.namespace_prefixes = SIDFWBASE + "/SI/prefixes/"
+        # ~/SI/decisions
         self.namespace_decisions = SIDFWBASE + "/SI/decisions/"
-
-        # Define the namespace within (base)/quantities
+        # ~/quantities
         self.namespace_quantities = SIDFWBASE + "/quantities/"
-        # Define the namespace within (base)/constants
+        # ~/constants
         self.namespace_constants = SIDFWBASE + "/constants/"
         # Explicitly binding a constants namespace to the URI
         self.g.bind("constants", self.namespace_constants)
 
        # Define the namespaces within (base)/bodies
+        # ~/bodies
         self.namespace_bodies_base = SIDFWBASE + "/bodies/"
         self.namespace_bodies = {}
         for body in bodies_list:
@@ -43,15 +48,130 @@ class SiElements:
         #   ... and the shortcut
         self.g.bind('rb', RES_BOD_NS)
 
+        #~/entities (in the sens of PROVENANCE)
+        self.namespace_entities = SIDFWBASE + "/SI/entities#"
+        self.g.bind("entities",self.namespace_entities)
+
+        #~/activities (in the sens of PROVENANCE)
+        self.namespace_activities = SIDFWBASE + "/SI/activities#"
+        self.g.bind("activities",self.namespace_activities)
+        
+        #~/agents (in the sens of PROVENANCE)
+        self.namespace_agents = SIDFWBASE + "/SI/agents#"
+        self.g.bind("agents",self.namespace_agents)
+
         # Load graph from ttl files
         for ttl_file in ['CUQ_core_concepts.ttl',
                          'CUQ_extended_concepts.ttl']:
             self.g.parse(os.path.join(CUQ_FILES_FOLDER, ttl_file),
                          format="ttl")
-        # Update creation date
-        self.g.add((URIRef(self.namespace), DCTERMS.created,
-                    Literal(str(date.today()), datatype=XSD.date)))
+            
+    # 2) Add annotations to the ontology
 
+    #   2.1 General annotations (type, comments etc)
+        self.g.add(
+            (URIRef(self.namespace),
+             RDF.type,
+             OWL.Ontology)
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             SKOS.prefLabel,
+             Literal("SI Reference Point", datatype=XSD.string),
+            )
+        )
+
+        self.g.add(
+            (URIRef(self.namespace),
+             RDFS.comment,
+             Literal((
+                    "Ontology, part of the SI Reference Point, covering "
+                    "measurement units (SI base units and SI units with "
+                    "special names) and prefixes."),datatype=XSD.string))
+        )
+
+    #   2.2 Versioning
+        timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
+        uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
+        startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
+        
+        repo = git.Repo(search_parent_directories=True)
+        sha = repo.head.object.hexsha
+
+    #     2.2.1 Agent
+    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     and define the URI to a specific version by using its commit on github
+        agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py"
+        self.g.add(
+            (URIRef(agent_sw),
+             RDF.type,
+             PROV.Agent)
+        )
+        
+    #     2.2.2 Entity
+    #     there is no source file for the TBox, so there is no source entity
+    
+    #     declare the ttl output as an 'entity' (in the sense of PROVENANCE)
+        si_out_entity = "si_"+uri_timestamp+".ttl"
+        self.g.add(
+            (self.set_entity_uri(si_out_entity),
+             RDF.type,
+             PROV.Entity)
+             )
+    
+    #     2.2.3 Activity
+    #     declare the si_ttl_generation as 'activity' (in the sense of PROVENANCE)
+    #     make the activity unique by adding the timestamp to the identifier of the activity
+        activity = 'si_ttl_generation'+uri_timestamp + '.ttl_generation'
+        self.g.add(
+            (self.set_activity_uri(activity),
+            RDF.type,
+            PROV.Activity)
+            )
+    #     2.2.4 Link activity, agent, entities
+    #     activity - agent
+        self.g.add(
+            (self.set_activity_uri(activity),
+            PROV.wasAssociatedWith,
+            URIRef(agent_sw))
+            )
+        self.g.add(
+            (self.set_activity_uri(activity),
+                PROV.startedAtTime,
+                Literal(str(startedAt_timestamp), datatype=XSD.dateTime))
+        )
+    #     output entity - source entity
+    #      (no source entity for the TBox)
+    #     output entity - agent
+        self.g.add(
+            (self.set_entity_uri(si_out_entity),
+             PROV.wasAttributedTo,
+             URIRef(agent_sw))
+             )
+    #     output entity - activity
+        self.g.add(
+            (self.set_entity_uri(si_out_entity),
+             PROV.wasGeneratedBy,
+             self.set_activity_uri(activity))
+            )
+
+    #   2.3 License
+        self.g.add(
+         (URIRef(self.namespace),
+          DCTERMS.license,
+          URIRef(CC_LICENCE))
+        )
+        self.g.add(
+            (URIRef(self.namespace),
+             RDFS.comment,
+             Literal(CC_LICENCE_TEXT_EN,lang="en"))
+        )
+        self.g.add(
+            (URIRef(self.namespace),        
+             RDFS.comment,
+             Literal(CC_LICENCE_TEXT_FR,lang="fr"))
+        )
+    # 3) Define classes and predicates used by different A boxes
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")
         self.si_base_unit = self.set_uri("SIBaseUnit")
@@ -116,6 +236,8 @@ class SiElements:
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
         self.has_exponent = self.set_uri("hasExponent")
 
+    # 4) Utility methods
+
     def uri(self, name: str) -> URIRef:
         """Utility method """
         return URIRef(self.namespace + name)
@@ -124,6 +246,14 @@ class SiElements:
         """ Utility method """
         return URIRef(self.namespace + name)
 
+    def set_activity_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_activities + name)
+
+    def set_entity_uri(self, name: str) -> URIRef:
+        """ Utility method """
+        return URIRef(self.namespace_entities + name)
+    
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)
@@ -168,3 +298,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
