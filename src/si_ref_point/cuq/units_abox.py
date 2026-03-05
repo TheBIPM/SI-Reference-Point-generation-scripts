@@ -7,7 +7,7 @@ import git
 import os
 import logging
 import yaml
-from rdflib import Graph, URIRef, BNode, Literal,RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
+from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
@@ -292,8 +292,8 @@ def main():
             element = si_graph.set_unit_uri(dc["URI"])
 
             if dc["URI"] not in ["gram", "one"]:
-                si_graph.g.add((element, RDF.type, si_graph.si_base_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.si_base_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
                 units_graph.add(
@@ -389,29 +389,29 @@ def main():
                                 )
                             )
             else:  # gram, one
-                si_graph.g.add((element, RDF.type, si_graph.measurement_unit))
-                si_graph.g.add(
+                units_graph.add((element, RDF.type, si_graph.measurement_unit))
+                units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(fr)"], lang="fr"))
                 )
                 units_graph.add(
                     (element, SKOS.prefLabel, Literal(dc["prefLabel(en)"], lang="en"))
                 )
                 if "prefixRestriction" in dc:
-                    si_graph.g.add(
+                    units_graph.add(
                         (element,
                          si_graph.prefix_restriction,
                          Literal(dc["prefixRestriction"], datatype=XSD.boolean),
                         )
                     )
                 if "isUnitOfQtyKind" in dc:  # "one" has many unlisted quantity kinds
-                    si_graph.g.add(
+                    units_graph.add(
                         (
                             element,
                             si_graph.is_unit_of_qty_kind,
                             si_graph.set_quantity_uri(dc["isUnitOfQtyKind"]),
                         )
                     )
-                si_graph.g.add(
+                units_graph.add(
                     (
                         element,
                         si_graph.has_symbol,
@@ -434,7 +434,7 @@ def main():
     for bdef in basedefs["data"]:
         # add data
         if bdef["URI"] is not None:
-            element = si_graph.set_unit_uri(bdef["URI"])
+            element = si_graph.set_uri(bdef["URI"])
             units_graph.add((element, RDF.type, si_graph.definition))
             units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_fr"], lang="fr")))
             units_graph.add((element, SKOS.prefLabel, Literal(bdef["prefLabel_en"], lang="en")))
@@ -703,8 +703,9 @@ def main():
                 has_unit_term = si_graph.set_uri("hasUnitTerm")
                 has_numeric_factor = si_graph.set_uri("hasNumericFactor")
                 has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
+                
                 if isinstance(nsi["ConversionFactor"], int):
-                    conv_factor_type = XSD.int
+                    conv_factor_type = XSD.integer
                 elif isinstance(nsi["ConversionFactor"], float):
                     conv_factor_type = XSD.float
                 else:
