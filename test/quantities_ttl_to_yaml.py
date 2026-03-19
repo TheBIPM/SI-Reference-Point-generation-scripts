@@ -18,17 +18,37 @@ def get_unit(g, obj):
         # This a leaf of the binary tree, return the code of the unit, power 1
         return [str(obj).split('/')[-1] , 1]
     else:
-        for s, p, o in list(g.triples((obj, URIRef(rdf + ), None))):
-            print(s,p,o)
-            if p == URIRef(si + "hasLeftUnitTerm"):
+        for s, p, o in list(g.triples((obj, URIRef(rdf + 'type'), None))):
+            rdftype = o
+        if rdftype == URIRef(si + 'UnitProduct'):
+            for s, p, o in list(g.triples((obj,
+                                           URIRef(si + 'hasLeftUnitTerm'),
+                                           None))):
                 left_term = get_unit(g, o)
-                # Find right Term
-                for s2, p2, o2 in list(g.triples((obj, URIRef(si + "hasRightUnitTerm"), None))):
-                    right_term = get_unit(g, o2)
-                return [left_term, right_term]
+            for s, p, o in list(g.triples((obj,
+                                           URIRef(si + 'hasRightUnitTerm'),
+                                           None))):
+                right_term = get_unit(g, o)
+            return [left_term, right_term]
+        elif rdftype == URIRef(si + 'UnitPower'):
+            for s, p, o in list(g.triples((obj,
+                                           URIRef(si + 'hasNumericExponent'),
+                                           None))):
+                num_ex = o.value
+            for s, p, o in list(g.triples((obj,
+                                           URIRef(si + 'hasUnitBase'),
+                                           None))):
+                unit = get_unit(g, o)
+                unit[1] = num_ex
+            return unit
 
-                import ipdb;ipdb.set_trace()  # noqa
-
+def flatten_units(units):
+    """ flatten the binary tree
+    """
+    if isinstance(units[0], str) and isinstance(units[1], int):
+        return [units]
+    elif isinstance(units[0], list) and isinstance(units[1], list):
+        return flatten_units(units[0]) + flatten_units(units[1])
 
 def main():
     parser = argparse.ArgumentParser(description="Convert quantitities TTL to YAML")
@@ -68,7 +88,22 @@ def main():
                                        None))):
             buf['Unit'] = get_unit(g, o)
         output.append(buf)
-    import ipdb;ipdb.set_trace()  # noqa
+
+
+    print('Number of quantity kinds : {}'.format(len(qty_list)))
+
+    with open('output.yaml', 'w') as fp:
+        for qu in output:
+            fp.write('- identifier: {}\n'.format(qu['identifier']))
+            fp.write('  quantity-en: {}\n'.format(qu['quantity-en']))
+            fp.write('  quantity-fr: {}\n'.format(qu['quantity-fr']))
+            if 'Unit' not in qu or len(qu['Unit']) == 0:
+                fp.write('  Unit: null\n')
+            else:
+                fp.write('  Unit:\n')
+                for el in flatten_units(qu['Unit']):
+                    fp.write('    - {}\n'.format(el))
+
 
 if __name__ == "__main__":
     main()
