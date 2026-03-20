@@ -210,13 +210,7 @@ data:
 - identifier: DSDE
   quantity-en: 'distance scale deviation'
   quantity-fr: 'écart de l''échelle de distance'
-  Unit: null 
-- identifier: DISL
-  quantity-en: 'dispersion slope'
-  quantity-fr: 'pente de dispersion'
-  Unit:
-    - [second, "1"]
-    - [metre, "-1"]   
+  Unit: null           
 - identifier: EXIT
   quantity-en: 'radiant exitance'
   quantity-fr: 'exitance énergétique'
@@ -245,19 +239,110 @@ data:
   Unit:
     - [joule, "1"]
     - [metre, "-2"]
-- identifier: LERA
-  quantity-en: 'length ratio'
-  quantity-fr: 'rapport de longueur'
-  Unit: null
 - identifier: POWM
   quantity-en: 'power level relative to 1 mW'
   quantity-fr: 'niveau de puissance rélatif à 1 mW'
   Unit:
     - [bel, "1"]
 - identifier: DISP
-  quantity-en: '(chromatic) dispersion'
-  quantity-fr: 'dispersion (chromatique)'
+  quantity-en: 'chromatic dispersion'
+  quantity-fr: 'dispersion chromatique'
   Unit: 
     - [second, "1"]
     - [metre, "-1"]
-
+    - [metre, "-1"] 
+- identifier: TDIS
+  quantity-en: 'total chromatic dispersion'
+  quantity-fr: 'dispersion chromatique totale'
+  Unit: 
+    - [second, "1"]
+    - [metre, "-1"]  
+- identifier: DISL
+  quantity-en: 'chromatic dispersion slope'
+  quantity-fr: 'pente de dispersion chromatique'
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"] 
+    - [metre, "-1"]
+    - [metre, "-1"]     
+- identifier: TDDS
+  quantity-en: 'total chromatic dispersion slope'
+  quantity-fr: 'pente de dispersion chromatique totale'
+  Unit:
+    - [second, "1"]
+    - [metre, "-1"] 
+    - [metre, "-1"]    
+- identifier: SOPL
+  quantity-en: 'sound pressure level (referenced to 20 µPa)'
+  quantity-fr: 'niveau de pression acoustique (référence : 20 µPa)'
+  Unit: 
+    - [bel, "1"]
+- identifier: SYRL
+  quantity-en: 'system response level (referenced to true level)'
+  quantity-fr: 'niveau de réponse du système (référence : niveau réel)'
+  Unit: 
+    - [bel, "1"]
+- identifier: PSNL
+  quantity-en: 'pressure sensitivity level (referenced to 1 V/Pa)'
+  quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/Pa)'
+  Unit: 
+    - [bel, "1"]
+- identifier: PSNW
+  quantity-en: 'pressure sensitivity level (referenced to 1 V/µPa)'
+  quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/µPa)'
+  Unit: 
+      - [bel, "1"]    
+- identifier: SOIN
+  quantity-en: 'sound intensity'
+  quantity-fr: 'intensité acoustique'
+  Unit: 
+    - [watt, "1"]
+    - [metre, "-2"]
+- identifier: SOIL
+  quantity-en: 'sound intensity level (referenced to 1 pW m-2)'
+  quantity-fr: 'niveau d''intensité acoustique (référence : 1 pW m-2)'
+  Unit: 
+    - [bel, "1"]
+- identifier: ACIM
+  quantity-en: 'acoustic impedance'
+  quantity-fr: 'impédance acoustique'
+  Unit: 
+    - [pascal, "1"]
+    - [second, "1"]    
+    - [metre, "-3"] 
+- identifier: MEIL
+  quantity-en: 'mechanical impedance (referenced to 1 N s m-2)'
+  quantity-fr: 'impédance mécanique (référence : 1 N s m-2)'
+  Unit: 
+    - [bel, "1"]      
+- identifier: DIRE
+  quantity-en: 'directivity'
+  quantity-fr: 'directivité'
+  Unit: null
+- identifier: FORL
+  quantity-en: 'force response level (referenced to 1 V/N)'
+  quantity-fr: 'niveau de réponse à la force (référence : 1 V/N)'
+  Unit: 
+    - [bel, "1"] 
+- identifier: NORM
+  quantity-en: 'normalized signal'
+  quantity-fr: 'signal normalisé'
+  Unit: null
+- identifier: PHSS
+  quantity-en: 'phase shift'
+  quantity-fr: 'déphasage'
+  Unit: 
+    - [radian, "1"] 
+- identifier: DGDE
+  quantity-en: 'differential group delay'
+  quantity-fr: 'retard différentiel de groupe'
+  Unit: 
+    - [second, "1"]     
+- identifier: FSST
+  quantity-en: 'flicker severity index (short term)'
+  quantity-fr: 'indicateur de flicker à court terme'
+  Unit: null
+- identifier: FSLT
+  quantity-en: 'flicker severity index (long term)'
+  quantity-fr: 'indicateur de flicker à long terme'
+  Unit: null     
