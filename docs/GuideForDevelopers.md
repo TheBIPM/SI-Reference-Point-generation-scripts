@@ -1,8 +1,8 @@
 # The SI Reference Point - Guide for Developers
 
 ## 1. Scope
-
-The [SI Reference Point](https://si-digital-framework.org/SI/) is a digital reference in support of the [International System of Units (SI)](https://www.bipm.org/en/measurement-units/). It is aimed at anyone wishing to express their measurement data in a [FAIR](https://www.go-fair.org/fair-principles/) manner.
+The [SI Reference Point](https://si-digital-framework.org/SI/) is a digital reference in support of the [International System of Units (SI)](https://www.bipm.org/en/measurement-units/). It is 
+aimed at anyone wishing to express their measurement data in a [FAIR](https://www.go-fair.org/fair-principles/) manner.
 
 The SI Reference Point contains
 * the values of (and PIDs for) the constants defining the SI
@@ -11,7 +11,6 @@ The SI Reference Point contains
 * examples of physical and chemical quantities, along with their corresponding SI units
 
 The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) or JSON-LD files:
-
 * SI.ttl
 * SI/units.ttl
 * SI/prefixes.ttl
@@ -28,9 +27,8 @@ An introductory overview of the service for users is given [HERE](https://github
 
 
 ## 2. Introduction to the SI
-
-The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set of "SI prefixes". In brief:
-
+The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set 
+of "SI prefixes". In brief:
 * an SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond (ns) = 10<sup>-9</sup> s. 
 * compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m⋅s<sup>-2</sup>) for acceleration.   
 * each kind of quantity has one corresponding SI unit (though it might be possible to express that unit in different ways).
@@ -44,83 +42,83 @@ The following table shows how the information from the SI Brochure is distribute
 
 **Table 1.** List of tables in the SI Brochure and corresponding information in the SI Reference Point
 
-| Table | Title | Encoded in|
-| :----- | :----- | :---- |
-| 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
-| 2 | SI base units | SI/units |
-| 3 |  Base quantities and dimensions  used in the SI | quantities |
-| 4 |  The 22 SI units with special names and symbols | SI/units |
-| 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
-| 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
-| 7 |  SI prefixes | SI/prefixes|
-| 8 |  Non-SI units accepted for use with the SI units | SI/units |
-| <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
+| Table               | Title                                                                                                                         | Encoded in   |
+|:--------------------|:------------------------------------------------------------------------------------------------------------------------------|:-------------|
+| 1                   | The seven defining constants of the SI and the seven corresponding units they define                                          | constants    |
+| 2                   | SI base units                                                                                                                 | SI/units     |
+| 3                   | Base quantities and dimensions  used in the SI                                                                                | quantities   |
+| 4                   | The 22 SI units with special names and symbols                                                                                | SI/units     |
+| 5                   | Examples of coherent derived units in the SI expressed in terms of base units                                                 | SI/units     |
+| 6                   | Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units     |
+| 7                   | SI prefixes                                                                                                                   | SI/prefixes  |
+| 8                   | Non-SI units accepted for use with the SI units                                                                               | SI/units     |
+| <nobr>App. 1</nobr> | Decisions of the CGPM and the CIPM                                                                                            | SI/decisions |
 
 
-## 3. Getting started 
-
-The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the knowledge graph. The available calls are described below and in the Swagger interface at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity. They also underpin the web interface.
+## 3. Getting started
+The Application Programming Interface provides a set of predefined SPARQL queries to retrieve the information in the 
+knowledge graph. The available calls are described below and in the Swagger interface 
+at https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT. They can be used to 
+retrieve information about the units, prefixes, defining constants, related official decisions, and kinds of quantity. 
+They also underpin the web interface.
 
 ### 3.1 Authentication and Authorization
-
 The API of the beta-version of the SI Reference Point is openly available at 
 
-<center>https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT</center>
+<div style="text-align: center;">https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT</div>
+under the Creative Commons Attribution 3.0 Intergovernmental Organization license 
+([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). Currently, no pre-registration is required, but 
+please note that during the beta-testing phase the API calls provided may be subject to revision. During this phase 
+(at least until the end of 2024), two weeks' notice will be given, via the website and the GitHub site, to announce 
+upcoming changes. The changes will be logged on the GitHub site.
 
-under the Creative Commons Attribution 3.0 Intergovernmental Organization license ([CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/)). 
-
-Currently no pre-registration is required, but please note that during the beta-testing phase the API calls provided may be subject to revision. During this phase (at least until the end of 2024), two weeks' notice will be given, via the website and the GitHub site, to announce upcoming changes. The changes will be logged on the GitHub site.
-
-Once the official version is released, registration of users will be encouraged to facilitate the communication of any further changes to the API.
-
-A rate limit of XXXX is in place.
+Once the official version is released, registration of users will be encouraged to facilitate the communication of any 
+further changes to the API. A rate limit of XXXX is in place.
 
 ### 3.2 API calls
-
 The API queries can be triggered through the [Swagger interface](https://si-digital-framework.org/api-docs/swagger-ui/?urls.primaryName=SI%20REFERENCE%20POINT) or by a Command Line Interface (CLI).
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
-
 * `curl -H "accept: application/json"`
 * `curl  -H "accept: application/ld+json"`
 * `curl -H "accept: application/xml"`
 * `curl -H "accept: application/html"`
 * `curl -H "accept: application/octet-stream"`
 
-The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus the call `SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
+The names of the calls indicated below should be appended to the base URL `si-digital-framework.org/`. Thus, the call 
+`SI/units`, for example, listed below represents `https://si-digital-framework.org/SI/units`.
 
-| GET Query | Action | Mandatory parameters | Optional parameters | Effect | 
-| :----- | :----- | :---- | :---- | :---- |
-| `SI/units` | returns complete list of units | | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `SI/units/{name}` | information about specified unit `{name}` | `{name}` of unit | | default language is English; default date is date of query |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| | | | `date=YYYY-MM-DD` | information at specified date |
-| `SI/prefixes` | returns list of SI prefixes | | | default language is English; default date is date of query |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `SI/prefixes/{name}` | information about specified prefix `{name}` | `{name}` of prefix | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `constants` | returns list of defining constants | | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `constants/{name}` | information about specified constant `{name}` | `{name}` (shortened) name of constant as returned by the previous call | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `quantities` | returns list of kinds of quantity currently included in the system | | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
-| `quantities/{code}` | information about specified quantity `{code}` | {code} is the four-letter code for the quantity as returned by the previous call | | default language is English |
-| | | | `lang=en` | text in English |
-| | | | `lang=fr` | text in French |
+| GET Query            | Action                                                             | Mandatory parameters                                                             | Optional parameters | Effect                                                     | 
+|:---------------------|:-------------------------------------------------------------------|:---------------------------------------------------------------------------------|:--------------------|:-----------------------------------------------------------|
+| `SI/units`           | returns complete list of units                                     |                                                                                  |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `SI/units/{name}`    | information about specified unit `{name}`                          | `{name}` of unit                                                                 |                     | default language is English; default date is date of query |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+|                      |                                                                    |                                                                                  | `date=YYYY-MM-DD`   | information at specified date                              |
+| `SI/prefixes`        | returns list of SI prefixes                                        |                                                                                  |                     | default language is English; default date is date of query |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `SI/prefixes/{name}` | information about specified prefix `{name}`                        | `{name}` of prefix                                                               |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `constants`          | returns list of defining constants                                 |                                                                                  |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `constants/{name}`   | information about specified constant `{name}`                      | `{name}` (shortened) name of constant as returned by the previous call           |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `quantities`         | returns list of kinds of quantity currently included in the system |                                                                                  |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
+| `quantities/{code}`  | information about specified quantity `{code}`                      | {code} is the four-letter code for the quantity as returned by the previous call |                     | default language is English                                |
+|                      |                                                                    |                                                                                  | `lang=en`           | text in English                                            |
+|                      |                                                                    |                                                                                  | `lang=fr`           | text in French                                             |
 
 #### Examples
 
-**`SI/units`** 
-
+**`SI/units`**
 * ```curl -X GET "https://si-digital-framework.org/SI/units" -H "accept: application/json"``` (on linux/MacOS)
 * ```curl -X GET "https://si-digital-framework.org/SI/units?lang=fr" -H "accept: application/json"``` 
 * ```curl -X GET "https://si-digital-framework.org/SI/units" -Headers "{accept='application/json'}``` (on Windows)
@@ -128,7 +126,7 @@ The names of the calls indicated below should be appended to the base URL `si-di
 will return a complete list of the units: the SI base units, SI derived units with special names, and non-SI units allowed for use with the SI units.
 
 <i>Optional parameters:</i>
-  * `lang=fr` (to return French texts) or `lang=en` (the default setting: English)
+* `lang=fr` (to return French texts) or `lang=en` (the default setting: English)
 
 **`SI/units/{name}`** 
 
@@ -144,43 +142,41 @@ The mandatory parameter {name} is the English name of the unit (written without 
   * `date=YYYY-MM-DD` (e.g. `date=2024-02-14` for 14 February 2024); the default setting is the query date
 
 **`SI/prefixes`**
-  
 * ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes?lang=fr" -H "accept: application/xml"```
-
 will return (in XML format and French text) information about all the SI prefixes.
 
-  <i>Optional parameters</i>
-  * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+<i>Optional parameters</i>
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
- **`SI/prefixes/{name}`**
-
+**`SI/prefixes/{name}`**
 *  ```curl -X GET "https://www.si-digital-framework.org/SI/prefixes/mega?lang=fr" -H "accept: application/json"```
 
 will return (in JSON format and French text) information about the SI prefix "mega" (méga).
-
 The mandatory parameter {name} is the English name of the prefix.
    
-  <i>Optional parameters:</i> 
-    * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+<i>Optional parameters:</i> 
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
-  **`constants`**
-
+**`constants`**
 * ```curl -X GET "https://si-digital-framework.org/constants?lang=en" -H "accept: application/json"```
 
-will returns information about the defining constants. (Note: The knowledge base is currently restricted to the seven constants defining the SI.)
+will return information about the defining constants. (Note: The knowledge base is currently restricted to the seven 
+constants defining the SI.)
 
 <i>Optional parameters:</i>
-  * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
-  **`constants/{parameter}`**
-
+**`constants/{parameter}`**
 ```curl -X GET "https://si-digital-framework.org/constants/PlanckConstant?lang=en" -H "accept: application/json"```
 
-will return (in JSON format) information in English about the Planck constant. {parameter} is the ID of the constant as listed by `constants`. It is a shortened version of the Ennglish name (written without spaces and in CamelCase (camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the output of `constants`.
+will return (in JSON format) information in English about the Planck constant. {parameter} is the ID of the constant as 
+listed by `constants`. It is a shortened version of the English name (written without spaces) and in CamelCase 
+(camel caps), with an initial capital letter and no spaces. For confirmation of the name to use, please refer to the 
+output of `constants`.
 
 <i>Optional parameters:</i>
-  * `lang=fr` (to return French information) or `lang=en` (for English: default setting)
+* `lang=fr` (to return French information) or `lang=en` (for English: default setting)
 
 
 ## 3.3 Parser and compound units

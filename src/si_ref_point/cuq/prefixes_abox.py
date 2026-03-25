@@ -7,7 +7,7 @@ import os
 import yaml
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER,GITHUB_BASE_PATH,SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER,GITHUB_BASE_PATH
 
 
 def main():
@@ -52,10 +52,9 @@ def main():
     
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE) 
-    #     and define URI to a specific version by using the commit reference on github
-    agents = []
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/prefixes_abox.py")
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
+    #     and define URI to a specific version by using the commit reference on GitHub
+    agents = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/prefixes_abox.py",
+              GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/cuq_tbox.py"]
     for agent in agents:
         prefix_graph.add(
             (URIRef(agent),
@@ -66,9 +65,8 @@ def main():
     #     2.2.2 Entity
     #     declare the source (YAML file) as 'entity' (in the sense of PROVENANCE)
     #     The manually produced YAML files are stored on GITHUB. Their hexsha together
-    #     with the path are used as an unique identifier
-    source_list = []
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/prefixes.yaml")
+    #     with the path are used as a unique identifier
+    source_list = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/prefixes.yaml"]
     for source in source_list:
         prefix_graph.add(
             (URIRef(source),

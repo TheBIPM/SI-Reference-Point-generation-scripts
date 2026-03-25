@@ -1,6 +1,9 @@
+""" Add documentation """
+
 import argparse
-from rdflib import Graph, BNode, RDF
 import os
+from rdflib import Graph, BNode, RDF
+from config import PROJECT_ROOT
 
 
 def main(APIPATH):
@@ -14,10 +17,8 @@ def main(APIPATH):
     g.parse(os.path.join(APIPATH, 'constants.ttl'))
     g.parse(os.path.join(APIPATH, 'cgpm.ttl'))
 
-
     # ------------------------------------------------------------------------
     # get classes
-
     class_query = """
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -151,8 +152,8 @@ def main(APIPATH):
 
 
 def parse_multi(g, nodeID):
+    items = []
     for s, p, o in g.triples((nodeID, None, None)):
-        items = []
         if "owl#oneOf" in str(p) or "owl#unionOf" in str(p):
             next_node = o
             next_node_string = ""
@@ -170,12 +171,9 @@ def parse_multi(g, nodeID):
 
 
 if __name__=="__main__":
-    parser = argparse.ArgumentParser(
-        description="Generate SI ref point vocabulary")
-    parser.add_argument(
-        "--path_to_ttl",
-        default=os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "..", "TTL")),
+    parser = argparse.ArgumentParser(description="Generate SI ref point vocabulary")
+    parser.add_argument("--path_to_ttl",
+        default = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL',
         help="Directory where TTLs are stored")
     args = parser.parse_args()
     main(args.path_to_ttl)

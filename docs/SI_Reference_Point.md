@@ -22,35 +22,35 @@ The SI Reference Point is based on five main pillars, or knowledge graphs:
     * SI derived units with special names (Table 4 of [1])
     * Non-SI units allowed for use with the SI (Table 8 of [1])
     * Compound units (the examples given in Tables 5 and 6 of [1] plus additional examples from the BIPM key comparison database (KCDB) [2])
-1. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
+2. **[SI/prefixes](http://si-digital-framework.org/SI/prefixes)**
     * SI prefixes (Table 7 of [1])
-1. **[Constants](http://si-digital-framework.org/constants)**
+3. **[Constants](http://si-digital-framework.org/constants)**
     * Initially the 7 defining constants of the SI (Table 1 of [1])
-1.	**[Quantities](http://si-digital-framework,org/quantities)**
+4.	**[Quantities](http://si-digital-framework,org/quantities)**
     * SI base quantities (Table 3 of [1])
     * Other example quantities (Tables 5 and 6 of [1])
-    * Other quantities in the BIPM key comparison database (KCDB))
-1. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
+    * Other quantities in the BIPM key comparison database (KCDB)
+5. **[SI/decisions](http://si-digital-framework.org/SI/decisions)**
     * Decisions relating to the SI, taken by the [General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm) and the [International Committee for Weights and Measures (CIPM)](https://www.bipm.org/en/committees/ci/cipm)  (Appendix 1 of [1])
   
 ##### Remarks
 - The current version of the SI Reference Point covers exclusively the 7 defining constants of the SI. For a comprehensive list of constants and their recommended values, consult [3]
-- The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development, covering responsible bodies within the BIPM the (e.g [General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm) or the [International Committee for Weights and Measures (CIPM)](https://www.bipm.org/en/committees/ci/cipm) ).
+- The SI/decisions information is presented in a stand-alone file, but interfaces with another component of the SI Digital Framework under development, covering responsible bodies within the BIPM the (e.g., [General Conference on Weights and Measures (CGPM)](https://www.bipm.org/en/committees/cg/cgpm) or the [International Committee for Weights and Measures (CIPM)](https://www.bipm.org/en/committees/ci/cipm) ).
 
   
 **Table 1.** List of tables in the SI Brochure [1] and corresponding information in the SI Reference Point
 
-| Table | Title | Encoded in|
-| :----- | :----- | :---- |
-| 1 |  The seven defining constants of the SI and the seven corresponding units they define  | constants |
-| 2 |  SI base units | SI/units |
-| 3 |  Base quantities and dimensions  used in the SI | quantities |
-| 4 |  The 22 SI units with special names and symbols | SI/units |
-| 5 |  Examples of coherent derived units in the SI expressed in terms of base units | SI/units |
-| 6 |  Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units |
-| 7 |  SI prefixes | SI/prefixes|
-| 8 |  Non-SI units accepted for use with the SI units | SI/units |
-| <nobr>App. 1</nobr> |  Decisions of the CGPM and the CIPM | SI/decisions |
+| Table               | Title                                                                                                                         | Encoded in   |
+|:--------------------|:------------------------------------------------------------------------------------------------------------------------------|:-------------|
+| 1                   | The seven defining constants of the SI and the seven corresponding units they define                                          | constants    |
+| 2                   | SI base units                                                                                                                 | SI/units     |
+| 3                   | Base quantities and dimensions  used in the SI                                                                                | quantities   |
+| 4                   | The 22 SI units with special names and symbols                                                                                | SI/units     |
+| 5                   | Examples of coherent derived units in the SI expressed in terms of base units                                                 | SI/units     |
+| 6                   | Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units     |
+| 7                   | SI prefixes                                                                                                                   | SI/prefixes  |
+| 8                   | Non-SI units accepted for use with the SI units                                                                               | SI/units     |
+| <nobr>App. 1</nobr> | Decisions of the CGPM and the CIPM                                                                                            | SI/decisions |
 
 
 #### Tools
@@ -205,7 +205,9 @@ Following standard practice, the TTL files are divided between a “T-box”, sp
 
 ### Application Programming Interface (API)
 
-The web interface at https://si-digital-framework.org/SI is designed to simplify access to the knowledge graphs for a human reader. Underpinning the web pages are a set of pre-programmed calls to the TTL files, such as (expressed as words rather than data requests) “list all the SI units”, “list all the SI prefixes”, “what is the current definition of the metre”, etc. 
+The web interface at https://si-digital-framework.org/SI is designed to simplify access to the knowledge graphs for a human reader. 
+Underpinning the web pages are a set of pre-programmed calls to the TTL files, such as (expressed as words rather than data requests):
+“list all the SI units”, “list all the SI prefixes”, “what is the current definition of the metre”, etc. 
 
 The same pre-programmed queries (API calls) are documented in the Swagger interface at
 [https://si-digital-framework.org/api-docs/swagger-ui](https://si-digital-framework.org/api-docs/swagger-ui)
@@ -214,7 +216,8 @@ Select the service `SI REFERENCE POINT` from the drop-down menu at the top right
 
 ![image](./fig/API_panel.png)
 
-The responses will be given according to the header information, which can be modified manually from a Command Line Interface if desired. For example: 
+The responses will be given according to the header information, which can be modified manually from a Command Line 
+Interface if desired. For example: 
 * `-H ‘accept:application/json’`	will return JSON code
 * `-H ‘accept:application/xml’`	will return XML code
 * `-H ‘accept:application/octet-stream’`	will return the response without change of format (i.e. in TTL)
@@ -273,10 +276,11 @@ A complete list of Classes and Predicates contained in the knowledge graphs
 will soon be available.
 
 ### Namespaces
+
 #### ~bodies
 * https://si-digital-framework.org/bodies#
 * https://si-digital-framework.org/bodies/CGPM#
-* https://si-digital-framwework.org/bodies/CIPM#
+* https://si-digital-framework.org/bodies/CIPM#
 * https://si-digital-framework.org/bodies/AUV#		(not yet implemented)
 * https://si-digital-framework.org/bodies/CCEM#		(not yet implemented)
 * https://si-digital-framework.org/bodies/CCL#		(not yet implemented)
@@ -286,13 +290,17 @@ will soon be available.
 * https://si-digital-framework.org/bodies/CCTF#		(not yet implemented)
 * https://si-digital-framework.org/bodies/CCQM#		(not yet implemented)
 * https://si-digital-framework.org/bodies/CCU#		(not yet implemented)
+
 #### ~constants
 * https://si-digital-framework.org/constants#
+
 #### ~kcdb
 * https://si-digital-framework.org/kcdb-sc#
 * https://si-digital-framework.org/kcdb-cmc#
+
 #### ~quantities
 * https://si-digital-framework.org/quantities#
+
 #### ~SI
 * https://si-digital-framework.org/SI#
 * https://si-digital-framework.org/SI/decisions#

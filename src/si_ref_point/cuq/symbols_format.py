@@ -16,7 +16,7 @@ with open(os.path.join(CUQ_FILES_FOLDER, 'symbols.yaml'), encoding="utf8") as fp
 def formattxt(txt, fmt='latex', add_delim=True, decimal_sep="."):
     """
     formats a text string with symbols replaced in any of the following formats
-    html, latex, json, text
+    HTML, latex, JSON, text
 
     txt : input string
     fmt : one of ['html', 'latex', 'json', 'text']

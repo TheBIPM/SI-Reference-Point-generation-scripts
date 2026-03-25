@@ -1,3 +1,5 @@
+""" Add documentation """
+
 from rdflib import Graph, RDF, URIRef, BNode
 
 import os

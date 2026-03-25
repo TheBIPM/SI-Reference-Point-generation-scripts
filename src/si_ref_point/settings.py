@@ -1,10 +1,10 @@
 """
-seetings.py
-Global constants etc
+source 'settings.py'
+global constants etc.
 """
-import os
-import pathlib
-package_dir = pathlib.Path(__file__).parent.resolve()
+
+from config import PROJECT_ROOT
+
 
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
@@ -18,18 +18,18 @@ SIDFWBASE = "https://si-digital-framework.org"      # Base URL for the SI Digita
 # Locations of input and output files
 
 # Folder for files of cgpm + cipm resolutions
-CGPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cgpm")
-CIPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cipm")
-CCTF_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cctf")
+CGPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cgpm"
+CIPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cipm"
+CCTF_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cctf"
 
 # Folder for YAML- and TTL-files produced manually
-CUQ_FILES_FOLDER = os.path.join(package_dir, "cuq_data")
+CUQ_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "cuq_data"
 
 # Default Folder for output files
 #   per default, the output will be placed in the directory
 #   from which the script is launched 
-TTL_FILES_FOLDER = os.path.join(".","TTL")
-JSONLD_FILES_FOLDER = os.path.join(".","JSON-LD")
+TTL_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "TTL"
+JSONLD_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "JSON-LD"
 
 GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 

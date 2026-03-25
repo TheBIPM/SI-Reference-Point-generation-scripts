@@ -11,7 +11,7 @@ import yaml
 #from si_ref_point.cuq.cuq_tbox import SiElements   # as example if package is installed
 from si_ref_point.cuq.cuq_tbox import SiElements
 from si_ref_point.cuq.units_abox import transform_to_graph
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH
 
 
 def main():
@@ -57,10 +57,9 @@ def main():
     sha = repo.head.object.hexsha
     #   2.2.1 Agent
     #   declare this code as an 'agent' (in the sense of PROVENANCE)
-    #   and define UàRI to a specific version by using its commit on github
-    agents = []
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/quantities_abox.py")
+    #   and define UàRI to a specific version by using its commit on GitHub
+    agents = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/cuq_tbox.py",
+              GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/quantities_abox.py"]
 
     for agent_sw in agents:
         quantities_graph.add(
@@ -73,9 +72,8 @@ def main():
     #   declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
     #   The manually produced YAML files are stored on GitHub. Their hexsha together
     #   with the path is used to define a unique URI for each file.
-    source_files = []
-    source_files.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_core.yaml")
-    source_files.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_other.yaml")
+    source_files = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_core.yaml",
+                    GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/quantities_other.yaml"]
     for source in source_files:
         quantities_graph.add(
             (URIRef(source),
@@ -134,7 +132,7 @@ def main():
          si_graph.set_activity_uri(activity))
     )
     
-    # 2.3 Licence information
+    # 2.3 License information
     quantities_graph.add(
          (URIRef(si_graph.namespace_quantities),
           DCTERMS.license,

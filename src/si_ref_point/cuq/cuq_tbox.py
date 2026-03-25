@@ -5,8 +5,7 @@ CUQ TBox
 from datetime import datetime, timezone
 import git
 import os
-import yaml
-from rdflib import Graph, OWL,RDF,RDFS,URIRef, Literal, BNode, SKOS, PROV
+from rdflib import Graph, OWL, RDF, RDFS, URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
 from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
@@ -100,7 +99,7 @@ class SiElements:
 
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE) 
-    #     and define the URI to a specific version by using its commit on github
+    #     and define the URI to a specific version by using its commit on GitHub
         agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py"
         self.g.add(
             (URIRef(agent_sw),
@@ -288,6 +287,7 @@ class SiElements:
         for body in bodies_list:
             if body == bd:
                 return URIRef(self.namespace_bodies[body] + res_id)
+        return URIRef('')
 
 
 def main():

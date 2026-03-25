@@ -7,6 +7,7 @@ def test_syntax():
     this_dir = Path(__file__).parent
     ttl_file_names = (this_dir.parent / "TTL" ).glob("*.ttl")
 
+    g = None
     try:
         g = rdflib.Graph()
 

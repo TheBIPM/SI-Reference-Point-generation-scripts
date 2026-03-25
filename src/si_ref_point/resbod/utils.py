@@ -1,13 +1,12 @@
+
 import glob
 import os
 import re
-from datetime import date
-
 import yaml
+from datetime import date
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
 from si_ref_point.resbod.ResBod_TBox import RES_BOD_NS
-
 from si_ref_point.settings import SIDFWBASE
 
 RB = Namespace(RES_BOD_NS)

@@ -1,5 +1,7 @@
+""" Add documentation """
+
 import argparse
-from rdflib import Graph, BNode, RDF, Namespace
+from rdflib import Graph
 import os
 
 
@@ -15,11 +17,8 @@ def main(APIPATH):
     g.parse(os.path.join(APIPATH, 'bodies.ttl'))
     g.parse(os.path.join(APIPATH, 'cgpm.ttl'))
 
-
-
     # ------------------------------------------------------------------------
     # get classes
-
     unit_taxonomy_query = """
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -127,9 +126,9 @@ def main(APIPATH):
         out.write("classDiagram\ndirection LR\n")
         res = g.query(comp_unit_query)
         for item in res:
-            c, prop, range = item
+            c, prop, rng = item
             class_display = c.n3(g.namespace_manager)
-            range_display = "owl:Thing" if range is None else range.n3(g.namespace_manager)
+            range_display = "owl:Thing" if rng is None else rng.n3(g.namespace_manager)
             prop_display = "owl:Thing" if prop is None else prop.n3(g.namespace_manager)
             print(class_display, superclass_display)
 
@@ -143,8 +142,8 @@ def main(APIPATH):
         out.write("classDiagram\ndirection LR\n")
         res = g.query(definition_query)
         for item in res:
-            prop, domain, range = item
-            range_display = "owl:Thing" if range is None else range.n3(g.namespace_manager)
+            prop, domain, rng = item
+            range_display = "owl:Thing" if rng is None else rng.n3(g.namespace_manager)
             domain_display = "owl:Thing" if domain is None else domain.n3(g.namespace_manager)
             prop_display = "owl:Thing" if prop is None else prop.n3(g.namespace_manager)
             print(domain_display, prop_display, range_display)

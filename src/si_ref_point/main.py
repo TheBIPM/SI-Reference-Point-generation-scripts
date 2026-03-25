@@ -1,5 +1,4 @@
-""" Generate the SI reference point TTL files
-"""
+""" Generate the SI reference point TTL files """
 
 import argparse
 import logging
@@ -21,7 +20,6 @@ import git
 import os
 import datetime
 from zipfile import ZipFile
-import subprocess
 
 
 def get_parser():
@@ -147,7 +145,7 @@ def main():
                     zf.write(os.path.join(srl['dir'], hash_file),
                              arcname=os.path.join(srl['fmt'].upper(), hash_file))
 
-    # Generate ontology documentation markdown files
+    # Generate ontology documentation Markdown files
     if args.gen_ontology_viz:
         import ontospy
         from ontospy.gendocs.viz.viz_markdown import MarkdownViz

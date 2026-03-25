@@ -10,7 +10,7 @@ import yaml
 from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.cuq.cuq_tbox import SiElements
 import si_ref_point.cuq.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
+from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, CUQ_FILES_FOLDER, GITHUB_BASE_PATH
 
 
 def nest_mult(expr):
@@ -178,10 +178,9 @@ def main():
     sha = repo.head.object.hexsha
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE)
-    #     and define URI to a specific version by using its commit on github
-    agents = []
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py")
-    agents.append(GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/units_abox.py")
+    #     and define URI to a specific version by using its commit on GitHub
+    agents = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/cuq_tbox.py",
+              GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/units_abox.py"]
     for agent_sw in agents:
         units_graph.add(
             (URIRef(agent_sw),
@@ -192,13 +191,12 @@ def main():
     #     2.2.2 Entity
     #     declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
     #     The manually produced YAML files are stored on GITHUB. Their hexsha together
-    #     with the path are used as an unique identifier
-    source_list = []
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/def_collectors.yaml")
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/base_units_defs.yaml")
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/notes.yaml")
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/si_units_special_names.yaml")
-    source_list.append(GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/non_si_units.yaml")
+    #     with the path are used as a unique identifier
+    source_list = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/def_collectors.yaml",
+                   GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/base_units_defs.yaml",
+                   GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/notes.yaml",
+                   GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/si_units_special_names.yaml",
+                   GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq_data/non_si_units.yaml"]
 
     for source in source_list:
         units_graph.add(
