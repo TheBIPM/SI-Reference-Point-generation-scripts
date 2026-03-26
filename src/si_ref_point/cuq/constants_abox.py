@@ -5,6 +5,7 @@ constants A-Box
 from datetime import datetime, timezone
 import git
 import os
+from decimal import Decimal
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 import yaml
 from si_ref_point.cuq.cuq_tbox import SiElements
@@ -183,7 +184,7 @@ def main():
                                      si_graph.has_unit,
                                      si_graph.set_unit_uri(cst['unit'])))
         constants_graph.add((element, si_graph.has_value,
-               Literal(cst['value'], datatype=XSD[cst['xsd_type']], normalize=False)))
+               Literal(str(format(Decimal(cst['value']), 'f')), datatype=XSD[cst['xsd_type']], normalize=False)))
         constants_graph.add((element, si_graph.has_datatype, XSD[cst['xsd_type']]))
         # note on xsd:double :
         # RDFLib has a known bug that loses precision in value for xsd:double
