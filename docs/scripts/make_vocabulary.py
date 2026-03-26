@@ -2,7 +2,7 @@
 
 import argparse
 from rdflib import Graph, BNode, RDF
-from config import TTLPATH
+from config import TTLPATH, VOCPATH
 
 
 def main(APIPATH):
@@ -55,10 +55,9 @@ def main(APIPATH):
             sc = g.qname(element['Superclass'])
         except (ValueError, TypeError):
             sc = "owl:Class"
-        diagram[g.qname(element['Class'])] = {'superclass': sc,
-                                              'predicates': []}
+        diagram[g.qname(element['Class'])] = {'superclass': sc, 'predicates': []}
 
-    with open('vocabulary.md', 'w') as output_file:
+    with open(VOCPATH / 'vocabulary.md', 'w') as output_file:
         for subject in class_list:
             topic = subject['class'].n3(g.namespace_manager)
             print(topic + ": ", end="")
@@ -130,7 +129,7 @@ def main(APIPATH):
             output_file.write("\n")
 
     # Write diagram (mermaid code)
-    with open('class_diagram.md', 'w') as out:
+    with open(VOCPATH / 'class_diagram.md', 'w') as out:
         out.write("classDiagram\n")
         for cl, vals in diagram.items():
             if vals['superclass'] != "owl:Class":

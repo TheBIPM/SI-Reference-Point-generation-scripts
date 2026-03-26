@@ -2,7 +2,7 @@
 
 import argparse
 from rdflib import Graph
-from config import TTLPATH
+from config import TTLPATH, VOCPATH
 
 
 def main(APIPATH):
@@ -86,7 +86,7 @@ def main(APIPATH):
             """
 
     # Write diagram (mermaid code)
-    with open('class_diagram_details.md', 'w') as out:
+    with open(VOCPATH / 'class_diagram_details.md', 'w') as out:
         out.write("# Diagrams\n")
 
         # Unit-related concepts

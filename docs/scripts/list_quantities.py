@@ -1,21 +1,15 @@
-""" Add documentation """
+""" Generate a list of quantities used in the SI Reference Point """
 
-from rdflib import Graph, RDF, URIRef, BNode
-
-import os
 import logging
+from rdflib import Graph, RDF, URIRef, BNode
+from config import TTLPATH
 
-
-default_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                            "..", "..", "TTL"))
-
+# instantiate graph
 g = Graph()
 for ttl_file in ['quantities.ttl', 'units.ttl']:
-    file_path = os.path.join(default_path, ttl_file)
-    if not os.path.exists(file_path):
-        logging.error(
-            "{} does not exist, did you run generate_turtle_file ?".format(
-                file_path))
+    file_path = TTLPATH / ttl_file
+    if not file_path:
+        logging.error("{} does not exist, did you run generate_turtle_file ?".format(file_path))
         raise SystemExit
     g.parse(file_path)
 
@@ -113,9 +107,3 @@ for row in qres:
     qty, unit, label = row
     print("{0:4s} | {1:20s} | {2:}".format(
         g.qname(qty).split(":")[1], unitnode_to_str(unit), label))
-
-
-
-
-
-

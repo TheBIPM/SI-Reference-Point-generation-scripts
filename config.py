@@ -7,3 +7,5 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 # create reuseable paths
 TTLPATH = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL'
 JLDPATH = PROJECT_ROOT / 'src' / 'si_ref_point' / 'JSON-LD'
+DOCPATH = PROJECT_ROOT / 'docs'
+VOCPATH = PROJECT_ROOT / 'docs' / 'vocabulary'

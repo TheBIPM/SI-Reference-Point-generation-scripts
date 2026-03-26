@@ -44,7 +44,7 @@ For debugging purposes, you can choose to generate only one ttl by providing its
 changes if you want the up-to-date version to be displayed on GitHub.
 
 Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to the current directory 
-(from where the `generate_turtle_files`is executed. It creates a subfolder `./TTL`. 
+(from where the `generate_turtle_files`is executed. It creates a subfolder `./TTL`). 
 
 `-h / --help` provides a list of available options.
 
@@ -69,15 +69,18 @@ The location of the input and output files is defined in settings.py
 The YAML files containing all the input data, + turtle files for the SI ontology TBox (core + extended concepts).
 
 ### resbod
-Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
-The information is read from YAML files (provided by Ron Tse). The code is separated in TBox (definition of the classes and properties) and ABox (istances using TBox)
-The location of the input and output files is defined in settings.py
+Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their 
+Events and the Outcomes thereof. The information is read from YAML files (provided by Ron Tse). The code is separated in
+TBox (definition of the classes and properties) and ABox (istances using TBox). The location of the input and output 
+files is defined in src/si_ref_point/settings.py.
 
 ### resbod\_data
-Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, obtained from Ron Tse, see: https://github.com/metanorma/bipm-data-outcomes/tree/main) 
+Contains cctf, cgpm and cipm sub directories with yaml data for these three bodies, obtained from Ron Tse, see: 
+https://github.com/metanorma/bipm-data-outcomes/tree/main
 
 ### Testing
-The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
+The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now
+residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
 
 ## Current class diagram
 
