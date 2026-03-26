@@ -10,7 +10,8 @@ The SI Reference Point contains
 * the list of non-SI units allowed for use with the SI
 * examples of physical and chemical quantities, along with their corresponding SI units
 
-The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) or JSON-LD files:
+The information in the SI Reference Point is provided as a knowledge graph serialized in a set of six Turtle (TTL) or 
+JSON-LD files:
 * SI.ttl
 * SI/units.ttl
 * SI/prefixes.ttl
@@ -23,36 +24,45 @@ The SI Reference Point provides:
 * a SPARQL endpoint
 * a tool to generate the PID of any compound unit
 
-An introductory overview of the service for users is given [HERE](https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information about the Application Programming Interface.
-
+An introductory overview of the service for users is given [HERE](https://github.com/TheBIPM/SI_Digital_Framework/tree/main/SI_Reference_Point/docs). The present document provides more information 
+about the Application Programming Interface.
 
 ## 2. Introduction to the SI
 The SI is an internationally agreed, practical system of units of measurement, comprising a set of "SI units" and a set 
 of "SI prefixes". In brief:
-* an SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond (ns) = 10<sup>-9</sup> s. 
-* compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres per second squared (m⋅s<sup>-2</sup>) for acceleration.   
+* an SI unit can be multiplied by an SI prefix to create multiples or submultiples of the unit: e.g. nanosecond 
+  (ns) = 10<sup>-9</sup> s. 
+* compound units can be formed by multiplying (or dividing) combinations of the units (prefixed or not): e.g. metres 
+  per second squared (m⋅s<sup>-2</sup>) for acceleration.   
 * each kind of quantity has one corresponding SI unit (though it might be possible to express that unit in different ways).
 * a derived SI unit can correspond to more than one derived quantity.
 
-All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
+All SI units can be expressed in terms of a set of seven so-called "base units": namely, the second (s), metre (m), 
+kilogram (kg), kelvin (K), mole (mol) and candela (cd). There are another 22 named units corresponding to different 
+kinds of quantity, such as the newton (N) for force, the joule (J) for energy, and the watt (W) for power. 
 
-Full details are provided in the [SI Brochure](https://www.bipm.org/en/publications/si-brochure) published by the BIPM and currently in its 9th edition. Since its creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the previous definition, but usually there will be some practical advantage such as an improved means to "realize" the unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
+Full details are provided in the [SI Brochure](https://www.bipm.org/en/publications/si-brochure) published by the BIPM and currently in its 9th edition. Since its 
+creation in 1960, the SI has evolved both through the inclusion of new units and new prefixes, and through the 
+redefinition of existing units. When a unit is redefined, the new definition ensures that continuity is kept with the 
+previous definition, but usually there will be some practical advantage such as an improved means to "realize" the 
+unit in question. After a major revision of the SI adopted in 2018, the whole SI is now defined in terms of seven 
+defining constants. In particular, new definitions of the kilogram, kelvin, mole and candela were agreed at that time.
 The following table shows how the information from the SI Brochure is distributed among the TTL (or JSON-LD) files.
 
 
 **Table 1.** List of tables in the SI Brochure and corresponding information in the SI Reference Point
 
-| Table               | Title                                                                                                                         | Encoded in   |
-|:--------------------|:------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| 1                   | The seven defining constants of the SI and the seven corresponding units they define                                          | constants    |
-| 2                   | SI base units                                                                                                                 | SI/units     |
-| 3                   | Base quantities and dimensions  used in the SI                                                                                | quantities   |
-| 4                   | The 22 SI units with special names and symbols                                                                                | SI/units     |
-| 5                   | Examples of coherent derived units in the SI expressed in terms of base units                                                 | SI/units     |
-| 6                   | Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units     |
-| 7                   | SI prefixes                                                                                                                   | SI/prefixes  |
-| 8                   | Non-SI units accepted for use with the SI units                                                                               | SI/units     |
-| <nobr>App. 1</nobr> | Decisions of the CGPM and the CIPM                                                                                            | SI/decisions |
+| Table       | Title                                                                                                                         | Encoded in   |
+|:------------|:------------------------------------------------------------------------------------------------------------------------------|:-------------|
+| 1           | The seven defining constants of the SI and the seven corresponding units they define                                          | constants    |
+| 2           | SI base units                                                                                                                 | SI/units     |
+| 3           | Base quantities and dimensions used in the SI                                                                                 | quantities   |
+| 4           | The 22 SI units with special names and symbols                                                                                | SI/units     |
+| 5           | Examples of coherent derived units in the SI expressed in terms of base units                                                 | SI/units     |
+| 6           | Examples of SI coherent derived units whose names and symbols include SI coherent derived units with special names and symbol | SI/units     |
+| 7           | SI prefixes                                                                                                                   | SI/prefixes  |
+| 8           | Non-SI units accepted for use with the SI units                                                                               | SI/units     |
+| App.&nbsp;1 | Decisions of the CGPM and the CIPM                                                                                            | SI/decisions |
 
 
 ## 3. Getting started
@@ -80,7 +90,7 @@ The API queries can be triggered through the [Swagger interface](https://si-digi
 
 The header information can be adjusted as follows to return data in JSON, JSON-LD, XML, HTML or TTL formats, respectively:
 * `curl -H "accept: application/json"`
-* `curl  -H "accept: application/ld+json"`
+* `curl -H "accept: application/ld+json"`
 * `curl -H "accept: application/xml"`
 * `curl -H "accept: application/html"`
 * `curl -H "accept: application/octet-stream"`

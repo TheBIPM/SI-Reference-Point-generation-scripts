@@ -1,21 +1,24 @@
-""" Add documentation """
+""" Create a vocabulary file """
 
 import argparse
-import os
 from rdflib import Graph, BNode, RDF
-from config import PROJECT_ROOT
+from config import TTLPATH
 
 
 def main(APIPATH):
     # ------------------------------------------------------------------------
     # load ttl files into knowledge graph
     g = Graph()
-    g.parse(os.path.join(APIPATH, 'si.ttl'))
-    g.parse(os.path.join(APIPATH, 'units.ttl'))
-    g.parse(os.path.join(APIPATH, 'prefixes.ttl'))
-    g.parse(os.path.join(APIPATH, 'quantities.ttl'))
-    g.parse(os.path.join(APIPATH, 'constants.ttl'))
-    g.parse(os.path.join(APIPATH, 'cgpm.ttl'))
+    g.parse(APIPATH / 'si.ttl')
+    g.parse(APIPATH / 'units.ttl')
+    g.parse(APIPATH / 'prefixes.ttl')
+    g.parse(APIPATH / 'quantities.ttl')
+    g.parse(APIPATH / 'constants.ttl')
+    g.parse(APIPATH / 'bodies.ttl')
+    g.parse(APIPATH / 'decisions.ttl')
+    g.parse(APIPATH / 'cctf.ttl')
+    g.parse(APIPATH / 'cgpm.ttl')
+    g.parse(APIPATH / 'cipm.ttl')
 
     # ------------------------------------------------------------------------
     # get classes
@@ -58,11 +61,11 @@ def main(APIPATH):
     with open('vocabulary.md', 'w') as output_file:
         for subject in class_list:
             topic = subject['class'].n3(g.namespace_manager)
-            print(topic+": ", end="")
+            print(topic + ": ", end="")
             predicate_query = """
-                PREFIX si: <http://si-digital-framework.org/SI#>
+                PREFIX si: <https://si-digital-framework.org/SI#>
                 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                PREFIX rb: <http://si-digital-framework.org/ResBod#>
+                PREFIX rb: <https://si-digital-framework.org/bodies#>
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 SELECT DISTINCT ?Predicate ?Domain ?Range ?Comment ?Comment_wo
                 WHERE
@@ -132,7 +135,7 @@ def main(APIPATH):
         for cl, vals in diagram.items():
             if vals['superclass'] != "owl:Class":
                 out.write("\t`{}`<|--`{}`\n".format(vals['superclass'],
-                                                cl))
+                                                    cl))
         for cl, vals in diagram.items():
             already_shown = []
             out.write("\tclass `{}`{{\n".format(cl))
@@ -170,10 +173,10 @@ def parse_multi(g, nodeID):
     return items
 
 
-if __name__=="__main__":
-    parser = argparse.ArgumentParser(description="Generate SI ref point vocabulary")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate an SI Reference Point vocabulary")
     parser.add_argument("--path_to_ttl",
-        default = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL',
-        help="Directory where TTLs are stored")
+                        default=TTLPATH,
+                        help="Directory where TTLs are stored")
     args = parser.parse_args()
     main(args.path_to_ttl)

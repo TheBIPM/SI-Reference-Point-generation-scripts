@@ -1,8 +1,11 @@
+""" Test the SI graph with a reasoner """
+
 import owlrl
 import rdflib
 from rdflib import OWL, RDF, RDFS
 import io
 from owlready2 import World, sync_reasoner_pellet, sync_reasoner_hermit
+from config import TTLPATH
 
 # script parameters
 do_RDFS_completion = True  # infer rdfs hierarchies
@@ -13,13 +16,13 @@ do_OWLDL_completion = (
 do_OWLDL_with_Pellet = True
 
 knowledge_bases = {
-    #"test": {"path": "testing.ttl", "format": "ttl"},
-    "si_base": {"path": "../TTL/si.ttl", "format": "ttl"},
-    "units": {"path": "../TTL/units.ttl", "format": "ttl"},
-    "quantities": {"path": "../TTL/quantities.ttl", "format": "ttl"},
-    "prefixes": {"path": "../TTL/prefixes.ttl", "format": "ttl"},
-    "constants": {"path": "../TTL/constants.ttl", "format": "ttl"},
-    "examples": {"path": "./examples.ttl", "format": "ttl"},
+    # "test": {"path": "testing.ttl", "format": "ttl"},
+    "si_base": {"path": TTLPATH / "si.ttl", "format": "ttl"},
+    "units": {"path": TTLPATH / "units.ttl", "format": "ttl"},
+    "quantities": {"path": TTLPATH / "quantities.ttl", "format": "ttl"},
+    "prefixes": {"path": TTLPATH / "prefixes.ttl", "format": "ttl"},
+    "constants": {"path": TTLPATH / "constants.ttl", "format": "ttl"},
+    "examples": {"path": "examples.ttl", "format": "ttl"},
 }
 
 

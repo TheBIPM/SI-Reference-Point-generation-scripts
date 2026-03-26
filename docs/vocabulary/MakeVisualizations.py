@@ -2,20 +2,20 @@
 
 import argparse
 from rdflib import Graph
-import os
+from config import TTLPATH
 
 
 def main(APIPATH):
     # ------------------------------------------------------------------------
     # load ttl files into knowledge graph
     g = Graph()
-    g.parse(os.path.join(APIPATH, 'si.ttl'))
-    g.parse(os.path.join(APIPATH, 'units.ttl'))
-    g.parse(os.path.join(APIPATH, 'prefixes.ttl'))
-    g.parse(os.path.join(APIPATH, 'quantities.ttl'))
-    g.parse(os.path.join(APIPATH, 'constants.ttl'))
-    g.parse(os.path.join(APIPATH, 'bodies.ttl'))
-    g.parse(os.path.join(APIPATH, 'cgpm.ttl'))
+    g.parse(APIPATH / 'si.ttl')
+    g.parse(APIPATH / 'units.ttl')
+    g.parse(APIPATH / 'prefixes.ttl')
+    g.parse(APIPATH / 'quantities.ttl')
+    g.parse(APIPATH / 'constants.ttl')
+    g.parse(APIPATH / 'bodies.ttl')
+    g.parse(APIPATH / 'cgpm.ttl')
 
     # ------------------------------------------------------------------------
     # get classes
@@ -151,7 +151,6 @@ def main(APIPATH):
             out.write(f"`{domain_display}` --|> `{range_display}` : {prop_display.replace(':', '#colon;')}\n")
         out.write("```\n")
 
-
     # convert to pdfs using mermaid-cli:
     # npx mmdc -i .\class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
 
@@ -159,13 +158,12 @@ def main(APIPATH):
     # npm install -g @mermaid-js/mermaid-cli@10.9.1
         
 
-if __name__=="__main__":
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate SI ref point vocabulary")
     parser.add_argument(
         "--path_to_ttl",
-        default=os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "..", "TTL")),
+        default=TTLPATH,
         help="Directory where TTLs are stored")
     args = parser.parse_args()
     main(args.path_to_ttl)

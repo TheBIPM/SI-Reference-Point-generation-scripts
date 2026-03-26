@@ -5,12 +5,13 @@ demonstration of SHACL shapes to detect possible issues with the RDF that is bei
 """
 from pyshacl import validate
 from os import path
+from config import PROJECT_ROOT
 
-df = '../../TTL/units.ttl'
+df = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL' / 'units.ttl'
 df = path.abspath(df)
 dff = 'turtle'
 
-sf = '../SHACL/unit_shacl.ttl'
+sf = 'unit_shacl.ttl'
 sf = path.abspath(sf)
 sff = 'turtle'
 

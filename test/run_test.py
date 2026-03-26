@@ -1,11 +1,13 @@
+""" Check the syntax and semantics of the SI graph """
+
 import rdflib
-from pathlib import Path
+from config import TTLPATH
+
 
 def test_syntax():
     error_status = False
 
-    this_dir = Path(__file__).parent
-    ttl_file_names = (this_dir.parent / "TTL" ).glob("*.ttl")
+    ttl_file_names = TTLPATH.glob("*.ttl")
 
     g = None
     try:
@@ -19,8 +21,8 @@ def test_syntax():
 
     return g, error_status
 
-def test_semantics(g):
 
+def test_semantics(g):
     error_status = False
 
     # some not very elaborate test
@@ -28,6 +30,7 @@ def test_semantics(g):
         error_status = True
 
     return error_status
+
 
 def main():
     g, syntax_error = test_syntax()
@@ -40,6 +43,7 @@ def main():
         raise ValueError("A requirement regarding the content of the output files is not met.")
 
     print(syntax_error, semantic_error)
+
 
 if __name__ == "__main__":
     main()
