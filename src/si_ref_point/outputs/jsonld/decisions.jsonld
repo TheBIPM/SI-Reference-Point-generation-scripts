@@ -1,0 +1,6113 @@
+[
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the quantity kinds."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les types de grandeur."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "VIM3 1.2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "kind of quantity"
+      },
+      {
+        "@language": "fr",
+        "@value": "nature de grandeur"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasEndValidity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to its ending validity date."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à sa date de fin de validité."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has end validity"
+      },
+      {
+        "@language": "fr",
+        "@value": "a fin de validité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the mole, symbol mol, as a seventh base unit, and rules for its use"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la mole, symbole mol, comme 7ᵉ unité de base, et règles d’utilisation"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM14-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM25-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit product"
+      },
+      {
+        "@language": "fr",
+        "@value": "produit d'unités"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.13",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#correspondingResolution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has corresponding resolution"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour résolution correspondante"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Declaration on distinguishing mass and weight, and on the conventional value of gₙ"
+      },
+      {
+        "@language": "fr",
+        "@value": "Déclaration au sujet de la différence entre masse et poids, et valeur conventionnelle de gₙ"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM3-Decl2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#prefixRestriction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b11"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Limitation of the possible prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Limitation des préfixes possibles"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionScope"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decisions relating to the establishment of the SI "
+      },
+      {
+        "@language": "fr",
+        "@value": "Décisions concernant l’établissement du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasTarget": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.4.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to allow the use of the point or the comma as the decimal marker"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’autoriser l’usage du point ou de la virgule sur la ligne comme séparateur décimal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM22-Res10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "\"SI units\" and \"units of the SI\""
+      },
+      {
+        "@language": "fr",
+        "@value": "« unités SI » et « unités du SI » "
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM90-Decl2001"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the metre as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du mètre comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Mass"
+      },
+      {
+        "@language": "fr",
+        "@value": "Masse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Declarations concerning base, supplementary, derived and coherent units, and the use of prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Déclarations concernant les unités de base, supplémentaires, dérivées et cohérentes, et utilisation des préfixes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM58-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM25-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sanction of the prototype metre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Sanction du Prototype du mètre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM1-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to add zetta, zepto, yotta and yocto to the list of prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’ajouter zetta, zepto, yotta et yocto à la liste des préfixes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has value"
+      },
+      {
+        "@language": "fr",
+        "@value": "a de la valeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Acceptance of the continued use of the curie as a non-SI unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’accepter de continuer à utiliser le curie comme unité en dehors du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res7"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Electrical units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités électriques"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.10"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible redefinition of certain base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle redéfinition de certaines unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Units accepted for use with the SI: an example, the litre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités en usage avec le SI : un exemple, le litre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to establish the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’établir le SI "
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#related": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2.1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM9-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUpdatedDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has updated date"
+      },
+      {
+        "@language": "fr",
+        "@value": "a mis à jour la date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Request to the CIPM to report on the difference between the litre and the cubic decimetre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Demande au CIPM d’étudier la différence entre le décimètre cube et le litre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res13"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the list of recommended radiations [92nd CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la liste des radiations recommandées [92ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM92-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Abrogation of the former definition of the litre; recommendation that litre may be used as a special name for the cubic decimetre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Abrogation de la précédente définition du litre et recommandation d’utiliser le litre comme nom spécial donné au décimètre cube"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n29401db6c38842d080dda3fc44b02278b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a cette unité pour terme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "_:n29401db6c38842d080dda3fc44b02278b1",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#UnitProduct"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the ampere as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption de l’ampère comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of thermodynamic temperature such that the triple point of water is 273.16 degrees Kelvin exactly; definition of standard atmosphere"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la température thermodynamique du point triple de l’eau à 273,16 degrés Kelvin exactement, définition de l’atmosphère normale"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Ratification of the CIPM 1956 definition of the second"
+      },
+      {
+        "@language": "fr",
+        "@value": "Ratification de la définition de la seconde donnée par le CIPM en 1956"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasQuantityBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "QuantityBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has quantity base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasBase"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericFactorAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric factor represented by this string"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour facteur le nombre correspondant à cette chaine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.11",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the revision of the mise en pratique of the definition of the metre and the development of new optical frequency standards"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNoteText",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The order index of a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Index d'ordre d'une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has note text"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un index de notes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision on the first six base units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’adopter les six premières unités de base"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#related": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Recommendation that volume be expressed in SI units and not in litres"
+      },
+      {
+        "@language": "fr",
+        "@value": "Recommandation d’exprimer les volumes en unités SI et non en litres"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM50-Rec1961"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKindPower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quantitykind power"
+      },
+      {
+        "@language": "fr",
+        "@value": "grandeur élevée à la puissance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Recommendation of the value for the speed of light"
+      },
+      {
+        "@language": "fr",
+        "@value": "Recommandation de la valeur de la vitesse de la lumière"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.14",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the mise en pratique of the definition of the metre and development of new optical frequency standards"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the units of the SI that are not base units but have a special name."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe des unités du SI qui ne sont pas des unités de base mais qui ont un nom spécial."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI unit with special name"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité SI avec nom spécial"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the possible future redefinition of certain base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle redéfinition de certaines unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to abrogate the class of supplementary units; confirmation of the CIPM interpretation that they are dimensionless derived units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision de supprimer la classe des unités supplémentaires, et confirmation de l’interprétation du CIPM selon laquelle ce sont des unités dérivées sans dimension"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM20-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasTarget",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionScope"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has target"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour cible"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#isTargetOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitTypeAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit type as a string"
+      },
+      {
+        "@language": "fr",
+        "@value": "type d'unité sous forme de chaîne"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.12",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Updates to the list of standard frequencies [98th CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Mises à jour de la liste des fréquences étalons [98ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM98-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Redefinition of the metre using the speed of light, realization of the definition of the metre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Redéfinition du mètre en fonction de la vitesse de la lumière, mise en pratique de la définition du mètre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM17-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has a term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isUnitOfQtyKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit to its quantity kind."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure à son type de grandeur."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is unit of quantity kind"
+      },
+      {
+        "@language": "fr",
+        "@value": "est une unité de grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionScope"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decisions concerning terminology and the acceptance of units for use with the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décisions concernant la terminologie et approbation des unités en usage avec le SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasTarget": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecisionTarget",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions target."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les cibles de décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision target"
+      },
+      {
+        "@language": "fr",
+        "@value": "Cible d'une décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/3.0/igo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Ontology, part of the SI Reference Point, covering measurement units (SI base units and SI units with special names) and prefixes."
+      },
+      {
+        "@language": "en",
+        "@value": "The SI Reference Point Ontology developed by the BIPM is\nlicensed under CC-BY-3.0-IGO. You are free to share (copy and redistribute\nthe material in any medium or format) and adapt (remix, transform, and\nbuild upon the material) for any purpose, even commercially, for any\npurpose, even commercially. The licensor cannot revoke these freedoms as\nlong as you follow the license terms. You must give appropriate credit\n(by using the original ontology IRI for the whole ontology and original\nterm IRIs for individual terms), provide a link to the license, and\nindicate if any changes were made. You may do so in any reasonable\nmanner, but not in any way that suggests the licensor endorses you or\nyour use."
+      },
+      {
+        "@language": "fr",
+        "@value": "L'ontologie SI Reference Point developpée par le BIPM est sous\nlicence CC-BY-3.0-IGO. Vous êtes autorisés à partager (copier, distribuer et communiquer\nle matériel par tous moyens et sous tous formats) et adapter (remixer, transformer\net créer à partir du matériel) pour toute utilisation, y compris commerciale.\nL'Offrant ne peut retirer les autorisations concédées par la licence tant que\nvous appliquez les termes de cette licence. Vous devez créditer l'oeuvre \n(en utilisant l'IRI de l'ontologie originale pour l'ontologie entière \net les IRIs originaux des termes individuels), intégrer un lien vers la licence \net indiquer si des modifications ont été effectuées à l'oeuvre.\nVous devez indiquer ces informations par tous les moyens raisonnables, \nsans toutefois suggérer que l'offrant vous soutient ou soutient \nla façon dont vous avez utilisé son Oeuvre."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "SI Reference Point"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to adopt the name \"Systeme international d'Unites\""
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’adopter le nom Système international d’unités"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM46-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasLeftUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has left unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de gauche cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasUnitTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the second in terms of the caesium transition "
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la seconde au moyen de la transition du césium"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.12",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On updates to the list of standard frequencies"
+      },
+      {
+        "@language": "fr",
+        "@value": "Mises à jour de la liste des fréquences étalons"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM98-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Specification of the rules for the practical realization of the definition of the metre "
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la mise en pratique de la définition du mètre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM91-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI derived units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités SI dérivées"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the future redefinition of the kilogram"
+      },
+      {
+        "@language": "fr",
+        "@value": "Redéfinition éventuelle du kilogramme"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM21-Res7"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionScope"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decisions relating to  SI derived and supplementary units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décisions concernant les unités SI dérivées et les unités supplémentaires"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasTarget": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.10",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the name degree Celsius for the Celsius temperature scale"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom degré Celsius pour l’échelle de température Celsius"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM42-Res1948"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.10",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On secondary representations of the second"
+      },
+      {
+        "@language": "fr",
+        "@value": "Représentations secondaires de la seconde"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM95-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasLeftQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has left quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de gauche cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasQuantityTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasConversionUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "SI unit to which the non SI unit can be converted"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unité SI dans laquelle l'unité non SI peut être convertie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has conversion unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une unité de conversion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Préfixes SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Confirms the name and the abbreviation \"SI\"; names prefixes from tera to pico; establishes the supplementary units rad and sr; lists some derived units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Confirmation du nom et de l’abréviation SI ; noms des préfixes téra à pico ; établissement des unités supplémentaires rad et sr : établissement de la liste de certaines unités dérivées"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Presentation of a list of examples of SI derived units and adoption of special names for 14 of them "
+      },
+      {
+        "@language": "fr",
+        "@value": "Présentation d’une liste d’exemples d’unités SI dérivées et adoption d’un nom spécial pour 14 d’entre elles"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#DefinitionNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for notes related SI unit definitions."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les définitions d'unités SI liées aux notes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit definition note"
+      },
+      {
+        "@language": "fr",
+        "@value": "note de définition d'unité"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasPreviousDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition version to the previous version."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une version de définition SI à la version précédente."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has previous definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a la définition précédente"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasNextDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "compound quantitykind"
+      },
+      {
+        "@language": "fr",
+        "@value": "grandeur composée"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na99d2630d5274504a9738f84d6f6769e",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericExponent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "UnitBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric exponent"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour exposant ce nombre"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#short"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNoteIndex",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The text of a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Le texte d'une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has note index"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un texte de note"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Length"
+      },
+      {
+        "@language": "fr",
+        "@value": "Longueur"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.10"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.11"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.12"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.13"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.14"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.15"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.16"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of photometric units: new candle and new lumen (to enter into force on 1 January 1948)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition des unités photométriques, bougie nouvelle et lumen nouveau (mise en œuvre le 1er janvier 1948)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM41-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitPower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit power"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité élevée à la puissance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Base ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.10",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On progress towards the redefinition of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Sur les progrès réalisés en vue d’une éventuelle révision du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM106-Dec106-10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#Constant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for the seven defining constants of the SI."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les sept constantes définissant le SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defining constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "constante définissant le SI"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Luminous intensity"
+      },
+      {
+        "@language": "fr",
+        "@value": "Intensité lumineuse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Redefinition of the candela in terms of monochromatic radiation"
+      },
+      {
+        "@language": "fr",
+        "@value": "Redéfinition de la candela à partir d’un rayonnement monochromatique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM16-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of degree Kelvin as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du degré Kelvin comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionScope"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decisions relating to the base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décisions concernant les unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasTarget": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Clarification of the relationship between absorbed dose (SI unit gray) and dose equivalent (SI unit sievert)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Clarification de la relation entre la dose absorbée (unité SI gray) et l’équivalent de dose (unité SI sievert)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM73-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a SI definition to its status."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à son état."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has status"
+      },
+      {
+        "@language": "fr",
+        "@value": "a l'état"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of International Atomic Time (TAI)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition du Temps atomique international (TAI)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CCTF#CCTF5-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIPrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI Prefixes."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les préfixes SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI prefix"
+      },
+      {
+        "@language": "fr",
+        "@value": "préfixe SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#int",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasScalingFactor"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefinitionNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to a definition note."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à une note de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has definition note"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une note de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#DefinitionNote"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isDecisionOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is decision of"
+      },
+      {
+        "@language": "fr",
+        "@value": "est la décision de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.13",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the second as a fraction of the tropical year 1900"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la seconde comme la fraction de l’année tropique 1900"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM46-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasRightQuantityTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKindProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has right quantity term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de droite cette grandeur"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasQuantityTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI base unit to its definition."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de base SI à sa définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIBaseUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to add ronna, ronto, quetta and quecto to the list of prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’ajouter ronna, ronto, quetta et quecto à la liste des préfixes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the conventional value of the von Klitzing constant (to enter into force on 1 January 1990)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la valeur conventionnelle de la constante de von Klitzing (mise en œuvre le 1er janvier 1990)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM77-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNonPrefixedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#PrefixedUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has non prefixed unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour unité sans préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.17",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the litre as the volume of 1 kg of water"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition du litre comme le volume d’1 kg d’eau"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM3-Decl1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the siemens, symbol S, for electical conductance"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom siemens, symbole S, pour la conductance électrique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM14-Decl"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision, as an exception, to allow both l and L as symbols for the litre "
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision, à titre exceptionnel, d’autoriser les deux symboles L et l pour le litre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM16-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Declaration on applying prefixes to the gram"
+      },
+      {
+        "@language": "fr",
+        "@value": "Déclaration sur les préfixes du gramme"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM56-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the special name sievert (Sv)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom spécial sievert (Sv)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM16-Res5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the special name katal, kat"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom spécial katal, kat"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM21-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the special name katal, kat"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom spécial katal, kat"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM21-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.11",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the forthcoming adjustment to the representations of the volt and of the ohm"
+      },
+      {
+        "@language": "fr",
+        "@value": "Sur l'ajustement prévu des représentations du volt et de l’ohm"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM18-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the second as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption de la seconde comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Unit names"
+      },
+      {
+        "@language": "fr",
+        "@value": "Noms d’unités"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.3.1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Modification of the relationship between absorbed dose and dose equivalent"
+      },
+      {
+        "@language": "fr",
+        "@value": "Modification de la relation entre la dose absorbée et l’équivalent de dose"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM91-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#CompoundUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "compound unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité composée"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Addition of a note to the definition of the kelvin"
+      },
+      {
+        "@language": "fr",
+        "@value": "Ajout d'une note à la définition du kelvin à propos de la composition isotopique de l’eau"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM94-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.16",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#MeasurementUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class for all measurement units."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour toutes les unités de mesure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@value": "VIM3 1.9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "measurement unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité de mesure"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Thermodynamic temperature"
+      },
+      {
+        "@language": "fr",
+        "@value": "Température thermodynamique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.10"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.11"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.12"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.16",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Updates to the list of standard frequencies [104th CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Mises à jour de la liste des fréquences étalons [104ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM104-1-Rec2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Declaration of the caesium-133 hyperfine transition to be the recommended standard"
+      },
+      {
+        "@language": "fr",
+        "@value": "Déclaration selon laquelle l’étalon à employer est la transition hyperfine du césium 133"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM53-Decl1964"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.7",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible redefinition of certain base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle redéfinition de certaines unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Request to the CIPM to define and establish International Atomic Time (TAI)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Demande au CIPM de définir et d’établir le Temps atomique international (TAI)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM14-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Establishment of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Établissement du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.10"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.11"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Supplementary units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités supplémentaires"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the SI prefixes from tera to pico"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption des préfixes SI de tera à pico"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.10",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition and use of the prototype metre"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition du mètre par le Prototype international "
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM7-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasConversionFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The conversion factor between non-SI unit and an SI Unit (number SI unit contained in 1 non SI unit)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Le facteur de conversion entre l'unité non SI et l'unité dans le SI (nombre d'unité de contenu dans l'unité non-SI)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has a conversion factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un facteur de conversion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the list of recommended radiationsi [94th CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la liste des radiations recommandées [94ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM94-Rec3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasRightUnitTerm",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "preserve order of multiplication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has right unit term"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour terme de droite cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasUnitTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM24-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNumericFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitMultiple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numeric factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour facteur ce nombre"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasTerm"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Endorsement of the use of Coordinated Universal Time (UTC)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Sanction du Temps universel coordonné (UTC)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lists some examples of derived units"
+      },
+      {
+        "@language": "fr",
+        "@value": "Exemples d’unités dérivées"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isTargetOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is target of"
+      },
+      {
+        "@language": "fr",
+        "@value": "est la cible de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionScope"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision à venir du SI "
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM25-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-1.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.15",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Updates to the list of standard frequencies [102nd CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Mises à jour de la liste des fréquences étalons [102ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM102-1-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#UnitMultiple",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit multiple"
+      },
+      {
+        "@language": "fr",
+        "@value": "multiple d'unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of rules for printing unit symbols and numbers"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision sur les règles d’écriture des symboles d’unités et des nombres"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#nonSIUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Non-SI units that are accepted for use with the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Unités en dehors du SI dont l’usage est accepté avec le SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "non SI unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité en dehors du SI"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.9",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible redefinition of certain base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle redéfinition de certaines unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasScalingFactor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI prefix to its scaling factor."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer un préfixe SI à son facteur d'échelle."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has scaling factor"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un facteur d'échelle"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.11",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM25-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "On the future revision of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision à venir du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM25-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the special name becquerel (Bq)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom spécial becquerel (Bq)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Redefinition of the metre in terms of krypton-86 radiation"
+      },
+      {
+        "@language": "fr",
+        "@value": "Redéfinition du mètre au moyen de la radiation du krypton 86"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#Definition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for definitions of an SI base unit."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les notes sur les définitions des unités SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "definition of a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "définition d'une unité de base"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b1"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#int",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasStartValidity"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningResolution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to the resolution by which it was adopted."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à la résolution par laquelle elle a été adoptée."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b22"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining resolution"
+      },
+      {
+        "@language": "fr",
+        "@value": "a résolution de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b22",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasStartValidity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to its starting validity date."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à sa date de début de validité."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has start validity"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une validité de départ"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningEquation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a SI definition to its defining equation."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI à son équation de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b19"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining equation"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une équation de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b19",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the special name gray (Gy)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du nom spécial gray (Gy)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the conventional value of the Josephson constant (to enter into force on 1 January 1990)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la valeur conventionnelle de la constante de Josephson (mise en œuvre le 1er janvier 1990)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM77-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the triple point of water as the thermodynamic reference point; adoption of the zero of Celsius temperature to be 0.01 degrees below the triple point"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du point triple de l’eau comme point de référence pour la température thermodynamique, adoption du degré Celsius, et définition du zéro comme étant la température de référence inférieure de 0,01 degré à celle du point triple de l’eau"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM9-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to add peta and exa to the list of prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’ajouter péta et exa à la liste des préfixes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasValueAsString",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has value as a string"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une valeur sous forme de chaîne"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-03-27"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Ontology, part of the SI reference point, covering decisions"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "SI Reference Point - Decisions"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasPrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "<Prefix> and <NonPrefixedUnit> form a <PrefixedUnit>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#PrefixedUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has prefix"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIPrefix"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the candela as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption de la candela comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/activities#si_ttl_generation20260327144655Z.ttl_generation",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-03-27T14:46:55+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/entities#si_20260327144655Z.ttl",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "https://si-digital-framework.org/SI/activities#si_ttl_generation20260327144655Z.ttl_generation"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Amount of substance"
+      },
+      {
+        "@language": "fr",
+        "@value": "Quantité de matière"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.6.6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningConstant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a definition to its defining constant."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition à sa constante de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "a une constante de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of coherent electrical units in the metre-kilogram-second (MKS) system of units (to enter into force on 1 January 1948)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition des unités électriques cohérentes dans le système d’unités MKS (mètre-kilogramme-seconde) (mise en œuvre le 1er janvier 1948)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM41-Res2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Unit symbols and numbers"
+      },
+      {
+        "@language": "fr",
+        "@value": "Symboles d’unités et nombres"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.2.1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#isDefiningResolutionOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a resolution to the SI definition it defined."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une résolution à la définition SI qu'elle a définie."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/bodies#Resolution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is defining resolution of"
+      },
+      {
+        "@language": "fr",
+        "@value": "définit la résolution de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b25"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasDefiningResolution"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b25",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Definition"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.11",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the mise en pratique of the definition of the metre and development of new optical frequency standards"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la mise en pratique de la définition du mètre et mise au point de nouveaux étalons optiques de fréquence"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.10",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the list of recommended radiations [96th CIPM]"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision de la liste des radiations recommandées [96ᵉ CIPM]"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM96-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.4",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "The decimal marker"
+      },
+      {
+        "@language": "fr",
+        "@value": "Séparateur décimal"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.4.1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the International Temperature Scale of 1990 (ITS-90)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de l'Échelle internationale de température de 1990 (EIT-90)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM78-Rec5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecisionTarget"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Time"
+      },
+      {
+        "@language": "fr",
+        "@value": "Temps"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDecision": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.1"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.10"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.11"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.12"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.13"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.15"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.16"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.17"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.2"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.3"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.4"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.5"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.6"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.7"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.8"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.9"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isTargetOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#inBaseSIUnits",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "can be expressed in base SI units as"
+      },
+      {
+        "@language": "fr",
+        "@value": "peut être exprimé en unités SI de base sous la forme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the term supplementary unit to describe the radian and steradian"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du terme « unité supplémentaire » pour désigner le radian et le stéradian"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.8",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Clarification of the definition of the kelvin"
+      },
+      {
+        "@language": "fr",
+        "@value": "Clarification de la définition du kelvin, unité de température thermodynamique"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res10"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to add femto and atto to the list of prefixes"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’ajouter femto et atto à la liste des préfixes"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res8"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.3.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Abrogation of the use of the micron and new candle as units accepted for use with the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Abrogation de l’utilisation du micron et de la bougie nouvelle comme unités en usage avec le SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res7"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-4.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1.15",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Updates to the list of standard frequencies"
+      },
+      {
+        "@language": "fr",
+        "@value": "Mises à jour de la liste des fréquences étalons "
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM102-1-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#inOtherSIUnits",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "can be expressed in other SI units as"
+      },
+      {
+        "@language": "fr",
+        "@value": "peut être exprimé dans d’autres unités SI sous la forme"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDecision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecisionTarget"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has decision"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour décision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SIDecision"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#isDecisionOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit to an object."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure à un objet."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b3"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "a l'unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#QuantityKind"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasNextDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition version to the next version."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une version de définition SI à la version suivante."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has next definition"
+      },
+      {
+        "@language": "fr",
+        "@value": "a la prochaine définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasPreviousDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#QuantityKindProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quantitykind product"
+      },
+      {
+        "@language": "fr",
+        "@value": "produit de grandeurs"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Request to the CIPM to investigate atomic and molecular frequency standards"
+      },
+      {
+        "@language": "fr",
+        "@value": "Pouvoir au CIPM de désigner les étalons de fréquence atomique et moléculaire à employer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM12-Res5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.3"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasAltSymbol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit or prefix to an alternate symbol."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure ou un préfixe à un symbole alternatif."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has alternate symbol"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour symbole alternatif"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDefiningText",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking an SI definition to the defining text."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une définition SI au texte de définition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has defining text"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un texte de définition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasSymbol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking a measurement unit or prefix to a symbol."
+      },
+      {
+        "@language": "fr",
+        "@value": "Associer une unité de mesure ou un préfixe à un symbole."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has symbol"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour symbole"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#PrefixedUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "prefixed unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité précédée d'un préfixe"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#CompoundUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.12",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Revision of the SI (to enter into force on 20 May 2019)"
+      },
+      {
+        "@language": "fr",
+        "@value": "Révision du SI (mise en œuvre le 20 mai 2019)"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIBaseUnit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class of SI base units. Several definitions can be attached to this class to represent definitions of the BaseUnit throughout time."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe des unités de base SI. Plusieurs définitions peuvent être attachées à cette classe pour représenter les définitions de l'unité de base en question à travers les temps."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@value": "VIM3 1.10"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "unité de base"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://si-digital-framework.org/SI#SISpecialNamedUnit"
+      },
+      {
+        "@id": "https://si-digital-framework.org/SI#nonSIUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.1",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sanction of the prototype kilogram"
+      },
+      {
+        "@language": "fr",
+        "@value": "Sanction du Prototype du kilogramme"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM1-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasDatatype",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n275ff44ac33844849763c786c2d8b967b16"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has datatype"
+      },
+      {
+        "@language": "fr",
+        "@value": "a un type de données"
+      }
+    ]
+  },
+  {
+    "@id": "_:n275ff44ac33844849763c786c2d8b967b16",
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#Constant"
+          },
+          {
+            "@id": "https://si-digital-framework.org/SI#SIPrefix"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5.5",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Formal definition of the kelvin, symbol K"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition officielle du kelvin, symbole K"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#hasUnitBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "UnitBase ^ NumericExponent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://si-digital-framework.org/SI#UnitPower"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has unit base"
+      },
+      {
+        "@language": "fr",
+        "@value": "a pour base cette unité"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI#hasBase"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI#SIDecisionScope",
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The class for SI decisions scopes."
+      },
+      {
+        "@language": "fr",
+        "@value": "La classe pour les champs de décisions SI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SI Decision scope"
+      },
+      {
+        "@language": "fr",
+        "@value": "Champ de la décision SI"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Definition of the candela, symbol cd, in terms of a black body radiator"
+      },
+      {
+        "@language": "fr",
+        "@value": "Définition de la candela, symbole cd, en fonction du corps noir"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res5"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.7"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.3",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption of the kilogram as a base unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Adoption du kilogramme comme unité de base"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM10-Res6"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2.6",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Possible redefinition of certain base units of the SI"
+      },
+      {
+        "@language": "fr",
+        "@value": "Éventuelle redéfinition de certaines unités de base du SI"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM23-Res12"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-2.2"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9d4f10080f0946dbaae15797c4559c57",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [
+      {
+        "@id": "https://si-digital-framework.org/SI#Constant"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [
+      {
+        "@list": [
+          {
+            "@id": "https://si-digital-framework.org/SI#SIPrefix"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2.2",
+    "@type": [
+      "https://si-digital-framework.org/SI#SIDecision"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Decision to interpret supplementary units as dimensionless derived unit"
+      },
+      {
+        "@language": "fr",
+        "@value": "Décision d’interpréter les unités supplémentaires comme des unités dérivées sans dimension"
+      }
+    ],
+    "https://si-digital-framework.org/SI#correspondingResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CIPM#CIPM69-Rec1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#isDecisionOf": [
+      {
+        "@id": "https://si-digital-framework.org/SI/decisions/SI-A-3.2"
+      }
+    ]
+  }
+]

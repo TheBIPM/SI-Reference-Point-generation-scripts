@@ -1,4 +1,3 @@
-
 import glob
 import os
 import re
@@ -6,18 +5,22 @@ import yaml
 from datetime import date
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
-from si_ref_point.resbod.ResBod_TBox import RES_BOD_NS
+from si_ref_point.tboxes.rb_tbox import RES_BOD_NS
 from si_ref_point.settings import SIDFWBASE
 
 RB = Namespace(RES_BOD_NS)
 
 
+def meetings_sort_key(item):
+    return float(re.findall("[0-9]+[\-0-9]*", os.path.basename(item))[0].replace("-", "."))
+
+
 class MeetingsFileExtractor:
     def __init__(
-        self,
-        base_url=SIDFWBASE + "/bodies/",
-        resbod_acronym="",                      
-        meeting_files_directory="",
+            self,
+            base_url=SIDFWBASE + "/bodies/",
+            resbod_acronym="",
+            meeting_files_directory="",
     ):
         self.own_acronym = resbod_acronym
         meeting_files_directory = meeting_files_directory
@@ -47,7 +50,7 @@ class MeetingsFileExtractor:
 
     def add_general_description(self):
 
-    # Annotations to the ontology (name, creation date, comment)
+        # Annotations to the ontology (name, creation date, comment)
         self.g.add((URIRef(self.OWN_NS), RDF.type, OWL.Ontology))
         self.g.add(
             (
@@ -59,7 +62,7 @@ class MeetingsFileExtractor:
                 ),
             )
         )
-        
+
         self.g.add(
             (
                 URIRef(self.OWN_NS),
@@ -67,7 +70,7 @@ class MeetingsFileExtractor:
                 Literal(str(date.today()), datatype=XSD.date),
             )
         )
-        
+
         self.g.add(
             (
                 URIRef(self.OWN_NS),
@@ -86,10 +89,10 @@ class MeetingsFileExtractor:
     def add_meeting_information(self):
         # iterate over the resolutions files (in 'natural' sorted order)
         filenames_en = sorted(
-            glob.glob(self.base_path_en + "meeting-*.yml"), key=self.meetings_sort_key
+            glob.glob(self.base_path_en + "meeting-*.yml"), key=meetings_sort_key
         )
         filenames_fr = sorted(
-            glob.glob(self.base_path_fr + "meeting-*.yml"), key=self.meetings_sort_key
+            glob.glob(self.base_path_fr + "meeting-*.yml"), key=meetings_sort_key
         )
 
         for filename_en, filename_fr in zip(filenames_en, filenames_fr):
@@ -273,8 +276,3 @@ class MeetingsFileExtractor:
         hidden_label = local_id
 
         return outcome_URI, out_id, hidden_label, outcome_type
-
-    def meetings_sort_key(self, item):
-        return float(
-            re.findall("[0-9]+[\-0-9]*", os.path.basename(item))[0].replace("-", ".")
-        )

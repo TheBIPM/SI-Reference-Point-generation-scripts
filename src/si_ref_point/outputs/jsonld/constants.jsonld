@@ -1,0 +1,654 @@
+[
+  {
+    "@id": "https://si-digital-framework.org/constants/ElementaryCharge",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "ElementaryCharge"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "elementary charge"
+      },
+      {
+        "@language": "fr",
+        "@value": "charge élementaire"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "${e}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/coulomb"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-05-20"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1.602176634e-19"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "1.602 176 634 x 10⁻¹⁹"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/si/si_constants.yaml",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/BoltzmannConstant",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Boltzmann"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Boltzmann constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "constante de Boltzmann"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "${k}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Na36138650f764b6b9186c9596433629e"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-05-20"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "1.380649e-23"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "1.380 649 x 10⁻²³"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na36138650f764b6b9186c9596433629e",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:N55f339d5b9154da783aab36462a93cd5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N55f339d5b9154da783aab36462a93cd5",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/kelvin"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/SpeedOfLight",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "SpeedOfLight"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "speed of light"
+      },
+      {
+        "@language": "fr",
+        "@value": "vitesse de la lumière dans le vide"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM15-Res2"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "$c$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nbdb310d02656461b9c6af1a276c042cc"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "1975-06-03"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 299792458
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "299 792 458"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbdb310d02656461b9c6af1a276c042cc",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/metre"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Ned33f4ded7fb465f98e6742ea0a26594"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ned33f4ded7fb465f98e6742ea0a26594",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/entities#constants_20260327144655Z.ttl",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/ns/prov#wasAttributedTo": [
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py"
+      },
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/constants_abox.py"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/si/si_constants.yaml"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "https://si-digital-framework.org/SI/activities#constants_20260327144655Z.ttl_generation"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/SI/activities#constants_20260327144655Z.ttl_generation",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#startedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-03-27T14:46:55+00:00"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py"
+      },
+      {
+        "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/constants_abox.py"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/constants_abox.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/PlanckConstant",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Planck"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Planck constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "constante de Planck"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "${h}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:Nb7cd87670fa44aa795e182585ede585c"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-05-20"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "6.62607015e-34"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "6.626 070 15 x 10⁻³⁴"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb7cd87670fa44aa795e182585ede585c",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/joule"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/second"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "HyperfineSplitting"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "hyperfine transition frequency of Cs-133"
+      },
+      {
+        "@language": "fr",
+        "@value": "fréquence de la transition hyperfine du césium"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM13-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "$\\Delta\\nu_{\\rm{Cs}}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/hertz"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "1967-10-13"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 9192631770
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "9 192 631 770"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/AvogadroConstant",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Avogadro"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Avogadro constant"
+      },
+      {
+        "@language": "fr",
+        "@value": "constante d'Avogadro"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "${N_{\\rm{A}}}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N2df4f91857ca42b0b498f87f43821030"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-05-20"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#float",
+        "@value": "6.02214076e+23"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "6.022 140 76 x 10²³"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2df4f91857ca42b0b498f87f43821030",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/mole"
+      }
+    ]
+  },
+  {
+    "@id": "https://github.com/TheBIPM/SI-Reference-Point-2023/blob/a623ea83851a5c0e2707f156e37e8020012175fd/src/si_ref_point/cuq/si_tbox.py",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/LuminousEfficacy",
+    "@type": [
+      "https://si-digital-framework.org/SI#Constant"
+    ],
+    "http://www.w3.org/2004/02/skos/core#hiddenLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "LuminousEfficacy"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "luminous efficacy"
+      },
+      {
+        "@language": "fr",
+        "@value": "efficacité lumineuse"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasDefiningResolution": [
+      {
+        "@id": "https://si-digital-framework.org/bodies/CGPM#CGPM16-Res3"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasSymbol": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "${K_{\\rm{cd}}}$"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnit": [
+      {
+        "@id": "_:N39d7a2d736054232943ba7ff84b7a948"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUpdatedDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "1979-10-11"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValue": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 683
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasValueAsString": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "683"
+      }
+    ]
+  },
+  {
+    "@id": "_:N39d7a2d736054232943ba7ff84b7a948",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitProduct"
+    ],
+    "https://si-digital-framework.org/SI#hasLeftUnitTerm": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/lumen"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasRightUnitTerm": [
+      {
+        "@id": "_:Nec20394d504c4804a734090e542e8914"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nec20394d504c4804a734090e542e8914",
+    "@type": [
+      "https://si-digital-framework.org/SI#UnitPower"
+    ],
+    "https://si-digital-framework.org/SI#hasNumericExponent": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#short",
+        "@value": "-1"
+      }
+    ],
+    "https://si-digital-framework.org/SI#hasUnitBase": [
+      {
+        "@id": "https://si-digital-framework.org/SI/units/watt"
+      }
+    ]
+  },
+  {
+    "@id": "https://si-digital-framework.org/constants/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/3.0/igo/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "Ontology, part of the SI reference point, covering the seven underpinning constants of the SI"
+      },
+      {
+        "@language": "en",
+        "@value": "The SI Reference Point Ontology developed by the BIPM is\nlicensed under CC-BY-3.0-IGO. You are free to share (copy and redistribute\nthe material in any medium or format) and adapt (remix, transform, and\nbuild upon the material) for any purpose, even commercially, for any\npurpose, even commercially. The licensor cannot revoke these freedoms as\nlong as you follow the license terms. You must give appropriate credit\n(by using the original ontology IRI for the whole ontology and original\nterm IRIs for individual terms), provide a link to the license, and\nindicate if any changes were made. You may do so in any reasonable\nmanner, but not in any way that suggests the licensor endorses you or\nyour use."
+      },
+      {
+        "@language": "fr",
+        "@value": "L'ontologie SI Reference Point developpée par le BIPM est sous\nlicence CC-BY-3.0-IGO. Vous êtes autorisés à partager (copier, distribuer et communiquer\nle matériel par tous moyens et sous tous formats) et adapter (remixer, transformer\net créer à partir du matériel) pour toute utilisation, y compris commerciale.\nL'Offrant ne peut retirer les autorisations concédées par la licence tant que\nvous appliquez les termes de cette licence. Vous devez créditer l'oeuvre \n(en utilisant l'IRI de l'ontologie originale pour l'ontologie entière \net les IRIs originaux des termes individuels), intégrer un lien vers la licence \net indiquer si des modifications ont été effectuées à l'oeuvre.\nVous devez indiquer ces informations par tous les moyens raisonnables, \nsans toutefois suggérer que l'offrant vous soutient ou soutient \nla façon dont vous avez utilisé son Oeuvre."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "SI Reference Point - Constants"
+      }
+    ]
+  }
+]

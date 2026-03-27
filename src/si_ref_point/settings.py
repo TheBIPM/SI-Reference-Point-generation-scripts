@@ -19,12 +19,12 @@ SIDFWBASE = "https://si-digital-framework.org"
 # Locations of input and output files
 
 # Folder for files of cgpm + cipm resolutions
-CGPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cgpm"
-CIPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cipm"
-CCTF_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "resbod_data" / "cctf"
+CGPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cgpm"
+CIPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cipm"
+CCTF_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cctf"
 
 # Folder for YAML- and TTL-files produced manually
-CUQ_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "cuq_data"
+SI_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "si"
 
 # Default Folder for output files
 #   per default, the output will be placed in the directory
