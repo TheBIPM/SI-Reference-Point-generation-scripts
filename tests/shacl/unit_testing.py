@@ -5,9 +5,9 @@ demonstration of SHACL shapes to detect possible issues with the RDF that is bei
 """
 from pyshacl import validate
 from os import path
-from config import PROJECT_ROOT
+from config import TTLPATH
 
-df = PROJECT_ROOT / 'outputs' / 'ttl' / 'units.ttl'
+df = TTLPATH / 'units.ttl'
 df = path.abspath(df)
 dff = 'turtle'
 

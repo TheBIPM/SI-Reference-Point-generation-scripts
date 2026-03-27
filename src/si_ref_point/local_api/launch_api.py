@@ -24,7 +24,7 @@ def get_parser():
 
 def main():
     args = get_parser().parse_args()
-    uvicorn.run('si_ref_point.test_api.api_main:app',
+    uvicorn.run('si_ref_point.local_api.api_main:app',
                 port=args.port,
                 log_level=args.log_level,
                 host=args.host)

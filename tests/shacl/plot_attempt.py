@@ -3,10 +3,10 @@
 import rdflib
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from pyvis.network import Network
-from config import PROJECT_ROOT
+from config import TTLPATH
 
 g = rdflib.Graph()
-si_path = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL' / 'si.ttl'
+si_path = TTLPATH / 'si.ttl'
 si_graph = g.parse(si_path)
 
 
