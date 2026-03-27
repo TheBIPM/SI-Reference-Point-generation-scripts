@@ -75,7 +75,7 @@ data:
   hidden_label: Avogadro
   name_en: Avogadro constant
   name_fr: constante d'Avogadro
-  xsd_type: decimal
+  xsd_type: integer
   value_str: 6.022 140 76 x 10²³
   value: "6.02214076e+23"
   unit:
