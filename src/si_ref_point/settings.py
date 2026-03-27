@@ -3,16 +3,17 @@ source 'settings.py'
 global constants etc.
 """
 
-from config import PROJECT_ROOT
-
+from config import PROJECT_ROOT, TTLPATH, JLDPATH
 
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
-SIDFWBASE = "https://si-digital-framework.org"      # Base URL for the SI Digital Framework
-                                                    # from this URL, sub-URLs are defined
-                                                    # - (SIDFWBASE)/SI#
-                                                    # - (SIDFWBASE)/constants#
-                                                    # - (SIDFWBASE)/bodies#
+SIDFWBASE = "https://si-digital-framework.org"
+
+# Base URL for the SI Digital Framework
+# from this URL, sub-URLs are defined
+# - (SIDFWBASE)/SI#
+# - (SIDFWBASE)/constants#
+# - (SIDFWBASE)/bodies#
 
 
 # Locations of input and output files
@@ -28,14 +29,12 @@ CUQ_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "cuq_data"
 # Default Folder for output files
 #   per default, the output will be placed in the directory
 #   from which the script is launched 
-TTL_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "TTL"
-JSONLD_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "JSON-LD"
+TTL_FILES_FOLDER = TTLPATH
+JSONLD_FILES_FOLDER = JLDPATH
 
 GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 
-
-
-#SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
+# SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
 CC_LICENCE = "https://creativecommons.org/licenses/by/3.0/igo/"

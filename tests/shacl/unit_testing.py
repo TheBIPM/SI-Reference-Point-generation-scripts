@@ -7,7 +7,7 @@ from pyshacl import validate
 from os import path
 from config import PROJECT_ROOT
 
-df = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL' / 'units.ttl'
+df = PROJECT_ROOT / 'outputs' / 'ttl' / 'units.ttl'
 df = path.abspath(df)
 dff = 'turtle'
 

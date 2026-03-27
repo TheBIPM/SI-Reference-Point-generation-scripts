@@ -16,7 +16,7 @@ do_OWLDL_completion = (
 do_OWLDL_with_Pellet = True
 
 knowledge_bases = {
-    # "test": {"path": "testing.ttl", "format": "ttl"},
+    # "tests": {"path": "testing.ttl", "format": "ttl"},
     "si_base": {"path": TTLPATH / "si.ttl", "format": "ttl"},
     "units": {"path": TTLPATH / "units.ttl", "format": "ttl"},
     "quantities": {"path": TTLPATH / "quantities.ttl", "format": "ttl"},

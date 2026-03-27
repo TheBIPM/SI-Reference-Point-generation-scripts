@@ -1,8 +1,8 @@
-""" Wrapper to launch fastAPI/uvicorn app
-"""
+""" Wrapper to launch fastAPI/uvicorn app """
+
 import argparse
 import uvicorn
-import json
+
 
 def get_parser():
     """ Dedicated function to collect command line parameters, so it can
@@ -14,12 +14,13 @@ def get_parser():
         '-p', '--port', type=int, default=5000,
         help="Web server port")
     parser.add_argument(
-        '--host', type=str, default="0.0.0.0", # 0.0.0.0 is needed to make the server visible on a local network
+        '--host', type=str, default="0.0.0.0",  # 0.0.0.0 is needed to make the server visible on a local network
         help="Web server host")
     parser.add_argument(
         '--log_level', type=str, default="info",
         help="Log level")
     return parser
+
 
 def main():
     args = get_parser().parse_args()
@@ -27,6 +28,7 @@ def main():
                 port=args.port,
                 log_level=args.log_level,
                 host=args.host)
+
 
 if __name__ == "__main__":
     main()

@@ -5,7 +5,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 # create reuseable paths
-TTLPATH = PROJECT_ROOT / 'src' / 'si_ref_point' / 'TTL'
-JLDPATH = PROJECT_ROOT / 'src' / 'si_ref_point' / 'JSON-LD'
+TTLPATH = PROJECT_ROOT / 'outputs' / 'ttl'
+JLDPATH = PROJECT_ROOT / 'outputs' / 'jsonld'
 DOCPATH = PROJECT_ROOT / 'docs'
 VOCPATH = PROJECT_ROOT / 'docs' / 'vocabulary'

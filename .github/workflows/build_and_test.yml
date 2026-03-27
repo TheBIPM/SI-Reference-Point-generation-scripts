@@ -1,4 +1,4 @@
-name: Compile package and test it
+name: Compile package and tests it
 
 on:
   push:

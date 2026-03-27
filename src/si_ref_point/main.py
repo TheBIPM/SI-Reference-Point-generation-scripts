@@ -1,9 +1,8 @@
-""" Generate the SI reference point TTL files """
+""" Generate the SI reference point TTL/JSON-LD files """
 
 import argparse
 import logging
 import hashlib
-#import si_ref_point.cuq.cuq_tbox as cuq_tbox        # as example if the package is installed
 import si_ref_point.cuq.cuq_tbox as cuq_tbox
 import si_ref_point.cuq.quantities_abox as quantities_abox
 import si_ref_point.cuq.units_abox as units_abox
@@ -15,7 +14,6 @@ import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
 import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
 import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
 from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
-#from si_ref_point import __version__
 import git
 import os
 import datetime
@@ -99,7 +97,7 @@ def main():
         if not os.path.exists(srl['dir']):
             os.makedirs(srl['dir'])
         for label, graph in output.items():
-            filedest = os.path.join(srl['dir'],label + '.' + srl['ext'])
+            filedest = os.path.join(srl['dir'], label + '.' + srl['ext'])
             graph.serialize(format=srl['fmt'], destination=filedest)
 
             # generate hash for file and write it alongside

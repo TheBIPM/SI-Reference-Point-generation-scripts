@@ -1,5 +1,5 @@
-name: test action
-description: run test against compiled package
+name: tests action
+description: run tests against compiled package
 
 runs:
   using: composite

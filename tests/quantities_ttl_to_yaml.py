@@ -6,6 +6,7 @@ quantities introduced by the backoffice
 
 import argparse
 from rdflib import URIRef, Graph, Namespace
+from config import TTLPATH
 
 rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 skos = Namespace("http://www.w3.org/2004/02/skos/core#")
@@ -53,11 +54,11 @@ def flatten_units(units):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert quantitities TTL to YAML")
+    parser = argparse.ArgumentParser(description="Convert the quantities TTL to YAML")
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument(
-        "input_TTL", type=str,
-        help="The input quantities knowdledge graphe, serialized as TTL"
+        "input_TTL", default=TTLPATH / 'quantities.ttl', type=str,
+        help="The input quantities knowledge graph, serialized as TTL"
     )
     args = parser.parse_args()
 
@@ -77,9 +78,9 @@ def main():
         buf = {'identifier': q_id}
         quantity = URIRef(qty + q_id)
         for s, p, o in list(g.triples((quantity, URIRef(skos + "prefLabel"), None))):
-            buf['quantity-' + o] = str(o)
+            buf['quantity-' + o.language] = str(o)
         for s, p, o in list(g.triples((quantity, URIRef(si + "hasUnit"), None))):
-            buf['Unit'] = get_unit(g, o)
+            buf['Unit'] = get_unit(g, o.language)
         output.append(buf)
 
     print('Number of quantity kinds : {}'.format(len(qty_list)))

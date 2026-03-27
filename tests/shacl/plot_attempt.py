@@ -1,3 +1,5 @@
+
+
 import rdflib
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from pyvis.network import Network
@@ -38,7 +40,7 @@ for res in qres:
 
 q = """
 CONSTRUCT { ?s ?p ?o }
-WHERE { GRAPH <http://si-digital-framework.org/SI> { ?s ?p ?o } . }
+WHERE { GRAPH <https://si-digital-framework.org/SI> { ?s ?p ?o } . }
 """
 
 # qres = g.query(q)

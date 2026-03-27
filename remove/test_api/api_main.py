@@ -1,21 +1,21 @@
-""" Module providing a webservice that runs on the local computer """
-#############################################################################
-#
-# api_main
-#
-# Starts a API service on the local host
-# to launch the service, use the wrapper launch_api.py
-#
-# This app returns html pages (using Jinja2Templates)
-#
-# Based on a tutorial found at: http://www.youtube.com/watch?v=SORiTsvnU28
-#
-# To start the API server manually, use: uvicorn main:app --host=0.0.0.0
-#  (the --host=0.0.0.0 ensures that the server can be reached from the same network)
-#
-# G. Dudle/ 16.02.2023
-#
-#
+""" Local FAST API service for the SI Reference Point """
+
+"""
+api_main
+
+Starts an API service on the local host
+to launch the service, use the wrapper launch_api.py
+
+This app returns HTML pages (using Jinja2Templates)
+
+Based on a tutorial found at: https://www.youtube.com/watch?v=SORiTsvnU28
+
+To start the API server manually, use: uvicorn main:app --host=0.0.0.0
+(the --host=0.0.0.0 ensures that the server can be reached from the same network)
+
+G. Dudle/ 16.02.2023
+"""
+
 from typing import List
 from pathlib import Path
 from datetime import date, datetime
@@ -26,7 +26,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Request  # , Header, Quer
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
-from si_ref_point.settings import TTL_FILES_FOLDER,JSONLD_FILES_FOLDER,SIDFWBASE
+from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER, SIDFWBASE
 
 # To add a SPARQL endpoint to the FastAPI app
 from fastapi import Request
@@ -46,11 +46,11 @@ api_router = APIRouter()
 #
 # load ttl files into knowledge graph
 g = Graph()
-g.parse(os.path.join(TTL_FILES_FOLDER, 'units.ttl'))
-g.parse(os.path.join(TTL_FILES_FOLDER, 'prefixes.ttl'))
-g.parse(os.path.join(TTL_FILES_FOLDER, 'quantities.ttl'))
-g.parse(os.path.join(TTL_FILES_FOLDER, 'constants.ttl'))
-g.parse(os.path.join(TTL_FILES_FOLDER, 'cgpm.ttl'))
+g.parse(os.path.join(TTL_FILES_FOLDER, '../../TTL/units.ttl'))
+g.parse(os.path.join(TTL_FILES_FOLDER, '../../TTL/prefixes.ttl'))
+g.parse(os.path.join(TTL_FILES_FOLDER, '../../TTL/quantities.ttl'))
+g.parse(os.path.join(TTL_FILES_FOLDER, '../../TTL/constants.ttl'))
+g.parse(os.path.join(TTL_FILES_FOLDER, '../../TTL/cgpm.ttl'))
 
 # reasoner (used e.g. to infer "?Conf CGPM:adopted ?Res" is equivalent to "?Res CGPM:wasAdoptedBy ?Conf")
 # owlrl.DeductiveClosure(owlrl.OWLRL_Semantics).expand(g)
@@ -69,7 +69,7 @@ param_list_lang = ['en', 'fr']
 # produce dictionaries of symbol:units / symobol:prefix_name / symbol:prefix_scaling
 # unit_list_dict
 UNITS_QUERY = """
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             SELECT ?Unit ?Symbol
             WHERE
             {
@@ -92,7 +92,7 @@ for unit in unitlist:
 
 # prefix_list_dict / scaling_list_dict
 FIX_QUERY = """
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Prefix ?PrefixLabel ?Symbol ?ScalingFactor
             WHERE
@@ -124,15 +124,13 @@ FIXESURL = BASEURL + '/SI/prefixes/'
 XSDURL = 'http://www.w3.org/2001/XMLSchema#'
 
 
-# ----------------------------------------------------------------------------------------
 # function definitions
-
 
 def get_unit_name(sym: str, lang: str | None = 'en'):
     """ get the name of a unit based on the symbol"""
 
     unit_query = """
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Unit ?Label
             WHERE
@@ -149,15 +147,14 @@ def get_unit_name(sym: str, lang: str | None = 'en'):
 
     # run SPARQL query for units
     ures = g.query(unit_query)
-    for element in ures:
-        return element['Label']
+    return ures[0]['Label']
 
 
 def get_prefix_name(sym: str):
     """ get the name of a prefix based on a symbol """
 
     prefix_query = """
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             SELECT ?Prefix ?Label
             WHERE
@@ -169,9 +166,7 @@ def get_prefix_name(sym: str):
 
     # run SPARQL query for units
     pres = g.query(prefix_query)
-    for element in pres:
-        return element['Label']
-
+    return pres[0]['Label']
 
 
 def get_unit_uri(symbol: str):
@@ -222,9 +217,8 @@ def prefixedunit(unit_element: str):
 
             # case "g" with a prefix ≠ k
             else:
-#                if unit_str[0] in prefix_list_dict.keys():
+                # if unit_str[0] in prefix_list_dict.keys():
                 if unit_str[0] in prefix_list_dict:
-
                     dictionary['prefix_symbol'] = unit_str[0]
                     dictionary['unit_URI'] = get_unit_uri("kg")
                     dictionary['unit_symbol'] = "g"
@@ -242,7 +236,7 @@ def prefixedunit(unit_element: str):
                         detail="No information available. Make sure the prefixes and units are correct")
     else:
         # last character not g
-#        if unit_str in unit_list_dict.keys():
+        # if unit_str in unit_list_dict.keys():
         if unit_str in unit_list_dict:
             dictionary['unit_symbol'] = unit_str
             dictionary['unit_URI'] = get_unit_uri(unit_str)
@@ -252,7 +246,6 @@ def prefixedunit(unit_element: str):
 
         else:
             remains = unit_str[1:]
-
             if (unit_str[0] in prefix_list_dict) and (remains in unit_list_dict):
                 dictionary['prefix_symbol'] = unit_str[0]
                 dictionary['prefix_URI'] = get_prefix_uri(unit_str[0])
@@ -274,11 +267,8 @@ def prefixedunit(unit_element: str):
     return dictionary
 
 
-# ----------------------------------------------------------------------------------------
 # API endpoints
 
-
-# ----------------------------------------------------------------------------------------
 @app.get("/")
 def landing_page(request: Request):
     """ return landing page """
@@ -288,7 +278,6 @@ def landing_page(request: Request):
         {"request": request})
 
 
-# ----------------------------------------------------------------------------------------
 @app.get("/cgpm")
 def displ_cgpms(request: Request, lang: str | None = 'en'):
     """ endpoint to get the full list of CGPM conferences """
@@ -309,9 +298,9 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
 
     knows_query = """
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+    PREFIX si: <""" + SIDFWBASE + """/SI#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+    PREFIX rb: <""" + SIDFWBASE + """/bodies#>
 
 
     SELECT ?CGPM_title ?Identifier ?Conf_date
@@ -353,7 +342,6 @@ def displ_cgpms(request: Request, lang: str | None = 'en'):
         )
 
 
-# ----------------------------------------------------------------------------------------
 @app.get("/cgpm/{confid}")
 def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = 'en'):
     """ endpoint to get a specific CGPM conference """
@@ -372,9 +360,9 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
         raise HTTPException(
             status_code=404, detail=f"Requested language unknown {lang}")
 
-    if confid > 1888 :
+    if confid > 1888:
         fstr = "FILTER (YEAR(?Event_date)=" + str(confid) + ")."
-    elif confid < 1000 :
+    elif confid < 1000:
         fstr = "FILTER (?Identifier=" + str(confid) + ")."
     elif confid is not None:
         return RedirectResponse("/CGPM")
@@ -385,9 +373,9 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
 
     knows_query = """
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+        PREFIX rb: <""" + SIDFWBASE + """/bodies#>
 
         SELECT ?Event_title ?Conf ?Identifier ?Event_date
         WHERE {
@@ -406,9 +394,9 @@ def displ_cgpm(request: Request, confid: int | None = None, lang: str | None = '
     for element in qres:
         res_query = """
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-            PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+            PREFIX rb: <""" + SIDFWBASE + """/bodies#>
 
             SELECT ?Event_title ?Event_date ?Outcome_Nr ?Outcome_title ?Outcome_DOI
             WHERE {
@@ -481,9 +469,9 @@ def displ_constants(request: Request, lang: str | None = 'en'):
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
         PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
 
-        SELECT ?cst ?eText ?fText ?symbol  ?updateDate ?valueStr  
+        SELECT ?cst ?eText ?fText ?symbol ?updateDate ?valueStr  
         WHERE { 
         ?cst  a si:Constant ;
                 skos:prefLabel ?eText ;
@@ -523,7 +511,7 @@ def displ_constants(request: Request, lang: str | None = 'en'):
             con = {"@id": name, "@type": "si:Constant"}
             con.update({"name_en": constant['eText']})
             con.update({"name_fr": constant['fText']})
-            con.update({"symbol": constant['sym']})
+            con.update({"symbol": constant['symbol']})
             # needed to correctly display numeric value
             dtype = constant['dtype'].replace(XSDURL, 'xsd:')
             if dtype == 'xsd:integer':
@@ -569,7 +557,7 @@ def displ_constant(request: Request, name: str | None = None, lang: str | None =
 
     knows_query = """
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            PREFIX si: <"""+SIDFWBASE+"""/SI#>
+            PREFIX si: <""" + SIDFWBASE + """/SI#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
             SELECT ?Label ?Value ?Unit ?Unitstr ?Updated ?Valuestr ?Symbol ?Hidden ?Type
@@ -681,9 +669,9 @@ def displ_baseunitsdefinitions(request: Request, sym: str | None = None, lang: s
 
     knows_query = """
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                    PREFIX si: <""" + SIDFWBASE + """/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+                    PREFIX rb: <""" + SIDFWBASE + """/bodies#>
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution ?NoteText
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
@@ -791,9 +779,9 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
 
     knows_query = """
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                    PREFIX si: <""" + SIDFWBASE + """/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-                    PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+                    PREFIX rb: <""" + SIDFWBASE + """/bodies#>
 
                     SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?DefiningText ?DefiningResolution
                         ?StartValidity ?EndValidity ?Equation ?Constant ?Cst_Label ?Cst_Hidden ?ConfNr ?ResNr ?Res_DOI
@@ -867,9 +855,9 @@ def displ_baseunitdefinition(request: Request, baseunitid: str | None = None, la
 
     notes_query = """
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-        PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+        PREFIX rb: <""" + SIDFWBASE + """/bodies#>
         SELECT DISTINCT ?NoteIndex ?NoteText
             WHERE
                 {
@@ -974,7 +962,7 @@ def displ_units(request: Request, sym: str | None = None, lang: str | None = 'en
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                    PREFIX si: <""" + SIDFWBASE + """/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                     SELECT DISTINCT ?Symbol ?Label ?Description ?Q_Label ?Q_Code
                     WHERE {
@@ -1042,7 +1030,7 @@ def displ_unit(request: Request, sym: str | None = None, lang: str | None = 'en'
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-                    PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                    PREFIX si: <""" + SIDFWBASE + """/SI#>
                     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                     SELECT DISTINCT ?Symbol ?Label ?Description ?Q_Label ?Q_Code
                     WHERE {
@@ -1113,10 +1101,10 @@ def displ_prefixes(request: Request, lang: str | None = 'en'):
 
 
     fixes_query = """
-        PREFIX rb: <"""+SIDFWBASE+"""/bodies#>
+        PREFIX rb: <""" + SIDFWBASE + """/bodies#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
         SELECT ?fix ?factor ?type ?sym ?res ?eDOI ?fDOI ?eText ?fText
@@ -1206,7 +1194,7 @@ def displ_prefix(request: Request, sym: str | None = None, lang: str | None = 'e
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT ?Label ?PrefixSymbol ?ScalingFactor
         WHERE
@@ -1293,7 +1281,7 @@ def displ_nonsiunits(request: Request, lang: str | None = 'en'):
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?Factor ?SIUnitSymbol
         WHERE {
@@ -1353,7 +1341,7 @@ def displ_nonsiunit(request: Request, identifier: str, lang: str | None = 'en'):
             status_code=404, detail=f"Requested language unknown {lang}")
 
     knows_query = """
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT DISTINCT ?Symbol ?Label ?Q_Label ?Q_Code ?Factor ?SIUnitSymbol
         WHERE {
@@ -1426,7 +1414,7 @@ def displ_quants(request: Request, lang: str | None = 'en'):
     quants_query = """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
 
         SELECT ?quant ?code ?unit ?ulabel ?usym ?eText ?fText
         WHERE {
@@ -1520,7 +1508,7 @@ def displ_quant(request: Request, code: str | None = None, lang: str | None = 'e
     knows_query = """
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-                PREFIX si: <"""+SIDFWBASE+"""/SI#>
+                PREFIX si: <""" + SIDFWBASE + """/SI#>
 
 
                 SELECT ?quant ?code ?unit ?ulabel ?usym ?eText ?fText
@@ -1577,7 +1565,7 @@ def dbpedia_page(request: Request, word: str):
     """displays a dbpedia-like page"""
     knows_query = """
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX si: <"""+SIDFWBASE+"""/SI#>
+        PREFIX si: <""" + SIDFWBASE + """/SI#>
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

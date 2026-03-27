@@ -25,7 +25,7 @@ def test_syntax():
 def test_semantics(g):
     error_status = False
 
-    # some not very elaborate test
+    # some not very elaborate tests
     if len(list(g.triples((None, None, None)))) < 1:
         error_status = True
 
