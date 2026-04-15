@@ -96,6 +96,13 @@ si:hasNumericExponent a owl:DatatypeProperty ;
     rdfs:domain si:UnitPower;
     rdfs:range xsd:short .
 
+si:hasExponent a owl:DatatypeProperty ;
+    rdfs:label "has numeric exponent as power of 10"@en,
+        "a pour exposant de puissance 10 ce nombre"@fr ;
+    rdfs:comment "10 ^ Exponent (for prefixes)" ;
+    rdfs:domain si:SIPrefix;
+    rdfs:range xsd:short .
+
 si:hasQuantityBase a owl:ObjectProperty ;
     rdfs:subPropertyOf si:hasBase ;
     rdfs:label "has quantity base"@en,

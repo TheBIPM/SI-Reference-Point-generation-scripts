@@ -21,7 +21,7 @@ class SiElements:
         self.g = Graph()  # a triple store as the main data structure
 
     # 1) Define namespaces, sub-namespace and shortcuts used by A boxes
-    
+
         # ~/SI
         self.namespace = namespace
         self.g.bind(ns_prefix, self.namespace)
@@ -55,7 +55,7 @@ class SiElements:
         #~/activities (in the sens of PROVENANCE)
         self.namespace_activities = SIDFWBASE + "/SI/activities#"
         self.g.bind("activities",self.namespace_activities)
-        
+
         #~/agents (in the sens of PROVENANCE)
         self.namespace_agents = SIDFWBASE + "/SI/agents#"
         self.g.bind("agents",self.namespace_agents)
@@ -65,7 +65,7 @@ class SiElements:
                          'CUQ_extended_concepts.ttl']:
             self.g.parse(os.path.join(CUQ_FILES_FOLDER, ttl_file),
                          format="ttl")
-            
+
     # 2) Add annotations to the ontology
 
     #   2.1 General annotations (type, comments etc)
@@ -94,12 +94,12 @@ class SiElements:
         timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
         uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
         startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
-        
+
         repo = git.Repo(search_parent_directories=True)
         sha = repo.head.object.hexsha
 
     #     2.2.1 Agent
-    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     declare this code as an 'agent' (in the sense of PROVENANCE)
     #     and define the URI to a specific version by using its commit on github
         agent_sw = GITHUB_BASE_PATH +"blob/"+ sha + "/src/si_ref_point/cuq/cuq_tbox.py"
         self.g.add(
@@ -107,10 +107,10 @@ class SiElements:
              RDF.type,
              PROV.Agent)
         )
-        
+
     #     2.2.2 Entity
     #     there is no source file for the TBox, so there is no source entity
-    
+
     #     declare the ttl output as an 'entity' (in the sense of PROVENANCE)
         si_out_entity = "si_"+uri_timestamp+".ttl"
         self.g.add(
@@ -118,7 +118,7 @@ class SiElements:
              RDF.type,
              PROV.Entity)
              )
-    
+
     #     2.2.3 Activity
     #     declare the si_ttl_generation as 'activity' (in the sense of PROVENANCE)
     #     make the activity unique by adding the timestamp to the identifier of the activity
@@ -167,7 +167,7 @@ class SiElements:
              Literal(CC_LICENCE_TEXT_EN,lang="en"))
         )
         self.g.add(
-            (URIRef(self.namespace),        
+            (URIRef(self.namespace),
              RDFS.comment,
              Literal(CC_LICENCE_TEXT_FR,lang="fr"))
         )
@@ -234,7 +234,7 @@ class SiElements:
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
-        self.has_exponent = self.set_uri("hasNumericExponent")
+        self.has_exponent = self.set_uri("hasExponent")
 
     # 4) Utility methods
 
@@ -253,7 +253,7 @@ class SiElements:
     def set_entity_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_entities + name)
-    
+
     def set_unit_uri(self, name: str) -> URIRef:
         """ Utility method """
         return URIRef(self.namespace_units + name)
