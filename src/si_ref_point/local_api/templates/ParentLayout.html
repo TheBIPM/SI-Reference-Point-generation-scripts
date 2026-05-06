@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>SI Digital Framework Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='dsi.css') }}" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+    {% block head %}
+    <div class="flex-container" >
+        <div class="flex-child " >    
+            <a href= "/remove%3F/test_api/static"><img src="{{ url_for('static', path='dsi.jpg') }}" title="Version 2023-05-03" width="100" alt="DSI logo" /></a>
+        </div>
+        <div class="flex-child " style="margin-top: 25px;font-size: 45px;font-family :Arial, Helvetica,serif">
+            SI Reference Point
+        </div>
+    </div>
+    <div class="btn-group" >
+        <button onclick="window.location.href='/SI/units';">SI Units</button>
+        <button style="padding: 10px 20px;" onclick="window.location.href='/SI/prefixes';">SI Prefixes</button>
+        <button onclick="window.location.href='/constants';">Constants</button>
+        <button onclick="window.location.href='/quantities';">Quantities</button>
+        <button onclick="window.location.href='/cgpm';">CGPM</button>
+        <button onclick="window.location.href='/sparql-ui';">SPARQL Assistant</button>
+    </div>
+    {% endblock %}
+    <div style="margin-left: 10px">
+    {% block main %}
+        <h1>How to use this site</h1>
+        <p>Below you will find a few examples of requests that can be used in this API.</p>
+        <!-- CGPM endpoint -->
+        <h2 class="API_request_class">~/cgpm</h2>
+        <p>Returns all general Conferences (CGPM)</p>
+        <h4>Optional parameters</h4>
+        <ul>
+            <li><i>lang:</i> selects the language (en or fr)</li>
+    
+        </ul>
+        <h2 class="API_request_class">~/cgpm/{identifier}</h2>
+        <p>Returns on the General Conference (CGPM) specified by the identifier. The identifier can be the year of the conference (YYYY) or the number of the conference.</p>
+        <h4>Optional parameter</h4>
+        <ul>
+            <li><i>lang:</i> selects the language (en or fr)</li>
+        </ul>
+
+        <h4>Examples</h4>
+        <ul>
+            <li><a href="/cgpm/2018">~/cgpm/2018</a></li>
+            <li><a href="/cgpm/1">~/cgpm/1</a></li>
+        </ul>
+
+
+        <h2 class="API_request_class">~/constants</h2>
+        <p>Returns the list of the constants that underpin the SI.</p>
+        <h4>Optional parameter</h4>
+        <ul>
+            <li><i>lang:</i> selects the language (en or fr)</li>
+        </ul>
+        <h2 class="API_request_class">~/constant/{identifier}</h2>
+        <p>Return information about the constant specified by the identifier</p>
+        <h4>Examples</h4>
+        <ul>
+            <li><a href="/constant/Planck">~/constant/Planck</a></li>
+        </ul>
+
+        <h2 class="API_request_class">~/si-baseunits</h2>
+        <p> Returns the list of the Base Units with their definition. </p>
+        <h4>Optional parameters</h4>
+        <ul>
+            <li><i>datestr:</i> selects the definition valid at a given date (format YYYY-MM-DD)</li>
+            <li><i>lang:</i> selects the language (en or fr)</li>
+        </ul>
+        <h2 class="API_request_class">~/si-baseunit/{identifer}</h2>
+        <p> Returns information about the Base Units specified by the identifier. The identifier can be the Symbol (case sensitive) or the full name (not case sensitive)with their definition. </p>
+        <h4>Optional parameters</h4>
+        <ul>
+            <li><i>datestr:</i> selects the definition valid at a given date (format YYYY-MM-DD)</li>
+            <li><i>lang:</i> selects the language (en or fr)</li>
+        </ul>
+
+        <h4>Examples</h4>
+        <ul>
+          <li><a href="/si-baseunit/A?datestr=2000-01-01&lang=fr">~/si-baseunit/A?datestr=2000-01-01&lang=fr</a></li>
+        </ul>
+
+        <h2 class="API_request_class">~/si-units</h2>
+        <p>Returns a list of all units (base and derived units)</p>
+        <h4>Optional parameters</h4>
+        <ul>
+            <li><i>lang:</i>selects the language (en or fr)</li>
+        </ul>
+
+        <h2 class="API_request_class">~/si-unit/{identifier}</h2>
+        <p>Returns information on a si-unit (base and derived units) specified by the identifier. The identifier can be the Symbol (case sensitive) or the full name (not case sensitive)with their definition.</p>
+        <h4>Optional parameter</h4>
+        <ul>
+                <li><i>lang:</i>selects the language (en or fr)</li>
+    
+        </ul>
+        <h4>Examples</h4>
+        <ul>
+            <li><a href="/si-unit/F">~/si-unit/F</a></li>
+        </ul>
+
+        <h2 class="API_request_class">~/si-prefixes</h2>
+        <p>Returns the list of all prefixes accepted in the SI</p>
+        <h4>Optional parameter</h4>
+        <ul>
+            <li><i>lang:</i>selects the language (en or fr)</li>
+        </ul>
+
+        <h2 class="API_request_class">~/si-prefix/{identifier}</h2>
+        <p>Returns information on a prefix specified by the identifier. The identifier can be the Symbol (case sensitive) or the full name (not case sensitive)with their definition.</p>
+        <h4>Optional parameter</h4>
+        <ul>
+            <li><i>lang:</i>selects the language (en or fr)</li>
+        </ul>
+
+        <h4>Example</h4>
+        <ul>
+            <li><a href="/si-prefix/n">~/si-prefix/n</a></li>
+        </ul>
+
+        <h2 class="API_request_class">~/quantities</h2>
+        <p>Returns a list of all kind of quantities given in the SI Brochure</p>
+        <h4>Optional parameter</h4>
+        <ul>
+            <li><i>lang:</i>selects the language (en or fr)</li>
+        </ul>
+        <h2 class="API_request_class">~/quantity/{identifier}</h2>
+        <p>Returns information on a quantity specified by its 4-letter-code.</p>
+        <h4>Optional parameters</h4>
+        <ul>
+            <li><i>lang:</i>selects the language (en or fr)</li>
+        </ul>
+
+        <h4>Example</h4>
+        <ul>
+            <li><a href="/quantity/ELCU">~/quantity/ELCU</a></li>
+        </ul>
+
+    {% endblock %}
+    </div>
+</body>
+</html>

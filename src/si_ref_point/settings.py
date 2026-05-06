@@ -1,41 +1,40 @@
 """
-seetings.py
-Global constants etc
+source 'settings.py'
+global constants etc.
 """
-import os
-import pathlib
-package_dir = pathlib.Path(__file__).parent.resolve()
+
+from config import PROJECT_ROOT, TTLPATH, JLDPATH
 
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
-SIDFWBASE = "https://si-digital-framework.org"      # Base URL for the SI Digital Framework
-                                                    # from this URL, sub-URLs are defined
-                                                    # - (SIDFWBASE)/SI#
-                                                    # - (SIDFWBASE)/constants#
-                                                    # - (SIDFWBASE)/bodies#
+SIDFWBASE = "https://si-digital-framework.org"
+
+# Base URL for the SI Digital Framework
+# from this URL, sub-URLs are defined
+# - (SIDFWBASE)/SI#
+# - (SIDFWBASE)/constants#
+# - (SIDFWBASE)/bodies#
 
 
 # Locations of input and output files
 
 # Folder for files of cgpm + cipm resolutions
-CGPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cgpm")
-CIPM_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cipm")
-CCTF_FILES_FOLDER = os.path.join(package_dir, "resbod_data", "cctf")
+CGPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cgpm"
+CIPM_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cipm"
+CCTF_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "rb" / "cctf"
 
 # Folder for YAML- and TTL-files produced manually
-CUQ_FILES_FOLDER = os.path.join(package_dir, "cuq_data")
+SI_FILES_FOLDER = PROJECT_ROOT / "src" / "si_ref_point" / "inputs" / "si"
 
 # Default Folder for output files
 #   per default, the output will be placed in the directory
 #   from which the script is launched 
-TTL_FILES_FOLDER = os.path.join(".","TTL")
-JSONLD_FILES_FOLDER = os.path.join(".","JSON-LD")
+TTL_FILES_FOLDER = TTLPATH
+JSONLD_FILES_FOLDER = JLDPATH
 
 GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
 
-
-
-#SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
+# SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
 CC_LICENCE = "https://creativecommons.org/licenses/by/3.0/igo/"

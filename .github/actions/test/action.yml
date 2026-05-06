@@ -1,5 +1,5 @@
-name: test action
-description: run test against compiled package
+name: tests action
+description: run tests against compiled package
 
 runs:
   using: composite
@@ -7,4 +7,4 @@ runs:
     - name: Test output files in typical scenarios
       shell: bash
       run: |
-        python test/run_test.py
+        python tests/syntax_semantic_check.py

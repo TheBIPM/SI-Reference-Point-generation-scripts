@@ -1,0 +1,670 @@
+---
+metadata:
+  title: 21st meeting of the CGPM
+  identifier: 21
+  date: '1999-10-15'
+  source: BIPM - Pavillon de Breteuil
+  url: https://doi.org/10.59161/cgpm1999
+pdf: https://www.bipm.org/documents/20126/35909321/CGPM21-EN.pdf/72309e6b-6e25-8d1e-3bc2-4aeed9e8065e
+resolutions:
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Long-term needs relating to metrology
+  identifier: 1
+  url: https://doi.org/10.59161/cgpm1999res1e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 325
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering Resolution 11 of the 20th General Conference, which requested
+      the International Committee to study and report on the long-term needs relating
+      to metrology,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the study which was completed in 1997 after extensive international
+      consultations,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: 'considering the resultant report, entitled _National and international
+      needs relating to metrology: International collaborations and the role of the
+      BIPM_, which was sent by the International Committee in 1998 to the governments
+      of the Member States,'
+  - type: noting
+    date_effective: '1999-10-15'
+    message: "*notes* the discussion in the report of the International Committee
+      of the long-term financial commitments required from the Member States,"
+  actions:
+  - type: welcomes
+    date_effective: '1999-10-15'
+    message: |-
+      *welcomes* the many decisions made by the International Committee as a consequence of the study and, in particular
+
+      * the progressive broadening of the terms of reference of the Consultative Committees to cover the principal fields of metrology where collaboration between the national metrology institutes is important, not only in physics and engineering but also in other disciplines such as chemistry and biotechnology,
+      * the strengthening of the role of the Consultative Committees and the admission of observers to their meetings to enable more Member States to participate,
+      * the emphasis on evaluating and publishing the degree of equivalence of national measurement standards of the Member States and on the establishment of an associated mutual recognition arrangement of national measurement standards and of calibration and measurement certificates issued by national metrology institutes,
+      * the introduction of periodic meetings with the directors of the national metrology institutes of the Member States,
+      * the statement by the International Committee of the role of the BIPM in the early decades of the 21st century,
+      * the increased collaboration of the BIPM with related international organizations, especially the regional metrology organizations, the International Laboratory Accreditation Cooperation and the Organisation Internationale de Métrologie Légale,
+      * the considerable progress already made by the International Committee in implementing its decisions,
+  - type: thanks / expresses-appreciation
+    date_effective: '1999-10-15'
+    message: "*thanks* the many organizations and individuals who have contributed
+      to the study and the report of the International Committee."
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Mutual recognition of national measurement standards and of calibration and
+    measurement certificates issued by national metrology institutes
+  identifier: 2
+  url: https://doi.org/10.59161/cgpm1999res2e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 326
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering Resolution 2 of the 20th General Conference concerning worldwide
+      traceability of measurements,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the rapidly increasing emphasis on the need to demonstrate
+      international equivalence of measurements and tests results related to trade,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the increasing number of mutual recognition arrangements
+      and agreements being negotiated internationally concerning calibration and testing
+      services,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the calibration and testing services in each nation
+      depend on a national metrology institute both for their measurement standards
+      and for traceability to the SI,
+  - type: recognizing
+    date_effective: '1999-10-15'
+    message: "*recognizes* that mutual recognition of the national measurement standards
+      and the calibration services of the national metrology institutes is necessary
+      in order to provide the basis for mutual recognition of calibration and tests
+      services generally,"
+  actions:
+  - type: welcomes
+    date_effective: '1999-10-15'
+    message: welcomes the initiative taken by the International Committee in drawing
+      up a mutual recognition arrangement related to national measurement standards
+      and to calibration and measurement certificates issued by national metrology
+      institutes,
+  - type: welcomes
+    date_effective: '1999-10-15'
+    message: welcomes the decisions of those Member States that have already given
+      authority to the director of the designated national metrology institute in
+      their country to sign the arrangement,
+  - type: invites / further invites
+    date_effective: '1999-10-15'
+    message: invites all other Member States of the Metre Convention to participate
+      in the arrangement by giving authority to the director of the designated national
+      metrology institute in their country to sign the arrangement,
+  - type: invites / further invites
+    date_effective: '1999-10-15'
+    message: invites all Member States to make every effort to implement the arrangement
+      and to encourage other authorities in their country to recognize the equivalence
+      of national measurement standards and calibration and measurement certificates
+      thereby demonstrated,
+  - type: invites / further invites
+    date_effective: '1999-10-15'
+    message: invites all States to use this arrangement as the basis for recognizing
+      the national measurement standards and calibration and measurement certificates
+      of signatory national metrology institutes.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Associates of the Conférence Générale des Poids et Mesures
+  identifier: 3
+  url: https://doi.org/10.59161/cgpm1999res3e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 327
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the worldwide measurement infrastructure, based on the
+      International System of Units (SI) used in almost every aspect of modern society,
+      rests on the universal application of the decisions of the General Conference,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that all States, not only those that are Member States of
+      the Metre Convention, engage in measurements which are related to trade and
+      need to be traceable to the SI,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that States which are not Member States of the Metre Convention
+      are at present excluded from the activities of the Convention,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that Member States of the Metre Convention support the world's
+      measurement system by devoting considerable financial resources to the BIPM
+      and to their own national measurement systems,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that many smaller States would have difficulty in allocating
+      funds sufficient to meet the cost of membership of the Metre Convention,
+  actions:
+  - type: decides
+    date_effective: '1999-10-15'
+    message: |-
+      *decides*
+
+      * to assume a responsibility for providing those States and Economies not yet members of the Metre Convention with the means to establish links to the world's measurement system so as to provide recognition of the traceability of their measurements to the SI,
+      * that an important link can be through participation in the mutual recognition arrangement related to national measurement standards now operated by the International Committee,
+      * that participation in the arrangement for such a State or Economy should be by the association of their national metrology institutes with a regional metrology organization that is a member of the Joint Committee of the Regional Metrology Organizations and the BIPM,
+
+      and consequently *decides*
+
+      * to invite such States and Economies to take part in the General Conference as Associates, thereby establishing the connection with the Member States of the Metre Convention necessary for them to participate in the mutual recognition arrangement,
+      * that Associate States and Economies of the General Conference participate in the Conference through the appointment of non-voting observers,
+      * that Associate States and Economies shall pay an annual subscription to the BIPM to meet the cost of providing the services that the International Committee may make available to them; the annual subscription of each Associate State or Economy will be determined from its UN contribution, as for Member States but with a minimum equal to 0.05 % of the annual dotation of the BIPM,
+      * that a State or Economy wishing to become an Associate may do so by application to the Director of the BIPM, either directly or through its Embassy in Paris, and by the payment of the first annual subscription,
+      * that an Associate State or Economy three years in arrears with its subscription cease to be an Associate; it may be reinstated on payment of these arrears.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: The need to use SI units in studies of Earth resources, the environment,
+    human well-being and related issues
+  identifier: 4
+  url: https://doi.org/10.59161/cgpm1999res4e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 328
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the effects on the geosphere and biosphere of industrial
+      and commercial activities and of many other human pursuits, as well as natural
+      phenomena, and the consequences for human health and well-being are the subject
+      of major studies worldwide,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that governments are increasingly faced with decisions of
+      great economic and political significance concerning the regulation of these
+      activities,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the policies of governments are influenced by studies
+      depending critically on accurate and mutually compatible measurements often
+      requiring very large economic investments,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that much of the important scientific evidence required for
+      decisions by governments comes from measurements of small changes in certain
+      key parameters, measurements sometimes extending over several decades,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that certain critical measurements have traditionally been
+      made in _ad hoc_ units, based upon special instrumentation or procedures, and
+      not in the well-characterized and internationally agreed SI units,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that experience over many years has shown that measurements
+      not directly linked to the SI cannot be relied upon in the long term, cannot
+      be compared with similar measurements made elsewhere and do not adequately bring
+      out possible relationships with measurements made in other scientific disciplines,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that increasing demands for reliability in measurements made
+      for medical and therapeutic purposes are leading to more demanding regulation
+      in these areas,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: "*recommends* that those responsible for studies of Earth resources,
+      the environment, human well-being and related issues ensure that measurements
+      made within their programmes are in terms of wellcharacterized SI units so that
+      they are reliable in the long term, are comparable worldwide and are linked
+      to other areas of science and technology through the world's measurement system
+      established and maintained under the Metre Convention."
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Revision of the <i>mise en pratique</i> of the definition of the metre
+  identifier: 5
+  url: https://doi.org/10.59161/cgpm1999res5e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 329
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that in 1983 the 17th General Conference adopted a new definition
+      of the metre,
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that in the same year the General Conference invited the International
+      Committee
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that to draw up instructions for the practical realization
+      of the metre (the _mise en pratique_,
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that to choose radiations which can be recommended as standards
+      of wavelength for the interferometric measurement of length and draw up instructions
+      for their use,
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that to pursue studies to improve these standards and, in due
+      course, to extend or revise these instructions,
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: recalling that in response to this invitation the International Committee
+      made recommendations in 1983 and again in 1992 concerning the practical realization
+      of the metre,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that science and technology continue to demand improved accuracy
+      in the realization of the metre,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that since 1992 work in national laboratories, the Bureau
+      International des Poids et Mesures and elsewhere has substantially improved
+      the reproducibility of radiations which are suitable for the practical realization
+      of the metre,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that such work has also substantially reduced the uncertainty
+      in the determined values of the frequencies and vacuum wavelengths of some of
+      these radiations,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that a revision of the list of recommended radiations is
+      desirable for many applications, which include not only the direct realization
+      of the metre by means of optical interferometry for practical length measurement,
+      but also spectroscopy, atomic and molecular physics and the determination of
+      fundamental constants,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the accuracy already achieved and advances now foreseeable
+      in certain space-time measurements require the practical realization of the
+      definition of the metre to be considered in the context of the theory of general
+      relativity,
+  actions:
+  - type: welcomes
+    date_effective: '1999-10-15'
+    message: |-
+      *welcomes* the adoption by the International Committee in 1997 of a revised _mise en pratique_ of the definition of the metre,
+
+      and *recommends* that national laboratories pursue experimental and theoretical research on optical wavelength and frequency standards, including the development of new techniques for the comparison of different standards over a wide range of wavelength and frequency to improve yet further the experimental basis of the International System of Units.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Requirements for dimensional metrology
+  identifier: 6
+  url: https://doi.org/10.59161/cgpm1999res6e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 330
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that requirements for advanced dimensional metrology continue
+      to increase,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that tolerances in high-technology manufacturing continue
+      to fall and that in some areas they are already at the limit of what is possible
+      today,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the range over which such requirements exist extends
+      inclusively from the domain of nanotechnology to the domain of geophysics,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that many different areas of metrology call upon realizations
+      of SI derived units that themselves include the metre,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the most demanding requirements in dimensional metrology
+      often call for the realization of the metre by the simplest and the most direct
+      way possible using stabilized lasers,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that to provide for the future and to ensure that the world's
+      metrological system is capable of meeting future demand, continued basic research
+      is essential,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: "*recommends* that national laboratories maintain a wide research base
+      in length metrology that includes the maintenance and development of techniques
+      to meet the diverse and growing demands in the field of dimensional metrology."
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: The definition of the kilogram
+  identifier: 7
+  url: https://doi.org/10.59161/cgpm1999res7e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 331
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the need to assure the long-term stability of the SI,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the intrinsic uncertainty in the long-term stability of the
+      artefact defining the unit of mass, one of the base units of the SI,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the consequent uncertainty in the long-term stability of
+      the other three base units of the SI that depend on the kilogram, namely, the
+      ampere, the mole and the candela,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the progress already made in a number of different experiments
+      designed to link the unit of mass to fundamental or atomic constants,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the desirability of having more than one method of making
+      such a link,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: "*recommends* that national laboratories continue their efforts to refine
+      experiments that link the unit of mass to fundamental or atomic constants with
+      a view to a future redefinition of the kilogram."
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Operational primary frequency standards
+  identifier: 8
+  url: https://doi.org/10.59161/cgpm1999res8e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 332
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the importance of maintaining an adequate number of primary
+      frequency standards to assure the accuracy and long-term stability of TAI,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that new primary standards are being developed using new
+      technology,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that these new standards are significantly more accurate
+      than the traditional primary standards upon which TAI and UTC have been based
+      in the past,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that in consequence, the accuracy of TAI and UTC will rapidly
+      become dependent on these new standards,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that considerable resources are required to maintain primary
+      frequency standards as operational facilities to assure the accuracy of TAI,
+  actions:
+  - type: requests
+    date_effective: '1999-10-15'
+    message: "*requests* national metrology institutes and other laboratories developing
+      new primary standards, to make every effort to provide the human and other resources
+      necessary to maintain as operational facilities these new standards upon which
+      the accuracy of TAI and UTC will be based."
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Extension of the International Temperature Scale below 0.65 K
+  identifier: 9
+  url: https://doi.org/10.59161/cgpm1999res9e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 332
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that many important research activities are in progress at
+      temperatures below stem:[0.65 "K"],
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that these researches require an accepted temperature scale
+      which closely represents thermodynamic temperatures,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the direct measurement of thermodynamic temperature
+      is often difficult and time-consuming at temperatures below stem:[0.65 "K"]
+      down to a few millikelvin, but at temperatures much lower than this direct measurements
+      once again become feasible,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that considerable work has already been accomplished towards
+      the development of a temperature scale for the range from stem:[0.65 "K"] down
+      to stem:[1 "mK"] based on the melting pressure of stem:[""_(3) "He"],
+  actions:
+  - type: invites / further invites
+    date_effective: '1999-10-15'
+    message: '*invites* the International Committee to prepare a stem:[""_(3) "He"]
+      melting pressure equation as a function of thermodynamic temperature to serve
+      as the basis for an extension of the ITS-90 below its present lower limit of
+      stem:[0.65 "K"].'
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Metrology in chemistry
+  identifier: 10
+  url: https://doi.org/10.59161/cgpm1999res10e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 333
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: recalling / further recalling
+    date_effective: '1999-10-15'
+    message: "*recalling* Resolution 7 of the 20th ConférenceGénérale des Poids et
+      Mesures on metrology in chemistry,"
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the worldwide development of trade agreements under the World
+      Trade Organization,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the need to eliminate metrology-related technical barriers
+      to trade particularly in the areas of food science and pharmaceuticals,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that many environmental and public health decisions are based
+      on measurements in chemistry,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the development of worldwide traceability is still far
+      from complete for measurements in chemistry,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: recommends that national metrology institutes continue to initiate and
+      coordinate national activities in the field of metrology in chemistry, in close
+      cooperation with other relevant bodies,
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: recommends that national metrology institutes in collaboration with the
+      International Committee, work to define the areas of priority and essential
+      international comparisons which are key to the traceability of measurements
+      in chemistry, both worldwide and within regions.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Metrology in biotechnology
+  identifier: 11
+  url: https://doi.org/10.59161/cgpm1999res11e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 334
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the growing importance of biotechnology in human health,
+      food production, forensic medicine and the protection of the environment,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the need to make accurate measurements traceable to the SI
+      in these fields,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the lack of an adequate metrological infrastructure to ensure
+      such traceability,
+  actions:
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: recommends national laboratories to consider developing programmes related
+      to the measurement of quantities important in biotechnology,
+  - type: recommends
+    date_effective: '1999-10-15'
+    message: recommends national laboratories to collaborate with the international
+      scientific unions and the international organizations concerned in the establishment
+      of an adequate international measurement infrastructure to ensure traceability
+      to the SI in measurements in biotechnology.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Special name for the SI derived unit mole per second, the katal, for the
+    expression of catalytic activity
+  identifier: 12
+  url: https://doi.org/10.59161/cgpm1999res12e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 334
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the importance for human health and safety of facilitating
+      the use of SI units in the fields of medicine and biochemistry,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that a non-SI unit called "unit", symbol U, equal to 1 µmol
+      · min^-1^, which is not coherent with the SI, has been in widespread use in
+      medicine and biochemistry since 1964 for expressing catalytic activity,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the absence of a special name for the SI coherent derived
+      unit mole per second has led to results of clinical measurements being given
+      in various local units,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the use of SI units in medicine and clinical chemistry
+      is strongly recommended by the international unions in these fields,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that the International Federation of Clinical Chemistry and
+      Laboratory Medicine has asked the Consultative Committee for Units to recommend
+      the special name katal, symbol kat, for the SI unit mole per second,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering that while the proliferation of special names represents
+      a danger for the SI, exceptions are made in matters related to human health
+      and safety (15th General Conference, 1975, Resolutions 8 and 9, 16th General
+      Conference, 1979, Resolution 5),
+  - type: noting
+    date_effective: '1999-10-15'
+    message: "*noting* that the name katal, symbol kat, has been used for the SI unit
+      mole per second for over thirty years to express catalytic activity,"
+  actions:
+  - type: decides
+    date_effective: '1999-10-15'
+    message: |-
+      *decides* to adopt the special name katal, symbol kat, for the SI unit mole per second to express catalytic activity, especially in the fields of medicine and biochemistry,
+
+      and *recommends* that when the katal is used, the measurand be specified by reference to the measurement procedure; the measurement procedure must identify the indicator reaction.
+- dates:
+  - '1999-10-15'
+  subject: CGPM
+  type: resolution
+  title: Dotation of the BIPM
+  identifier: 13
+  url: https://doi.org/10.59161/cgpm1999res13e
+  reference: https://www.bipm.org/documents/20126/17314988/CGPM21.pdf/c113ab98-4856-eeb9-6e8e-ed738a474108
+  reference_name: Proceedings of the 21st CGPM (1999), 2001
+  reference_page: 335
+  approvals:
+  - message: The 21st Conférence Générale des Poids et Mesures,
+  considerations:
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the importance of the work carried out by the Bureau International
+      des Poids et Mesures (BIPM) and the services it renders to Member States of
+      the Metre Convention,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the considerable efforts made by the BIPM to enhance the
+      efficiency of its operation, and its commitment to continue these efforts,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: 'considering the conclusions of the report _National and international
+      needs relating to metrology: International collaborations and the role of the
+      BIPM_,'
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the decision of the International Committee, based on this
+      report, to broaden the responsibilities of the BIPM,
+  - type: considering
+    date_effective: '1999-10-15'
+    message: considering the recommendation in the report that, in recognition of
+      the difficult economic situation now existing in many Member States of the Metre
+      Convention, the BIPM annual dotation be held constant in real terms during the
+      quadrennium 2001-2004 at the level determined by the 20th General Conference
+      for the year 2000,
+  - type: noting
+    date_effective: '1999-10-15'
+    message: noting that on 1 January 1999, the new currency, the euro, came into
+      operation in most States of the European Union and the rates of exchange between
+      the euro and their currencies were definitively fixed,
+  - type: noting
+    date_effective: '1999-10-15'
+    message: noting that on 1 January 2002, most of today's European currencies, including
+      the French franc, and thus the gold franc, will disappear,
+  actions:
+  - type: decides
+    date_effective: '1999-10-15'
+    message: "*decides* that\n\n* henceforth the currency to be used in voting the
+      annual dotation for the BIPM will be the euro,\n* the fixed part of the annual
+      dotation of the Bureau International des Poids et Mesures will be increased
+      in a way such that the sum of the fixed part and the complementary part (defined
+      by Article 6, 1921) of the Rules annexed to the Metre Convention (1875) shall,
+      for those States members of the Metre Convention at the time of the 21st General
+      Conference, be\n\n\n\n8 697 000 euros in 2001 (31 440 039 gold francs) +\n8
+      828 000 euros in 2002 (31 913 610 gold francs) +\n8 960 000 euros in 2003 (32
+      390 796 gold francs) +\n9 094 000 euros in 2004 (32 875 212 gold francs).\n\n "

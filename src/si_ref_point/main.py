@@ -1,27 +1,23 @@
-""" Generate the SI reference point TTL files
-"""
+""" Generate the SI reference point TTL/JSON-LD files """
 
 import argparse
 import logging
 import hashlib
-#import si_ref_point.cuq.cuq_tbox as cuq_tbox        # as example if the package is installed
-import si_ref_point.cuq.cuq_tbox as cuq_tbox
-import si_ref_point.cuq.quantities_abox as quantities_abox
-import si_ref_point.cuq.units_abox as units_abox
-import si_ref_point.cuq.constants_abox as constants_abox
-import si_ref_point.cuq.prefixes_abox as prefixes_abox
-import si_ref_point.cuq.decisions_abox as decisions_abox
-import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
-import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
-import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
-import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
+import si_ref_point.tboxes.si_tbox as cuq_tbox
+import si_ref_point.aboxes.quantities_abox as quantities_abox
+import si_ref_point.aboxes.units_abox as units_abox
+import si_ref_point.aboxes.constants_abox as constants_abox
+import si_ref_point.aboxes.prefixes_abox as prefixes_abox
+import si_ref_point.aboxes.decisions_abox as decisions_abox
+import si_ref_point.tboxes.rb_tbox as rb_tbox
+import si_ref_point.aboxes.rb_abox_cgpm as rb_abox_cgpm
+import si_ref_point.aboxes.rb_abox_cipm as rb_abox_cipm
+import si_ref_point.aboxes.rb_abox_cctf as rb_abox_cctf
 from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
-#from si_ref_point import __version__
 import git
 import os
 import datetime
 from zipfile import ZipFile
-import subprocess
 
 
 def get_parser():
@@ -75,10 +71,10 @@ def main():
         'constants': constants_abox.main,
         'prefixes': prefixes_abox.main,
         'decisions': decisions_abox.main,
-        'bodies': ResBod_TBox.main,
-        'cgpm': ResBod_ABox_CGPM.main,
-        'cipm': ResBod_ABox_CIPM.main,
-        'cctf': ResBod_ABox_CCTF.main,
+        'bodies': rb_tbox.main,
+        'cgpm': rb_abox_cgpm.main,
+        'cipm': rb_abox_cipm.main,
+        'cctf': rb_abox_cctf.main,
     }
     output = {}
     for label, generator in file_generator.items():
@@ -101,7 +97,7 @@ def main():
         if not os.path.exists(srl['dir']):
             os.makedirs(srl['dir'])
         for label, graph in output.items():
-            filedest = os.path.join(srl['dir'],label + '.' + srl['ext'])
+            filedest = os.path.join(srl['dir'], label + '.' + srl['ext'])
             graph.serialize(format=srl['fmt'], destination=filedest)
 
             # generate hash for file and write it alongside
@@ -147,7 +143,7 @@ def main():
                     zf.write(os.path.join(srl['dir'], hash_file),
                              arcname=os.path.join(srl['fmt'].upper(), hash_file))
 
-    # Generate ontology documentation markdown files
+    # Generate ontology documentation Markdown files
     if args.gen_ontology_viz:
         import ontospy
         from ontospy.gendocs.viz.viz_markdown import MarkdownViz
