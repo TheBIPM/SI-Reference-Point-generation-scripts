@@ -13,7 +13,6 @@ import si_ref_point.tboxes.rb_tbox as rb_tbox
 import si_ref_point.aboxes.rb_abox_cgpm as rb_abox_cgpm
 import si_ref_point.aboxes.rb_abox_cipm as rb_abox_cipm
 import si_ref_point.aboxes.rb_abox_cctf as rb_abox_cctf
-from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
 import git
 import os
 import datetime
@@ -47,12 +46,12 @@ def get_parser():
     parser.add_argument(
         '-o', '--output_dir',
         type=str,
-        default=TTL_FILES_FOLDER,
+        default="./TTL",
         help="Output directory for TTL output")
     parser.add_argument(
         '--jsonld_output_dir',
         type=str,
-        default=JSONLD_FILES_FOLDER,
+        default="./JSON-LD",
         help="Output directory for JSON-LD output")
     return parser
 
