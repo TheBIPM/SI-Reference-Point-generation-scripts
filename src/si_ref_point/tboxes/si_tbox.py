@@ -8,7 +8,7 @@ import os
 from rdflib import Graph, OWL, RDF, RDFS, URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -94,7 +94,8 @@ class SiElements:
         uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
         startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
 
-        repo = git.Repo(search_parent_directories=True)
+### `generate_turtle_files`
+        repo = git.Repo(PKG_ROOT, search_parent_directories=True)
         sha = repo.head.object.hexsha
 
     #     2.2.1 Agent

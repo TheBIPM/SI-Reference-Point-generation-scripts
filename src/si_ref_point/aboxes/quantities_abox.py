@@ -8,15 +8,15 @@ from datetime import datetime, timezone
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 from si_ref_point.aboxes.units_abox import transform_to_graph
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
 
 
 def main():
     """Main of Quantities A-box"""
      # get the predicates and classes that are common to all cuq files
-    si_graph = SiElements() 
-    # produce a separate graphe for the units   
-    quantities_graph = Graph()  
+    si_graph = SiElements()
+    # produce a separate graphe for the units
+    quantities_graph = Graph()
 
     # 1) Define the namespaces within (base)/SI
     quantities_graph.bind("quantities",si_graph.namespace_quantities)
@@ -24,7 +24,7 @@ def main():
     quantities_graph.bind("si",si_graph.namespace)
 
     # 2) Add annotations to the quantity graph
-    
+
     # 2.1 General annotations (type, labels, comments etc)
 
     quantities_graph.add(
@@ -45,12 +45,12 @@ def main():
                    "covering quantities",
                    datatype=XSD.string))
     )
-    
+
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
     uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
     startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
-    repo = git.Repo(search_parent_directories=True)
+    repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
     #   2.2.1 Agent
     #   declare this code as an 'agent' (in the sense of PROVENANCE)
@@ -64,7 +64,7 @@ def main():
                 RDF.type,
                 PROV.Agent)
         )
-        
+
     #   2.2.2 Entity
     #   declare the sources (YAML files) as 'entity' (in the sense of PROVENANCE)
     #   The manually produced YAML files are stored on GitHub. Their hexsha together
@@ -83,18 +83,18 @@ def main():
          RDF.type,
          PROV.Entity)
     )
-    
+
     #   2.2.3 Activity
     #     declare the constants_ttl_generation as 'activity' (in the sense of PROVENANCE)
     #     make the activity unique by adding the timestamp to the identifier of the activity
-    activity = 'quantities_'+uri_timestamp + '.ttl_generation'     
-    
+    activity = 'quantities_'+uri_timestamp + '.ttl_generation'
+
     quantities_graph.add(
         (si_graph.set_activity_uri(activity),
         RDF.type,
         PROV.Activity)
     )
-    
+
     #   2.2.4 Relation activity, agent, entities
     #   activity - agent
     for agent_sw in agents:
@@ -128,7 +128,7 @@ def main():
          PROV.wasGeneratedBy,
          si_graph.set_activity_uri(activity))
     )
-    
+
     # 2.3 License information
     quantities_graph.add(
          (URIRef(si_graph.namespace_quantities),
@@ -145,7 +145,7 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
-    
+
     # 3) Build quantity graph
     #  crawl through the list of YAML files
     qty_files = ['quantities_core.yaml', 'quantities_other.yaml']

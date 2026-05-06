@@ -31,20 +31,16 @@ Python >= 3.11 required, for other requirements see pyproject.toml.
 [Specific instructions for PyCharm](docs/pycharm.md)
 
 ## Command line usage
-After installation, two commands are available
-* `generate_turtle_files`
-* `launch_si_test_api`
+After installation, the `generate_sirp_files` is made available.
 
-### `generate_turtle_files`
-This command will create all `.ttl` files in a subfolder. The `-z` option generates a zip file.
+This command will create all `.ttl` and `.jsonld` files in a subfolder. The `-z` option generates a zip file of the ensemble.
 
 For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
 
 `--gen_ontology_viz` updates the Markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit 
 changes if you want the up-to-date version to be displayed on GitHub.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to the current directory 
-(from where the `generate_turtle_files`is executed. It creates a subfolder `./TTL`). 
+`-o / --output_dir` indicates where to write the output files, and defaults to `./output`. Additionaly `--ttl_output_subdir` and `--jsonld_output_subdir` indicate the subdirectories for TTL and JSON-LD outputs. They default to `TTL` and `JSONLD`. 
 
 `-h / --help` provides a list of available options.
 
@@ -54,33 +50,24 @@ This command will launch a local web-service for testing purposes.
 
 ## Short description of the `src/si_ref_point/` subdirectories
 
-### cuq
-Contains several Python files that allow to produce four serialized knowledge graphs (as ttl) containing information about:
-- the seven Defining Constants underpinning the SI, 
-- the Prefixes,
-- the Quantities, 
-- the Units.
+### tboxes
 
-The TBox (classes and properties) is common to all parts, the ABoxes (allowing to fill the knowledge graphs with 
-individuals) are separate for the different parts. Each ABox gets the relevant information from one or more YAML file(s). 
-The location of the input and output files is defined in settings.py
+Contains the python scripts that will generate the "terminology" part of the SI Reference Point (`si_tbox.py`) and the additional concepts necessary to bond to responsible bodies (`rb_tbox.py`).
 
-### cuq\_data
-The YAML files containing all the input data, + turtle files for the SI ontology TBox (core + extended concepts).
+### aboxes
 
-### resbod
-Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their 
-Events and the Outcomes thereof. The information is read from YAML files (provided by Ron Tse). The code is separated in
-TBox (definition of the classes and properties) and ABox (istances using TBox). The location of the input and output 
-files is defined in src/si_ref_point/settings.py.
+Contains the python scripts that will populate the "assertions" part of the SI Reference Point (constants, decisions, prefixes, quantities, units) and responsible bodies (CCTF, CGPM, CIPM). `symbols_format.py` is a common utility that handles the conversion between html, LaTeX, json and ascii formatting.
 
-### resbod\_data
-Contains cctf, cgpm and cipm sub directories with yaml data for these three bodies, obtained from Ron Tse, see: 
-https://github.com/metanorma/bipm-data-outcomes/tree/main
 
-### Testing
-The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now
-residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
+### inputs
+
+Contains 2 subdirectories, `si` and `rb`, gathering all necessary input information. In general these are yaml files, but in the case for the SI concepts (that will feed the corresponding TBox) these are already ttl files.
+
+Content of the `rb` directory originally come from a digitalization effort by Ron Tse (Ribose) in the frame of Metanorma (https://github.com/metanorma/cgpm-resolutions, https://github.com/metanorma/bipm-data-outcomes/tree/main)
+
+### Test API
+A fastapi instance allowing to test the TTL output used to be included in this package. It has now been transfered into a separate repo (sirp-tools).
+
 
 ## Current class diagram
 

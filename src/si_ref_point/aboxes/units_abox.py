@@ -10,7 +10,7 @@ import yaml
 from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
 
 
 def nest_mult(expr):
@@ -174,7 +174,7 @@ def main():
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
     uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
     startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
-    repo = git.Repo(search_parent_directories=True)
+    repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE)
@@ -701,7 +701,7 @@ def main():
                 has_unit_term = si_graph.set_uri("hasUnitTerm")
                 has_numeric_factor = si_graph.set_uri("hasNumericFactor")
                 has_numeric_factor_as_string = si_graph.set_uri("hasNumericFactorAsString")
-                
+
                 if isinstance(nsi["ConversionFactor"], int):
                     conv_factor_type = XSD.integer
                 elif isinstance(nsi["ConversionFactor"], float):

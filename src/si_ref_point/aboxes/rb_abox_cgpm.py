@@ -2,7 +2,7 @@
 CGPM ABox
 """
 from si_ref_point.settings import CGPM_FILES_FOLDER
-from si_ref_point.resbod.utils import MeetingsFileExtractor
+from si_ref_point.aboxes.rb_utils import MeetingsFileExtractor
 
 
 def main():

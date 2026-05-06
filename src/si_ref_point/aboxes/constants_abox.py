@@ -8,7 +8,7 @@ import yaml
 
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
     SI_FILES_FOLDER, GITHUB_BASE_PATH
 from si_ref_point.aboxes.units_abox import transform_to_graph
 
@@ -55,10 +55,10 @@ def main():
     uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")  # used to identify uniquely the produced TTL file (entity)
     startedAt_timestamp = timestamp.strftime(
         "%Y-%m-%dT%H:%M:%SZ")  # used with the predicate 'startedAtTime' of the corresponding activity
-    repo = git.Repo(search_parent_directories=True)
+    repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
     #     2.2.1 Agent
-    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     declare this code as an 'agent' (in the sense of PROVENANCE)
     #     and define URI to a specific version by using its commit on GitHub
     agents = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/si_tbox.py",
               GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/constants_abox.py"]

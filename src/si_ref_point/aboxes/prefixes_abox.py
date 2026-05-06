@@ -7,7 +7,7 @@ import os
 import yaml
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
-from si_ref_point.settings import CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
 
 
 def main():
@@ -16,14 +16,14 @@ def main():
     # get the predicates and classes that are common to all cuq files
     si_graph = SiElements()
     # produce a separate graph for the prefixes
-    prefix_graph = Graph()      
+    prefix_graph = Graph()
 
     # 1) Define the namespaces within (base)/SI
     prefix_graph.bind("prefixes",si_graph.namespace_prefixes)
     prefix_graph.bind("si",si_graph.namespace)
 
     # 2) Annotations to the prefix-graph
-    
+
     # 2.1 General annotations (type, labels, comments etc)
     prefix_graph.add(
         (URIRef(si_graph.namespace_prefixes),
@@ -46,12 +46,12 @@ def main():
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
     uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
     startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
-    
-    repo = git.Repo(search_parent_directories=True)
+
+    repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
-    
+
     #     2.2.1 Agent
-    #     declare this code as an 'agent' (in the sense of PROVENANCE) 
+    #     declare this code as an 'agent' (in the sense of PROVENANCE)
     #     and define URI to a specific version by using the commit reference on GitHub
     agents = [GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/prefixes_abox.py",
               GITHUB_BASE_PATH + "blob/" + sha + "/src/si_ref_point/cuq/si_tbox.py"]
@@ -82,8 +82,8 @@ def main():
             RDF.type,
             PROV.Entity)
     )
-        
-    #     2.2.3 Activity    
+
+    #     2.2.3 Activity
     #     declare the prefixes_ttl_generation as 'activity' (in the sense of PROVENANCE)
     #     make the activity unique by adding the timestamp to the identifier of the activity
     activity = 'prefixes_'+ uri_timestamp +'.ttl_generation'
@@ -92,7 +92,7 @@ def main():
         RDF.type,
         PROV.Activity)
     )
-    
+
     #     2.2.4 Link activity, agent, entities
     #     activity - agent
     for agent in agents:
@@ -126,7 +126,7 @@ def main():
             PROV.wasGeneratedBy,
             si_graph.set_activity_uri(activity))
     )
-    
+
     # 2.3 Licence
     prefix_graph.add(
          (URIRef(si_graph.namespace_prefixes),
@@ -143,9 +143,9 @@ def main():
          RDFS.comment,
          Literal(CC_LICENCE_TEXT_FR,lang="fr"))
     )
-    
+
     # 3) Build prefix graph
-    
+
     # 3.1 Open YAML files as source
     with open(os.path.join(SI_FILES_FOLDER, 'prefixes.yaml'),encoding='utf-8') as fp:
         prefixes = yaml.safe_load(fp)

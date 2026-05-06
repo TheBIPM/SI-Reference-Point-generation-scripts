@@ -13,9 +13,11 @@ import si_ref_point.tboxes.rb_tbox as rb_tbox
 import si_ref_point.aboxes.rb_abox_cgpm as rb_abox_cgpm
 import si_ref_point.aboxes.rb_abox_cipm as rb_abox_cipm
 import si_ref_point.aboxes.rb_abox_cctf as rb_abox_cctf
+from si_ref_point.settings import PKG_ROOT
 import git
 import os
 import datetime
+from pathlib import Path
 from zipfile import ZipFile
 
 
@@ -44,15 +46,19 @@ def get_parser():
         '--generate_RDF', action='store_true',
         help='Generate (single) RDF output')
     parser.add_argument(
-        '-o', '--output_dir',
-        type=str,
-        default="./TTL",
-        help="Output directory for TTL output")
+        '-o', '--output_dir', type=Path,
+        default=".",
+        help="Output directory. Defaults to current working directory")
     parser.add_argument(
-        '--jsonld_output_dir',
+        '--ttl_output_subdir',
         type=str,
-        default="./JSON-LD",
-        help="Output directory for JSON-LD output")
+        default="TTL",
+        help="Optional output subdirectory for TTL output")
+    parser.add_argument(
+        '--jsonld_output_subdir',
+        type=str,
+        default="JSONLD",
+        help="Optional output directory for JSON-LD output")
     return parser
 
 
@@ -85,10 +91,10 @@ def main():
         logging.info("..done")
 
     serializations = [{"fmt": "ttl",
-                       "dir": args.output_dir,
+                       "dir": args.output_dir / args.ttl_output_subdir,
                        "ext": "ttl"},
                       {"fmt": "json-ld",
-                       "dir": args.jsonld_output_dir,
+                       "dir": args.output_dir / args.jsonld_output_subdir,
                        "ext": "jsonld"}]
 
     # Serialize all graphs in their respective output files
@@ -125,7 +131,7 @@ def main():
         try:
             # Replaced to work in the tests
             # githash = subprocess.check_output(["git", "describe"]).strip().decode()
-            repo = git.Repo(search_parent_directories=True)
+            repo = git.Repo(PKG_ROOT, search_parent_directories=True)
             githash = repo.head.object.hexsha[:8]
         except:  # noqa
             githash = "nohash"
