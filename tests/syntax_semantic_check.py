@@ -1,13 +1,13 @@
 """ Check the syntax and semantics of the SI graph """
 
 import rdflib
-from config import TTLPATH
-
+import glob
+from si_ref_point import main as sirpmain
 
 def test_syntax():
     error_status = False
 
-    ttl_file_names = TTLPATH.glob("*.ttl")
+    ttl_file_names = glob.glob("TTL/*.ttl")
 
     g = None
     try:
@@ -33,6 +33,8 @@ def test_semantics(g):
 
 
 def main():
+    # generate TTL files
+    sirpmain.main()
     g, syntax_error = test_syntax()
 
     if syntax_error:

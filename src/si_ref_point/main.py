@@ -62,7 +62,7 @@ def get_parser():
     return parser
 
 
-def main():
+def main(force_output_dir_to=None):
     args = get_parser().parse_args()
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
@@ -90,11 +90,17 @@ def main():
         output[label] = generator()
         logging.info("..done")
 
+    if force_output_dir_to:
+        ttl_dir = jsonld_dir = force_output_dir_to
+    else:
+        ttl_dir = args.output_dir / args.ttl_output_subdir
+        jsonld_dir = args.output_dir / args.jsonld_output_subdir
+
     serializations = [{"fmt": "ttl",
-                       "dir": args.output_dir / args.ttl_output_subdir,
+                       "dir": ttl_dir,
                        "ext": "ttl"},
                       {"fmt": "json-ld",
-                       "dir": args.output_dir / args.jsonld_output_subdir,
+                       "dir": jsonld_dir,
                        "ext": "jsonld"}]
 
     # Serialize all graphs in their respective output files
