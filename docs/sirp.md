@@ -272,7 +272,7 @@ GraphDB also provides an interface for visual exploration of the knowledge graph
 This project was undertaken as part of the BIPM's Work Programme in Digital Transformation, with contributions 
 from seconding NMIs.
 
-Janet Miles (Head of Digital Transformation, BIPM) thanks in particular the following colleagues (listed alphabetically),
+The BIPM thanks in particular the following colleagues (listed alphabetically),
 who all made invaluable contributions:
 
 * Amin Ben Abdallah
