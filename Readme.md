@@ -66,7 +66,7 @@ Contains 2 subdirectories, `si` and `rb`, gathering all necessary input informat
 Content of the `rb` directory originally come from a digitalization effort by Ron Tse (Ribose) in the frame of Metanorma (https://github.com/metanorma/cgpm-resolutions, https://github.com/metanorma/bipm-data-outcomes/tree/main)
 
 ### Test API
-A fastapi instance allowing to test the TTL output used to be included in this package. It has now been transfered into a separate repo (sirp-tools).
+A fastapi instance allowing to test the TTL output used to be included in this package. It has now been transfered into a separate repository [sirp-tools](https://github.com/TheBIPM/sirp-tools).
 
 
 ## Current class diagram
