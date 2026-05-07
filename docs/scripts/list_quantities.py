@@ -9,7 +9,7 @@ g = Graph()
 for ttl_file in ['quantities.ttl', 'units.ttl']:
     file_path = TTLPATH / ttl_file
     if not file_path:
-        logging.error("{} does not exist, did you run generate_turtle_file ?".format(file_path))
+        logging.error("{} does not exist, did you run generate_sirp_files ?".format(file_path))
         raise SystemExit
     g.parse(file_path)
 
