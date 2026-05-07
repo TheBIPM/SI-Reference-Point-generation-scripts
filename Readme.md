@@ -1,9 +1,10 @@
 # Semantic SI
 created: Jan 2023 / GD
-last modified: 2025-10-13
+last modified: 2026-03-27
 
-This package implements the SI Reference point, a part of the SI digital framework. The package allows to produce a machine readable version of the SI Brochures (knowledge graph). 
-General principle for the generation of the knowledge graphs :
+This package implements the SI Reference point, a part of the SI digital framework. The package provides a 
+machine-readable version (knowledge graph) of the units, prefixes, constants defined in the SI Brochure. 
+The general workflow for the generation of the knowledge graph is:
 
 ```mermaid
 flowchart TD
@@ -12,36 +13,34 @@ flowchart TD
     C --> F["Serialised Knowledge Graph (ttl file)"]
 ```
 
-
-See also SIDataModel.pdf (depicting the underlying data model used for this part of the si digital framework \[may be obsolete on some aspects\]).
+See also SIDataModel.pdf (depicting the underlying data model used for this part of the SI digital framework 
+\[may be obsolete on some aspects\]).
  
-The package contains also a test Website (based on FastAPI), allowing to interrogate the produced knowledge graphs. Note that this is only provided for demo purposes. 
+The package contains also a test Website (based on FastAPI), allowing to interrogate the produced knowledge graphs. 
+Note that this is only provided for demo purposes. 
 
 ## Installation
 Install as a python package
 
 - Clone repository or download zip file and unzip it
-- `pip install path/to/repo` (or `pip install -e path/to/repo` if you plan to edit the code and see the changes immediately, "editable mode")
+- `pip install path/to/repo` (or `pip install -e path/to/repo` if you plan to edit the code and see the changes 
+  immediately, "editable mode")
 
 Python >= 3.11 required, for other requirements see pyproject.toml.
 
-[Specific instructions for pycharm](./docs/install_in_pycharm.md)
+[Specific instructions for PyCharm](docs/pycharm.md)
 
-## Usage
-After installation, two commands are available
-*  `generate_turtle_files`
-* `launch_si_test_api`
+## Command line usage
+After installation, the `generate_sirp_files` is made available.
 
-### `generate_turtle_files`
-This command will create all `.ttl` files in a subfolder.
-
-The `-z` option generates a zip file.
+This command will create all `.ttl` and `.jsonld` files in a subfolder. The `-z` option generates a zip file of the ensemble.
 
 For debugging purposes, you can choose to generate only one ttl by providing its label with the `--only` option.
 
-`--gen_ontology_viz` updates the markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit changes if you want the up-to-date version to be displayed on github.
+`--gen_ontology_viz` updates the Markdown files in `docs/vocabulary_viz` using Ontospy. Make sure to add and commit 
+changes if you want the up-to-date version to be displayed on GitHub.
 
-Finally `-o / --outputdir` indicates the directory where to output the ttl files. It defaults to the current directory (from where the `generate_turtle_files`is executed. It creates a subfolder `./TTL`. 
+`-o / --output_dir` indicates where to write the output files, and defaults to `./output`. Additionaly `--ttl_output_subdir` and `--jsonld_output_subdir` indicate the subdirectories for TTL and JSON-LD outputs. They default to `TTL` and `JSONLD`. 
 
 `-h / --help` provides a list of available options.
 
@@ -49,33 +48,25 @@ Finally `-o / --outputdir` indicates the directory where to output the ttl files
 This command will launch a local web-service for testing purposes.
 
 
-## Short description of the `src/si_ref_point/` sub directories
+## Short description of the `src/si_ref_point/` subdirectories
 
-### cuq
-Contains several Python codes that allow to produce 4 serialized knowledge graphs (as ttl) containing information about:
-- the 7 constants underpinning the SI, 
-- the Prefixes,
-- the Quantities, 
-- the Units.
-The TBox (classes and properties) is common to all parts, the ABoxes (allowing to fill the knowledge graphs with individuals) are separate for the different parts. 
-Each ABox gets the relevant information from one or more YAML file(s). The location of the input and output files is defined in settings.py
+### tboxes
 
-### cuq\_data
-The YAML files containing all the input data, + turtle files for the SI ontology TBox (core + extended concepts).
+Contains the python scripts that will generate the "terminology" part of the SI Reference Point (`si_tbox.py`) and the additional concepts necessary to bond to responsible bodies (`rb_tbox.py`).
 
-### resbod
-Contains Python code that allows to produce a serialized knowledge graph (as ttl file) of Responsible Bodies, their Events and the Outcomes thereof. 
-The information is read from yaml files (provided by Ron Tse). The code is separated in TBox (definition of the classes and properties) and ABox (istances using TBox)
-The location of the input and output files is defined in settings.py
+### aboxes
 
-### resbod\_data
-Contains cctf, cgpm and cipm sub directories with yaml data for these 3 bodies, obtained from Ron Tse, see: https://github.com/metanorma/bipm-data-outcomes/tree/main) 
+Contains the python scripts that will populate the "assertions" part of the SI Reference Point (constants, decisions, prefixes, quantities, units) and responsible bodies (CCTF, CGPM, CIPM). `symbols_format.py` is a common utility that handles the conversion between html, LaTeX, json and ascii formatting.
 
 
+### inputs
 
-### Testing
+Contains 2 subdirectories, `si` and `rb`, gathering all necessary input information. In general these are yaml files, but in the case for the SI concepts (that will feed the corresponding TBox) these are already ttl files.
 
-The API can be launched with command `launch_si_test_api`. This is a refurbishment of the previous Testing/API code, now residing in `src/sir_ref_point/test_api` and not the production API. It is meant to allow quick tests of the requests.
+Content of the `rb` directory originally come from a digitalization effort by Ron Tse (Ribose) in the frame of Metanorma (https://github.com/metanorma/cgpm-resolutions, https://github.com/metanorma/bipm-data-outcomes/tree/main)
+
+### Test API
+A fastapi instance allowing to test the TTL output used to be included in this package. It has now been transfered into a separate repository [sirp-tools](https://github.com/TheBIPM/sirp-tools).
 
 
 ## Current class diagram

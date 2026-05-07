@@ -1,27 +1,24 @@
-""" Generate the SI reference point TTL files
-"""
+""" Generate the SI reference point TTL/JSON-LD files """
 
 import argparse
 import logging
 import hashlib
-#import si_ref_point.cuq.cuq_tbox as cuq_tbox        # as example if the package is installed
-import si_ref_point.cuq.cuq_tbox as cuq_tbox
-import si_ref_point.cuq.quantities_abox as quantities_abox
-import si_ref_point.cuq.units_abox as units_abox
-import si_ref_point.cuq.constants_abox as constants_abox
-import si_ref_point.cuq.prefixes_abox as prefixes_abox
-import si_ref_point.cuq.decisions_abox as decisions_abox
-import si_ref_point.resbod.ResBod_TBox as ResBod_TBox
-import si_ref_point.resbod.ResBod_ABox_CGPM as ResBod_ABox_CGPM
-import si_ref_point.resbod.ResBod_ABox_CIPM as ResBod_ABox_CIPM
-import si_ref_point.resbod.ResBod_ABox_CCTF as ResBod_ABox_CCTF
-from si_ref_point.settings import TTL_FILES_FOLDER, JSONLD_FILES_FOLDER
-#from si_ref_point import __version__
+import si_ref_point.tboxes.si_tbox as cuq_tbox
+import si_ref_point.aboxes.quantities_abox as quantities_abox
+import si_ref_point.aboxes.units_abox as units_abox
+import si_ref_point.aboxes.constants_abox as constants_abox
+import si_ref_point.aboxes.prefixes_abox as prefixes_abox
+import si_ref_point.aboxes.decisions_abox as decisions_abox
+import si_ref_point.tboxes.rb_tbox as rb_tbox
+import si_ref_point.aboxes.rb_abox_cgpm as rb_abox_cgpm
+import si_ref_point.aboxes.rb_abox_cipm as rb_abox_cipm
+import si_ref_point.aboxes.rb_abox_cctf as rb_abox_cctf
+from si_ref_point.settings import PKG_ROOT
 import git
 import os
 import datetime
+from pathlib import Path
 from zipfile import ZipFile
-import subprocess
 
 
 def get_parser():
@@ -49,19 +46,23 @@ def get_parser():
         '--generate_RDF', action='store_true',
         help='Generate (single) RDF output')
     parser.add_argument(
-        '-o', '--output_dir',
-        type=str,
-        default=TTL_FILES_FOLDER,
-        help="Output directory for TTL output")
+        '-o', '--output_dir', type=Path,
+        default=".",
+        help="Output directory. Defaults to current working directory")
     parser.add_argument(
-        '--jsonld_output_dir',
+        '--ttl_output_subdir',
         type=str,
-        default=JSONLD_FILES_FOLDER,
-        help="Output directory for JSON-LD output")
+        default="TTL",
+        help="Optional output subdirectory for TTL output")
+    parser.add_argument(
+        '--jsonld_output_subdir',
+        type=str,
+        default="JSONLD",
+        help="Optional output directory for JSON-LD output")
     return parser
 
 
-def main():
+def main(force_output_dir_to=None):
     args = get_parser().parse_args()
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
@@ -75,10 +76,10 @@ def main():
         'constants': constants_abox.main,
         'prefixes': prefixes_abox.main,
         'decisions': decisions_abox.main,
-        'bodies': ResBod_TBox.main,
-        'cgpm': ResBod_ABox_CGPM.main,
-        'cipm': ResBod_ABox_CIPM.main,
-        'cctf': ResBod_ABox_CCTF.main,
+        'bodies': rb_tbox.main,
+        'cgpm': rb_abox_cgpm.main,
+        'cipm': rb_abox_cipm.main,
+        'cctf': rb_abox_cctf.main,
     }
     output = {}
     for label, generator in file_generator.items():
@@ -89,11 +90,17 @@ def main():
         output[label] = generator()
         logging.info("..done")
 
+    if force_output_dir_to:
+        ttl_dir = jsonld_dir = force_output_dir_to
+    else:
+        ttl_dir = args.output_dir / args.ttl_output_subdir
+        jsonld_dir = args.output_dir / args.jsonld_output_subdir
+
     serializations = [{"fmt": "ttl",
-                       "dir": args.output_dir,
+                       "dir": ttl_dir,
                        "ext": "ttl"},
                       {"fmt": "json-ld",
-                       "dir": args.jsonld_output_dir,
+                       "dir": jsonld_dir,
                        "ext": "jsonld"}]
 
     # Serialize all graphs in their respective output files
@@ -101,7 +108,7 @@ def main():
         if not os.path.exists(srl['dir']):
             os.makedirs(srl['dir'])
         for label, graph in output.items():
-            filedest = os.path.join(srl['dir'],label + '.' + srl['ext'])
+            filedest = os.path.join(srl['dir'], label + '.' + srl['ext'])
             graph.serialize(format=srl['fmt'], destination=filedest)
 
             # generate hash for file and write it alongside
@@ -113,7 +120,7 @@ def main():
             with open(hashdest, 'w') as fp:
                 fp.write(hashstr)
 
-    logging.info(f"TTL files wrote in {args.output_dir}")
+    logging.info(f"TTL and JSON-LD files written to ./{ttl_dir}/ and ./{jsonld_dir}/, respectively")
     if args.generate_RDF:
         output['si'].serialize(
             format='xml',
@@ -130,7 +137,7 @@ def main():
         try:
             # Replaced to work in the tests
             # githash = subprocess.check_output(["git", "describe"]).strip().decode()
-            repo = git.Repo(search_parent_directories=True)
+            repo = git.Repo(PKG_ROOT, search_parent_directories=True)
             githash = repo.head.object.hexsha[:8]
         except:  # noqa
             githash = "nohash"
@@ -147,7 +154,7 @@ def main():
                     zf.write(os.path.join(srl['dir'], hash_file),
                              arcname=os.path.join(srl['fmt'].upper(), hash_file))
 
-    # Generate ontology documentation markdown files
+    # Generate ontology documentation Markdown files
     if args.gen_ontology_viz:
         import ontospy
         from ontospy.gendocs.viz.viz_markdown import MarkdownViz

@@ -2,14 +2,13 @@
 requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
-
 [project]
 name = "si_ref_point"
 version = "1.0b"
 description = "SI reference point generation scripts and source data"
 authors = [
-    {name = "Stuart Chalk", email =  "n00002621@unf.edu"},
-    {name = "Gregor Dudle", email =  "gregor.dudle@ost.ch"},
+    {name = "Stuart Chalk", email = "schalk@unf.edu"},
+    {name = "Gregor Dudle", email = "gregor.dudle@ost.ch"},
     {name = "Max Gruber", email = "maximilian.gruber@ptb.de"},
     {name = "Jean-Laurent Hippolyte", email = "jean-laurent.hippolyte@npl.co.uk"},
     {name = "Frédéric Meynadier", email = "Frederic.Meynadier@bipm.org"},
@@ -28,16 +27,14 @@ dependencies = [
     "fastapi",
     "pydantic>=1.10,<2.0",
     "pyshacl",
-    "gitpython"
+    "gitpython",
+    "pyvis"
 ]
-
 
 [project.urls]
 repository = "https://github.com/TheBIPM/SI-Reference-Point-2023"
 
-
 [project.scripts]
-generate_turtle_files = "si_ref_point.main:main"
-launch_si_test_api = "si_ref_point.test_api.launch_api:main"
+generate_sirp_files = "si_ref_point.main:main"
 
 
