@@ -3,7 +3,7 @@
 ## 1. Scope
 
 The [SI Reference Point](http://si-digital-framework.org/SI) is a part of the SI Digital Framework, an effort undertaken by the 
-[Bureau International des Poids et Mesures](https://bipm.org) to digitalize metrology. The [SI Reference Point](http://si-digital-framework.org/SI) offers a suite 
+[International Committee for Weights and Measures](https://www.bipm.org/en/committees/ci/cipm) to digitalize metrology, endorsed by a growing coalition of international scientific and quality infrastructure organisations through a [Joint Statement of Intent](https://www.bipm.org/en/-/2022-03-30-digital-statement). The [SI Reference Point](http://si-digital-framework.org/SI) offers a suite 
 of tools that render the information from the SI Brochures available in a machine-readable format and is thus at the 
 very heart of the SI Digital Framework. It is designed to serve as the authoritative digital reference for the
 [International System of Units (SI)](https://www.bipm.org/measurement-units/). 
