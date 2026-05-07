@@ -281,7 +281,7 @@ who all made invaluable contributions:
 * Maximilian Gruber (PTB)
 * Jean-Laurent Hippolyte (NPL)
 * Frédéric Meynadier (BIPM)
-
+* Janet Miles (BIPM, now OIML)
 
 ## Annex 1:	List of Namespaces, Classes and Predicates
 
