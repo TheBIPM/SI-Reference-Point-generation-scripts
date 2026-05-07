@@ -120,7 +120,7 @@ def main(force_output_dir_to=None):
             with open(hashdest, 'w') as fp:
                 fp.write(hashstr)
 
-    logging.info(f"TTL files wrote in {args.output_dir}")
+    logging.info(f"TTL and JSON-LD files written to ./{ttl_dir}/ and ./{jsonld_dir}/, respectively")
     if args.generate_RDF:
         output['si'].serialize(
             format='xml',
