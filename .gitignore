@@ -9,34 +9,11 @@ Testing/API/templates/.DS_Store
 ServiceCategories
 
 # output files that are produced (TTL and vocabulary)
-TTL/*
-JSON-LD/*
-Testing/Vocabulary/Vocabulary.txt
-JSON-LD
-TTL
-TTL/bodies.ttl
-TTL/cgpm.ttl
-TTL/cipm.ttl
-TTL/cctf.ttl
-TTL/si.ttl
-TTL/constants.ttl
-TTL/quantities.ttl
-TTL/prefixes.ttl
-TTL/units.ttl
-TTL/decisions.ttl
-JSON-LD/bodies.ttl
-JSON-LD/cgpm.ttl
-JSON-LD/cipm.ttl
-JSON-LD/cctf.ttl
-JSON-LD/si.ttl
-JSON-LD/constants.ttl
-JSON-LD/quantities.ttl
-JSON-LD/prefixes.ttl
-JSON-LD/units.ttl
-JSON-LD/decisions.ttl
-*.zip
 TTL/
-JSON-LD/
+JSONLD/
+Testing/Vocabulary/Vocabulary.txt
+*.zip
+
 
 # cache files
 __pycache__
