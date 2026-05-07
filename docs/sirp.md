@@ -73,7 +73,7 @@ combined units (µm, m<sup>2</sup>, <nobr>m s<sup>-1</sup>, etc.).
 
 ## 3. Data model
 
-The information contained in the ninth editions of the SI Brochure has been encoded semantically and made publicly 
+The information contained in the ninth edition of the SI Brochure has been encoded semantically and made publicly 
 available on the internet at:
 
 [si-digital-framework.org/SI](http://si-digital-framework.org/SI) 
