@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 import git
 import os
 import yaml
-import decimal
+from decimal import Decimal
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
@@ -156,7 +156,7 @@ def main():
         uri_text = prfx['URI']
         pref_label_en = prfx['prefLabel_en']
         pref_label_fr = prfx['prefLabel_fr']
-        scaling_factor = format(decimal.Decimal(prfx['ScalingFactor']), 'f')
+        scaling_factor = format(Decimal(prfx['ScalingFactor']), 'f')
         exponent = prfx['Exponent']
         symbol = prfx['hasSymbol']
         defres = prfx['hasDefiningResolution']

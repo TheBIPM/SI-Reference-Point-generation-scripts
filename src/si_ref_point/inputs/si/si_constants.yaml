@@ -11,7 +11,7 @@ data:
   name_fr: fréquence de la transition hyperfine du césium
   xsd_type: integer
   value_str: 9 192 631 770
-  value: 9192631770
+  value: "9192631770"
   unit: hertz
   symbol: '@hfcs@'
   updateddate: '1967-10-13'
@@ -23,7 +23,7 @@ data:
   name_fr: vitesse de la lumière dans le vide
   xsd_type: integer
   value_str: 299 792 458
-  value: 299792458
+  value: "299792458"
   unit:
     - [metre, "1"]
     - [second, "-1"]
@@ -37,7 +37,7 @@ data:
   name_fr: constante de Planck
   xsd_type: decimal
   value_str: 6.626 070 15 x 10⁻³⁴
-  value: 6.62607015e-34
+  value: "6.62607015e-34"
   unit:
     - [joule, "1"]
     - [second, "1"]
@@ -51,7 +51,7 @@ data:
   name_fr: charge élementaire
   xsd_type: decimal
   value_str: 1.602 176 634 x 10⁻¹⁹
-  value: 1.602176634e-19
+  value: "1.602176634e-19"
   unit: coulomb
   symbol: '@elms@'
   updateddate: '2019-05-20'
@@ -63,7 +63,7 @@ data:
   name_fr: constante de Boltzmann
   xsd_type: decimal
   value_str: 1.380 649 x 10⁻²³
-  value: 1.380649e-23
+  value: "1.380649e-23"
   unit:
     - [joule, "1"]
     - [kelvin, "-1"]
@@ -77,7 +77,7 @@ data:
   name_fr: constante d'Avogadro
   xsd_type: decimal
   value_str: 6.022 140 76 x 10²³
-  value: 6.02214076e+23
+  value: "6.02214076e+23"
   unit:
     - [mole, "-1"]
   symbol: '@avos@'
@@ -90,7 +90,7 @@ data:
   name_fr: efficacité lumineuse
   xsd_type: integer
   value_str: '683'
-  value: 683
+  value: "683"
   unit:
     - [lumen, "1"]
     - [watt, "-1"]
