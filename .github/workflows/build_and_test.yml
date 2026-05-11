@@ -5,6 +5,7 @@ on:
     branches: [ "enable_ci_pipeline" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
   workflow_call:
 
 permissions:

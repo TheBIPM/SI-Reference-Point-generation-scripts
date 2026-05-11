@@ -1,7 +1,5 @@
 name: tests action
 description: run tests against compiled package
-on:
-  workflow_dispatch
 runs:
   using: composite
   steps:
