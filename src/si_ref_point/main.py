@@ -20,6 +20,18 @@ import datetime
 from pathlib import Path
 from zipfile import ZipFile
 
+file_generator = {
+    'si': cuq_tbox.main,
+    'units': units_abox.main,
+    'quantities': quantities_abox.main,
+    'constants': constants_abox.main,
+    'prefixes': prefixes_abox.main,
+    'decisions': decisions_abox.main,
+    'bodies': rb_tbox.main,
+    'cgpm': rb_abox_cgpm.main,
+    'cipm': rb_abox_cipm.main,
+    'cctf': rb_abox_cctf.main,
+}
 
 def get_parser():
     """ Dedicated function to collect command line parameters, so it can
@@ -63,18 +75,6 @@ def get_parser():
 
 
 def load_graphs(only_this=None):
-    file_generator = {
-        'si': cuq_tbox.main,
-        'units': units_abox.main,
-        'quantities': quantities_abox.main,
-        'constants': constants_abox.main,
-        'prefixes': prefixes_abox.main,
-        'decisions': decisions_abox.main,
-        'bodies': rb_tbox.main,
-        'cgpm': rb_abox_cgpm.main,
-        'cipm': rb_abox_cipm.main,
-        'cctf': rb_abox_cctf.main,
-    }
     output = {}
     for label, generator in file_generator.items():
         if only_this and only_this not in label:
