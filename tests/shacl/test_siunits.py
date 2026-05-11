@@ -16,9 +16,13 @@ def test_siunits(TTLpath):
     sff = 'turtle'
     assert sf.exists()
 
-    conforms, v_graph, v_text = validate(df, shacl_graph=sf,
+    conforms, v_graph, v_text = validate(str(df), shacl_graph=str(sf),
                                          data_graph_format=dff,
                                          shacl_graph_format=sff,
-                                         inference='rdfs', debug=True,
+                                         inference='rdfs', debug=False,
                                          serialize_report_graph=True)
     print(v_text)
+    assert conforms
+
+if __name__ == "__main__":
+    test_siunits(Path('../TTL'))

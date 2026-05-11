@@ -16,9 +16,12 @@ def test_rb(TTLpath):
     sff = 'turtle'
     assert sf.exists()
 
-    conforms, v_graph, v_text = validate(df, shacl_graph=sf,
+    conforms, v_graph, v_text = validate(str(df), shacl_graph=str(sf),
                                          data_graph_format=dff,
                                          shacl_graph_format=sff,
-                                         inference='rdfs', debug=False,
-                                         serialize_report_graph=True)
+                                         inference='rdfs', debug=False)
     print(v_text)
+    assert conforms
+
+if __name__ == "__main__":
+    test_rb(Path('../TTL'))
