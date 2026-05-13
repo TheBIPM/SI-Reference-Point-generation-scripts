@@ -145,7 +145,7 @@ data:
   prefLabel_fr: micro
   ScalingFactor: 1e-06
   Exponent: -6
-  hasSymbol: µ
+  hasSymbol: μ
   hasDefiningResolution: CGPM11-Res12
   xsd_type: decimal
   Comments: Tried with latex - fine without bold, but more difficult with.  Would

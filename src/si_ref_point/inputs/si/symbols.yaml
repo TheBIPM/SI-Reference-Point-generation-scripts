@@ -229,7 +229,7 @@ ceus:
   name_en: Celsius unit symbol
   name_fr: ''
   type: symbol
-  latex: '\rm{@circ@{C}}'
+  latex: '{^\circ\rm{C}}'
   text:
   html: ''
   json: ''
