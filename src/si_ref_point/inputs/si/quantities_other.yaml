@@ -45,8 +45,8 @@ data:
   Unit:
     - [kelvin, "1"]
 - identifier: ITSC
-  quantity-en: 'ITS-90 temperature (℃)'
-  quantity-fr: 'température ITS-90 (℃)'
+  quantity-en: 'ITS-90 temperature (°C)'
+  quantity-fr: 'température ITS-90 (°C)'
   Unit:
     - [degreeCelsius, "1"]
 - identifier: PHAS
