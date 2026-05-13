@@ -7,6 +7,7 @@ import git
 import os
 import logging
 import yaml
+from decimal import Decimal
 from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
@@ -704,13 +705,13 @@ def main():
 
                 if isinstance(nsi["ConversionFactor"], int):
                     conv_factor_type = XSD.integer
-                elif isinstance(nsi["ConversionFactor"], float):
-                    conv_factor_type = XSD.float
+                elif isinstance(nsi["ConversionFactor"], str):
+                    conv_factor_type = XSD.decimal
                 else:
                     logging.error('Error : unknown ConversionFactor type : %s ',
                                   nsi["ConversionFactor"])
                     conv_factor_type = None
-                conversion_factor = Literal(nsi["ConversionFactor"],
+                conversion_factor = Literal(str(format(Decimal(nsi["ConversionFactor"]), 'f')),
                                            datatype=conv_factor_type)
                 conversion_factor_as_string = Literal(
                     nsi["ConversionFactorAsString"],

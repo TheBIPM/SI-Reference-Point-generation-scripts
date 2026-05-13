@@ -3,7 +3,7 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.02"
 data:
 - URI: becquerel
   prefLabel_fr: becquerel
