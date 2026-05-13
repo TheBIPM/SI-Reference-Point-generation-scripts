@@ -3,7 +3,7 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.01"  
+  wasDerivedFrom: "SI Brochure 9th ed, V3.02"  
 data:
 - URI: minute
   prefLabel_fr: minute
@@ -46,7 +46,7 @@ data:
   prefLabel_en: degree
   Symbol: °
   UnitOfQtyKind: ANGP
-  ConversionFactor: 0.0174532925199433
+  ConversionFactor: "0.017453292519943295769236907684886"
   ConversionFactorAsString: "(π \\; / \\; 180)"
   ConversionUnit: radian
   PrefixRestriction: true
@@ -55,7 +55,7 @@ data:
   prefLabel_en: arcminute
   Symbol: ′
   UnitOfQtyKind: ANGP
-  ConversionFactor: 0.000290888208665722
+  ConversionFactor: "0.00029088820866572159615394846141476"
   ConversionFactorAsString: "(π \\; / \\; 10800)"
   ConversionUnit: radian
   PrefixRestriction: true
@@ -64,7 +64,7 @@ data:
   prefLabel_en: arcsecond
   Symbol: ″
   UnitOfQtyKind: ANGP
-  ConversionFactor: 4.84813681109536e-06
+  ConversionFactor: "4.8481368110953599358991410235794e-6"
   ConversionFactorAsString: "(π \\; / \\; 648000)"
   ConversionUnit: radian
   PrefixRestriction: true
@@ -74,7 +74,7 @@ data:
   Symbol: L
   AltSymbol: l
   UnitOfQtyKind: VOLU
-  ConversionFactor: 0.001
+  ConversionFactor: "0.001"
   ConversionFactorAsString: "0.001"
   ConversionUnit:
     - [metre, "3"]
@@ -92,15 +92,15 @@ data:
   prefLabel_en: dalton
   Symbol: Da
   UnitOfQtyKind: MASS
-  ConversionFactor: 1.66053906660e-27
-  ConversionFactorAsString: "1.660\\:539\\:066\\:60(50) \\times 10^{-27}"
+  ConversionFactor: "1.66053906892e-27"
+  ConversionFactorAsString: "1.660\\:539\\:068\\:92(52) \\times 10^{-27}"
   ConversionUnit: kilogram
 - URI: electronvolt
   prefLabel_fr: électronvolt
   prefLabel_en: electronvolt
   Symbol: eV
   UnitOfQtyKind: ENGY
-  ConversionFactor: 1.602176634e-19
+  ConversionFactor: "1.602176634e-19"
   ConversionFactorAsString: "1.602\\:176\\:634 \\times 10^{-19}"
   ConversionUnit: joule
 - URI: neper

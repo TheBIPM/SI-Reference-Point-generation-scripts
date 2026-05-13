@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import git
 import os
 import yaml
+from decimal import Decimal
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
@@ -155,7 +156,7 @@ def main():
         uri_text = prfx['URI']
         pref_label_en = prfx['prefLabel_en']
         pref_label_fr = prfx['prefLabel_fr']
-        scaling_factor = prfx['ScalingFactor']
+        scaling_factor = format(Decimal(prfx['ScalingFactor']), 'f')
         exponent = prfx['Exponent']
         symbol = prfx['hasSymbol']
         defres = prfx['hasDefiningResolution']
@@ -168,7 +169,7 @@ def main():
             prefix_graph.add((element, SKOS.prefLabel, Literal(pref_label_fr, lang='fr')))
             prefix_graph.add((element, SKOS.prefLabel, Literal(pref_label_en, lang='en')))
             prefix_graph.add((element, si_graph.has_scaling_factor,
-                Literal(scaling_factor, datatype=XSD[xsd_type], normalize=False)))
+                Literal(str(scaling_factor), datatype=XSD[xsd_type], normalize=False)))
             prefix_graph.add((element, si_graph.has_datatype, XSD[xsd_type]))
             prefix_graph.add(
                 (

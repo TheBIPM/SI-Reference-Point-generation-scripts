@@ -3,57 +3,57 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+  wasDerivedFrom: "SI Brochure 9th ed, V3.02"
 data:
 - URI: quetta
   prefLabel_en: quetta
   prefLabel_fr: quetta
-  ScalingFactor: 1e+30
+  ScalingFactor: 1e30
   Exponent: +30
   hasSymbol: Q
   hasDefiningResolution: CGPM27-Res3
-  xsd_type: float
+  xsd_type: integer
   Comments:
 - URI: ronna
   prefLabel_en: ronna
   prefLabel_fr: ronna
-  ScalingFactor: 1e+27
+  ScalingFactor: 1e27
   Exponent: +27
   hasSymbol: R
   hasDefiningResolution: CGPM27-Res3
-  xsd_type: float
+  xsd_type: integer
   Comments:
 - URI: yotta
   prefLabel_en: yotta
   prefLabel_fr: yotta
-  ScalingFactor: 1e+24
+  ScalingFactor: 1e24
   Exponent: +24
   hasSymbol: Y
   hasDefiningResolution: CGPM19-Res4
-  xsd_type: float
+  xsd_type: integer
   Comments:
 - URI: zetta
   prefLabel_en: zetta
   prefLabel_fr: zetta
-  ScalingFactor: 1e+21
+  ScalingFactor: 1e21
   Exponent: +21
   hasSymbol: Z
   hasDefiningResolution: CGPM19-Res4
-  xsd_type: float
+  xsd_type: integer
   Comments:
 - URI: exa
   prefLabel_en: exa
   prefLabel_fr: exa
-  ScalingFactor: 1e+18
+  ScalingFactor: 1e18
   Exponent: +18
   hasSymbol: E
   hasDefiningResolution: CGPM15-Res10
-  xsd_type: float
+  xsd_type: integer
   Comments:
 - URI: peta
   prefLabel_en: peta
   prefLabel_fr: péta
-  ScalingFactor: 1000000000000000
+  ScalingFactor: 1e15
   Exponent: +15
   hasSymbol: P
   hasDefiningResolution: CGPM15-Res10
@@ -62,7 +62,7 @@ data:
 - URI: tera
   prefLabel_en: tera
   prefLabel_fr: téra
-  ScalingFactor: 1000000000000
+  ScalingFactor: 1e12
   Exponent: +12
   hasSymbol: T
   hasDefiningResolution: CGPM11-Res12
@@ -71,7 +71,7 @@ data:
 - URI: giga
   prefLabel_en: giga
   prefLabel_fr: giga
-  ScalingFactor: 1000000000
+  ScalingFactor: 1e9
   Exponent: +9
   hasSymbol: G
   hasDefiningResolution: CGPM11-Res12
@@ -80,7 +80,7 @@ data:
 - URI: mega
   prefLabel_en: mega
   prefLabel_fr: méga
-  ScalingFactor: 1000000
+  ScalingFactor: 1e6
   Exponent: +6
   hasSymbol: M
   hasDefiningResolution: CGPM11-Res12
@@ -89,7 +89,7 @@ data:
 - URI: kilo
   prefLabel_en: kilo
   prefLabel_fr: kilo
-  ScalingFactor: 1000
+  ScalingFactor: 1e3
   Exponent: +3
   hasSymbol: k
   hasDefiningResolution: CGPM11-Res12
@@ -98,7 +98,7 @@ data:
 - URI: hecto
   prefLabel_en: hecto
   prefLabel_fr: hecto
-  ScalingFactor: 100
+  ScalingFactor: 1e2
   Exponent: +2
   hasSymbol: h
   hasDefiningResolution: CGPM11-Res12
@@ -107,7 +107,7 @@ data:
 - URI: deca
   prefLabel_en: deca
   prefLabel_fr: déca
-  ScalingFactor: 10
+  ScalingFactor: 1e1
   Exponent: +1
   hasSymbol: da
   hasDefiningResolution: CGPM11-Res12
@@ -116,7 +116,7 @@ data:
 - URI: deci
   prefLabel_en: deci
   prefLabel_fr: déci
-  ScalingFactor: 0.1
+  ScalingFactor: 1e-1
   Exponent: -1
   hasSymbol: d
   hasDefiningResolution: CGPM11-Res12
@@ -125,7 +125,7 @@ data:
 - URI: centi
   prefLabel_en: centi
   prefLabel_fr: centi
-  ScalingFactor: 0.01
+  ScalingFactor: 1e-2
   Exponent: -2
   hasSymbol: c
   hasDefiningResolution: CGPM11-Res12
@@ -134,7 +134,7 @@ data:
 - URI: milli
   prefLabel_en: milli
   prefLabel_fr: milli
-  ScalingFactor: 0.001
+  ScalingFactor: 1e-3
   Exponent: -3
   hasSymbol: m
   hasDefiningResolution: CGPM11-Res12
@@ -147,7 +147,7 @@ data:
   Exponent: -6
   hasSymbol: µ
   hasDefiningResolution: CGPM11-Res12
-  xsd_type: float
+  xsd_type: decimal
   Comments: Tried with latex - fine without bold, but more difficult with.  Would
     require two symbols one bolded the other not.
 - URI: nano
@@ -157,7 +157,7 @@ data:
   Exponent: -9
   hasSymbol: n
   hasDefiningResolution: CGPM11-Res12
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: pico
   prefLabel_en: pico
@@ -166,7 +166,7 @@ data:
   Exponent: -12
   hasSymbol: p
   hasDefiningResolution: CGPM11-Res12
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: femto
   prefLabel_en: femto
@@ -175,7 +175,7 @@ data:
   Exponent: -15
   hasSymbol: f
   hasDefiningResolution: CGPM12-Res8
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: atto
   prefLabel_en: atto
@@ -184,7 +184,7 @@ data:
   Exponent: -18
   hasSymbol: a
   hasDefiningResolution: CGPM12-Res8
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: zepto
   prefLabel_en: zepto
@@ -193,7 +193,7 @@ data:
   Exponent: -21
   hasSymbol: z
   hasDefiningResolution: CGPM19-Res4
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: yocto
   prefLabel_en: yocto
@@ -202,7 +202,7 @@ data:
   Exponent: -24
   hasSymbol: y
   hasDefiningResolution: CGPM19-Res4
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: ronto
   prefLabel_en: ronto
@@ -211,7 +211,7 @@ data:
   Exponent: -27
   hasSymbol: r
   hasDefiningResolution: CGPM27-Res3
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: quecto
   prefLabel_en: quecto
@@ -220,7 +220,7 @@ data:
   Exponent: -30
   hasSymbol: q
   hasDefiningResolution: CGPM27-Res3
-  xsd_type: float
+  xsd_type: decimal
   Comments:
 - URI: none
   prefLabel_en: none
@@ -229,5 +229,5 @@ data:
   Exponent: 0
   hasSymbol: 
   hasDefiningResolution: 
-  xsd_type: float
+  xsd_type: decimal
   Comments: "not an official prefix"
