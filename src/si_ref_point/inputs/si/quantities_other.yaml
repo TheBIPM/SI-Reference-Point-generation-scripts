@@ -273,8 +273,8 @@ data:
     - [metre, "-1"] 
     - [metre, "-1"]    
 - identifier: SOPL
-  quantity-en: 'sound pressure level (referenced to 20 µPa)'
-  quantity-fr: 'niveau de pression acoustique (référence : 20 µPa)'
+  quantity-en: 'sound pressure level (referenced to 20 μPa)'
+  quantity-fr: 'niveau de pression acoustique (référence : 20 μPa)'
   Unit: 
     - [bel, "1"]
 - identifier: SYRL
@@ -288,8 +288,8 @@ data:
   Unit: 
     - [bel, "1"]
 - identifier: PSNW
-  quantity-en: 'pressure sensitivity level (referenced to 1 V/µPa)'
-  quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/µPa)'
+  quantity-en: 'pressure sensitivity level (referenced to 1 V/μPa)'
+  quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/μPa)'
   Unit: 
       - [bel, "1"]    
 - identifier: SOIN
