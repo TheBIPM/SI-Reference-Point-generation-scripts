@@ -19,6 +19,7 @@ import os
 import datetime
 from pathlib import Path
 from zipfile import ZipFile
+from rdflib import Graph
 
 
 def get_parser():
@@ -119,6 +120,30 @@ def main(force_output_dir_to=None):
             hashdest = os.path.join(srl['dir'], label + '.sha256')
             with open(hashdest, 'w') as fp:
                 fp.write(hashstr)
+
+    # Generate full graphs outputs
+    # Just merging graphs in memory could lead to blank-nodes collisions, so
+    # instead parse the TTL files we just wrote as suggested here
+    # https://rdflib.readthedocs.io/en/7.1.1/merging.html
+
+    full_graph = Graph()
+    logging.info(f"generating full sirp graph")
+    for ttl_file in file_generator.keys():
+        full_graph.parse(ttl_dir / (ttl_file + ".ttl"))
+    for srl in serializations:
+        filedest = os.path.join(srl['dir'], 'sirp_full.' + srl['ext'])
+        full_graph.serialize(format=srl['fmt'], destination=filedest)
+        # generate hash for file and write it alongside
+        h = hashlib.new('sha256')
+        with open(filedest, encoding="UTF8") as fp:
+            h.update(fp.read().encode())
+        hashstr = h.hexdigest()
+        hashdest = os.path.join(srl['dir'], 'sirp_full.sha256')
+        with open(hashdest, 'w') as fp:
+            fp.write(hashstr)
+    logging.info("..done")
+
+
 
     logging.info(f"TTL and JSON-LD files written to ./{ttl_dir}/ and ./{jsonld_dir}/, respectively")
     if args.generate_RDF:
