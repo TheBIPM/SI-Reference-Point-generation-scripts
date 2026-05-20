@@ -127,6 +127,7 @@ def main(force_output_dir_to=None):
     # https://rdflib.readthedocs.io/en/7.1.1/merging.html
 
     full_graph = Graph()
+    logging.info(f"generating full sirp graph")
     for ttl_file in file_generator.keys():
         full_graph.parse(ttl_dir / (ttl_file + ".ttl"))
     for srl in serializations:
@@ -140,6 +141,7 @@ def main(force_output_dir_to=None):
         hashdest = os.path.join(srl['dir'], 'sirp_full.sha256')
         with open(hashdest, 'w') as fp:
             fp.write(hashstr)
+    logging.info("..done")
 
 
 
