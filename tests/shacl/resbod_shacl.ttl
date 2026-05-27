@@ -4,17 +4,25 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix si: <https://si-digital-framework.org/SI#> .
+@prefix rb: <https://si-digital-framework.org/bodies#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
 si:Shape:
     a sh:NodeShape ;
-    sh:targetClass si:Definition ;
+    sh:targetClass rb:ResBod ;
     sh:property [
-                    sh:path si:hasStartValidity ;
-                    sh:datatype xsd:date ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
+                    sh:path rb:hasAdopted ;
+                    sh:class rb:Outcome ;
+                ] ;
+    .
+
+si:Shape:
+    a sh:NodeShape ;
+    sh:targetClass rb:ResBod ;
+    sh:property [
+                    sh:path rb:hasEvent ;
+                    sh:class rb:Event ;
                 ] ;
     .
