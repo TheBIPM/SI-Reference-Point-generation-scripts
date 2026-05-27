@@ -19,6 +19,7 @@ Testing/Vocabulary/Vocabulary.txt
 .pytest_cache/
 coverage.xml
 junit/
+htmlcov/
 
 # cache files
 __pycache__
