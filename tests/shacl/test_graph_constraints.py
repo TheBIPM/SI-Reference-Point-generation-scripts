@@ -42,8 +42,10 @@ class SHACLutils:
         for subj, pred, obj in g_rdf.triples((None, None, None)):
             print(subj, pred, obj)
 
-    def validate_against_constraints(self, g_data, g_shapes, verbose=False):
-        r = validate(g_data, shacl_graph=g_shapes, inference="both", advanced=False)
+    def validate_against_constraints(
+        self, g_data, g_shapes, inference="none", verbose=False
+    ):
+        r = validate(g_data, shacl_graph=g_shapes, inference=inference, advanced=False)
 
         conforms, results_graph, results_text = r
 
@@ -92,7 +94,9 @@ def test_resbod_property_types(TTLpath):
     shapes_graph = uh.load_knowledge_bases(constraint_shapes)
 
     conforms, results_graph = uh.validate_against_constraints(
-        data_graph, shapes_graph, verbose=True
+        data_graph,
+        shapes_graph,
+        inference="rdfs",
     )
 
     assert conforms
@@ -114,7 +118,11 @@ def test_valid_prefixedunit_individuals(TTLpath):
     data_graph = uh.load_knowledge_bases(valid_individuals | common_knowledge_bases)
     shapes_graph = uh.load_knowledge_bases(constraint_shapes)
 
-    conforms, results_graph = uh.validate_against_constraints(data_graph, shapes_graph)
+    conforms, results_graph = uh.validate_against_constraints(
+        data_graph,
+        shapes_graph,
+        inference="both",
+    )
 
     assert conforms
 
@@ -134,7 +142,11 @@ def test_invalid_prefixedunit_individuals(TTLpath):
     data_graph = uh.load_knowledge_bases(invalid_individuals | common_knowledge_bases)
     shapes_graph = uh.load_knowledge_bases(constraint_shapes)
 
-    conforms, results_graph = uh.validate_against_constraints(data_graph, shapes_graph)
+    conforms, results_graph = uh.validate_against_constraints(
+        data_graph,
+        shapes_graph,
+        inference="both",
+    )
 
     for s, p, o in results_graph.triples((None, rdflib.SH["result"], None)):
         focusNode = results_graph.value(o, rdflib.SH["focusNode"])
