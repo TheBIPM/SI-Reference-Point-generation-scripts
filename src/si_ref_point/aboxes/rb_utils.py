@@ -12,7 +12,7 @@ RB = Namespace(RES_BOD_NS)
 
 
 def meetings_sort_key(item):
-    return float(re.findall("[0-9]+[\-0-9]*", os.path.basename(item))[0].replace("-", "."))
+    return float(re.findall("[0-9]+[-0-9]*", os.path.basename(item))[0].replace("-", "."))
 
 
 class MeetingsFileExtractor:
