@@ -1,13 +1,12 @@
 """ Check the syntax and semantics of the SI graph """
 
 import rdflib
-import glob
 from si_ref_point import main as sirpmain
 
-def test_syntax():
+def verify_syntax(ttlpath):
     error_status = False
 
-    ttl_file_names = glob.glob("TTL/*.ttl")
+    ttl_file_names = ttlpath.glob("*.ttl")
 
     g = None
     try:
@@ -22,7 +21,7 @@ def test_syntax():
     return g, error_status
 
 
-def test_semantics(g):
+def verify_semantics(g):
     error_status = False
 
     # some not very elaborate tests
@@ -32,20 +31,18 @@ def test_semantics(g):
     return error_status
 
 
-def main():
-    # generate TTL files
-    sirpmain.main()
-    g, syntax_error = test_syntax()
+# ttlpath is a pytest fixture, defined in conftest.py
+def test_main(TTLpath):
+    g, syntax_error = verify_syntax(TTLpath)
 
     if syntax_error:
         raise ImportError("The syntax of the generated files is not ok.")
+    assert not syntax_error
 
-    semantic_error = test_semantics(g)
+    semantic_error = verify_semantics(g)
     if semantic_error:
         raise ValueError("A requirement regarding the content of the output files is not met.")
-
-    print(syntax_error, semantic_error)
-
+    assert not semantic_error
 
 if __name__ == "__main__":
-    main()
+    test_main()

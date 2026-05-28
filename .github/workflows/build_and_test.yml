@@ -5,6 +5,7 @@ on:
     branches: [ "enable_ci_pipeline" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
   workflow_call:
 
 permissions:
@@ -18,5 +19,4 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - uses: ./.github/actions/prepare_env
-    - uses: ./.github/actions/build
     - uses: ./.github/actions/test

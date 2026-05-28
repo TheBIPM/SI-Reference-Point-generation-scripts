@@ -21,6 +21,18 @@ from pathlib import Path
 from zipfile import ZipFile
 from rdflib import Graph
 
+file_generator = {
+    'si': cuq_tbox.main,
+    'units': units_abox.main,
+    'quantities': quantities_abox.main,
+    'constants': constants_abox.main,
+    'prefixes': prefixes_abox.main,
+    'decisions': decisions_abox.main,
+    'bodies': rb_tbox.main,
+    'cgpm': rb_abox_cgpm.main,
+    'cipm': rb_abox_cipm.main,
+    'cctf': rb_abox_cctf.main,
+}
 
 def get_parser():
     """ Dedicated function to collect command line parameters, so it can
@@ -63,39 +75,54 @@ def get_parser():
     return parser
 
 
-def main(force_output_dir_to=None):
+def load_graphs(only_this=None):
+    output = {}
+    for label, generator in file_generator.items():
+        if only_this and only_this not in label:
+            continue
+        logging.info(f"generating {label} graph")
+        # Generator will return a rdflib.Graph object
+        output[label] = generator()
+        logging.info("..done")
+    return output
+
+def generate_hash_file(tgtfile: Path):
+    """ generate hash for file and write it next to it, with a different ext
+    """
+    h = hashlib.new('sha256')
+    with open(tgtfile, encoding="UTF8") as fp:
+        h.update(fp.read().encode())
+    hashstr = h.hexdigest()
+    hashdest = tgtfile.with_suffix('.sha256')
+    with open(hashdest, 'w') as fp:
+        fp.write(hashstr)
+
+def serialize_graphs(graphs={}, fmt="ttl", ext="ttl", tgtdir: Path=None,
+                     generate_hash=False):
+    if not tgtdir.exists():
+        os.makedirs(tgtdir)
+    for label, g in graphs.items():
+        tgtfile = tgtdir / (label + '.' + ext)
+        g.serialize(format=fmt, destination=tgtfile)
+        if generate_hash:
+            generate_hash_file(tgtfile)
+
+def non_interactive(ttl_path):
+    output = load_graphs()
+    serialize_graphs(graphs=output, fmt="ttl", ext="ttl", tgtdir=ttl_path)
+
+
+def main():
     args = get_parser().parse_args()
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
     else:
         logging.basicConfig(level=logging.INFO)
 
-    file_generator = {
-        'si': cuq_tbox.main,
-        'units': units_abox.main,
-        'quantities': quantities_abox.main,
-        'constants': constants_abox.main,
-        'prefixes': prefixes_abox.main,
-        'decisions': decisions_abox.main,
-        'bodies': rb_tbox.main,
-        'cgpm': rb_abox_cgpm.main,
-        'cipm': rb_abox_cipm.main,
-        'cctf': rb_abox_cctf.main,
-    }
-    output = {}
-    for label, generator in file_generator.items():
-        if args.only and args.only not in label:
-            continue
-        logging.info(f"generating {label} graph")
-        # Generator will return a rdflib.Graph object
-        output[label] = generator()
-        logging.info("..done")
+    output = load_graphs(only_this=args.only)
 
-    if force_output_dir_to:
-        ttl_dir = jsonld_dir = force_output_dir_to
-    else:
-        ttl_dir = args.output_dir / args.ttl_output_subdir
-        jsonld_dir = args.output_dir / args.jsonld_output_subdir
+    ttl_dir = args.output_dir / args.ttl_output_subdir
+    jsonld_dir = args.output_dir / args.jsonld_output_subdir
 
     serializations = [{"fmt": "ttl",
                        "dir": ttl_dir,
@@ -106,20 +133,8 @@ def main(force_output_dir_to=None):
 
     # Serialize all graphs in their respective output files
     for srl in serializations:
-        if not os.path.exists(srl['dir']):
-            os.makedirs(srl['dir'])
-        for label, graph in output.items():
-            filedest = os.path.join(srl['dir'], label + '.' + srl['ext'])
-            graph.serialize(format=srl['fmt'], destination=filedest)
-
-            # generate hash for file and write it alongside
-            h = hashlib.new('sha256')
-            with open(filedest, encoding="UTF8") as fp:
-                h.update(fp.read().encode())
-            hashstr = h.hexdigest()
-            hashdest = os.path.join(srl['dir'], label + '.sha256')
-            with open(hashdest, 'w') as fp:
-                fp.write(hashstr)
+        serialize_graphs(graphs=output, fmt=srl['fmt'], ext=srl['ext'],
+                         tgtdir=srl['dir'], generate_hash=True)
 
     # Generate full graphs outputs
     # Just merging graphs in memory could lead to blank-nodes collisions, so
@@ -131,19 +146,10 @@ def main(force_output_dir_to=None):
     for ttl_file in file_generator.keys():
         full_graph.parse(ttl_dir / (ttl_file + ".ttl"))
     for srl in serializations:
-        filedest = os.path.join(srl['dir'], 'sirp_full.' + srl['ext'])
+        filedest = Path(srl['dir']) / ('sirp_full.' + srl['ext'])
         full_graph.serialize(format=srl['fmt'], destination=filedest)
-        # generate hash for file and write it alongside
-        h = hashlib.new('sha256')
-        with open(filedest, encoding="UTF8") as fp:
-            h.update(fp.read().encode())
-        hashstr = h.hexdigest()
-        hashdest = os.path.join(srl['dir'], 'sirp_full.sha256')
-        with open(hashdest, 'w') as fp:
-            fp.write(hashstr)
+        generate_hash_file(filedest)
     logging.info("..done")
-
-
 
     logging.info(f"TTL and JSON-LD files written to ./{ttl_dir}/ and ./{jsonld_dir}/, respectively")
     if args.generate_RDF:

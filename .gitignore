@@ -14,6 +14,12 @@ JSONLD/
 Testing/Vocabulary/Vocabulary.txt
 *.zip
 
+# related to tests
+.coverage
+.pytest_cache/
+coverage.xml
+junit/
+htmlcov/
 
 # cache files
 __pycache__
