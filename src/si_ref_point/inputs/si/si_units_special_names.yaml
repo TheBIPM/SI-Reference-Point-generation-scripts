@@ -27,7 +27,7 @@ data:
 - URI: degreeCelsius
   prefLabel_fr: degré Celsius
   prefLabel_en: degree Celsius
-  Symbol: ℃
+  Symbol: °C
   hasDefiningResolution: CGPM9-Res7
   UnitOfQtyKind: TEMC
   inBaseSIUnits: kelvin

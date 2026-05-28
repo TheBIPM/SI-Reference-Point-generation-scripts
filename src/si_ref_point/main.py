@@ -19,6 +19,7 @@ import os
 import datetime
 from pathlib import Path
 from zipfile import ZipFile
+from rdflib import Graph
 
 file_generator = {
     'si': cuq_tbox.main,
@@ -85,23 +86,26 @@ def load_graphs(only_this=None):
         logging.info("..done")
     return output
 
-def serialize_graphs(graphs={}, fmt="ttl", ext="ttl", tgtdir="./TTL",
+def generate_hash_file(tgtfile: Path):
+    """ generate hash for file and write it next to it, with a different ext
+    """
+    h = hashlib.new('sha256')
+    with open(tgtfile, encoding="UTF8") as fp:
+        h.update(fp.read().encode())
+    hashstr = h.hexdigest()
+    hashdest = tgtfile.with_suffix('.sha256')
+    with open(hashdest, 'w') as fp:
+        fp.write(hashstr)
+
+def serialize_graphs(graphs={}, fmt="ttl", ext="ttl", tgtdir: Path=None,
                      generate_hash=False):
-    if not os.path.exists(tgtdir):
+    if not tgtdir.exists():
         os.makedirs(tgtdir)
     for label, g in graphs.items():
-        tgtfile =os.path.join(tgtdir, label + '.' + ext)
+        tgtfile = tgtdir / (label + '.' + ext)
         g.serialize(format=fmt, destination=tgtfile)
         if generate_hash:
-            # generate hash for file and write it alongside
-            h = hashlib.new('sha256')
-            with open(tgtfile, encoding="UTF8") as fp:
-                h.update(fp.read().encode())
-            hashstr = h.hexdigest()
-            hashdest = os.path.join(tgtdir, label + '.sha256')
-            with open(hashdest, 'w') as fp:
-                fp.write(hashstr)
-
+            generate_hash_file(tgtfile)
 
 def non_interactive(ttl_path):
     output = load_graphs()
@@ -131,6 +135,22 @@ def main():
     for srl in serializations:
         serialize_graphs(graphs=output, fmt=srl['fmt'], ext=srl['ext'],
                          tgtdir=srl['dir'], generate_hash=True)
+
+    # Generate full graphs outputs
+    # Just merging graphs in memory could lead to blank-nodes collisions, so
+    # instead parse the TTL files we just wrote as suggested here
+    # https://rdflib.readthedocs.io/en/7.1.1/merging.html
+
+    full_graph = Graph()
+    logging.info(f"generating full sirp graph")
+    for ttl_file in file_generator.keys():
+        full_graph.parse(ttl_dir / (ttl_file + ".ttl"))
+    for srl in serializations:
+        filedest = Path(srl['dir']) / ('sirp_full.' + srl['ext'])
+        full_graph.serialize(format=srl['fmt'], destination=filedest)
+        generate_hash_file(filedest)
+    logging.info("..done")
+
     logging.info(f"TTL and JSON-LD files written to ./{ttl_dir}/ and ./{jsonld_dir}/, respectively")
     if args.generate_RDF:
         output['si'].serialize(
