@@ -70,6 +70,7 @@ classDiagram
 	}
 	class `si:SIPrefix`{
 		+si:hasDatatype
+		+si:hasExponent
 		+si:hasScalingFactor
 	}
 	class `si:SISpecialNamedUnit`{
@@ -119,6 +120,7 @@ classDiagram
 	`si:SIDecision` --o `si:SIDecisionTarget`
 	`si:SIDecisionTarget` --o `si:SIDecision`
 	`si:SIDecisionTarget` --o `si:SIDecisionScope`
+	`si:SIPrefix` --o `xsd:short`
 	`si:SIPrefix` --o `rdfs:Literal`
 	`si:SISpecialNamedUnit` --o `xsd:boolean`
 	`si:SISpecialNamedUnit` --o `rdfs:Literal`

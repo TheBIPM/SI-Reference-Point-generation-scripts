@@ -2,10 +2,11 @@
 
 import argparse
 from rdflib import Graph, BNode, RDF
-from config import TTLPATH, VOCPATH
+from pathlib import Path
+from si_ref_point.settings import PKG_ROOT
 
 
-def main(APIPATH):
+def main(APIPATH: Path, VOCPATH: Path=None):
     # ------------------------------------------------------------------------
     # load ttl files into knowledge graph
     g = Graph()
@@ -174,8 +175,12 @@ def parse_multi(g, nodeID):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate an SI Reference Point vocabulary")
-    parser.add_argument("--path_to_ttl",
-                        default=TTLPATH,
+    parser.add_argument("path_to_ttl",
+                        type=Path,
                         help="Directory where TTLs are stored")
+    parser.add_argument(
+    "--VOCPATH", type=Path,
+    default = PKG_ROOT.parent.parent / 'docs' / 'vocabulary',
+    help="Directory for output mermaid code, default PKGROOT/docs/vocabulary")
     args = parser.parse_args()
-    main(args.path_to_ttl)
+    main(args.path_to_ttl, VOCPATH=args.VOCPATH)

@@ -194,7 +194,7 @@ SI prefix
 | si:hasDatatype | si:Constant, si:SIPrefix |  |  |
 | si:hasDefiningResolution | si:Definition, si:Constant | rb:Resolution | Linking an SI definition to the resolution by which it was adopted. |
 | si:hasDefiningResolution | si:Definition, si:Constant | rb:Resolution | Linking an SI definition to the resolution by which it was adopted. |
-| si:hasNumericExponent | si:UnitPower | xsd:short |  |
+| si:hasExponent | si:SIPrefix | xsd:short |  |
 | si:hasScalingFactor | si:SIPrefix | rdfs:Literal | Linking an SI prefix to its scaling factor. |
 | si:hasSymbol |   | xsd:string | Linking a measurement unit or prefix to a symbol. |
 
@@ -210,7 +210,7 @@ SI prefix
 | si:hasDatatype | si:Constant, si:SIPrefix |  |  |
 | si:hasDefiningResolution | si:Definition, si:Constant | rb:Resolution | Linking an SI definition to the resolution by which it was adopted. |
 | si:hasDefiningResolution | si:Definition, si:Constant | rb:Resolution | Linking an SI definition to the resolution by which it was adopted. |
-| si:hasNumericExponent | si:UnitPower | xsd:short |  |
+| si:hasExponent | si:SIPrefix | xsd:short |  |
 | si:hasScalingFactor | si:SIPrefix | rdfs:Literal | Linking an SI prefix to its scaling factor. |
 | si:hasSymbol |   | xsd:string | Linking a measurement unit or prefix to a symbol. |
 
