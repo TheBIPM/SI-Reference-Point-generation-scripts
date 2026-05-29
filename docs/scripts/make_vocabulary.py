@@ -1,4 +1,4 @@
-""" Create a vocabulary file """
+""" Create a vocabulary file and the class_diagram.md file (mermaid code) """
 
 import argparse
 from rdflib import Graph, BNode, RDF
@@ -131,6 +131,7 @@ def main(APIPATH: Path, VOCPATH: Path=None):
 
     # Write diagram (mermaid code)
     with open(VOCPATH / 'class_diagram.md', 'w') as out:
+        out.write("```mermaid\n")
         out.write("classDiagram\n")
         for cl, vals in diagram.items():
             if vals['superclass'] != "owl:Class":
@@ -152,6 +153,7 @@ def main(APIPATH: Path, VOCPATH: Path=None):
                 if pr['range'] and pr['range'] not in already_drawn:
                     out.write("\t`{}` --o `{}`\n".format(cl, pr['range']))
                     already_drawn.append(pr['range'])
+        out.write("```")
 
 
 def parse_multi(g, nodeID):

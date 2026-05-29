@@ -153,9 +153,10 @@ def main(APIPATH, VOCPATH=None):
         out.write("```\n")
 
     # convert to pdfs using mermaid-cli:
-    # npx mmdc -i .\class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
+    # npx mmdc -i ./class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
 
     # best result with mermaid 10.9.1 (current version 11.4.2 not showing multiple self-references):
+    # 2026-05-29 : 11.15.0 still does not
     # npm install -g @mermaid-js/mermaid-cli@10.9.1
 
 

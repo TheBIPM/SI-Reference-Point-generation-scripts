@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 	`si:QuantityKind`<|--`si:CompoundQuantityKind`
 	`si:MeasurementUnit`<|--`si:CompoundUnit`
@@ -131,3 +132,4 @@ classDiagram
 	`si:UnitProduct` --o `si:MeasurementUnit`
 	`si:nonSIUnit` --o `xsd:boolean`
 	`si:nonSIUnit` --o `rdfs:Literal`
+```
