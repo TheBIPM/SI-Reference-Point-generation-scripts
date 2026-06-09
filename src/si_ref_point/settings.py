@@ -11,6 +11,7 @@ PKG_ROOT = Path(__file__).resolve().parent
 SKOSURL = "http://www.w3.org/2004/02/skos/core#"
 DCTURL = "http://purl.org/dc/terms#"
 SIDFWBASE = "https://si-digital-framework.org"
+SIRPVERSION = "1.0.0"
 
 # Base URL for the SI Digital Framework
 # from this URL, sub-URLs are defined
@@ -35,7 +36,7 @@ SI_FILES_FOLDER = PKG_ROOT / "inputs" / "si"
 # TTL_FILES_FOLDER = TTLPATH
 # JSONLD_FILES_FOLDER = JLDPATH
 
-GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-2023/"
+GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/"
 
 # SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
