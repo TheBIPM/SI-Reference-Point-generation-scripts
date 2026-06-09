@@ -8,7 +8,8 @@ import yaml
 from decimal import Decimal
 from rdflib import Graph, URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Literal, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
-from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
+    GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
 
 def main():
@@ -20,8 +21,8 @@ def main():
     prefix_graph = Graph()
 
     # 1) Define the namespaces within (base)/SI
-    prefix_graph.bind("prefixes",si_graph.namespace_prefixes)
-    prefix_graph.bind("si",si_graph.namespace)
+    prefix_graph.bind("prefixes", si_graph.namespace_prefixes)
+    prefix_graph.bind("si", si_graph.namespace)
 
     # 2) Annotations to the prefix-graph
 
@@ -42,6 +43,11 @@ def main():
          Literal("Ontology, part of the SI Reference Point, covering "
                    "prefixes for the SI measurement units."))
     )
+
+    # SemVer
+    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/prefixes/")
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), OWL.versionIRI, version_iri))
+    prefix_graph.add((URIRef(si_graph.namespace_prefixes), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)

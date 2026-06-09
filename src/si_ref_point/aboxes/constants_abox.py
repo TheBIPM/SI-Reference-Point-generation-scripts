@@ -46,6 +46,11 @@ def main():
                   "seven underpinning constants of the SI"),
                  datatype=XSD.string))
     )
+    # SemVer
+
+    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/constants/")
+    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionIRI, version_iri))
+    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     # The `timestamp` variable in the code is used to capture the current system time in UTC timezone.
@@ -59,11 +64,6 @@ def main():
     repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
 
-    # SemVer
-
-    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/constants/")
-    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionIRI, version_iri))
-    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
 
 
     #     2.2.1 Agent
