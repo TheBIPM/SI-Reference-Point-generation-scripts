@@ -11,7 +11,8 @@ from decimal import Decimal
 from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
-from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
+    GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
 
 def nest_mult(expr):
@@ -170,6 +171,11 @@ def main():
                     "special names) and prefixes."),
                 datatype=XSD.string))
     )
+
+    # SemVer
+    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/units/")
+    units_graph.add((URIRef(si_graph.namespace_units), OWL.versionIRI, version_iri))
+    units_graph.add((URIRef(si_graph.namespace_units), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)

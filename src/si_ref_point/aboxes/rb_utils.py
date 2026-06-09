@@ -6,7 +6,7 @@ from datetime import date
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS, XSD
 from si_ref_point.tboxes.rb_tbox import RES_BOD_NS
-from si_ref_point.settings import SIDFWBASE
+from si_ref_point.settings import SIDFWBASE, SIRPVERSION
 
 RB = Namespace(RES_BOD_NS)
 
@@ -63,6 +63,12 @@ class MeetingsFileExtractor:
             )
         )
 
+        # SemVer
+        version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/bodies/" + self.own_acronym + "#")
+        self.g.add((URIRef(self.OWN_NS), OWL.versionIRI, version_iri))
+        self.g.add((URIRef(self.OWN_NS), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
+
+        
         self.g.add(
             (
                 URIRef(self.OWN_NS),

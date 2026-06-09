@@ -46,8 +46,8 @@ def main():
                   "seven underpinning constants of the SI"),
                  datatype=XSD.string))
     )
+    
     # SemVer
-
     version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/constants/")
     constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionIRI, version_iri))
     constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
