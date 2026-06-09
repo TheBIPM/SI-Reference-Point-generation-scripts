@@ -10,7 +10,7 @@ import yaml
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
-    SI_FILES_FOLDER, GITHUB_BASE_PATH
+    SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 from si_ref_point.aboxes.units_abox import transform_to_graph
 
 
@@ -58,6 +58,14 @@ def main():
         "%Y-%m-%dT%H:%M:%SZ")  # used with the predicate 'startedAtTime' of the corresponding activity
     repo = git.Repo(PKG_ROOT, search_parent_directories=True)
     sha = repo.head.object.hexsha
+
+    # SemVer
+
+    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/constants/")
+    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionIRI, version_iri))
+    constants_graph.add((URIRef(si_graph.namespace_constants), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
+
+
     #     2.2.1 Agent
     #     declare this code as an 'agent' (in the sense of PROVENANCE)
     #     and define URI to a specific version by using its commit on GitHub

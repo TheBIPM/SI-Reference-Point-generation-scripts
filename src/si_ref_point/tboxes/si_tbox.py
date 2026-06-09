@@ -8,7 +8,8 @@ import os
 from rdflib import Graph, OWL, RDF, RDFS, URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
+    GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
