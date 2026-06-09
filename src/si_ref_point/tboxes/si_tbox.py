@@ -38,6 +38,9 @@ class SiElements:
         self.namespace_constants = SIDFWBASE + "/constants/"
         # Explicitly binding a constants namespace to the URI
         self.g.bind("constants", self.namespace_constants)
+        
+        # Explicitly binding a decisions namespace to the URI
+        self.g.bind("decisions", self.namespace_decisions)
 
        # Define the namespaces within (base)/bodies
         # ~/bodies
