@@ -2,13 +2,18 @@
 
 from datetime import date
 from rdflib import URIRef, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, Graph, Literal
-from si_ref_point.settings import SIDFWBASE, SKOSURL
+from si_ref_point.settings import SIDFWBASE, SKOSURL, SIRPVERSION
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 
 class ResBod:
     def __init__(self, namespace: str = RES_BOD_NS, prefix: str = 'rb'):
+
+    # 1) Define namespaces
         self.namespace = namespace
+
+    # 2) Add annotations to the ontology
+    #   2.1 General annotations (type, comments etc)
         self._g = Graph()  # a triple store as the main data structure
         self._g.bind(prefix, namespace)
         self._g.bind("skos", SKOSURL)
@@ -21,6 +26,14 @@ class ResBod:
                              "resolutions, decisions, etc", datatype=XSD.string)))
         self._g.add((URIRef(RES_BOD_NS), DCTERMS.created, Literal(str(date.today()), datatype=XSD.date)))
 
+    #   2.2 Versioning
+    
+        version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/bodies#")
+        self._g.add((URIRef(self.namespace), OWL.versionIRI, version_iri))
+        self._g.add((URIRef(self.namespace), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
+
+
+    # 3) Define classes and predicates used by different A boxes
         self.ResBod = self.set_uri('ResBod')
         self._g.add((self.ResBod, RDF.type, SKOS.Concept))
         self._g.add((self.ResBod, RDFS.label, Literal('Responsible Body', lang='en')))
