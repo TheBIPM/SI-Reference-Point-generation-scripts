@@ -1,26 +1,16 @@
 """ Generate a list of quantities used in the SI Reference Point """
 
 import logging
+import argparse
+from pathlib import Path
 from rdflib import Graph, RDF, URIRef, BNode
-from config import TTLPATH
 
-# instantiate graph
-g = Graph()
-for ttl_file in ['quantities.ttl', 'units.ttl']:
-    file_path = TTLPATH / ttl_file
-    if not file_path:
-        logging.error("{} does not exist, did you run generate_sirp_files ?".format(file_path))
-        raise SystemExit
-    g.parse(file_path)
-
-fullURI = g.namespace_manager.expand_curie
-
-
-def unitnode_to_str(nodeID) -> str|None:
+def unitnode_to_str(g, nodeID) -> str|None:
     """ Recursively  generate unit representation strings
     Units may be compound units, i.e. nested binary trees with left and
     right terms, unit powers, multiples, etc...
     """
+    fullURI = g.namespace_manager.expand_curie
     if isinstance(nodeID, URIRef):
         """ No further processing, this is the end : fetch corresponding symbol
         and return it
@@ -43,10 +33,10 @@ def unitnode_to_str(nodeID) -> str|None:
             leftTerm = ""
             rightTerm = ""
             for s, p, o in g.triples((nodeID, fullURI("si:hasLeftUnitTerm"), None)):
-                leftTerm = unitnode_to_str(o)
+                leftTerm = unitnode_to_str(g, o)
                 break
             for s, p, o in g.triples((nodeID, fullURI("si:hasRightUnitTerm"), None)):
-                rightTerm = unitnode_to_str(o)
+                rightTerm = unitnode_to_str(g, o)
                 break
             return "{} x {}".format(leftTerm, rightTerm)
         elif nodeType == "si:UnitPower":
@@ -58,7 +48,7 @@ def unitnode_to_str(nodeID) -> str|None:
                 numericExponent = int(str(o))
                 break
             for s, p, o in g.triples((nodeID, fullURI("si:hasUnitBase"), None)):
-                unitBase = unitnode_to_str(o)
+                unitBase = unitnode_to_str(g, o)
                 break
             if numericExponent == 1:
                 return "{}".format(unitBase)
@@ -73,7 +63,7 @@ def unitnode_to_str(nodeID) -> str|None:
                 numericFactor = str(o)
                 break
             for s, p, o in g.triples((nodeID, fullURI("si:hasunitTerm"), None)):
-                unitTerm = unitnode_to_str(o)
+                unitTerm = unitnode_to_str(g, o)
                 break
             return "{} x {}".format(numericFactor, unitTerm)
         elif nodeType == "si:PrefixedUnit":
@@ -85,7 +75,7 @@ def unitnode_to_str(nodeID) -> str|None:
                 prefix = str(o)
                 break
             for s, p, o in g.triples((nodeID, fullURI("si:hasNonPrefixedUnit"), None)):
-                nonPrefixedUnit = unitnode_to_str(o)
+                nonPrefixedUnit = unitnode_to_str(g, o)
                 break
             return "{}{}".format(prefix, nonPrefixedUnit)
         else:
@@ -93,17 +83,36 @@ def unitnode_to_str(nodeID) -> str|None:
     return None
 
 
-is_qty = """
-SELECT DISTINCT ?qty ?unit ?prefLabelEn
-WHERE {?qty si:hasUnit ?unit .
-       ?qty skos:prefLabel ?prefLabelEn .
-       FILTER(langmatches(lang(?prefLabelEn),'en'))
-}"""
+def main():
+    parser = argparse.ArgumentParser(description="Generate list of quantities")
+    parser.add_argument(
+        "TTLPATH", type=Path,
+        help="Directory containing the TTL files")
+    args = parser.parse_args()
+    # instantiate graph
+    g = Graph()
+    for ttl_file in ['quantities.ttl', 'units.ttl']:
+        file_path = args.TTLPATH / ttl_file
+        if not file_path:
+            logging.error("{} does not exist, did you run generate_sirp_files ?".format(file_path))
+            raise SystemExit
+        g.parse(file_path)
 
-qres = g.query(is_qty)
 
-qty_list = []
-for row in qres:
-    qty, unit, label = row
-    print("{0:4s} | {1:20s} | {2:}".format(
-        g.qname(qty).split(":")[1], unitnode_to_str(unit), label))
+    is_qty = """
+    SELECT DISTINCT ?qty ?unit ?prefLabelEn
+    WHERE {?qty si:hasUnit ?unit .
+           ?qty skos:prefLabel ?prefLabelEn .
+           FILTER(langmatches(lang(?prefLabelEn),'en'))
+    }"""
+
+    qres = g.query(is_qty)
+
+    qty_list = []
+    for row in qres:
+        qty, unit, label = row
+        print("{0:4s} | {1:20s} | {2:}".format(
+            g.qname(qty).split(":")[1], unitnode_to_str(g, unit), label))
+
+if __name__ == "__main__":
+    main()

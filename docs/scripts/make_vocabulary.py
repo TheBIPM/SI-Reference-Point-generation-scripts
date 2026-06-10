@@ -1,11 +1,12 @@
-""" Create a vocabulary file """
+""" Create a vocabulary file and the class_diagram.md file (mermaid code) """
 
 import argparse
 from rdflib import Graph, BNode, RDF
-from config import TTLPATH, VOCPATH
+from pathlib import Path
+from si_ref_point.settings import PKG_ROOT
 
 
-def main(APIPATH):
+def main(APIPATH: Path, VOCPATH: Path=None):
     # ------------------------------------------------------------------------
     # load ttl files into knowledge graph
     g = Graph()
@@ -130,6 +131,7 @@ def main(APIPATH):
 
     # Write diagram (mermaid code)
     with open(VOCPATH / 'class_diagram.md', 'w') as out:
+        out.write("```mermaid\n")
         out.write("classDiagram\n")
         for cl, vals in diagram.items():
             if vals['superclass'] != "owl:Class":
@@ -151,6 +153,7 @@ def main(APIPATH):
                 if pr['range'] and pr['range'] not in already_drawn:
                     out.write("\t`{}` --o `{}`\n".format(cl, pr['range']))
                     already_drawn.append(pr['range'])
+        out.write("```")
 
 
 def parse_multi(g, nodeID):
@@ -174,8 +177,12 @@ def parse_multi(g, nodeID):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate an SI Reference Point vocabulary")
-    parser.add_argument("--path_to_ttl",
-                        default=TTLPATH,
+    parser.add_argument("path_to_ttl",
+                        type=Path,
                         help="Directory where TTLs are stored")
+    parser.add_argument(
+    "--VOCPATH", type=Path,
+    default = PKG_ROOT.parent.parent / 'docs' / 'vocabulary',
+    help="Directory for output mermaid code, default PKGROOT/docs/vocabulary")
     args = parser.parse_args()
-    main(args.path_to_ttl)
+    main(args.path_to_ttl, VOCPATH=args.VOCPATH)
