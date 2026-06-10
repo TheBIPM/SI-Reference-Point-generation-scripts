@@ -2,10 +2,11 @@
 
 import argparse
 from rdflib import Graph
-from config import TTLPATH, VOCPATH
+from si_ref_point.settings import PKG_ROOT
+from pathlib import Path
 
 
-def main(APIPATH):
+def main(APIPATH, VOCPATH=None):
     # ------------------------------------------------------------------------
     # load ttl files into knowledge graph
     g = Graph()
@@ -59,7 +60,7 @@ def main(APIPATH):
             WHERE
             {
                 ?class rdfs:subClassOf si:CompoundUnit .
-                ?prop rdfs:domain ?class . 
+                ?prop rdfs:domain ?class .
                 OPTIONAL {?prop rdfs:range ?range}
             }
             ORDER BY ?class
@@ -80,7 +81,7 @@ def main(APIPATH):
                 FILTER (?class = si:Definition || ?class = si:Constant) .
                 FILTER (?range != rdf:nil && ?domain != rdf:nil) . # filter last element of list
                 FILTER (!isBlank(?domain)) . # filter blank nodes
-                FILTER (!isBlank(?range)) . 
+                FILTER (!isBlank(?range)) .
             }
             ORDER BY ?class
             """
@@ -152,18 +153,22 @@ def main(APIPATH):
         out.write("```\n")
 
     # convert to pdfs using mermaid-cli:
-    # npx mmdc -i .\class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
+    # npx mmdc -i ./class_diagram_details.md -f -e pdf -o class_diagrams_details_converted.md
 
     # best result with mermaid 10.9.1 (current version 11.4.2 not showing multiple self-references):
+    # 2026-05-29 : 11.15.0 still does not
     # npm install -g @mermaid-js/mermaid-cli@10.9.1
-        
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate SI ref point vocabulary")
     parser.add_argument(
-        "--path_to_ttl",
-        default=TTLPATH,
+        "path_to_ttl", type=Path,
         help="Directory where TTLs are stored")
+    parser.add_argument(
+        "--VOCPATH", type=Path,
+        default = PKG_ROOT.parent.parent / 'docs' / 'vocabulary',
+        help="Directory for output mermaid code, default PKGROOT/docs/vocabulary")
     args = parser.parse_args()
-    main(args.path_to_ttl)
+    main(args.path_to_ttl, VOCPATH=args.VOCPATH)
