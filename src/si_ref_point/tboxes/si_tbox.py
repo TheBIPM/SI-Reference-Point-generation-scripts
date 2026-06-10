@@ -8,7 +8,9 @@ import os
 from rdflib import Graph, OWL, RDF, RDFS, URIRef, Literal, BNode, SKOS, PROV
 from rdflib.collection import Collection
 from rdflib.namespace import XSD, DCTERMS
-from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
+    GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
+
 
 RES_BOD_NS = SIDFWBASE + "/bodies#"
 bodies_list = ['cgpm', 'cipm', 'cctf']
@@ -36,6 +38,9 @@ class SiElements:
         self.namespace_constants = SIDFWBASE + "/constants/"
         # Explicitly binding a constants namespace to the URI
         self.g.bind("constants", self.namespace_constants)
+        
+        # Explicitly binding a decisions namespace to the URI
+        self.g.bind("decisions", self.namespace_decisions)
 
        # Define the namespaces within (base)/bodies
         # ~/bodies
@@ -94,6 +99,10 @@ class SiElements:
         uri_timestamp = timestamp.strftime("%Y%m%d%H%M%SZ")                 # used to identify uniquely the produced TTL file (entity)
         startedAt_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")      # used with the predicate 'startedAtTime' of the corresponding activity
 
+        version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/SI#")
+        self.g.add((URIRef(self.namespace), OWL.versionIRI, version_iri))
+        self.g.add((URIRef(self.namespace), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
+        
 ### `generate_turtle_files`
         repo = git.Repo(PKG_ROOT, search_parent_directories=True)
         sha = repo.head.object.hexsha

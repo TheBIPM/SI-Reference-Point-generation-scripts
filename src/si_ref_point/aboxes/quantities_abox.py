@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 from si_ref_point.aboxes.units_abox import transform_to_graph
-from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, GITHUB_BASE_PATH
+from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
+    GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
 
 def main():
@@ -45,6 +46,11 @@ def main():
                    "covering quantities",
                    datatype=XSD.string))
     )
+
+    # SemVer
+    version_iri = URIRef(SIDFWBASE + "/" + SIRPVERSION + "/quantities/")
+    quantities_graph.add((URIRef(si_graph.namespace_quantities), OWL.versionIRI, version_iri))
+    quantities_graph.add((URIRef(si_graph.namespace_quantities), OWL.versionInfo, Literal(SIRPVERSION, datatype=XSD.string)))
 
     # 2.2 Versioning (using PROVENANCE vocabulary)
     timestamp = datetime.now(timezone.utc)                              # get the system time (in UTC)
