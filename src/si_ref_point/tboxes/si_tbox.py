@@ -243,7 +243,7 @@ class SiElements:
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
-        self.has_exponent = self.set_uri("hasExponent")
+        self.has_exponent = self.set_uri("hasExponent")   # is that used at all? (see units_abox.py: hasNumericExponent is defined)
 
     # 4) Utility methods
 

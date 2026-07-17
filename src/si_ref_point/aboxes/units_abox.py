@@ -8,6 +8,7 @@ import os
 import logging
 import yaml
 from decimal import Decimal
+from fractions import Fraction
 from rdflib import Graph, URIRef, BNode, Literal, RDF, OWL, SKOS, XSD, RDFS, DCTERMS, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
@@ -102,19 +103,30 @@ def transform_to_graph(expression, si_graph, graph):
                     expression["exp"][0], si_graph, graph)
                 return graph, expr_node
             else:
-                # set type of expression node
-                graph.add((expr_node, RDF.type, si_graph.set_uri("UnitPower")))
-
                 # shortnames
                 has_base = si_graph.set_uri("hasUnitBase")
                 has_exponent = si_graph.set_uri("hasNumericExponent")
+                has_Numerator = si_graph.set_uri("hasNumerator")
+                has_Denominator = si_graph.set_uri("hasDenominator")
 
+                # set type of expression node
+                graph.add((expr_node, RDF.type, si_graph.set_uri("UnitPower")))                
+
+                expon_expression = expression["exp"][1]
+                fraction_exponent = Fraction(expon_expression).limit_denominator()
+                
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
-                                                 si_graph, graph)
-                exponent = Literal(expression["exp"][1], datatype=XSD.short)
+                                                si_graph, graph)
+                if fraction_exponent.denominator == 1:
+                    graph.add((expr_node, has_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+
+                else:
+                    graph.add((expr_node, RDF.type, si_graph.set_uri("UnitFractionPower")))
+                    graph.add((expr_node, has_Denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
+                    graph.add((expr_node, has_Numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
                 graph.add((expr_node, has_base, node))
-                graph.add((expr_node, has_exponent, exponent))
+
 
         else:
             raise ValueError(
