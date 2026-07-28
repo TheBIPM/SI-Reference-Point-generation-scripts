@@ -7,9 +7,11 @@
 @prefix si: <https://si-digital-framework.org/SI#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix entities: <https://si-digital-framework.org/SI/entities#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 #metadata
-entities:si_20260728140000Z.ttl a prov:Entity ;
+entities:si_core_20260728140000Z.ttl a prov:Entity ;
     prov:wasAttributedTo "Frédéric Meynadier"^^xsd:string ;
     prov:wasDerivedFrom "SI Brochure 9th ed, V3.02"^^xsd:string ;
     prov:wasGeneratedBy "manual TTL generation"^^xsd:string .

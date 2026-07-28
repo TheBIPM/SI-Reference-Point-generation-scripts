@@ -11,7 +11,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 # metadata
-entities:si_20260728140000Z.ttl a prov:Entity ;
+entities:si_extended_20260728140000Z.ttl a prov:Entity ;
     prov:wasAttributedTo "Gregor Dudle"^^xsd:string ;
     prov:wasDerivedFrom  "SI Brochure 9th ed, V3.02"^^xsd:string ;
     prov:wasGeneratedBy "manual TTL generation"^^xsd:string .
@@ -104,8 +104,8 @@ si:hasNumericExponent a owl:DatatypeProperty ;
     rdfs:domain si:UnitPower;
     rdfs:range xsd:short .
 
-si:hasExponentNominator a owl:DatatypeProperty ;
-    rdfs:label "has exponent nominator"@en,
+si:hasExponentNumerator a owl:DatatypeProperty ;
+    rdfs:label "has exponent numerator"@en,
         "a pour nominateur dans l'exposant ce nombre"@fr;
     rdfs:comment "UnitBase ^ (numerator/denominator)";
     rdfs:domain si:UnitPower;

@@ -114,8 +114,8 @@ def transform_to_graph(expression, si_graph, graph):
 
                 else:
                     graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
-                    graph.add((expr_node, si_graph.has_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
-                    graph.add((expr_node, si_graph.has_numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                    graph.add((expr_node, si_graph.has_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
+                    graph.add((expr_node, si_graph.has_exponent_numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
                 graph.add((expr_node, si_graph.has_base, node))
 
 
