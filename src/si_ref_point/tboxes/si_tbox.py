@@ -248,7 +248,7 @@ class SiElements:
         self.has_right_Term = self.set_uri("hasRightTerm")
         self.has_exponent = self.set_uri("hasExponent")
         self.has_exponent_denominator = self.set_uri("hasExponentDenominator")
-        self.has_exponent_numerator = self.set_uri("hasNumerator")
+        self.has_exponent_numerator = self.set_uri("hasExponentNumerator")
         self.has_base = self.set_uri("hasBase")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
