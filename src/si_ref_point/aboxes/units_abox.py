@@ -82,19 +82,16 @@ def transform_to_graph(expression, si_graph, graph):
             expression = nest_mult(expression)
 
             # set type of expression node
-            graph.add((expr_node, RDF.type, si_graph.set_uri("UnitProduct")))
+            graph.add((expr_node, RDF.type, si_graph.unit_product))
 
-            # shortnames
-            has_l_term = si_graph.set_uri("hasLeftUnitTerm")
-            has_r_term = si_graph.set_uri("hasRightUnitTerm")
 
             # insert factors
             graph, node = transform_to_graph(expression["mult"][0],
                                              si_graph, graph)
-            graph.add((expr_node, has_l_term, node))
+            graph.add((expr_node, si_graph.has_left_Term, node))
             graph, node = transform_to_graph(expression["mult"][1],
                                              si_graph, graph)
-            graph.add((expr_node, has_r_term, node))
+            graph.add((expr_node, si_graph.has_right_Term, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] in [1, "1"]:
@@ -103,14 +100,8 @@ def transform_to_graph(expression, si_graph, graph):
                     expression["exp"][0], si_graph, graph)
                 return graph, expr_node
             else:
-                # shortnames
-                has_base = si_graph.set_uri("hasUnitBase")
-                has_exponent = si_graph.set_uri("hasNumericExponent")
-                has_Numerator = si_graph.set_uri("hasNumerator")
-                has_Denominator = si_graph.set_uri("hasDenominator")
-
                 # set type of expression node
-                graph.add((expr_node, RDF.type, si_graph.set_uri("UnitPower")))                
+                graph.add((expr_node, RDF.type, si_graph.unit_power))                
 
                 expon_expression = expression["exp"][1]
                 fraction_exponent = Fraction(expon_expression).limit_denominator()
@@ -119,13 +110,13 @@ def transform_to_graph(expression, si_graph, graph):
                 graph, node = transform_to_graph(expression["exp"][0],
                                                 si_graph, graph)
                 if fraction_exponent.denominator == 1:
-                    graph.add((expr_node, has_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                    graph.add((expr_node, si_graph.has_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
 
                 else:
-                    graph.add((expr_node, RDF.type, si_graph.set_uri("UnitFractionPower")))
-                    graph.add((expr_node, has_Denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
-                    graph.add((expr_node, has_Numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
-                graph.add((expr_node, has_base, node))
+                    graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
+                    graph.add((expr_node, si_graph.has_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
+                    graph.add((expr_node, si_graph.has_numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                graph.add((expr_node, si_graph.has_base, node))
 
 
         else:

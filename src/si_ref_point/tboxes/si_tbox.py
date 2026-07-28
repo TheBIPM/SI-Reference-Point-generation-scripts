@@ -43,7 +43,7 @@ class SiElements:
         self.g.bind("decisions", self.namespace_decisions)
 
        # Define the namespaces within (base)/bodies
-        # ~/bodies
+        # ~/bodies/(bodyname)#
         self.namespace_bodies_base = SIDFWBASE + "/bodies/"
         self.namespace_bodies = {}
         for body in bodies_list:
@@ -180,7 +180,7 @@ class SiElements:
              RDFS.comment,
              Literal(CC_LICENCE_TEXT_FR,lang="fr"))
         )
-    # 3) Define classes and predicates used by different A boxes
+    # 3) Define shortcuts for URI of classes and predicates used by different A boxes
         self.constant = self.set_uri("Constant")
         self.measurement_unit = self.set_uri("MeasurementUnit")
         self.si_base_unit = self.set_uri("SIBaseUnit")
@@ -190,6 +190,9 @@ class SiElements:
         self.non_si_unit = self.set_uri("nonSIUnit")
         self.definition = self.set_uri("Definition")
         self.definition_note = self.set_uri("DefinitionNote")
+        self.unit_product = self.set_uri("UnitProduct")
+        self.unit_power = self.set_uri("UnitPower")
+        self.unit_fraction_power = self.set_uri("UnitFractionPower")
         self.si_prefix = self.set_uri("SIPrefix")
         self.si_decision = self.set_uri("SIDecision")
         self.si_decision_scope = self.set_uri("SIDecisionScope")
@@ -226,7 +229,7 @@ class SiElements:
             self.has_datatype_one_of_list)
         self.has_datatype = self.set_uri("hasDatatype")
         self.has_updated_date = self.set_uri("hasUpdatedDate")
-        self.has_unit_as_tring = self.set_uri("hasUnitAsString")
+        self.has_unit_as_string = self.set_uri("hasUnitAsString")
         self.is_unit_of_qty_kind = self.set_uri("isUnitOfQtyKind")
         self.has_definition = self.set_uri("hasDefinition")
         self.has_next_definition = self.set_uri("hasNextDefinition")
@@ -241,50 +244,70 @@ class SiElements:
         self.has_note_text = self.set_uri("hasNoteText")
         self.has_defining_equation = self.set_uri("hasDefiningEquation")
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
+        self.has_left_Term = self.set_uri("hasLeftTerm")
+        self.has_right_Term = self.set_uri("hasRightTerm")
+        self.has_exponent = self.set_uri("hasExponent")
+        self.has_denominator = self.set_uri("hasDenominator")
+        self.has_numerator = self.set_uri("hasNumerator")
+        self.has_base = self.set_uri("hasBase")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
-        self.has_exponent = self.set_uri("hasExponent")   # is that used at all? (see units_abox.py: hasNumericExponent is defined)
+
 
     # 4) Utility methods
 
-    def uri(self, name: str) -> URIRef:
-        """Utility method """
-        return URIRef(self.namespace + name)
-
     def set_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method 
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI """
         return URIRef(self.namespace + name)
-
+    
     def set_activity_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method 
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/activities"""
         return URIRef(self.namespace_activities + name)
 
     def set_entity_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method 
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/entities """
         return URIRef(self.namespace_entities + name)
 
     def set_unit_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method 
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/units """
         return URIRef(self.namespace_units + name)
 
     def set_prefix_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method 
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/prefixes """
         return URIRef(self.namespace_prefixes + name)
 
     def set_decision_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/decisions """
         return URIRef(self.namespace_decisions + name)
 
     def set_quantity_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/quantities """
         return URIRef(self.namespace_quantities + name)
 
     def set_constant_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/SI/constants """
         return URIRef(self.namespace_constants + name)
 
     def set_cgpm_uri(self, name: str) -> URIRef:
-        """ Utility method """
+        """ Utility method
+            Returns full URI of the resource
+            including the namespace https://si-digital-framework.org/bodies/CGPM """
         return URIRef(self.namespace_bodies['cgpm'] + name)
 
     def set_resolution_uri(self, name: str) -> URIRef:

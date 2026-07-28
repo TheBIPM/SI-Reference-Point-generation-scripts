@@ -7,6 +7,14 @@
 @prefix units: <https://si-digital-framework.org/SI/units/> .
 @prefix quantities: <https://si-digital-framework.org/quantities/> .
 @prefix prefixes: <https://si-digital-framework.org/SI/prefixes/> .
+@prefix entities: <https://si-digital-framework.org/SI/entities#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# metadata
+entities:si_20260728140000Z.ttl a prov:Entity ;
+    prov:wasAttributedTo "Gregor Dudle"^^xsd:string ;
+    prov:wasDerivedFrom  "SI Brochure 9th ed, V3.02"^^xsd:string ;
+    prov:wasGeneratedBy "manual TTL generation"^^xsd:string .
 
 
 # properties
@@ -96,6 +104,21 @@ si:hasNumericExponent a owl:DatatypeProperty ;
     rdfs:domain si:UnitPower;
     rdfs:range xsd:short .
 
+si:hasExponentNominator a owl:DatatypeProperty ;
+    rdfs:label "has exponent nominator"@en,
+        "a pour nominateur dans l'exposant ce nombre"@fr;
+    rdfs:comment "UnitBase ^ (numerator/denominator)";
+    rdfs:domain si:UnitPower;
+    rdfs:range xsd:short .
+
+si:hasExponentDenominator a owl:DatatypeProperty ;
+    rdfs:label "has exponent denominator"@en,
+        "a pour dénominateur dans l'exposant ce nombre"@fr;
+    rdfs:comment "UnitBase ^ (numerator/denominator)";
+    rdfs:domain si:UnitPower;
+    rdfs:range xsd:short .
+
+
 si:hasExponent a owl:DatatypeProperty ;
     rdfs:label "has numeric exponent as power of 10"@en,
         "a pour exposant de puissance 10 ce nombre"@fr ;
@@ -177,6 +200,11 @@ si:UnitPower a owl:Class ;
     rdfs:label "unit power"@en,
         "unité élevée à la puissance"@fr ;
     rdfs:subClassOf si:CompoundUnit .
+
+si:UnitFractionPower a owl:Class ;
+    rdfs:label "unit fractional power"@en,
+        "unité élevée à une puissance fractionnelle"@fr ;
+    rdfs:subClassOf si:UnitPower .
 
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit"@en,
