@@ -202,9 +202,26 @@ si:UnitPower a owl:Class ;
     rdfs:subClassOf si:CompoundUnit .
 
 si:UnitFractionPower a owl:Class ;
-    rdfs:label "unit fractional power"@en,
+    rdfs:label "unit fraction power"@en ,
         "unité élevée à une puissance fractionnelle"@fr ;
-    rdfs:subClassOf si:UnitPower .
+    rdfs:subClassOf si:UnitPower ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+				si:UnitPower
+				[
+					a owl:Restriction ;
+					owl:onProperty si:hasExponentNumerator ;
+					owl:someValuesFrom xsd:integer
+				]
+				[
+					a owl:Restriction ;
+					owl:onProperty si:hasExponentDenominator ;
+					owl:someValuesFrom xsd:integer
+				]
+
+			)
+    ] .
 
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit"@en,
