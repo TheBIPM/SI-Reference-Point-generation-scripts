@@ -109,13 +109,12 @@ def transform_to_graph(expression, si_graph, graph):
                 # insert base and exponent
                 graph, node = transform_to_graph(expression["exp"][0],
                                                 si_graph, graph)
-                if fraction_exponent.denominator == 1:
-                    graph.add((expr_node, si_graph.has_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
-
-                else:
+                graph.add((expr_node, si_graph.has_numeric_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                
+                if fraction_exponent.denominator >= 2:
                     graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
-                    graph.add((expr_node, si_graph.has_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
-                    graph.add((expr_node, si_graph.has_exponent_numerator, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                    graph.add((expr_node, si_graph.has_numeric_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
+
                 graph.add((expr_node, si_graph.has_base, node))
 
 

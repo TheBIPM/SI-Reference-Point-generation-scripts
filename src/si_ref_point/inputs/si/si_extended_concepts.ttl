@@ -104,20 +104,12 @@ si:hasNumericExponent a owl:DatatypeProperty ;
     rdfs:domain si:UnitPower;
     rdfs:range xsd:short .
 
-si:hasExponentNumerator a owl:DatatypeProperty ;
-    rdfs:label "has exponent numerator"@en,
-        "a pour nominateur dans l'exposant ce nombre"@fr;
-    rdfs:comment "UnitBase ^ (numerator/denominator)";
-    rdfs:domain si:UnitPower;
-    rdfs:range xsd:short .
-
-si:hasExponentDenominator a owl:DatatypeProperty ;
+si:hasNumericExponentDenominator a owl:DatatypeProperty ;
     rdfs:label "has exponent denominator"@en,
         "a pour dénominateur dans l'exposant ce nombre"@fr;
     rdfs:comment "UnitBase ^ (numerator/denominator)";
     rdfs:domain si:UnitPower;
     rdfs:range xsd:short .
-
 
 si:hasExponent a owl:DatatypeProperty ;
     rdfs:label "has numeric exponent as power of 10"@en,
@@ -209,11 +201,6 @@ si:UnitFractionPower a owl:Class ;
 		a owl:Class ;
 		owl:intersectionOf (
 				si:UnitPower
-				[
-					a owl:Restriction ;
-					owl:onProperty si:hasExponentNumerator ;
-					owl:someValuesFrom xsd:integer
-				]
 				[
 					a owl:Restriction ;
 					owl:onProperty si:hasExponentDenominator ;
