@@ -38,30 +38,11 @@ SI_FILES_FOLDER = PKG_ROOT / "inputs" / "si"
 
 GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/"
 
-# SI_BROCHURE_PID="SI_Brochure_ed3_V3_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
+# SI_BROCHURE_PID="SI_Brochure_ed3_V4_01" # will be transformed into a PID '(SIDFWBASE)/SI/entities/(SI_BROCHURE_PID)'
 
 # Licences
-CC_LICENCE = "https://creativecommons.org/licenses/by/3.0/igo/"
+CC_LICENCE = "https://creativecommons.org/licenses/by/4.0/"
 CC_LICENCE_TEXT_EN = """The SI Reference Point Ontology developed by the BIPM is
-licensed under CC-BY-3.0-IGO. You are free to share (copy and redistribute
-the material in any medium or format) and adapt (remix, transform, and
-build upon the material) for any purpose, even commercially, for any
-purpose, even commercially. The licensor cannot revoke these freedoms as
-long as you follow the license terms. You must give appropriate credit
-(by using the original ontology IRI for the whole ontology and original
-term IRIs for individual terms), provide a link to the license, and
-indicate if any changes were made. You may do so in any reasonable
-manner, but not in any way that suggests the licensor endorses you or
-your use."""
+licensed under CC-BY-4.0. For further information visit https://www.bipm.org/en/copyright."""
 CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous
-licence CC-BY-3.0-IGO. Vous êtes autorisés à partager (copier, distribuer et communiquer
-le matériel par tous moyens et sous tous formats) et adapter (remixer, transformer
-et créer à partir du matériel) pour toute utilisation, y compris commerciale.
-L'Offrant ne peut retirer les autorisations concédées par la licence tant que
-vous appliquez les termes de cette licence. Vous devez créditer l'oeuvre
-(en utilisant l'IRI de l'ontologie originale pour l'ontologie entière
-et les IRIs originaux des termes individuels), intégrer un lien vers la licence
-et indiquer si des modifications ont été effectuées à l'oeuvre.
-Vous devez indiquer ces informations par tous les moyens raisonnables,
-sans toutefois suggérer que l'offrant vous soutient ou soutient
-la façon dont vous avez utilisé son Oeuvre."""
+licence CC-BY-4.0. Pour plus d'informations, consultez https://www.bipm.org/fr/copyright."""
