@@ -662,13 +662,14 @@ def main():
             )
             units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
             units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
-            units_graph.add(
-                (
-                    element,
-                    si_graph.has_symbol,
-                    Literal(nsi["Symbol"], datatype=XSD.string),
+            if "Symbol" in nsi:
+                units_graph.add(
+                    (
+                        element,
+                        si_graph.has_symbol,
+                        Literal(nsi["Symbol"], datatype=XSD.string),
+                    )
                 )
-            )
             if "AltSymbol" in nsi:
                 units_graph.add(
                     (

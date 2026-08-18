@@ -159,7 +159,6 @@ data:
 - URI: nauticalmile
   prefLabel_fr: mille nautique
   prefLabel_en: nautical mile
-  Symbol: NeedSymbolException1
   UnitOfQtyKind: LENG
   ConversionFactor: "1852"
   ConversionFactorAsString: "1852"
@@ -168,7 +167,6 @@ data:
 - URI: knot
   prefLabel_fr: nœud
   prefLabel_en: knot
-  Symbol: NeedSymbolException2
   UnitOfQtyKind: VELO
   ConversionFactor: "0.514444444444"
   ConversionFactorAsString: "0.514\\:444\\:444\\:444"
