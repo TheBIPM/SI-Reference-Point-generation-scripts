@@ -3,7 +3,7 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+  wasDerivedFrom: "SI Brochure 9th ed, V4.01"
 data:
 # Quantities not named in the Brochure but necessary for KCDB and other uses
 - identifier: DYVI

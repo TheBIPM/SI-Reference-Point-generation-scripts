@@ -3,7 +3,7 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.01"
+  wasDerivedFrom: "SI Brochure 9th ed, V4.02"
 data:
 # Quantities named in table 2 and 3:
 - identifier: TIME
