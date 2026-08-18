@@ -73,6 +73,8 @@ data:
   prefLabel_fr: hectare
   prefLabel_en: hectare
   Symbol: ha
+  hasPrefix: hecto
+  hasNonPrefixedUnit: are
   UnitOfQtyKind: AREA
   ConversionFactor: "1e4"
   ConversionFactorAsString: "10000"
@@ -194,16 +196,12 @@ data:
   Symbol: B
   UnitOfQtyKind: RLGB
   PrefixRestriction: false
-- URI: bel
-  prefLabel_fr: bel
-  prefLabel_en: bel
-  Symbol: B
-  UnitOfQtyKind: RLGB
-  PrefixRestriction: false
 - URI: decibel
   prefLabel_fr: decibel
   prefLabel_en: decibel
   Symbol: dB
+  hasPrefix: deci
+  hasNonPrefixedUnit: bel
   UnitOfQtyKind: RLGB
   PrefixRestriction: true
 - URI: var
