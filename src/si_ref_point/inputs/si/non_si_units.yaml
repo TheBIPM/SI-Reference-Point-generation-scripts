@@ -3,14 +3,14 @@ meta:
   wasAssociatedWith: "Frédéric Meynadier"
   wasGeneratedBy: "manual YAML generation"
   startedAtTime: "2023-01-01"
-  wasDerivedFrom: "SI Brochure 9th ed, V3.02"  
+  wasDerivedFrom: "SI Brochure 9th ed, V4.01"  
 data:
 - URI: minute
   prefLabel_fr: minute
   prefLabel_en: minute
   Symbol: min
   UnitOfQtyKind: TIME
-  ConversionFactor: 60
+  ConversionFactor: "60"
   ConversionFactorAsString: "60"
   ConversionUnit: second
   PrefixRestriction: true
@@ -19,7 +19,7 @@ data:
   prefLabel_en: hour
   Symbol: h
   UnitOfQtyKind: TIME
-  ConversionFactor: 3600
+  ConversionFactor: "3600"
   ConversionFactorAsString: "3600"
   ConversionUnit: second
   PrefixRestriction: true
@@ -28,18 +28,9 @@ data:
   prefLabel_en: day
   Symbol: d
   UnitOfQtyKind: TIME
-  ConversionFactor: 86400
+  ConversionFactor: "86400"
   ConversionFactorAsString: "86\\:400"
   ConversionUnit: second
-  PrefixRestriction: true
-- URI: astronomicalunit
-  prefLabel_fr: unité astronomique
-  prefLabel_en: astronomical unit
-  Symbol: au
-  UnitOfQtyKind: LENG
-  ConversionFactor: 149597870700
-  ConversionFactorAsString: "149\\:597\\:870\\:700"
-  ConversionUnit: metre
   PrefixRestriction: true
 - URI: degree
   prefLabel_fr: degré
@@ -68,6 +59,36 @@ data:
   ConversionFactorAsString: "(π \\; / \\; 648000)"
   ConversionUnit: radian
   PrefixRestriction: true
+- URI: are
+  prefLabel_fr: are
+  prefLabel_en: are
+  Symbol: a
+  UnitOfQtyKind: AREA
+  ConversionFactor: "1e2"
+  ConversionFactorAsString: "100"
+  ConversionUnit: 
+    - [metre, "2"]
+  PrefixRestriction: false
+- URI: hectare
+  prefLabel_fr: hectare
+  prefLabel_en: hectare
+  Symbol: ha
+  UnitOfQtyKind: AREA
+  ConversionFactor: "1e4"
+  ConversionFactorAsString: "10000"
+  ConversionUnit: 
+    - [metre, "2"]
+  PrefixRestriction: true
+- URI: barn
+  prefLabel_fr: barn
+  prefLabel_en: barn
+  Symbol: b
+  UnitOfQtyKind: AREA
+  ConversionFactor: "1e-28"
+  ConversionFactorAsString: "10^{-28}"
+  ConversionUnit: 
+    - [metre, "2"]
+  PrefixRestriction: true
 - URI: litre
   prefLabel_fr: litre
   prefLabel_en: litre
@@ -83,10 +104,39 @@ data:
   prefLabel_en: tonne
   Symbol: t
   UnitOfQtyKind: MASS
-  ConversionFactor: 1000
+  ConversionFactor: "1000"
   ConversionFactorAsString: "1000"
   ConversionUnit: kilogram
   PrefixRestriction: true
+- URI: angstrom
+  prefLabel_fr: angstrom
+  prefLabel_en: angstrom
+  Symbol: Å
+  UnitOfQtyKind: LENG
+  ConversionFactor: "1e-10"
+  ConversionFactorAsString: "10^{-10}"
+  ConversionUnit: metre
+  PrefixRestriction: true
+- URI: gal
+  prefLabel_fr: gal
+  prefLabel_en: gal
+  Symbol: Gal
+  UnitOfQtyKind: ACCE
+  ConversionFactor: "1e-2"
+  ConversionFactorAsString: "10^{-2}"
+  ConversionUnit: 
+    - [metre, "1"]
+    - [second, "-2"]
+  PrefixRestriction: true
+- URI: bar
+  prefLabel_fr: bar
+  prefLabel_en: bar
+  Symbol: bar
+  UnitOfQtyKind: PRES
+  ConversionFactor: "1e5"
+  ConversionFactorAsString: "10^{5}"
+  ConversionUnit: pascal
+  PrefixRestriction: false
 - URI: dalton
   prefLabel_fr: dalton
   prefLabel_en: dalton
@@ -95,6 +145,35 @@ data:
   ConversionFactor: "1.66053906892e-27"
   ConversionFactorAsString: "1.660\\:539\\:068\\:92(52) \\times 10^{-27}"
   ConversionUnit: kilogram
+- URI: astronomicalunit
+  prefLabel_fr: unité astronomique
+  prefLabel_en: astronomical unit
+  Symbol: au
+  UnitOfQtyKind: LENG
+  ConversionFactor: "149597870700"
+  ConversionFactorAsString: "149\\:597\\:870\\:700"
+  ConversionUnit: metre
+  PrefixRestriction: true
+- URI: nauticalmile
+  prefLabel_fr: mille nautique
+  prefLabel_en: nautical mile
+  Symbol: NeedSymbolException1
+  UnitOfQtyKind: LENG
+  ConversionFactor: "1852"
+  ConversionFactorAsString: "1852"
+  ConversionUnit: metre
+  PrefixRestriction: true
+- URI: knot
+  prefLabel_fr: nœud
+  prefLabel_en: knot
+  Symbol: NeedSymbolException2
+  UnitOfQtyKind: VELO
+  ConversionFactor: "0.514444444444"
+  ConversionFactorAsString: "0.514\\:444\\:444\\:444"
+  ConversionUnit: 
+    - [metre, "1"]
+    - [second, "-1"]
+  PrefixRestriction: true
 - URI: electronvolt
   prefLabel_fr: électronvolt
   prefLabel_en: electronvolt
@@ -115,13 +194,26 @@ data:
   Symbol: B
   UnitOfQtyKind: RLGB
   PrefixRestriction: false
-- URI: hectare
-  prefLabel_fr: hectare
-  prefLabel_en: hectare
-  Symbol: ha
-  UnitOfQtyKind: AREA
-  ConversionFactor: 10000
-  ConversionFactorAsString: "10^{4}"
-  ConversionUnit:
-    - [metre, "2"]
+- URI: bel
+  prefLabel_fr: bel
+  prefLabel_en: bel
+  Symbol: B
+  UnitOfQtyKind: RLGB
+  PrefixRestriction: false
+- URI: decibel
+  prefLabel_fr: decibel
+  prefLabel_en: decibel
+  Symbol: dB
+  UnitOfQtyKind: RLGB
   PrefixRestriction: true
+- URI: var
+  prefLabel_fr: var
+  prefLabel_en: var
+  Symbol: var
+  UnitOfQtyKind: REPO
+  ConversionFactor: "1"
+  ConversionFactorAsString: "1"
+  ConversionUnit:
+    - [volt, "1"]
+    - [ampere, "1"]
+  PrefixRestriction: false

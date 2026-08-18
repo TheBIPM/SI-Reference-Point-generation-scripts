@@ -425,10 +425,14 @@ data:
 
 # Logarithmic quantities named in table 8 :
 - identifier: RLGB
-  quantity-en: 'ratio logarithm (B)'
-  quantity-fr: "logarithme d'un rapport (B)"
-  Unit: bel
+  quantity-en: 'ratio logarithm (dB)'
+  quantity-fr: "logarithme d'un rapport (dB)"
+  Unit: decibel
 - identifier: RLGN
   quantity-en: 'ratio logarithm (Np)'
   quantity-fr: "logarithme d'un rapport (Np)"
   Unit: neper
+- identifier: REPO
+  quantity-en: 'reactive power'
+  quantity-fr: "puissance réactive"
+  Unit: var

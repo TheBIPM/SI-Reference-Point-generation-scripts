@@ -89,7 +89,7 @@ data:
   quantity-en: 'shielding factor'
   quantity-fr: 'taux de blindage'
   Unit:
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: ANIS
   quantity-en: 'anisotropy'
   quantity-fr: 'anisotropie'
@@ -176,7 +176,7 @@ data:
   quantity-fr: 'humidité relative'
   Unit: null  
 - identifier: LXRS
-  quantity-en: 'luminous exposure reponsivity'
+  quantity-en: 'luminous exposure responsivity'
   quantity-fr: 'sensibilité à l''exposition lumineuse'
   Unit: 
     - [lux, "-1"]
@@ -202,7 +202,7 @@ data:
   quantity-en: 'loss (attenuation)'
   quantity-fr: 'attenuation'
   Unit:
-    - [bel, "1"]  
+    - [decibel, "1"]  
 - identifier: ENCL
   quantity-en: 'encircled flux'
   quantity-fr: 'flux encerclé'
@@ -243,7 +243,7 @@ data:
   quantity-en: 'power level relative to 1 mW'
   quantity-fr: 'niveau de puissance rélatif à 1 mW'
   Unit:
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: DISP
   quantity-en: 'chromatic dispersion'
   quantity-fr: 'dispersion chromatique'
@@ -276,22 +276,22 @@ data:
   quantity-en: 'sound pressure level (referenced to 20 μPa)'
   quantity-fr: 'niveau de pression acoustique (référence : 20 μPa)'
   Unit: 
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: SYRL
   quantity-en: 'system response level (referenced to true level)'
   quantity-fr: 'niveau de réponse du système (référence : niveau réel)'
   Unit: 
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: PSNL
   quantity-en: 'pressure sensitivity level (referenced to 1 V/Pa)'
   quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/Pa)'
   Unit: 
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: PSNW
   quantity-en: 'pressure sensitivity level (referenced to 1 V/μPa)'
   quantity-fr: 'niveau de sensibilité à la pression (référence : 1 V/μPa)'
   Unit: 
-      - [bel, "1"]    
+      - [decibel, "1"]    
 - identifier: SOIN
   quantity-en: 'sound intensity'
   quantity-fr: 'intensité acoustique'
@@ -302,7 +302,7 @@ data:
   quantity-en: 'sound intensity level (referenced to 1 pW m-2)'
   quantity-fr: 'niveau d''intensité acoustique (référence : 1 pW m-2)'
   Unit: 
-    - [bel, "1"]
+    - [decibel, "1"]
 - identifier: ACIM
   quantity-en: 'acoustic impedance'
   quantity-fr: 'impédance acoustique'
@@ -314,7 +314,7 @@ data:
   quantity-en: 'mechanical impedance (referenced to 1 N s m-2)'
   quantity-fr: 'impédance mécanique (référence : 1 N s m-2)'
   Unit: 
-    - [bel, "1"]      
+    - [decibel, "1"]      
 - identifier: DIRE
   quantity-en: 'directivity'
   quantity-fr: 'directivité'
@@ -323,7 +323,7 @@ data:
   quantity-en: 'force response level (referenced to 1 V/N)'
   quantity-fr: 'niveau de réponse à la force (référence : 1 V/N)'
   Unit: 
-    - [bel, "1"] 
+    - [decibel, "1"] 
 - identifier: NORM
   quantity-en: 'normalized signal'
   quantity-fr: 'signal normalisé'
