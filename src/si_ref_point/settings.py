@@ -42,7 +42,7 @@ GITHUB_BASE_PATH = "https://github.com/TheBIPM/SI-Reference-Point-generation-scr
 
 # Licences
 CC_LICENCE = "https://creativecommons.org/licenses/by/4.0/"
-CC_LICENCE_TEXT_EN = """The SI Reference Point Ontology developed by the BIPM is
-licensed under CC-BY-4.0. For further information visit https://www.bipm.org/en/copyright."""
-CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous
-licence CC-BY-4.0. Pour plus d'informations, consultez https://www.bipm.org/fr/copyright."""
+CC_LICENCE_TEXT_EN = """The SI Reference Point Ontology developed by the BIPM is licensed under CC-BY-4.0.
+For further information visit https://www.bipm.org/en/copyright."""
+CC_LICENCE_TEXT_FR = """L'ontologie SI Reference Point developpée par le BIPM est sous licence CC-BY-4.0.
+Pour plus d'informations, consultez https://www.bipm.org/fr/copyright."""
