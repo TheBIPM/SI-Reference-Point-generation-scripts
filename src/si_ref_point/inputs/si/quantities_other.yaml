@@ -34,21 +34,31 @@ data:
   Unit:
     - [metre, "-2"]
     - [second, "-1"]
+- identifier: TETD
+  quantity-en: 'thermodynamic temperature difference'
+  quantity-fr: 'différence de température thermodynamique'
+  Unit:
+    - [kelvin, "1"]
 - identifier: PLTS
   quantity-en: 'PLTS-2000 temperature'
   quantity-fr: 'température PLTS-2000'
   Unit:
     - [kelvin, "1"]
-- identifier: ITSK
-  quantity-en: "ITS-90 temperature (K)"
-  quantity-fr: "température ITS-90 (K)"
+- identifier: PLTD
+  quantity-en: 'PLTS-2000 temperature difference'
+  quantity-fr: 'différence de température PLTS-2000'
   Unit:
     - [kelvin, "1"]
-- identifier: ITSC
-  quantity-en: 'ITS-90 temperature (°C)'
-  quantity-fr: 'température ITS-90 (°C)'
+- identifier: ITSK
+  quantity-en: 'ITS-90 temperature'
+  quantity-fr: 'température ITS-90'
   Unit:
-    - [degreeCelsius, "1"]
+    - [kelvin, "1"]
+- identifier: ITSD
+  quantity-en: 'ITS-90 temperature difference'
+  quantity-fr: 'différence de température ITS-90'
+  Unit:
+    - [kelvin, "1"]
 - identifier: PHAS
   quantity-en: 'phase angle'
   quantity-fr: 'angle de phase'

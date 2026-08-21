@@ -130,10 +130,6 @@ data:
   quantity-en: inductance
   quantity-fr: inductance
   Unit: henry
-- identifier: TEMC
-  quantity-en: Celsius temperature
-  quantity-fr: température Celsius
-  Unit: degreeCelsius
 - identifier: LUFL
   quantity-en: luminous flux
   quantity-fr: flux lumineux

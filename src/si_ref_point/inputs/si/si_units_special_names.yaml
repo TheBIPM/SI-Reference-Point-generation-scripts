@@ -29,7 +29,7 @@ data:
   prefLabel_en: degree Celsius
   Symbol: °C
   hasDefiningResolution: CGPM9-Res7
-  UnitOfQtyKind: TEMC
+  UnitOfQtyKind: TEMT
   inBaseSIUnits: kelvin
   hasDefiningEquation: 1\;{@ceus@} = \left(\frac{@bolv@}{@bols@}\right) {@kgms@}\;{@mtrs@}^2\;{@secs@}^{-2}
 - URI: farad
