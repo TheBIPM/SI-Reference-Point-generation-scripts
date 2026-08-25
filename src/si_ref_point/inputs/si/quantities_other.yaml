@@ -8,7 +8,7 @@ data:
 # Quantities not named in the Brochure but necessary for KCDB and other uses
 - identifier: DYVI
   quantity-en: dynamic viscosity
-  quantity-fr: 'viscosité dynamique '
+  quantity-fr: 'viscosité dynamique'
   Unit:
     - [pascal, "1"]
     - [second, "1"]
@@ -356,3 +356,17 @@ data:
   quantity-en: 'flicker severity index (long term)'
   quantity-fr: 'indicateur de flicker à long terme'
   Unit: null     
+- identifier: ISAB
+  quantity-en: 'isotopic abundance'
+  quantity-fr: 'abondance isotopique'
+  # External reference https://doi.org/10.1351/goldbook.I03332
+  Unit:
+    - [mole, "1"]
+    - [mole, "-1"]
+- identifier: ISRA
+  quantity-en: 'isotope ratio'
+  quantity-fr: 'rapport isotopique'
+  # External reference https://doi.org/10.1351/goldbook.12452
+  Unit:
+    - [mole, "1"]
+    - [mole, "-1"]
