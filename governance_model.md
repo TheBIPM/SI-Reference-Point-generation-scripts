@@ -1,6 +1,12 @@
 # Governance model for updating the SI Reference Point
 
-The knowledge model of the SI Reference Point (SIRP) is versioned according to the [Semantic Versioning scheme](https://semver.org/). To make updates to the SIRP, the following steps are proposed: 1. Reception and registration of a request 2. Assessment and prioritization 3.
+The knowledge model of the SI Reference Point (SIRP) is versioned according to the [Semantic Versioning scheme](https://semver.org/). To make updates to the SIRP, the following steps are proposed:
+
+1.  Reception and registration of a request
+2.  Assessment and prioritization
+3.  Branch creation and code development
+4.  Expert group review
+5.  Approval and release
 
 Each step is further described below.
 
