@@ -35,7 +35,11 @@ Before moving the status of any issue in the backlog, a comment is added with a 
 
 For issues moved to **Consultation**, the participants must agree on the instance to which the topic will be taken and a responsible person must be defined. At the next meeting, a follow-up of issues under consultation is made. Afterward, the issue may be moved to **Not planned** or to **Planned**.
 
-For issues with status **Planned**, a prioritization level must be assigned by adding one of the issue tags `planned-high-priority`, `planned-medium-priority,` and `planned-low-priority`. Furthermore, the impact of implementing the solution to the issue is estimated, according to the instances adapted from the [Semantic Versioning scheme](https://semver.org/): \* Major version updates when the changes will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property) \* Minor version updates when a feature will be introduced in a backward compatible manner (e.g. adding new individuals, like new units of measurement) \* Patch updates when a bug you make backward compatible bug fixes (e.g. fixing a comment o relabeling an individual)
+For issues with status **Planned**, a prioritization level must be assigned by adding one of the issue tags `planned-high-priority`, `planned-medium-priority,` and `planned-low-priority`. Furthermore, the impact of implementing the solution to the issue is estimated, according to the instances adapted from the [Semantic Versioning scheme](https://semver.org/):
+
+- **Major** version updates when the changes will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property).
+- **Minor** version updates when a feature will be introduced in a backward compatible manner (e.g. adding new individuals, like new units of measurement).
+- **Patch** updates when a bug you make backward compatible bug fixes (e.g. fixing a comment o relabeling an individual).
 
 Changes that will reflect on major version updates are discussed and approved at the Task Group level, while the changes that will reflect on a patch or minor version updates are discussed and approved at the expert group level (see Section \##).
 
