@@ -47,7 +47,10 @@ One or more expert group members may volunteer to work on the implementation. Th
 
 ## 3. Branch creation and code development
 
-The repository will always hold two permanent branches: \* Branch `origin/main`, which will always reflect the last stable release of the knowledge model available in the [SI Digital Framework website](https://si-digital-framework.org/) and in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework). \* Branch `origin/develop`, which contains the last feature implementations and bug fixes for the next release.
+The repository will always hold two permanent branches: 
+
+* Branch `origin/main`, which will always reflect the last stable release of the knowledge model available in the [SI Digital Framework website](https://si-digital-framework.org/) and in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework).
+* Branch `origin/develop`, which contains the last feature implementations and bug fixes for the next release.
 
 Additional feature/fix branches are created with a limited lifetime to start working on an issue with status **Planned**. These branches are created from branch `origin/develop` and should be named in an informative way, always including the number of the issue (e.g. `95-new-version-of-the-9th-edition-of-the-si-brochure-v4_01`, to work on [issue #95](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/issues/95)). Then, the status of the issue is changed to **In progress** on the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6).
 
