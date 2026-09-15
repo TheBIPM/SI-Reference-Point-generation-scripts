@@ -56,8 +56,8 @@ si:inOtherSIUnits a owl:ObjectProperty ;
 si:nonSIUnit a owl:Class ;
     rdfs:label "non SI unit"@en,
         "unité en dehors du SI"@fr ;
-    rdfs:comment "Non-SI units that are accepted for use with the SI"@en,
-        "Unités en dehors du SI dont l’usage est accepté avec le SI"@fr ;
+    rdfs:comment "Non-SI units"@en,
+        "Unités en dehors du SI"@fr ;
     rdfs:subClassOf si:MeasurementUnit .
 
 si:Definition a owl:Class ;
