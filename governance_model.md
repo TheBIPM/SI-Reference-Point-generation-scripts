@@ -1,9 +1,11 @@
 # Governance model for updating the SI Reference Point
 
-The knowledge model of the SI Reference Point (SIRP) is versioned according to the [Semantic Versioning scheme](https://semver.org/). To make updates to the SIRP, the following steps are proposed:
+The SI Reference Point (SIRP) is a machine-actionable knowledge model developed by the expert group members of the (FORUM-MD Task Group on SI-digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
+
+The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/). To make changes to the knowledge model, the following steps are proposed:
 
 1.  Reception and registration of a request
-2.  Assessment and prioritization
+2.  Classification, assessment and prioritization
 3.  Branch creation and code development
 4.  Expert group review
 5.  Approval and release
@@ -15,6 +17,8 @@ Each step is further described below.
 Requests can be made by anyone in the community via a GitHub issue, email, or verbal communication during meetings, among other ways. Some requests may respond to updates in reference documents (mainly the SI Brochure), may be reports of errors (bugs), or demands for new features.
 
 Requests that are not received as a GitHub issue shall be registered as such in one of the public repositories. However, before opening a new issue, the issues of the public repositories are assessed for entries that already relate to the topic. If there is already an ongoing discussion, the new information is registered as a comment on behalf of the person who originally made the request. On the contrary, a new issue is registered on behalf of the person who originally made the request. In any case, the lin to the new issue or to the comment in the ongoing discussion shall be shared with the person who submitted the request.
+
+> *include web-services-related and git-repository-related tags that are BIPM*
 
 > *CP: How do we decide which issues go to which repository? Maybe knowledge-model-related to the [generation scripts repo](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) and web-services-related to the [SI Digital Framework repo](https://github.com/TheBIPM/SI_Digital_Framework)? Issues can be moved between public repositories and original links will redirect to the new locations.*
 > AS>
