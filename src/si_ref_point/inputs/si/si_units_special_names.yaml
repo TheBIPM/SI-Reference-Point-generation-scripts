@@ -192,10 +192,8 @@ data:
   Symbol: rad
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ANGP
-  inOtherSIUnits:
-  inBaseSIUnits:
-    - [metre, "1"]
-    - [metre, "-1"]
+  inOtherSIUnits: one
+  inBaseSIUnits: null
   hasDefiningEquation:
 - URI: siemens
   prefLabel_fr: siemens
@@ -234,9 +232,8 @@ data:
   Symbol: sr
   hasDefiningResolution: CGPM11-Res12
   UnitOfQtyKind: ANGS
-  inBaseSIUnits:
-    - [metre, "2"]
-    - [metre, "-2"]
+  inBaseSIUnits: null
+  inOtherSIUnits: one
   hasDefiningEquation:
 - URI: tesla
   prefLabel_fr: tesla
