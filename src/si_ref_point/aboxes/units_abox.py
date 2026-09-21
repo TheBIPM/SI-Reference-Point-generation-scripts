@@ -647,7 +647,7 @@ def main():
                 (
                     element,
                     si_graph.has_unit_type_as_string,
-                    Literal("Non-SI unit", lang="en"),
+                    Literal("Non-SI unit accepted for use with the SI", lang="en"),
                 )
             )
             units_graph.add(
@@ -655,46 +655,26 @@ def main():
                     element,
                     si_graph.has_unit_type_as_string,
                     Literal(
-                        "Unité en dehors du SI",
+                        "Unité en dehors du SI dont l'usage est accepté avec le SI",
                         lang="fr",
                     ),
                 )
             )
             units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_fr"], lang="fr")))
             units_graph.add((element, SKOS.prefLabel, Literal(nsi["prefLabel_en"], lang="en")))
-            if "Symbol" in nsi:
-                units_graph.add(
-                    (
-                        element,
-                        si_graph.has_symbol,
-                        Literal(nsi["Symbol"], datatype=XSD.string),
-                    )
+            units_graph.add(
+                (
+                    element,
+                    si_graph.has_symbol,
+                    Literal(nsi["Symbol"], datatype=XSD.string),
                 )
+            )
             if "AltSymbol" in nsi:
                 units_graph.add(
                     (
                         element,
                         si_graph.has_alt_symbol,
                         Literal(nsi["AltSymbol"], datatype=XSD.string),
-                    )
-                )
-
-            if "hasPrefix" in nsi:
-                units_graph.add((element, RDF.type, si_graph.set_uri("PrefixedUnit")))
-                units_graph.add(
-                    (
-                        element,
-                        si_graph.set_uri("hasPrefix"),
-                        si_graph.set_prefix_uri(nsi["hasPrefix"]),
-                    )
-                )
-
-            if "hasNonPrefixedUnit" in nsi:
-                units_graph.add(
-                    (
-                        element,
-                        si_graph.set_uri("hasNonPrefixedUnit"),
-                        si_graph.set_unit_uri(nsi["hasNonPrefixedUnit"]),
                     )
                 )
 
