@@ -1,13 +1,15 @@
 # Governance model for updating the SI Reference Point
 
-The SI Reference Point (SIRP) is a machine-actionable knowledge model of the SI Brochure [[#]]() developed by the expert group members of the (FORUM-MD Task Group on SI-digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
+The SI Reference Point (SIRP) is a machine-actionable knowledge model of the SI Brochure [[#]]() developed by the Expert Group members of the (FORUM-MD Task Group on SI-digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
 The web services available at https://si-digital-framework.org/SI provide access to the knowledge model of the SIRP, and are developed by the BIPM.
 
-The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version.
+The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version (see [Section Planned](#Planned)).
 The version control is handled at two public GitHub repositories that serve different purposes:
 
-- [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts): A Python package that generates the knowledge graph of the SIRP serialized as Turtle and JSON-LD files.
-- [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework): A read-only repository to track changes in the Turtle-serialized files of the SIRP and other ontologies.
+- [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts):
+A Python package that generates the knowledge graph of the SIRP serialized as Turtle and JSON-LD files.
+- [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework):
+A read-only repository to track changes in the Turtle-serialized files of the SIRP and other ontologies.
 
 Changes to the SIRP and the associated web services respond to feedback received from the user community.
 The following steps are proposed for handling this feedback:
@@ -31,43 +33,83 @@ Before opening a new issue, it is desirable to look for an already opened issue 
 In case there is already a related issue, the new information is added to the ongoing discussion as a comment.
 On the contrary, a new issue is registered.
 All requests must be submitted by an identifiable user, either in an individual capacity or on behalf of a body (e.g. working group of a CIPM Consultative Committee).
-If the request was registered on behalf of someone else, a disclaimer shall be included (*On behalf of...*), and the link to the new issue (or to the comment) shall be shared with the person who originally submitted the request.
-
-All issues filed in the two repositories are automatically added to the backlog of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) (accessible only to logged-in members of the Expert Group).
-
+If the request was registered on behalf of someone else, a disclaimer shall be included (*On behalf of...*).
+The link to the new issue (or to the comment) shall be shared with the person who originally submitted the request.
 
 ## 2. Classification, assessment and prioritization
+All issues registered in the two repositories shall be added to the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) (accessible only to logged-in members of the Expert Group).
 
-> *include web-services-related and git-repository-related tags that are BIPM*
-> JLH> Use labels, include i.e. *request from CC*, to identify the kind of issue. Support by CP. 
-This step occurs at the expert group meetings that are convened by the BIPM. Anyone, whether an expert group member or not, can comment on any issue at any time. The comments are useful to advance the discussion before the meeting. At every meeting, the participants assess the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) that organizes the topics in different status fields. All issues start in status **Backlog**, meaning that it has been registered and may contain additional comments, but no decision has been made. The issues in backlog are discussed and may be assigned a new status depending on the consensus reached:
+Upon registration, the issues are classified according to the scope (mandatory) and the requesting body (optional).
+Suitable labels (`<label>`) shall be assigned to help identify, filter and prioritize them.
 
-- **Planned**: The request is reasonable or necessary and will be advanced in due time. Tag `planned`.
-- **Consultation**: The expert group participants consider that the topic must be discussed at a different instance: the SIDF task group, a working group of the CIPM Forum on Metrology and Digitalization (FORUM-MD), the Consultative Committee of Units (CCU), or another Consultative Committee of the CIPM. In case of strong disagreement regarding a decision, the issue is moved to this status. The decision about which body to consult should be at least informed to the TG-SIDF. Tag `consultation`.
-- **Done**: The request tackles a topic that has already been solved or is a duplicate of another issue. Tag `done`.
-- **Not planned**: The request has been deemed unsuitable under current circumstances. Tag `not-planned`.
+- Scope: Most issues are related to the ontology (label `ontology`) or to the web services (label `web-services`).
+To a lesser extent, issues can be related to the management of the repository (label `repo-management`).
+- Requesting body: Issues can be raised by representatives of the digitalization working group of a CIPM Consultative Committee (label `request-from-CC`), of a FORUM-MD working group (label `request-from-FORUM-MD`), or of a liaison organization (label `request-from-liaison-org`).
+This information can help in the prioritazion of the topics.
+
+> **Note:** The remaining part of this governance document applies to the issues related to the ontology of the SIRP.
+The issues related to the web services or to the management of the repository are handled exclusively by the BIPM.
+
+The Expert Group members gather at meetings convened by the BIPM to assess and prioritize the issues.
+At every meeting, the issues in the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) are discussed and reorganized in status boxes accordingly:
+
+#### Backlog
+All issues start here, meaning that have been registered and may contain additional comments, but no decision has been made.
+The issues registered in the repository [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) are added automatically to the backlog, while those registered in the repository [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework) must be imported manually. Optionally, issues from other private repositotories (e.g. related to the web services) can be added here for easing the follow up of topics.
+
+Before moving any issue from this box, a comment is added with a summary of the conclusion reached. The issues here can be moved to status <ins>Planned</ins>, <ins>Consultation</ins>, <ins>Done</ins> or <ins>Not planned</ins>.
+
+#### Planned
+Status for requests from the <ins>Backlog</ins> that have been considered feasible, reasonable or necessary and will be advanced in due time. This status is also possible for issues that were in <ins>Consultation</ins> (see below) afted feedback was collected and analyzed.
+
+The label `status-planned` is assigned to the issues in this box. A priority level must be defined and indicated by adding one of the labels `high-priority`, `medium-priority,` or `low-priority`. Furthermore, the impact of implementing the solution to the issue shall be estimated, according to the following instances adapted from the [Semantic Versioning scheme](https://semver.org/):
+
+- <ins>Major version updates</ins> when a change will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property).
+- <ins>Minor version updates</ins> when a feature will be introduced in a backward compatible manner (e.g. adding new individuals, like new units of measurement).
+- <ins>Patch version updates</ins> when a bug will be fixed in a backward compatible manner (e.g. fixing a comment o relabeling an individual).
+
+Changes that will reflect on major version updates must be discussed and approved at the Task Group level.
+
+Depending on the prioritazion and complexity level of the issue, one or more Expert Group members may volunteer to work on the code implementation. This assignment is declared on the webpage of the issue. When the code implementation is ready to begin, the issue is moved to status <ins>In progress</ins>.
+
+#### Consultation
+Status for requests from the <ins>Backlog</ins> that must be discussed at a different instance because it implies a high metrological level decision or because there is strong disagreement among the Expert Group members regarding the suitability of an issue in the backlog.
+
+The default instance to consider is the TG-SIDF meetings, but it can also be agreed to discuss the topic with another working group of the FORUM-MD, the Consultative Committee of Units (CCU), or another Consultative Committee of the CIPM.
+At least one person must be designated as responsible for doing the consultation and the information gathered must be added as a comment to the issue webpage.
+After the Expert Group members discuss the new information, the issue can be moved to status <ins> Planned </ins> or <ins> Not planned </ins>.
+
+#### In progress
+A planned issue
+
+When the code implementation is considered finished, the issue is moved to status <ins>In review</ins>.
+
+#### In review
+A planned issue
+
+#### Awaiting release
+A planned issue
+
+#### Done
+The request tackles a topic that has already been solved or is a duplicate of another issue. Tag `done`. The issues is 
+
+Issues moved to this status box are automatially closed as completed.
+
+#### Not planned
+The request has been deemed unsuitable under current circumstances. Tag `not-planned`.
+
+Issues moved to this status box must be closed either as not planed or as duplicate, accordingly.
+
+For other cases, the status of the issue is informed in the issue webpage by adding one of the labels, `status-in-consultation`, `status-in-progress`, `status-in-review`, `status-awaiting-release`.
+For the issues 
+
 
 > JM: how is the agreement reached? democracy?
 > GD: are we the rigth group? If the CC say X, 
 > FM: We have better knowlegde of the feasible things to our knowledge graph.
 > 
 
-Before moving the status of any issue in the backlog, a comment is added with a summary of the discussion held and the conclusion reached. In case the status is set to **Done** or **Not planned**, the issue is closed.
 
-For issues moved to **Consultation**, the members of the expert group of the TG SIDF present in the meeting must agree on the instance to which the topic will be taken and a responsible person must be defined. At the next meeting, a follow-up of issues under consultation is made. Afterward, the issue may be moved to **Not planned** or to **Planned**.
-
-For issues with status **Planned**, a prioritization level must be assigned by adding one of the issue tags `high-priority`, `medium-priority,` and `low-priority`. Furthermore, the impact of implementing the solution to the issue is estimated, according to the instances adapted from the [Semantic Versioning scheme](https://semver.org/):
-> MG: do not couple startus with priority.
-
-- **Major** version updates when the changes will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property).
-- **Minor** version updates when a feature will be introduced in a backward compatible manner (e.g. adding new individuals, like new units of measurement).
-- **Patch** updates when a bug you make backward compatible bug fixes (e.g. fixing a comment o relabeling an individual).
-
-Changes that will reflect on major version updates are discussed and approved at the Task Group level, while the changes that will reflect on a patch or minor version updates are discussed and approved at the expert group level (see Section \##).
-
-Major updates changes should not be merger to develop before discussing them to at the TG/level.
-
-One or more expert group members may volunteer to work on the implementation. This assignment is declared on the webpage of the issue.
 
 ## 3. Code development
 
@@ -79,6 +121,8 @@ The repository will always hold two permanent branches:
 Additional feature/fix branches are created with a limited lifetime to start working on an issue with status **Planned**. These branches are created from branch `origin/develop` and should be named in an informative way, always including the number of the issue (e.g. `95-new-version-of-the-9th-edition-of-the-si-brochure-v4_01`, to work on [issue #95](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/issues/95)). Then, the status of the issue is changed to **In progress** on the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6).
 
 > *CP: If we adopt the issue number inclusion in the naming convention, then it could make sense to move knowledge-base-related issues to the scripts generation repository.*
+
+Major updates changes should not be merger to develop before discussing them to at the TG/level.
 
 Code patches are committed to the respective branch by the expert group members who volunteered on the work. People from the community can also contribute to the code writing under the steering of an expert group member. Commit messages should be informative but short. The issue can be referenced in commit messages by including the issue number after a hash sign. This action will add a note to the webpage of the issue.
 
