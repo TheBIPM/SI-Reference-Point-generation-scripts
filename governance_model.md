@@ -1,41 +1,45 @@
 # Governance model for updating the SI Reference Point
 
-The SI Reference Point (SIRP) is a machine-actionable knowledge model developed by the expert group members of the (FORUM-MD Task Group on SI-digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
+The SI Reference Point (SIRP) is a machine-actionable knowledge model of the SI Brochure [[#]]() developed by the expert group members of the (FORUM-MD Task Group on SI-digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
+The web services available at https://si-digital-framework.org/SI provide access to the knowledge model of the SIRP, and are developed by the BIPM.
 
-The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/). To make changes to the knowledge model, the following steps are proposed:
+The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version.
+The version control is handled at two public GitHub repositories that serve different purposes:
+
+- [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts): A Python package that generates the knowledge graph of the SIRP serialized as Turtle and JSON-LD files.
+- [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework): A read-only repository to track changes in the Turtle-serialized files of the SIRP and other ontologies.
+
+Changes to the SIRP and the associated web services respond to feedback received from the user community.
+The following steps are proposed for handling this feedback:
 
 1.  Reception and registration of a request
 2.  Classification, assessment and prioritization
-3.  Branch creation and code development
-4.  Expert group review
+3.  Code development
+4.  Code review
 5.  Approval and release
 
 Each step is further described below.
 
 ## 1. Reception and registration of a request
 
-Requests can be made by anyone in the community via a GitHub issue, email, or verbal communication during meetings, among other ways. Some requests may respond to updates in reference documents (mainly the SI Brochure), may be reports of errors (bugs), or demands for new features.
+Requests can be raised via GitHub issues, email, or verbal communication during meetings, among other ways.
+Some requests may respond to updates in reference documents (mainly the SI Brochure), may be reports of errors in the knowledge base (bugs) or demands for new features. 
 
-Requests that are not received as a GitHub issue shall be registered as such in one of the public repositories. However, before opening a new issue, the issues of the public repositories are assessed for entries that already relate to the topic. If there is already an ongoing discussion, the new information is registered as a comment on behalf of the person who originally made the request. On the contrary, a new issue is registered on behalf of the person who originally made the request. In any case, the lin to the new issue or to the comment in the ongoing discussion shall be shared with the person who submitted the request.
+Requests that are not received as a GitHub issue shall be registered as such in either of the public repositories.
+In this case, the person is invited to use their GitHub account, but if this is not feasible, someone else can register the reuest on their behalf.
+Before opening a new issue, it is desirable to look for an already opened issue that that already relates to the topic.
+In case there is already a related issue, the new information is added to the ongoing discussion as a comment.
+On the contrary, a new issue is registered.
+All requests must be submitted by an identifiable user, either in an individual capacity or on behalf of a body (e.g. working group of a CIPM Consultative Committee).
+If the request was registered on behalf of someone else, a disclaimer shall be included (*On behalf of...*), and the link to the new issue (or to the comment) shall be shared with the person who originally submitted the request.
+
+All issues filed in the two repositories are automatically added to the backlog of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) (accessible only to logged-in members of the Expert Group).
+
+
+## 2. Classification, assessment and prioritization
 
 > *include web-services-related and git-repository-related tags that are BIPM*
-
-> *CP: How do we decide which issues go to which repository? Maybe knowledge-model-related to the [generation scripts repo](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) and web-services-related to the [SI Digital Framework repo](https://github.com/TheBIPM/SI_Digital_Framework)? Issues can be moved between public repositories and original links will redirect to the new locations.*
-> AS>
-> MG> Transfer the issues to where they are resolved, backed by FM.
-> JM> Do not worry to much about moving issues, it only concern us.
 > JLH> Use labels, include i.e. *request from CC*, to identify the kind of issue. Support by CP. 
-
-> *CP: Do we request consent from the person to publish the issue (or the comment) on his/her behalf?*
-> FM> Default not to mention the person unless explicitly requested.
-> MG> ask the person to use theis GH account or if they want their identity disclosed.
-> AS> It is useful to know the person to cycle for feedback
-> **JM> Issues should not be anonymous. Backed by CP. Agreed by FM, requests can be by bodies and not only people.**
-
-All issues are automatically added to the backlog of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) (in GitHub, with restricted access).
-
-## 2. Assessment and prioritization
-
 This step occurs at the expert group meetings that are convened by the BIPM. Anyone, whether an expert group member or not, can comment on any issue at any time. The comments are useful to advance the discussion before the meeting. At every meeting, the participants assess the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) that organizes the topics in different status fields. All issues start in status **Backlog**, meaning that it has been registered and may contain additional comments, but no decision has been made. The issues in backlog are discussed and may be assigned a new status depending on the consensus reached:
 
 - **Planned**: The request is reasonable or necessary and will be advanced in due time. Tag `planned`.
@@ -65,7 +69,7 @@ Major updates changes should not be merger to develop before discussing them to 
 
 One or more expert group members may volunteer to work on the implementation. This assignment is declared on the webpage of the issue.
 
-## 3. Branch creation and code development
+## 3. Code development
 
 The repository will always hold two permanent branches: 
 
@@ -80,7 +84,7 @@ Code patches are committed to the respective branch by the expert group members 
 
 The status of the implementations is updated at the expert group meetings by the group of people working on them. 
 
-## 4. Expert group review
+## 4. Code review
 
 Issues with status **In review** are discussed at the expert group meetings. The review can include testing the new knowledge model in the preproduction server of the web services of the SI Digital Framework (only available within the BIPM intranet and to external whitelisted IP addresses).
 
