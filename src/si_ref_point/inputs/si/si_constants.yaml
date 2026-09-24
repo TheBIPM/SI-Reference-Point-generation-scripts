@@ -19,7 +19,7 @@ data:
   comments: symbol codes defined in 'notes.xlsx'
 - id: SpeedOfLight
   hidden_label: SpeedOfLight
-  name_en: speed of light
+  name_en: speed of light in vacuum
   name_fr: vitesse de la lumière dans le vide
   xsd_type: integer
   value_str: 299 792 458
