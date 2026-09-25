@@ -39,7 +39,7 @@ For these purposes, the person raising the issue can be invited to use their Git
 In this case, a disclaimer shall be included (*On behalf of...*), and the link to the new issue (or to the comment) shall be shared with the person who originally submitted the request.
 
 ## 2. Classification, assessment and prioritization
-All registered requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), wich provides a dashboard to follow up on the status of the requests.
+All registered requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
 The dashboard is accessible to logged-in members of the Expert Group.
 View-only access can be granted to membres of the TG-SIDF upon request (a free GitHub account is required).
 Issues are assigned suitable labels (`<label>`) to help to identify and advance the topics.
@@ -48,7 +48,7 @@ Upon registration, the issues are classified according to the scope (mandatory) 
 
 - Scope:
     Most issues are requests related to the ontology (label `ontology`) or to the web services (label `web-services`).
-    To a lesser extent, issues can be related to the management of the repository (label `repo-management`).
+    To a lesser extent, issues can be related to the management of the repository (label `repo-management`) or to the Python package (label `python-package`), without causing any effect on the ontology itself.
     Some GitHub issues may be questions that do not demand changes (label `question`).
     The latter can be closed after the question has been addressed.
 - Requesting body:
@@ -80,27 +80,25 @@ Issues here are assigned the label `status-planned`, meaning that the Expert Gro
 
 A priority level must be defined by Expert Group members.
 The decision is made explicit by adding one of the labels `priority-high`, `priority-medium,` or `priority-low`.
-Furthermore, the impact of implementing the solution to the issue shall be estimated, according to the following instances adapted from the [Semantic Versioning scheme](https://semver.org/):
+Depending on the prioritazion and complexity level of the issue, one or more Expert Group members may volunteer to work on the code implementation depending on their availability and area of expertise.
+This delegation is declared on the webpage of the issue using the GitHub function *Assignees*.
 
-- <ins>Major version updates</ins>:
+The impact of implementing the solution to the issue shall be estimated, according to the following instances adapted from the [Semantic Versioning scheme](https://semver.org/):
+- `possible-major-update`:
     A change will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property).
-    The label `possible-major-update` is added in this case.
-- <ins>Minor version updates</ins>:
+- `possible-minor-update`:
     A feature will be introduced in a backward compatible manner (e.g. adding new individuals, like new units of measurement).
-    The label `possible-minor-update` is added in this case.
-- <ins>Patch version updates</ins>:
+- `possible-patch-update`:
     A bug will be fixed in a backward compatible manner (e.g. fixing a comment o relabeling an individual).
-    The label `possible-patch-update` is added in this case.
 
 Changes that will likely involve a major version updates must be discussed and approved at the TG-SIDF, which might decide to further discuss the implications with other groups of the FORUM-MD or a CIPM Consultative Committee (see Section [4. Review and approval](#4-review-and-approval)).
+The label for the possible type of update can be modified during the development of the solution to a request.
 
-Depending on the prioritazion and complexity level of the issue, one or more Expert Group members may volunteer to work on the code implementation depending on theis availability and area of expertise.
-This delegation is declared on the webpage of the issue using the GitHub function *Assignees*.
 When the code implementation is ready to begin, the issue is moved to the status [<ins>In progress</ins>](#in-progress).
 
 ---
 #### Consultation
-This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) for wich it was considered that must be discussed at an instance higher than the Expert Group because it implies a high level decision, or because there is strong disagreement among the Expert Group members regarding the suitability of the request.
+This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) for which it was considered that must be discussed at an instance higher than the Expert Group because it implies a high level decision, or because there is strong disagreement among the Expert Group members regarding the suitability of the request.
 
 Issues here are assigned the label `status-consultation`, meaning that the Expert Group members undertake to discuss the issue externally to make a decision.
 
@@ -170,8 +168,9 @@ To start working on an issue that was [<ins>Planned</ins>](#planned), a member o
 The feature branches are created from the branch `origin/develop` and should be named in an informative way, including the number of the issue when possible.
 For example, a good name for the [issue #95](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/issues/95) that relates to the version 4.01 of the 9th edition of the SI Brochure, could be `95-new-version-of-the-9th-edition-of-the-si-brochure-v4_01`.
 A single feature branch can be used to work on more than one issue.
-The issues that have an active branch should be assigned the status [<ins>In progress</ins>](#in-progress).
 The URL of the feature branch must be referenced in the webpage of the issues, either automatically by a GitHub workflow, of manually in a comment by the person creating the branch.
+
+The issues that have an active branch should be assigned the status [<ins>In progress</ins>](#in-progress).
 
 Before pushing modifications to the code in the repository, it is encouraged to verify that changes are being pushed to the correct branch by running the command `git status`.
 Additionally, it is highly encouraged to merge the changes from the branch `origin/develop` into the feature branch frequently, to avoid conflicts when the feature branch is eventually merged back.
@@ -183,38 +182,52 @@ Once the proposed changes are ready, a pull request can be opened from the forke
 
 ### 3.3. Opening a pull request
 When the code patch that solves a request is considered finished by the people involved, they shall request to merge the changes from the repository feature branch (or the corresponding branch in a forked repository in the case of external contributors), into the branch `origin/develop`.
+All merging conflicts must be solved before creating a pull request.
+The URLs of the issues that are tackled by a pull request shall be mentioned in the pull request message or in a comment to the pull request.
 
 The issues that have an active pull request should be assigned the status [<ins>In review</ins>](#in-review).
 
 ## 4. Review and approval
-Major updates changes should not be merger to develop before discussing them to at the TG/level.
+Every pull requests to branch `origin/develop` is initially reviewed by BIPM staff.
+The changes must be assessed thoroughly to confirm that their implementation does not introduce a backward-incompatible change.
+This assessment should consider potential other BIPM digital services that rely on the SIRP, like the Key Comparison Database (KCDB).
 
-Issues with status **In review** are discussed at the expert group meetings. The review can include testing the new knowledge model in the preproduction server of the web services of the SI Digital Framework (only available within the BIPM intranet and to external whitelisted IP addresses).
+Patch or minor updates are approved at the discretion of the Expert Group.
 
-**Rephrase**
-When a code patch is considered finished, the feature branch should merge all the changes done in branch `origin/develop` (*CP: or to rebase?*), All merging conflicts must be solved before creating a pull request; then the status of the issue is changed to **In review** at the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6).
+### 4.1. Issues labelled as `possible-minor-update` and `possible-patch-update`
+After confirming that the changes maintain backward compatibility,
 
-> We do not need to all meet for small changes. BIPM Staff can decide merge requests to develop branches, CP: notify other expert group members, add a window for comments on one week, AS: supports. DC: no answers will mean everybody agrees?
-> 
-> 
+ >*Here we need to decide for one approach*
 
-If the expert group members reach a consensus that an implementation is suitable and complete, the changes are merged into branch `origin/develop,` and the feature branch is deleted. A comment is added to the webpage of the issue and its status is changed to **Awaiting release** on the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6). The summary of the implementations is updated in the release notes of the repository.
+|*Option 1: Direct approval by BIPM staff*| *Option 2: Notice period before approval*|
+|---|---|
+|The pull request is approved at BIPM staff's discretion, with further consultation with other members of the Expert Group when considered necessary. The change is notified to all members of the Expert Group by email on a regular basis including the links to the corresponding pull requests. The Expert Group members are encouraged to comment on the closed pull requests. In case of unresolved disagreement the discussion is held at the Expert Group meetings.  | Expert Group members are informed by email of open merge requests. They are encouraged to comment in case of suggestions or disagreement. After a period of at least seven calendar days, the pull request can be approved by BIPM staff.|
 
+All changes to the branch `origin/develop` can be reverted in case it is considered necessary.
+
+The issues for which a pull request has been merged to the branch `origin/develop` should be assigned the status [<ins>Awaiting release</ins>](#awaiting-release).
+If the changes are not approved, the feature branch is not merged, and the issue is returned to [<ins>In progress</ins>](#in-progress).
+
+
+### 4.2. Issues labelled as `possible-major-update`
+The outcome of the changes that imply a major update of the knowledge model should be discussed at the TG-SIDF meeting.
+The implications of the changes may be discussed with other working groups of the FORUM-MD, or with other CIPM Consultative Committees. 
+If the changes are approved, the feature branch is merged into the `origin/develop` branch, and the issues are assigned the status [<ins>Awaiting release</ins>](#awaiting-release).
+If the changes are not approved, the feature branch is not merged, and the issue is returned to [<ins>In progress</ins>](#in-progress), pending the notification of  communities that may potentially be affected by the release.
 
 ## 5. Release
-Patch or minor updates are approved at the discretion of the expert group. The SIDF-TG members are updated on the changes awaiting release by email. *MG: Changes can be informed by email, the timeframe of the release in one week; FM: Objects to the notification; DC&JM no answers will mean everybody agrees. FM: why not using GitHub automatic notification system, GD supports, CP&AS GitHub sends to many of too few notifications, not too reliable.*
+After the approval of the update is done at the corresponding instance, the release of the updated version of the SIRP includes the following steps:
 
-Major updates require approval of the SIDF-TG, who may decide to consult the changes with other working groups of the FORUM-MD, the CCU, or other Consultative Committees of the CIPM.
+1.  Assingment of a version number.
+2.  Drafting of release notes, summarizing the changes done to the knowledge model since the last release.
+3.  Circulation of the release notes to the TG-SIDF members by email, along with the updated knowledege model serialized as Turtle files.
+4.  A one-week period is given to raise any objections regarding the update of the knowledge model.
+5.  If there are no objections, the changes in branch `origin/develop` are merged into the branch `origin/main`.
+6.  A GitHub release is done in the [generation scripts repository](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) including the files of the knowledge model, serialized both as Turtle and JSON-LD formats, in the field for *binaries*.
+7.  The turtle files are updated in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework).
+8.  The web services of the [SI Digital Framework website](https://si-digital-framework.org/) are restarted with the updated SIRP.
+9.  A successful release is indicated to the community by using the BIPM communications channels, as considered appropiate by the TG-SIDF chair.
+10. The people who's requests were satisfied with the release of the SIRP are notified.
 
-The approval of an update triggers the following actions:
-
-1.  A version number is decided.
-2.  The knowledge model graphs are generated.
-3.  The changes in branch `origin/develop` are merged into `origin/main`.
-4.  The release is done in the [generation scripts repository](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) from the `origin/main` branch.
-5.  The turtle files are updated in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework).
-6.  The [SI Digital Framework website](https://si-digital-framework.org/) is restarted with the new knowledge model graphs.
-
-Previous versions of the knowledge model should remain accessible by using the version URIs, but the canonical URLs should resolve to the last released version of the knowledge model.
-
-The people who initially made requests that were satisfied in the last release are notified.
+Previous versions of the SIRP remain accessible by using the version URIs.
+The canonical URLs (without version number) resolve to the last released version of the SIRP.
