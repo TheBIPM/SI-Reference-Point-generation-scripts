@@ -7,10 +7,123 @@ import yaml
 from datetime import datetime, timezone
 from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
-from si_ref_point.aboxes.units_abox import transform_to_graph
+from si_ref_point.aboxes.units_abox import transform_unit_expr_to_graph
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
     GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
+def transform_qty_expression_to_graph(expression, si_graph, graph):
+    """ Transform any "unit expression" 
+                   
+    type indicates if the expression is a unit ("u") or a quantity kind ("q").
+
+    Accepts dicts, strings, lists.
+
+    Returns : rdflib.Graph, rdflib.Bnode
+
+    For representing m/s, for example
+
+    Dicts will be expected to be like
+    {"mult": [{"exp": ["metre", 1]}, {"exp": ["second", -1]}]}
+
+    Lists will be expected to be like :
+    [["metre", 1], ["second", -1]
+    (this allows more compact notation in source YAML files)
+
+    Strings will be considered to represent a single unit, and turned into a URI.
+
+    This function calls itself in order to walk the tree of nested UnitProduct
+    and UnitPower objects.
+    """
+    
+    def nest_mult(expr):
+        """Transform
+        {'mult': [A, B, C, D...]'}
+        into
+        {'mult: [A, {'mult': [B, C, D...]}}
+        (to be used recursively)
+        """
+        # Check number of terms
+        if len(expr['mult']) == 1:
+            return expr
+        left_term = expr['mult'][0]
+        right_term = expr['mult'][1:]
+        if len(right_term) == 1:
+            return {'mult': [left_term, right_term[0]]}
+        else:
+            return {'mult': [left_term,
+                            nest_mult({'mult': right_term})]}
+            
+    if isinstance(expression, list):
+        # turn into a dict
+        tmp_expr = {"mult": []}
+        for item in expression:
+            tmp_expr['mult'].append({"exp": [item[0], item[1]]})
+        expression = tmp_expr
+    expr_node = BNode()
+
+    if isinstance(expression, str):
+        expr_node = si_graph.set_unit_uri(expression)
+
+    elif isinstance(expression, dict):
+        if "mult" in expression.keys():
+            if len(expression["mult"]) == 1:
+                # This is not really a product...
+                graph, expr_node = transform_unit_expr_to_graph(
+                    expression["mult"][0], si_graph, graph)
+                return graph, expr_node
+
+            # Rearrange products into binary tree (i.e. nested "mult" with
+            # only 2 terms, to keep track of order terms)
+            expression = nest_mult(expression)
+
+            # set type of expression node
+            graph.add((expr_node, RDF.type, si_graph.unit_product))
+
+
+            # insert factors
+            graph, node = transform_unit_expr_to_graph(expression["mult"][0],
+                                             si_graph, graph)
+            graph.add((expr_node, si_graph.has_left_unit_term, node))
+            graph, node = transform_unit_expr_to_graph(expression["mult"][1],
+                                             si_graph, graph)
+            graph.add((expr_node, si_graph.has_right_unit_term, node))
+
+        elif "exp" in expression.keys():
+            if expression["exp"][1] in [1, "1"]:
+                # This is not really a unitPower
+                graph, expr_node = transform_unit_expr_to_graph(
+                    expression["exp"][0], si_graph, graph)
+                return graph, expr_node
+            else:
+                # set type of expression node
+                graph.add((expr_node, RDF.type, si_graph.unit_power))                
+
+                expon_expression = expression["exp"][1]
+                fraction_exponent = Fraction(expon_expression).limit_denominator()
+                
+                # insert base and exponent
+                graph, node = transform_unit_expr_to_graph(expression["exp"][0],
+                                                si_graph, graph)
+                graph.add((expr_node, si_graph.has_numeric_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
+                
+                if fraction_exponent.denominator >= 2:
+                    graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
+                    graph.add((expr_node, si_graph.has_numeric_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
+
+                graph.add((expr_node, si_graph.has_unit_base, node))
+
+
+        else:
+            raise ValueError(
+                f"Unrecognized keys in expression-object: {expression.keys()}."
+            )
+
+    else:
+        raise ValueError(
+            f"Expecting either a string, a list or dict. Got '{type(expression)}'."
+        )
+
+    return graph, expr_node
 
 def main():
     """Main of Quantities A-box"""
@@ -177,7 +290,7 @@ def main():
                 quantities_graph.add((element, SKOS.altLabel, Literal(qty['identifier'],
                                                        datatype=XSD.string)))
                 if 'Unit' in qty and qty['Unit'] is not None:
-                    quantities_graph, cmpnd_node = transform_to_graph(qty['Unit'], si_graph, quantities_graph)
+                    quantities_graph, cmpnd_node = transform_unit_expr_to_graph(qty['Unit'], si_graph, quantities_graph)
                     quantities_graph.add((element, si_graph.has_unit, cmpnd_node))
 
     return quantities_graph

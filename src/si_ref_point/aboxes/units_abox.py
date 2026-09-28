@@ -16,27 +16,11 @@ from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_L
     GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
 
-def nest_mult(expr):
-    """Transform
-    {'mult': [A, B, C, D...]'}
-    into
-    {'mult: [A, {'mult': [B, C, D...]}}
-    (to be used recursively)
-    """
-    # Check number of terms
-    if len(expr['mult']) == 1:
-        return expr
-    left_term = expr['mult'][0]
-    right_term = expr['mult'][1:]
-    if len(right_term) == 1:
-        return {'mult': [left_term, right_term[0]]}
-    else:
-        return {'mult': [left_term,
-                         nest_mult({'mult': right_term})]}
 
-
-def transform_to_graph(expression, si_graph, graph):
-    """ Transform any "unit expression" into a graph
+def transform_unit_expr_to_graph(expression, si_graph, graph):
+    """ Transform any "unit expression" 
+                   
+    type indicates if the expression is a unit ("u") or a quantity kind ("q").
 
     Accepts dicts, strings, lists.
 
@@ -53,11 +37,28 @@ def transform_to_graph(expression, si_graph, graph):
 
     Strings will be considered to represent a single unit, and turned into a URI.
 
-
     This function calls itself in order to walk the tree of nested UnitProduct
     and UnitPower objects.
     """
-
+    
+    def nest_mult(expr):
+        """Transform
+        {'mult': [A, B, C, D...]'}
+        into
+        {'mult: [A, {'mult': [B, C, D...]}}
+        (to be used recursively)
+        """
+        # Check number of terms
+        if len(expr['mult']) == 1:
+            return expr
+        left_term = expr['mult'][0]
+        right_term = expr['mult'][1:]
+        if len(right_term) == 1:
+            return {'mult': [left_term, right_term[0]]}
+        else:
+            return {'mult': [left_term,
+                            nest_mult({'mult': right_term})]}
+            
     if isinstance(expression, list):
         # turn into a dict
         tmp_expr = {"mult": []}
@@ -73,7 +74,7 @@ def transform_to_graph(expression, si_graph, graph):
         if "mult" in expression.keys():
             if len(expression["mult"]) == 1:
                 # This is not really a product...
-                graph, expr_node = transform_to_graph(
+                graph, expr_node = transform_unit_expr_to_graph(
                     expression["mult"][0], si_graph, graph)
                 return graph, expr_node
 
@@ -86,17 +87,17 @@ def transform_to_graph(expression, si_graph, graph):
 
 
             # insert factors
-            graph, node = transform_to_graph(expression["mult"][0],
+            graph, node = transform_unit_expr_to_graph(expression["mult"][0],
                                              si_graph, graph)
-            graph.add((expr_node, si_graph.has_left_Term, node))
-            graph, node = transform_to_graph(expression["mult"][1],
+            graph.add((expr_node, si_graph.has_left_unit_term, node))
+            graph, node = transform_unit_expr_to_graph(expression["mult"][1],
                                              si_graph, graph)
-            graph.add((expr_node, si_graph.has_right_Term, node))
+            graph.add((expr_node, si_graph.has_right_unit_term, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] in [1, "1"]:
                 # This is not really a unitPower
-                graph, expr_node = transform_to_graph(
+                graph, expr_node = transform_unit_expr_to_graph(
                     expression["exp"][0], si_graph, graph)
                 return graph, expr_node
             else:
@@ -107,7 +108,7 @@ def transform_to_graph(expression, si_graph, graph):
                 fraction_exponent = Fraction(expon_expression).limit_denominator()
                 
                 # insert base and exponent
-                graph, node = transform_to_graph(expression["exp"][0],
+                graph, node = transform_unit_expr_to_graph(expression["exp"][0],
                                                 si_graph, graph)
                 graph.add((expr_node, si_graph.has_numeric_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
                 
@@ -115,7 +116,7 @@ def transform_to_graph(expression, si_graph, graph):
                     graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
                     graph.add((expr_node, si_graph.has_numeric_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
 
-                graph.add((expr_node, si_graph.has_base, node))
+                graph.add((expr_node, si_graph.has_unit_base, node))
 
 
         else:
@@ -614,13 +615,13 @@ def main():
             )
 
             if "inOtherSIUnits" in sisp and sisp["inOtherSIUnits"]:
-                units_graph, node = transform_to_graph(sisp["inOtherSIUnits"],
+                units_graph, node = transform_unit_expr_to_graph(sisp["inOtherSIUnits"],
                                              si_graph, units_graph)
                 units_graph.add((element, si_graph.in_other_si_units, node))
 
 
             if "inBaseSIUnits" in sisp and sisp["inBaseSIUnits"]:
-                units_graph, node = transform_to_graph(sisp["inBaseSIUnits"],
+                units_graph, node = transform_unit_expr_to_graph(sisp["inBaseSIUnits"],
                                              si_graph, units_graph)
                 units_graph.add((element, si_graph.in_base_si_units, node))
 
@@ -724,7 +725,7 @@ def main():
                 conversion_factor_as_string = Literal(
                     nsi["ConversionFactorAsString"],
                     datatype=XSD.string)
-                units_graph, conversion_unit = transform_to_graph(nsi["ConversionUnit"],
+                units_graph, conversion_unit = transform_unit_expr_to_graph(nsi["ConversionUnit"],
                                                         si_graph, units_graph)
                 units_graph.add((unit_multiple, RDF.type, si_graph.set_uri("UnitMultiple")))
                 units_graph.add((unit_multiple, has_unit_term, conversion_unit))

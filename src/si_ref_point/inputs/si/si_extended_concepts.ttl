@@ -101,14 +101,20 @@ si:hasNumericExponent a owl:DatatypeProperty ;
     rdfs:label "has numeric exponent"@en,
         "a pour exposant ce nombre"@fr ;
     rdfs:comment "UnitBase ^ NumericExponent" ;
-    rdfs:domain si:UnitPower;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf ( si:UnitPower si:QuantityKindPower )
+    ];
     rdfs:range xsd:short .
 
 si:hasNumericExponentDenominator a owl:DatatypeProperty ;
     rdfs:label "has exponent denominator"@en,
         "a pour dénominateur dans l'exposant ce nombre"@fr;
     rdfs:comment "UnitBase ^ (numerator/denominator)";
-    rdfs:domain si:UnitPower;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf ( si:UnitPower si:QuantityKindPower )
+    ];
     rdfs:range xsd:short .
 
 si:hasExponent a owl:DatatypeProperty ;
@@ -170,6 +176,23 @@ si:QuantityKindPower a owl:Class ;
         "grandeur élevée à la puissance"@fr ;
     rdfs:subClassOf si:CompoundQuantityKind .
 
+si:QuantityKindFractionPower a owl:Class ;
+    rdfs:label "quantitykind fraction power"@en ,
+        "grandeur élevée à une puissance fractionnelle"@fr ;
+    rdfs:subClassOf si:QuantityKindPower ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+				si:QuantityKindPower
+				[
+					a owl:Restriction ;
+					owl:onProperty si:hasNumericExponentDenominator ;
+					owl:someValuesFrom xsd:integer
+				]
+
+			)
+    ] .
+
 
 # compound units
 
@@ -203,12 +226,11 @@ si:UnitFractionPower a owl:Class ;
 				si:UnitPower
 				[
 					a owl:Restriction ;
-					owl:onProperty si:hasExponentDenominator ;
+					owl:onProperty si:hasNumericExponentDenominator ;
 					owl:someValuesFrom xsd:integer
 				]
-
 			)
-    ] .
+    ].
 
 si:PrefixedUnit a owl:Class ;
     rdfs:label "prefixed unit"@en,

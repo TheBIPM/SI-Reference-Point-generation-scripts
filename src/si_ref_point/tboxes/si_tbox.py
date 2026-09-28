@@ -244,12 +244,13 @@ class SiElements:
         self.has_note_text = self.set_uri("hasNoteText")
         self.has_defining_equation = self.set_uri("hasDefiningEquation")
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
-        self.has_left_Term = self.set_uri("hasLeftTerm")
-        self.has_right_Term = self.set_uri("hasRightTerm")
+        self.has_left_unit_term = self.set_uri("hasLeftUnitTerm")
+        self.has_right_unit_term = self.set_uri("hasRightUnitTerm")
         self.has_exponent = self.set_uri("hasExponent")                 # domain: prefixes
         self.has_numeric_exponent = self.set_uri("hasNumericExponent")  # domain: UnitPower
         self.has_numeric_exponent_denominator = self.set_uri("hasNumericExponentDenominator")
-        self.has_base = self.set_uri("hasBase")
+        self.has_unit_base = self.set_uri("hasUnitBase")
+        self.has_quantity_base = self.set_uri("hasQuantityBase")
         self.has_value_as_string = self.set_uri("hasValueAsString")
         self.has_scaling_factor = self.set_uri("hasScalingFactor")
 

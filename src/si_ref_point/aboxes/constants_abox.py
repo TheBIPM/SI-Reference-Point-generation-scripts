@@ -11,7 +11,7 @@ from si_ref_point.tboxes.si_tbox import SiElements
 import si_ref_point.aboxes.symbols_format as sf
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, \
     SI_FILES_FOLDER, GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
-from si_ref_point.aboxes.units_abox import transform_to_graph
+from si_ref_point.aboxes.units_abox import transform_unit_expr_to_graph
 
 
 def main():
@@ -180,7 +180,7 @@ def main():
                 cmpnd_unit = {"mult": []}
                 for item in cst['unit']:
                     cmpnd_unit['mult'].append({"exp": [item[0], item[1]]})
-                constants_graph, cmpnd_node = transform_to_graph(cmpnd_unit,
+                constants_graph, cmpnd_node = transform_unit_expr_to_graph(cmpnd_unit,
                                                                  si_graph,
                                                                  constants_graph)
                 constants_graph.add((element, si_graph.has_unit, cmpnd_node))
