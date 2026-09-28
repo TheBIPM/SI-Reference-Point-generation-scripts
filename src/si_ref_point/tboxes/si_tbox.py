@@ -198,6 +198,9 @@ class SiElements:
         self.si_decision_scope = self.set_uri("SIDecisionScope")
         self.si_decision_target = self.set_uri("SIDecisionTarget")
         self.quantity_kind = self.set_uri("QuantityKind")
+        self.quantity_kind_product = self.set_uri("QuantityKindProduct")
+        self.quantity_kind_power = self.set_uri("QuantityKindPower")
+        self.quantity_kind_fraction_power = self.set_uri("QuantityKindFractionPower")
         self.has_symbol = self.set_uri("hasSymbol")
         self.has_alt_symbol = self.set_uri("hasAltSymbol")
         self.has_unit = self.set_uri("hasUnit")
@@ -246,6 +249,8 @@ class SiElements:
         self.has_defining_constant = self.set_uri("hasDefiningConstant")
         self.has_left_unit_term = self.set_uri("hasLeftUnitTerm")
         self.has_right_unit_term = self.set_uri("hasRightUnitTerm")
+        self.has_left_quantity_term = self.set_uri("hasLeftQuantityTerm")
+        self.has_right_quantity_term = self.set_uri("hasRightQuantityTerm")
         self.has_exponent = self.set_uri("hasExponent")                 # domain: prefixes
         self.has_numeric_exponent = self.set_uri("hasNumericExponent")  # domain: UnitPower
         self.has_numeric_exponent_denominator = self.set_uri("hasNumericExponentDenominator")

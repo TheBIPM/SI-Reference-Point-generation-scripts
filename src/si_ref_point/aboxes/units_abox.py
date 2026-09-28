@@ -20,8 +20,6 @@ from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_L
 def transform_unit_expr_to_graph(expression, si_graph, graph):
     """ Transform any "unit expression" 
                    
-    type indicates if the expression is a unit ("u") or a quantity kind ("q").
-
     Accepts dicts, strings, lists.
 
     Returns : rdflib.Graph, rdflib.Bnode

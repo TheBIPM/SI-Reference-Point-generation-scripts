@@ -5,34 +5,33 @@ import os
 import logging
 import yaml
 from datetime import datetime, timezone
-from rdflib import Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
+from fractions import Fraction
+from rdflib import BNode, Graph, RDF, OWL, URIRef, RDFS, DCTERMS, Literal, SKOS, XSD, PROV
 from si_ref_point.tboxes.si_tbox import SiElements
 from si_ref_point.aboxes.units_abox import transform_unit_expr_to_graph
 from si_ref_point.settings import PKG_ROOT, CC_LICENCE, CC_LICENCE_TEXT_EN, CC_LICENCE_TEXT_FR, SI_FILES_FOLDER, \
     GITHUB_BASE_PATH, SIDFWBASE, SIRPVERSION
 
-def transform_qty_expression_to_graph(expression, si_graph, graph):
-    """ Transform any "unit expression" 
+def transform_qty_expr_to_graph(expression, si_graph, graph):
+    """ Transform any "quantity expression" 
                    
-    type indicates if the expression is a unit ("u") or a quantity kind ("q").
-
     Accepts dicts, strings, lists.
 
     Returns : rdflib.Graph, rdflib.Bnode
 
-    For representing m/s, for example
+    For representing LENG/TIME, for example
 
     Dicts will be expected to be like
-    {"mult": [{"exp": ["metre", 1]}, {"exp": ["second", -1]}]}
+    {"mult": [{"exp": ["LENG", 1]}, {"exp": ["TIME", -2]}]}
 
     Lists will be expected to be like :
-    [["metre", 1], ["second", -1]
+    [["LENG", 1], ["TIME", -2]
     (this allows more compact notation in source YAML files)
 
-    Strings will be considered to represent a single unit, and turned into a URI.
+    Strings will be considered to represent a single quantity, and turned into a URI.
 
-    This function calls itself in order to walk the tree of nested UnitProduct
-    and UnitPower objects.
+    This function calls itself in order to walk the tree of nested QuantityKindProduct
+    and QuantityKindPower objects.
     """
     
     def nest_mult(expr):
@@ -62,13 +61,13 @@ def transform_qty_expression_to_graph(expression, si_graph, graph):
     expr_node = BNode()
 
     if isinstance(expression, str):
-        expr_node = si_graph.set_unit_uri(expression)
+        expr_node = si_graph.set_quantity_uri(expression)
 
     elif isinstance(expression, dict):
         if "mult" in expression.keys():
             if len(expression["mult"]) == 1:
                 # This is not really a product...
-                graph, expr_node = transform_unit_expr_to_graph(
+                graph, expr_node = transform_qty_expr_to_graph(
                     expression["mult"][0], si_graph, graph)
                 return graph, expr_node
 
@@ -77,40 +76,40 @@ def transform_qty_expression_to_graph(expression, si_graph, graph):
             expression = nest_mult(expression)
 
             # set type of expression node
-            graph.add((expr_node, RDF.type, si_graph.unit_product))
+            graph.add((expr_node, RDF.type, si_graph.quantity_kind_product))
 
 
             # insert factors
-            graph, node = transform_unit_expr_to_graph(expression["mult"][0],
+            graph, node = transform_qty_expr_to_graph(expression["mult"][0],
                                              si_graph, graph)
-            graph.add((expr_node, si_graph.has_left_unit_term, node))
-            graph, node = transform_unit_expr_to_graph(expression["mult"][1],
+            graph.add((expr_node, si_graph.has_left_quantity_term, node))
+            graph, node = transform_qty_expr_to_graph(expression["mult"][1],
                                              si_graph, graph)
-            graph.add((expr_node, si_graph.has_right_unit_term, node))
+            graph.add((expr_node, si_graph.has_right_quantity_term, node))
 
         elif "exp" in expression.keys():
             if expression["exp"][1] in [1, "1"]:
                 # This is not really a unitPower
-                graph, expr_node = transform_unit_expr_to_graph(
+                graph, expr_node = transform_qty_expr_to_graph(
                     expression["exp"][0], si_graph, graph)
                 return graph, expr_node
             else:
                 # set type of expression node
-                graph.add((expr_node, RDF.type, si_graph.unit_power))                
+                graph.add((expr_node, RDF.type, si_graph.quantity_kind_power))                
 
                 expon_expression = expression["exp"][1]
                 fraction_exponent = Fraction(expon_expression).limit_denominator()
                 
                 # insert base and exponent
-                graph, node = transform_unit_expr_to_graph(expression["exp"][0],
+                graph, node = transform_qty_expr_to_graph(expression["exp"][0],
                                                 si_graph, graph)
                 graph.add((expr_node, si_graph.has_numeric_exponent, Literal(fraction_exponent.numerator,datatype=XSD.short)))
                 
                 if fraction_exponent.denominator >= 2:
-                    graph.add((expr_node, RDF.type, si_graph.unit_fraction_power))
+                    graph.add((expr_node, RDF.type, si_graph.quantity_kind_fraction_power))
                     graph.add((expr_node, si_graph.has_numeric_exponent_denominator, Literal(fraction_exponent.denominator,datatype=XSD.short)))
 
-                graph.add((expr_node, si_graph.has_unit_base, node))
+                graph.add((expr_node, si_graph.has_quantity_base, node))
 
 
         else:
@@ -289,9 +288,16 @@ def main():
                        Literal(qty['quantity-fr'], lang="fr")))
                 quantities_graph.add((element, SKOS.altLabel, Literal(qty['identifier'],
                                                        datatype=XSD.string)))
+                # append the units of the quantity
                 if 'Unit' in qty and qty['Unit'] is not None:
                     quantities_graph, cmpnd_node = transform_unit_expr_to_graph(qty['Unit'], si_graph, quantities_graph)
                     quantities_graph.add((element, si_graph.has_unit, cmpnd_node))
+                
+                # append the base quantity kinde of the quantity
+                if 'Base_quantity' in qty and qty['Base_quantity'] is not None:
+                    quantities_graph, cmpnd_node = transform_qty_expr_to_graph(qty['Base_quantity'], si_graph, quantities_graph)
+                    quantities_graph.add((element, si_graph.has_quantity_base, cmpnd_node))
+                    
 
     return quantities_graph
 
