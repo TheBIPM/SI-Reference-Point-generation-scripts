@@ -240,3 +240,47 @@ Previous versions of the SIRP remain accessible by using the version URIs.
 The canonical URLs (without version number) resolve to the latest released version of the SIRP.
 
 ## Diagram of the process
+``` mermaid
+flowchart TB
+    REQ["Request received<br>GitHub issue, email, meeting"] --> DUP{"Related issue<br>already open?"}
+    DUP -- Yes --> CMT["Add comment to existing issue"]
+    DUP -- No --> NEW@{ label: "Register new issue<br>*'On behalf of…'* if needed" }
+    CMT --> BL["`**Backlog**<br>Classify: scope (mandatory),<br>requesting body (optional)`"]
+    NEW --> BL
+    BL --> EG{"Expert Group<br>meeting"}
+    BL -- label 'question' --> QA["Answer and close"]
+    EG -- Feasible / necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-major/minor/patch-update`"]
+    EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
+    EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
+    CO -- Findings: unsuitable --> NP
+    CO -- Findings: approved ---> PL
+    PL -- Feature branch from develop --> IP["`**In progress**`"]
+    IP -- Pull request to develop --> IR["`**In review**<br>BIPM staff check backward<br>compatibility, KCDB impact`"]
+    IR --> IMP{"Impact?"}
+    IMP -- Minor / patch --> BS{"BIPM staff<br>approval?"}
+    IMP -- Major --> TG{"TG-SIDF<br>approval?"}
+    BS -- No --> IP
+    TG -- No --> IP
+    BS -- Yes: merge to develop --> AR["`**Awaiting release**`"]
+    TG -- Yes: merge to develop,<br>notify affected communities --> AR
+    AR --> RN["Version number, release notes,<br>circulate to TG-SIDF with Turtle files"]
+    RN --> OBJ{"Objections within<br>7 calendar days?"}
+    OBJ -- Yes --> AC["Address comments<br>Expert Group or TG-SIDF meeting"]
+    AC --> RN
+    OBJ -- No --> PUB["Merge develop → main<br>GitHub release (Turtle + JSON-LD)<br>Update SI_Digital_Framework repo<br>Restart web services, announce"]
+    PUB --> DN["`**Done**<br>Close issue, notify requester`"]
+
+    NEW@{ shape: rect}
+     BL:::status
+     QA:::terminal
+     PL:::status
+     NP:::reject
+     CO:::status
+     IP:::status
+     IR:::status
+     AR:::status
+     DN:::terminal
+    classDef status fill:#e8f0fe,stroke:#1a56db,stroke-width:2px
+    classDef terminal fill:#e6f4ea,stroke:#137333,stroke-width:2px
+    classDef reject fill:#fce8e6,stroke:#c5221f,stroke-width:2px
+```
