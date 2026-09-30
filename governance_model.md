@@ -52,8 +52,8 @@ Issues are assigned suitable labels (`<label>`) to help to identify and advance 
 Upon registration, the issues are classified according to the scope (mandatory) and the requesting body (optional).
 
 - Scope:
-    Most issues are requests related to the ontology (label `ontology`) or to the web services (label `web-services`).
-    To a lesser extent, issues can be related to the management of the repository (label `repo-management`) or to the Python package (label `python-package`), without causing any effect on the ontology itself.
+    Most issues are requests related to the ontology (label `scope-ontology`) or to the web services (label `scope-web-services`).
+    To a lesser extent, issues can be related to the management of the repository (label `scope-repo-management`) or to the Python package (label `python-package`), without causing any effect on the ontology itself.
     Some GitHub issues may be questions that do not demand changes (label `question`).
     The issues with label `question` can be closed after a satisfactory answer has been provided.
 - Requesting body:
