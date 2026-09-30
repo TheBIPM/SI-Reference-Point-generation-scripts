@@ -15,7 +15,7 @@ The project is handled at two public GitHub repositories that serve different pu
     A read-only repository to track changes in the Turtle-serialized files of the SIRP and other related ontologies published by the BIPM.
 
 Changes to the SIRP respond to feedback received from the user community.
-Request for such changes are handled in the following stages:
+Requests for such changes are handled in the following stages:
 
 1.  Reception and registration of a request
 2.  Classification, assessment and prioritization
@@ -71,7 +71,7 @@ The meaning of each status is described below.
 #### Backlog
 Every issue starts here, meaning that it has been registered and may contain additional comments, but no decision has been made.
 The issues registered in the repository [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) are added automatically to the [<ins>Backlog</ins>](#backlog), while those registered in the repository [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework) must be imported manually.
-Optionally, issues from other private repositories (e.g. related to the web services) can be added here to ease the follow up of topics.
+Optionally, issues from other private repositories (e.g. related to the web services) can be added here to ease the follow-up of topics.
 
 The issues in the [<ins>Backlog</ins>](#backlog) are discussed during the meetings of the Expert Group and may thereafter be assigned the status [<ins>Planned</ins>](#planned), [<ins>Consultation</ins>](#consultation), or [<ins>Not planned</ins>](#not-planned), depending on the conclusion from the participants in the meeting.
 Before moving any issue from this box, a comment is added with a summary of the outcomes of the discussion.
@@ -79,7 +79,7 @@ Before moving any issue from this box, a comment is added with a summary of the 
 ---
 #### Planned
 This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) that have been considered feasible  and necessary by the Expert Group members.
-This status may also be assigned for request previously in [<ins>Consultation</ins>](#consultation), depending on the feedback that was collected from the higher body.
+This status may also be assigned to requests previously in [<ins>Consultation</ins>](#consultation), depending on the feedback that was collected from the higher body.
 
 Issues here are assigned the label `status-planned`, meaning that the Expert Group members undertake to advance them in due time.
 
@@ -89,11 +89,11 @@ Depending on the prioritization and complexity level of the issue, one or more E
 This delegation is declared on the webpage of the issue using the GitHub function *Assignees*.
 
 The impact of implementing the solution to the issue shall be estimated, according to the following update types adapted from the [Semantic Versioning scheme](https://semver.org/):
-- `possible-major-update`:
+- `possible-update-major`:
     A change will introduce incompatibility with former versions of the knowledge model (e.g. eliminating a class, renaming a datatype property).
-- `possible-minor-update`:
+- `possible-update-minor`:
     A feature will be introduced in a backward-compatible manner (e.g. adding new individuals, like new units of measurement).
-- `possible-patch-update`:
+- `possible-update-patch`:
     A bug will be fixed in a backward-compatible manner (e.g. fixing a comment or relabelling an individual).
 
 Changes that will likely involve a major version update must be discussed and approved at the TG-SIDF, which might decide to further discuss the implications with other groups of the FORUM-MD or a CIPM Consultative Committee (see Section [4. Review and approval](#4-review-and-approval)).
@@ -103,7 +103,7 @@ When the code implementation is ready to begin, the issue is moved to the status
 
 ---
 #### Consultation
-This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) that the Expert Group considers must be discussed by a higher body because it implies a high level decision, or because there is strong disagreement among the Expert Group members regarding the suitability of the request.
+This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) that the Expert Group considers must be discussed by a higher body because it implies a high-level decision, or because there is strong disagreement among the Expert Group members regarding the suitability of the request.
 
 Issues here are assigned the label `status-consultation`, meaning that the Expert Group members undertake to discuss the issue externally to make a decision.
 
@@ -116,7 +116,7 @@ After discussing the newly collected information, the issue can be assigned the 
 #### In progress
 This status is assigned to issues marked [<ins>Planned</ins>](#planned) once some Expert Group members decide to start working on the code implementation to address them.
 
-Issues here are assigned the label `status-in-progress`, meaning that the solution to request is being advanced. 
+Issues here are assigned the label `status-in-progress`, meaning that the solution to the request is being advanced. 
 
 The details of this stage are given in Section [3. Development](#3-development).
 When the code implementation is considered finished, the issue is assigned the status [<ins>In review</ins>](#in-review).
@@ -142,14 +142,14 @@ After the release has been done, the issue is advanced to the latest status [<in
 ---
 #### Done
 This status is achieved to issues that were marked [<ins>Awaiting release</ins>](#awaiting-release), after the updated knowledge model of the SIRP has been released.
-The issues moved to this status box can be closed as completed and the person that originally made the request is notified.
+The issues moved to this status box can be closed as completed and the person who originally made the request is notified.
 
 ---
 #### Not planned
 This status is assigned to issues from the boxes [<ins>Backlog</ins>](#backlog) or [<ins>Consultation</ins>](#consultation), when the corresponding decision body has considered them unsuitable under current circumstances.
-The person that originally made the request is notified about the decision of not proceeding with the request, with a summary of the reasons considered.
+The person who originally made the request is notified about the decision not to proceed with the request, with a summary of the reasons considered.
 
-The issues here are assigned the label `status-not-planned` and must be closed (GitHub funtion *Close as not planned*) in the issue webpage.
+The issues here are assigned the label `status-not-planned` and must be closed (GitHub function *Close as not planned*) on the issue webpage.
 
 ---
 </div>
@@ -165,13 +165,13 @@ This section describes the guidelines for branching and merging.
 The repository will always hold two permanent branches: 
 
 * Branch `origin/main`:
-    Always reflects the version of the Python package that generates the latest stable release of the SIRP, available both in the [website of the SI Digital Framework](https://si-digital-framework.org/) and in the [read-only repository of the SI Digital Framework](https://github.com/TheBIPM/SI_Digital_Framework).
+    Always reflects the version of the Python package that generates the latest stable release of the SIRP, available both on the [website of the SI Digital Framework](https://si-digital-framework.org/) and in the [read-only repository of the SI Digital Framework](https://github.com/TheBIPM/SI_Digital_Framework).
 * Branch `origin/develop`:
     Contains the latest feature implementations and bug fixes that have been approved for the next release of the SIRP.
 
 To start working on an issue that was [<ins>Planned</ins>](#planned), a member of the Expert Group creates a branch (feature branch) that will have a limited lifetime.
 The feature branches are created from the branch `origin/develop` and should be named in an informative way, including the number of the issue when possible.
-For example, a good name for the [issue #95](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/issues/95) that relates to the version 4.01 of the 9th edition of the SI Brochure, could be `95-new-version-of-the-9th-edition-of-the-si-brochure-v4_01`.
+For example, a good name for the [issue #95](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts/issues/95) that relates to version 4.01 of the 9th edition of the SI Brochure could be `95-new-version-of-the-9th-edition-of-the-si-brochure-v4_01`.
 A single feature branch can be used to work on more than one issue.
 The URL of the feature branch must be referenced in the webpage of the issues, either automatically by a GitHub workflow, or manually in a comment by the person creating the branch.
 
@@ -199,14 +199,14 @@ This assessment should consider potential effects on other BIPM digital services
 The label of the possible kind of update associated with an issue may change as a consequence of this assessment.
 
 
-### 4.1. Issues labelled as `possible-minor-update` and `possible-patch-update`
+### 4.1. Issues labelled as `possible-update-minor` and `possible-update-patch`
 After confirming that the changes maintain backward compatibility,
 
  >*__Here we need to decide on one of the following approaches__*
 
 |*Option 1: Direct approval by BIPM staff*| *Option 2: Notice period before approval*|
 |---|---|
-|The pull request is approved at BIPM staff's discretion, with further consultation with other members of the Expert Group when considered necessary. The change is notified to all members of the Expert Group by email on a regular basis including the links to the corresponding pull request. The Expert Group members are encouraged to comment on the closed pull request. In case of unresolved disagreement the discussion is held at the Expert Group meetings.  | Expert Group members are informed by email of open pull request. They are encouraged to comment in case of suggestions or disagreement. After a period of at least seven calendar days, the pull request can be approved by BIPM staff.|
+|The pull request is approved at BIPM staff's discretion, with further consultation with other members of the Expert Group when considered necessary. The change is notified to all members of the Expert Group by email on a regular basis, including the links to the corresponding pull request. The Expert Group members are encouraged to comment on the closed pull request. In case of unresolved disagreement, the discussion is held at the Expert Group meetings.  | Expert Group members are informed by email of open pull requests. They are encouraged to comment in case of suggestions or disagreement. After a period of at least seven calendar days, the pull request can be approved by BIPM staff.|
 
 All changes to the branch `origin/develop` can be reverted in case it is considered necessary.
 
@@ -214,7 +214,7 @@ The issues for which a pull request has been merged to the branch `origin/develo
 If the changes are not approved, the feature branch is not merged, and the issue is returned to [<ins>In progress</ins>](#in-progress).
 
 
-### 4.2. Issues labelled as `possible-major-update`
+### 4.2. Issues labelled as `possible-update-major`
 The outcome of the changes that imply a major update of the knowledge model should be discussed at the TG-SIDF meeting.
 The implications of the changes may be discussed with other working groups of the FORUM-MD, or with other CIPM Consultative Committees. 
 If the changes are approved, the feature branch is merged into the branch `origin/develop`, and the issues are assigned the status [<ins>Awaiting release</ins>](#awaiting-release).
@@ -225,7 +225,7 @@ If the changes are not approved, the feature branch is not merged, and the issue
 After the approval of the update is done at the corresponding body, the release of the updated version of the SIRP includes the following steps:
 
 1.  Assignment of a version number.
-2.  Drafting of release notes, summarizing the changes done to the knowledge model since the latest release.
+2.  Drafting of release notes, summarizing the changes made to the knowledge model since the latest release.
 3.  Circulation of the release notes to the TG-SIDF members by email, along with the updated knowledge model serialized as Turtle files.
 4.  A period of seven calendar days is given to raise any objections regarding the update of the knowledge model.
 5.  If there are no objections, the changes in branch `origin/develop` are merged into the branch `origin/main`.
@@ -249,7 +249,7 @@ flowchart TB
     NEW --> BL
     BL --> EG{"Expert Group<br>meeting"}
     BL -- label 'question' --> QA["Answer and close"]
-    EG -- Feasible / necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-major/minor/patch-update`"]
+    EG -- Feasible / necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
     EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
     EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
     CO -- Findings: unsuitable --> NP
