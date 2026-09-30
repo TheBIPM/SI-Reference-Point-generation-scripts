@@ -53,9 +53,9 @@ Upon registration, the issues are classified according to the scope (mandatory) 
 
 - Scope:
     Most issues are requests related to the ontology (label `scope-ontology`) or to the web services (label `scope-web-services`).
-    To a lesser extent, issues can be related to the management of the repository (label `scope-repo-management`) or to the Python package (label `python-package`), without causing any effect on the ontology itself.
-    Some GitHub issues may be questions that do not demand changes (label `question`).
-    The issues with label `question` can be closed after a satisfactory answer has been provided.
+    To a lesser extent, issues can be related to the management of the repository (label `scope-repo-management`) or to the Python package (label `scope-python-package`), without causing any effect on the ontology itself.
+    Some GitHub issues may be questions that do not demand changes (label `scope-question`).
+    The issues with label `scope-question` can be closed after a satisfactory answer has been provided.
 - Requesting body:
     Issues can be raised by representatives of the corresponding digitalization working group of a CIPM Consultative Committee (label `request-from-CC`), of a FORUM-MD working group (label `request-from-FORUM-MD`), or of a liaison organization (label `request-from-liaison-org`).
     This information is useful when deciding the prioritization of the topics.
