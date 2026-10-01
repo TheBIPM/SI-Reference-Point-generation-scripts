@@ -15,7 +15,7 @@ data:
   quantity-fr: longueur
   Unit: metre
 - identifier: MASS
-  quantity-en: masse
+  quantity-en: mass
   quantity-fr: masse
   Unit: kilogram
 - identifier: ELCU
@@ -61,7 +61,7 @@ data:
   Base_quantity:
     - [MASS,"1"]
     - [LENG,"2"]
-    - [TIME,"-2"]
+    - [TIME,"-1"]
 - identifier: ELCH
   quantity-en: electric charge
   quantity-fr: charge électrique
@@ -76,16 +76,10 @@ data:
   quantity-en: plane angle
   quantity-fr: angle plan
   Unit: radian
-  Base_quantity:
-    - [LENG,"1"]
-    - [LENG,"-1"]
 - identifier: ANGS
   quantity-en: solid angle
   quantity-fr: angle solide
   Unit: steradian
-  Base_quantity:
-    - [LENG,"2"]
-    - [LENG,"-2"]
 # frequency already defined
 - identifier: FORC
   quantity-en: force
@@ -226,8 +220,6 @@ data:
   Unit: lumen
   Base_quantity:
     - [LUIN,"1"]
-    - [LENG,"2"]
-    - [LENG,"-2"]
 - identifier: ILLU
   quantity-en: illuminance
   quantity-fr: éclairement lumineux
@@ -375,6 +367,16 @@ data:
     - [LENG,"-2"]
 
 # Quantity named in table 6 :
+- identifier: DYVI
+  quantity-en: dynamic viscosity
+  quantity-fr: viscosité dynamique
+  Unit:
+    - [pascal, "1"]
+    - [second, "1"]
+  Base_quantity:
+    - [MASS,"1"]
+    - [LENG,"-1"]
+    - [TIME,"-1"]
 - identifier: KIVI
   quantity-en: kinematic viscosity
   quantity-fr: viscosité cinématique
@@ -382,8 +384,7 @@ data:
     - [metre, "2"]
     - [second, "-1"]
   Base_quantity:
-    - [MASS,"1"]
-    - [LENG,"-1"]
+    - [LENG,"2"]
     - [TIME,"-1"]
 - identifier: TORQ
   quantity-en: moment of force
@@ -411,8 +412,6 @@ data:
     - [radian, "1"]
     - [second, "-1"]
   Base_quantity:
-    - [LENG,"1"]
-    - [LENG,"-1"]
     - [TIME,"-1"]
 - identifier: ANGF
   quantity-en: angular frequency
@@ -421,8 +420,6 @@ data:
     - [radian, "1"]
     - [second, "-1"]
   Base_quantity:
-    - [LENG,"1"]
-    - [LENG,"-1"]
     - [TIME,"-1"]
 - identifier: ACCA
   quantity-en: angular acceleration
@@ -431,8 +428,6 @@ data:
     - [radian, "1"]
     - [second, "-2"]
   Base_quantity:
-    - [LENG,"1"]
-    - [LENG,"-1"]
     - [TIME,"-2"]
 - identifier: HEFD
   quantity-en: heat flux density
@@ -459,7 +454,8 @@ data:
     - [joule, "1"]
     - [kelvin, "-1"]
   Base_quantity:
-    - [MASS,"2"]
+    - [MASS,"1"]
+    - [LENG,"2"]
     - [TIME,"-2"]
     - [TEMT,"-1"]
 - identifier: ENTR
@@ -469,7 +465,8 @@ data:
     - [joule, "1"]
     - [kelvin, "-1"]
   Base_quantity:
-    - [MASS,"2"]
+    - [MASS,"1"]
+    - [LENG,"2"]
     - [TIME,"-2"]
     - [TEMT,"-1"]
 - identifier: SHEC
@@ -674,8 +671,6 @@ data:
   Base_quantity:
     - [MASS,"2"]
     - [TIME,"-3"]
-    - [LENG,"2"]
-    - [LENG,"-2"]
 - identifier: CTAC
   quantity-en: catalytic activity concentration
   quantity-fr: 'concentration de l’activité catalytique'
