@@ -244,12 +244,12 @@ The canonical URLs (without version number) resolve to the latest released versi
 flowchart TB
     REQ["Request received<br>GitHub issue, email, meeting"] --> DUP{"Related issue<br>already open?"}
     DUP -- Yes --> CMT["Add comment to existing issue"]
-    DUP -- No --> NEW@{ label: "Register new issue<br>*'On behalf of…'* if needed" }
+    DUP -- No --> NEW@{ label: "Register new issue.<br>Add *'On behalf of…'* if needed" }
     CMT --> BL["`**Backlog**<br>Classify: scope (mandatory),<br>requesting body (optional)`"]
     NEW --> BL
     BL --> EG{"Expert Group<br>meeting"}
     BL -- label 'question' --> QA["Answer and close"]
-    EG -- Feasible / necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
+    EG -- Feasible & necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
     EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
     EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
     CO -- Findings: unsuitable --> NP
