@@ -1,6 +1,7 @@
 # Governance model for updating the SI Reference Point
 > *This document is in draft form.*
 
+## 1. Introduction and purpose
 The SI Reference Point (SIRP) is the machine-actionable knowledge model of the SI Brochure [(#ref)](http://doi.org/).
 The SIRP is developed by the members of the Expert Group of the FORUM-MD Task Group on SI Digital Framework ([TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
 The web services available at [https://si-digital-framework.org/SI](https://si-digital-framework.org/SI) provide access the knowledge model of the SIRP.
