@@ -1,30 +1,37 @@
 # Governance model for updating the SI Reference Point
 > *This document is in draft form.*
+## Table of Contents
+[1. Document objectives and scope](#1-document-objectives-and-scope)  
+[2. General overview of the SI Reference Point](#2-general-overview-of-the-si-reference-point)  
+[3. Stages for change requests of the SIRP](#3-stages-for-change-requests-of-the-sirp)  
+[4. Version numbering scheme](#4-version-numbering-scheme)  
+[5. Archiving of versions](#5-archiving-of-versions)  
+[6. Change management](#6-change-management)
 
-## 1. Introduction and purpose
-The SI Reference Point (SIRP) is the machine-actionable knowledge model of the SI Brochure [(#ref)](http://doi.org/).
-The SIRP is developed by the members of the Expert Group of the FORUM-MD Task Group on SI Digital Framework ([TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
-The web services available at [https://si-digital-framework.org/SI](https://si-digital-framework.org/SI) provide access the knowledge model of the SIRP.
+
+## 1. Document objectives and scope
+This document specifies the governance model for the SI Reference Point (SIRP), a service developed and maintained under the auspices of the BIPM. It sets out how change requests and bug reports are processed, covering the full path from the initial change request to the release of an updated SIRP. It establishes labelling conventions for releases, principles for the development process and the review procedure before the update is released. It also defines the responsibilities and competences of the Expert Group of the Forum-MD-TG-SIDEF.  
+The document does not describe the SIRP in full but only gives a short overview of the service. For a full description, please refer to XXXXX.
+
+  
+## 2. General overview of the SI Reference Point
+
+The SI Reference Point (SIRP) is a machine-actionable knowledge model of the SI Brochure [(#ref)](http://doi.org/).
+The SIRP is developed by the members of the Expert Group of the FORUM-MD Task Group on SI Digital Framework [TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf) under the auspices of the BIPM.  
+The web services available at [https://si-digital-framework.org/SI](https://si-digital-framework.org/SI) provide access to the knowledge model of the SIRP.
 The web services are developed by the BIPM, consulting with members of the Expert Group when considered necessary.
 
-The SIRP is versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version (see [below](#planned)).
-The project is handled at two public GitHub repositories that serve different purposes:
-
-- [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts):
-    A Python package that generates the knowledge graph of the SIRP serialized as Turtle and JSON-LD files.
-- [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework):
-    A read-only repository to track changes in the Turtle-serialized files of the SIRP and other related ontologies published by the BIPM.
-
-Changes to the SIRP respond to feedback received from the user community.
-Requests for such changes are handled in the following stages:
+## 3. Stages for change requests of the SIRP
+Changes of the SIRP respond to feedback received from the user community. Each request will go through stage 1,2 and 6. If it is decided to implement a change, it goes also through stages 3 to 5:
 
 1.  Reception and registration of a request
 2.  Classification, assessment and prioritization
 3.  Development
 4.  Review and approval
 5.  Release
+6.  Close the request
 
-Each stage is further described in this document.
+The individual stages are further described below.
 A [diagram of the process](#diagram-of-the-process) is provided at the end of the document.
 
 <a name="note1"></a>
@@ -32,45 +39,78 @@ A [diagram of the process](#diagram-of-the-process) is provided at the end of th
     The procedures stated in this governance document apply to requests related to the SIRP (the knowledge model).
     Issues related to the web services or to the management of the repository are handled by the BIPM staff, who may nonetheless choose to apply some of these procedures at their own discretion.
 
-## 1. Reception and registration of a request
-Requests can be raised via GitHub issues, email, or verbal communication (e.g. during meetings), among other ways.
-Some requests may respond to updates in reference documents (mainly the SI Brochure), may be reports of errors in the knowledge base (bugs) or demands for new features. 
-All requests must be submitted by an identifiable user, either in an individual capacity or on behalf of a body (e.g. working group of a CIPM Consultative Committee).
+### 3.1 Reception and registration of a request
+Change to the SIRP may become necessary after updates of reference documents (mainly the SI Brochure), to address an error in the knowledge base (bugs) or in response to a request for a new feature. Any change requests can be deposited directly by raising a GitHub issue, by sending an email to XXXX(administrator), or by verbal communication to a member of the Expert Group (e.g. during meetings). Every requests must be linked to a requester, either an individual or a body e.g. working group of a CIPM Consultative Committee. If a person submits a request on behalf of someone else, the information *on behalf* of should be included in the new issue.
 
-Requests that are not received as a GitHub issue shall be registered as such in either of the two public repositories.
-Before opening a new issue, it is desirable to look for an open issue that relates to the topic.
-In case there is already a related issue, the new information should be added to the ongoing discussion as a comment.
-On the contrary, a new issue is registered.
-For these purposes, the person raising the issue can be invited to use their GitHub account, but if this is not feasible, the person receiving the request can file the issue on their behalf.
-In this case, a disclaimer shall be included (*On behalf of...*), and the link to the new issue (or to the comment) shall be shared with the person who originally submitted the request.
+Issues can be raised by
+- users, directly on the GitHub repository
+representatives of the corresponding digitalization working group of a CIPM Consultative Committee (label `request-from-CC`)
+- a FORUM-MD working group (label `request-from-FORUM-MD`)
+- a liaison organization (label `request-from-liaison-org`).
 
-## 2. Classification, assessment and prioritization
-All registered requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
-The dashboard is accessible to logged-in members of the Expert Group.
-View-only access can be granted to members of the TG-SIDF upon request (a free GitHub account is required).
-Issues are assigned suitable labels (`<label>`) to help to identify and advance the topics.
+Requestors are encouraged to propose a label (see below) for the issue they raise. Adding information about the origin and the scope of the issue is useful when deciding the priority of the topics.
 
-Upon registration, the issues are classified according to the scope (mandatory) and the requesting body (optional).
+Requests that are not submitted  as a GitHub issue shall still be registered as GitHub issue in either of the two public repositories by a member of the Expert Group.  
 
-- Scope:
-    Most issues are requests related to the ontology (label `scope-ontology`) or to the web services (label `scope-web-services`).
-    To a lesser extent, issues can be related to the management of the repository (label `scope-repo-management`) or to the Python package (label `scope-python-package`), without causing any effect on the ontology itself.
-    Some GitHub issues may be questions that do not demand changes (label `scope-question`).
-    The issues with label `scope-question` can be closed after a satisfactory answer has been provided.
-- Requesting body:
-    Issues can be raised by representatives of the corresponding digitalization working group of a CIPM Consultative Committee (label `request-from-CC`), of a FORUM-MD working group (label `request-from-FORUM-MD`), or of a liaison organization (label `request-from-liaison-org`).
-    This information is useful when deciding the prioritization of the topics.
+Before opening a new issue, it should be checked if an existing open issue relates to the same topic. If there is a related issue, the new information should be added to the discussion as a comment. Where no related issue exists, a new issue should be registered.
+<!-- For these purposes, the person raising the issue can be invited to use their GitHub account, but if this is not feasible, the person receiving the request can file the issue on their behalf.
+In this case, a disclaimer shall be included (*On behalf of...*), and the link to the new issue (or to the comment) shall be shared with the person who originally submitted the request. -->
 
-The Expert Group members gather at meetings convened by the BIPM to assess and prioritize the issues related to the knowledge model (see the [note](#note1) above).
-At every meeting, the issues in the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) are discussed and reorganized in status boxes:
-[<ins>Backlog</ins>](#backlog), [<ins>Planned</ins>](#planned), [<ins>Consultation</ins>](#consultation), [<ins>In progress</ins>](#in-progress), [<ins>In review</ins>](#in-review), [<ins>Awaiting release</ins>](#awaiting-release), [<ins>Done</ins>](#done) or [<ins>Not planned</ins>](#not-planned).
+
+### 3.2 Classification, assessment and prioritization
+Requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
+The dashboard is accessible to members of the Expert Group.
+View-only access can be granted to members of the Forum-MD-TG-SIDEF upon request.  
+
+Every duly recorded issue must have three labels: a scope label, a priority label and a status label.
+
+#### 3.2.1 Scope labels
+The scope label helps to identify and to prioritize the issue. 
+
+Issues are classified according to their scope (mandatory) from the list below <span style="color:red">is this list exhaustive? </span> and complemented with information about the origin of the issue (requestor). If no information is provided by the initial author, the **administrator** will consult with the inital author to ascribe a scope. 
+
+Possible scope lables
+| Issues related to| Label          | 
+|:-------|:--------:|
+| Ontology| `scope-ontology` |
+| Web services | `scope-web-services`|
+| Management of the repository| `scope-repo-management` |
+| Python package, not causing any effect on the ontology itself| `scope-python-package` |
+| Questions that do not require any changes| `scope-question` |
+
+<a name="note2"></a>
+> **Note:**
+    The issue of the last type (Questions) can be closed immediately after an answer has been provided.
+#### 3.2.2 Priority label    
+Priority labels give an indication how urgently an issue should be resolved. 
+The Expert Group assesses an prioritize issues related to the knowledge model. (see the [note](#note1) above).
+Possible priority lables
+| Priority | Label          | 
+|:-------|:--------|
+| low | `priority-low` |
+| medium | `priority-medium` |
+| high | `priority-high` |
+
+#### 3.2.3 Status label
+The status label helps to track the progress being made with a specific issue. At every meeting of the Expert Group the issues in the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) are discussed and reorganized in status boxes:
+ <span style="color:red">above it is said that request can be deposited in both repositories. Shouldn't we combine the request in a single repo? Maybe this is was is meant below under `Backlog: manually imported` </span>
+
+- [<ins>Backlog</ins>](#backlog)
+- [<ins>Planned</ins>](#planned)
+- [<ins>Consultation</ins>](#consultation)
+- [<ins>In progress</ins>](#in-progress)
+- [<ins>In review</ins>](#in-review)
+- [<ins>Awaiting release</ins>](#awaiting-release)
+- [<ins>Done</ins>](#done)
+- [<ins>Not planned</ins>](#not-planned).  
+
 The meaning of each status is described below.
 
 <div style="padding-left: 50px; padding-right: 50px;" markdown="1">
 
 ---
 #### Backlog
-Every issue starts here, meaning that it has been registered and may contain additional comments, but no decision has been made.
+Every issue starts here, meaning that it has been registered and may contain additional comments, but no decision on prioritization or implementation has been made.
 The issues registered in the repository [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) are added automatically to the [<ins>Backlog</ins>](#backlog), while those registered in the repository [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework) must be imported manually.
 Optionally, issues from other private repositories (e.g. related to the web services) can be added here to ease the follow-up of topics.
 
@@ -80,7 +120,7 @@ Before moving any issue from this box, a comment is added with a summary of the 
 ---
 #### Planned
 This status is assigned to requests from the [<ins>Backlog</ins>](#backlog) that have been considered feasible  and necessary by the Expert Group members.
-This status may also be assigned to requests previously in [<ins>Consultation</ins>](#consultation), depending on the feedback that was collected from the higher body.
+This status may also be assigned to requests previously in [<ins>Consultation</ins>](#consultation), depending on the feedback that was collected from another body.
 
 Issues here are assigned the label `status-planned`, meaning that the Expert Group members undertake to advance them in due time.
 
@@ -158,11 +198,11 @@ The issues here are assigned the label `status-not-planned` and must be closed (
 
 
 
-## 3. Development
+### 3.3 Development
 The development is done in the repository [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts).
 This section describes the guidelines for branching and merging.
 
-### 3.1. Branching
+#### 3.3.1. Branching
 The repository will always hold two permanent branches: 
 
 * Branch `origin/main`:
@@ -181,26 +221,26 @@ The issues that have an active branch should be assigned the status [<ins>In pro
 Before pushing modifications to the code in the repository, it is encouraged to verify that changes are being pushed to the correct branch by running the command `git status`.
 Additionally, it is highly encouraged to merge the changes from the branch `origin/develop` into the feature branch frequently, to avoid conflicts when the feature branch is eventually merged back.
 
-### 3.2. Contributions from outside the Expert Group
+#### 3.3.2. Contributions from outside the Expert Group
 Members of the broader community who do not have write access to the repository can still contribute by first creating a fork of [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) under their own GitHub account.
-Feature branches are then created within this fork, following the same conventions described in Section [3.1. Branching](#31-branching).
-Once the proposed changes are ready, a pull request can be opened from the forked branch into the `origin/develop` branch of the main repository, as described in Section [3.3. Opening a pull request](#33-opening-a-pull-request).
+Feature branches are then created within this fork, following the same conventions described in Section [3.3.1. Branching](#331-branching).
+Once the proposed changes are ready, a pull request can be opened from the forked branch into the `origin/develop` branch of the main repository, as described in Section [3.3.3. Opening a pull request](#333-opening-a-pull-request).
 
-### 3.3. Opening a pull request
-When the code patch that solves a request is considered finished by the people involved, they shall request to merge the changes from the feature branch (in a forked repository in the case of external contributors), into the branch `origin/develop`.
+#### 3.3.3 Opening a pull request
+When the code patch that addresses a request is considered finished by the people involved, they shall request to merge the changes from the feature branch (in a forked repository in the case of external contributors), into the branch `origin/develop`.
 All merging conflicts must be resolved before creating a pull request.
 The URLs of the issues that are tackled by a pull request shall be mentioned in the pull request message or in a comment to the pull request.
 
-The issues that have an active pull request should be assigned the status [<ins>In review</ins>](#in-review).
+Issues that have an active pull request should be assigned the status [<ins>In review</ins>](#in-review).
 
-## 4. Review and approval
+### 3.4. Review and approval
 Every pull request to branch `origin/develop` is initially reviewed by BIPM staff.
 The changes must be assessed thoroughly to confirm that their implementation does not introduce a backward-incompatible change.
 This assessment should consider potential effects on other BIPM digital services that rely on the SIRP, like the Key Comparison Database (KCDB).
 The label of the possible kind of update associated with an issue may change as a consequence of this assessment.
 
 
-### 4.1. Issues labelled as `possible-update-minor` and `possible-update-patch`
+#### 3.4.1. Issues labelled as `possible-update-minor` and `possible-update-patch`
 After confirming that the changes maintain backward compatibility,
 
  >*__Here we need to decide on one of the following approaches__*
@@ -215,14 +255,14 @@ The issues for which a pull request has been merged to the branch `origin/develo
 If the changes are not approved, the feature branch is not merged, and the issue is returned to [<ins>In progress</ins>](#in-progress).
 
 
-### 4.2. Issues labelled as `possible-update-major`
+#### 3.4.2. Issues labelled as `possible-update-major`
 The outcome of the changes that imply a major update of the knowledge model should be discussed at the TG-SIDF meeting.
 The implications of the changes may be discussed with other working groups of the FORUM-MD, or with other CIPM Consultative Committees. 
 If the changes are approved, the feature branch is merged into the branch `origin/develop`, and the issues are assigned the status [<ins>Awaiting release</ins>](#awaiting-release).
 The communities that may be affected by the major update shall be notified accordingly.
 If the changes are not approved, the feature branch is not merged, and the issue is returned to [<ins>In progress</ins>](#in-progress).
 
-## 5. Release
+### 3.5. Release
 After the approval of the update is done at the corresponding body, the release of the updated version of the SIRP includes the following steps:
 
 1.  Assignment of a version number.
@@ -239,6 +279,26 @@ After the approval of the update is done at the corresponding body, the release 
 
 Previous versions of the SIRP remain accessible by using the version URIs.
 The canonical URLs (without version number) resolve to the latest released version of the SIRP.
+
+## 4. Version numbering scheme
+Releases of the SIRP are versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version (see [below](#planned)).
+
+## 5. Archiving of versions
+The project is handled at two public GitHub repositories that serve different purposes:
+
+- [TheBIPM/SI-Reference-Point-generation-scripts](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts):
+    A Python package that generates the knowledge graph of the SIRP serialized as Turtle and JSON-LD files.
+- [TheBIPM/SI_Digital_Framework](https://github.com/TheBIPM/SI_Digital_Framework):
+    A read-only repository to track changes in the Turtle-serialized files of the SIRP and other related ontologies published by the BIPM.
+
+## 6. Change management
+Changes to procedure of this document must be approved by the Forum-MD-TG-SIREF
+| Date | Change          | 
+|:-------|:--------:|
+| 2026-10-18 | Initial version, approved by Forum-MD-TG-SIREF on XXXXX |
+
+
+
 
 ## Diagram of the process
 ``` mermaid
