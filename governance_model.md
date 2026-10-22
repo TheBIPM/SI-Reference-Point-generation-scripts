@@ -77,7 +77,7 @@ Adding information about the origin and the scope of the issue is useful when de
 ### 3.2 Classification, assessment and prioritization
 Requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
 The dashboard is accessible to members of the Expert Group.
-View-only access can be granted to members of the FORUM-MD-TG-SIDEF upon request.
+View-only access can be granted to members of the FORUM-MD-TG-SIDF upon request.
 
 Every duly recorded issue must have three additional labels: a scope label, a priority label and a status label.
 
@@ -328,9 +328,12 @@ flowchart TB
     TG -- Yes: merge to develop,<br>notify affected communities --> AR
     AR --> RN["Version number, release notes,<br>circulate to TG-SIDF with Turtle files"]
     RN --> OBJ{"Objections within<br>7 calendar days?"}
-    OBJ -- Yes --> AC["Address comments<br>Expert Group or TG-SIDF meeting"]
-    AC --> RN
     OBJ -- No --> PUB["Merge develop → main<br>GitHub release (Turtle + JSON-LD)<br>Update SI_Digital_Framework repo<br>Restart web services, announce"]
+    OBJ -- Yes --> AC["Address comments<br>and re-circulate"]
+    AC --> OBJ2{"Objections<br>persist?"}
+    OBJ2 -- No --> PUB
+    OBJ2 -- Yes --> PS["`**Release paused**<br>Discuss at next TG-SIDF meeting`"]
+    PS --> RN
     PUB --> DN["`**Done**<br>Close issue, notify requester`"]
 
     NEW@{ shape: rect}
