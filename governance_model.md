@@ -100,13 +100,7 @@ Possible scope labels are:
 
 #### 3.2.2 Priority label    
 Priority labels give an indication of how urgent an issue is. 
-The Expert Group assesses and prioritizes issues related to the knowledge model and sets a priority label to each issue.
-
-| Priority | Label          | 
-|:-------|:--------|
-| low | `priority-low` |
-| medium | `priority-medium` |
-| high | `priority-high` |
+The Expert Group assesses and prioritizes issues related to the knowledge model and sets a priority label to each issue: `priority-low`, `priority-medium` or `priority-high`.
 
 #### 3.2.3 Status label
 The status label helps to track the progress being made with a specific issue.
@@ -303,7 +297,7 @@ The canonical URLs (without version number) resolve to the latest released versi
 Changes to this document's procedures must be approved by the FORUM-MD-TG-SIDF.
 | Date | Change    | 
 |:-------|:--------|
-| 2026-11-25 | Initial version, approved by FORUM-MD-TG-SIDF.|
+| 2026-11-25 | Initial version.|
 
 
 
