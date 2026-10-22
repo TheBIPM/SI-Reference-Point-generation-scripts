@@ -32,9 +32,9 @@ The project is handled at two public GitHub repositories that serve different pu
 Releases of the SIRP are versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version (see [below](#updatetype)).
 
 ## 3. Stages for change requests of the SIRP
-Changes of the SIRP respond to feedback received from the user community.
-Each request will go through stage 1, 2 and 6.
-If it is decided to implement a change, it goes also through stages 3 to 5:
+Changes to the SIRP respond to feedback received from the user community.
+Each request will go through stages 1, 2 and 6.
+If it is decided to implement a change, it also goes through stages 3 to 5:
 
 1.  Reception and registration of a request
 2.  Classification, assessment and prioritization
@@ -53,20 +53,20 @@ A [diagram of the process](#diagram-of-the-process) is provided at the end of th
 
 ### 3.1 Reception and registration of a request
 Changes to the SIRP may be necessary when reference documents (primarily the SI Brochure) are updated, when errors in the knowledge base are identified, or when new feature requests arise.
-All change requests should be recorded as issue on the GitHub repository.
+All change requests should be recorded as an issue on the GitHub repository.
 Before opening a new issue, it should be checked if an existing issue relates to the same topic.
 If there is a related issue, the new information should be added as a comment to the discussion thread of the existing issue.
 
 Issues can be raised by different groups of people.
-In some cases, the origin of the issue is added to the issue as label:
+In some cases, the origin of the issue is added to the issue as a label:
 - a representative of the corresponding digitalization working group of a CIPM Consultative Committee (label `request-from-CC`)
 - a representative of a FORUM-MD working group (label `request-from-FORUM-MD`)
 - a representative of a liaison organization (label `request-from-liaison-org`).
 - any user of the SIRP from the community (no label required)
 
-A change requests can be deposited directly by raising a GitHub issue, by sending an email or by verbal communication to a member of the Expert Group (e.g. during meetings).
-Every requests must be linked to a requester, either an individual or a body (e.g. working group of a CIPM Consultative Committee).
-Requests that are not submitted  as a GitHub issue shall still be registered as GitHub issue in either of the two public repositories by a member of the Expert Group.  
+A change request can be deposited directly by raising a GitHub issue, by sending an email, or by verbal communication to a member of the Expert Group (e.g. during meetings).
+Every request must be linked to a requester, either an individual or a body (e.g. working group of a CIPM Consultative Committee).
+Requests that are not submitted  as a GitHub issue shall still be registered as a GitHub issue in either of the two public repositories by a member of the Expert Group.  
 If a person submits a request on behalf of someone else, the information *on behalf of* should be included in the new issue.
 In this case, the URL of the GitHub issue is shared with the person who originally made the request.
 
@@ -77,13 +77,13 @@ Adding information about the origin and the scope of the issue is useful when de
 ### 3.2 Classification, assessment and prioritization
 Requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
 The dashboard is accessible to members of the Expert Group.
-View-only access can be granted to members of the Forum-MD-TG-SIDEF upon request.
+View-only access can be granted to members of the FORUM-MD-TG-SIDEF upon request.
 
 Every duly recorded issue must have three additional labels: a scope label, a priority label and a status label.
 
 #### 3.2.1 Scope labels
 The scope label helps to identify and to prioritize the issue.
-The scope can be suggested by the requestor and is decided decided by the Expert Group.  
+The scope can be suggested by the requestor and is decided by the Expert Group.  
 
 Possible scope labels are:
 | Issues related to| Label          | 
@@ -96,11 +96,11 @@ Possible scope labels are:
 
 <a name="note2"></a>
 > **Note:**
-    The issue of the last type (Questions) can be closed immediately after an answer has been provided.
+    Issues labelled `scope-question` can be closed immediately after an answer has been provided.
 
 #### 3.2.2 Priority label    
-Priority labels give an indication on how urgent an issue is. 
-The Expert Group assesses and prioritize issues related to the knowledge model and sets a priority label to each issue.
+Priority labels give an indication of how urgent an issue is. 
+The Expert Group assesses and prioritizes issues related to the knowledge model and sets a priority label to each issue.
 
 | Priority | Label          | 
 |:-------|:--------|
@@ -110,10 +110,10 @@ The Expert Group assesses and prioritize issues related to the knowledge model a
 
 #### 3.2.3 Status label
 The status label helps to track the progress being made with a specific issue.
-The status are successive steps in the handling of an issue.
+The statuses are successive steps in the handling of an issue.
 Not all issues must necessarily go through all steps.   
 
-At every meeting of the Expert Group the issues in the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) are discussed and reorganized in status boxes.
+At every meeting of the Expert Group, the issues in the dashboard of the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6) are discussed and reorganized in status boxes.
 The meaning of each status is described below:
 
 
@@ -146,7 +146,7 @@ This status is assigned to issues that have been considered feasible and necessa
 This status means that the Expert Group undertakes to advance the issue in due time. 
 This status may also be assigned to requests previously in [Consultation](#consultation), depending on the feedback that was collected from another body.
 
-At this stage, the Expert group assigns a priority level to the issue (see [3.2.2 Priority label](#322-priority-label))
+At this stage, the Expert Group assigns a priority level to the issue (see [3.2.2 Priority label](#322-priority-label))
 
 Depending on the prioritization and complexity level of the issue, one or more Expert Group members may volunteer to work on the code implementation depending on their availability and area of expertise.
 This delegation is declared on the webpage of the issue using the GitHub function *Assignees*.
@@ -161,7 +161,7 @@ The type of update that will potentially result as a consequence of implementing
     A bug will be fixed in a backward-compatible manner (e.g. fixing a comment or relabelling an individual).
 
 Changes that will likely involve a major version update must be discussed and approved at the TG-SIDF, which might decide to further discuss the implications with other groups of the FORUM-MD or a CIPM Consultative Committee (see Section [4. Review and approval](#4-review-and-approval)).
-During this time the issue is moved to [Consultation](#consultation).
+During this time, the issue is moved to [Consultation](#consultation).
 The label for the possible type of update can be modified during the development of the solution to a request.
 
 When the code implementation is ready to begin, the issue is moved to the status [In progress](#in-progress).
@@ -193,16 +193,16 @@ Depending on the outcome of the review, the issue can be moved back to status [I
 
 ---
 #### Awaiting release
-This status is assigned to issues that have successfully completed the review process, either by the Expert Group or by a different body.
-This status means that the request will be solved on the next release of the SIRP. 
+This status is assigned to issues that have completed the review process, either by the Expert Group or by a different body.
+This status means that the request will be resolved on the next release of the SIRP. 
 
 The details of this stage are given in Section [3.5. Release](#35-release).
 After the release has been done, the issue is advanced to the latest status [Done](#done).
 
 ---
 #### Done
-This status is achieved to issues that were marked [Awaiting release](#awaiting-release), after the updated knowledge model of the SIRP has been released.
-The issues moved to this status box can be closed as completed and the person who originally made the request is notified.
+This status is reached for issues that were marked [Awaiting release](#awaiting-release), after the updated knowledge model of the SIRP has been released.
+The issues moved to this status box can be closed as completed, and the person who originally made the request is notified.
 
 ---
 #### Not planned
@@ -244,7 +244,7 @@ Once the proposed changes are ready, a pull request can be opened from the forke
 
 #### 3.3.3 Opening a pull request
 When the code patch that addresses an issue is considered finished by the developers, they change the status of the issue to [`status-in-review`](#in-review) and signal completion of the development by opening a pull request into the branch `origin/develop`.
-Only when the review process is completed can the update by integrated in the `origin/develop` branch. 
+Only when the review process is completed can the update be integrated into the `origin/develop` branch. 
 
 All merging conflicts must be resolved before creating a pull request.
 The URLs of the issues that are tackled by a pull request shall be mentioned in the pull request message or in a comment to the pull request.
@@ -252,7 +252,7 @@ The URLs of the issues that are tackled by a pull request shall be mentioned in 
 
 ### 3.4. Review and approval
 Every pull request to branch `origin/develop` is initially reviewed by BIPM staff.
-The changes must be assessed thoroughly to check if their implementation maintains a backward-compatible or not. 
+The changes must be assessed thoroughly to confirm that their implementation does not introduce a backward-incompatible change.
 This assessment should consider potential effects on other BIPM digital services that rely on the SIRP, like the Key Comparison Database (KCDB).
 The type of update (patch, minor or major update) associated with an issue might change as a consequence of this assessment. 
 
@@ -300,7 +300,7 @@ Previous versions of the SIRP remain accessible by using the version URIs.
 The canonical URLs (without version number) resolve to the latest released version of the SIRP.
 
 ## 4. Change management
-Changes to procedure of this document must be approved by the FORUM-MD-TG-SIDF.
+Changes to this document's procedures must be approved by the FORUM-MD-TG-SIDF.
 | Date | Change    | 
 |:-------|:--------|
 | 2026-11-25 | Initial version, approved by FORUM-MD-TG-SIDF.|
