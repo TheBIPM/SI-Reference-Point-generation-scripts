@@ -13,7 +13,7 @@ It sets out how change requests and bug reports are processed, covering the full
 It establishes labelling conventions for releases, principles for the development process and the review procedure before the update is released.
 It also defines the responsibilities and competences of the Expert Group of the FORUM-MD Task Group on SI Digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf).
 The document does not describe the SIRP in full but only gives a short overview of the service.
-For a full description, please refer to [Gruber et. al., 2026 - UNPUBLISHED]().
+For a full description, please refer to [Gruber, Hippolyte, Dudle et al., 2026 - UNPUBLISHED]().
 
   
 ## 2. General overview of the SI Reference Point
@@ -140,9 +140,10 @@ This status is assigned to issues that have been considered feasible and necessa
 This status means that the Expert Group undertakes to advance the issue in due time. 
 This status may also be assigned to requests previously in [Consultation](#consultation), depending on the feedback that was collected from another body.
 
-At this stage, the Expert Group assigns a priority level to the issue (see [3.2.2 Priority label](#322-priority-label))
+At this stage, the Expert Group assigns a priority level to the issue (see [3.2.2 Priority label](#322-priority-label)).
+In doing so, the Expert Group members take into account the provenance of the request.
 
-Depending on the prioritization and complexity level of the issue, one or more Expert Group members may volunteer to work on the code implementation depending on their availability and area of expertise.
+Depending on the prioritization and complexity level of the issue, one or more Expert Group members are assigned to work on the code implementation depending on their availability and area of expertise.
 This delegation is declared on the webpage of the issue using the GitHub function *Assignees*.
 
 The type of update that will potentially result as a consequence of implementing the solution to the request must be estimated and declared by adding a corresponding label. The following rules are adapted from the [Semantic Versioning scheme](https://semver.org/):
@@ -167,8 +168,8 @@ The reason for consultation can be strong disagreement within the Expert Group o
 
 The default body to consider for consultation is the FORUM-MD-TG-SIDF.
 However, the Expert Group can also decide to discuss the topic directly with another working group of the FORUM-MD, the Consultative Committee for Units (CCU), or another Consultative Committee of the CIPM.
-A member of the Expert Group must be designated as responsible for doing the consultation. 
-When the information has been gathered, a summary must be added as a comment to the issue webpage.
+A member of the Expert Group must be designated as responsible for doing the consultation.
+When a consensus has been reached, a summary must be added as a comment to the issue webpage.
 After discussing the newly collected information, the issue can be assigned the status [Planned](#planned) or [Not planned](#not-planned).
 
 ---
@@ -255,12 +256,10 @@ The approval process depends on the type of update.
 #### 3.4.1. Issues labelled as `possible-update-minor` and `possible-update-patch`
 After confirming that the changes maintain backward compatibility,
 
- >*__Here we need to decide on one of the following approaches__*
-
-|*Option 1: Direct approval by BIPM staff*| *Option 2: Notice period before approval*|
-|---|---|
-|The pull request is approved at BIPM staff's discretion, with further consultation with other members of the Expert Group when considered necessary. The change is notified to all members of the Expert Group by email on a regular basis, including the links to the corresponding pull request. The Expert Group members are encouraged to comment on the closed pull request. In case of unresolved disagreement, the discussion is held at the Expert Group meetings.  | Expert Group members are informed by email of open pull requests. They are encouraged to comment in case of suggestions or disagreement. After a period of at least seven calendar days, the pull request can be approved by BIPM staff.|
-
+The pull request is approved at BIPM staff's discretion, with further consultation with other members of the Expert Group when considered necessary.
+The change is notified to all members of the Expert Group by email on a regular basis, including the links to the corresponding pull request.
+The Expert Group members are encouraged to comment on the closed pull request.
+In case of unresolved disagreement, the discussion is held at the Expert Group meetings.
 All changes to the branch `origin/develop` can be reverted in case it is considered necessary.
 
 The issues for which a pull request has been merged to the branch `origin/develop` should be assigned the status [Awaiting release](#awaiting-release).
@@ -282,13 +281,15 @@ After the approval of the update is done at the corresponding body, the release 
 3.  Circulation of the release notes to the FORUM-MD-TG-SIDF members by email, along with the updated knowledge model serialized as Turtle files.
 4.  A period of seven calendar days is given to raise any objections regarding the update of the knowledge model.
 5.  During this time:
+   
     5.1.  If there are no objections, the changes in branch `origin/develop` are merged into the branch `origin/main` and the release process can advance.
+    
     5.2.  If there are objections, the comments may be addressed and the amendments circulated again for consultation to the FORUM-MD-TG-SIDF members. If there are still objections, the topic should be further discussed at the following meeting of the FORUM-MD-TG-SIDF and the release is paused.
-6.  A GitHub release is done in the [generation scripts repository](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) including the files of the knowledge model, serialized both as Turtle and JSON-LD formats, in the field for *binaries*.
-7.  The Turtle files are updated in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework).
-8.  The web services of the [SI Digital Framework website](https://si-digital-framework.org/) are restarted with the updated SIRP.
-9.  A successful release is indicated to the community by using the BIPM communications channels, as considered appropriate by the TG-SIDF chair.
-10. The people whose requests were satisfied with the release of the SIRP are notified.
+7.  A GitHub release is done in the [generation scripts repository](https://github.com/TheBIPM/SI-Reference-Point-generation-scripts) including the files of the knowledge model, serialized both as Turtle and JSON-LD formats, in the field for *binaries*.
+8.  The Turtle files are updated in the [SI Digital Framework repository](https://github.com/TheBIPM/SI_Digital_Framework).
+9.  The web services of the [SI Digital Framework website](https://si-digital-framework.org/) are restarted with the updated SIRP.
+10.  A successful release is indicated to the community by using the BIPM communications channels, as considered appropriate by the FORUM-MD-TG-SIDF chair.
+11. The people whose requests were addressed with the release of the SIRP are notified.
 
 Previous versions of the SIRP remain accessible by using the version URIs.
 The canonical URLs (without version number) resolve to the latest released version of the SIRP.
@@ -315,8 +316,8 @@ flowchart TB
     EG -- Feasible & necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
     EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
     EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
-    CO -- Findings: unsuitable --> NP
-    CO -- Findings: approved ---> PL
+    CO -- Consensus: unsuitable --> NP
+    CO -- Consensus: approved ---> PL
     PL -- Feature branch from develop --> IP["`**In progress**`"]
     IP -- Pull request to develop --> IR["`**In review**<br>BIPM staff check backward<br>compatibility, KCDB impact`"]
     IR --> IMP{"Impact?"}
@@ -325,7 +326,7 @@ flowchart TB
     BS -- No --> IP
     TG -- No --> IP
     BS -- Yes: merge to develop --> AR["`**Awaiting release**`"]
-    TG -- Yes: merge to develop,<br>notify affected communities --> AR
+    TG -- Yes: merge to develop,<br>notify potentially affected communities --> AR
     AR --> RN["Version number, release notes,<br>circulate to TG-SIDF with Turtle files"]
     RN --> OBJ{"Objections within<br>7 calendar days?"}
     OBJ -- No --> PUB["Merge develop → main<br>GitHub release (Turtle + JSON-LD)<br>Update SI_Digital_Framework repo<br>Restart web services, announce"]
