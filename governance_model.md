@@ -47,7 +47,7 @@ The individual stages are further described below.
 A [diagram of the process](#diagram-of-the-process) is provided at the end of the document.
 
 Requests are managed in the [SIRP Project Board](https://github.com/orgs/TheBIPM/projects/6), a dashboard where their status can be tracked.
-Only the members of the Expert Group have writte access.
+The project board is public, but only members of the Expert Group have writte access.
 
 <a name="note1"></a>
 > **Note:**
