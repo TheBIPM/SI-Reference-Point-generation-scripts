@@ -11,11 +11,11 @@
 This document specifies the governance model for the SI Reference Point (SIRP), a service developed and maintained under the auspices of the BIPM.
 It sets out how change requests and bug reports are processed, covering the full path from the initial change request to the release of an updated version.
 It establishes labelling conventions for releases, principles for the development process and the review procedure before the update is released.
-It also defines the responsibilities and competences of the Expert Group of the FORUM-MD Task Group on SI Digital Framework [FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf).
+It also defines the responsibilities and competences of the Expert Group of the FORUM-MD Task Group on SI Digital Framework ([FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
 The document does not describe the SIRP in full but only gives a short overview of the service.
-For a full description, please refer to [Gruber, Hippolyte, Dudle et al., 2026 - UNPUBLISHED]().
+For a full description, please refer to [Gruber, Hippolyte, Dudle et al., 2026 - UNPUBLISHED](https://doi.org/10.1088/).
 
-  
+
 ## 2. General overview of the SI Reference Point
 
 The SI Reference Point (SIRP) is a machine-actionable knowledge model of the [SI Brochure](https://doi.org/10.59161/AUEZ1291).
@@ -31,8 +31,8 @@ The project is handled at two public GitHub repositories that serve different pu
 
 Releases of the SIRP are versioned according to the [Semantic Versioning scheme](https://semver.org/), using three dot-separated integer numbers known as the major, minor and patch version (see [below](#updatetype)).
 
-## 3. Stages for change requests of the SIRP
-Changes to the SIRP respond to feedback received from the user community.
+## 3. Stages for updating the SIRP
+Updates to the SIRP respond to feedback received from the user community.
 Each request will go through stages 1, 2 and 6.
 If it is decided to implement a change, it also goes through stages 3 to 5:
 
@@ -45,6 +45,9 @@ If it is decided to implement a change, it also goes through stages 3 to 5:
 
 The individual stages are further described below.
 A [diagram of the process](#diagram-of-the-process) is provided at the end of the document.
+
+Requests are managed in the [SIRP Project Board](https://github.com/orgs/TheBIPM/projects/6), a dashboard where their status can be tracked.
+Only the members of the Expert Group have writte access.
 
 <a name="note1"></a>
 > **Note:**
@@ -75,11 +78,7 @@ Adding information about the origin and the scope of the issue is useful when de
 
 
 ### 3.2 Classification, assessment and prioritization
-Requests are managed in the [SIRP update project page](https://github.com/orgs/TheBIPM/projects/6), which provides a dashboard to follow up on the status of the requests.
-The dashboard is accessible to members of the Expert Group.
-View-only access can be granted to members of the FORUM-MD-TG-SIDF upon request.
-
-Every duly recorded issue must have three additional labels: a scope label, a priority label and a status label.
+Every duly recorded issue is reviewed by members of the Expert Group and must be asssigned at least three labels: a [scope label](#321-scope-labels), a [priority label](#322-priority-label) and a [status label](#323-status-label).
 
 #### 3.2.1 Scope labels
 The scope label helps to identify and to prioritize the issue.
