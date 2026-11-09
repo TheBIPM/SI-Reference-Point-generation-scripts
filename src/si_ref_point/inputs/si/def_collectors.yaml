@@ -39,6 +39,7 @@ data:
   hasSymbol: kg
   hasPrefix: kilo
   hasNonPrefixedUnit: gram
+  prefixRestriction: true
   definitions:
   - kilogram1901
   - kilogram2018
