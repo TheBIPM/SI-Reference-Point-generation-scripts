@@ -36,11 +36,11 @@ Updates to the SIRP respond to feedback received from the user community.
 Each request will go through stages 1, 2 and 6.
 If it is decided to implement a change, it also goes through stages 3 to 5:
 
-1.  Reception and registration of a request
-2.  Classification, assessment and prioritization
-3.  Development
-4.  Review and approval
-5.  Release
+1.  [Reception and registration of a request](#31-reception-and-registration-of-a-request)
+2.  [Classification, assessment and prioritization](#32-classification-assessment-and-prioritization)
+3.  [Development](#33-development)
+4.  [Review and approval](#34-review-and-approval)
+5.  [Release](#35-release)
 6.  Close the request
 
 The individual stages are further described below.
