@@ -13,7 +13,7 @@ It sets out how change requests and bug reports are processed, covering the full
 It establishes labelling conventions for releases, principles for the development process and the review procedure before the update is released.
 It also defines the responsibilities and competences of the Expert Group of the FORUM-MD Task Group on SI Digital Framework ([FORUM-MD-TG-SIDF](https://www.bipm.org/en/committees/fo/forum-md/wg/forum-md-tg-sidf)).
 The document does not describe the SIRP in full but only gives a short overview of the service.
-For a full description, please refer to [Gruber, Hippolyte, Dudle et al., 2026 - UNPUBLISHED](https://doi.org/10.1088/).
+For a full description, please refer to [Gruber, Hippolyte, Dudle et al., 2026](https://doi.org/10.1088/1681-7575/aebed3).
 
 
 ## 2. General overview of the SI Reference Point
@@ -319,7 +319,7 @@ flowchart TB
     CO -- Consensus: approved ---> PL
     PL -- Feature branch from develop --> IP["`**In progress**`"]
     IP -- Pull request to develop --> IR["`**In review**<br>BIPM staff check backward<br>compatibility, KCDB impact`"]
-    IR --> IMP{"Impact?"}
+    IR --> IMP{"Backwards compatible?"}
     IMP -- Minor / patch --> BS{"BIPM staff<br>approval?"}
     IMP -- Major --> TG{"TG-SIDF<br>approval?"}
     BS -- No --> IP
