@@ -121,6 +121,14 @@ The meaning of each status is described below:
 | [Done](#done)| `status-done` | - |
 | [Not planned](#not-planned)| `status-not-planned` | - | 
 
+#### 3.2.4 Fast-track label
+The BIPM staff members may assign the label `fast-track` to an issue that meets all of the following criteria:
+
+* The change is self-evident and unambiguous (no design decision is required).
+* The expected update type is minor.
+* No consultation with another body is needed.
+
+An issue labelled fast-track may be moved directly from [Backlog](£backlog) to [Planned](#planned) by the BIPM staff member without waiting for an Expert Group meeting.
 
 <div style="padding-left: 50px; padding-right: 50px;" markdown="1">
 
@@ -132,6 +140,8 @@ Optionally, issues from other private repositories (e.g. related to the web serv
 
 The issues in the [Backlog](#backlog) are discussed during the meetings of the Expert Group and may thereafter be assigned the status [Planned](#planned), [Consultation](#consultation), or [Not planned](#not-planned), depending on the conclusion from the participants in the meeting.
 Before moving any issue from this box, a comment is added with a summary of the outcomes of the discussion.
+
+Issues labelled `fast-track` may be moved directly to [Planned](#planned) by the BIPM staff without waiting for an Expert Group meeting (see [3.2.4 Fast-track label](#324-fast-track-label)).
 
 ---
 #### Planned
