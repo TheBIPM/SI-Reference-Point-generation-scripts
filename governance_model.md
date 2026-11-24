@@ -3,7 +3,7 @@
 #### Table of Contents
 [1. Document objectives and scope](#1-document-objectives-and-scope)  
 [2. General overview of the SI Reference Point](#2-general-overview-of-the-si-reference-point)  
-[3. Stages for change requests of the SIRP](#3-stages-for-change-requests-of-the-sirp)  
+[3. Stages for change requests of the SIRP](#3-stages-for-updating-the-sirp)  
 [4. Change management](#4-change-management)
 
 
@@ -310,9 +310,10 @@ flowchart TB
     DUP -- No --> NEW@{ label: "Register new issue.<br>Add *'On behalf of…'* if needed" }
     CMT --> BL["`**Backlog**<br>Classify: scope (mandatory),<br>requesting body (optional)`"]
     NEW --> BL
+    BL -- label 'fast-track' <br> (self-evident simple changes) --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
     BL --> EG{"Expert Group<br>meeting"}
     BL -- label 'question' --> QA["Answer and close"]
-    EG -- Feasible & necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
+    EG -- Feasible & necessary --> PL
     EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
     EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
     CO -- Consensus: unsuitable --> NP
