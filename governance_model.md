@@ -128,7 +128,7 @@ The BIPM staff members, maintainers of the SIRP, may assign the label `fast-trac
 * The expected update type is minor or patch.
 * No consultation with another body is needed.
 
-An issue labelled fast-track may be moved directly from [Backlog](£backlog) to [Planned](#planned) by the BIPM staff members without waiting for an Expert Group meeting.
+An issue labelled fast-track may be moved directly from [Backlog](#backlog) to [Planned](#planned) by the BIPM staff members without waiting for an Expert Group meeting.
 
 <div style="padding-left: 50px; padding-right: 50px;" markdown="1">
 
