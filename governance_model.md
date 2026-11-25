@@ -163,7 +163,7 @@ When the code implementation is ready to begin, the issue is moved to the status
 ---
 #### Consultation
 This status is assigned to issues for which the Expert Group considers a discussion within another body necessary before a decision can be made.
-The reason for consultation can be strong disagreement within the Expert Group or a level of decision competence that goes beyond the Expert Group (e.g. an update that would lead to a major update).
+The reason for consultation can be strong disagreement within the Expert Group or a level of decision competence that goes beyond the Expert Group (e.g. a change that would lead to a major update, or a change that leads to a minor update but implies an important decision).
 
 The default body to consider for consultation is the FORUM-MD-TG-SIDF.
 However, the Expert Group can also decide to discuss the topic directly with another working group of the FORUM-MD, the Consultative Committee for Units (CCU), or another Consultative Committee of the CIPM.
