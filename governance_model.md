@@ -3,7 +3,7 @@
 #### Table of Contents
 [1. Document objectives and scope](#1-document-objectives-and-scope)  
 [2. General overview of the SI Reference Point](#2-general-overview-of-the-si-reference-point)  
-[3. Stages for change requests of the SIRP](#3-stages-for-change-requests-of-the-sirp)  
+[3. Stages for change requests of the SIRP](#3-stages-for-updating-the-sirp)  
 [4. Change management](#4-change-management)
 
 
@@ -121,6 +121,14 @@ The meaning of each status is described below:
 | [Done](#done)| `status-done` | - |
 | [Not planned](#not-planned)| `status-not-planned` | - | 
 
+#### 3.2.4 Fast-track label
+The BIPM staff members, maintainers of the SIRP, may assign the label `fast-track` to an issue that meets all of the following criteria:
+
+* The change is self-evident and unambiguous (no design decision is required).
+* The expected update type is minor or patch.
+* No consultation with another body is needed.
+
+An issue labelled fast-track may be moved directly from [Backlog](#backlog) to [Planned](#planned) by the BIPM staff members without waiting for an Expert Group meeting.
 
 <div style="padding-left: 50px; padding-right: 50px;" markdown="1">
 
@@ -132,6 +140,8 @@ Optionally, issues from other private repositories (e.g. related to the web serv
 
 The issues in the [Backlog](#backlog) are discussed during the meetings of the Expert Group and may thereafter be assigned the status [Planned](#planned), [Consultation](#consultation), or [Not planned](#not-planned), depending on the conclusion from the participants in the meeting.
 Before moving any issue from this box, a comment is added with a summary of the outcomes of the discussion.
+
+Issues labelled `fast-track` may be moved directly to [Planned](#planned) by the BIPM staff without waiting for an Expert Group meeting (see [3.2.4 Fast-track label](#324-fast-track-label)).
 
 ---
 #### Planned
@@ -310,9 +320,10 @@ flowchart TB
     DUP -- No --> NEW@{ label: "Register new issue.<br>Add *'On behalf of…'* if needed" }
     CMT --> BL["`**Backlog**<br>Classify: scope (mandatory),<br>requesting body (optional)`"]
     NEW --> BL
+    BL -- label 'fast-track' <br> (self-evident simple changes) --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
     BL --> EG{"Expert Group<br>meeting"}
     BL -- label 'question' --> QA["Answer and close"]
-    EG -- Feasible & necessary --> PL["`**Planned**<br>Priority label, assignees,<br>possible-update-major/minor/patch`"]
+    EG -- Feasible & necessary --> PL
     EG -- Unsuitable --> NP["`**Not planned**<br>Notify requester with reasons,<br>close as not planned`"]
     EG -- "High-level decision needed <br>or strong disagreement" --> CO["`**Consultation**<br>TG-SIDF, FORUM-MD WG,<br>CCU or other CC`"]
     CO -- Consensus: unsuitable --> NP
