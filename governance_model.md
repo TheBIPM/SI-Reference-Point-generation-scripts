@@ -1,5 +1,5 @@
 # Governance model for updating the SI Reference Point
-> *This document is in draft form.*
+> *This document has been approved by the FORUM-MD Task Group on SI Digital Framework at its 7th meeting.*
 #### Table of Contents
 [1. Document objectives and scope](#1-document-objectives-and-scope)  
 [2. General overview of the SI Reference Point](#2-general-overview-of-the-si-reference-point)  
@@ -307,7 +307,7 @@ The canonical URLs (without version number) resolve to the latest released versi
 Changes to this document's procedures must be approved by the FORUM-MD-TG-SIDF.
 | Date | Change    | 
 |:-------|:--------|
-| 2026-11-25 | Initial version.|
+| 2026-11-25 | Initial version. Approved at the 7th meeting of the FORUM-MD-TG-SIDF.|
 
 
 
