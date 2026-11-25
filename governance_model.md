@@ -122,13 +122,13 @@ The meaning of each status is described below:
 | [Not planned](#not-planned)| `status-not-planned` | - | 
 
 #### 3.2.4 Fast-track label
-The BIPM staff members may assign the label `fast-track` to an issue that meets all of the following criteria:
+The BIPM staff members, maintainers of the SIRP, may assign the label `fast-track` to an issue that meets all of the following criteria:
 
 * The change is self-evident and unambiguous (no design decision is required).
-* The expected update type is minor.
+* The expected update type is minor or patch.
 * No consultation with another body is needed.
 
-An issue labelled fast-track may be moved directly from [Backlog](£backlog) to [Planned](#planned) by the BIPM staff member without waiting for an Expert Group meeting.
+An issue labelled fast-track may be moved directly from [Backlog](£backlog) to [Planned](#planned) by the BIPM staff members without waiting for an Expert Group meeting.
 
 <div style="padding-left: 50px; padding-right: 50px;" markdown="1">
 
